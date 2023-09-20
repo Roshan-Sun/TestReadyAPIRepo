@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeetingtrack/{Vuuid}" path="/pm-rest-api/rest/1/pmmeetingtrack/{Vuuid}" id="5e00d38e-f343-492c-a7ca-b44440195444" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5e00d38e-f343-492c-a7ca-b44440195444fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingtrack%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2aec30c8-e940-4671-92ff-0f140e17ddb6" method="GET">
+    <con:description>Retrieve a Specific PM Meeting Track</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmtCompCode" : "string",
+  "PmmtProjCode" : "string",
+  "PmmtProjName" : "string",
+  "PmmtTrackCode" : "string",
+  "PmmtTrackName" : "string",
+  "PmmtItemIdMask" : "string",
+  "PmmtMeetingIdMask" : "string",
+  "PmmtFrequency" : "string",
+  "PmmtMinutesFootnote" : "string",
+  "PmmtNumberingFlag" : "string",
+  "PmmtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0225d8a8-5fb1-4353-b9dd-636e8123f3ef" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="5d2eb6f9-d05f-44aa-b580-fa635c805747" method="DELETE">
+    <con:description>Delete a Specific PM Meeting Track</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="93505197-6a23-4590-9905-e5fd5d68c3ee" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="b23cb71a-9ce2-440e-b41a-faba47ae5d9b" method="PATCH">
+    <con:description>Update a Specific PM Meeting Track</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmtCompCode" : "string",
+  "PmmtProjCode" : "string",
+  "PmmtProjName" : "string",
+  "PmmtTrackCode" : "string",
+  "PmmtTrackName" : "string",
+  "PmmtItemIdMask" : "string",
+  "PmmtMeetingIdMask" : "string",
+  "PmmtFrequency" : "string",
+  "PmmtMinutesFootnote" : "string",
+  "PmmtNumberingFlag" : "string",
+  "PmmtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmtCompCode":"string","PmmtProjCode":"string","PmmtTrackCode":"string","PmmtTrackName":"string","PmmtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="d4fdee81-e9c4-4265-bcee-8958a83ed95e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmtCompCode":"string","PmmtProjCode":"string","PmmtTrackCode":"string","PmmtTrackName":"string","PmmtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0d48ea1b-90e2-4e02-b9ab-48233a51784d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmtMinutesFootnote":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempsecurity" path="/hcm-rest-api/rest/1/pyempsecurity" id="d2337e54-bed9-411d-ac36-ec0fd3537aa7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d2337e54-bed9-411d-ac36-ec0fd3537aa7fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempsecurity</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="64c60197-06c4-42c8-806c-ff16da2f4465" method="GET">
+    <con:description>Retrieve PY Employee Assigned Securities</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EsgeGroupCode" : "string",
+  "EsgeGroupName" : "string",
+  "EsgeEmpNo" : "string",
+  "EsgeSelectFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="06bceb63-57fe-4c4b-b782-f6a6d56b5905" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="11752efd-9c69-4a5b-95d8-81f4abed62d5" method="POST">
+    <con:description>This endpoint is used to overwrite existing securities assigned to an Employee. If the employee has any securities that are not passed in a POST request, they will be lost. Provide `EsgeSelectFlag` as Y to assign a security</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EsgeGroupCode" : "string",
+  "EsgeGroupName" : "string",
+  "EsgeEmpNo" : "string",
+  "EsgeSelectFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1044589","EsgeSelectFlag":"Y"}},{"id":"part2","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZAMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}},{"id":"part3","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"CCCPAYROLL","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="3c38774b-9dd6-4c7a-a8d6-514449c3512b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multi-Insert Example" id="8bcd3689-2f0b-421f-9fd0-1c6bc12bd42c" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1044589","EsgeSelectFlag":"Y"}},{"id":"part2","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZAMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}},{"id":"part3","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"CCCPAYROLL","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

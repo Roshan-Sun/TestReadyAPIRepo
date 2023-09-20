@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apvouchq" path="/ap-rest-api/rest/1/apvouchq" id="e63d0a36-f896-4181-96ba-fd4a20d4ae4c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e63d0a36-f896-4181-96ba-fd4a20d4ae4cfileName">%2Fap-rest-api%2Frest%2F1%2Fapvouchq</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="4d7fb45c-a424-435d-a2d8-c7aea92a187d" method="GET">
+    <con:description>All Cheques against Vouchers or specific ones via finders</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectVouChq</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Cheque Number that was used when paying vouchers (selectVouChq)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>invCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Code that was being paid against the cheque (selectVouChq)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>venCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Code that was being paid againt the cheque (selectVouChq)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "VchqCompCode" : "string",
+  "VchqVenCode" : "string",
+  "VchqVenName" : "string",
+  "VchqChqNum" : 0,
+  "VchqChqSeq" : 0,
+  "VchqChqCompCode" : "string",
+  "VchqInvCode" : "string",
+  "VchqVouNum" : 0,
+  "VchqVouDesc" : "string",
+  "VchqPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "Vchq1099Code" : "string",
+  "Vchq1099Name" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="76a332cd-9311-479f-be70-2c5f98fa2778" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

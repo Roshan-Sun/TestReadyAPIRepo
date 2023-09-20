@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccosttocompletespread" path="/jc-rest-api/rest/1/jccosttocompletespread" id="d9896111-12d1-4837-9320-2b0c66fd3bfd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d9896111-12d1-4837-9320-2b0c66fd3bfdfileName">%2Fjc-rest-api%2Frest%2F1%2Fjccosttocompletespread</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9d1926de-6791-41f1-871a-3d4e53e7b7c6" method="GET">
+    <con:description>Retrieve JC Cost To Complete Spreads</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcctsCompCode" : "string",
+  "JcctsContCode" : "string",
+  "JcctsYr" : 0,
+  "JcctsPer" : 0,
+  "JcctsCatCode" : "string",
+  "JcctsResidualCostAmt" : 0,
+  "JcctsMonth1Amt" : 0,
+  "JcctsMonth2Amt" : 0,
+  "JcctsMonth3Amt" : 0,
+  "JcctsMonth4Amt" : 0,
+  "JcctsMonth5Amt" : 0,
+  "JcctsMonth6Amt" : 0,
+  "JcctsMonth7Amt" : 0,
+  "JcctsMonth8Amt" : 0,
+  "JcctsMonth9Amt" : 0,
+  "JcctsMonth10Amt" : 0,
+  "JcctsMonth11Amt" : 0,
+  "JcctsMonth12Amt" : 0,
+  "JcctsMonth13Amt" : 0,
+  "JcctsMonth14Amt" : 0,
+  "JcctsMonth15Amt" : 0,
+  "JcctsMonth16Amt" : 0,
+  "JcctsMonth17Amt" : 0,
+  "JcctsMonth18Amt" : 0,
+  "JcctsMonth19Amt" : 0,
+  "JcctsMonth20Amt" : 0,
+  "JcctsMonth21Amt" : 0,
+  "JcctsMonth22Amt" : 0,
+  "JcctsMonth23Amt" : 0,
+  "JcctsMonth24Amt" : 0,
+  "JcctsBeyond24Amt" : 0,
+  "JcctsStoreFlag" : "string",
+  "JcctsIuCreateDate" : "YYYY-MM-dd",
+  "JcctsIuCreateUser" : "string",
+  "JcctsIuUpdateDate" : "YYYY-MM-dd",
+  "JcctsIuUpdateUser" : "string",
+  "JcctsLastSessioninfo" : "string",
+  "JcctsOrigSessioninfo" : "string",
+  "JcctsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="2428a37c-f3b7-4295-8736-5404a97c0c3f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

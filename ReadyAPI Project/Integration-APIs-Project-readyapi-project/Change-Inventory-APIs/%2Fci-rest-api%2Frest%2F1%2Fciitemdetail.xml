@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/ciitemdetail" path="/ci-rest-api/rest/1/ciitemdetail" id="270d554c-a362-4f11-8d6c-27484445424b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="270d554c-a362-4f11-8d6c-27484445424bfileName">%2Fci-rest-api%2Frest%2F1%2Fciitemdetail</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="652c282e-1cd2-4fb9-b452-50abfd15bc17" method="GET">
+    <con:description>Retrieve CI Item Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode and selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to check against create/update dates (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CitemdCompCode" : "string",
+  "CitemdCompName" : "string",
+  "CitemdItemCode" : "string",
+  "CitemdItemName" : "string",
+  "CitemdItemTypeCode" : "string",
+  "CitemdItemTypeName" : "string",
+  "CitemdLocCode" : "string",
+  "CitemdLocName" : "string",
+  "CitemdLotCtrlFlag" : "string",
+  "CitemdBinCtrlFlag" : "string",
+  "CitemdSerialFlag" : "string",
+  "CitemdUsageCode" : "string",
+  "CitemdCostUpdateLevelCode" : "string",
+  "CitemdInvAccCode" : "string",
+  "CitemdRevAccCode" : "string",
+  "CitemdWriAccCode" : "string",
+  "CitemdAdjAccCode" : "string",
+  "CitemdVarAccCode" : "string",
+  "CitemdSuspAccCode" : "string",
+  "CitemdBookOnHandQty" : 0,
+  "CitemdOnHandQty" : 0,
+  "CitemdOnOrderQty" : 0,
+  "CitemdReserveQty" : 0,
+  "CitemdMinOrderQty" : 0,
+  "CitemdStdOrderQty" : 0,
+  "CitemdMaxOrderQty" : 0,
+  "CitemdMinOnhandQty" : 0,
+  "CitemdMaxOnhandQty" : 0,
+  "CitemdStdOnhandQty" : 0,
+  "CitemdMarketPriceAmt" : 0,
+  "CitemdSellPriceAmt" : 0,
+  "CitemdBuybackPriceAmt" : 0,
+  "CitemdRestockPriceAmt" : 0,
+  "CitemdStdCostAmt" : 0,
+  "CitemdAvgCostAmt" : 0,
+  "CitemdLastCostAmt" : 0,
+  "CitemdCostUpdateDate" : "YYYY-MM-dd",
+  "CitemdCrtDate" : "YYYY-MM-dd",
+  "CitemdCrtUserCode" : "string",
+  "CitemdLastModifyDate" : "YYYY-MM-dd",
+  "CitemdLastModifyUserCode" : "string",
+  "CitemdTempInsertFlag" : "string",
+  "CitemdBookReserveQty" : 0,
+  "CitemdDeprExpAccCode" : "string",
+  "CitemdAccumDeprAccCode" : "string",
+  "CitemdTax1Code" : "string",
+  "CitemdTax2Code" : "string",
+  "CitemdTax3Code" : "string",
+  "CitemdSoldAtCostAccCode" : "string",
+  "CitemdSalesTax1Code" : "string",
+  "CitemdSalesTax2Code" : "string",
+  "CitemdSalesTax3Code" : "string",
+  "CitemdCmpQty" : 0,
+  "CitemdBookCmpQty" : 0,
+  "CitemdAffilRevAccCode" : "string",
+  "CitemdCustRevAccCode" : "string",
+  "CitemdAllowNegQtyFlag" : "string",
+  "CitemdLocActiveFlag" : "string",
+  "CitemdAdditionalInvAmt" : 0,
+  "CitemdInventoryItemCode" : "string",
+  "CitemdInventoryTypeCode" : "string",
+  "CitemdInventoryLocCode" : "string",
+  "CitemdSalesProductFlag" : "string",
+  "CitemdMsAvailableFlag" : "string",
+  "CitemdIuCreateDate" : "YYYY-MM-dd",
+  "CitemdIuCreateUser" : "string",
+  "CitemdIuUpdateDate" : "YYYY-MM-dd",
+  "CitemdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CitemdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e5fe991c-5fe2-4e27-a067-f162cd21c361" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f2fd067b-6fea-47aa-903b-6706d5f4b6b8" method="POST">
+    <con:description>Create a CI Item Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CitemdCompCode" : "string",
+  "CitemdCompName" : "string",
+  "CitemdItemCode" : "string",
+  "CitemdItemName" : "string",
+  "CitemdItemTypeCode" : "string",
+  "CitemdItemTypeName" : "string",
+  "CitemdLocCode" : "string",
+  "CitemdLocName" : "string",
+  "CitemdLotCtrlFlag" : "string",
+  "CitemdBinCtrlFlag" : "string",
+  "CitemdSerialFlag" : "string",
+  "CitemdUsageCode" : "string",
+  "CitemdCostUpdateLevelCode" : "string",
+  "CitemdInvAccCode" : "string",
+  "CitemdRevAccCode" : "string",
+  "CitemdWriAccCode" : "string",
+  "CitemdAdjAccCode" : "string",
+  "CitemdVarAccCode" : "string",
+  "CitemdSuspAccCode" : "string",
+  "CitemdBookOnHandQty" : 0,
+  "CitemdOnHandQty" : 0,
+  "CitemdOnOrderQty" : 0,
+  "CitemdReserveQty" : 0,
+  "CitemdMinOrderQty" : 0,
+  "CitemdStdOrderQty" : 0,
+  "CitemdMaxOrderQty" : 0,
+  "CitemdMinOnhandQty" : 0,
+  "CitemdMaxOnhandQty" : 0,
+  "CitemdStdOnhandQty" : 0,
+  "CitemdMarketPriceAmt" : 0,
+  "CitemdSellPriceAmt" : 0,
+  "CitemdBuybackPriceAmt" : 0,
+  "CitemdRestockPriceAmt" : 0,
+  "CitemdStdCostAmt" : 0,
+  "CitemdAvgCostAmt" : 0,
+  "CitemdLastCostAmt" : 0,
+  "CitemdCostUpdateDate" : "YYYY-MM-dd",
+  "CitemdCrtDate" : "YYYY-MM-dd",
+  "CitemdCrtUserCode" : "string",
+  "CitemdLastModifyDate" : "YYYY-MM-dd",
+  "CitemdLastModifyUserCode" : "string",
+  "CitemdTempInsertFlag" : "string",
+  "CitemdBookReserveQty" : 0,
+  "CitemdDeprExpAccCode" : "string",
+  "CitemdAccumDeprAccCode" : "string",
+  "CitemdTax1Code" : "string",
+  "CitemdTax2Code" : "string",
+  "CitemdTax3Code" : "string",
+  "CitemdSoldAtCostAccCode" : "string",
+  "CitemdSalesTax1Code" : "string",
+  "CitemdSalesTax2Code" : "string",
+  "CitemdSalesTax3Code" : "string",
+  "CitemdCmpQty" : 0,
+  "CitemdBookCmpQty" : 0,
+  "CitemdAffilRevAccCode" : "string",
+  "CitemdCustRevAccCode" : "string",
+  "CitemdAllowNegQtyFlag" : "string",
+  "CitemdLocActiveFlag" : "string",
+  "CitemdAdditionalInvAmt" : 0,
+  "CitemdInventoryItemCode" : "string",
+  "CitemdInventoryTypeCode" : "string",
+  "CitemdInventoryLocCode" : "string",
+  "CitemdSalesProductFlag" : "string",
+  "CitemdMsAvailableFlag" : "string",
+  "CitemdIuCreateDate" : "YYYY-MM-dd",
+  "CitemdIuCreateUser" : "string",
+  "CitemdIuUpdateDate" : "YYYY-MM-dd",
+  "CitemdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CitemdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CitemdCompCode":"string","CitemdItemCode":"string","CitemdItemTypeCode":"string","CitemdLocCode":"string","CitemdCostUpdateLevelCode":"string","CitemdRevAccCode":"string","CitemdVarAccCode":"string","CitemdSuspAccCode":"string","CitemdWriAccCode":"string","CitemdInvAccCode":"string","CitemdAdjAccCode":"string","CitemdSoldAtCostAccCode":"string","CitemdAffilRevAccCode":"string","CitemdCustRevAccCode":"string","CitemdSerialFlag":"string","CitemdLotCtrlFlag":"string","CitemdMsAvailableFlag":"string","CitemdUsageCode":"string","CitemdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="49b03831-dfaa-44c4-97f5-5cdb37029276" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CitemdCompCode":"string","CitemdItemCode":"string","CitemdItemTypeCode":"string","CitemdLocCode":"string","CitemdCostUpdateLevelCode":"string","CitemdRevAccCode":"string","CitemdVarAccCode":"string","CitemdSuspAccCode":"string","CitemdWriAccCode":"string","CitemdInvAccCode":"string","CitemdAdjAccCode":"string","CitemdSoldAtCostAccCode":"string","CitemdAffilRevAccCode":"string","CitemdCustRevAccCode":"string","CitemdSerialFlag":"string","CitemdLotCtrlFlag":"string","CitemdMsAvailableFlag":"string","CitemdUsageCode":"string","CitemdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="412c3905-2acb-4c41-a9b2-e3160f0f6499" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CitemdLocActiveFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

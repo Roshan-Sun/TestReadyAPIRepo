@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmfwdstatus" path="/pm-rest-api/rest/1/pmfwdstatus" id="30bdd35a-1ace-43d3-9485-a9f33f200a1b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="30bdd35a-1ace-43d3-9485-a9f33f200a1bfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmfwdstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="bbcc1019-0689-4540-b48f-0a51f6a4d64f" method="GET">
+    <con:description>Retrieve PM Field Work Directive Statuses</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfsStatusCode" : "string",
+  "PmfsStatusName" : "string",
+  "PmfsStatusClassCode" : "string",
+  "PmfsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuCreateUser" : "string",
+  "PmfsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuUpdateUser" : "string",
+  "PmfsLastSessioninfo" : "string",
+  "PmfsOrigSessioninfo" : "string",
+  "PmfsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bf2da8c2-5b1c-4236-b470-c056422af05c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="a1a90da8-7382-4959-93a7-509ef9c5429f" method="POST">
+    <con:description>Create a PM Field Work Directive Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfsStatusCode" : "string",
+  "PmfsStatusName" : "string",
+  "PmfsStatusClassCode" : "string",
+  "PmfsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuCreateUser" : "string",
+  "PmfsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuUpdateUser" : "string",
+  "PmfsLastSessioninfo" : "string",
+  "PmfsOrigSessioninfo" : "string",
+  "PmfsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmfsStatusClassCode":"string","PmfsStatusCode":"string","PmfsStatusName":"string","PmfsVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="dbad9126-a094-4177-a5fc-d3500610f52c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfsStatusClassCode":"string","PmfsStatusCode":"string","PmfsStatusName":"string","PmfsVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ae5c7af1-b056-48ed-8c34-2e2e9a8950f3" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfsStatusName":"Voided - 123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/om-rest-api/rest/1/omopportunity" path="/om-rest-api/rest/1/omopportunity" id="876ea1c3-09e1-4b83-8c3c-0ca85c829802" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="876ea1c3-09e1-4b83-8c3c-0ca85c829802fileName">%2Fom-rest-api%2Frest%2F1%2Fomopportunity</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6360f80e-0cbd-42dd-bfa7-7bbe9f1a2f41" method="GET">
+    <con:description>Retrieve OM Opportunities</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompany or selectByCompProj</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompany and selectByCompProj)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projectCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectByCompany and selectByCompProj)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmopvCompCode" : "string",
+  "OmopvCompName" : "string",
+  "OmopvOppoCode" : "string",
+  "OmopvOppoName" : "string",
+  "OmopvStageForFilter" : "string",
+  "OmopvStageCode" : "string",
+  "OmopvStageDesc" : "string",
+  "OmopvPotentialRevAmt" : 0,
+  "OmopvPotentialRevAmtFmt" : "string",
+  "OmopvClosingPc" : 0,
+  "OmopvClosingDate" : "YYYY-MM-dd",
+  "OmopvActualClosingDate" : "YYYY-MM-dd",
+  "OmopvProposalCode" : "string",
+  "OmopvSalesrepForFiler" : "string",
+  "OmopvSalesRepCode" : "string",
+  "OmopvSalesRepName" : "string",
+  "OmopvSalesRepPartnCode" : "string",
+  "OmopvSalesRepPartnName" : "string",
+  "OmopvPartnCode" : "string",
+  "OmopvPartnTypeCode" : "string",
+  "OmopvPartnTypeDesc" : "string",
+  "OmopvPartnName" : "string",
+  "OmopvPartnParentCode" : "string",
+  "OmopvPartnParentName" : "string",
+  "OmopvSalesRepPartnTypCode" : "string",
+  "OmopvProjCompCode" : "string",
+  "OmopvProjCode" : "string",
+  "OmopvProjName" : "string",
+  "OmopvProjCtrlCode" : "string",
+  "OmopvProjCtrlName" : "string",
+  "OmopvProjCustAddCode" : "string",
+  "OmopvProjCustAddress" : "string",
+  "OmopvProjStartDate" : "YYYY-MM-dd",
+  "OmopvProjEndDate" : "YYYY-MM-dd",
+  "OmopvProjBidJobCode" : "string",
+  "CBidJobExistsFlag" : "string",
+  "OmopvProjBidDate" : "YYYY-MM-dd",
+  "OmopvProjBidWonLostDate" : "YYYY-MM-dd",
+  "OmopvGenLiabilCode" : "string",
+  "OmopvGenLiabilDesc" : "string",
+  "OmopvGenLiabilRate" : 0,
+  "OmopvWorkersCompCode" : "string",
+  "OmopvWorkersCompDesc" : "string",
+  "OmopvWorkersCompRate" : 0,
+  "OmopvFeePc" : 0,
+  "OmopvNonreimbursableAmt" : 0,
+  "OmopvNonreimbursableAmtFmt" : "string",
+  "OmopvDurationMonths" : 0,
+  "OmopvFeeAmt" : 0,
+  "OmopvFeeAmt2" : 0,
+  "OmopvEarningsAmt" : 0,
+  "OmopvEarningsAmtFmt" : "string",
+  "OmopvGrossProfitPc" : 0,
+  "OmopvContractTypeCode" : "string",
+  "OmopvContractTypeDesc" : "string",
+  "OmopvBuildingTypeCode" : "string",
+  "OmopvBuildingTypeDesc" : "string",
+  "OmopvCtrlBtCode" : "string",
+  "OmopvCtrlBtDesc" : "string",
+  "OmopvSubcontractedVolumeAmt" : 0,
+  "OmopvCompanyPayrollAmt" : 0,
+  "OmopvSubcontractPayrollAmt" : 0,
+  "OmopvTotalPayrollAmt" : 0,
+  "OmopvIncludeInForecastFlag" : "string",
+  "OmopvFeePcDisplay" : 0,
+  "OmopvRuleCode" : "string",
+  "OmopvRuleDesc" : "string",
+  "OmopvIncAsTarget" : "string",
+  "OmopvCcipVolumeAmt" : 0,
+  "OmopvSdiSubcontractVolAmt" : 0,
+  "OmopvPmdDesc" : "string",
+  "OmopvPmpWorkLocCode" : "string",
+  "OmopvPmpWorkLocName" : "string",
+  "OmopvProjBidJobDeptCode" : "string",
+  "OmopvProjBidJobDeptName" : "string",
+  "OmopvBidJobBillRtTblCode" : "string",
+  "OmopvBidJobBillRtTblName" : "string",
+  "OmopvBidJobConstructValue" : 0,
+  "OmopvBidJobConPct" : 0,
+  "OmopvProjJobDeptCode" : "string",
+  "OmopvProjJobDeptName" : "string",
+  "OmopvJobBillingRtTblCode" : "string",
+  "OmopvJobBillingRtTblName" : "string",
+  "OmopvJobConstructionValue" : 0,
+  "OmopvConPctCode" : 0,
+  "OmopvJobBillMethCode" : "string",
+  "OmopvJobBillMethDesc" : "string",
+  "OmopvJobBillingTypeCode" : "string",
+  "OmopvJobBillingTypeName" : "string",
+  "OmopvJobInvoiceFormatCode" : "string",
+  "OmopvJobInvoiceFormatName" : "string",
+  "OmopvJobJbMapCode" : "string",
+  "OmopvJobJbMapName" : "string",
+  "OmopvAddContactName" : "string",
+  "OmopvAddLine1" : "string",
+  "OmopvAddLine2" : "string",
+  "OmopvAddLine3" : "string",
+  "OmopvRegionCode" : "string",
+  "OmopvRegionName" : "string",
+  "OmopvPostalCode" : "string",
+  "OmopvCountry" : "string",
+  "OmopvPhoneNum" : "string",
+  "OmopvFaxNum" : "string",
+  "OmopvInsuranceApprovedFlag" : "string",
+  "OmopvWinningBidPc" : 0,
+  "OmopvProjProceedsPc" : 0,
+  "OmopvProjJobCode" : "string",
+  "CJobExistsFlag" : "string",
+  "OmopvProjJobName" : "string",
+  "OmopvSourceCompCode" : "string",
+  "OmopvSourceCode" : "string",
+  "OmpovSourceName" : "string",
+  "OmopvConVal" : 0,
+  "OmopvRTeamReview" : "string",
+  "OmopvRTeamDt" : "YYYY-MM-dd",
+  "OmopvConStartDt" : "YYYY-MM-dd",
+  "OmopvConEndDt" : "YYYY-MM-dd",
+  "OmopvSpecialPrjt" : "string",
+  "OmopvPreconStartDt" : "YYYY-MM-dd",
+  "OmopvPreconEndDt" : "YYYY-MM-dd",
+  "OmopvConType" : "string",
+  "OmopvConTypeDesc" : "string",
+  "OmopvBond" : "string",
+  "OmopvCdiVol" : 0,
+  "OmopvCdiFlag" : "string",
+  "OmopvRmComments" : "string",
+  "OmopvCompetitorComments" : "string",
+  "OmopvAptCondo" : "string",
+  "OmopvBldRisk" : "string",
+  "OmopvBldRiskbyCode" : "string",
+  "OmopvBldRiskbyDesc" : "string",
+  "OmopvPrime" : "string",
+  "OmopvPrimeCode" : "string",
+  "OmopvPrimeDesc" : "string",
+  "OmopvCcipVol" : 0,
+  "OmopvInsValAppr" : "string",
+  "OmopvTotLabor" : 0,
+  "OmopvSuptLabor" : 0,
+  "OmopvRol" : 0,
+  "OmopvPrtnrType" : "string",
+  "OmopvUdfPtypeCode" : "string",
+  "OmopvUdfPtypeDesc" : "string",
+  "OmopvMarketSectorCode" : "string",
+  "OmopvMarketSectorDesc" : "string",
+  "OmopvBuildingClassCode" : "string",
+  "OmopvBuildingClassDesc" : "string",
+  "OmopvTop100Flag" : "string",
+  "DiscriminatorCode" : "string",
+  "OmopvIuUpdateUser" : "string",
+  "OmopvIuUpdateDate" : "YYYY-MM-dd",
+  "OmopvIuCreateUser" : "string",
+  "OmopvIuCreateDate" : "YYYY-MM-dd",
+  "OmSecRw" : 0,
+  "OmSecLevel" : 0,
+  "OmopvCurrentMonths" : 0,
+  "OmopvNextMonths" : 0,
+  "OmopvFutureMonths" : 0,
+  "OmopvBuildingAreaSqFt" : 0,
+  "OmopVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="89d64fa5-881f-4a04-9688-6f1ea047cef3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="75c5f5f2-3482-48c7-ac5b-4f4626ad0fd9" method="POST">
+    <con:description>Create an OM Opportunity</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmopvCompCode" : "string",
+  "OmopvCompName" : "string",
+  "OmopvOppoCode" : "string",
+  "OmopvOppoName" : "string",
+  "OmopvStageForFilter" : "string",
+  "OmopvStageCode" : "string",
+  "OmopvStageDesc" : "string",
+  "OmopvPotentialRevAmt" : 0,
+  "OmopvPotentialRevAmtFmt" : "string",
+  "OmopvClosingPc" : 0,
+  "OmopvClosingDate" : "YYYY-MM-dd",
+  "OmopvActualClosingDate" : "YYYY-MM-dd",
+  "OmopvProposalCode" : "string",
+  "OmopvSalesrepForFiler" : "string",
+  "OmopvSalesRepCode" : "string",
+  "OmopvSalesRepName" : "string",
+  "OmopvSalesRepPartnCode" : "string",
+  "OmopvSalesRepPartnName" : "string",
+  "OmopvPartnCode" : "string",
+  "OmopvPartnTypeCode" : "string",
+  "OmopvPartnTypeDesc" : "string",
+  "OmopvPartnName" : "string",
+  "OmopvPartnParentCode" : "string",
+  "OmopvPartnParentName" : "string",
+  "OmopvSalesRepPartnTypCode" : "string",
+  "OmopvProjCompCode" : "string",
+  "OmopvProjCode" : "string",
+  "OmopvProjName" : "string",
+  "OmopvProjCtrlCode" : "string",
+  "OmopvProjCtrlName" : "string",
+  "OmopvProjCustAddCode" : "string",
+  "OmopvProjCustAddress" : "string",
+  "OmopvProjStartDate" : "YYYY-MM-dd",
+  "OmopvProjEndDate" : "YYYY-MM-dd",
+  "OmopvProjBidJobCode" : "string",
+  "CBidJobExistsFlag" : "string",
+  "OmopvProjBidDate" : "YYYY-MM-dd",
+  "OmopvProjBidWonLostDate" : "YYYY-MM-dd",
+  "OmopvGenLiabilCode" : "string",
+  "OmopvGenLiabilDesc" : "string",
+  "OmopvGenLiabilRate" : 0,
+  "OmopvWorkersCompCode" : "string",
+  "OmopvWorkersCompDesc" : "string",
+  "OmopvWorkersCompRate" : 0,
+  "OmopvFeePc" : 0,
+  "OmopvNonreimbursableAmt" : 0,
+  "OmopvNonreimbursableAmtFmt" : "string",
+  "OmopvDurationMonths" : 0,
+  "OmopvFeeAmt" : 0,
+  "OmopvFeeAmt2" : 0,
+  "OmopvEarningsAmt" : 0,
+  "OmopvEarningsAmtFmt" : "string",
+  "OmopvGrossProfitPc" : 0,
+  "OmopvContractTypeCode" : "string",
+  "OmopvContractTypeDesc" : "string",
+  "OmopvBuildingTypeCode" : "string",
+  "OmopvBuildingTypeDesc" : "string",
+  "OmopvCtrlBtCode" : "string",
+  "OmopvCtrlBtDesc" : "string",
+  "OmopvSubcontractedVolumeAmt" : 0,
+  "OmopvCompanyPayrollAmt" : 0,
+  "OmopvSubcontractPayrollAmt" : 0,
+  "OmopvTotalPayrollAmt" : 0,
+  "OmopvIncludeInForecastFlag" : "string",
+  "OmopvFeePcDisplay" : 0,
+  "OmopvRuleCode" : "string",
+  "OmopvRuleDesc" : "string",
+  "OmopvIncAsTarget" : "string",
+  "OmopvCcipVolumeAmt" : 0,
+  "OmopvSdiSubcontractVolAmt" : 0,
+  "OmopvPmdDesc" : "string",
+  "OmopvPmpWorkLocCode" : "string",
+  "OmopvPmpWorkLocName" : "string",
+  "OmopvProjBidJobDeptCode" : "string",
+  "OmopvProjBidJobDeptName" : "string",
+  "OmopvBidJobBillRtTblCode" : "string",
+  "OmopvBidJobBillRtTblName" : "string",
+  "OmopvBidJobConstructValue" : 0,
+  "OmopvBidJobConPct" : 0,
+  "OmopvProjJobDeptCode" : "string",
+  "OmopvProjJobDeptName" : "string",
+  "OmopvJobBillingRtTblCode" : "string",
+  "OmopvJobBillingRtTblName" : "string",
+  "OmopvJobConstructionValue" : 0,
+  "OmopvConPctCode" : 0,
+  "OmopvJobBillMethCode" : "string",
+  "OmopvJobBillMethDesc" : "string",
+  "OmopvJobBillingTypeCode" : "string",
+  "OmopvJobBillingTypeName" : "string",
+  "OmopvJobInvoiceFormatCode" : "string",
+  "OmopvJobInvoiceFormatName" : "string",
+  "OmopvJobJbMapCode" : "string",
+  "OmopvJobJbMapName" : "string",
+  "OmopvAddContactName" : "string",
+  "OmopvAddLine1" : "string",
+  "OmopvAddLine2" : "string",
+  "OmopvAddLine3" : "string",
+  "OmopvRegionCode" : "string",
+  "OmopvRegionName" : "string",
+  "OmopvPostalCode" : "string",
+  "OmopvCountry" : "string",
+  "OmopvPhoneNum" : "string",
+  "OmopvFaxNum" : "string",
+  "OmopvInsuranceApprovedFlag" : "string",
+  "OmopvWinningBidPc" : 0,
+  "OmopvProjProceedsPc" : 0,
+  "OmopvProjJobCode" : "string",
+  "CJobExistsFlag" : "string",
+  "OmopvProjJobName" : "string",
+  "OmopvSourceCompCode" : "string",
+  "OmopvSourceCode" : "string",
+  "OmpovSourceName" : "string",
+  "OmopvConVal" : 0,
+  "OmopvRTeamReview" : "string",
+  "OmopvRTeamDt" : "YYYY-MM-dd",
+  "OmopvConStartDt" : "YYYY-MM-dd",
+  "OmopvConEndDt" : "YYYY-MM-dd",
+  "OmopvSpecialPrjt" : "string",
+  "OmopvPreconStartDt" : "YYYY-MM-dd",
+  "OmopvPreconEndDt" : "YYYY-MM-dd",
+  "OmopvConType" : "string",
+  "OmopvConTypeDesc" : "string",
+  "OmopvBond" : "string",
+  "OmopvCdiVol" : 0,
+  "OmopvCdiFlag" : "string",
+  "OmopvRmComments" : "string",
+  "OmopvCompetitorComments" : "string",
+  "OmopvAptCondo" : "string",
+  "OmopvBldRisk" : "string",
+  "OmopvBldRiskbyCode" : "string",
+  "OmopvBldRiskbyDesc" : "string",
+  "OmopvPrime" : "string",
+  "OmopvPrimeCode" : "string",
+  "OmopvPrimeDesc" : "string",
+  "OmopvCcipVol" : 0,
+  "OmopvInsValAppr" : "string",
+  "OmopvTotLabor" : 0,
+  "OmopvSuptLabor" : 0,
+  "OmopvRol" : 0,
+  "OmopvPrtnrType" : "string",
+  "OmopvUdfPtypeCode" : "string",
+  "OmopvUdfPtypeDesc" : "string",
+  "OmopvMarketSectorCode" : "string",
+  "OmopvMarketSectorDesc" : "string",
+  "OmopvBuildingClassCode" : "string",
+  "OmopvBuildingClassDesc" : "string",
+  "OmopvTop100Flag" : "string",
+  "DiscriminatorCode" : "string",
+  "OmopvIuUpdateUser" : "string",
+  "OmopvIuUpdateDate" : "YYYY-MM-dd",
+  "OmopvIuCreateUser" : "string",
+  "OmopvIuCreateDate" : "YYYY-MM-dd",
+  "OmSecRw" : 0,
+  "OmSecLevel" : 0,
+  "OmopvCurrentMonths" : 0,
+  "OmopvNextMonths" : 0,
+  "OmopvFutureMonths" : 0,
+  "OmopvBuildingAreaSqFt" : 0,
+  "OmopVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"OmopvCompCode":"string","OmopvProjCompCode":"string","OmopvOppoCode":"string","OmopvOppoName":"string","OmopvPartnCode":"string","OmopVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="f94ed053-30c8-4aec-ba6b-dcee30f10405" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"OmopvCompCode":"string","OmopvProjCompCode":"string","OmopvOppoCode":"string","OmopvOppoName":"string","OmopvPartnCode":"string","OmopVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="452eb24c-b22c-4ec5-8482-80ef2edd40c2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"OmopvOppoName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

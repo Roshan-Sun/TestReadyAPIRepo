@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourff" path="/pm-rest-api/rest/1/pmdailyjourff" id="b52cf413-6243-4248-abf3-c845ce1bfd75" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b52cf413-6243-4248-abf3-c845ce1bfd75fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourff</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="64373d99-e513-4e91-80e6-200f589d4182" method="GET">
+    <con:description>Retrieve PM Daily Journal Field Force</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtlPartnCode" : "string",
+  "PmjtlPartnTypeCode" : "string",
+  "PmjtlNotes" : "string",
+  "PmjtlClvValueCode1" : "string",
+  "PmjtlClvValueCode2" : "string",
+  "PmjtlClvValueCode3" : "string",
+  "PmjtlClvValueCode4" : "string",
+  "PmjtlClvValueCode5" : "string",
+  "PmjtlClvValueCode6" : "string",
+  "PmjtlPartnName" : "string",
+  "PmjtlIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtlIuCreateUser" : "string",
+  "PmjtlIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtlIuUpdateUser" : "string",
+  "PmjtlVUuid" : "string",
+  "PmjtlJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="07525af2-3de1-4643-8358-68f8ded0438b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2be7b034-9fa3-490d-8d84-9a3180cec8b9" method="POST">
+    <con:description>Create a PM Daily Journal Field Force</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtlPartnCode" : "string",
+  "PmjtlPartnTypeCode" : "string",
+  "PmjtlNotes" : "string",
+  "PmjtlClvValueCode1" : "string",
+  "PmjtlClvValueCode2" : "string",
+  "PmjtlClvValueCode3" : "string",
+  "PmjtlClvValueCode4" : "string",
+  "PmjtlClvValueCode5" : "string",
+  "PmjtlClvValueCode6" : "string",
+  "PmjtlPartnName" : "string",
+  "PmjtlIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtlIuCreateUser" : "string",
+  "PmjtlIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtlIuUpdateUser" : "string",
+  "PmjtlVUuid" : "string",
+  "PmjtlJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjtlJournalVUuid":"string","PmjtlPartnCode":"string","PmjtlPartnTypeCode":"string","PmjtlVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="f33b71ab-cf5f-45ff-a096-682b73aa4129" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtlJournalVUuid":"string","PmjtlPartnCode":"string","PmjtlPartnTypeCode":"string","PmjtlVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="98785a7f-fb4b-41be-855b-0ca25dacb121" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtlNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

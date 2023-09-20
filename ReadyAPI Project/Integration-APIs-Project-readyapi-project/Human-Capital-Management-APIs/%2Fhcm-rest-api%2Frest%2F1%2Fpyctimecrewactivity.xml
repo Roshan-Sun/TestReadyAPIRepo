@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimecrewactivity" path="/hcm-rest-api/rest/1/pyctimecrewactivity" id="1711acbf-be6d-4a24-9f77-04e869cf8f2d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1711acbf-be6d-4a24-9f77-04e869cf8f2dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimecrewactivity</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f96fbab6-a04d-4b18-9515-7e1e45d0eaf0" method="GET">
+    <con:description>Retrieve Crew Time Crew Activities</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CrwaVUuid" : "string",
+  "CrwaAccessCode" : "string",
+  "CrwaCrewCode" : "string",
+  "CrwaDataType" : "string",
+  "CrwaJobCompCode" : "string",
+  "CrwaValue1" : "string",
+  "CrwaValue2" : "string",
+  "CrwaValue3" : "string",
+  "CrwaSectorCode" : "string",
+  "CrwaScheduleCode" : "string",
+  "CrwaWbsvCode1" : "string",
+  "CrwaWbsvCode2" : "string",
+  "CrwaWbsvCode3" : "string",
+  "CrwaWbsvCode4" : "string",
+  "CrwaComment" : "string",
+  "CrwaName" : "string",
+  "CrwaStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuCreateUser" : "string",
+  "CrwaIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="a85e2435-fcdd-45b6-be02-a3c8333c63a2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="7e8183ee-3c7d-4d56-a63c-2fe861114a6f" method="POST">
+    <con:description>Create a Crew Time Crew Activity</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CrwaVUuid" : "string",
+  "CrwaAccessCode" : "string",
+  "CrwaCrewCode" : "string",
+  "CrwaDataType" : "string",
+  "CrwaJobCompCode" : "string",
+  "CrwaValue1" : "string",
+  "CrwaValue2" : "string",
+  "CrwaValue3" : "string",
+  "CrwaSectorCode" : "string",
+  "CrwaScheduleCode" : "string",
+  "CrwaWbsvCode1" : "string",
+  "CrwaWbsvCode2" : "string",
+  "CrwaWbsvCode3" : "string",
+  "CrwaWbsvCode4" : "string",
+  "CrwaComment" : "string",
+  "CrwaName" : "string",
+  "CrwaStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuCreateUser" : "string",
+  "CrwaIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrwaIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CrwaAccessCode":"MELISSA","CrwaCrewCode":"WETHENORTH26","CrwaDataType":"J","CrwaJobCompCode":"CCC","CrwaValue1":"1491523-S1","CrwaValue2":"02-100","CrwaValue3":"1000","CrwaStartDate":"2022-08-02T00:00:00-04:00","CrwaVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="511fbecc-9b80-44d0-9174-a1be2ccddd1e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CrwaAccessCode":"MELISSA","CrwaCrewCode":"WETHENORTH26","CrwaDataType":"J","CrwaJobCompCode":"CCC","CrwaValue1":"1491523-S1","CrwaValue2":"02-100","CrwaValue3":"1000","CrwaStartDate":"2022-08-02T00:00:00-04:00","CrwaVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

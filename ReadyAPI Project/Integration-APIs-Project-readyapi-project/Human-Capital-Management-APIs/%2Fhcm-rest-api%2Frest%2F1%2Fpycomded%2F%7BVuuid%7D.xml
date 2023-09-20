@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pycomded/{Vuuid}" path="/hcm-rest-api/rest/1/pycomded/{Vuuid}" id="c01ab6bb-4951-45ee-b345-36f6329f5d2b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c01ab6bb-4951-45ee-b345-36f6329f5d2bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpycomded%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="fad0fe4b-1010-4a2a-80c0-40a8580e1493" method="GET">
+    <con:description>Retrieve a Specific Company Deduction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CodElegBaseCode" : "string",
+  "CodBaseCode" : "string",
+  "CodBaseName" : "string",
+  "CodDedCode" : "string",
+  "CodDedName" : "string",
+  "CodStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodFrqCode" : 0,
+  "CodEmplrContrFactor" : "string",
+  "CodGlAccCode" : "string",
+  "CodGlAccName" : "string",
+  "CodEmplrContrAccCode" : "string",
+  "CodEmplrContrAccName" : "string",
+  "CodElegFrqCode" : 0,
+  "CodDeptCode" : "string",
+  "CodDeptName" : "string",
+  "CodEmplrContrDeptCode" : "string",
+  "CodEmplrContrDeptName" : "string",
+  "CodDedType" : "string",
+  "CodPlanCode" : "string",
+  "CodPlanName" : "string",
+  "CodPloCode" : "string",
+  "CodPloName" : "string",
+  "CodVendor" : "string",
+  "CodVenName" : "string",
+  "CodCompCode" : "string",
+  "CodPrnCode" : "string",
+  "CodPygCode" : "string",
+  "CodPrintDedFlag" : "string",
+  "CodCalcAfterFirstChkFlag" : "string",
+  "CodContrMaxType" : "string",
+  "CodEmplrContrEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodComment" : "string",
+  "CodRemittanceAmtForAp" : "string",
+  "CodRemittanceFrqCode" : 0,
+  "CodDedSecureFlag" : "string",
+  "CodUser" : "string",
+  "CodLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateUser" : "string",
+  "CodIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuUpdateUser" : "string",
+  "CodEmplrContr" : "string",
+  "CodVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="28ce0310-1a36-4748-bbc4-297203b04a3a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="dc9b3e29-ab6e-4285-a067-740c7e899ebd" method="PATCH">
+    <con:description>Update a Specific PY Company Deduction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CodElegBaseCode" : "string",
+  "CodBaseCode" : "string",
+  "CodBaseName" : "string",
+  "CodDedCode" : "string",
+  "CodDedName" : "string",
+  "CodStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodFrqCode" : 0,
+  "CodEmplrContrFactor" : "string",
+  "CodGlAccCode" : "string",
+  "CodGlAccName" : "string",
+  "CodEmplrContrAccCode" : "string",
+  "CodEmplrContrAccName" : "string",
+  "CodElegFrqCode" : 0,
+  "CodDeptCode" : "string",
+  "CodDeptName" : "string",
+  "CodEmplrContrDeptCode" : "string",
+  "CodEmplrContrDeptName" : "string",
+  "CodDedType" : "string",
+  "CodPlanCode" : "string",
+  "CodPlanName" : "string",
+  "CodPloCode" : "string",
+  "CodPloName" : "string",
+  "CodVendor" : "string",
+  "CodVenName" : "string",
+  "CodCompCode" : "string",
+  "CodPrnCode" : "string",
+  "CodPygCode" : "string",
+  "CodPrintDedFlag" : "string",
+  "CodCalcAfterFirstChkFlag" : "string",
+  "CodContrMaxType" : "string",
+  "CodEmplrContrEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodComment" : "string",
+  "CodRemittanceAmtForAp" : "string",
+  "CodRemittanceFrqCode" : 0,
+  "CodDedSecureFlag" : "string",
+  "CodUser" : "string",
+  "CodLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateUser" : "string",
+  "CodIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuUpdateUser" : "string",
+  "CodEmplrContr" : "string",
+  "CodVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CodCompCode":"ZZ","CodPygCode":"MO","CodPrnCode":"WEEK","CodDedCode":"RST","CodPlanCode":"SINGLE","CodPloCode":"T-FREE","CodStartDate":"2022-11-16","CodDedType":"D","CodGlAccCode":"1000.100","CodFrqCode":1,"CodDedAmount":1,"CodRemittanceFrqCode":1}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="8136eb68-72b0-406e-9c09-64a4c88325a8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CodCompCode":"ZZ","CodPygCode":"MO","CodPrnCode":"WEEK","CodDedCode":"RST","CodPlanCode":"SINGLE","CodPloCode":"T-FREE","CodStartDate":"2022-11-16","CodDedType":"D","CodGlAccCode":"1000.100","CodFrqCode":1,"CodDedAmount":1,"CodRemittanceFrqCode":1}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e561eb9d-7f03-4f1d-a214-d3b0bb1ad058" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CodVendor":"ZZ-ACME"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/issuestatus/{Vuuid}" path="/prm-rest-api/rest/1/issuestatus/{Vuuid}" id="4f6667e8-ff09-49ce-9435-54215cb54a97" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4f6667e8-ff09-49ce-9435-54215cb54a97fileName">%2Fprm-rest-api%2Frest%2F1%2Fissuestatus%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="922a31ae-0870-4dd1-a78f-b153a5b858fc" method="GET">
+    <con:description>Retrieve a Specific Issue Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmisStatusCode" : "string",
+  "DmisDesc" : "string",
+  "DmisActiveFlag" : "string",
+  "DmisIuCreateDate" : "YYYY-MM-dd",
+  "DmisIuCreateUser" : "string",
+  "DmisIuUpdateDate" : "YYYY-MM-dd",
+  "DmisIuUpdateUser" : "string",
+  "DmisVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ff6149e4-b83d-481d-bfc0-b10e6806f770" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="5918fda2-1dd3-4579-ae16-1a0188fe580a" method="DELETE">
+    <con:description>Delete a Specific Issue Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="93f1afa0-cf62-4df9-bf20-ffeef0664321" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="9ca7537f-34fc-4fd2-b383-f1f0d7801a82" method="PATCH">
+    <con:description>Update a Specific Issue Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmisStatusCode" : "string",
+  "DmisDesc" : "string",
+  "DmisActiveFlag" : "string",
+  "DmisIuCreateDate" : "YYYY-MM-dd",
+  "DmisIuCreateUser" : "string",
+  "DmisIuUpdateDate" : "YYYY-MM-dd",
+  "DmisIuUpdateUser" : "string",
+  "DmisVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DmisDesc":"string","DmisStatusCode":"string","DmisVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="2ecb8062-e898-42c9-9d1f-0088d756ba3f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmisDesc":"string","DmisStatusCode":"string","DmisVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="64a4218d-0853-499e-9917-de209009130a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmisDesc":"Open - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

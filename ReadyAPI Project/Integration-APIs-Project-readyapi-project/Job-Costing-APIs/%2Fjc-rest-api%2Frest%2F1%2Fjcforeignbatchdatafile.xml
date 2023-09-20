@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcforeignbatchdatafile" path="/jc-rest-api/rest/1/jcforeignbatchdatafile" id="5235f4c5-54e4-45fa-942e-bf2acd467370" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5235f4c5-54e4-45fa-942e-bf2acd467370fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcforeignbatchdatafile</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="57f699b1-e2e0-4f0e-ac87-028c3e56ae29" method="POST">
+    <con:description>Create JC Foreign Batch Data File</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FbhJcCompCode" : "string",
+  "FbhJcDistTypeCode" : "string",
+  "FbhJcSrcCode" : "string",
+  "FbhJcSrcDesc" : "string",
+  "FbhJcRefDate" : "YYYY-MM-dd",
+  "FbhJcRefCode" : "string",
+  "FbhJcRefDesc" : "string",
+  "FbhJcJobCode" : "string",
+  "FbhJcPhsCode" : "string",
+  "FbhJcCatCode" : "string",
+  "FbhJcDeptCode" : "string",
+  "FbhJcAccCode" : "string",
+  "FbhJcEqpCode" : "string",
+  "FbhJcTrancodeCode" : "string",
+  "FbhJcComponCode" : "string",
+  "FbhJcAmt" : 0,
+  "FbhJcUnit" : 0,
+  "FbhJcWmCode" : "string",
+  "FbhJcWbsvCode1" : "string",
+  "FbhJcWbsvCode2" : "string",
+  "FbhJcWbsvCode3" : "string",
+  "FbhJcWbsvCode4" : "string",
+  "FbhJcTavCode1" : "string",
+  "FbhJcTavCode2" : "string",
+  "FbhJcTavCode3" : "string",
+  "FbhJcTavCode4" : "string",
+  "FbhJcJobCtrlCode" : "string",
+  "FbhJcPhsCtrlCode" : "string",
+  "FbhJcCatCtrlCode" : "string",
+  "FbhJcValidFlag" : "string",
+  "FbhJcLineNum" : 0,
+  "FbhJcDsrcCompCode" : "string",
+  "FbhJcJobLongCode" : "string",
+  "FbhOverrideBillAmt" : 0,
+  "FbhOverrideBillRate" : 0,
+  "FbhOverrideTradeCode" : "string",
+  "FbhPostDate" : "YYYY-MM-dd",
+  "FbhJcPhsName" : "string",
+  "FbhJcErText" : "string",
+  "FbhLastSessioninfo" : "string",
+  "FbhOrigSessioninfo" : "string",
+  "FbhIuCreateDate" : "YYYY-MM-dd",
+  "FbhIuCreateUser" : "string",
+  "FbhIuUpdateDate" : "YYYY-MM-dd",
+  "FbhIuUpdateUser" : "string",
+  "FbhVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"FbhJcCompCode":"string","FbhJcDistTypeCode":"string","FbhJcSrcCode":"string","FbhJcRefDate":"string","FbhJcJobCode":"string","FbhJcPhsCode":"string","FbhJcCatCode":"string","FbhJcDeptCode":"string","FbhJcAccCode":"string","FbhJcAmt":"float","FbhJcWmCode":"string","FbhJcValidFlag":"string","FbhJcLineNum":"integer","FbhJcDsrcCompCode":"string","FbhPostDate":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="a795d6bb-8b3b-42d8-a5fb-645b531b40f5" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"FbhJcCompCode":"string","FbhJcDistTypeCode":"string","FbhJcSrcCode":"string","FbhJcRefDate":"string","FbhJcJobCode":"string","FbhJcPhsCode":"string","FbhJcCatCode":"string","FbhJcDeptCode":"string","FbhJcAccCode":"string","FbhJcAmt":"float","FbhJcWmCode":"string","FbhJcValidFlag":"string","FbhJcLineNum":"integer","FbhJcDsrcCompCode":"string","FbhPostDate":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

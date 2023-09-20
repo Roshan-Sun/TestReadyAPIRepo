@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ecm-rest-api/rest/v1/ImgSourceDocTypeV" path="/ecm-rest-api/rest/v1/ImgSourceDocTypeV" id="e84ad257-292f-4210-87da-aa275fc5d413" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e84ad257-292f-4210-87da-aa275fc5d413fileName">%2Fecm-rest-api%2Frest%2Fv1%2FImgSourceDocTypeV</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8da55994-bce5-46c3-9f08-e5d8bb5670cf" method="GET">
+    <con:description>Retrieve all Imaging Document types based on Sources</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ImgsdtDocumentTypeDesc" : "string",
+  "ImgsdtSubdirectoryName" : "string",
+  "ImgsdtSourceDesc" : "string",
+  "ImgsdtSourcePathOverride" : "string",
+  "ImgsdtProcessedPathOverride" : "string",
+  "ImgsdtVirtualPathOverride" : "string",
+  "ImgsdtSsradFlag" : "string",
+  "ImgsdtSourceUuid" : "string",
+  "ImgsdtDocTypeUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d4e4b24a-ffc1-4102-a84f-8efff7ac1b5f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

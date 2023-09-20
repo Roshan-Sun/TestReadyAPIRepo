@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gltrialbalancebyacct" path="/glrestapi/rest/v1/gltrialbalancebyacct" id="3b3821b0-a6ab-4034-a7d2-c9e806dac5a6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3b3821b0-a6ab-4034-a7d2-c9e806dac5a6fileName">%2Fglrestapi%2Frest%2Fv1%2Fgltrialbalancebyacct</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d75c33c7-f01c-4b34-b850-27aae6669362" method="GET">
+    <con:description>Retrieve GL Trial Balance Report</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>gl2000</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>acctPickList</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Account Pick List (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyGroupCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Group Code (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deptDetail</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Detail (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deptPickList</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Pick List (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fiscalYear</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fiscal Year (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fromAcctCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Account Code to start search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>toAcctCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Account Code to end search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fromDeptCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Code to start search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>toDeptCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Code to end search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fromPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Period to start search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>toPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Period to end search interval (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>homeCurrency</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Currency Type (gl2000)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>showZeroFlag</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to show zero records (gl2000)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GlCompCode" : "string",
+  "GlCompName" : "string",
+  "GlAcctypeName" : "string",
+  "GlAcctypeSeqNum" : 0,
+  "GlAccNum" : "string",
+  "GlAccSort" : "string",
+  "GlAccName" : "string",
+  "GlAccClearFlag" : "string",
+  "GlAccCode" : "string",
+  "Gl2000DeptCode" : "string",
+  "Gl2000DeptCode1" : "string",
+  "Gl2000DeptName" : "string",
+  "Gl2000CompArchDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlAcctPicklist" : "string",
+  "GlCompGroupCode" : "string",
+  "GlDeptDetail" : "string",
+  "GlFiscalYear" : 0,
+  "GlFromAcctCode" : "string",
+  "GlFromDeptCode" : "string",
+  "GlFromPeriod" : 0,
+  "GlHomeCurrency" : "string",
+  "GlShowAcctW0activity" : "string",
+  "GlToAcctCode" : "string",
+  "GlToDeptCode" : "string",
+  "GlToPeriod" : 0,
+  "GlCurrentRunSeq" : "string",
+  "GlDeptPicklist" : "string",
+  "GlPortalUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="01eb51ce-c9cd-4fb8-894d-dbbe4f1a0e17" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyunions" path="/hcm-rest-api/rest/1/pyunions" id="f02c8dec-f057-48bf-94c1-a255a3ac251c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f02c8dec-f057-48bf-94c1-a255a3ac251cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyunions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="7a2e1721-684b-4677-87b6-98e22acd1e8f" method="GET">
+    <con:description>Retrieve PY Unions</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UniCode" : "string",
+  "UniName" : "string",
+  "UniShortName" : "string",
+  "UniType" : "string",
+  "UniUnionsUniCode" : "string",
+  "UniUnionsUniName" : "string",
+  "UniUseCtlUnionRate" : "string",
+  "UniCollectBargainRegCode" : "string",
+  "UniCollectBargainRegName" : "string",
+  "UniContactName" : "string",
+  "UniLicenseNo" : "string",
+  "UniLicenseDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniAddress1" : "string",
+  "UniAddress2" : "string",
+  "UniAddress3" : "string",
+  "UniZipCode" : "string",
+  "UniBankCode" : "string",
+  "UniBranchCode" : "string",
+  "UniBankAccNumber" : "string",
+  "UniCountryCode" : "string",
+  "UniCountryName" : "string",
+  "UniStateCode" : "string",
+  "UniStateName" : "string",
+  "UniCountyCode" : "string",
+  "UniCountyName" : "string",
+  "UniCityCode" : "string",
+  "UniCityName" : "string",
+  "UniInclAsRegUniAca" : "string",
+  "UniShowInclAsRegUniFlag" : "string",
+  "UniUser" : "string",
+  "UniLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuCreateUser" : "string",
+  "UniIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuUpdateUser" : "string",
+  "UniVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0177555f-9b00-47dd-a160-32137d994889" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="76d0fdf7-6373-4a06-b7a5-8499be0300ab" method="POST">
+    <con:description>Create a PY Union</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UniCode" : "string",
+  "UniName" : "string",
+  "UniShortName" : "string",
+  "UniType" : "string",
+  "UniUnionsUniCode" : "string",
+  "UniUnionsUniName" : "string",
+  "UniUseCtlUnionRate" : "string",
+  "UniCollectBargainRegCode" : "string",
+  "UniCollectBargainRegName" : "string",
+  "UniContactName" : "string",
+  "UniLicenseNo" : "string",
+  "UniLicenseDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniAddress1" : "string",
+  "UniAddress2" : "string",
+  "UniAddress3" : "string",
+  "UniZipCode" : "string",
+  "UniBankCode" : "string",
+  "UniBranchCode" : "string",
+  "UniBankAccNumber" : "string",
+  "UniCountryCode" : "string",
+  "UniCountryName" : "string",
+  "UniStateCode" : "string",
+  "UniStateName" : "string",
+  "UniCountyCode" : "string",
+  "UniCountyName" : "string",
+  "UniCityCode" : "string",
+  "UniCityName" : "string",
+  "UniInclAsRegUniAca" : "string",
+  "UniShowInclAsRegUniFlag" : "string",
+  "UniUser" : "string",
+  "UniLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuCreateUser" : "string",
+  "UniIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "UniIuUpdateUser" : "string",
+  "UniVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"UniCode":"string","UniName":"string","UniShortName":"string","UniUseCtlUnionRate":"string","UniInclAsRegUniAca":"string","UniVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="71207ebc-c08b-41b9-b39e-e62fcc6e72bf" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"UniCode":"string","UniName":"string","UniShortName":"string","UniUseCtlUnionRate":"string","UniInclAsRegUniAca":"string","UniVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="b385b5a2-9f5e-45e1-b17a-15117d58539f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"UniCountryCode":"CA"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

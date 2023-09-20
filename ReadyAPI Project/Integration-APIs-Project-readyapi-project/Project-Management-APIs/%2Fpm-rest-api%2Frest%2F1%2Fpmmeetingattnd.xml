@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeetingattnd" path="/pm-rest-api/rest/1/pmmeetingattnd" id="2939b04a-d667-4357-ac71-c7c6ef7e9e17" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2939b04a-d667-4357-ac71-c7c6ef7e9e17fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingattnd</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="cfa21308-eb4a-4dcc-8a9d-c35b6900ef22" method="GET">
+    <con:description>Retrieve PM Meeting Attendees</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmaBpCode" : "string",
+  "PmmaBpType" : "string",
+  "PmmaContactCode" : "string",
+  "PmmaCcOnlyFlag" : "string",
+  "PmmaAbsentFlag" : "string",
+  "PmmaNotes" : "string",
+  "PmmaMinutesSentLastDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmaVUuid" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="37e1cb8a-34a2-4569-b12d-f9878ae314f1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="1d9d4c12-51bf-4331-a56a-949ef3e8330a" method="POST">
+    <con:description>Create a PM Meeting Attendee</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmaBpCode" : "string",
+  "PmmaBpType" : "string",
+  "PmmaContactCode" : "string",
+  "PmmaCcOnlyFlag" : "string",
+  "PmmaAbsentFlag" : "string",
+  "PmmaNotes" : "string",
+  "PmmaMinutesSentLastDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmaVUuid" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmaBpCode":"string","PmmaBpType":"string","PmmaContactCode":"string","PmmaCcOnlyFlag":"string","PmmaAbsentFlag":"string","PmmVUuid":"string","PmmaVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="a3aba777-2a86-4629-9e50-c8e5951542ed" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmaBpCode":"string","PmmaBpType":"string","PmmaContactCode":"string","PmmaCcOnlyFlag":"string","PmmaAbsentFlag":"string","PmmVUuid":"string","PmmaVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="d96fa0ba-93ab-4c18-a104-3a7905760b11" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmaNotes":"test1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

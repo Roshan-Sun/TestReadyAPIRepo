@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrapplicants/{Vuuid}" path="/hcm-rest-api/rest/1/hrapplicants/{Vuuid}" id="69cb09dc-fa9b-486f-8dbd-e3669966ba55" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="69cb09dc-fa9b-486f-8dbd-e3669966ba55fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapplicants%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8c0608cb-169b-4e66-8796-e661c2a5a217" method="GET">
+    <con:description>Retrieve a Specific HR Applicant</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AplNo" : "string",
+  "AplFirstName" : "string",
+  "AplMiddleName" : "string",
+  "AplLastName" : "string",
+  "AplSinNo" : "string",
+  "AplType" : "string",
+  "AplApplyDate" : "YYYY-MM-dd",
+  "AplAddress1" : "string",
+  "AplAddress2" : "string",
+  "AplAddress3" : "string",
+  "AplZipCode" : "string",
+  "AplPhAddress1" : "string",
+  "AplHomePhone" : "string",
+  "AplPhAddress2" : "string",
+  "AplPhAddress3" : "string",
+  "AplWorkPhone" : "string",
+  "AplPhZipCode" : "string",
+  "AplCellPhone" : "string",
+  "AplPager" : "string",
+  "AplHomeFax" : "string",
+  "AplWorkFax" : "string",
+  "AplEmailAddress" : "string",
+  "AplDateOfBirth" : "YYYY-MM-dd",
+  "AplPlaceOfBirth" : "string",
+  "AplSex" : "string",
+  "AplEthnicCode" : "string",
+  "AplMaritalStatus" : "string",
+  "AplResidentStatus" : "string",
+  "AplExpectedRate" : 0,
+  "AplExpectedSalary" : 0,
+  "AplAvailabilityDate" : "YYYY-MM-dd",
+  "AplRatePeriod" : "string",
+  "AplPreferredLang" : "string",
+  "AplDominantHand" : "string",
+  "AplOfferedPosition" : "string",
+  "AplMilitaryStatus" : "string",
+  "AplResLatitude" : "string",
+  "AplTravelFlag" : "string",
+  "AplTravelDistance" : 0,
+  "AplResLongitude" : "string",
+  "AplApplicationLoc" : "string",
+  "AplStatus" : "string",
+  "AplGenComment" : "string",
+  "AplInterviewDate" : "YYYY-MM-dd",
+  "AplInterviewedBy" : "string",
+  "AplUser" : "string",
+  "AplLastUpdDate" : "YYYY-MM-dd",
+  "CountyCntCountyCode" : "string",
+  "CountyCntStateCode" : "string",
+  "CountyCntCountryCode" : "string",
+  "CountryCtrCountryCode" : "string",
+  "DisabilityDisCode" : "string",
+  "EmployeeEmpNo" : "string",
+  "StatusStsCode" : "string",
+  "ControlConCompCode" : "string",
+  "CityCtyCountryCode" : "string",
+  "CityCtyStateCode" : "string",
+  "CityCtyCountyCode" : "string",
+  "CityCtyCityCode" : "string",
+  "StateStaCountryCode" : "string",
+  "StateStaStateCode" : "string",
+  "LanguageLangName" : "string",
+  "AplAppSource" : "string",
+  "ApsrcApsCode" : "string",
+  "AplLoginPassword" : "string",
+  "AplTrdCode" : "string",
+  "AplSkillNote" : "string",
+  "AplDegNote" : "string",
+  "AplTrainNote" : "string",
+  "AplCertLicNote" : "string",
+  "AplMemNote" : "string",
+  "AplReferringEmpNo" : "string",
+  "AplFullparttime" : "string",
+  "AplTemporary" : "string",
+  "AplAreaofinterest" : "string",
+  "AplGeoarea" : "string",
+  "AplOther" : "string",
+  "AplMilitarySeparationDate" : "YYYY-MM-dd",
+  "AplPhStateCode" : "string",
+  "AplPhCountryCode" : "string",
+  "AplVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="69db9411-ac43-42e1-a70f-3eafcd0acdd3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="cd0bcfc2-db23-41ae-8e22-b6fddd1851d2" method="DELETE">
+    <con:description>Delete a Specific HR Applicant</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3640aa7d-84a7-4c10-ae47-5c69f1b4309f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="914f4526-18c2-4352-b523-9df65a5116ea" method="PATCH">
+    <con:description>Update a Specific HR Applicant</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AplNo" : "string",
+  "AplFirstName" : "string",
+  "AplMiddleName" : "string",
+  "AplLastName" : "string",
+  "AplSinNo" : "string",
+  "AplType" : "string",
+  "AplApplyDate" : "YYYY-MM-dd",
+  "AplAddress1" : "string",
+  "AplAddress2" : "string",
+  "AplAddress3" : "string",
+  "AplZipCode" : "string",
+  "AplPhAddress1" : "string",
+  "AplHomePhone" : "string",
+  "AplPhAddress2" : "string",
+  "AplPhAddress3" : "string",
+  "AplWorkPhone" : "string",
+  "AplPhZipCode" : "string",
+  "AplCellPhone" : "string",
+  "AplPager" : "string",
+  "AplHomeFax" : "string",
+  "AplWorkFax" : "string",
+  "AplEmailAddress" : "string",
+  "AplDateOfBirth" : "YYYY-MM-dd",
+  "AplPlaceOfBirth" : "string",
+  "AplSex" : "string",
+  "AplEthnicCode" : "string",
+  "AplMaritalStatus" : "string",
+  "AplResidentStatus" : "string",
+  "AplExpectedRate" : 0,
+  "AplExpectedSalary" : 0,
+  "AplAvailabilityDate" : "YYYY-MM-dd",
+  "AplRatePeriod" : "string",
+  "AplPreferredLang" : "string",
+  "AplDominantHand" : "string",
+  "AplOfferedPosition" : "string",
+  "AplMilitaryStatus" : "string",
+  "AplResLatitude" : "string",
+  "AplTravelFlag" : "string",
+  "AplTravelDistance" : 0,
+  "AplResLongitude" : "string",
+  "AplApplicationLoc" : "string",
+  "AplStatus" : "string",
+  "AplGenComment" : "string",
+  "AplInterviewDate" : "YYYY-MM-dd",
+  "AplInterviewedBy" : "string",
+  "AplUser" : "string",
+  "AplLastUpdDate" : "YYYY-MM-dd",
+  "CountyCntCountyCode" : "string",
+  "CountyCntStateCode" : "string",
+  "CountyCntCountryCode" : "string",
+  "CountryCtrCountryCode" : "string",
+  "DisabilityDisCode" : "string",
+  "EmployeeEmpNo" : "string",
+  "StatusStsCode" : "string",
+  "ControlConCompCode" : "string",
+  "CityCtyCountryCode" : "string",
+  "CityCtyStateCode" : "string",
+  "CityCtyCountyCode" : "string",
+  "CityCtyCityCode" : "string",
+  "StateStaCountryCode" : "string",
+  "StateStaStateCode" : "string",
+  "LanguageLangName" : "string",
+  "AplAppSource" : "string",
+  "ApsrcApsCode" : "string",
+  "AplLoginPassword" : "string",
+  "AplTrdCode" : "string",
+  "AplSkillNote" : "string",
+  "AplDegNote" : "string",
+  "AplTrainNote" : "string",
+  "AplCertLicNote" : "string",
+  "AplMemNote" : "string",
+  "AplReferringEmpNo" : "string",
+  "AplFullparttime" : "string",
+  "AplTemporary" : "string",
+  "AplAreaofinterest" : "string",
+  "AplGeoarea" : "string",
+  "AplOther" : "string",
+  "AplMilitarySeparationDate" : "YYYY-MM-dd",
+  "AplPhStateCode" : "string",
+  "AplPhCountryCode" : "string",
+  "AplVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"AplTravelFlag":"string","AplLastUpdDate":"string","ControlConCompCode":"string","AplUser":"string","AplType":"string","AplFirstName":"string","AplLastName":"string","AplEmailAddress":"string","AplCellPhone":"string","AplSex":"string","AplEthnicCode":"string","AplMaritalStatus":"string","AplResidentStatus":"string","AplMilitaryStatus":"string","AplDominantHand":"string","AplApplyDate":"string","AplVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e3474339-e838-4dcc-b045-459fc2d5daa4" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"AplTravelFlag":"string","AplLastUpdDate":"string","ControlConCompCode":"string","AplUser":"string","AplType":"string","AplFirstName":"string","AplLastName":"string","AplEmailAddress":"string","AplCellPhone":"string","AplSex":"string","AplEthnicCode":"string","AplMaritalStatus":"string","AplResidentStatus":"string","AplMilitaryStatus":"string","AplDominantHand":"string","AplApplyDate":"string","AplVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e39498ae-fc13-4f7f-ad4a-26de122a38b9" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"AplExpectedSalary":1}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

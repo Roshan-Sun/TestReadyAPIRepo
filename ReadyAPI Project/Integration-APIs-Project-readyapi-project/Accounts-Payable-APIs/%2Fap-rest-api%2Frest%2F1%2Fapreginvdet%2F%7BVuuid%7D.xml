@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" path="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" id="cc33cd72-9aee-43ac-9682-c37b5933f89d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cc33cd72-9aee-43ac-9682-c37b5933f89dfileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdet%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="7af3a1fd-b053-40c1-99ba-40277f7c0248" method="GET">
+    <con:description>Retrieve AP Registered Invoice Detail Line By Unique ID</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of the record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ApridLineNum" : 0,
+  "ApridTax1Code" : "string",
+  "ApridTax1TaxableFlag" : "string",
+  "ApridTax2Code" : "string",
+  "ApridTax2TaxableFlag" : "string",
+  "ApridTax3Code" : "string",
+  "ApridTax3TaxableFlag" : "string",
+  "ApridDesc" : "string",
+  "ApridUserTypeCode" : "string",
+  "ApridUserField1" : "string",
+  "ApridUserField2" : "string",
+  "ApridUserField3" : "string",
+  "ApridUserField4" : "string",
+  "ApridUserField5" : "string",
+  "ApridUserField6" : "string",
+  "ApridUserField7" : "string",
+  "ApridUserField8" : "string",
+  "ApridWbsvCode1" : "string",
+  "ApridWbsvCode2" : "string",
+  "ApridWbsvCode3" : "string",
+  "ApridWbsvCode4" : "string",
+  "ApridDistTypeCode" : "string",
+  "ApridSrcCompCode" : "string",
+  "ApridDeptCode" : "string",
+  "ApridAccCode" : "string",
+  "ApridEqpCode" : "string",
+  "ApridComponCode" : "string",
+  "ApridTrancodeCode" : "string",
+  "ApridJobCode" : "string",
+  "ApridJobCtrlCode" : "string",
+  "ApridPhsCode" : "string",
+  "ApridPhsCtrlCode" : "string",
+  "ApridCatCode" : "string",
+  "ApridCatCtrlCode" : "string",
+  "ApridWoCode" : "string",
+  "ApridWDetailCode" : "string",
+  "ApridItemClassCode" : "string",
+  "ApridItemCode" : "string",
+  "ApridItemTypeCode" : "string",
+  "ApridLocCode" : "string",
+  "ApridWmCode" : "string",
+  "ApridApplCode" : "string",
+  "ApridExpCode" : "string",
+  "ApridPoLineNum" : 0,
+  "ApridPoNum" : "string",
+  "ApridPoReleaseNum" : 0,
+  "ApridTavCode1" : "string",
+  "ApridTavCode2" : "string",
+  "ApridTavCode3" : "string",
+  "ApridTavCode4" : "string",
+  "ApridWitmLineNumber" : 0,
+  "ApridCalledFromAppCode" : "string",
+  "ApridUserFieldEdtFlag5" : "string",
+  "ApridUserFieldEdtFlag6" : "string",
+  "ApridUserFieldEdtFlag7" : "string",
+  "ApridUserFieldEdtFlag8" : "string",
+  "ApridUserFieldName5" : "string",
+  "ApridUserFieldName6" : "string",
+  "ApridUserFieldName7" : "string",
+  "ApridUserFieldName8" : "string",
+  "ApridWbsSetupFlag" : "string",
+  "ApridApriVUuid" : "string",
+  "ApridVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="cfc4ad4b-1652-4d59-af59-07f95871477f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

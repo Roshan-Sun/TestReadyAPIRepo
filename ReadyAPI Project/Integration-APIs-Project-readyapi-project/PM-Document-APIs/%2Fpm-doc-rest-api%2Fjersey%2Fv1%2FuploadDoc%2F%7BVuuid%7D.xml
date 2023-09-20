@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-doc-rest-api/jersey/v1/uploadDoc/{Vuuid}" path="/pm-doc-rest-api/jersey/v1/uploadDoc/{Vuuid}" id="b43a9770-9434-4968-ac1d-f5460260b429" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b43a9770-9434-4968-ac1d-f5460260b429fileName">%2Fpm-doc-rest-api%2Fjersey%2Fv1%2FuploadDoc%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="e28e14af-6958-4989-aea7-2035a15da4bc" method="POST">
+    <con:description>Update an existing PM Attachment Revision</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>UUID of document to update</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>400</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>multipart/form-data</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmdId":"","Vuuid":"BAEC26FFFF155818E053508010ACC325","PmdTitle":"OguzRoverTest3-1","PmdDesc1":"OguzRoverTest3-1","PmdDesc2":"OguzRoverTest3-1","PmdProjUuid":"9D73CB3DCDCDBF19E0536900A8C05238","PmdTypeCode":"DRAWMGMT","PmdrComment":"RevisionNumber 1 ","PmdrRcvdDate":"2020-11-02","PmdrRevDate":"2021-12-09"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="933e2aec-5f32-48a5-a2c5-76ef69fdba47" mediaType="multipart/form-data">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmdId":"","Vuuid":"BAEC26FFFF155818E053508010ACC325","PmdTitle":"OguzRoverTest3-1","PmdDesc1":"OguzRoverTest3-1","PmdDesc2":"OguzRoverTest3-1","PmdProjUuid":"9D73CB3DCDCDBF19E0536900A8C05238","PmdTypeCode":"DRAWMGMT","PmdrComment":"RevisionNumber 1 ","PmdrRcvdDate":"2020-11-02","PmdrRevDate":"2021-12-09"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="2e6d4bea-0295-4af4-b1f3-3ad21c769f39" method="DELETE">
+    <con:description>Delete an Attachment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Document</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>400</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="1ba80856-c9e1-47cd-afa6-7612baa74ed5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

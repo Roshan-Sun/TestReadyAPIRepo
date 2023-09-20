@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/sdobjusrextdef" path="/sys-rest-api/rest/1/sdobjusrextdef" id="494381b0-7c07-4bf2-804a-c995907ab1bb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="494381b0-7c07-4bf2-804a-c995907ab1bbfileName">%2Fsys-rest-api%2Frest%2F1%2Fsdobjusrextdef</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2a37bf33-4fb2-4164-9283-2d57466e343e" method="GET">
+    <con:description>Retrieve SD Object User Extend Definitions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>RowFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TableName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Name of Table being looked for (RowFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (yyyy-mm-dd - RowFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UedSchemaName" : "string",
+  "UedTableName" : "string",
+  "UedUkColName" : "string",
+  "UedCode1Code" : "string",
+  "UedCode2Code" : "string",
+  "UedCode3Code" : "string",
+  "UedCode4Code" : "string",
+  "UedCode5Code" : "string",
+  "UedCode6Code" : "string",
+  "UedCode7Code" : "string",
+  "UedCode8Code" : "string",
+  "UedCode9Code" : "string",
+  "UedCode10Code" : "string",
+  "UedCode11Code" : "string",
+  "UedCode12Code" : "string",
+  "UedCode13Code" : "string",
+  "UedCode14Code" : "string",
+  "UedCode15Code" : "string",
+  "UedCode16Code" : "string",
+  "UedCode17Code" : "string",
+  "UedCode18Code" : "string",
+  "UedCode19Code" : "string",
+  "UedCode20Code" : "string",
+  "UedNum1Code" : "string",
+  "UedNum2Code" : "string",
+  "UedNum3Code" : "string",
+  "UedNum4Code" : "string",
+  "UedNum5Code" : "string",
+  "UedNum6Code" : "string",
+  "UedNum7Code" : "string",
+  "UedNum8Code" : "string",
+  "UedNum9Code" : "string",
+  "UedNum10Code" : "string",
+  "UedNum11Code" : "string",
+  "UedNum12Code" : "string",
+  "UedNum13Code" : "string",
+  "UedNum14Code" : "string",
+  "UedNum15Code" : "string",
+  "UedNum16Code" : "string",
+  "UedNum17Code" : "string",
+  "UedNum18Code" : "string",
+  "UedNum19Code" : "string",
+  "UedNum20Code" : "string",
+  "UedDate1Code" : "string",
+  "UedDate2Code" : "string",
+  "UedDate3Code" : "string",
+  "UedDate4Code" : "string",
+  "UedDate5Code" : "string",
+  "UedDate6Code" : "string",
+  "UedDate7Code" : "string",
+  "UedDate8Code" : "string",
+  "UedDate9Code" : "string",
+  "UedDate10Code" : "string",
+  "UedDate11Code" : "string",
+  "UedDate12Code" : "string",
+  "UedDate13Code" : "string",
+  "UedDate14Code" : "string",
+  "UedDate15Code" : "string",
+  "UedDate16Code" : "string",
+  "UedDate17Code" : "string",
+  "UedDate18Code" : "string",
+  "UedDate19Code" : "string",
+  "UedDate20Code" : "string",
+  "UedIuCreateDate" : "YYYY-MM-dd",
+  "UedIuCreateUser" : "string",
+  "UedIuUpdateDate" : "YYYY-MM-dd",
+  "UedIuUpdateUser" : "string",
+  "UedCode21Code" : "string",
+  "UedCode22Code" : "string",
+  "UedCode23Code" : "string",
+  "UedCode24Code" : "string",
+  "UedCode25Code" : "string",
+  "UedCode26Code" : "string",
+  "UedCode27Code" : "string",
+  "UedCode28Code" : "string",
+  "UedCode29Code" : "string",
+  "UedCode30Code" : "string",
+  "UedCode31Code" : "string",
+  "UedCode32Code" : "string",
+  "UedCode33Code" : "string",
+  "UedCode34Code" : "string",
+  "UedCode35Code" : "string",
+  "UedCode36Code" : "string",
+  "UedCode37Code" : "string",
+  "UedCode38Code" : "string",
+  "UedCode39Code" : "string",
+  "UedCode40Code" : "string",
+  "UedCode41Code" : "string",
+  "UedCode42Code" : "string",
+  "UedCode43Code" : "string",
+  "UedCode44Code" : "string",
+  "UedCode45Code" : "string",
+  "UedCode46Code" : "string",
+  "UedCode47Code" : "string",
+  "UedCode48Code" : "string",
+  "UedCode49Code" : "string",
+  "UedCode50Code" : "string",
+  "UedCode51Code" : "string",
+  "UedCode52Code" : "string",
+  "UedCode53Code" : "string",
+  "UedCode54Code" : "string",
+  "UedCode55Code" : "string",
+  "UedCode56Code" : "string",
+  "UedCode57Code" : "string",
+  "UedCode58Code" : "string",
+  "UedCode59Code" : "string",
+  "UedCode60Code" : "string",
+  "UedLastSessioninfo" : "string",
+  "UedOrigSessioninfo" : "string",
+  "UedCode61Code" : "string",
+  "UedCode62Code" : "string",
+  "UedCode63Code" : "string",
+  "UedCode64Code" : "string",
+  "UedCode65Code" : "string",
+  "UedCode66Code" : "string",
+  "UedCode67Code" : "string",
+  "UedCode68Code" : "string",
+  "UedCode69Code" : "string",
+  "UedCode70Code" : "string",
+  "UedCode71Code" : "string",
+  "UedCode72Code" : "string",
+  "UedCode73Code" : "string",
+  "UedCode74Code" : "string",
+  "UedCode75Code" : "string",
+  "UedCode76Code" : "string",
+  "UedCode77Code" : "string",
+  "UedCode78Code" : "string",
+  "UedCode79Code" : "string",
+  "UedCode80Code" : "string",
+  "UedCode81Code" : "string",
+  "UedCode82Code" : "string",
+  "UedCode83Code" : "string",
+  "UedCode84Code" : "string",
+  "UedCode85Code" : "string",
+  "UedCode86Code" : "string",
+  "UedCode87Code" : "string",
+  "UedCode88Code" : "string",
+  "UedCode89Code" : "string",
+  "UedCode90Code" : "string",
+  "UedCode91Code" : "string",
+  "UedCode92Code" : "string",
+  "UedCode93Code" : "string",
+  "UedCode94Code" : "string",
+  "UedCode95Code" : "string",
+  "UedCode96Code" : "string",
+  "UedCode97Code" : "string",
+  "UedCode98Code" : "string",
+  "UedCode99Code" : "string",
+  "UedCode100Code" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="8e083904-3542-478e-88bc-31c68fad4673" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

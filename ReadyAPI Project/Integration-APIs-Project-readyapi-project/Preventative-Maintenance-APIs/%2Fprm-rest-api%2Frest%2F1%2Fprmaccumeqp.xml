@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/prmaccumeqp" path="/prm-rest-api/rest/1/prmaccumeqp" id="9d40a2ee-a450-4289-b2b6-289555064fd2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9d40a2ee-a450-4289-b2b6-289555064fd2fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmaccumeqp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="435be9ed-4f6c-4edd-b8a7-f93ba17bb98b" method="GET">
+    <con:description>Retrieve PRM Accumulative Equipments</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AccTypeCode" : "string",
+  "AccDescription" : "string",
+  "AccReadingDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccCreatedBy" : "string",
+  "AccDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccModifiedBy" : "string",
+  "AccEqpName" : "string",
+  "AccEqpCode" : "string",
+  "AccEqpActiveFlag" : "string",
+  "AccEmhlCompCode" : "string",
+  "AccAutoupdHrlyAccumFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "AccIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e1d441f5-d36e-43c3-98e1-efc1b674389d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="622679e8-ea3c-4005-8bdd-57b186e0c155" method="POST">
+    <con:description>Create an Accumulative Equipment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AccTypeCode" : "string",
+  "AccDescription" : "string",
+  "AccReadingDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccCreatedBy" : "string",
+  "AccDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccModifiedBy" : "string",
+  "AccEqpName" : "string",
+  "AccEqpCode" : "string",
+  "AccEqpActiveFlag" : "string",
+  "AccEmhlCompCode" : "string",
+  "AccAutoupdHrlyAccumFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "AccIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AccVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"AccTypeCode":"string","AccDescription":"string","AccEqpCode":"string","AccBaseValue":"integer","AccValue":"integer","AccVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e717949f-a211-4e8f-83d6-b398249904bc" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"AccTypeCode":"string","AccDescription":"string","AccEqpCode":"string","AccBaseValue":"integer","AccValue":"integer","AccVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="b79d49fd-846d-41e9-950c-55c00de891c5" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"AccValue":25}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

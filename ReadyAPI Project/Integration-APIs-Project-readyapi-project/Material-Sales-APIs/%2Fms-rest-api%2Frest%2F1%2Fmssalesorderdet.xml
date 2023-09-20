@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ms-rest-api/rest/1/mssalesorderdet" path="/ms-rest-api/rest/1/mssalesorderdet" id="2f8feaf3-399e-48cf-a410-1e0603975253" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f8feaf3-399e-48cf-a410-1e0603975253fileName">%2Fms-rest-api%2Frest%2F1%2Fmssalesorderdet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="69f76149-336f-4db4-b788-0e1a0005d67e" method="GET">
+    <con:description>Retrieve Material Sales Order Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByAuditDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to search created or updated items (YYYY-MM-dd - selectByAuditDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "MssodCompCode" : "string",
+  "MssodCompName" : "string",
+  "MssodSalesOrderCode" : "string",
+  "MssodStartDate" : "YYYY-MM-dd",
+  "MssodCiClassCode" : "string",
+  "MssodCiClassName" : "string",
+  "MssodCiItemCode" : "string",
+  "MssodCiLocCode" : "string",
+  "MssodCiLocName" : "string",
+  "MssodCiItemTypeCode" : "string",
+  "MssodCiItemTypeName" : "string",
+  "MssodQty" : 0,
+  "MssodWmCode" : "string",
+  "MssodPricePerWm" : 0,
+  "MssodExtendedAmt" : 0,
+  "MssodDiscPct" : 0,
+  "MssodTax1Code" : "string",
+  "MssodTax1Name" : "string",
+  "MssodTax2Code" : "string",
+  "MssodTax2Name" : "string",
+  "MssodTax3Code" : "string",
+  "MssodTax3Name" : "string",
+  "MssodExpiryDate" : "YYYY-MM-dd",
+  "MssodOrigin" : "string",
+  "MssodDestination" : "string",
+  "MssodDiscQtyPerWm" : 0,
+  "MssodPayRatePerWm" : 0,
+  "MssodTruckerVenclassCode" : "string",
+  "MssodMszoneCode" : "string",
+  "MssodIndexAmt" : 0,
+  "MssodMaxProtect" : 0,
+  "MssodMinProtect" : 0,
+  "MssodOverrideAcPc" : 0,
+  "MssodQuotationCode" : "string",
+  "MssodItemCompCode" : "string",
+  "MssodItemCompName" : "string",
+  "MssodCiItemName" : "string",
+  "MssodCreateSoFlag" : "string",
+  "MssodToMszoneCode" : "string",
+  "MssodDeliveryChargeTax1" : "string",
+  "MssodDeliveryChargeTax2" : "string",
+  "MssodDeliveryChargeTax3" : "string",
+  "MssodDeliverySrchTax1" : "string",
+  "MssodDeliverySrchTax2" : "string",
+  "MssodDeliverySrchTax3" : "string",
+  "MssodTruckerPayTax1" : "string",
+  "MssodTruckerPayTax2" : "string",
+  "MssodTruckerPayTax3" : "string",
+  "MssodTruckerSrchTax1" : "string",
+  "MssodTruckerSrchTax2" : "string",
+  "MssodTruckerSrchTax3" : "string",
+  "MssodDeliveryChargesPerWm" : 0,
+  "MssodDeliveryChargesWmCode" : "string",
+  "MssodDeliveryChargesMinQty" : 0,
+  "MssodDeliveryChargesMinAmt" : 0,
+  "MssodTruckerPayWmCode" : "string",
+  "MssodTruckerPayMinQty" : 0,
+  "MssodTruckerPayMinAmt" : 0,
+  "MssodDeliverySrchPct" : 0,
+  "MssodDeliverySrchWmCode" : "string",
+  "MssodDeliverySrchPerWm" : 0,
+  "MssodDeliverySrchLmpSum" : 0,
+  "MssodTruckerSrchPct" : 0,
+  "MssodTruckerSrchWmCode" : "string",
+  "MssodTruckerSrchPerWm" : 0,
+  "MssodTruckerSrchLmpSum" : 0,
+  "MssodDeliveryCharges" : 0,
+  "MssodTruckerPay" : 0,
+  "MssodDeliverySrch" : 0,
+  "MssodTruckerSrch" : 0,
+  "MssodTruckClassCode" : "string",
+  "MssodMszpcCode" : "string",
+  "MssodHaulNum" : "string",
+  "MssodHaulNumPrintFlag" : "string",
+  "MssodSubstituteDtlFlag" : "string",
+  "MssodSubstituteDtlDesc" : "string",
+  "MssodBidMargin" : 0,
+  "MssodEscalationLineFlag" : "string",
+  "MssodIuCreateDate" : "YYYY-MM-dd",
+  "MssodIuCreateUser" : "string",
+  "MssodIuUpdateDate" : "YYYY-MM-dd",
+  "MssodIuUpdateUser" : "string",
+  "MssodDumpFeeRate" : 0,
+  "MssodQuotedPayFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="8ebf5e28-4d70-4785-87d0-68b3291238c4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

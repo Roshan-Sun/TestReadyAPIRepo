@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytaxemp" path="/hcm-rest-api/rest/1/pytaxemp" id="536ac44f-c5fd-4c8e-9d52-f8d882f66c72" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="536ac44f-c5fd-4c8e-9d52-f8d882f66c72fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytaxemp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="83492325-8555-490e-83ee-e37741bc0fff" method="GET">
+    <con:description>Retrieve PY Tax Overrides</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PyTaxEmpFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNoVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (PyTaxEmpFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TaxCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tax Code (PyTaxEmpFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatecodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>State Code (PyTaxEmpFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>WrlCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Wrl Code (PyTaxEmpFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxpEmpNo" : "string",
+  "TxpStateCode" : "string",
+  "TxpWrlCode" : "string",
+  "TxpTaxCode" : "string",
+  "TxpEffectiveDate" : "YYYY-MM-dd",
+  "TxpTaxAmount" : 0,
+  "TxpAmtType" : "string",
+  "TxpCalcmeth" : "string",
+  "TxpAltCalcCode" : "string",
+  "TxpAddPrimExempAmt" : 0,
+  "TxpAddSuplExempAmt" : 0,
+  "TxpOvrdRglrTaxRate" : 0,
+  "TxpOvrdSuplTaxRate" : 0,
+  "TxpAddRglrTaxRate" : 0,
+  "TxpAddSuplTaxRate" : 0,
+  "TxpOvrdRglrExempAmt" : 0,
+  "TxpOvrdSuplExempAmt" : 0,
+  "TxpMaxWage" : 0,
+  "TxpMaxDedOvrdAmt" : 0,
+  "TxpExcludeFlag" : "string",
+  "TxpUser" : "string",
+  "TxpLastUpdDate" : "YYYY-MM-dd",
+  "TxpTaxType" : "string",
+  "TxpJurintType" : "string",
+  "TxpExemptFlag" : "string",
+  "TxpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="51c9559b-2978-45a0-90bb-c587a0852f14" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="214bae48-8101-4cb3-bca1-4e85d7a6f941" method="POST">
+    <con:description>Create a PY Tax Override</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxpEmpNo" : "string",
+  "TxpStateCode" : "string",
+  "TxpWrlCode" : "string",
+  "TxpTaxCode" : "string",
+  "TxpEffectiveDate" : "YYYY-MM-dd",
+  "TxpTaxAmount" : 0,
+  "TxpAmtType" : "string",
+  "TxpCalcmeth" : "string",
+  "TxpAltCalcCode" : "string",
+  "TxpAddPrimExempAmt" : 0,
+  "TxpAddSuplExempAmt" : 0,
+  "TxpOvrdRglrTaxRate" : 0,
+  "TxpOvrdSuplTaxRate" : 0,
+  "TxpAddRglrTaxRate" : 0,
+  "TxpAddSuplTaxRate" : 0,
+  "TxpOvrdRglrExempAmt" : 0,
+  "TxpOvrdSuplExempAmt" : 0,
+  "TxpMaxWage" : 0,
+  "TxpMaxDedOvrdAmt" : 0,
+  "TxpExcludeFlag" : "string",
+  "TxpUser" : "string",
+  "TxpLastUpdDate" : "YYYY-MM-dd",
+  "TxpTaxType" : "string",
+  "TxpJurintType" : "string",
+  "TxpExemptFlag" : "string",
+  "TxpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TxpEmpNo":"string","TxpTaxCode":"string","TxpWrlCode":"string","TxpStateCode":"string","TxpCalcmeth":"string","TxpEffectiveDate":"string","TxpLastUpdDate":"string","TxpUser":"string","TxpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="99f83fc7-6207-45a5-81d2-47df7b93cfa0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxpEmpNo":"string","TxpTaxCode":"string","TxpWrlCode":"string","TxpStateCode":"string","TxpCalcmeth":"string","TxpEffectiveDate":"string","TxpLastUpdDate":"string","TxpUser":"string","TxpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="52b98581-1162-4b5c-93cb-56abf5366731" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxpTaxAmount":1}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

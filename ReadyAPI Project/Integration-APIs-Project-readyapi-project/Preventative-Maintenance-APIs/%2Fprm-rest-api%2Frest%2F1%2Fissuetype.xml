@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/issuetype" path="/prm-rest-api/rest/1/issuetype" id="da4454b8-686e-46cc-ba96-beb679971cef" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="da4454b8-686e-46cc-ba96-beb679971ceffileName">%2Fprm-rest-api%2Frest%2F1%2Fissuetype</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="47a9d360-0bd4-4a93-b80e-d501ddc4d8a7" method="GET">
+    <con:description>Retrieve Issue Types</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmitTypeCode" : "string",
+  "DmitDesc" : "string",
+  "DmitCloseAllowedFlag" : "string",
+  "DmitIuCreateDate" : "YYYY-MM-dd",
+  "DmitIuCreateUser" : "string",
+  "DmitIuUpdateDate" : "YYYY-MM-dd",
+  "DmitIuUpdateUser" : "string",
+  "DmitVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="39e2c033-26fb-4f97-a2b0-b5d8dae4983e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="71518923-bdc8-4db7-a1d7-99ae3be2e4f0" method="POST">
+    <con:description>Create an Issue Type</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmitTypeCode" : "string",
+  "DmitDesc" : "string",
+  "DmitCloseAllowedFlag" : "string",
+  "DmitIuCreateDate" : "YYYY-MM-dd",
+  "DmitIuCreateUser" : "string",
+  "DmitIuUpdateDate" : "YYYY-MM-dd",
+  "DmitIuUpdateUser" : "string",
+  "DmitVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DmitDesc":"string","DmitTypeCode":"string","DmitVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="d646e1f9-d56f-4634-b967-8e244fb2a9c0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmitDesc":"string","DmitTypeCode":"string","DmitVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="a00b328e-1f1a-4332-bfa7-695847e26c05" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmitDesc":"Service - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsubmittaltype" path="/pm-rest-api/rest/1/pmsubmittaltype" id="b6fb2677-487e-4e15-99cc-aee8cfdcda9f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b6fb2677-487e-4e15-99cc-aee8cfdcda9ffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmittaltype</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="de135613-f328-4cb7-a0d4-405efd999f9b" method="GET">
+    <con:description>Retrieve PM Submittal Types</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmtTypeCode" : "string",
+  "PmsmtTypeDesc" : "string",
+  "PmsmtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmtIuCreateUser" : "string",
+  "PmsmtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmtIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="7bac52ec-79c4-43bd-8eab-8d1f67b69480" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2f640d41-64ed-49fd-b800-36115f716d5d" method="POST">
+    <con:description>Create a PM Submittal Type</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmtTypeCode" : "string",
+  "PmsmtTypeDesc" : "string",
+  "PmsmtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmtIuCreateUser" : "string",
+  "PmsmtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmtIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmtTypeCode":"string","PmsmtTypeDesc":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="11b2dca4-3d96-46c7-8a9d-8055d7b122a1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmtTypeCode":"string","PmsmtTypeDesc":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="1e41417c-e371-4dea-bd48-8384a6010a9d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmtTypeDesc":"Warranty - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

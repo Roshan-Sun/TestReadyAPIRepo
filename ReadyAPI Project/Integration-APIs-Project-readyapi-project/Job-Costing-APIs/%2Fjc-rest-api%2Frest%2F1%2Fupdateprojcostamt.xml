@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/updateprojcostamt" path="/jc-rest-api/rest/1/updateprojcostamt" id="9a220e59-2d84-4ba8-b0c1-4240d8642d5d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9a220e59-2d84-4ba8-b0c1-4240d8642d5dfileName">%2Fjc-rest-api%2Frest%2F1%2Fupdateprojcostamt</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="9259318d-5d1f-4ab9-84e6-c3fa9f4b1ad6" method="POST">
+    <con:description>Update Project Cost Amounts</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{
+  "result" : "SUCCESS"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"name":"updateProjCostAmt","parameters":[{"compCode":"string"},{"contCode":"string"},{"year":"string"},{"period":"string"},{"billCode":"string"},{"projAmtOverride":"string"}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="19a29557-c33c-4457-a99c-91a774d1ffb2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"name":"updateProjCostAmt","parameters":[{"compCode":"string"},{"contCode":"string"},{"year":"string"},{"period":"string"},{"billCode":"string"},{"projAmtOverride":"string"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

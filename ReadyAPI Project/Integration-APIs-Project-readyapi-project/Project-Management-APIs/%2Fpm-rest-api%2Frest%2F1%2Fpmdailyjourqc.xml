@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourqc" path="/pm-rest-api/rest/1/pmdailyjourqc" id="0dbeee29-6faf-4f40-9104-0bcb88b38ad9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0dbeee29-6faf-4f40-9104-0bcb88b38ad9fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourqc</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a3cd0ab9-8af2-4860-b024-c46954d318f3" method="GET">
+    <con:description>Retrieve PM Daily Journal Quality Control</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjqcPhsCode" : "string",
+  "PmjqcDfwCode" : "string",
+  "PmjqcActCode" : "string",
+  "PmjqcWrkComplWithContFlag" : "string",
+  "PmjqcWrkComplWithSftyFlag" : "string",
+  "PmjqcBuildingArea" : "string",
+  "PmjqcIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjqcIuCreateUser" : "string",
+  "PmjqcIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjqcIuUpdateUser" : "string",
+  "PmjqcNotes" : "used for storing unicode character-based data such as large documents",
+  "PmjqcVUuid" : "string",
+  "PmjqcJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1c29cb7d-4b26-4931-9f48-3bb2764e3294" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="cc5f4182-5340-4369-b2e5-43a15976c6d1" method="POST">
+    <con:description>Create a PM Daily Journal Quality Control</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjqcPhsCode" : "string",
+  "PmjqcDfwCode" : "string",
+  "PmjqcActCode" : "string",
+  "PmjqcWrkComplWithContFlag" : "string",
+  "PmjqcWrkComplWithSftyFlag" : "string",
+  "PmjqcBuildingArea" : "string",
+  "PmjqcIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjqcIuCreateUser" : "string",
+  "PmjqcIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjqcIuUpdateUser" : "string",
+  "PmjqcNotes" : "used for storing unicode character-based data such as large documents",
+  "PmjqcVUuid" : "string",
+  "PmjqcJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjqcJournalVUuid":"string","PmjqcVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="c8bddf04-d8f9-4cc8-9ed5-c96acfcc6b4d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjqcJournalVUuid":"string","PmjqcVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ee096e2a-8c42-4e9c-a2b0-892e2c878e35" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjqcWrkComplWithSftyFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

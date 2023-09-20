@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourbilldet" path="/pm-rest-api/rest/1/pmdailyjourbilldet" id="88542e47-2ea0-45e7-a7b7-5fd212ef6b75" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="88542e47-2ea0-45e7-a7b7-5fd212ef6b75fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourbilldet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d6409444-286d-4824-a206-576ec8ad6a05" method="GET">
+    <con:description>Retrieve PM Daily Journal Billing Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjbCompCode" : "string",
+  "PmjbContCode" : "string",
+  "PmjbBillCode" : "string",
+  "PmjbBillDesc" : "string",
+  "PmjbWmCode" : "string",
+  "PmjbDrawNum" : 0,
+  "PmjbRevisionNum" : 0,
+  "PmjbIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjbIuCreateUser" : "string",
+  "PmjbIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjbIuUpdateUser" : "string",
+  "PmjbVUuid" : "string",
+  "PmjbJournalVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1362b1a5-23a7-46ea-96b3-50289dc0e040" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="95161062-2f17-4815-9374-51843b70c27c" method="POST">
+    <con:description>Create a PM Daily Journal Billing Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjbCompCode" : "string",
+  "PmjbContCode" : "string",
+  "PmjbBillCode" : "string",
+  "PmjbBillDesc" : "string",
+  "PmjbWmCode" : "string",
+  "PmjbDrawNum" : 0,
+  "PmjbRevisionNum" : 0,
+  "PmjbIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjbIuCreateUser" : "string",
+  "PmjbIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjbIuUpdateUser" : "string",
+  "PmjbVUuid" : "string",
+  "PmjbJournalVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjbBillDesc":"string","PmjbWmCode":"string","PmjbCompCode":"string","PmjbBillCode":"string","PmjbContCode":"string","PmjbJournalVuuid":"string","PmjbVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4230095b-212e-4ccc-afb0-756a1841ef8d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjbBillDesc":"string","PmjbWmCode":"string","PmjbCompCode":"string","PmjbBillCode":"string","PmjbContCode":"string","PmjbJournalVuuid":"string","PmjbVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="588986f7-1346-47f7-ae7d-d819fbcd2b53" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjbQty":"99"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

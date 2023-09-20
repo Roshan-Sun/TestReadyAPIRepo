@@ -1,0 +1,4250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="1fdf95ba-8d98-4ca1-9eed-d68209698c71" name="System Data APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-SYS-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># SYS-REST-API
+API documentation for **System Data** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="1fdf95ba-8d98-4ca1-9eed-d68209698c71fileName">System-Data-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-SYS-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-SYS-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: System Data APIs
+  description: |
+    # SYS-REST-API
+    API documentation for **System Data** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: babank
+  description: BA Banks
+- name: bacurrency
+  description: BA Currencies
+- name: bpaddresses
+  description: Business Partner Addresses
+- name: businesspartner
+  description: Business Partners
+- name: exchangerate
+  description: Exchange Rates
+- name: gtregion
+  description: GT Regions
+- name: gttext
+  description: GT Texts
+- name: issuepriority
+  description: Issue Priorities (deprecated)
+- name: issuestatus
+  description: Issues Statuses (deprecated)
+- name: issuetype
+  description: Issue Types (deprecated)
+- name: sdobjectauditcurrstat
+  description: System Data Object Audit Current States
+- name: sdobjusrextdef
+  description: System Data Object User Extension Definitions
+- name: sdobjusrextvalue
+  description: System Data Object User Extension Values
+- name: sysrelateddocquery
+  description: System Related Document Query
+- name: term
+  description: Terms
+- name: uevalidfielddata
+  description: User Extended Valid Field Data
+- name: userdefinedclassifier
+  description: User Defined Classifiers
+- name: userdefinedclassifierquery
+  description: User Defined Classifier Query
+- name: weightmeasure
+  description: Weight Measures
+- name: userextensions
+  description: User Extension Table Data
+paths:
+  /sys-rest-api/rest/1/babank:
+    get:
+      tags:
+      - babank
+      summary: Retrieve Ba Banks
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaBank'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - babank
+      summary: Create a BA Bank
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/BaBankRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaBank'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/babank/{Vuuid}:
+    get:
+      tags:
+      - babank
+      summary: Retrieve a specific BA Bank
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaBank'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - babank
+      summary: Update a specific BA Bank
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/BaBankRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaBank'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/bacurrency:
+    get:
+      tags:
+      - bacurrency
+      summary: Retrieve BA Currencies
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: BacurrencyFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CurrName
+        in: query
+        description: Currency Name (BacurrencyFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaCurrency'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - bacurrency
+      summary: Create a BA Currency
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/BaCurrencyRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaCurrency'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/bacurrency/{CurrCode}:
+    get:
+      tags:
+      - bacurrency
+      summary: Retrieve a specific BA Currency
+      description: ""
+      parameters:
+      - name: CurrCode
+        in: path
+        description: BA Currency Code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaCurrency'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - bacurrency
+      summary: Delete a Specific BA Currency
+      description: ""
+      parameters:
+      - name: CurrCode
+        in: path
+        description: BA Currency Code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - bacurrency
+      summary: Update a specific BA Currency
+      description: ""
+      parameters:
+      - name: CurrCode
+        in: path
+        description: BA Currency Code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/BaCurrencyRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaCurrency'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/bpaddresses:
+    get:
+      tags:
+      - bpaddresses
+      summary: Retrieve BP Addresses
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByBPCode or selectByBPCodeAddress
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: businessPartner
+        in: query
+        description: Business Partner Name (selectByBPCode and selectByBPCodeAddress)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: addressType
+        in: query
+        description: Address Type Code (selectByBPCodeAddress)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BpAddresses'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - bpaddresses
+      summary: Create a BP Address
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/BpAddressesRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BpAddresses'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/bpaddresses/{Vuuid}:
+    get:
+      tags:
+      - bpaddresses
+      summary: Retrieve specific BP Address
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BpAddresses'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - bpaddresses
+      summary: Delete a Specific BA Address
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - bpaddresses
+      summary: Update a specific BP Address
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/BpAddressesRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BpAddresses'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/businesspartner:
+    get:
+      tags:
+      - businesspartner
+      summary: Retrieve Business Partners
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectBusinessPartner
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: businessPartner
+        in: query
+        description: Business Partner Name (selectBusinessPartner)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessPartner'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - businesspartner
+      summary: Create a Business Partner
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/BusinessPartnerRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessPartner'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/businesspartner/{Vuuid}:
+    get:
+      tags:
+      - businesspartner
+      summary: Retrieve a Specific Business Partner
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessPartner'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - businesspartner
+      summary: Update a Specific Business Partner
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/BusinessPartnerRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessPartner'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/exchangerate:
+    get:
+      tags:
+      - exchangerate
+      summary: Retrieve BA Exchange Rates
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectRate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: exchRateDate
+        in: query
+        description: Date set on Exchange Rate (selectRate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRate'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - exchangerate
+      summary: Create BA Exchange Rate
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeRateRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRate'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/exchangerate/{Vuuid}:
+    get:
+      tags:
+      - exchangerate
+      summary: Retrieve Specific BA Exchange Rate
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRate'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - exchangerate
+      summary: Update BA Exchange Rate
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeRateRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRate'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/gtregion:
+    get:
+      tags:
+      - gtregion
+      summary: Retrieve Region Lists
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByRegCode or selectByRegName
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: regionCode
+        in: query
+        description: Region Code (selectByRegCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: regionName
+        in: query
+        description: Region Name (selectByRegName)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtRegion'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - gtregion
+      summary: Create Region
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/GtRegionRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtRegion'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/gtregion/{Vuuid}:
+    get:
+      tags:
+      - gtregion
+      summary: Retrieve a Specific Region
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtRegion'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - gtregion
+      summary: Delete a Specific Region
+      description: ""
+      operationId: delete-region
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - gtregion
+      summary: Update a Specific Region
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/GtRegionRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtRegion'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/gttext:
+    get:
+      tags:
+      - gttext
+      summary: Retrieve Global Table Texts
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: findByCompType or findByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: compCode
+        in: query
+        description: Company Code (findByCompType)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: typeCode
+        in: query
+        description: Text Type Code (findByCompType)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date to be checked for (findByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtText'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/issuepriority:
+    get:
+      tags:
+      - issuepriority
+      summary: Retrieve Issue Priorities
+      description: "Please refer to **[Preventative Maintenance APIs](https://app.swaggerhub.com/apis-docs/CMiC/PRM-REST-API/1#/)** for this endpoint. It has been moved there."
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuePriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+      deprecated: true
+  /sys-rest-api/rest/1/issuestatus:
+    get:
+      tags:
+      - issuestatus
+      summary: Retrieve Issue Statuses
+      description: "Please refer to **[Preventative Maintenance APIs](https://app.swaggerhub.com/apis-docs/CMiC/PRM-REST-API/1#/)** for this endpoint. It has been moved there."
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+      deprecated: true
+  /sys-rest-api/rest/1/issuetype:
+    get:
+      tags:
+      - issuetype
+      summary: Retrieve Issue Types
+      description: "Please refer to **[Preventative Maintenance APIs](https://app.swaggerhub.com/apis-docs/CMiC/PRM-REST-API/1#/)** for this endpoint. It has been moved there."
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+      deprecated: true
+  /sys-rest-api/rest/1/sdobjectauditcurrstat:
+    get:
+      tags:
+      - sdobjectauditcurrstat
+      summary: Retrieve a Specific SD Object Audit Current State
+      description: Please note - the finder MUST be used for this endpoint. You will not receive data without it.
+      parameters:
+      - name: finder
+        in: query
+        description: SdObjectAuditCurrStatfinder
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectType
+        in: query
+        description: Object Type being queried for
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey1
+        in: query
+        description: Object Key 1 - typically Company Code
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey2
+        in: query
+        description: Object Key 2 - typically Project Code
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey3
+        in: query
+        description: Object Key 3
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey4
+        in: query
+        description: Object Key 4
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SdObjectAuditCurrStat'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/sdobjusrextdef:
+    get:
+      tags:
+      - sdobjusrextdef
+      summary: Retrieve SD Object User Extend Definitions
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: RowFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TableName
+        in: query
+        description: Name of Table being looked for (RowFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (yyyy-mm-dd - RowFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SdObjUsrExtDef'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/sdobjusrextvalue:
+    get:
+      tags:
+      - sdobjusrextvalue
+      summary: Retrieve SD Object User Extend Values
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: "SdObjUsrExtValuefinder, findByDate"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: SchemaName
+        in: query
+        description: Name of Schema (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TableName
+        in: query
+        description: Table Name (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey1
+        in: query
+        description: Object Key 1 (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey2
+        in: query
+        description: Object Key 2 (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey3
+        in: query
+        description: Object Key 3 (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey4
+        in: query
+        description: Object Key 4 (SdObjUsrExtValuefinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (yyyy-mm-dd - findByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SdObjUsrExtValue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - sdobjusrextvalue
+      summary: Create or Update SD Object User Extend Value
+      description: "For the **VOUCHER** table, the keys are as such - Company Code (**UevObjectKey1**), Vendor Code (**UevObjectKey2**), Invoice Code (**UevObjectKey3**), Duplicate ID (**UevObjectKey4**) - Duplicate ID can be found through the Voucher (**/ap-rest-api/rest/1/apvoucher**) webservice."
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/SdObjUsrExtValueRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SdObjUsrExtValue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/sysrelateddocquery:
+    get:
+      tags:
+      - sysrelateddocquery
+      summary: Retrieve System Related Documents
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByRevision or selectByObjectKey
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: RevisionVuuid
+        in: query
+        description: Uuid of Revision (selectByRevision)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectType
+        in: query
+        description: Object Type being queried for (selectByObjectKey)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey1
+        in: query
+        description: Object Key 1 - typically Company Code (selectByObjectKey)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey2
+        in: query
+        description: Object Key 2 - typically Project Code (selectByObjectKey)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey3
+        in: query
+        description: Object Key 3 (selectByObjectKey)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey4
+        in: query
+        description: Object Key 4 (selectByObjectKey)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SysRelatedDocQuery'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/term:
+    get:
+      tags:
+      - term
+      summary: Retrieve Term List
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCompCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: compCode
+        in: query
+        description: Company Code (selectByCompCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Term'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - term
+      summary: Create a Term
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/TermRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Term'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/term/{Vuuid}:
+    get:
+      tags:
+      - term
+      summary: Retrieve a Specific Term
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Term'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - term
+      summary: Delete a Specific Term
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - term
+      summary: Update a Specific Term
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/TermRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Term'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/uevalidfielddata:
+    get:
+      tags:
+      - uevalidfielddata
+      summary: Retrieve Valid Field Data List
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByFieldCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fieldCode
+        in: query
+        description: Field Code (selectByFieldCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UeValidFieldData'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - uevalidfielddata
+      summary: Create Valid Field Data
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/UeValidFieldDataRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UeValidFieldData'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/uevalidfielddata/{Vuuid}:
+    get:
+      tags:
+      - uevalidfielddata
+      summary: Retrieve Specific Valid Field Data
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UeValidFieldData'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/userdefinedclassifier:
+    get:
+      tags:
+      - userdefinedclassifier
+      summary: Retrieve User Defined Classifiers
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: UserDefinedClassifierFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectType
+        in: query
+        description: Object Type being queried for (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: UdfCode
+        in: query
+        description: UDF Code (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey1
+        in: query
+        description: Object Key 1 - typically Company Code (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey2
+        in: query
+        description: Object Key 2 - typically Project Code (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey3
+        in: query
+        description: Object Key 3 (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectKey4
+        in: query
+        description: Object Key 4 (UserDefinedClassifierFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserDefinedClassifier'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - userdefinedclassifier
+      summary: Create a Specific User Defined Classifier
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/UserDefinedClassifierRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserDefinedClassifier'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/userdefinedclassifierquery:
+    get:
+      tags:
+      - userdefinedclassifierquery
+      summary: Retrieve User Defined Classifier Query
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: UDCQueryFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ObjectTypeVar
+        in: query
+        description: Object Type being queried for (UDCQueryFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: UdfCodeVar
+        in: query
+        description: UDF Code (UDCQueryFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ActualValueVar
+        in: query
+        description: Actual Value being queried (UDCQueryFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CreateDateVar
+        in: query
+        description: Creation date of Classifier (UDCQueryFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserDefinedClassifier'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/weightmeasure:
+    get:
+      tags:
+      - weightmeasure
+      summary: Retrieve Weight Measures
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: WeightmeasureFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: WmCodeVar
+        in: query
+        description: Weight Measure Code (WeightmeasureFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeightMeasure'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - weightmeasure
+      summary: Create a Weight Measure
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/WeightMeasureRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeightMeasure'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/rest/1/weightmeasure/{WmCode}:
+    get:
+      tags:
+      - weightmeasure
+      summary: Retrieve a Specific Weight Measure
+      description: ""
+      parameters:
+      - name: WmCode
+        in: path
+        description: Weight Measure Code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeightMeasure'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - weightmeasure
+      summary: Update a Specific Weight Measure
+      description: ""
+      parameters:
+      - name: WmCode
+        in: path
+        description: Weight Measure Code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/WeightMeasureRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeightMeasure'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/jersey/v1/userextensions/{TableCode}:
+    get:
+      tags:
+      - userextensions
+      summary: Retrieve Data from specific UE Table
+      description: ""
+      parameters:
+      - name: TableCode
+        in: path
+        description: UE Table code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date variable
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          format: full-date
+      - name: dateFormat
+        in: query
+        description: Date Format variable
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          format: full-date
+          default: YYYY-MM-DD
+      - name: whereVariables
+        in: query
+        description: Semi-colon delimited string to include UDFS and the associated values to filter them on - these are all equals comparisons
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /sys-rest-api/jersey/v1/userextensions:
+    post:
+      tags:
+      - userextensions
+      summary: Insert data into a specific UE Table
+      description: "UE Table required fields MUST be provided in **data** object - you can also include dateFormat, defaulted as YYYY-MM-DD, in the request payload (at same level as **tableCode**) to specify a specific format"
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              Regular Insert Example:
+                value:
+                  tableCode: string
+                  data:
+                    UDF_FIELD_1: string
+                    UDF_FIELD_2: string
+                    UDF_FIELD_N: string
+              Insert with dateFormat Example:
+                value:
+                  tableCode: string
+                  dateFormat: DD-MON-YY
+                  data:
+                    UDF_FIELD_1: string
+                    UDF_FIELD_2: string
+                    UDF_FIELD_N: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - userextensions
+      summary: Delete data from a specific UE Table
+      description: "UE Table required fields MUST be provided in **data** object, and should be the only ones provided but others are also optional. All fields given will be used as criteria to delete upon"
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              Regular Delete Example:
+                value:
+                  tableCode: string
+                  data:
+                    UDF_FIELD_1: string
+                    UDF_FIELD_2: string
+                    UDF_FIELD_N: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_2'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - userextensions
+      summary: Update data in a specific UE Table
+      description: "UE Table required fields MUST be provided in **data** object - you can also include dateFormat, defaulted as YYYY-MM-DD, in the request payload (at same level as **tableCode**) to specify a specific format"
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              Regular Update Example:
+                value:
+                  tableCode: string
+                  data:
+                    UDF_FIELD_1: string
+                    UDF_FIELD_2: string
+                    UDF_FIELD_N: string
+              Update with dateFormat Example:
+                value:
+                  tableCode: string
+                  dateFormat: DD-MON-YY
+                  data:
+                    UDF_FIELD_1: string
+                    UDF_FIELD_2: string
+                    UDF_FIELD_N: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_3'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    BaBank:
+      type: object
+      properties:
+        BnkBankCode:
+          maxLength: 9
+          type: string
+          description: Bank Code
+        BnkBankName:
+          maxLength: 30
+          type: string
+          description: Bank Name
+        BnkShortName:
+          maxLength: 16
+          type: string
+          description: Bank Short Name
+        BnkUser:
+          maxLength: 30
+          type: string
+          description: User who last updated this record
+        BnkLastUpdDate:
+          type: string
+          description: Date when the record was last updated
+          format: full-date
+          example: YYYY-MM-dd
+        BnkExchgProg:
+          maxLength: 250
+          type: string
+          description: Leave Null
+        BnkStmtProg:
+          maxLength: 250
+          type: string
+          description: Electronic Statement File Format. Must be a valid file format in CMiC.
+        BnkPayordersProg:
+          maxLength: 250
+          type: string
+          description: Leave Null
+        BnkCountryCode:
+          maxLength: 3
+          type: string
+          description: Leave Null
+        BnkSwift:
+          maxLength: 12
+          type: string
+          description: Leave Null
+        BnkActiveFlag:
+          maxLength: 1
+          type: string
+          description: Active Bank Flag. ‘1’ - Yes. ‘0’ - No.
+        BnkJrnlCode:
+          maxLength: 2
+          type: string
+          description: Leave Null
+        BnkExchgFileName:
+          maxLength: 250
+          type: string
+          description: Leave Null
+        BnkStmtFileName:
+          maxLength: 250
+          type: string
+          description: Statement File Name
+        BnkPayordersFileName:
+          maxLength: 250
+          type: string
+          description: Leave Null
+        BnkCreateUser:
+          maxLength: 30
+          type: string
+          description: Leave Null
+        BnkCreateDate:
+          type: string
+          description: Leave Null
+          format: full-date
+          example: YYYY-MM-dd
+        BnkLastUpdUser:
+          maxLength: 30
+          type: string
+          description: Leave Null
+        BnkAltCode:
+          maxLength: 6
+          type: string
+          description: Leave Null
+        BnkRoutingCode:
+          maxLength: 16
+          type: string
+          description: "Routing Code. This field MUST have 10 characters. If your routing code is only 9 characters, left pad the routing code with a space."
+        BnkAchLogonText:
+          maxLength: 80
+          type: string
+          description: Leave Null
+        BnkAccNumFormatFlag:
+          maxLength: 1
+          type: string
+          description: "Zero Filled Employee Account Numbers. , Set to ‘Y’ or ‘N’."
+        BnkBankId:
+          maxLength: 4
+          type: string
+          description: Leave Null
+        BnkPassword:
+          maxLength: 16
+          type: string
+          description: Leave Null
+        BnkPpayFileFmt:
+          maxLength: 30
+          type: string
+          description: Positive Pay File Format for AP and Payroll
+        BnkPpayFileName:
+          maxLength: 100
+          type: string
+          description: Positive Pay File Name for AP and Payroll
+        BnkVUuid:
+          maxLength: 64
+          type: string
+    BaCurrency:
+      type: object
+      properties:
+        BacurrCode:
+          maxLength: 3
+          type: string
+        BacurrName:
+          maxLength: 30
+          type: string
+        BacurrLogo:
+          maxLength: 6
+          type: string
+        BacurrWordMapping:
+          maxLength: 30
+          type: string
+        BacurrIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BacurrIuCreateUser:
+          maxLength: 30
+          type: string
+        BacurrIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BacurrIuUpdateUser:
+          maxLength: 30
+          type: string
+    BpAddresses:
+      type: object
+      properties:
+        BpadBpCode:
+          maxLength: 8
+          type: string
+          description: Business partner code in upper case.  This must exist in the BPARTNERS table.
+        BpadBpVenName:
+          maxLength: 50
+          type: string
+        BpadBpName:
+          maxLength: 50
+          type: string
+        BpadAddTypeCode:
+          maxLength: 5
+          type: string
+          description: Address type code in upper case.  There is no master table for these codes but no code may be used more than once for any business partner.
+        BpadAdd1:
+          maxLength: 40
+          type: string
+          description: First line of the address
+        BpadAdd2:
+          maxLength: 40
+          type: string
+          description: Second line of the address
+        BpadAdd3:
+          maxLength: 40
+          type: string
+          description: Third line of the address
+        BpadRegionCode:
+          maxLength: 3
+          type: string
+          description: State or Province.  This code must exist in the REGION table.
+        BpadCountry:
+          maxLength: 30
+          type: string
+          description: Name of the country
+        BpadPostalCode:
+          maxLength: 12
+          type: string
+          description: ZIP or Postal code
+        BpadContactName:
+          maxLength: 50
+          type: string
+          description: Name of a contact at this address
+        BpadAddName:
+          maxLength: 30
+          type: string
+          description: Descriptive name of the address
+        BpadOrderFromFlag:
+          maxLength: 1
+          type: string
+        BpadRemitToFlag:
+          maxLength: 1
+          type: string
+        BpadShipToFlag:
+          maxLength: 1
+          type: string
+        BpadBillToFlag:
+          maxLength: 1
+          type: string
+        BpadAddPhone:
+          maxLength: 20
+          type: string
+          description: Phone Number
+        BpadAddEmail:
+          maxLength: 80
+          type: string
+          description: Email Address
+        BpadAddFax:
+          maxLength: 20
+          type: string
+          description: Fax Number
+        BpadAddPrimaryFlag:
+          maxLength: 1
+          type: string
+          description: Primary Address Code – ‘Y’ or ‘N’. Set to ‘N’.
+        BpadActiveFlag:
+          maxLength: 1
+          type: string
+          description: Active Address Code – ‘Y’ or ‘N’.
+        BpadAddPhone2:
+          maxLength: 20
+          type: string
+        BpadCompCode:
+          maxLength: 8
+          type: string
+        BpadCompName:
+          maxLength: 30
+          type: string
+        BpadOmOnlyFlag:
+          maxLength: 1
+          type: string
+        BpadName2:
+          maxLength: 50
+          type: string
+        BpadName3:
+          maxLength: 50
+          type: string
+        BpadName4:
+          maxLength: 50
+          type: string
+        BpadIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpadIuCreateUser:
+          maxLength: 30
+          type: string
+        BpadIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpadIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        BpadVUuid:
+          maxLength: 64
+          type: string
+    BusinessPartner:
+      type: object
+      properties:
+        BpCode:
+          maxLength: 8
+          type: string
+          description: The Business Partner Code.  This is the same code that will be used in both the vendor master and customer master files. (Note - A subcontractor is a Vendor)
+        BpName:
+          maxLength: 50
+          type: string
+          description: This is the name of the Business Partner.
+        BpAkaName:
+          maxLength: 50
+          type: string
+          description: "This field is the ‘Otherwise known as’ field, and can be used for custom reporting if required.  This field can be left blank or if you are changing your customer/vendor codes this can be your old code for reference if required."
+        BpAbbrevCode:
+          maxLength: 8
+          type: string
+          description: "This is the Project Management Abbreviation for the Business Partner – For example your BP code may be 74514 and the Abbreviation FEDEX…The value is only currently used in the PM system. As a default, set this to be the same value as the BP_CODE."
+        BpShortName:
+          maxLength: 15
+          type: string
+          description: This field is a short version of the name field.  The CMiC system will automatically set this to the first 15 characters of the BP code when a Business Partner is entered via CMiC forms so for standardization this field should be set to the first 15 characters of field 12
+        BpParentCode:
+          maxLength: 8
+          type: string
+          description: "This is the Controlling Business Partner Code. If you are not using Business Partner Hierarchies leave this field blank.   If you are using Controlling Business Partners then this must be an existing Business Partner Code where required, which means two imports of Business Partners - One for your controlling BP's and one for detail BP's"
+        BpParentName:
+          maxLength: 50
+          type: string
+        BpAdd1:
+          maxLength: 40
+          type: string
+          description: This is the first of 3 address lines provided for each Business Partner
+        BpAdd2:
+          maxLength: 40
+          type: string
+          description: This is the second of 3 address lines provided for each Business Partner
+        BpAdd3:
+          maxLength: 40
+          type: string
+          description: This is the Last Line of address.  This line should contain the CITY name if it has not been included in lines 1 or 2.
+        BpRegionCode:
+          maxLength: 3
+          type: string
+          description: This is the State/Province Code of the address.  This must be a VALID CMiC region code.
+        BpRegionName:
+          maxLength: 30
+          type: string
+        BpPostalCode:
+          maxLength: 13
+          type: string
+          description: "This is the zip/postal code for the address.  This is an unformatted field, so it is best to ensure that all required dashes/capitalization are included in the format of this field."
+        BpCountry:
+          maxLength: 30
+          type: string
+          description: This is the Country of the address.
+        BpContactName:
+          maxLength: 30
+          type: string
+          description: This is the name of the primary contact for the business partner.
+        BpPhone:
+          maxLength: 20
+          type: string
+          description: This is an unformatted field representing the phone number for the Business Partner.  It is recommended that you take this opportunity to standardize phone format during conversion.
+        BpFax:
+          maxLength: 20
+          type: string
+          description: This is an unformatted field representing the fax number for the Business Partner.  It is recommended that you take this opportunity to standardize phone format during conversion.
+        BpEmail:
+          maxLength: 80
+          type: string
+          description: This is an unformatted field for the Email address of this business partner.
+        BpWebSite:
+          maxLength: 200
+          type: string
+          description: Free Form field for Web Address
+        BpLegalentTypeCode:
+          maxLength: 5
+          type: string
+          description: This is the Legal Entity Type of the business partner.  If you enter a value here it must be a VALID CMiC Legal Entity type code.
+        BpLegalentTypeName:
+          maxLength: 30
+          type: string
+        BpRegistrationCode:
+          maxLength: 30
+          type: string
+          description: This is the Business Partners FEDERAL ID (FEIN) number in the US used for 1099 reporting.  In Canada this is the business partners GST Registration Number
+        BpVatCountryCode:
+          maxLength: 5
+          type: string
+          description: VAT Registration country code
+        BpVatRegistrationNum:
+          maxLength: 30
+          type: string
+          description: VAT Registration Number
+        BpClassCode:
+          maxLength: 4
+          type: string
+          description: This is the Default Class Code that will be used when a vendor is created from this Business Partner.  This must be a valid CMiC AP Vendor Class Code or blank
+        BpClassName:
+          maxLength: 30
+          type: string
+        BpStartDate:
+          type: string
+          description: This is the date the business partner was first setup on the system.  This is used for custom reporting only
+          format: full-date
+          example: YYYY-MM-dd
+        BpOneTimeFlag:
+          maxLength: 1
+          type: string
+          description: Set to 'N'
+        BpActiveFlag:
+          maxLength: 1
+          type: string
+          description: "Business Partner Active flag., ‘Y’ or ‘N’"
+        Bp1099Code:
+          maxLength: 1
+          type: string
+          description: "This is the Default 1099 Code that will be used when a vendor is created from this Business Partner. , For the US, this must be a valid CMiC 1099 Code. Leave null/blank for Canada."
+        Bp1099Name:
+          maxLength: 30
+          type: string
+        BpModFlag:
+          maxLength: 1
+          type: string
+          description: This is a system required field Set this field to the number 1
+        BpCustBalAmt:
+          maxLength: 18
+          type: integer
+        BpTypeCode:
+          maxLength: 1
+          type: string
+          description: Business Partner Type – ‘P’ = Standard Business Partner – ‘O’ = Organization. Organizations are used only by the CRM system.
+        BpOmOnlyFlag:
+          maxLength: 1
+          type: string
+          description: "Business Partner for OM Only flag., ‘Y’ or ‘N’"
+        BpUeValidFlag:
+          maxLength: 1
+          type: string
+        BpSsnFlag:
+          maxLength: 1
+          type: string
+          description: "SSN Flag. ‘Y’ or ‘N’. , ‘Y’ – The Business Owner SSN was previously entered as Taxpayer Identification Number."
+        BpVendorStatusFlag:
+          maxLength: 1
+          type: string
+        BpCustomerStatusFlag:
+          maxLength: 1
+          type: string
+        BpClvValueCode1:
+          maxLength: 16
+          type: string
+          description: "Only required if the classifier has been defined and is defined as mandatory – This must match your Project Partner Classifier Setup in the PM system Local Tables, System Configuration Menu"
+        BpClvValueCode1Prompt:
+          maxLength: 30
+          type: string
+        BpClvValueCode2:
+          maxLength: 16
+          type: string
+          description: Leave null
+        BpClvValueCode2Prompt:
+          maxLength: 30
+          type: string
+        BpClvValueCode3:
+          maxLength: 16
+          type: string
+          description: Leave null
+        BpClvValueCode3Prompt:
+          maxLength: 30
+          type: string
+        BpClvValueCode4:
+          maxLength: 16
+          type: string
+          description: Leave null
+        BpClvValueCode4Prompt:
+          maxLength: 30
+          type: string
+        BpClvValueCode5:
+          maxLength: 16
+          type: string
+          description: Leave null
+        BpClvValueCode5Prompt:
+          maxLength: 30
+          type: string
+        BpClvValueCode6:
+          maxLength: 16
+          type: string
+          description: Leave null
+        BpClvValueCode6Prompt:
+          maxLength: 30
+          type: string
+        BpPrequalRequiredFlag:
+          maxLength: 1
+          type: string
+          description: "Business Partner Prequalification required. , ‘Y’ or ‘N’."
+        BpSysBpAutoNumberFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        BpLegalName:
+          maxLength: 255
+          type: string
+          description: "Business Partner Legal Name. Primarily used for Business Partners whose name is greater than 50 chars., Defaults to BP_NAME if left null/blank."
+        BpDispatchFlag:
+          maxLength: 1
+          type: string
+          description: "Business Partner Is Being Used In Dispatch As Subcontractor., ‘Y’ or ‘N’. Defaults to ‘N’"
+        BpCreateDefaultVendorComp:
+          maxLength: 8
+          type: string
+        BpCreateDefaultCustComp:
+          maxLength: 8
+          type: string
+        BpVUuid:
+          maxLength: 64
+          type: string
+        BpIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpIuCreateUser:
+          maxLength: 30
+          type: string
+        BpIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpIuUpdateUser:
+          maxLength: 30
+          type: string
+    ExchangeRate:
+      type: object
+      properties:
+        BaexratBankCode:
+          maxLength: 9
+          type: string
+        BaexratFcurrCode:
+          maxLength: 3
+          type: string
+        BaexratTcurrCode:
+          maxLength: 3
+          type: string
+        BaexratExchgTypeCode:
+          maxLength: 3
+          type: string
+        BaexratDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BaexratRate1:
+          maxLength: 12
+          type: integer
+        BaexratRate2:
+          maxLength: 12
+          type: integer
+        BaexratRate3:
+          maxLength: 12
+          type: integer
+        BaexratAutoFlag:
+          maxLength: 1
+          type: string
+        BaexratVUuid:
+          maxLength: 64
+          type: string
+        BaexratIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BaexratIuCreateUser:
+          maxLength: 30
+          type: string
+        BaexratIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BaexratIuUpdateUser:
+          maxLength: 30
+          type: string
+    GtRegion:
+      type: object
+      properties:
+        RegCode:
+          maxLength: 3
+          type: string
+        RegName:
+          maxLength: 30
+          type: string
+        RegComplianceCode:
+          maxLength: 10
+          type: string
+        RegIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        RegIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        RegVUuid:
+          maxLength: 64
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    GtText:
+      type: object
+      properties:
+        TxtCode:
+          maxLength: 8
+          type: string
+        TxtDesc:
+          maxLength: 4000
+          type: string
+        TxtCompCode:
+          maxLength: 8
+          type: string
+        TxtCompName:
+          maxLength: 30
+          type: string
+        TxtTypeCode:
+          maxLength: 8
+          type: string
+        TxtPrintDesc:
+          maxLength: 60
+          type: string
+        TxtPrintOrderNum:
+          maxLength: 3
+          type: integer
+        TxtTrionTerminateReasonCde:
+          maxLength: 2
+          type: string
+        TxtIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        TxtIuCreateUser:
+          maxLength: 30
+          type: string
+        TxtIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        TxtIuUpdateUser:
+          maxLength: 30
+          type: string
+    IssuePriority:
+      type: object
+      properties:
+        DmipPriorityCode:
+          maxLength: 1
+          type: string
+        DmipDesc:
+          maxLength: 30
+          type: string
+        DmipPrmPriorityLevel:
+          maxLength: 0
+          type: integer
+        DmipPrmPriorityDesc:
+          maxLength: 30
+          type: string
+        DmipVUuid:
+          maxLength: 64
+          type: string
+    IssueStatus:
+      type: object
+      properties:
+        DmisStatusCode:
+          maxLength: 1
+          type: string
+        DmisDesc:
+          maxLength: 30
+          type: string
+        DmisActiveFlag:
+          maxLength: 1
+          type: string
+        DmisIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmisIuCreateUser:
+          maxLength: 30
+          type: string
+        DmisIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmisIuUpdateUser:
+          maxLength: 30
+          type: string
+        DmisVUuid:
+          maxLength: 64
+          type: string
+    IssueType:
+      type: object
+      properties:
+        DmitTypeCode:
+          maxLength: 4
+          type: string
+        DmitDesc:
+          maxLength: 30
+          type: string
+        DmitCloseAllowedFlag:
+          maxLength: 1
+          type: string
+        DmitIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmitIuCreateUser:
+          maxLength: 30
+          type: string
+        DmitIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmitIuUpdateUser:
+          maxLength: 30
+          type: string
+        DmitVUuid:
+          maxLength: 64
+          type: string
+    SdObjectAuditCurrStat:
+      type: object
+      properties:
+        SdoaAppCode:
+          maxLength: 3
+          type: string
+        SdoaObjectName:
+          maxLength: 30
+          type: string
+        SdoaActionType:
+          maxLength: 8
+          type: string
+        SdoaActionSeq:
+          maxLength: 10
+          type: integer
+        SdoaActionDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SdoaActionUser:
+          maxLength: 60
+          type: string
+        SdoaNotes:
+          maxLength: 4000
+          type: string
+        SdoaKey1:
+          maxLength: 30
+          type: string
+        SdoaKey2:
+          maxLength: 30
+          type: string
+        SdoaKey3:
+          maxLength: 30
+          type: string
+        SdoaKey4:
+          maxLength: 30
+          type: string
+        SdoaKey5:
+          maxLength: 30
+          type: string
+        SdoaDetkey1:
+          maxLength: 50
+          type: string
+        SdoaDetkey2:
+          maxLength: 30
+          type: string
+        SdoaDetkey3:
+          maxLength: 30
+          type: string
+        SdoaPartnCode:
+          maxLength: 8
+          type: string
+        SdoaPartnTypeCode:
+          maxLength: 1
+          type: string
+        SdoaContactCode:
+          maxLength: 10
+          type: string
+        SdoaIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SdoaIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SdoaObjKey1:
+          maxLength: 8
+          type: string
+        SdoaObjKey2:
+          maxLength: 10
+          type: string
+        SdoaObjKey3:
+          maxLength: 40
+          type: string
+        SdoaObjKey4:
+          maxLength: 6
+          type: string
+    SdObjUsrExtDef:
+      type: object
+      properties:
+        UedSchemaName:
+          maxLength: 30
+          type: string
+        UedTableName:
+          maxLength: 30
+          type: string
+        UedUkColName:
+          maxLength: 30
+          type: string
+        UedCode1Code:
+          maxLength: 200
+          type: string
+        UedCode2Code:
+          maxLength: 200
+          type: string
+        UedCode3Code:
+          maxLength: 200
+          type: string
+        UedCode4Code:
+          maxLength: 200
+          type: string
+        UedCode5Code:
+          maxLength: 200
+          type: string
+        UedCode6Code:
+          maxLength: 200
+          type: string
+        UedCode7Code:
+          maxLength: 200
+          type: string
+        UedCode8Code:
+          maxLength: 200
+          type: string
+        UedCode9Code:
+          maxLength: 200
+          type: string
+        UedCode10Code:
+          maxLength: 200
+          type: string
+        UedCode11Code:
+          maxLength: 200
+          type: string
+        UedCode12Code:
+          maxLength: 200
+          type: string
+        UedCode13Code:
+          maxLength: 200
+          type: string
+        UedCode14Code:
+          maxLength: 200
+          type: string
+        UedCode15Code:
+          maxLength: 200
+          type: string
+        UedCode16Code:
+          maxLength: 200
+          type: string
+        UedCode17Code:
+          maxLength: 200
+          type: string
+        UedCode18Code:
+          maxLength: 200
+          type: string
+        UedCode19Code:
+          maxLength: 200
+          type: string
+        UedCode20Code:
+          maxLength: 200
+          type: string
+        UedNum1Code:
+          maxLength: 200
+          type: string
+        UedNum2Code:
+          maxLength: 200
+          type: string
+        UedNum3Code:
+          maxLength: 200
+          type: string
+        UedNum4Code:
+          maxLength: 200
+          type: string
+        UedNum5Code:
+          maxLength: 200
+          type: string
+        UedNum6Code:
+          maxLength: 200
+          type: string
+        UedNum7Code:
+          maxLength: 200
+          type: string
+        UedNum8Code:
+          maxLength: 200
+          type: string
+        UedNum9Code:
+          maxLength: 200
+          type: string
+        UedNum10Code:
+          maxLength: 200
+          type: string
+        UedNum11Code:
+          maxLength: 200
+          type: string
+        UedNum12Code:
+          maxLength: 200
+          type: string
+        UedNum13Code:
+          maxLength: 200
+          type: string
+        UedNum14Code:
+          maxLength: 200
+          type: string
+        UedNum15Code:
+          maxLength: 200
+          type: string
+        UedNum16Code:
+          maxLength: 200
+          type: string
+        UedNum17Code:
+          maxLength: 200
+          type: string
+        UedNum18Code:
+          maxLength: 200
+          type: string
+        UedNum19Code:
+          maxLength: 200
+          type: string
+        UedNum20Code:
+          maxLength: 200
+          type: string
+        UedDate1Code:
+          maxLength: 200
+          type: string
+        UedDate2Code:
+          maxLength: 200
+          type: string
+        UedDate3Code:
+          maxLength: 200
+          type: string
+        UedDate4Code:
+          maxLength: 200
+          type: string
+        UedDate5Code:
+          maxLength: 200
+          type: string
+        UedDate6Code:
+          maxLength: 200
+          type: string
+        UedDate7Code:
+          maxLength: 200
+          type: string
+        UedDate8Code:
+          maxLength: 200
+          type: string
+        UedDate9Code:
+          maxLength: 200
+          type: string
+        UedDate10Code:
+          maxLength: 200
+          type: string
+        UedDate11Code:
+          maxLength: 200
+          type: string
+        UedDate12Code:
+          maxLength: 200
+          type: string
+        UedDate13Code:
+          maxLength: 200
+          type: string
+        UedDate14Code:
+          maxLength: 200
+          type: string
+        UedDate15Code:
+          maxLength: 200
+          type: string
+        UedDate16Code:
+          maxLength: 200
+          type: string
+        UedDate17Code:
+          maxLength: 200
+          type: string
+        UedDate18Code:
+          maxLength: 200
+          type: string
+        UedDate19Code:
+          maxLength: 200
+          type: string
+        UedDate20Code:
+          maxLength: 200
+          type: string
+        UedIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UedIuCreateUser:
+          maxLength: 30
+          type: string
+        UedIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UedIuUpdateUser:
+          maxLength: 30
+          type: string
+        UedCode21Code:
+          maxLength: 200
+          type: string
+        UedCode22Code:
+          maxLength: 200
+          type: string
+        UedCode23Code:
+          maxLength: 200
+          type: string
+        UedCode24Code:
+          maxLength: 200
+          type: string
+        UedCode25Code:
+          maxLength: 200
+          type: string
+        UedCode26Code:
+          maxLength: 200
+          type: string
+        UedCode27Code:
+          maxLength: 200
+          type: string
+        UedCode28Code:
+          maxLength: 200
+          type: string
+        UedCode29Code:
+          maxLength: 200
+          type: string
+        UedCode30Code:
+          maxLength: 200
+          type: string
+        UedCode31Code:
+          maxLength: 200
+          type: string
+        UedCode32Code:
+          maxLength: 200
+          type: string
+        UedCode33Code:
+          maxLength: 200
+          type: string
+        UedCode34Code:
+          maxLength: 200
+          type: string
+        UedCode35Code:
+          maxLength: 200
+          type: string
+        UedCode36Code:
+          maxLength: 200
+          type: string
+        UedCode37Code:
+          maxLength: 200
+          type: string
+        UedCode38Code:
+          maxLength: 200
+          type: string
+        UedCode39Code:
+          maxLength: 200
+          type: string
+        UedCode40Code:
+          maxLength: 200
+          type: string
+        UedCode41Code:
+          maxLength: 200
+          type: string
+        UedCode42Code:
+          maxLength: 200
+          type: string
+        UedCode43Code:
+          maxLength: 200
+          type: string
+        UedCode44Code:
+          maxLength: 200
+          type: string
+        UedCode45Code:
+          maxLength: 200
+          type: string
+        UedCode46Code:
+          maxLength: 200
+          type: string
+        UedCode47Code:
+          maxLength: 200
+          type: string
+        UedCode48Code:
+          maxLength: 200
+          type: string
+        UedCode49Code:
+          maxLength: 200
+          type: string
+        UedCode50Code:
+          maxLength: 200
+          type: string
+        UedCode51Code:
+          maxLength: 200
+          type: string
+        UedCode52Code:
+          maxLength: 200
+          type: string
+        UedCode53Code:
+          maxLength: 200
+          type: string
+        UedCode54Code:
+          maxLength: 200
+          type: string
+        UedCode55Code:
+          maxLength: 200
+          type: string
+        UedCode56Code:
+          maxLength: 200
+          type: string
+        UedCode57Code:
+          maxLength: 200
+          type: string
+        UedCode58Code:
+          maxLength: 200
+          type: string
+        UedCode59Code:
+          maxLength: 200
+          type: string
+        UedCode60Code:
+          maxLength: 200
+          type: string
+        UedLastSessioninfo:
+          maxLength: 249
+          type: string
+        UedOrigSessioninfo:
+          maxLength: 249
+          type: string
+        UedCode61Code:
+          maxLength: 200
+          type: string
+        UedCode62Code:
+          maxLength: 200
+          type: string
+        UedCode63Code:
+          maxLength: 200
+          type: string
+        UedCode64Code:
+          maxLength: 200
+          type: string
+        UedCode65Code:
+          maxLength: 200
+          type: string
+        UedCode66Code:
+          maxLength: 200
+          type: string
+        UedCode67Code:
+          maxLength: 200
+          type: string
+        UedCode68Code:
+          maxLength: 200
+          type: string
+        UedCode69Code:
+          maxLength: 200
+          type: string
+        UedCode70Code:
+          maxLength: 200
+          type: string
+        UedCode71Code:
+          maxLength: 200
+          type: string
+        UedCode72Code:
+          maxLength: 200
+          type: string
+        UedCode73Code:
+          maxLength: 200
+          type: string
+        UedCode74Code:
+          maxLength: 200
+          type: string
+        UedCode75Code:
+          maxLength: 200
+          type: string
+        UedCode76Code:
+          maxLength: 200
+          type: string
+        UedCode77Code:
+          maxLength: 200
+          type: string
+        UedCode78Code:
+          maxLength: 200
+          type: string
+        UedCode79Code:
+          maxLength: 200
+          type: string
+        UedCode80Code:
+          maxLength: 200
+          type: string
+        UedCode81Code:
+          maxLength: 200
+          type: string
+        UedCode82Code:
+          maxLength: 200
+          type: string
+        UedCode83Code:
+          maxLength: 200
+          type: string
+        UedCode84Code:
+          maxLength: 200
+          type: string
+        UedCode85Code:
+          maxLength: 200
+          type: string
+        UedCode86Code:
+          maxLength: 200
+          type: string
+        UedCode87Code:
+          maxLength: 200
+          type: string
+        UedCode88Code:
+          maxLength: 200
+          type: string
+        UedCode89Code:
+          maxLength: 200
+          type: string
+        UedCode90Code:
+          maxLength: 200
+          type: string
+        UedCode91Code:
+          maxLength: 200
+          type: string
+        UedCode92Code:
+          maxLength: 200
+          type: string
+        UedCode93Code:
+          maxLength: 200
+          type: string
+        UedCode94Code:
+          maxLength: 200
+          type: string
+        UedCode95Code:
+          maxLength: 200
+          type: string
+        UedCode96Code:
+          maxLength: 200
+          type: string
+        UedCode97Code:
+          maxLength: 200
+          type: string
+        UedCode98Code:
+          maxLength: 200
+          type: string
+        UedCode99Code:
+          maxLength: 200
+          type: string
+        UedCode100Code:
+          maxLength: 200
+          type: string
+    SdObjUsrExtValue:
+      type: object
+      properties:
+        UevUedSchemaName:
+          maxLength: 30
+          type: string
+        UevUedTableName:
+          maxLength: 30
+          type: string
+        UevUedUkColName:
+          maxLength: 30
+          type: string
+        UevObjectKey1:
+          maxLength: 64
+          type: string
+        UevObjectKey2:
+          maxLength: 64
+          type: string
+        UevObjectKey3:
+          maxLength: 64
+          type: string
+        UevObjectKey4:
+          maxLength: 64
+          type: string
+        UevCode1:
+          maxLength: 4000
+          type: string
+        UevCode2:
+          maxLength: 4000
+          type: string
+        UevCode3:
+          maxLength: 4000
+          type: string
+        UevCode4:
+          maxLength: 4000
+          type: string
+        UevCode5:
+          maxLength: 4000
+          type: string
+        UevCode6:
+          maxLength: 4000
+          type: string
+        UevCode7:
+          maxLength: 4000
+          type: string
+        UevCode8:
+          maxLength: 4000
+          type: string
+        UevCode9:
+          maxLength: 4000
+          type: string
+        UevCode10:
+          maxLength: 4000
+          type: string
+        UevCode11:
+          maxLength: 4000
+          type: string
+        UevCode12:
+          maxLength: 4000
+          type: string
+        UevCode13:
+          maxLength: 4000
+          type: string
+        UevCode14:
+          maxLength: 4000
+          type: string
+        UevCode15:
+          maxLength: 4000
+          type: string
+        UevCode16:
+          maxLength: 4000
+          type: string
+        UevCode17:
+          maxLength: 4000
+          type: string
+        UevCode18:
+          maxLength: 4000
+          type: string
+        UevCode19:
+          maxLength: 4000
+          type: string
+        UevCode20:
+          maxLength: 4000
+          type: string
+        UevNum1:
+          maxLength: 0
+          type: integer
+        UevNum2:
+          maxLength: 0
+          type: integer
+        UevNum3:
+          maxLength: 0
+          type: integer
+        UevNum4:
+          maxLength: 0
+          type: integer
+        UevNum5:
+          maxLength: 0
+          type: integer
+        UevNum6:
+          maxLength: 0
+          type: integer
+        UevNum7:
+          maxLength: 0
+          type: integer
+        UevNum8:
+          maxLength: 0
+          type: integer
+        UevNum9:
+          maxLength: 0
+          type: integer
+        UevNum10:
+          maxLength: 0
+          type: integer
+        UevNum11:
+          maxLength: 0
+          type: integer
+        UevNum12:
+          maxLength: 0
+          type: integer
+        UevNum13:
+          maxLength: 0
+          type: integer
+        UevNum14:
+          maxLength: 0
+          type: integer
+        UevNum15:
+          maxLength: 0
+          type: integer
+        UevNum16:
+          maxLength: 0
+          type: integer
+        UevNum17:
+          maxLength: 0
+          type: integer
+        UevNum18:
+          maxLength: 0
+          type: integer
+        UevNum19:
+          maxLength: 0
+          type: integer
+        UevNum20:
+          maxLength: 0
+          type: integer
+        UevDate1:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate2:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate3:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate4:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate5:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate6:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate7:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate8:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate9:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate10:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate11:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate12:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate13:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate14:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate15:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate16:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate17:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate18:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate19:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevDate20:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevIuCreateUser:
+          maxLength: 30
+          type: string
+        UevIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevIuUpdateUser:
+          maxLength: 30
+          type: string
+        UevCode21:
+          maxLength: 4000
+          type: string
+        UevCode22:
+          maxLength: 4000
+          type: string
+        UevCode23:
+          maxLength: 4000
+          type: string
+        UevCode24:
+          maxLength: 4000
+          type: string
+        UevCode25:
+          maxLength: 4000
+          type: string
+        UevCode26:
+          maxLength: 4000
+          type: string
+        UevCode27:
+          maxLength: 4000
+          type: string
+        UevCode28:
+          maxLength: 4000
+          type: string
+        UevCode29:
+          maxLength: 4000
+          type: string
+        UevCode30:
+          maxLength: 4000
+          type: string
+        UevCode31:
+          maxLength: 4000
+          type: string
+        UevCode32:
+          maxLength: 4000
+          type: string
+        UevCode33:
+          maxLength: 4000
+          type: string
+        UevCode34:
+          maxLength: 4000
+          type: string
+        UevCode35:
+          maxLength: 4000
+          type: string
+        UevCode36:
+          maxLength: 4000
+          type: string
+        UevCode37:
+          maxLength: 4000
+          type: string
+        UevCode38:
+          maxLength: 4000
+          type: string
+        UevCode39:
+          maxLength: 4000
+          type: string
+        UevCode40:
+          maxLength: 4000
+          type: string
+        UevCode41:
+          maxLength: 4000
+          type: string
+        UevCode42:
+          maxLength: 4000
+          type: string
+        UevCode43:
+          maxLength: 4000
+          type: string
+        UevCode44:
+          maxLength: 4000
+          type: string
+        UevCode45:
+          maxLength: 4000
+          type: string
+        UevCode46:
+          maxLength: 4000
+          type: string
+        UevCode47:
+          maxLength: 4000
+          type: string
+        UevCode48:
+          maxLength: 4000
+          type: string
+        UevCode49:
+          maxLength: 4000
+          type: string
+        UevCode50:
+          maxLength: 4000
+          type: string
+        UevCode51:
+          maxLength: 4000
+          type: string
+        UevCode52:
+          maxLength: 4000
+          type: string
+        UevCode53:
+          maxLength: 4000
+          type: string
+        UevCode54:
+          maxLength: 4000
+          type: string
+        UevCode55:
+          maxLength: 4000
+          type: string
+        UevCode56:
+          maxLength: 4000
+          type: string
+        UevCode57:
+          maxLength: 4000
+          type: string
+        UevCode58:
+          maxLength: 4000
+          type: string
+        UevCode59:
+          maxLength: 4000
+          type: string
+        UevCode60:
+          maxLength: 4000
+          type: string
+        UevLastSessioninfo:
+          maxLength: 249
+          type: string
+        UevOrigSessioninfo:
+          maxLength: 249
+          type: string
+        UevCode61:
+          maxLength: 4000
+          type: string
+        UevCode62:
+          maxLength: 4000
+          type: string
+        UevCode63:
+          maxLength: 4000
+          type: string
+        UevCode64:
+          maxLength: 4000
+          type: string
+        UevCode65:
+          maxLength: 4000
+          type: string
+        UevCode66:
+          maxLength: 4000
+          type: string
+        UevCode67:
+          maxLength: 4000
+          type: string
+        UevCode68:
+          maxLength: 4000
+          type: string
+        UevCode69:
+          maxLength: 4000
+          type: string
+        UevCode70:
+          maxLength: 4000
+          type: string
+        UevCode71:
+          maxLength: 4000
+          type: string
+        UevCode72:
+          maxLength: 4000
+          type: string
+        UevCode73:
+          maxLength: 4000
+          type: string
+        UevCode74:
+          maxLength: 4000
+          type: string
+        UevCode75:
+          maxLength: 4000
+          type: string
+        UevCode76:
+          maxLength: 4000
+          type: string
+        UevCode77:
+          maxLength: 4000
+          type: string
+        UevCode78:
+          maxLength: 4000
+          type: string
+        UevCode79:
+          maxLength: 4000
+          type: string
+        UevCode80:
+          maxLength: 4000
+          type: string
+        UevCode81:
+          maxLength: 4000
+          type: string
+        UevCode82:
+          maxLength: 4000
+          type: string
+        UevCode83:
+          maxLength: 4000
+          type: string
+        UevCode84:
+          maxLength: 4000
+          type: string
+        UevCode85:
+          maxLength: 4000
+          type: string
+        UevCode86:
+          maxLength: 4000
+          type: string
+        UevCode87:
+          maxLength: 4000
+          type: string
+        UevCode88:
+          maxLength: 4000
+          type: string
+        UevCode89:
+          maxLength: 4000
+          type: string
+        UevCode90:
+          maxLength: 4000
+          type: string
+        UevCode91:
+          maxLength: 4000
+          type: string
+        UevCode92:
+          maxLength: 4000
+          type: string
+        UevCode93:
+          maxLength: 4000
+          type: string
+        UevCode94:
+          maxLength: 4000
+          type: string
+        UevCode95:
+          maxLength: 4000
+          type: string
+        UevCode96:
+          maxLength: 4000
+          type: string
+        UevCode97:
+          maxLength: 4000
+          type: string
+        UevCode98:
+          maxLength: 4000
+          type: string
+        UevCode99:
+          maxLength: 4000
+          type: string
+        UevCode100:
+          maxLength: 4000
+          type: string
+        UevObjectColumn:
+          maxLength: 64
+          type: string
+        UevObjectValue:
+          maxLength: 4000
+          type: string
+    SysRelatedDocQuery:
+      type: object
+      properties:
+        SysrdObjectType:
+          maxLength: 20
+          type: string
+        SysrdObjectKey1:
+          maxLength: 64
+          type: string
+        SysrdObjectKey2:
+          maxLength: 64
+          type: string
+        SysrdObjectKey3:
+          maxLength: 64
+          type: string
+        SysrdObjectKey4:
+          maxLength: 64
+          type: string
+        SysrdPartnCode:
+          maxLength: 8
+          type: string
+        SysrdPartnTypeCode:
+          maxLength: 1
+          type: string
+        SysrdContactCode:
+          maxLength: 10
+          type: string
+        SysrdContactName:
+          maxLength: 4000
+          type: string
+        SysrdDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SysrdStatus:
+          maxLength: 10
+          type: string
+        SysrdDocTypeCode:
+          maxLength: 10
+          type: string
+        SysrdDocTypeName:
+          maxLength: 78
+          type: string
+        SysrdDocId:
+          maxLength: 100
+          type: string
+        SysrdDocTitle:
+          maxLength: 200
+          type: string
+        SysrdDocStatusCode:
+          maxLength: 10
+          type: string
+        SysrdDocStatusClassCode:
+          maxLength: 1
+          type: string
+        SysrdStatusName:
+          maxLength: 200
+          type: string
+        SysrdRevNum:
+          maxLength: 0
+          type: integer
+        SysrdRevDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SysrdRevComment:
+          maxLength: 4000
+          type: string
+        SysrdRevStatusCode:
+          maxLength: 10
+          type: string
+        SysrdRevStatusClassCode:
+          maxLength: 1
+          type: string
+        SysrdAttRelNum:
+          maxLength: 3
+          type: integer
+        SysrdAttName:
+          maxLength: 100
+          type: string
+        SysrdAttRelUser:
+          maxLength: 30
+          type: string
+        SysrdAttRelDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SysrdAttPath:
+          maxLength: 255
+          type: string
+        SysrdAttNote:
+          maxLength: 2000
+          type: string
+        SysrdAttLockStatus:
+          maxLength: 30
+          type: string
+        SysrdAttLockUser:
+          maxLength: 30
+          type: string
+        SysrdAttLockDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        SysrdCopiesNum:
+          maxLength: 11
+          type: integer
+        SysrdVUuid:
+          maxLength: 64
+          type: string
+        SysrdRevisionVUuid:
+          maxLength: 64
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    Term:
+      type: object
+      properties:
+        TermCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code. Must be a valid CMIC Company Code.
+        TermCode:
+          maxLength: 6
+          type: string
+          description: Term Code
+        TermName:
+          maxLength: 30
+          type: string
+          description: Term Name
+        TermCtrlCode:
+          maxLength: 2
+          type: string
+          description: Code to determine which start date to use
+        TermDueModay:
+          maxLength: 2
+          type: integer
+          description: Day of the month the payment is due
+        TermDueDay:
+          maxLength: 3
+          type: integer
+          description: Number of days when the payment is due
+        TermDiscMonthDay:
+          maxLength: 2
+          type: integer
+          description: Date of the month the discount is applicable
+        TermDiscDay:
+          maxLength: 3
+          type: integer
+          description: Number of days the discount is applicable
+        TermPc:
+          maxLength: 5
+          type: integer
+          description: The percentage of discount
+        TermHldbkPc:
+          maxLength: 5
+          type: integer
+          description: The percentage of retainage
+        TermSubmitDays:
+          maxLength: 3
+          type: integer
+        TermPayNoticeDays:
+          maxLength: 3
+          type: integer
+        TermFinalPayDays:
+          maxLength: 3
+          type: integer
+        TermPaylessNoticeDays:
+          maxLength: 3
+          type: integer
+        TermVUuid:
+          maxLength: 64
+          type: string
+    UeValidFieldData:
+      type: object
+      properties:
+        UevfdFieldCode:
+          maxLength: 10
+          type: string
+        UevfdDisplayOrder:
+          maxLength: 6
+          type: string
+        UevfdDataValue:
+          maxLength: 200
+          type: string
+        UevfdDataValueDesc:
+          maxLength: 60
+          type: string
+        UevfdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevfdIuCreateUser:
+          maxLength: 30
+          type: string
+        UevfdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        UevfdIuUpdateUser:
+          maxLength: 30
+          type: string
+        UevfdVUuid:
+          maxLength: 64
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    UserDefinedClassifier:
+      type: object
+      properties:
+        OmcvUdfCode:
+          maxLength: 10
+          type: string
+        OmcvObjectType:
+          maxLength: 10
+          type: string
+        OmcvActualValue:
+          maxLength: 4000
+          type: string
+        OmcvIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        OmcvIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        OmcvObjectKey1:
+          maxLength: 64
+          type: string
+        OmcvObjectKey2:
+          maxLength: 64
+          type: string
+        OmcvObjectKey3:
+          maxLength: 64
+          type: string
+        OmcvObjectKey4:
+          maxLength: 64
+          type: string
+    WeightMeasure:
+      type: object
+      properties:
+        WmCode:
+          maxLength: 2
+          type: string
+        WmName:
+          maxLength: 10
+          type: string
+    inline_response_200:
+      type: object
+      properties:
+        data:
+          type: string
+          example: Table data here
+    inline_response_200_1:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Successfully inserted 1 row.
+    inline_response_200_2:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Successfully deleted 1 row.
+    inline_response_200_3:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Successfully updated 1 row.
+  responses:
+    BaBankResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BaBank'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    BaCurrencyResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BaCurrency'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    BpAddressesResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BpAddresses'
+    BusinessPartnerResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BusinessPartner'
+    ExchangeRateResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeRate'
+    GtRegionResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GtRegion'
+    GtTextResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GtText'
+    IssuePriorityResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssuePriority'
+    IssueStatusResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssueStatus'
+    IssueTypeResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssueType'
+    SdObjectAuditCurrStatResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SdObjectAuditCurrStat'
+    SdObjUsrExtDefResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SdObjUsrExtDef'
+    SdObjUsrExtValueResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SdObjUsrExtValue'
+    SysRelatedDocQueryResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SysRelatedDocQuery'
+    TermResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Term'
+    UeValidFieldDataResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UeValidFieldData'
+    UserDefinedClassifierResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserDefinedClassifier'
+    WeightMeasureResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WeightMeasure'
+  requestBodies:
+    BaBankRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/BaBank'
+          examples:
+            POST Example:
+              value:
+                BnkBankName: string
+                BnkBankCode: string
+                BnkShortName: string
+                BnkVUuid: ""
+            PATCH Example:
+              value:
+                BnkCountryCode: CA
+    BaCurrencyRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/BaCurrency'
+          examples:
+            POST Example:
+              value:
+                BacurrCode: string
+                BacurrName: string
+            PATCH Example:
+              value:
+                BacurrName: test dollar 123
+    BpAddressesRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/BpAddresses'
+          examples:
+            POST Example:
+              value:
+                BpadAddTypeCode: string
+                BpadAddPrimaryFlag: string
+                BpadBpCode: string
+                BpadAdd1: string
+                BpadVUuid: ""
+            PATCH Example:
+              value:
+                BpadName2: test123
+    BusinessPartnerRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/BusinessPartner'
+          examples:
+            POST Example:
+              value:
+                BpDispatchFlag: string
+                BpPrequalRequiredFlag: string
+                BpAbbrevCode: string
+                BpCode: string
+                BpName: string
+                BpVUuid: ""
+            PATCH Example:
+              value:
+                BpAdd2: test123
+    ExchangeRateRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/ExchangeRate'
+          examples:
+            POST Example:
+              value:
+                BaexratBankCode: string
+                BaexratFcurrCode: string
+                BaexratTcurrCode: string
+                BaexratExchgTypeCode: string
+                BaexratDate: string
+                BaexratRate1: integer
+                BaexratVUuid: ""
+            PATCH Example:
+              value:
+                BaexratRate3: 25
+    GtRegionRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/GtRegion'
+          examples:
+            POST Example:
+              value:
+                RegCode: string
+                RegName: string
+                RegVUuid: ""
+            PATCH Example:
+              value:
+                RegName: test123
+    SdObjUsrExtValueRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/SdObjUsrExtValue'
+          examples:
+            POST Example:
+              value:
+                UevUedSchemaName: string
+                UevUedTableName: string
+                UevObjectKey1: string
+                UevObjectKey2: string
+                UevObjectKey3: string
+                UevObjectKey4: string
+    TermRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/Term'
+          examples:
+            POST Example:
+              value:
+                TermCode: string
+                TermCompCode: string
+                TermDueDay: integer
+                TermDiscDay: integer
+                TermVUuid: ""
+            PATCH Example:
+              value:
+                TermName: test123
+    UeValidFieldDataRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/UeValidFieldData'
+          examples:
+            POST Example:
+              value:
+                UevfdDataValue: string
+                UevfdDisplayOrder: string
+                UevfdFieldCode: string
+                UevfdDataValueDesc: string
+                UevfdVUuid: ""
+    UserDefinedClassifierRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/UserDefinedClassifier'
+          examples:
+            POST Example:
+              value:
+                OmcvUdfCode: string
+                OmcvObjectType: string
+                OmcvObjectKey1: string
+                OmcvObjectKey2: string
+                OmcvObjectKey3: integer
+                OmcvActualValue: string
+    WeightMeasureRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/WeightMeasure'
+          examples:
+            POST Example:
+              value:
+                WmCode: string
+                WmName: string
+            PATCH Example:
+              value:
+                WmName: Sq. Yard
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

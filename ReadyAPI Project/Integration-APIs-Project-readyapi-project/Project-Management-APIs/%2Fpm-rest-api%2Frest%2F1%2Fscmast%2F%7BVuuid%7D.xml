@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/scmast/{Vuuid}" path="/pm-rest-api/rest/1/scmast/{Vuuid}" id="816eb513-0499-477d-86ac-5b9874aab395" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="816eb513-0499-477d-86ac-5b9874aab395fileName">%2Fpm-rest-api%2Frest%2F1%2Fscmast%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e308b38d-a06f-41dd-b6e5-80c825591c1b" method="GET">
+    <con:description>Retrieve a Specific SC Header</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ScmstCompCode" : "string",
+  "ScmstSubcontrCode" : "string",
+  "ScmstAbbrevPartnCode" : "string",
+  "PartnTypeCode" : "string",
+  "ScmstVenCode" : "string",
+  "ScmstVenName" : "string",
+  "ScmstContactCode" : "string",
+  "ScmstContactName" : "string",
+  "ScmstContCode" : "string",
+  "ScmstName" : "string",
+  "ScmstChgCode" : "string",
+  "ScmstInvEntryState" : "string",
+  "ScmstCurrCode" : "string",
+  "ScmstCurrName" : "string",
+  "ScmstBankAccount" : "string",
+  "ScmstAltVenAddCode" : "string",
+  "ScmstChqHandleCode" : "string",
+  "ScmstHoldPaymentFlag" : "string",
+  "ScmstHoldPaymentDays" : 0,
+  "ScmstComplFlag" : "string",
+  "ScmstDefaultTaxesFlag" : "string",
+  "ScmstCorrespAddCode" : "string",
+  "ScmstOrigBidpAmt" : 0,
+  "ScmstRating" : 0,
+  "ScmstSepVouPerJobFlag" : "string",
+  "ScmstHldbkRlsFromSc" : "string",
+  "ScmstSelfBilledFlag" : "string",
+  "ScmstStatusCode" : "string",
+  "ScmstContType" : "string",
+  "ScmstHldbkPc" : 0,
+  "ScmstDoNotExceedAmt" : 0,
+  "ScmstTermCode" : "string",
+  "ScmstTermName" : "string",
+  "ScmstOvrrideNotExceedFlag" : "string",
+  "ScmstScopeDesc" : "string",
+  "ScmstDate" : "YYYY-MM-dd",
+  "ScmstPostDate" : "YYYY-MM-dd",
+  "ScmstStartDate" : "YYYY-MM-dd",
+  "ScmstEndDate" : "YYYY-MM-dd",
+  "ScmstIssuedDate" : "YYYY-MM-dd",
+  "ScmstExecutedDate" : "YYYY-MM-dd",
+  "ScmstReceivedDate" : "YYYY-MM-dd",
+  "ScmstStatCode" : "string",
+  "ScmstContAmt" : 0,
+  "ScmstImpactDays" : 0,
+  "ScmstJobCode" : "string",
+  "ScmstJobCtrlCode" : "string",
+  "ScmstGstAmt" : 0,
+  "ScmstGstPc" : 0,
+  "ScmstCurcFactorNum" : 0,
+  "ScmstActionCode" : "string",
+  "ScmstDesc" : "string",
+  "ScmstArAmt" : 0,
+  "ScmstCashAmt" : 0,
+  "ScmstCloseDate" : "YYYY-MM-dd",
+  "ScmstPreferedQuoteFlag" : "string",
+  "ScmstScheduleFlag" : "string",
+  "ScmstBillCode" : "string",
+  "ScmstPbCustCode" : "string",
+  "ScmstPbContCode" : "string",
+  "ScmstCmCompCode" : "string",
+  "ScmstCmJobCode" : "string",
+  "ScmstCmChgCode" : "string",
+  "ScmstCmBudrCode" : "string",
+  "ScmstMainContCode" : "string",
+  "ScmstMainChgCode" : "string",
+  "ScmstMainVenCode" : "string",
+  "ScmstPrintedCoFlag" : "string",
+  "ScmstSubcontractorChgCode" : "string",
+  "ScmstRevDate" : "YYYY-MM-dd",
+  "ScmstRevBatch" : 0,
+  "ScmstPostBatch" : 0,
+  "ScmstNonCreditTaxAmt" : 0,
+  "ScmstUser" : "string",
+  "ScmstSrcCode" : "string",
+  "ScmstSchedExistsFlag" : "string",
+  "ScmstCommentLong" : "used for storing unicode character-based data such as large documents",
+  "ScmstAppCode" : "string",
+  "COriginalDesc" : "string",
+  "CChangeDesc" : "string",
+  "CRecievedDesc" : "string",
+  "PostOverrideFlag" : "string",
+  "CUnpostedDesc" : "string",
+  "CNewRevisedDesc" : "string",
+  "CTitle1" : "string",
+  "CTitle2" : "string",
+  "CTitle3" : "string",
+  "CTitle4" : "string",
+  "ScmstUserPrvlgFlag" : "string",
+  "ScmstCreateContOnFlyFlag" : "string",
+  "ScmstCdiFlag" : "string",
+  "ScmstDfltPhsCode" : "string",
+  "ScmstDfltCatCode" : "string",
+  "ScmstDfltAmt" : 0,
+  "ScmstScControlAmt" : 0,
+  "ScmstRctReferenceNum" : "string",
+  "ScmstClvValueCode1" : "string",
+  "ScmstClvValueCode2" : "string",
+  "ScmstClvValueCode3" : "string",
+  "ScmstClvValueCode4" : "string",
+  "ScmstClvValueCode5" : "string",
+  "ScmstClvValueCode6" : "string",
+  "ScmstTexturaFlag" : "string",
+  "ScmstInvHldbkTaxFlag" : "string",
+  "ScmstBankDept" : "string",
+  "ScmstSenderEmail" : "string",
+  "ScmstTax1Code" : "string",
+  "ScmstTax2Code" : "string",
+  "ScmstTax3Code" : "string",
+  "ScmstRecipientEmail" : "string",
+  "ScmstNonCreditInclTaxAmt" : 0,
+  "ScmstIuCreateDate" : "YYYY-MM-dd",
+  "ScmstIuCreateUser" : "string",
+  "ScmstIuUpdateDate" : "YYYY-MM-dd",
+  "ScmstIuUpdateUser" : "string",
+  "ScmstScschLastSeqNumUsed" : 0,
+  "ScmstHldbkPcRule" : "string",
+  "ScmstAcctDescription" : "string",
+  "ScmstGcsPayRequestFlag" : "string",
+  "ScmstVUuid" : "string",
+  "ScmstDepositApprovalDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b5fec921-59be-4c6c-a9cd-d628f0d3237d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="976e982d-ed2f-4aff-ba6a-be8715373a00" method="PATCH">
+    <con:description>Update a Specific SC Header</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ScmstCompCode" : "string",
+  "ScmstSubcontrCode" : "string",
+  "ScmstAbbrevPartnCode" : "string",
+  "PartnTypeCode" : "string",
+  "ScmstVenCode" : "string",
+  "ScmstVenName" : "string",
+  "ScmstContactCode" : "string",
+  "ScmstContactName" : "string",
+  "ScmstContCode" : "string",
+  "ScmstName" : "string",
+  "ScmstChgCode" : "string",
+  "ScmstInvEntryState" : "string",
+  "ScmstCurrCode" : "string",
+  "ScmstCurrName" : "string",
+  "ScmstBankAccount" : "string",
+  "ScmstAltVenAddCode" : "string",
+  "ScmstChqHandleCode" : "string",
+  "ScmstHoldPaymentFlag" : "string",
+  "ScmstHoldPaymentDays" : 0,
+  "ScmstComplFlag" : "string",
+  "ScmstDefaultTaxesFlag" : "string",
+  "ScmstCorrespAddCode" : "string",
+  "ScmstOrigBidpAmt" : 0,
+  "ScmstRating" : 0,
+  "ScmstSepVouPerJobFlag" : "string",
+  "ScmstHldbkRlsFromSc" : "string",
+  "ScmstSelfBilledFlag" : "string",
+  "ScmstStatusCode" : "string",
+  "ScmstContType" : "string",
+  "ScmstHldbkPc" : 0,
+  "ScmstDoNotExceedAmt" : 0,
+  "ScmstTermCode" : "string",
+  "ScmstTermName" : "string",
+  "ScmstOvrrideNotExceedFlag" : "string",
+  "ScmstScopeDesc" : "string",
+  "ScmstDate" : "YYYY-MM-dd",
+  "ScmstPostDate" : "YYYY-MM-dd",
+  "ScmstStartDate" : "YYYY-MM-dd",
+  "ScmstEndDate" : "YYYY-MM-dd",
+  "ScmstIssuedDate" : "YYYY-MM-dd",
+  "ScmstExecutedDate" : "YYYY-MM-dd",
+  "ScmstReceivedDate" : "YYYY-MM-dd",
+  "ScmstStatCode" : "string",
+  "ScmstContAmt" : 0,
+  "ScmstImpactDays" : 0,
+  "ScmstJobCode" : "string",
+  "ScmstJobCtrlCode" : "string",
+  "ScmstGstAmt" : 0,
+  "ScmstGstPc" : 0,
+  "ScmstCurcFactorNum" : 0,
+  "ScmstActionCode" : "string",
+  "ScmstDesc" : "string",
+  "ScmstArAmt" : 0,
+  "ScmstCashAmt" : 0,
+  "ScmstCloseDate" : "YYYY-MM-dd",
+  "ScmstPreferedQuoteFlag" : "string",
+  "ScmstScheduleFlag" : "string",
+  "ScmstBillCode" : "string",
+  "ScmstPbCustCode" : "string",
+  "ScmstPbContCode" : "string",
+  "ScmstCmCompCode" : "string",
+  "ScmstCmJobCode" : "string",
+  "ScmstCmChgCode" : "string",
+  "ScmstCmBudrCode" : "string",
+  "ScmstMainContCode" : "string",
+  "ScmstMainChgCode" : "string",
+  "ScmstMainVenCode" : "string",
+  "ScmstPrintedCoFlag" : "string",
+  "ScmstSubcontractorChgCode" : "string",
+  "ScmstRevDate" : "YYYY-MM-dd",
+  "ScmstRevBatch" : 0,
+  "ScmstPostBatch" : 0,
+  "ScmstNonCreditTaxAmt" : 0,
+  "ScmstUser" : "string",
+  "ScmstSrcCode" : "string",
+  "ScmstSchedExistsFlag" : "string",
+  "ScmstCommentLong" : "used for storing unicode character-based data such as large documents",
+  "ScmstAppCode" : "string",
+  "COriginalDesc" : "string",
+  "CChangeDesc" : "string",
+  "CRecievedDesc" : "string",
+  "PostOverrideFlag" : "string",
+  "CUnpostedDesc" : "string",
+  "CNewRevisedDesc" : "string",
+  "CTitle1" : "string",
+  "CTitle2" : "string",
+  "CTitle3" : "string",
+  "CTitle4" : "string",
+  "ScmstUserPrvlgFlag" : "string",
+  "ScmstCreateContOnFlyFlag" : "string",
+  "ScmstCdiFlag" : "string",
+  "ScmstDfltPhsCode" : "string",
+  "ScmstDfltCatCode" : "string",
+  "ScmstDfltAmt" : 0,
+  "ScmstScControlAmt" : 0,
+  "ScmstRctReferenceNum" : "string",
+  "ScmstClvValueCode1" : "string",
+  "ScmstClvValueCode2" : "string",
+  "ScmstClvValueCode3" : "string",
+  "ScmstClvValueCode4" : "string",
+  "ScmstClvValueCode5" : "string",
+  "ScmstClvValueCode6" : "string",
+  "ScmstTexturaFlag" : "string",
+  "ScmstInvHldbkTaxFlag" : "string",
+  "ScmstBankDept" : "string",
+  "ScmstSenderEmail" : "string",
+  "ScmstTax1Code" : "string",
+  "ScmstTax2Code" : "string",
+  "ScmstTax3Code" : "string",
+  "ScmstRecipientEmail" : "string",
+  "ScmstNonCreditInclTaxAmt" : 0,
+  "ScmstIuCreateDate" : "YYYY-MM-dd",
+  "ScmstIuCreateUser" : "string",
+  "ScmstIuUpdateDate" : "YYYY-MM-dd",
+  "ScmstIuUpdateUser" : "string",
+  "ScmstScschLastSeqNumUsed" : 0,
+  "ScmstHldbkPcRule" : "string",
+  "ScmstAcctDescription" : "string",
+  "ScmstGcsPayRequestFlag" : "string",
+  "ScmstVUuid" : "string",
+  "ScmstDepositApprovalDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ScmstCompCode":"string","ScmstJobCode":"string","ScmstVenCode":"string","ScmstContCode":"string","ScmstChgCode":"string","ScmstCurrCode":"string","ScmstSubcontrCode":"string","ScmstName":"string","ScmstBankDept":"string","ScmstBankAccount":"string","ScmstVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="dc3c4cde-3cba-4bec-9df0-06666bacc0c7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ScmstCompCode":"string","ScmstJobCode":"string","ScmstVenCode":"string","ScmstContCode":"string","ScmstChgCode":"string","ScmstCurrCode":"string","ScmstSubcontrCode":"string","ScmstName":"string","ScmstBankDept":"string","ScmstBankAccount":"string","ScmstVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="cf75f91b-cd51-41eb-8474-0b0152cb2d29" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ScmstDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

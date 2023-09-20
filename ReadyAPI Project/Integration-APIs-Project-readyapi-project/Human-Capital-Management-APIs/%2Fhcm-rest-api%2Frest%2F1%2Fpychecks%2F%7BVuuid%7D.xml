@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pychecks/{Vuuid}" path="/hcm-rest-api/rest/1/pychecks/{Vuuid}" id="c2784079-a44a-444c-b3a6-529ae3b25165" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c2784079-a44a-444c-b3a6-529ae3b25165fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpychecks%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b9aff857-c22c-4132-9815-b6900b7bc313" method="GET">
+    <con:description>Retrieve a Specific PY Check</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycCompCode" : "string",
+  "PycPrnCode" : "string",
+  "PycYear" : 0,
+  "PycPprPeriod" : 0,
+  "PycEmpNo" : "string",
+  "PycPygCode" : "string",
+  "PycTranType" : "string",
+  "PycBankCode" : "string",
+  "PycBranchCode" : "string",
+  "PycBankAccNum" : "string",
+  "PycEmpBankCode" : "string",
+  "PycEmpBranchCode" : "string",
+  "PycEmpBankAccNum" : "string",
+  "PycCheckNum" : 0,
+  "PycCheckDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycCheckVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecFlag" : "string",
+  "PycStatementDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycUser" : "string",
+  "PycLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycAchTranCode" : "string",
+  "PycManualChkPrint" : "string",
+  "PycPrintCheckOnly" : "string",
+  "PycThirdPartySickPay" : "string",
+  "PycAssignedCheckNum" : 0,
+  "PycCklocCode" : "string",
+  "PycCklocPygCode" : "string",
+  "PycHomeCompCode" : "string",
+  "PycHomeDeptCode" : "string",
+  "PycIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuCreateUser" : "string",
+  "PycIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuUpdateUser" : "string",
+  "PycVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="94165c32-4522-4004-aae0-d9321635c57a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

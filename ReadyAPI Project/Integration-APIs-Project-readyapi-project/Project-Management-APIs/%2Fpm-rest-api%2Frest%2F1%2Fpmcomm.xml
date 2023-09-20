@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmcomm" path="/pm-rest-api/rest/1/pmcomm" id="23f00162-86c8-4f12-a296-217a97f980b6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="23f00162-86c8-4f12-a296-217a97f980b6fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmcomm</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b557bbae-430d-4056-b6a6-4f69d8e5884b" method="GET">
+    <con:description>Retrieve PM Communications</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectPmComm</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectPmComm)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projectCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectPmComm)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>commID</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Communication ID (selectPmComm)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmcomProjCode" : "string",
+  "PmcomCompCode" : "string",
+  "PmcomCommId" : "string",
+  "PmcomSubject" : "string",
+  "PmcomCommType" : "string",
+  "PmcomFromPartnCode" : "string",
+  "PmcomFromPartnTypeCode" : "string",
+  "PmcomFromContactCode" : "string",
+  "PmcomToPartnCode" : "string",
+  "PmcomToPartnTypeCode" : "string",
+  "PmcomToContactCode" : "string",
+  "PmcomCommDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomNotes" : "string",
+  "PmcomCommStatus" : "string",
+  "PmcomFollowupNotes" : "string",
+  "PmcomFollowupRequiredFlag" : "string",
+  "PmcomFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomFollowupByPartnCode" : "string",
+  "PmcomFollowupByPtCode" : "string",
+  "PmcomFollowupByContctCode" : "string",
+  "PmcomClvValueCode1" : "string",
+  "PmcomClvValueCode2" : "string",
+  "PmcomClvValueCode3" : "string",
+  "PmcomClvValueCode4" : "string",
+  "PmcomClvValueCode5" : "string",
+  "PmcomClvValueCode6" : "string",
+  "PmcomEnteredByPartnCode" : "string",
+  "PmcomEnteredByPartnTCode" : "string",
+  "PmcomEnteredByContactCode" : "string",
+  "PmcomEnteredDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomCommEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomReceivedFlag" : "string",
+  "PmcomCommentsLong" : "used for storing unicode character-based data such as large documents",
+  "PmcomRecordStatus" : "string",
+  "PmcomVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="94b47b6b-18da-4d7c-9adb-c592046e9ab1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="a1e531cf-dafc-411c-a4c3-fe0d5bb387f9" method="POST">
+    <con:description>Create a PM Communication</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmcomProjCode" : "string",
+  "PmcomCompCode" : "string",
+  "PmcomCommId" : "string",
+  "PmcomSubject" : "string",
+  "PmcomCommType" : "string",
+  "PmcomFromPartnCode" : "string",
+  "PmcomFromPartnTypeCode" : "string",
+  "PmcomFromContactCode" : "string",
+  "PmcomToPartnCode" : "string",
+  "PmcomToPartnTypeCode" : "string",
+  "PmcomToContactCode" : "string",
+  "PmcomCommDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomNotes" : "string",
+  "PmcomCommStatus" : "string",
+  "PmcomFollowupNotes" : "string",
+  "PmcomFollowupRequiredFlag" : "string",
+  "PmcomFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomFollowupByPartnCode" : "string",
+  "PmcomFollowupByPtCode" : "string",
+  "PmcomFollowupByContctCode" : "string",
+  "PmcomClvValueCode1" : "string",
+  "PmcomClvValueCode2" : "string",
+  "PmcomClvValueCode3" : "string",
+  "PmcomClvValueCode4" : "string",
+  "PmcomClvValueCode5" : "string",
+  "PmcomClvValueCode6" : "string",
+  "PmcomEnteredByPartnCode" : "string",
+  "PmcomEnteredByPartnTCode" : "string",
+  "PmcomEnteredByContactCode" : "string",
+  "PmcomEnteredDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomCommEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmcomReceivedFlag" : "string",
+  "PmcomCommentsLong" : "used for storing unicode character-based data such as large documents",
+  "PmcomRecordStatus" : "string",
+  "PmcomVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmcomCompCode":"string","PmcomProjCode":"string","PmcomFollowupRequiredFlag":"string","PmcomFromPartnCode":"string","PmcomFromPartnTypeCode":"string","PmcomFromContactCode":"string","PmcomToPartnCode":"string","PmcomToPartnTypeCode":"string","PmcomToContactCode":"string","PmcomFollowupByPartnCode":"string","PmcomFollowupByPtCode":"string","PmcomFollowupByContctCode":"string","PmcomEnteredByPartnCode":"string","PmcomEnteredByPartnTCode":"string","PmcomEnteredByContactCode":"string","PmcomVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="901bbc08-3dde-4b6a-af2f-ca8a0ca56d2d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmcomCompCode":"string","PmcomProjCode":"string","PmcomFollowupRequiredFlag":"string","PmcomFromPartnCode":"string","PmcomFromPartnTypeCode":"string","PmcomFromContactCode":"string","PmcomToPartnCode":"string","PmcomToPartnTypeCode":"string","PmcomToContactCode":"string","PmcomFollowupByPartnCode":"string","PmcomFollowupByPtCode":"string","PmcomFollowupByContctCode":"string","PmcomEnteredByPartnCode":"string","PmcomEnteredByPartnTCode":"string","PmcomEnteredByContactCode":"string","PmcomVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="bcdc5a21-0233-433a-b0c7-cf98e7f7e822" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmcomSubject":"testerino123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

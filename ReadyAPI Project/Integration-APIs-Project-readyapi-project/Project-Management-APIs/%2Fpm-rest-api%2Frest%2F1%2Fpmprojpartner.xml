@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmprojpartner" path="/pm-rest-api/rest/1/pmprojpartner" id="be7939bd-3925-4388-b210-9c0dd7d443a1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="be7939bd-3925-4388-b210-9c0dd7d443a1fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojpartner</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="575f57f2-1d4e-4fdc-b709-029e10235ef6" method="GET">
+    <con:description>Retrieve PM Project Partners</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PmProjPartnerFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (PmProjPartnerFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ProjCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (PmProjPartnerFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PartnCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Partner Code (PmProjPartnerFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PartnTypeCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Partner Type Code (PmProjPartnerFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmppCompCode" : "string",
+  "PmppProjCode" : "string",
+  "PmppPartnCode" : "string",
+  "PmppPartnTypeCode" : "string",
+  "PmppAbbrevPartnCode" : "string",
+  "PmppPartnName" : "string",
+  "PmppAdd1" : "string",
+  "PmppAdd2" : "string",
+  "PmppAdd3" : "string",
+  "PmppRegionCode" : "string",
+  "PmppRegionName" : "string",
+  "PmppCountry" : "string",
+  "PmppPostalCode" : "string",
+  "PmppDirGroupCode" : "string",
+  "PmppDirGroupName" : "string",
+  "PmppSortOrder" : 0,
+  "PmppClvValueCode1" : "string",
+  "PmppClvValueCode2" : "string",
+  "PmppClvValueCode3" : "string",
+  "PmppClvValueCode4" : "string",
+  "PmppClvValueCode5" : "string",
+  "PmppClvValueCode6" : "string",
+  "PmppVUuid" : "string",
+  "PmppAddCode" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e3548145-56f8-45e9-9f83-22eac937a794" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="217ef071-47e5-4ac4-ad4a-dc0e65b2285d" method="POST">
+    <con:description>Create a PM Project Partner</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmppCompCode" : "string",
+  "PmppProjCode" : "string",
+  "PmppPartnCode" : "string",
+  "PmppPartnTypeCode" : "string",
+  "PmppAbbrevPartnCode" : "string",
+  "PmppPartnName" : "string",
+  "PmppAdd1" : "string",
+  "PmppAdd2" : "string",
+  "PmppAdd3" : "string",
+  "PmppRegionCode" : "string",
+  "PmppRegionName" : "string",
+  "PmppCountry" : "string",
+  "PmppPostalCode" : "string",
+  "PmppDirGroupCode" : "string",
+  "PmppDirGroupName" : "string",
+  "PmppSortOrder" : 0,
+  "PmppClvValueCode1" : "string",
+  "PmppClvValueCode2" : "string",
+  "PmppClvValueCode3" : "string",
+  "PmppClvValueCode4" : "string",
+  "PmppClvValueCode5" : "string",
+  "PmppClvValueCode6" : "string",
+  "PmppVUuid" : "string",
+  "PmppAddCode" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmppCompCode":"string","PmppProjCode":"string","PmppPartnCode":"string","PmppPartnTypeCode":"string","PmppAbbrevPartnCode":"string","PmppPartnName":"string","PmppVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="f50a4124-0ed1-4176-9793-9f0876a87538" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmppCompCode":"string","PmppProjCode":"string","PmppPartnCode":"string","PmppPartnTypeCode":"string","PmppAbbrevPartnCode":"string","PmppPartnName":"string","PmppVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="1538b669-5430-45f8-bb51-99b8ae665e18" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmppPartnName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmvendordetail/{Vuuid}" path="/cm-rest-api/rest/1/cmvendordetail/{Vuuid}" id="ebd9b63f-ad07-4124-b394-8eb1038595ce" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ebd9b63f-ad07-4124-b394-8eb1038595cefileName">%2Fcm-rest-api%2Frest%2F1%2Fcmvendordetail%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="31da78ae-5b93-4b98-a282-c06cd7b73878" method="GET">
+    <con:description>Retrieve a Specific PCI Change Order SC Vendor Detail</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdvdCompCode" : "string",
+  "CmdvdJobCode" : "string",
+  "CmdvdChgCode" : "string",
+  "CmdvdVenCode" : "string",
+  "CmdvdBpAbbrevCode" : "string",
+  "CmdvdVenName" : "string",
+  "CmdvdContactCode" : "string",
+  "CmdvdContactName" : "string",
+  "CmdvdQuotedQty" : 0,
+  "CmdvdQuotedRate" : 0,
+  "CmdvdQuotedAmt" : 0,
+  "CmdvdRfqSentDate" : "YYYY-MM-dd",
+  "CmdvdRfqDueDate" : "YYYY-MM-dd",
+  "CmdvdRfqReceivedDate" : "YYYY-MM-dd",
+  "CmdvdRfqComments" : "string",
+  "CmdvdPrintFlag" : "string",
+  "CmdvdOrigQuoteAmt" : 0,
+  "CmdvdPartnTypeCode" : "string",
+  "CmdvdPostingFlag" : "string",
+  "CmdvdIuCreateDate" : "YYYY-MM-dd",
+  "CmdvdIuCreateUser" : "string",
+  "CmdvdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdvdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdvdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6ab0108f-2740-42e5-8866-4111f408ecf7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="8b52bd3b-3d42-4735-85f3-d9d40d79bd99" method="PATCH">
+    <con:description>"CmdvdPostingFlag" cannot be set.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdvdCompCode" : "string",
+  "CmdvdJobCode" : "string",
+  "CmdvdChgCode" : "string",
+  "CmdvdVenCode" : "string",
+  "CmdvdBpAbbrevCode" : "string",
+  "CmdvdVenName" : "string",
+  "CmdvdContactCode" : "string",
+  "CmdvdContactName" : "string",
+  "CmdvdQuotedQty" : 0,
+  "CmdvdQuotedRate" : 0,
+  "CmdvdQuotedAmt" : 0,
+  "CmdvdRfqSentDate" : "YYYY-MM-dd",
+  "CmdvdRfqDueDate" : "YYYY-MM-dd",
+  "CmdvdRfqReceivedDate" : "YYYY-MM-dd",
+  "CmdvdRfqComments" : "string",
+  "CmdvdPrintFlag" : "string",
+  "CmdvdOrigQuoteAmt" : 0,
+  "CmdvdPartnTypeCode" : "string",
+  "CmdvdPostingFlag" : "string",
+  "CmdvdIuCreateDate" : "YYYY-MM-dd",
+  "CmdvdIuCreateUser" : "string",
+  "CmdvdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdvdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdvdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmdvdCompCode":"string","CmdvdJobCode":"string","CmdvdChgCode":"string","CmdvdVenCode":"string","CmdvdPostingFlag":"string","CmdvdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="f4533576-e261-401f-94d5-beda77c3a033" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdvdCompCode":"string","CmdvdJobCode":"string","CmdvdChgCode":"string","CmdvdVenCode":"string","CmdvdPostingFlag":"string","CmdvdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="29611638-1107-48b0-8cbf-fe9811ae515b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdvdRfqComments":"test1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

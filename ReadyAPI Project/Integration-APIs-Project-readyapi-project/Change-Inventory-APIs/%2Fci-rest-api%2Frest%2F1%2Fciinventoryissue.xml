@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/ciinventoryissue" path="/ci-rest-api/rest/1/ciinventoryissue" id="7db8c1a5-0cc0-4965-9e61-35e7de8096ae" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7db8c1a5-0cc0-4965-9e61-35e7de8096aefileName">%2Fci-rest-api%2Frest%2F1%2Fciinventoryissue</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d4999331-9ff0-49f1-a6cc-3830b7664d73" method="GET">
+    <con:description>Retrieve Inventory Issues</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>CiInventoryIssueFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (CiInventoryIssueFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BchNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Batch Number (CiInventoryIssueFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ReqNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Requisition Number (CiInventoryIssueFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CitrnCompCode" : "string",
+  "CitrnCompName" : "string",
+  "CitrnTranType" : "string",
+  "CitrnTranTypeName" : "string",
+  "CitrnBchNum" : 0,
+  "CitrnBchName" : "string",
+  "CitrnJobDeptWorderEqup" : "string",
+  "CitrnPhsAccWitemComponcat" : "string",
+  "CitrnCatExpTrancode" : "string",
+  "CitrnTranNum" : 0,
+  "CitrnSubstItemFlag" : "string",
+  "CitrnActionCode" : "string",
+  "CitrnItemClassCode" : "string",
+  "CitrnItemClassName" : "string",
+  "CitrnItemCode" : "string",
+  "CitrnItemName" : "string",
+  "CitrnItemTypeCode" : "string",
+  "CitrnItemTypeName" : "string",
+  "CitrnItemWmCode" : "string",
+  "CitrnItemWmName" : "string",
+  "CitrnLocCode" : "string",
+  "CitrnLocName" : "string",
+  "CitrnReqQty" : 0,
+  "CitrnQty" : 0,
+  "CitrnToFromLocCode" : "string",
+  "CitrnToFromLocName" : "string",
+  "CitrnToFromItemClassCode" : "string",
+  "CitrnToFromItemClassName" : "string",
+  "CitrnToFromItemCode" : "string",
+  "CitrnToFromItemName" : "string",
+  "CitrnToFromItemTypeCode" : "string",
+  "CitrnToFromItemTypeName" : "string",
+  "CitrnToFromWmCode" : "string",
+  "CitrnToFromWmName" : "string",
+  "CitrnToFromQty" : 0,
+  "CitrnToFromCompCode" : "string",
+  "CitrnToFromCompName" : "string",
+  "CitrnToFromDeptCode" : "string",
+  "CitrnToFromDeptName" : "string",
+  "CitrnToFromAccCode" : "string",
+  "CitrnToFromAccName" : "string",
+  "CitrnToFromJobCode" : "string",
+  "CitrnToFromJobName" : "string",
+  "CitrnToFromPhaseCode" : "string",
+  "CitrnToFromPhaseName" : "string",
+  "CitrnToFromCatCode" : "string",
+  "CitrnToFromCatName" : "string",
+  "CitrnToFromEqpCode" : "string",
+  "CitrnToFromEqpName" : "string",
+  "CitrnToFromComponCode" : "string",
+  "CitrnToFromComponName" : "string",
+  "CitrnToFromTrancodeCode" : "string",
+  "CitrnToFromTrancodeName" : "string",
+  "CitrnRefDate" : "YYYY-MM-dd",
+  "CitrnRefCode" : "string",
+  "CitrnRefDesc" : "string",
+  "CitrnSrcCode" : "string",
+  "CitrnSrcDesc" : "string",
+  "CitrnReqNum" : "string",
+  "CitrnReqReleaseNum" : 0,
+  "CitrnReqLineNum" : 0,
+  "CitrnWbsvCode1" : "string",
+  "CitrnWbsvCode2" : "string",
+  "CitrnWbsvCode3" : "string",
+  "CitrnWbsvCode4" : "string",
+  "CitrnWbsvCode5" : "string",
+  "CitrnWbsvCode6" : "string",
+  "CitrnWbsvCode7" : "string",
+  "CitrnWbsvCode8" : "string",
+  "CitrnWbsvCode9" : "string",
+  "CitrnWbsvCode10" : "string",
+  "CitrnWbsvCode11" : "string",
+  "CitrnWbsvCode12" : "string",
+  "CitrnPmCode" : "string",
+  "CitrnMovedToInvFlag" : "string",
+  "CitrnFromAllocQty" : 0,
+  "CitrnRecPriceAmt" : 0,
+  "CitrnRecCurrCode" : "string",
+  "CitrnSalesTax1Code" : "string",
+  "CitrnSalesTax1Name" : "string",
+  "CitrnSalesTax2Code" : "string",
+  "CitrnSalesTax2Name" : "string",
+  "CitrnSalesTax3Code" : "string",
+  "CitrnSalesTax3Name" : "string",
+  "CitrnTicketNumber" : 0,
+  "CitrnTicketPrintFlag" : "string",
+  "CitrnTranSnNum" : "string",
+  "CitrnSalesTax1TaxableFlag" : "string",
+  "CitrnSalesTax2TaxableFlag" : "string",
+  "CitrnSalesTax3TaxableFlag" : "string",
+  "CitrnOverrideAmt" : 0,
+  "CitrnWoCode" : "string",
+  "CitrnWoName" : "string",
+  "CitrnWitmLineNumber" : "string",
+  "CitrnWitmLineName" : "string",
+  "CitrnWoExpCode" : "string",
+  "CitrnWoExpName" : "string",
+  "CitrnWoTranType" : "string",
+  "CitrnWDetailCode" : "string",
+  "CitrnSalesTax1Amt" : 0,
+  "CitrnSalesTax2Amt" : 0,
+  "CitrnSalesTax3Amt" : 0,
+  "CitrnOverrideCostAmt" : 0,
+  "CitrnStockQty" : 0,
+  "CitrnStockWmCode" : "string",
+  "CitrnWmConvNum" : 0,
+  "CitrnIuCreateDate" : "YYYY-MM-dd",
+  "CitrnIuCreateUser" : "string",
+  "CitrnIuUpdateDate" : "YYYY-MM-dd",
+  "CitrnIuUpdateUser" : "string",
+  "CitrnJobDeptWoEqpName" : "string",
+  "CitrnPhsaccWitemcompcatName" : "string",
+  "CitrnCatExpTranName" : "string",
+  "CitrnSuggestedPrice" : 0,
+  "CitrnTotalPrice" : 0,
+  "CitrnOnhandQty" : 0,
+  "CitrnConvQty" : 0,
+  "CitrnUserField5" : "string",
+  "CitrnUserField6" : "string",
+  "CitrnUserField7" : "string",
+  "CitrnUserField8" : "string",
+  "CitrnCalledFromAppCode" : "string",
+  "CitrnUserFieldEdtFlag5" : "string",
+  "CitrnUserFieldEdtFlag6" : "string",
+  "CitrnUserFieldEdtFlag7" : "string",
+  "CitrnUserFieldEdtFlag8" : "string",
+  "CitrnUserFieldName5" : "string",
+  "CitrnUserFieldName6" : "string",
+  "CitrnUserFieldName7" : "string",
+  "CitrnUserFieldName8" : "string",
+  "CitrnWbsSetupFlag" : "string",
+  "CitrnTacSetupFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CitrnVUuid" : "string",
+  "CitrnPostBchFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="2891d8ed-7074-4494-8c4d-b8fa2f896851" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="3a53b351-310c-4473-a9ad-5fedb45fdd72" method="POST">
+    <con:description>POST and PATCH requests must include CitrnPostBchFlag (Y or N)</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CitrnCompCode" : "string",
+  "CitrnCompName" : "string",
+  "CitrnTranType" : "string",
+  "CitrnTranTypeName" : "string",
+  "CitrnBchNum" : 0,
+  "CitrnBchName" : "string",
+  "CitrnJobDeptWorderEqup" : "string",
+  "CitrnPhsAccWitemComponcat" : "string",
+  "CitrnCatExpTrancode" : "string",
+  "CitrnTranNum" : 0,
+  "CitrnSubstItemFlag" : "string",
+  "CitrnActionCode" : "string",
+  "CitrnItemClassCode" : "string",
+  "CitrnItemClassName" : "string",
+  "CitrnItemCode" : "string",
+  "CitrnItemName" : "string",
+  "CitrnItemTypeCode" : "string",
+  "CitrnItemTypeName" : "string",
+  "CitrnItemWmCode" : "string",
+  "CitrnItemWmName" : "string",
+  "CitrnLocCode" : "string",
+  "CitrnLocName" : "string",
+  "CitrnReqQty" : 0,
+  "CitrnQty" : 0,
+  "CitrnToFromLocCode" : "string",
+  "CitrnToFromLocName" : "string",
+  "CitrnToFromItemClassCode" : "string",
+  "CitrnToFromItemClassName" : "string",
+  "CitrnToFromItemCode" : "string",
+  "CitrnToFromItemName" : "string",
+  "CitrnToFromItemTypeCode" : "string",
+  "CitrnToFromItemTypeName" : "string",
+  "CitrnToFromWmCode" : "string",
+  "CitrnToFromWmName" : "string",
+  "CitrnToFromQty" : 0,
+  "CitrnToFromCompCode" : "string",
+  "CitrnToFromCompName" : "string",
+  "CitrnToFromDeptCode" : "string",
+  "CitrnToFromDeptName" : "string",
+  "CitrnToFromAccCode" : "string",
+  "CitrnToFromAccName" : "string",
+  "CitrnToFromJobCode" : "string",
+  "CitrnToFromJobName" : "string",
+  "CitrnToFromPhaseCode" : "string",
+  "CitrnToFromPhaseName" : "string",
+  "CitrnToFromCatCode" : "string",
+  "CitrnToFromCatName" : "string",
+  "CitrnToFromEqpCode" : "string",
+  "CitrnToFromEqpName" : "string",
+  "CitrnToFromComponCode" : "string",
+  "CitrnToFromComponName" : "string",
+  "CitrnToFromTrancodeCode" : "string",
+  "CitrnToFromTrancodeName" : "string",
+  "CitrnRefDate" : "YYYY-MM-dd",
+  "CitrnRefCode" : "string",
+  "CitrnRefDesc" : "string",
+  "CitrnSrcCode" : "string",
+  "CitrnSrcDesc" : "string",
+  "CitrnReqNum" : "string",
+  "CitrnReqReleaseNum" : 0,
+  "CitrnReqLineNum" : 0,
+  "CitrnWbsvCode1" : "string",
+  "CitrnWbsvCode2" : "string",
+  "CitrnWbsvCode3" : "string",
+  "CitrnWbsvCode4" : "string",
+  "CitrnWbsvCode5" : "string",
+  "CitrnWbsvCode6" : "string",
+  "CitrnWbsvCode7" : "string",
+  "CitrnWbsvCode8" : "string",
+  "CitrnWbsvCode9" : "string",
+  "CitrnWbsvCode10" : "string",
+  "CitrnWbsvCode11" : "string",
+  "CitrnWbsvCode12" : "string",
+  "CitrnPmCode" : "string",
+  "CitrnMovedToInvFlag" : "string",
+  "CitrnFromAllocQty" : 0,
+  "CitrnRecPriceAmt" : 0,
+  "CitrnRecCurrCode" : "string",
+  "CitrnSalesTax1Code" : "string",
+  "CitrnSalesTax1Name" : "string",
+  "CitrnSalesTax2Code" : "string",
+  "CitrnSalesTax2Name" : "string",
+  "CitrnSalesTax3Code" : "string",
+  "CitrnSalesTax3Name" : "string",
+  "CitrnTicketNumber" : 0,
+  "CitrnTicketPrintFlag" : "string",
+  "CitrnTranSnNum" : "string",
+  "CitrnSalesTax1TaxableFlag" : "string",
+  "CitrnSalesTax2TaxableFlag" : "string",
+  "CitrnSalesTax3TaxableFlag" : "string",
+  "CitrnOverrideAmt" : 0,
+  "CitrnWoCode" : "string",
+  "CitrnWoName" : "string",
+  "CitrnWitmLineNumber" : "string",
+  "CitrnWitmLineName" : "string",
+  "CitrnWoExpCode" : "string",
+  "CitrnWoExpName" : "string",
+  "CitrnWoTranType" : "string",
+  "CitrnWDetailCode" : "string",
+  "CitrnSalesTax1Amt" : 0,
+  "CitrnSalesTax2Amt" : 0,
+  "CitrnSalesTax3Amt" : 0,
+  "CitrnOverrideCostAmt" : 0,
+  "CitrnStockQty" : 0,
+  "CitrnStockWmCode" : "string",
+  "CitrnWmConvNum" : 0,
+  "CitrnIuCreateDate" : "YYYY-MM-dd",
+  "CitrnIuCreateUser" : "string",
+  "CitrnIuUpdateDate" : "YYYY-MM-dd",
+  "CitrnIuUpdateUser" : "string",
+  "CitrnJobDeptWoEqpName" : "string",
+  "CitrnPhsaccWitemcompcatName" : "string",
+  "CitrnCatExpTranName" : "string",
+  "CitrnSuggestedPrice" : 0,
+  "CitrnTotalPrice" : 0,
+  "CitrnOnhandQty" : 0,
+  "CitrnConvQty" : 0,
+  "CitrnUserField5" : "string",
+  "CitrnUserField6" : "string",
+  "CitrnUserField7" : "string",
+  "CitrnUserField8" : "string",
+  "CitrnCalledFromAppCode" : "string",
+  "CitrnUserFieldEdtFlag5" : "string",
+  "CitrnUserFieldEdtFlag6" : "string",
+  "CitrnUserFieldEdtFlag7" : "string",
+  "CitrnUserFieldEdtFlag8" : "string",
+  "CitrnUserFieldName5" : "string",
+  "CitrnUserFieldName6" : "string",
+  "CitrnUserFieldName7" : "string",
+  "CitrnUserFieldName8" : "string",
+  "CitrnWbsSetupFlag" : "string",
+  "CitrnTacSetupFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CitrnVUuid" : "string",
+  "CitrnPostBchFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CitrnCompCode":"string","CitrnTranType":"G","CitrnRefDate":"string","CitrnToFromCompCode":"string","CitrnItemCode":"string","CitrnItemTypeCode":"string","CitrnLocCode":"string","CitrnJobDeptWorderEqup":"string","CitrnPhsAccWitemComponcat":"string","CitrnCatExpTrancode":"string","CitrnPostBchFlag":"string","CitrnVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.100","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test123","CitrnStockWmCode":"EA"}},{"id":"part2","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.600","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test124","CitrnStockWmCode":"EA"}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example (G-Type)" id="4362d46a-4726-4b81-95e3-cfbff9aded7b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CitrnCompCode":"string","CitrnTranType":"G","CitrnRefDate":"string","CitrnToFromCompCode":"string","CitrnItemCode":"string","CitrnItemTypeCode":"string","CitrnLocCode":"string","CitrnJobDeptWorderEqup":"string","CitrnPhsAccWitemComponcat":"string","CitrnCatExpTrancode":"string","CitrnPostBchFlag":"string","CitrnVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="dce43b51-66ac-4bc9-8c83-39e617a21810" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CitrnRefDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multi-Insert Unposted Example (G-Type)" id="6192768f-fff0-4804-acb8-3da69d721ea3" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.100","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test123","CitrnStockWmCode":"EA"}},{"id":"part2","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.600","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test124","CitrnStockWmCode":"EA"}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multi-Insert Batch Posting Example (G-Type)" id="4b09413e-87a8-4bd6-ae80-7da265924470" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.100","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test123","CitrnStockWmCode":"EA","CitrnPostBchFlag":"Y","CitrnPostDate":"2022-11-07"}},{"id":"part2","path":"/1/ciinventoryissue","operation":"create","payload":{"CitrnCompCode":"ZZ","CitrnItemClassCode":"TOOL","CitrnItemCode":"AXE","CitrnItemTypeCode":"1","CitrnLocCode":"CANADA","CitrnTranType":"G","CitrnToFromCompCode":"ZZ","CitrnJobDeptWorderEqup":"00","CitrnPhsAccWitemComponcat":"1000.600","CitrnItemWmCode":"EA","CitrnRefDate":"2022-11-03","CitrnRefDesc":"test124","CitrnStockWmCode":"EA"}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

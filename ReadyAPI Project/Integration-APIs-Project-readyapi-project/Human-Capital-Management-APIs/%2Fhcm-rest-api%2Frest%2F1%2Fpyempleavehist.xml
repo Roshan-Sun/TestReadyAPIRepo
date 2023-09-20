@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempleavehist" path="/hcm-rest-api/rest/1/pyempleavehist" id="d09ac103-c74e-4308-bb44-acebe57c0a6d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d09ac103-c74e-4308-bb44-acebe57c0a6dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempleavehist</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a0f60610-271a-4c5f-9c75-f362aa895477" method="GET">
+    <con:description>Retrieve PY Employee Leave Histories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectLeaveHist</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectLeaveHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>empNumber</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectLeaveHist)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PlhCompCode" : "string",
+  "PlhPrnCode" : "string",
+  "PlhPprYear" : 0,
+  "PlhPprPeriod" : 0,
+  "PlhEmpNo" : "string",
+  "PlhDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhEqpDeptCode" : "string",
+  "PlhEmpDeptCode" : "string",
+  "PlhEmpCrAccCode" : "string",
+  "PlhEqpCrAccCode" : "string",
+  "PlhWorkCompCode" : "string",
+  "PlhDataType" : "string",
+  "PlhDeptCode" : "string",
+  "PlhEmplrContrAccCode" : "string",
+  "PlhEmplrContrDeptCode" : "string",
+  "PlhGlAccCode" : "string",
+  "PlhJob" : "string",
+  "PlhPhase" : "string",
+  "PlhCategory" : "string",
+  "PlhEquipment" : "string",
+  "PlhEquipCategory" : "string",
+  "PlhEquipTranNo" : "string",
+  "PlhUnionCode" : "string",
+  "PlhTradeCode" : "string",
+  "PlhWorkLocation" : "string",
+  "PlhTranType" : "string",
+  "PlhTranCode" : "string",
+  "PlhRateCode" : "string",
+  "PlhEmplrContrFlag" : "string",
+  "PlhAdjustment" : "string",
+  "PlhBatchNum" : 0,
+  "PlhGlpostFlag" : "string",
+  "PlhProcessFlag" : "string",
+  "PlhChequeVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhHireFlag" : "string",
+  "PlhTaxtypeFlag" : "string",
+  "PlhRetpayFlag" : "string",
+  "PlhPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhUser" : "string",
+  "PlhLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhUpdateBchFlag" : "string",
+  "PlhLevTypeFlag" : "string",
+  "PlhAccrued" : "string",
+  "PlhLeaveUpdatedInsummary" : "string",
+  "PlhEquipPhsCode" : "string",
+  "PlhPostDateChangeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhAssignedCheckNum" : 0,
+  "PlhPrintCheckOnly" : "string",
+  "PlhLeaveTakenTmshtYear" : 0,
+  "PlhLevCalcDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhLevCalcMethod" : "string",
+  "PlhLastSessioninfo" : "string",
+  "PlhOrigSessioninfo" : "string",
+  "PlhVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="dfca8fff-170f-4622-831d-9968516ee376" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="cc70b745-2dac-4bb1-9b42-ff40d9a7a376" method="POST">
+    <con:description>Create a PY Employee Leave History</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PlhCompCode" : "string",
+  "PlhPrnCode" : "string",
+  "PlhPprYear" : 0,
+  "PlhPprPeriod" : 0,
+  "PlhEmpNo" : "string",
+  "PlhDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhEqpDeptCode" : "string",
+  "PlhEmpDeptCode" : "string",
+  "PlhEmpCrAccCode" : "string",
+  "PlhEqpCrAccCode" : "string",
+  "PlhWorkCompCode" : "string",
+  "PlhDataType" : "string",
+  "PlhDeptCode" : "string",
+  "PlhEmplrContrAccCode" : "string",
+  "PlhEmplrContrDeptCode" : "string",
+  "PlhGlAccCode" : "string",
+  "PlhJob" : "string",
+  "PlhPhase" : "string",
+  "PlhCategory" : "string",
+  "PlhEquipment" : "string",
+  "PlhEquipCategory" : "string",
+  "PlhEquipTranNo" : "string",
+  "PlhUnionCode" : "string",
+  "PlhTradeCode" : "string",
+  "PlhWorkLocation" : "string",
+  "PlhTranType" : "string",
+  "PlhTranCode" : "string",
+  "PlhRateCode" : "string",
+  "PlhEmplrContrFlag" : "string",
+  "PlhAdjustment" : "string",
+  "PlhBatchNum" : 0,
+  "PlhGlpostFlag" : "string",
+  "PlhProcessFlag" : "string",
+  "PlhChequeVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhHireFlag" : "string",
+  "PlhTaxtypeFlag" : "string",
+  "PlhRetpayFlag" : "string",
+  "PlhPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhUser" : "string",
+  "PlhLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhUpdateBchFlag" : "string",
+  "PlhLevTypeFlag" : "string",
+  "PlhAccrued" : "string",
+  "PlhLeaveUpdatedInsummary" : "string",
+  "PlhEquipPhsCode" : "string",
+  "PlhPostDateChangeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhAssignedCheckNum" : 0,
+  "PlhPrintCheckOnly" : "string",
+  "PlhLeaveTakenTmshtYear" : 0,
+  "PlhLevCalcDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlhLevCalcMethod" : "string",
+  "PlhLastSessioninfo" : "string",
+  "PlhOrigSessioninfo" : "string",
+  "PlhVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PlhCompCode":"string","PlhPprYear":"string","PlhTranType":"string","PlhTranCode":"string","PlhPprPeriod":"string","PlhSeqNo":"string","PlhPrnCode":"string","PlhEmpNo":"string","PlhUser":"string","PlhLastUpdDate":"string","PlhVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="b67346df-2b3c-4e80-9159-9d5a7da223d3" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PlhCompCode":"string","PlhPprYear":"string","PlhTranType":"string","PlhTranCode":"string","PlhPprPeriod":"string","PlhSeqNo":"string","PlhPrnCode":"string","PlhEmpNo":"string","PlhUser":"string","PlhLastUpdDate":"string","PlhVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="b0fabd71-fbd8-4cd0-b9d4-ab2f92fbcaec" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PlhTotalHours":1}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

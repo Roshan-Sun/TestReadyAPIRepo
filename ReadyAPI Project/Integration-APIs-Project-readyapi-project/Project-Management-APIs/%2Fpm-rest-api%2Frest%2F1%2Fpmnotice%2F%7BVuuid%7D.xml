@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmnotice/{Vuuid}" path="/pm-rest-api/rest/1/pmnotice/{Vuuid}" id="156bb852-8b47-4f69-991b-33f935bf1fe0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="156bb852-8b47-4f69-991b-33f935bf1fe0fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmnotice%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="00dc9525-fab6-4e00-b5e4-1f0a607eb64c" method="GET">
+    <con:description>Retrieve a Specific PM Notice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmntcCompCode" : "string",
+  "PmntcProjCode" : "string",
+  "PmntcNoticeId" : "string",
+  "PmntcNoticeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcSubject" : "string",
+  "PmntcToPartnCode" : "string",
+  "PmntcToPartnTypeCode" : "string",
+  "PmntcToContactCode" : "string",
+  "PmntcFromPartnCode" : "string",
+  "PmntcFromPartnTypeCode" : "string",
+  "PmntcFromContactCode" : "string",
+  "PmntcNoticeStatusCode" : "string",
+  "PmntcReference" : "string",
+  "PmntcClvValueCode1" : "string",
+  "PmntcClvValueCode2" : "string",
+  "PmntcClvValueCode3" : "string",
+  "PmntcClvValueCode4" : "string",
+  "PmntcClvValueCode5" : "string",
+  "PmntcClvValueCode6" : "string",
+  "PmntcNotes" : "string",
+  "PmntcFollowupNotes" : "string",
+  "PmntcFollowupRequiredFlag" : "string",
+  "PmntcFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcCmCode" : "string",
+  "PmntcRecordStatus" : "string",
+  "PmntcIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcIuCreateUser" : "string",
+  "PmntcIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcIuUpdateUser" : "string",
+  "PmntcVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d0cf0b9f-a401-41b5-8cf7-40b224081566" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="9c6a8f62-3556-4880-a3e6-76954b3d0118" method="DELETE">
+    <con:description>Delete a Specific PM Notice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="10bb8003-cd5a-4e8c-95db-b008a1d6e24d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="ae1e34a5-213e-4f46-8190-0564a894d076" method="PATCH">
+    <con:description>Update a Specific PM Notice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmntcCompCode" : "string",
+  "PmntcProjCode" : "string",
+  "PmntcNoticeId" : "string",
+  "PmntcNoticeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcSubject" : "string",
+  "PmntcToPartnCode" : "string",
+  "PmntcToPartnTypeCode" : "string",
+  "PmntcToContactCode" : "string",
+  "PmntcFromPartnCode" : "string",
+  "PmntcFromPartnTypeCode" : "string",
+  "PmntcFromContactCode" : "string",
+  "PmntcNoticeStatusCode" : "string",
+  "PmntcReference" : "string",
+  "PmntcClvValueCode1" : "string",
+  "PmntcClvValueCode2" : "string",
+  "PmntcClvValueCode3" : "string",
+  "PmntcClvValueCode4" : "string",
+  "PmntcClvValueCode5" : "string",
+  "PmntcClvValueCode6" : "string",
+  "PmntcNotes" : "string",
+  "PmntcFollowupNotes" : "string",
+  "PmntcFollowupRequiredFlag" : "string",
+  "PmntcFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcCmCode" : "string",
+  "PmntcRecordStatus" : "string",
+  "PmntcIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcIuCreateUser" : "string",
+  "PmntcIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmntcIuUpdateUser" : "string",
+  "PmntcVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmntcCompCode":"string","PmntcProjCode":"string","PmntcFollowupRequiredFlag":"string","PmntcVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="05ca85d3-7b13-4530-a73f-9a742a6edbdc" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmntcCompCode":"string","PmntcProjCode":"string","PmntcFollowupRequiredFlag":"string","PmntcVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e7a0f28c-4529-49ef-bdd2-a5d158733714" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmntcSubject":"Subject - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmprojectitemphssegmsum" path="/pm-rest-api/rest/1/pmprojectitemphssegmsum" id="1f51037c-cd05-47f6-ad06-3ec2aeca14d5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1f51037c-cd05-47f6-ad06-3ec2aeca14d5fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojectitemphssegmsum</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e214478b-5d3d-457a-8222-b39779e504c9" method="GET">
+    <con:description>Retrieve PM Project Item Phase Segment Sums</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ProjectFinder, JobFinder, BidItemFinder, WkfStatusFinder, BatchNumWithBidItemFinder, BatchNumWithProjectFinder, BatchNumWithJobFinder, BatchNumWithWkfStatusFinder or ClvValueCodeFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (ProjectFinder, JobFinder, BidItemFinder, BatchNumWithBidItemFinder, BatchNumWithProjectFinder and BatchNumWithJobFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ProjCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (ProjectFinder, BidItemFinder, BatchNumWithBidItemFinder and BatchNumWithProjectFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PhsCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Phase Code (BidItemFinder and BatchNumWithBidItemFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (JobFinder, BidItemFinder, BatchNumWithBidItemFinder and BatchNumWithJobFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BatchNumVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Batch Number (BatchNumWithBidItemFinder, BatchNumWithProjectFinder, BatchNumWithJobFinder and BatchNumWithWkfStatusFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>WkfStatusVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Workflow Status (WkfStatusFinder, BatchNumWithBidItemFinder, BatchNumWithProjectFinder, BatchNumWithJobFinder and BatchNumWithWkfStatusFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode1Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 1 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode2Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 2 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode3Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 3 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode4Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 4 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode5Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 5 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ClvValueCode6Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Classifier Value 6 Code (ClvValueCodeFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmpiCompCode" : "string",
+  "PmpJobCode" : "string",
+  "PmpProjCode" : "string",
+  "JobDefaultDeptCode" : "string",
+  "PmpiWkfStatus" : "string",
+  "PmpiPhsCodeSeg1" : "string",
+  "PmpiClvValueCode1" : "string",
+  "PmpiClvValueCode2" : "string",
+  "PmpiClvValueCode3" : "string",
+  "PmpiClvValueCode4" : "string",
+  "PmpiClvValueCode5" : "string",
+  "PmpiClvValueCode6" : "string",
+  "PmpiVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f6ac1f0b-38e4-4f1e-af71-6b0a7cf7246c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/term" path="/sys-rest-api/rest/1/term" id="c84746d8-442c-49ee-ad5c-2acddf9e2464" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c84746d8-442c-49ee-ad5c-2acddf9e2464fileName">%2Fsys-rest-api%2Frest%2F1%2Fterm</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="94f8daee-1616-48c8-b654-fc30f2082dec" method="GET">
+    <con:description>Retrieve Term List</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TermCompCode" : "string",
+  "TermCode" : "string",
+  "TermName" : "string",
+  "TermCtrlCode" : "string",
+  "TermDueModay" : 0,
+  "TermDueDay" : 0,
+  "TermDiscMonthDay" : 0,
+  "TermDiscDay" : 0,
+  "TermPc" : 0,
+  "TermHldbkPc" : 0,
+  "TermSubmitDays" : 0,
+  "TermPayNoticeDays" : 0,
+  "TermFinalPayDays" : 0,
+  "TermPaylessNoticeDays" : 0,
+  "TermVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="34c84e7c-6b0b-41cc-ae35-836907e2cd47" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="0af7d6e5-3785-4b40-ab60-4c65d0b2aafb" method="POST">
+    <con:description>Create a Term</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TermCompCode" : "string",
+  "TermCode" : "string",
+  "TermName" : "string",
+  "TermCtrlCode" : "string",
+  "TermDueModay" : 0,
+  "TermDueDay" : 0,
+  "TermDiscMonthDay" : 0,
+  "TermDiscDay" : 0,
+  "TermPc" : 0,
+  "TermHldbkPc" : 0,
+  "TermSubmitDays" : 0,
+  "TermPayNoticeDays" : 0,
+  "TermFinalPayDays" : 0,
+  "TermPaylessNoticeDays" : 0,
+  "TermVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TermCode":"string","TermCompCode":"string","TermDueDay":"integer","TermDiscDay":"integer","TermVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="466121d5-ef19-4c0d-9922-a5483813e8c1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TermCode":"string","TermCompCode":"string","TermDueDay":"integer","TermDiscDay":"integer","TermVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="a75295b5-dab3-48f6-96b8-ff1ed52251a7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TermName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" path="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" id="5e024d41-7fcc-43b6-8862-7f42b442fefb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5e024d41-7fcc-43b6-8862-7f42b442fefbfileName">%2Fap-rest-api%2Frest%2F1%2Fapinvoutstanding%2F%7BInvoiceVoucherNum%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-a-specific-ap-outstanding-invoice" id="196cc77d-cd99-4b03-921d-9fee28435303" method="GET">
+    <con:description>Retrieve a Specific AP Outstanding Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>InvoiceVoucherNum</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Invoice Number to be retrieved</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompanyCode" : "string",
+  "VendorCode" : "string",
+  "InvoiceCode" : "string",
+  "InvoiceVoucherNum" : 0,
+  "InvoiceDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PostedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "OutstandingBucketName" : "string",
+  "OutstandingBucketName4" : "string",
+  "OutstandingBucketLabel" : "string",
+  "OutstandingBucketLabel4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c7aae57d-5dec-4d7e-8d2a-1ee871906d88" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

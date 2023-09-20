@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pybase" path="/hcm-rest-api/rest/1/pybase" id="0088599a-8d12-4bcd-8402-a272995f712a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0088599a-8d12-4bcd-8402-a272995f712afileName">%2Fhcm-rest-api%2Frest%2F1%2Fpybase</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3c7f84b2-a4a3-43f5-9cee-71acb3498548" method="GET">
+    <con:description>Retrieve Base Codes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findBenefits, findDeductions or findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for (findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BdbBaseCode" : "string",
+  "BdbBaseDescription" : "string",
+  "BdbShortDesc" : "string",
+  "BdbBaseType" : "string",
+  "BdbSysDefinedFlag" : "string",
+  "BdbUser" : "string",
+  "BdbLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BdbIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BdbIuCreateUser" : "string",
+  "BdbIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BdbIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="90da2bc5-b94a-4755-b36f-841b926ba838" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

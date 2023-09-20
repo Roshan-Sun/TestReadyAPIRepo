@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apvendor" path="/ap-rest-api/rest/1/apvendor" id="9e0bd147-b809-4f2d-9e56-13c299b6f8c1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9e0bd147-b809-4f2d-9e56-13c299b6f8c1fileName">%2Fap-rest-api%2Frest%2F1%2Fapvendor</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c07b48d2-3f6c-41ca-85b9-d73c658e0c3d" method="GET">
+    <con:description>All AP Vendors or specific ones via finders</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ApVendorfinder or selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (ApVendorfinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BpCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor code (ApVendorfinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>audit date(yyyy-mm-dd - selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpvenCompCode" : "string",
+  "BpvenCompName" : "string",
+  "BpvenBpCode" : "string",
+  "BpvenBpName" : "string",
+  "BpvenPayAdd1" : "string",
+  "BpvenPayAdd2" : "string",
+  "BpvenPayAdd3" : "string",
+  "BpvenPayRegionCode" : "string",
+  "BpvenPayRegionName" : "string",
+  "BpvenPayCountry" : "string",
+  "BpvenPayPostalCode" : "string",
+  "BpvenPayContactName" : "string",
+  "BpvenPayPhone" : "string",
+  "BpvenPayFax" : "string",
+  "BpvenPayEmail" : "string",
+  "BpvenWebSite" : "string",
+  "BpvenBuyCode" : "string",
+  "BpvenClassCode" : "string",
+  "BpvenClassName" : "string",
+  "BpvenStatusCode" : "string",
+  "BpvenPrefCode" : "string",
+  "BpvenPrefName" : "string",
+  "BpvenTermCode" : "string",
+  "BpvenTermName" : "string",
+  "Bpven1099Code" : "string",
+  "Bpven1099Name" : "string",
+  "BpvenAltAddCode" : "string",
+  "BpvenAltAddName" : "string",
+  "BpvenShpinstDesc" : "string",
+  "BpvenActiveFlag" : "string",
+  "Bpven5018RepFlag" : "string",
+  "BpvenOneTimeFlag" : "string",
+  "BpvenUseApctrlComplFlag" : "string",
+  "BpvenSpecialTermsFlag" : "string",
+  "BpvenOrdAdd1" : "string",
+  "BpvenOrdAdd2" : "string",
+  "BpvenOrdAdd3" : "string",
+  "BpvenOrdRegionCode" : "string",
+  "BpvenOrdCountry" : "string",
+  "BpvenOrdPostalCode" : "string",
+  "BpvenOrdContactName" : "string",
+  "BpvenOrdPhone" : "string",
+  "BpvenOrdFax" : "string",
+  "BpvenOrdEmail" : "string",
+  "BpvenCurrCode" : "string",
+  "BpvenInvSerCode" : "string",
+  "BpvenDistTypeCode" : "string",
+  "BpvenAllowTranFlag" : "string",
+  "BpvenCheckMergeFlag" : "string",
+  "BpvenDiscreteChqFlag" : "string",
+  "BpvenPrenoteFlag" : "string",
+  "BpvenTppayCode" : "string",
+  "BpvenDefaultPayCode" : "string",
+  "BpvenEftFlag" : "string",
+  "BpvenEftEmail" : "string",
+  "BpvenPrefContactMth" : "string",
+  "BpvenEmpNo" : "string",
+  "BpvenBankCode" : "string",
+  "BpvenBankAccNum1" : "string",
+  "BpvenBankAccNum2" : "string",
+  "BpvenBankAccNum3" : "string",
+  "BpvenPaymodeId" : "string",
+  "BpvenIbanNum" : "string",
+  "BpvenSwiftBicCode" : "string",
+  "BpvenApDeptCode" : "string",
+  "BpvenApAccCode" : "string",
+  "BpvenCashDeptCode" : "string",
+  "BpvenCashAccCode" : "string",
+  "BpvenExpDeptCode" : "string",
+  "BpvenExpAccCode" : "string",
+  "BpvenPpeDeptCode" : "string",
+  "BpvenPpeAccCode" : "string",
+  "BpvenDiscDeptCode" : "string",
+  "BpvenDiscAccCode" : "string",
+  "BpvenHldbkDeptCode" : "string",
+  "BpvenHldbkAccCode" : "string",
+  "BpvenTax1Code" : "string",
+  "BpvenTaxlic1" : "string",
+  "BpvenTax2Code" : "string",
+  "BpvenTaxlic2" : "string",
+  "BpvenTax3Code" : "string",
+  "BpvenTaxlic3" : "string",
+  "BpvenTax4Code" : "string",
+  "BpvenTaxlic4" : "string",
+  "BpvenTax5Code" : "string",
+  "BpvenTaxlic5" : "string",
+  "BpvenVUuid" : "string",
+  "BpvenIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpvenIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="368372b2-ff3d-4745-aa0b-320bfb110702" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="0110aff5-2d92-4245-9c97-6bf8ab74139a" method="POST">
+    <con:description>Create a AP Vendor</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpvenCompCode" : "string",
+  "BpvenCompName" : "string",
+  "BpvenBpCode" : "string",
+  "BpvenBpName" : "string",
+  "BpvenPayAdd1" : "string",
+  "BpvenPayAdd2" : "string",
+  "BpvenPayAdd3" : "string",
+  "BpvenPayRegionCode" : "string",
+  "BpvenPayRegionName" : "string",
+  "BpvenPayCountry" : "string",
+  "BpvenPayPostalCode" : "string",
+  "BpvenPayContactName" : "string",
+  "BpvenPayPhone" : "string",
+  "BpvenPayFax" : "string",
+  "BpvenPayEmail" : "string",
+  "BpvenWebSite" : "string",
+  "BpvenBuyCode" : "string",
+  "BpvenClassCode" : "string",
+  "BpvenClassName" : "string",
+  "BpvenStatusCode" : "string",
+  "BpvenPrefCode" : "string",
+  "BpvenPrefName" : "string",
+  "BpvenTermCode" : "string",
+  "BpvenTermName" : "string",
+  "Bpven1099Code" : "string",
+  "Bpven1099Name" : "string",
+  "BpvenAltAddCode" : "string",
+  "BpvenAltAddName" : "string",
+  "BpvenShpinstDesc" : "string",
+  "BpvenActiveFlag" : "string",
+  "Bpven5018RepFlag" : "string",
+  "BpvenOneTimeFlag" : "string",
+  "BpvenUseApctrlComplFlag" : "string",
+  "BpvenSpecialTermsFlag" : "string",
+  "BpvenOrdAdd1" : "string",
+  "BpvenOrdAdd2" : "string",
+  "BpvenOrdAdd3" : "string",
+  "BpvenOrdRegionCode" : "string",
+  "BpvenOrdCountry" : "string",
+  "BpvenOrdPostalCode" : "string",
+  "BpvenOrdContactName" : "string",
+  "BpvenOrdPhone" : "string",
+  "BpvenOrdFax" : "string",
+  "BpvenOrdEmail" : "string",
+  "BpvenCurrCode" : "string",
+  "BpvenInvSerCode" : "string",
+  "BpvenDistTypeCode" : "string",
+  "BpvenAllowTranFlag" : "string",
+  "BpvenCheckMergeFlag" : "string",
+  "BpvenDiscreteChqFlag" : "string",
+  "BpvenPrenoteFlag" : "string",
+  "BpvenTppayCode" : "string",
+  "BpvenDefaultPayCode" : "string",
+  "BpvenEftFlag" : "string",
+  "BpvenEftEmail" : "string",
+  "BpvenPrefContactMth" : "string",
+  "BpvenEmpNo" : "string",
+  "BpvenBankCode" : "string",
+  "BpvenBankAccNum1" : "string",
+  "BpvenBankAccNum2" : "string",
+  "BpvenBankAccNum3" : "string",
+  "BpvenPaymodeId" : "string",
+  "BpvenIbanNum" : "string",
+  "BpvenSwiftBicCode" : "string",
+  "BpvenApDeptCode" : "string",
+  "BpvenApAccCode" : "string",
+  "BpvenCashDeptCode" : "string",
+  "BpvenCashAccCode" : "string",
+  "BpvenExpDeptCode" : "string",
+  "BpvenExpAccCode" : "string",
+  "BpvenPpeDeptCode" : "string",
+  "BpvenPpeAccCode" : "string",
+  "BpvenDiscDeptCode" : "string",
+  "BpvenDiscAccCode" : "string",
+  "BpvenHldbkDeptCode" : "string",
+  "BpvenHldbkAccCode" : "string",
+  "BpvenTax1Code" : "string",
+  "BpvenTaxlic1" : "string",
+  "BpvenTax2Code" : "string",
+  "BpvenTaxlic2" : "string",
+  "BpvenTax3Code" : "string",
+  "BpvenTaxlic3" : "string",
+  "BpvenTax4Code" : "string",
+  "BpvenTaxlic4" : "string",
+  "BpvenTax5Code" : "string",
+  "BpvenTaxlic5" : "string",
+  "BpvenVUuid" : "string",
+  "BpvenIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpvenIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BpvenCompCode":"string","BpvenBpCode":"string","BpvenCheckMergeFlag":"string","BpvenSpecialTermsFlag":"string","BpvenTermCode":"string","BpvenCurrCode":"string","BpvenApDeptCode":"string","BpvenApAccCode":"string","BpvenCashDeptCode":"string","BpvenCashAccCode":"string","BpvenExpDeptCode":"string","BpvenExpAccCode":"string","BpvenPpeDeptCode":"string","BpvenPpeAccCode":"string","BpvenDiscDeptCode":"string","BpvenDiscAccCode":"string","BpvenHldbkDeptCode":"string","BpvenHldbkAccCode":"string","BpvenVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="cbee610d-d7c1-47c2-aae2-155e3cb114e0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpvenCompCode":"string","BpvenBpCode":"string","BpvenCheckMergeFlag":"string","BpvenSpecialTermsFlag":"string","BpvenTermCode":"string","BpvenCurrCode":"string","BpvenApDeptCode":"string","BpvenApAccCode":"string","BpvenCashDeptCode":"string","BpvenCashAccCode":"string","BpvenExpDeptCode":"string","BpvenExpAccCode":"string","BpvenPpeDeptCode":"string","BpvenPpeAccCode":"string","BpvenDiscDeptCode":"string","BpvenDiscAccCode":"string","BpvenHldbkDeptCode":"string","BpvenHldbkAccCode":"string","BpvenVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

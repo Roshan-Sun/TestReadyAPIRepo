@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emequipment" path="/em-rest-api/rest/1/emequipment" id="a4803de7-dc34-44cc-ab23-ffa6f597157b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a4803de7-dc34-44cc-ab23-ffa6f597157bfileName">%2Fem-rest-api%2Frest%2F1%2Femequipment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="75f99c39-8a85-4a06-838f-762eb42263cc" method="GET">
+    <con:description>Retrieve Equipments</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByEmeCompCode, selectByCompCodeAndDate, selectByEmeEqpCode, selectByEqpCodeAndDate, selectByEmeHomelocCode or selectByHomeLocCodeAndDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmeCompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByEmeCompCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompCodeAndDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmeEqpCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Equipment Code (selectByEmeEqpCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>eqpCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Equipment Code (selectByEqpCodeAndDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmeHomelocCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByEmeHomelocCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>homeLocCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByHomeLocCodeAndDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>selectDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Selection Date against create/update dates(selectByCompCodeAndDate, selectByEqpCodeAndDate and selectByHomeLocCodeAndDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmeEqpclassCode" : "string",
+  "EmeEqpclassName" : "string",
+  "EmeCtrlEqpCode" : "string",
+  "EmeCtrlEqpName" : "string",
+  "EmeEqpHier" : "string",
+  "EmeHomelocCode" : "string",
+  "EmeHomelocName" : "string",
+  "EmeCompCode" : "string",
+  "EmeActuallocCode" : "string",
+  "EmeActuallocName" : "string",
+  "EmeCurrActuallocCode" : "string",
+  "EmeCurrActuallocName" : "string",
+  "EmeJccatCode" : "string",
+  "EmeJccatName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeLegalUidLocation" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeCommissionTime" : "string",
+  "EmeDecommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeBaseUmCode" : "string",
+  "EmeBaseUmName" : "string",
+  "EmeLifeExpectancyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeResponsiblePersonnelName" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeWarrantyAccTypeCode" : "string",
+  "EmeWarrantyDesc" : "string",
+  "EmeWarrantyExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeJcphsCode" : "string",
+  "EmeJcphsName" : "string",
+  "EmeSlidingScaleRuleFlag" : "string",
+  "EmeCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeUeValidFlag" : "string",
+  "EmeVendorCode" : "string",
+  "EmeVendorName" : "string",
+  "EmeBulkEquipmentFlag" : "string",
+  "EmeTruckType" : "string",
+  "EmeInsurName" : "string",
+  "EmeInsurPolicyNo" : "string",
+  "EmeTareDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeTareTime" : "string",
+  "EmeTareType" : "string",
+  "EmeNoOfDrops" : 0,
+  "EmeTradeCode" : "string",
+  "EmeTradeName" : "string",
+  "EmeTruckerClass" : "string",
+  "EmeTruckerClassName" : "string",
+  "EmeUtilizationCode" : "string",
+  "EmeUtilizationName" : "string",
+  "EmeCrewCode" : "string",
+  "EmeFastCatCode" : "string",
+  "EmeFastCatName" : "string",
+  "EmeFastMakeName" : "string",
+  "EmeFastModelName" : "string",
+  "EmeFastSerNumCode" : "string",
+  "EmeFastLicNumberCode" : "string",
+  "EmeFastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastWarrantyCode" : "string",
+  "EmeFastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastOwnerName" : "string",
+  "EmeFastAssignedName" : "string",
+  "EmeFastLeaseCode" : "string",
+  "EmeFastMethCode" : "string",
+  "EmeFastRegisteredTo" : "string",
+  "EmeFastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastBoughtFrom" : "string",
+  "EmeFastLicState" : "string",
+  "EmeFastLicStateName" : "string",
+  "EmeUseMeterReadingFlag" : "string",
+  "EmeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuCreateUser" : "string",
+  "EmeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuUpdateUser" : "string",
+  "EmeVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4c528976-aade-41a0-a58e-0e748b91d5e1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="29a1a215-e93c-4fa6-99b1-273859bbfe6a" method="POST">
+    <con:description>POST and PATCH requests must include EmeFastCatCode</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmeEqpclassCode" : "string",
+  "EmeEqpclassName" : "string",
+  "EmeCtrlEqpCode" : "string",
+  "EmeCtrlEqpName" : "string",
+  "EmeEqpHier" : "string",
+  "EmeHomelocCode" : "string",
+  "EmeHomelocName" : "string",
+  "EmeCompCode" : "string",
+  "EmeActuallocCode" : "string",
+  "EmeActuallocName" : "string",
+  "EmeCurrActuallocCode" : "string",
+  "EmeCurrActuallocName" : "string",
+  "EmeJccatCode" : "string",
+  "EmeJccatName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeLegalUidLocation" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeCommissionTime" : "string",
+  "EmeDecommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeBaseUmCode" : "string",
+  "EmeBaseUmName" : "string",
+  "EmeLifeExpectancyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeResponsiblePersonnelName" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeWarrantyAccTypeCode" : "string",
+  "EmeWarrantyDesc" : "string",
+  "EmeWarrantyExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeJcphsCode" : "string",
+  "EmeJcphsName" : "string",
+  "EmeSlidingScaleRuleFlag" : "string",
+  "EmeCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeUeValidFlag" : "string",
+  "EmeVendorCode" : "string",
+  "EmeVendorName" : "string",
+  "EmeBulkEquipmentFlag" : "string",
+  "EmeTruckType" : "string",
+  "EmeInsurName" : "string",
+  "EmeInsurPolicyNo" : "string",
+  "EmeTareDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeTareTime" : "string",
+  "EmeTareType" : "string",
+  "EmeNoOfDrops" : 0,
+  "EmeTradeCode" : "string",
+  "EmeTradeName" : "string",
+  "EmeTruckerClass" : "string",
+  "EmeTruckerClassName" : "string",
+  "EmeUtilizationCode" : "string",
+  "EmeUtilizationName" : "string",
+  "EmeCrewCode" : "string",
+  "EmeFastCatCode" : "string",
+  "EmeFastCatName" : "string",
+  "EmeFastMakeName" : "string",
+  "EmeFastModelName" : "string",
+  "EmeFastSerNumCode" : "string",
+  "EmeFastLicNumberCode" : "string",
+  "EmeFastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastWarrantyCode" : "string",
+  "EmeFastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastOwnerName" : "string",
+  "EmeFastAssignedName" : "string",
+  "EmeFastLeaseCode" : "string",
+  "EmeFastMethCode" : "string",
+  "EmeFastRegisteredTo" : "string",
+  "EmeFastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastBoughtFrom" : "string",
+  "EmeFastLicState" : "string",
+  "EmeFastLicStateName" : "string",
+  "EmeUseMeterReadingFlag" : "string",
+  "EmeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuCreateUser" : "string",
+  "EmeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuUpdateUser" : "string",
+  "EmeVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmeEqpclassCode" : "string",
+  "EmeEqpclassName" : "string",
+  "EmeCtrlEqpCode" : "string",
+  "EmeCtrlEqpName" : "string",
+  "EmeEqpHier" : "string",
+  "EmeHomelocCode" : "string",
+  "EmeHomelocName" : "string",
+  "EmeCompCode" : "string",
+  "EmeActuallocCode" : "string",
+  "EmeActuallocName" : "string",
+  "EmeCurrActuallocCode" : "string",
+  "EmeCurrActuallocName" : "string",
+  "EmeJccatCode" : "string",
+  "EmeJccatName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeLegalUidLocation" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeCommissionTime" : "string",
+  "EmeDecommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeBaseUmCode" : "string",
+  "EmeBaseUmName" : "string",
+  "EmeLifeExpectancyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeResponsiblePersonnelName" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeWarrantyAccTypeCode" : "string",
+  "EmeWarrantyDesc" : "string",
+  "EmeWarrantyExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeJcphsCode" : "string",
+  "EmeJcphsName" : "string",
+  "EmeSlidingScaleRuleFlag" : "string",
+  "EmeCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeUeValidFlag" : "string",
+  "EmeVendorCode" : "string",
+  "EmeVendorName" : "string",
+  "EmeBulkEquipmentFlag" : "string",
+  "EmeTruckType" : "string",
+  "EmeInsurName" : "string",
+  "EmeInsurPolicyNo" : "string",
+  "EmeTareDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeTareTime" : "string",
+  "EmeTareType" : "string",
+  "EmeNoOfDrops" : 0,
+  "EmeTradeCode" : "string",
+  "EmeTradeName" : "string",
+  "EmeTruckerClass" : "string",
+  "EmeTruckerClassName" : "string",
+  "EmeUtilizationCode" : "string",
+  "EmeUtilizationName" : "string",
+  "EmeCrewCode" : "string",
+  "EmeFastCatCode" : "string",
+  "EmeFastCatName" : "string",
+  "EmeFastMakeName" : "string",
+  "EmeFastModelName" : "string",
+  "EmeFastSerNumCode" : "string",
+  "EmeFastLicNumberCode" : "string",
+  "EmeFastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastWarrantyCode" : "string",
+  "EmeFastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastOwnerName" : "string",
+  "EmeFastAssignedName" : "string",
+  "EmeFastLeaseCode" : "string",
+  "EmeFastMethCode" : "string",
+  "EmeFastRegisteredTo" : "string",
+  "EmeFastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastBoughtFrom" : "string",
+  "EmeFastLicState" : "string",
+  "EmeFastLicStateName" : "string",
+  "EmeUseMeterReadingFlag" : "string",
+  "EmeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuCreateUser" : "string",
+  "EmeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuUpdateUser" : "string",
+  "EmeVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="1f3c79c5-3e3b-4238-8115-ab6ad388f064" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="52ecfb02-ed02-4f42-a286-054d694c9520" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmeFastCatCode":"EQUIPMENT","EmeDesc":"test1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

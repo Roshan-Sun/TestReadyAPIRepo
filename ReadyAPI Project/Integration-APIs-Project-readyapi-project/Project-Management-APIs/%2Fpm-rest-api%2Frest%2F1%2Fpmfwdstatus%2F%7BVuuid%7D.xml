@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmfwdstatus/{Vuuid}" path="/pm-rest-api/rest/1/pmfwdstatus/{Vuuid}" id="897bee29-c13d-4276-a086-df7de610b35f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="897bee29-c13d-4276-a086-df7de610b35ffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmfwdstatus%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a620264e-1512-4fba-ade2-3b84487e15b5" method="GET">
+    <con:description>Retrieve a Specific PM Field Work Directive Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfsStatusCode" : "string",
+  "PmfsStatusName" : "string",
+  "PmfsStatusClassCode" : "string",
+  "PmfsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuCreateUser" : "string",
+  "PmfsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuUpdateUser" : "string",
+  "PmfsLastSessioninfo" : "string",
+  "PmfsOrigSessioninfo" : "string",
+  "PmfsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f0e98067-796d-4881-b2b1-d267f7c62a9a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="5663d20a-d8a3-4949-bb37-4bc1f5d2adf9" method="DELETE">
+    <con:description>Delete a Specific PM Field Work Directive Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="890706cb-44dd-493b-b812-18318082eb54" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="30be8275-be54-452d-aa39-57e42ed5bce8" method="PATCH">
+    <con:description>Update a Specific PM Field Work Directive Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfsStatusCode" : "string",
+  "PmfsStatusName" : "string",
+  "PmfsStatusClassCode" : "string",
+  "PmfsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuCreateUser" : "string",
+  "PmfsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfsIuUpdateUser" : "string",
+  "PmfsLastSessioninfo" : "string",
+  "PmfsOrigSessioninfo" : "string",
+  "PmfsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmfsStatusClassCode":"string","PmfsStatusCode":"string","PmfsStatusName":"string","PmfsVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="3ee8e35b-5cb0-4626-8813-6786fb86d558" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfsStatusClassCode":"string","PmfsStatusCode":"string","PmfsStatusName":"string","PmfsVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="419857f8-e52b-418d-804f-37a9ecdb3dac" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfsStatusName":"Voided - 123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

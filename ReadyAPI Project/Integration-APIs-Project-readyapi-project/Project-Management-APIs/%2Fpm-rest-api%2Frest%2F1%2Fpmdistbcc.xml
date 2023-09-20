@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdistbcc" path="/pm-rest-api/rest/1/pmdistbcc" id="6dc61fac-c793-4dd3-b684-721a134a35cb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6dc61fac-c793-4dd3-b684-721a134a35cbfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdistbcc</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a8a63970-4a61-4a1a-a44e-9fc0e4a238eb" method="GET">
+    <con:description>Retrieve PM Distributions (BCC)</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmdistBccProjectCode" : "string",
+  "PmdistBccCompanyCode" : "string",
+  "PmdistBccObjId" : "string",
+  "PmdistBccObjId2" : "string",
+  "PmdistBccObjectType" : "string",
+  "PmdistBccPartnCode" : "string",
+  "PmdistBccPartnTypeCode" : "string",
+  "PmdistBccContactCode" : "string",
+  "PmdistBccComment" : "string",
+  "PmdistIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmdistIuCreateUser" : "string",
+  "PmdistIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmdistIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "PmdistVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ea472468-eead-4902-9601-512674f457b0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

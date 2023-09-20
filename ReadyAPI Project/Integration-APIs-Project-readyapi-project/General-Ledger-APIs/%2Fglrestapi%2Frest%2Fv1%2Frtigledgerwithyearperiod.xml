@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/rtigledgerwithyearperiod" path="/glrestapi/rest/v1/rtigledgerwithyearperiod" id="ff0f9fff-7973-4357-b94b-4575e958195e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ff0f9fff-7973-4357-b94b-4575e958195efileName">%2Fglrestapi%2Frest%2Fv1%2Frtigledgerwithyearperiod</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="fbff3a18-9774-4d51-9a8b-b609ba084c1c" method="GET">
+    <con:description>Retrieve GL Ledgers</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>glSummary</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (glSummary)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>departmentCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Code (glSummary)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>accountCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Account Code (glSummary)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fiscalYear</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fiscal Year (glSummary)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fiscalQuarter</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fiscal Quarter (glSummary)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fiscalPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Fiscal Period (glSummary)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GlFiscalYear" : 0,
+  "GlFiscalPeriod" : 0,
+  "GlNum" : 0,
+  "GlCompCode" : "string",
+  "GlDsrcCompCode" : "string",
+  "GlDeptCode" : "string",
+  "GlAccCode" : "string",
+  "GlJourCode" : "string",
+  "GlBchNum" : 0,
+  "GlDsrcCode" : "string",
+  "GlSrcCode" : "string",
+  "GlSrcDesc" : "string",
+  "GlRefCode" : "string",
+  "GlRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlRefDesc" : "string",
+  "GlCalcCode" : "string",
+  "GlWmCode" : "string",
+  "GlAccrualCode" : "string",
+  "GlPreliminary" : "string",
+  "GlAdjYr" : 0,
+  "GlAdjPer" : 0,
+  "GlCurrCode" : "string",
+  "GlTransNum" : 0,
+  "GlUser" : "string",
+  "GlDateTimeEntry" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlTaxRemitFlag" : "string",
+  "GlTavCode1" : "string",
+  "GlTavCode2" : "string",
+  "GlTavCode3" : "string",
+  "GlTavCode4" : "string",
+  "GlDistSummaryCode" : "string",
+  "GlExchgCurrCode" : "string",
+  "GlCurrAccFlag" : "string",
+  "GlPostDateChangeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlIuCreateUser" : "string",
+  "GlIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlIuUpdateUser" : "string",
+  "GlPyoverheadFlag" : "string",
+  "GlLastSessioninfo" : "string",
+  "GlOrigSessioninfo" : "string",
+  "GlRep1CurrCode" : "string",
+  "GlRep2CurrCode" : "string",
+  "GlRep3CurrCode" : "string",
+  "GlTransAppCode" : "string",
+  "GlTransType" : "string",
+  "GlAdjTransFlag" : "string",
+  "GlInvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GlAcctDescription" : "string",
+  "GlJobCode" : "string",
+  "GlPyoverheadCr" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="dfd0779f-9e02-496f-9b52-d785de42d094" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

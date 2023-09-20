@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/ukgpaydeductions" path="/hcm-rest-api/rest/1/ukgpaydeductions" id="92e157b9-63c3-4cb4-bfba-a7c9d4654360" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="92e157b9-63c3-4cb4-bfba-a7c9d4654360fileName">%2Fhcm-rest-api%2Frest%2F1%2Fukgpaydeductions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="47fbdf9e-c932-4774-9ee2-3fcf97e4841d" method="GET">
+    <con:description>Retrieve Pay Deductions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectDeductions</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectDeductions)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>employeeNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectDeductions)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payRunCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Run Code (selectDeductions)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payYear</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Year (selectDeductions)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Period (selectDeductions)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmpdedCompCode" : "string",
+  "EmpdedEmpNo" : "string",
+  "EmpdedLastName" : "string",
+  "EmpdedFirstName" : "string",
+  "EmpdedSsnNo" : "string",
+  "EmpdedDocNo" : "string",
+  "EmpdedPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpdedPayRunCode" : "string",
+  "EmpdedChqSeqNo" : "string",
+  "EmpdedDedcCode" : "string",
+  "EmpdedDedcDesc" : "string",
+  "EmpdedCurrErAmt" : "string",
+  "EmpdedYtdErAmt" : "string",
+  "EmpdedTranCode" : "string",
+  "EmpdedTranType" : "string",
+  "EmpdedPerEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpdedPerStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpdedPayPeriod" : 0,
+  "EmpdedPayYear" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="24c9f488-85d7-4f5e-9d0f-ea552ff46fdb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

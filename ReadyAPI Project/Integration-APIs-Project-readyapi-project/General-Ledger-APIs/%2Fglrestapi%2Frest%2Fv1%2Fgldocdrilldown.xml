@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldocdrilldown" path="/glrestapi/rest/v1/gldocdrilldown" id="de295b45-6483-4b21-a2da-d7ed7d55ac98" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="de295b45-6483-4b21-a2da-d7ed7d55ac98fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocdrilldown</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="1a770f2f-9991-40fe-8035-36264c52342e" method="GET">
+    <con:description>Retrieve GL document drill downs</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "RDocCode" : "string",
+  "RAccCode" : "string",
+  "RTotalNum" : "string",
+  "RDapLineCode" : "string",
+  "RDocDesc" : "string",
+  "R01" : "string",
+  "R02" : "string",
+  "R03" : "string",
+  "R04" : "string",
+  "R05" : "string",
+  "R06" : "string",
+  "R07" : "string",
+  "R08" : "string",
+  "R09" : "string",
+  "R10" : "string",
+  "R11" : "string",
+  "R12" : "string",
+  "R13" : "string",
+  "R14" : "string",
+  "R15" : "string",
+  "R16" : "string",
+  "R17" : "string",
+  "R18" : "string",
+  "R19" : "string",
+  "R20" : "string",
+  "RSessionid" : "string",
+  "RSuppressDetailLines" : "string",
+  "RSuppressTotalLines" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6916f3b8-91f7-4bd7-b874-cd4225dfe8ec" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

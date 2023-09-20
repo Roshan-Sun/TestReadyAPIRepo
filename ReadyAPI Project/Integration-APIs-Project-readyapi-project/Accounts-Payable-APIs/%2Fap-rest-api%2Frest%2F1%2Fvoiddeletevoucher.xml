@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/voiddeletevoucher" path="/ap-rest-api/rest/1/voiddeletevoucher" id="b538b8d9-8972-47a0-ac61-1aebd5f5245d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b538b8d9-8972-47a0-ac61-1aebd5f5245dfileName">%2Fap-rest-api%2Frest%2F1%2Fvoiddeletevoucher</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="void-or-delete-a-single-voucher" id="306cf2db-f8e1-49e6-bde7-5c16b6d37964" method="POST">
+    <con:description>Void or Delete a Single Voucher</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{
+  "result" : "SUCCESS"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"name":"voidDeleteVoucher","parameters":[{"compCode":"string"},{"venCode":"string"},{"invCode":"string"},{"voidDate":"string"},{"postFlag":"string"}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="774d0b84-2fc2-4ffe-a98f-5acedc82531b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"name":"voidDeleteVoucher","parameters":[{"compCode":"string"},{"venCode":"string"},{"invCode":"string"},{"voidDate":"string"},{"postFlag":"string"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

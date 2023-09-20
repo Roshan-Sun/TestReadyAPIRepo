@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccontforecaststaffdet" path="/jc-rest-api/rest/1/jccontforecaststaffdet" id="d533b24f-4285-455d-b459-eb49ac266d3e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d533b24f-4285-455d-b459-eb49ac266d3efileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecaststaffdet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6469c50c-15db-45b5-9b31-8a2a1c2ab80d" method="GET">
+    <con:description>Retrieve JC Contract Forecasting Staff Details</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcfsdStaffVUuid" : "string",
+  "JcfsdCompCode" : "string",
+  "JcfsdContCode" : "string",
+  "JcfsdEmpNo" : "string",
+  "JcfsdFlsaExemptFlag" : "string",
+  "JcfsdJobCode" : "string",
+  "JcfsdJobName" : "string",
+  "JcfsdPhsCode" : "string",
+  "JcfsdPhsName" : "string",
+  "JcfsdCatCode" : "string",
+  "JcfsdCatName" : "string",
+  "JcfsdStartDate" : "YYYY-MM-dd",
+  "JcfsdEndDate" : "YYYY-MM-dd",
+  "JcfsdYr" : 0,
+  "JcfsdPer" : 0,
+  "JcfsdWeeklyCostHrs" : 0,
+  "JcfsdWeeklyBillHrs" : 0,
+  "JcfsdPerWorkDays" : 0,
+  "JcfsdCostPerTotal" : 0,
+  "JcfsdBillPerTotal" : 0,
+  "JcfsdWorkingCostHrs" : 0,
+  "JcfsdWorkingBillHrs" : 0,
+  "JcfsdCostRatePerHrs" : 0,
+  "JcfsdCostRateOverride" : 0,
+  "JcfsdBillRatePerHrs" : 0,
+  "JcfsdBillRateOverride" : 0,
+  "JcfsdCostRunningTotal" : 0,
+  "JcfsdBillRunningTotal" : 0,
+  "JcfsdOverheadFlag" : "string",
+  "JcfsdCostPerOverhead" : 0,
+  "JcfsdBillPerOverhead" : 0,
+  "JcfsdBudgetCostHrs" : 0,
+  "JcfsdBudgetCostPerTotal" : 0,
+  "JcfsdBudgetCostOverhead" : 0,
+  "JcfsdBudgetBillHrs" : 0,
+  "JcfsdBudgetBillPerTotal" : 0,
+  "JcfsdBudgetBillOverhead" : 0,
+  "JcfsdBidJobFlag" : "string",
+  "JcfsdOverrideFlag" : "string",
+  "JcfsdHistoryFlag" : "string",
+  "JcfsdActualUnit" : 0,
+  "JcfsdActualCost" : 0,
+  "JcfsdActualBill" : 0,
+  "JcfsdPrevProjCost" : 0,
+  "JcfsdPrevProjBill" : 0,
+  "DiscriminatorCode" : "string",
+  "JcfsdIuCreateDate" : "YYYY-MM-dd",
+  "JcfsdIuCreateUser" : "string",
+  "JcfsdIuUpdateDate" : "YYYY-MM-dd",
+  "JcfsdIuUpdateUser" : "string",
+  "JcfsdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3c6a0be1-b02e-48fd-a02e-d8239c28537e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

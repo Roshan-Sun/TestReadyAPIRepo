@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/citranposted" path="/ci-rest-api/rest/1/citranposted" id="4cf590fc-d877-4315-ad3c-5724a93ec553" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4cf590fc-d877-4315-ad3c-5724a93ec553fileName">%2Fci-rest-api%2Frest%2F1%2Fcitranposted</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="917cd049-a073-4e1b-b626-eddd20b380c4" method="GET">
+    <con:description>Retrieve CI Posted Transactions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByBchNum</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByBchNum)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BchNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Batch Number (selectByBchNum)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ReqNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Requisition Number (selectByBchNum)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PostDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Posted Date (selectByBchNum)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CitrnCompCode" : "string",
+  "CitrnCompName" : "string",
+  "CitrnTranType" : "string",
+  "CitrnTranTypeName" : "string",
+  "CitrnBchNum" : 0,
+  "CitrnBchName" : "string",
+  "CitrnJobDeptWorderEqup" : "string",
+  "CitrnPhsAccWitemComponcat" : "string",
+  "CitrnCatExpTrancode" : "string",
+  "CitrnTranNum" : 0,
+  "CitrnSubstItemFlag" : "string",
+  "CitrnActionCode" : "string",
+  "CitrnItemClassCode" : "string",
+  "CitrnItemClassName" : "string",
+  "CitrnItemCode" : "string",
+  "CitrnItemName" : "string",
+  "CitrnItemTypeCode" : "string",
+  "CitrnItemTypeName" : "string",
+  "CitrnItemWmCode" : "string",
+  "CitrnItemWmName" : "string",
+  "CitrnLocCode" : "string",
+  "CitrnLocName" : "string",
+  "CitrnReqQty" : 0,
+  "CitrnQty" : 0,
+  "CitrnToFromLocCode" : "string",
+  "CitrnToFromLocName" : "string",
+  "CitrnToFromItemClassCode" : "string",
+  "CitrnToFromItemClassName" : "string",
+  "CitrnToFromItemCode" : "string",
+  "CitrnToFromItemName" : "string",
+  "CitrnToFromItemTypeCode" : "string",
+  "CitrnToFromItemTypeName" : "string",
+  "CitrnToFromWmCode" : "string",
+  "CitrnToFromWmName" : "string",
+  "CitrnToFromQty" : 0,
+  "CitrnToFromCompCode" : "string",
+  "CitrnToFromCompName" : "string",
+  "CitrnToFromDeptCode" : "string",
+  "CitrnToFromDeptName" : "string",
+  "CitrnToFromAccCode" : "string",
+  "CitrnToFromAccName" : "string",
+  "CitrnToFromJobCode" : "string",
+  "CitrnToFromJobName" : "string",
+  "CitrnToFromPhaseCode" : "string",
+  "CitrnToFromPhaseName" : "string",
+  "CitrnToFromCatCode" : "string",
+  "CitrnToFromCatName" : "string",
+  "CitrnToFromEqpCode" : "string",
+  "CitrnToFromEqpName" : "string",
+  "CitrnToFromComponCode" : "string",
+  "CitrnToFromComponName" : "string",
+  "CitrnToFromTrancodeCode" : "string",
+  "CitrnToFromTrancodeName" : "string",
+  "CitrnRefDate" : "YYYY-MM-dd",
+  "CitrnRefCode" : "string",
+  "CitrnRefDesc" : "string",
+  "CitrnSrcCode" : "string",
+  "CitrnSrcDesc" : "string",
+  "CitrnReqNum" : "string",
+  "CitrnReqReleaseNum" : 0,
+  "CitrnReqLineNum" : 0,
+  "CitrnWbsvCode1" : "string",
+  "CitrnWbsvCode2" : "string",
+  "CitrnWbsvCode3" : "string",
+  "CitrnWbsvCode4" : "string",
+  "CitrnWbsvCode5" : "string",
+  "CitrnWbsvCode6" : "string",
+  "CitrnWbsvCode7" : "string",
+  "CitrnWbsvCode8" : "string",
+  "CitrnWbsvCode9" : "string",
+  "CitrnWbsvCode10" : "string",
+  "CitrnWbsvCode11" : "string",
+  "CitrnWbsvCode12" : "string",
+  "CitrnPmCode" : "string",
+  "CitrnMovedToInvFlag" : "string",
+  "CitrnFromAllocQty" : 0,
+  "CitrnRecPriceAmt" : 0,
+  "CitrnRecCurrCode" : "string",
+  "CitrnSalesTax1Code" : "string",
+  "CitrnSalesTax1Name" : "string",
+  "CitrnSalesTax2Code" : "string",
+  "CitrnSalesTax2Name" : "string",
+  "CitrnSalesTax3Code" : "string",
+  "CitrnSalesTax3Name" : "string",
+  "CitrnAmt" : 0,
+  "CitrnPostDate" : "YYYY-MM-dd",
+  "CitrnTranSnNum" : "string",
+  "CitrnOverrideAmt" : 0,
+  "CitrnWoCode" : "string",
+  "CitrnWoName" : "string",
+  "CitrnWitmLineNumber" : "string",
+  "CitrnWitmLineName" : "string",
+  "CitrnWoExpCode" : "string",
+  "CitrnWoExpName" : "string",
+  "CitrnWoTranType" : "string",
+  "CitrnWDetailCode" : "string",
+  "CitrnSalesTax1Amt" : 0,
+  "CitrnSalesTax2Amt" : 0,
+  "CitrnSalesTax3Amt" : 0,
+  "CitrnOverrideCostAmt" : 0,
+  "CitrnIuCreateDate" : "YYYY-MM-dd",
+  "CitrnIuCreateUser" : "string",
+  "CitrnIuUpdateDate" : "YYYY-MM-dd",
+  "CitrnIuUpdateUser" : "string",
+  "CitrnJobDeptWoEqpName" : "string",
+  "CitrnPhsaccWitemcompcatName" : "string",
+  "CitrnCatExpTranName" : "string",
+  "CitrnSuggestedPrice" : 0,
+  "CitrnTotalPrice" : 0,
+  "CitrnOnhandQty" : 0,
+  "CitrnCalledFromAppCode" : "string",
+  "CitrnUserFieldEdtFlag5" : "string",
+  "CitrnUserFieldEdtFlag6" : "string",
+  "CitrnUserFieldEdtFlag7" : "string",
+  "CitrnUserFieldEdtFlag8" : "string",
+  "CitrnUserFieldName5" : "string",
+  "CitrnUserFieldName6" : "string",
+  "CitrnUserFieldName7" : "string",
+  "CitrnUserFieldName8" : "string",
+  "CitrnWbsSetupFlag" : "string",
+  "CitrnTacSetupFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CitrnVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="65f72a1a-ef30-4679-82cf-f16bd5891d59" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

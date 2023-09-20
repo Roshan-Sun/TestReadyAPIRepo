@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsubmittalstatus" path="/pm-rest-api/rest/1/pmsubmittalstatus" id="7115ff4f-d889-4718-af41-a862b9fb27ed" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7115ff4f-d889-4718-af41-a862b9fb27edfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmittalstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9dcd7e11-0f8f-4059-ad32-f0a2218b8677" method="GET">
+    <con:description>Retrieve PM Submittal Statuses</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PmSubmittalStatusFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusClassCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Class Code (PmSubmittalStatusFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Name of Status (PmSubmittalStatusFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmsStatusCode" : "string",
+  "PmsmsStatusName" : "string",
+  "PmsmsStatusClassCode" : "string",
+  "PmsmsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmsIuCreateUser" : "string",
+  "PmsmsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmsIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="50305cc6-c400-4d6a-96dd-d910f2cc8db7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2b064575-b442-46df-a265-9108e663034c" method="POST">
+    <con:description>Create a PM Submittal Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmsStatusCode" : "string",
+  "PmsmsStatusName" : "string",
+  "PmsmsStatusClassCode" : "string",
+  "PmsmsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmsIuCreateUser" : "string",
+  "PmsmsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmsIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmsStatusCode":"string","PmsmsStatusName":"string","PmsmsStatusClassCode":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="627dc3d4-3d0b-4485-9ac7-f75251966c51" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmsStatusCode":"string","PmsmsStatusName":"string","PmsmsStatusClassCode":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="11d81e97-87e8-4412-8864-c191663dd5d4" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmsStatusName":"Voided - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/sdobjusrextvalue" path="/sys-rest-api/rest/1/sdobjusrextvalue" id="4d94f7f5-4f88-408d-a43b-e4a98e4efed5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4d94f7f5-4f88-408d-a43b-e4a98e4efed5fileName">%2Fsys-rest-api%2Frest%2F1%2Fsdobjusrextvalue</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f3a4e246-41de-4c49-8fc4-abc7583b7879" method="GET">
+    <con:description>Retrieve SD Object User Extend Values</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>SdObjUsrExtValuefinder, findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>SchemaName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Name of Schema (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TableName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Table Name (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey1</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 1 (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey2</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 2 (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey3</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 3 (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey4</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 4 (SdObjUsrExtValuefinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (yyyy-mm-dd - findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UevUedSchemaName" : "string",
+  "UevUedTableName" : "string",
+  "UevUedUkColName" : "string",
+  "UevObjectKey1" : "string",
+  "UevObjectKey2" : "string",
+  "UevObjectKey3" : "string",
+  "UevObjectKey4" : "string",
+  "UevCode1" : "string",
+  "UevCode2" : "string",
+  "UevCode3" : "string",
+  "UevCode4" : "string",
+  "UevCode5" : "string",
+  "UevCode6" : "string",
+  "UevCode7" : "string",
+  "UevCode8" : "string",
+  "UevCode9" : "string",
+  "UevCode10" : "string",
+  "UevCode11" : "string",
+  "UevCode12" : "string",
+  "UevCode13" : "string",
+  "UevCode14" : "string",
+  "UevCode15" : "string",
+  "UevCode16" : "string",
+  "UevCode17" : "string",
+  "UevCode18" : "string",
+  "UevCode19" : "string",
+  "UevCode20" : "string",
+  "UevNum1" : 0,
+  "UevNum2" : 0,
+  "UevNum3" : 0,
+  "UevNum4" : 0,
+  "UevNum5" : 0,
+  "UevNum6" : 0,
+  "UevNum7" : 0,
+  "UevNum8" : 0,
+  "UevNum9" : 0,
+  "UevNum10" : 0,
+  "UevNum11" : 0,
+  "UevNum12" : 0,
+  "UevNum13" : 0,
+  "UevNum14" : 0,
+  "UevNum15" : 0,
+  "UevNum16" : 0,
+  "UevNum17" : 0,
+  "UevNum18" : 0,
+  "UevNum19" : 0,
+  "UevNum20" : 0,
+  "UevDate1" : "YYYY-MM-dd",
+  "UevDate2" : "YYYY-MM-dd",
+  "UevDate3" : "YYYY-MM-dd",
+  "UevDate4" : "YYYY-MM-dd",
+  "UevDate5" : "YYYY-MM-dd",
+  "UevDate6" : "YYYY-MM-dd",
+  "UevDate7" : "YYYY-MM-dd",
+  "UevDate8" : "YYYY-MM-dd",
+  "UevDate9" : "YYYY-MM-dd",
+  "UevDate10" : "YYYY-MM-dd",
+  "UevDate11" : "YYYY-MM-dd",
+  "UevDate12" : "YYYY-MM-dd",
+  "UevDate13" : "YYYY-MM-dd",
+  "UevDate14" : "YYYY-MM-dd",
+  "UevDate15" : "YYYY-MM-dd",
+  "UevDate16" : "YYYY-MM-dd",
+  "UevDate17" : "YYYY-MM-dd",
+  "UevDate18" : "YYYY-MM-dd",
+  "UevDate19" : "YYYY-MM-dd",
+  "UevDate20" : "YYYY-MM-dd",
+  "UevIuCreateDate" : "YYYY-MM-dd",
+  "UevIuCreateUser" : "string",
+  "UevIuUpdateDate" : "YYYY-MM-dd",
+  "UevIuUpdateUser" : "string",
+  "UevCode21" : "string",
+  "UevCode22" : "string",
+  "UevCode23" : "string",
+  "UevCode24" : "string",
+  "UevCode25" : "string",
+  "UevCode26" : "string",
+  "UevCode27" : "string",
+  "UevCode28" : "string",
+  "UevCode29" : "string",
+  "UevCode30" : "string",
+  "UevCode31" : "string",
+  "UevCode32" : "string",
+  "UevCode33" : "string",
+  "UevCode34" : "string",
+  "UevCode35" : "string",
+  "UevCode36" : "string",
+  "UevCode37" : "string",
+  "UevCode38" : "string",
+  "UevCode39" : "string",
+  "UevCode40" : "string",
+  "UevCode41" : "string",
+  "UevCode42" : "string",
+  "UevCode43" : "string",
+  "UevCode44" : "string",
+  "UevCode45" : "string",
+  "UevCode46" : "string",
+  "UevCode47" : "string",
+  "UevCode48" : "string",
+  "UevCode49" : "string",
+  "UevCode50" : "string",
+  "UevCode51" : "string",
+  "UevCode52" : "string",
+  "UevCode53" : "string",
+  "UevCode54" : "string",
+  "UevCode55" : "string",
+  "UevCode56" : "string",
+  "UevCode57" : "string",
+  "UevCode58" : "string",
+  "UevCode59" : "string",
+  "UevCode60" : "string",
+  "UevLastSessioninfo" : "string",
+  "UevOrigSessioninfo" : "string",
+  "UevCode61" : "string",
+  "UevCode62" : "string",
+  "UevCode63" : "string",
+  "UevCode64" : "string",
+  "UevCode65" : "string",
+  "UevCode66" : "string",
+  "UevCode67" : "string",
+  "UevCode68" : "string",
+  "UevCode69" : "string",
+  "UevCode70" : "string",
+  "UevCode71" : "string",
+  "UevCode72" : "string",
+  "UevCode73" : "string",
+  "UevCode74" : "string",
+  "UevCode75" : "string",
+  "UevCode76" : "string",
+  "UevCode77" : "string",
+  "UevCode78" : "string",
+  "UevCode79" : "string",
+  "UevCode80" : "string",
+  "UevCode81" : "string",
+  "UevCode82" : "string",
+  "UevCode83" : "string",
+  "UevCode84" : "string",
+  "UevCode85" : "string",
+  "UevCode86" : "string",
+  "UevCode87" : "string",
+  "UevCode88" : "string",
+  "UevCode89" : "string",
+  "UevCode90" : "string",
+  "UevCode91" : "string",
+  "UevCode92" : "string",
+  "UevCode93" : "string",
+  "UevCode94" : "string",
+  "UevCode95" : "string",
+  "UevCode96" : "string",
+  "UevCode97" : "string",
+  "UevCode98" : "string",
+  "UevCode99" : "string",
+  "UevCode100" : "string",
+  "UevObjectColumn" : "string",
+  "UevObjectValue" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="aa46da73-57a8-4069-9b2b-b6be7789f2c8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2fdc2ee4-8ee2-4854-b473-42e55da85fe8" method="POST">
+    <con:description>For the **VOUCHER** table, the keys are as such - Company Code (**UevObjectKey1**), Vendor Code (**UevObjectKey2**), Invoice Code (**UevObjectKey3**), Duplicate ID (**UevObjectKey4**) - Duplicate ID can be found through the Voucher (**/ap-rest-api/rest/1/apvoucher**) webservice.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UevUedSchemaName" : "string",
+  "UevUedTableName" : "string",
+  "UevUedUkColName" : "string",
+  "UevObjectKey1" : "string",
+  "UevObjectKey2" : "string",
+  "UevObjectKey3" : "string",
+  "UevObjectKey4" : "string",
+  "UevCode1" : "string",
+  "UevCode2" : "string",
+  "UevCode3" : "string",
+  "UevCode4" : "string",
+  "UevCode5" : "string",
+  "UevCode6" : "string",
+  "UevCode7" : "string",
+  "UevCode8" : "string",
+  "UevCode9" : "string",
+  "UevCode10" : "string",
+  "UevCode11" : "string",
+  "UevCode12" : "string",
+  "UevCode13" : "string",
+  "UevCode14" : "string",
+  "UevCode15" : "string",
+  "UevCode16" : "string",
+  "UevCode17" : "string",
+  "UevCode18" : "string",
+  "UevCode19" : "string",
+  "UevCode20" : "string",
+  "UevNum1" : 0,
+  "UevNum2" : 0,
+  "UevNum3" : 0,
+  "UevNum4" : 0,
+  "UevNum5" : 0,
+  "UevNum6" : 0,
+  "UevNum7" : 0,
+  "UevNum8" : 0,
+  "UevNum9" : 0,
+  "UevNum10" : 0,
+  "UevNum11" : 0,
+  "UevNum12" : 0,
+  "UevNum13" : 0,
+  "UevNum14" : 0,
+  "UevNum15" : 0,
+  "UevNum16" : 0,
+  "UevNum17" : 0,
+  "UevNum18" : 0,
+  "UevNum19" : 0,
+  "UevNum20" : 0,
+  "UevDate1" : "YYYY-MM-dd",
+  "UevDate2" : "YYYY-MM-dd",
+  "UevDate3" : "YYYY-MM-dd",
+  "UevDate4" : "YYYY-MM-dd",
+  "UevDate5" : "YYYY-MM-dd",
+  "UevDate6" : "YYYY-MM-dd",
+  "UevDate7" : "YYYY-MM-dd",
+  "UevDate8" : "YYYY-MM-dd",
+  "UevDate9" : "YYYY-MM-dd",
+  "UevDate10" : "YYYY-MM-dd",
+  "UevDate11" : "YYYY-MM-dd",
+  "UevDate12" : "YYYY-MM-dd",
+  "UevDate13" : "YYYY-MM-dd",
+  "UevDate14" : "YYYY-MM-dd",
+  "UevDate15" : "YYYY-MM-dd",
+  "UevDate16" : "YYYY-MM-dd",
+  "UevDate17" : "YYYY-MM-dd",
+  "UevDate18" : "YYYY-MM-dd",
+  "UevDate19" : "YYYY-MM-dd",
+  "UevDate20" : "YYYY-MM-dd",
+  "UevIuCreateDate" : "YYYY-MM-dd",
+  "UevIuCreateUser" : "string",
+  "UevIuUpdateDate" : "YYYY-MM-dd",
+  "UevIuUpdateUser" : "string",
+  "UevCode21" : "string",
+  "UevCode22" : "string",
+  "UevCode23" : "string",
+  "UevCode24" : "string",
+  "UevCode25" : "string",
+  "UevCode26" : "string",
+  "UevCode27" : "string",
+  "UevCode28" : "string",
+  "UevCode29" : "string",
+  "UevCode30" : "string",
+  "UevCode31" : "string",
+  "UevCode32" : "string",
+  "UevCode33" : "string",
+  "UevCode34" : "string",
+  "UevCode35" : "string",
+  "UevCode36" : "string",
+  "UevCode37" : "string",
+  "UevCode38" : "string",
+  "UevCode39" : "string",
+  "UevCode40" : "string",
+  "UevCode41" : "string",
+  "UevCode42" : "string",
+  "UevCode43" : "string",
+  "UevCode44" : "string",
+  "UevCode45" : "string",
+  "UevCode46" : "string",
+  "UevCode47" : "string",
+  "UevCode48" : "string",
+  "UevCode49" : "string",
+  "UevCode50" : "string",
+  "UevCode51" : "string",
+  "UevCode52" : "string",
+  "UevCode53" : "string",
+  "UevCode54" : "string",
+  "UevCode55" : "string",
+  "UevCode56" : "string",
+  "UevCode57" : "string",
+  "UevCode58" : "string",
+  "UevCode59" : "string",
+  "UevCode60" : "string",
+  "UevLastSessioninfo" : "string",
+  "UevOrigSessioninfo" : "string",
+  "UevCode61" : "string",
+  "UevCode62" : "string",
+  "UevCode63" : "string",
+  "UevCode64" : "string",
+  "UevCode65" : "string",
+  "UevCode66" : "string",
+  "UevCode67" : "string",
+  "UevCode68" : "string",
+  "UevCode69" : "string",
+  "UevCode70" : "string",
+  "UevCode71" : "string",
+  "UevCode72" : "string",
+  "UevCode73" : "string",
+  "UevCode74" : "string",
+  "UevCode75" : "string",
+  "UevCode76" : "string",
+  "UevCode77" : "string",
+  "UevCode78" : "string",
+  "UevCode79" : "string",
+  "UevCode80" : "string",
+  "UevCode81" : "string",
+  "UevCode82" : "string",
+  "UevCode83" : "string",
+  "UevCode84" : "string",
+  "UevCode85" : "string",
+  "UevCode86" : "string",
+  "UevCode87" : "string",
+  "UevCode88" : "string",
+  "UevCode89" : "string",
+  "UevCode90" : "string",
+  "UevCode91" : "string",
+  "UevCode92" : "string",
+  "UevCode93" : "string",
+  "UevCode94" : "string",
+  "UevCode95" : "string",
+  "UevCode96" : "string",
+  "UevCode97" : "string",
+  "UevCode98" : "string",
+  "UevCode99" : "string",
+  "UevCode100" : "string",
+  "UevObjectColumn" : "string",
+  "UevObjectValue" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"UevUedSchemaName":"string","UevUedTableName":"string","UevObjectKey1":"string","UevObjectKey2":"string","UevObjectKey3":"string","UevObjectKey4":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="55111ab0-83f3-42e4-8928-d34e5f40a568" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"UevUedSchemaName":"string","UevUedTableName":"string","UevObjectKey1":"string","UevObjectKey2":"string","UevObjectKey3":"string","UevObjectKey4":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

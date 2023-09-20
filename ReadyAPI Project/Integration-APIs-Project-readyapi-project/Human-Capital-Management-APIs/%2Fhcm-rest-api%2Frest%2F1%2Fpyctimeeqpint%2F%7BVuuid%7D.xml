@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimeeqpint/{Vuuid}" path="/hcm-rest-api/rest/1/pyctimeeqpint/{Vuuid}" id="97b1bed7-6d2f-463e-8d23-3f933e6f68f9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="97b1bed7-6d2f-463e-8d23-3f933e6f68f9fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeeqpint%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="da349d12-261e-4bba-914b-3a8918f8b0da" method="GET">
+    <con:description>Retrieve a Specific Crew Time Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmtrVUuid" : "string",
+  "EmtrHdrJobCompCode" : "string",
+  "EmtrHdrJobCode" : "string",
+  "EmtrCrewCode" : "string",
+  "EmtrRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrDistTypeCode" : "string",
+  "EmtrDsrcCompCode" : "string",
+  "EmtrJobCode" : "string",
+  "EmtrPhsCode" : "string",
+  "EmtrCatCode" : "string",
+  "EmtrDistDeptCode" : "string",
+  "EmtrDistAccCode" : "string",
+  "EmtrActEquipment" : "string",
+  "EmtrActEquipCategory" : "string",
+  "EmtrActEquipTranCode" : "string",
+  "EmtrDistWorkorder" : "string",
+  "EmtrDistWitmLineNumber" : "string",
+  "EmtrDistExpCode" : "string",
+  "EmtrRefCode" : "string",
+  "EmtrRowEquipment" : "string",
+  "EmtrRowEquipTranCode" : "string",
+  "EmtrPostFlag" : "string",
+  "EmtrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuCreateUser" : "string",
+  "EmtrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuUpdateUser" : "string",
+  "EmtrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="05f9f4d7-1797-4361-abaf-904e9d020363" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="077ab032-4fb3-43bc-a3a1-389d90a26ebb" method="PATCH">
+    <con:description>Update a Specific PY Crew Time Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmtrVUuid" : "string",
+  "EmtrHdrJobCompCode" : "string",
+  "EmtrHdrJobCode" : "string",
+  "EmtrCrewCode" : "string",
+  "EmtrRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrDistTypeCode" : "string",
+  "EmtrDsrcCompCode" : "string",
+  "EmtrJobCode" : "string",
+  "EmtrPhsCode" : "string",
+  "EmtrCatCode" : "string",
+  "EmtrDistDeptCode" : "string",
+  "EmtrDistAccCode" : "string",
+  "EmtrActEquipment" : "string",
+  "EmtrActEquipCategory" : "string",
+  "EmtrActEquipTranCode" : "string",
+  "EmtrDistWorkorder" : "string",
+  "EmtrDistWitmLineNumber" : "string",
+  "EmtrDistExpCode" : "string",
+  "EmtrRefCode" : "string",
+  "EmtrRowEquipment" : "string",
+  "EmtrRowEquipTranCode" : "string",
+  "EmtrPostFlag" : "string",
+  "EmtrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuCreateUser" : "string",
+  "EmtrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuUpdateUser" : "string",
+  "EmtrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmtrAccessCode":"string","EmtrCrewCode":"string","EmtrHdrJobCompCode":"string","EmtrDsrcCompCode":"string","EmtrHdrJobCode":"string","EmtrRefDate":"string","EmtrDistTypeCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string","EmtrJobCode":"string","EmtrRowEquipment":"string","EmtrRowEquipTranCode":"string","EmtrQty":"string","EmtrPostFlag":"string","EmtrVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="88b0fc5f-77f3-4af0-b980-f04f0e98c7f8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmtrAccessCode":"string","EmtrCrewCode":"string","EmtrHdrJobCompCode":"string","EmtrDsrcCompCode":"string","EmtrHdrJobCode":"string","EmtrRefDate":"string","EmtrDistTypeCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string","EmtrJobCode":"string","EmtrRowEquipment":"string","EmtrRowEquipTranCode":"string","EmtrQty":"string","EmtrPostFlag":"string","EmtrVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="adda6e70-23c3-4edb-b9f8-c0fbe785cb1e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

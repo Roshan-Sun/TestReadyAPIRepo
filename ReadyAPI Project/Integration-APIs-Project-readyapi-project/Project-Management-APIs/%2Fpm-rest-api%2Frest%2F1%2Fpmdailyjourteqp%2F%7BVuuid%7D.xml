@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourteqp/{Vuuid}" path="/pm-rest-api/rest/1/pmdailyjourteqp/{Vuuid}" id="5821d0af-b48c-4146-98d7-c4532ed1a4ba" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5821d0af-b48c-4146-98d7-c4532ed1a4bafileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourteqp%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="08a32512-5a87-4092-b511-64cd6bf0786e" method="GET">
+    <con:description>Retrieve a Specific PM Daily Journal Trade Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtePartnCode" : "string",
+  "PmjtePartnTypeCode" : "string",
+  "PmjteEqpId" : "string",
+  "PmjteEqpDesc" : "string",
+  "PmjteClvValueCode1" : "string",
+  "PmjteClvValueCode2" : "string",
+  "PmjteClvValueCode3" : "string",
+  "PmjteClvValueCode4" : "string",
+  "PmjteClvValueCode5" : "string",
+  "PmjteClvValueCode6" : "string",
+  "PmjteIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjteIuCreateUser" : "string",
+  "PmjteIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjteIuUpdateUser" : "string",
+  "PmjteJournalVUuid" : "string",
+  "PmjteVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bab9ba80-4b4d-49a9-b5a0-ed6558e57e6a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="28066f2d-e747-4dfb-9915-41098dd0cc4c" method="DELETE">
+    <con:description>Delete a Specific PM Daily Journal Trade Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6ddb560c-4d2c-4f18-b840-437c91b618c7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="dfe67027-d5a8-43ab-a9aa-230bdac818c7" method="PATCH">
+    <con:description>Update a Specific PM Daily Journal Trade Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtePartnCode" : "string",
+  "PmjtePartnTypeCode" : "string",
+  "PmjteEqpId" : "string",
+  "PmjteEqpDesc" : "string",
+  "PmjteClvValueCode1" : "string",
+  "PmjteClvValueCode2" : "string",
+  "PmjteClvValueCode3" : "string",
+  "PmjteClvValueCode4" : "string",
+  "PmjteClvValueCode5" : "string",
+  "PmjteClvValueCode6" : "string",
+  "PmjteIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjteIuCreateUser" : "string",
+  "PmjteIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjteIuUpdateUser" : "string",
+  "PmjteJournalVUuid" : "string",
+  "PmjteVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjteClvValueCode1":"string","PmjteEqpDesc":"string","PmjteEqpId":"string","PmjteJournalVUuid":"string","PmjtePartnCode":"string","PmjtePartnTypeCode":"string","PmjteVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="9cb83ddc-7e0c-4c42-bcce-8fd33d6beb13" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjteClvValueCode1":"string","PmjteEqpDesc":"string","PmjteEqpId":"string","PmjteJournalVUuid":"string","PmjtePartnCode":"string","PmjtePartnTypeCode":"string","PmjteVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5d424313-d017-4f3c-8434-9ff0e9d86847" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjteEqpDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

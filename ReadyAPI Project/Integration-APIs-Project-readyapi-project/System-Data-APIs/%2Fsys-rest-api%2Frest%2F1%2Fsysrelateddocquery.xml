@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/sysrelateddocquery" path="/sys-rest-api/rest/1/sysrelateddocquery" id="1a950c09-38cc-41bd-877f-dd0c6147082d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1a950c09-38cc-41bd-877f-dd0c6147082dfileName">%2Fsys-rest-api%2Frest%2F1%2Fsysrelateddocquery</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="391cdec4-b4f8-41bb-a02f-9699b6833de2" method="GET">
+    <con:description>Retrieve System Related Documents</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByRevision or selectByObjectKey</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>RevisionVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Uuid of Revision (selectByRevision)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectType</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Type being queried for (selectByObjectKey)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey1</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 1 - typically Company Code (selectByObjectKey)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey2</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 2 - typically Project Code (selectByObjectKey)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey3</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 3 (selectByObjectKey)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey4</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 4 (selectByObjectKey)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "SysrdObjectType" : "string",
+  "SysrdObjectKey1" : "string",
+  "SysrdObjectKey2" : "string",
+  "SysrdObjectKey3" : "string",
+  "SysrdObjectKey4" : "string",
+  "SysrdPartnCode" : "string",
+  "SysrdPartnTypeCode" : "string",
+  "SysrdContactCode" : "string",
+  "SysrdContactName" : "string",
+  "SysrdDate" : "YYYY-MM-dd",
+  "SysrdStatus" : "string",
+  "SysrdDocTypeCode" : "string",
+  "SysrdDocTypeName" : "string",
+  "SysrdDocId" : "string",
+  "SysrdDocTitle" : "string",
+  "SysrdDocStatusCode" : "string",
+  "SysrdDocStatusClassCode" : "string",
+  "SysrdStatusName" : "string",
+  "SysrdRevNum" : 0,
+  "SysrdRevDate" : "YYYY-MM-dd",
+  "SysrdRevComment" : "string",
+  "SysrdRevStatusCode" : "string",
+  "SysrdRevStatusClassCode" : "string",
+  "SysrdAttRelNum" : 0,
+  "SysrdAttName" : "string",
+  "SysrdAttRelUser" : "string",
+  "SysrdAttRelDate" : "YYYY-MM-dd",
+  "SysrdAttPath" : "string",
+  "SysrdAttNote" : "string",
+  "SysrdAttLockStatus" : "string",
+  "SysrdAttLockUser" : "string",
+  "SysrdAttLockDate" : "YYYY-MM-dd",
+  "SysrdCopiesNum" : 0,
+  "SysrdVUuid" : "string",
+  "SysrdRevisionVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="18e18863-5f65-47cd-aeb5-2ebd1922338b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

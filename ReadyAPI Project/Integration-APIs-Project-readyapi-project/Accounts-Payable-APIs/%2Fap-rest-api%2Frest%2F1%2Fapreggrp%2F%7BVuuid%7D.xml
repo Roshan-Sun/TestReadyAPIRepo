@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreggrp/{Vuuid}" path="/ap-rest-api/rest/1/apreggrp/{Vuuid}" id="9b9b3c63-cbbf-4c99-834a-20da8d0f756a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9b9b3c63-cbbf-4c99-834a-20da8d0f756afileName">%2Fap-rest-api%2Frest%2F1%2Fapreggrp%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="get-ap-invoice-registry-group" id="3357148f-e6b8-416f-8ca2-0c8eff7cafba" method="GET">
+    <con:description>Get specific Invoice Registry Group</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AprgCompCode" : "string",
+  "AprgCode" : "string",
+  "AprgDesc" : "string",
+  "DiscriminatorCode" : "string",
+  "AprgVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="90b2eba2-6e79-4a34-bc53-9603492667ff" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

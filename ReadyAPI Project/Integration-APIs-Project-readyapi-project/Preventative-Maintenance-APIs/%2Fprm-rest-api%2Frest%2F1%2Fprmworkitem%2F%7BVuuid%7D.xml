@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" path="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" id="b336ef60-440d-4a31-b00e-4aac066b9d89" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b336ef60-440d-4a31-b00e-4aac066b9d89fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmworkitem%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b27da0b0-1457-4516-9174-35b80019e54d" method="GET">
+    <con:description>Retrieve a Specific PRM work item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WitmWorkItemType" : "string",
+  "WitmTaskCode" : "string",
+  "WitmTaskPtgtType" : "string",
+  "WitmTgtType" : "string",
+  "WitmWoCompCode" : "string",
+  "WitmWoCode" : "string",
+  "WitmLineNumber" : 0,
+  "WitmWoStepTitle" : "string",
+  "WitmWoStepDescription" : "string",
+  "WitmDeadlineDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmThresholdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmRecurringFlag" : "string",
+  "WitmMissedTaskCount" : 0,
+  "WitmAcumTypeCode" : "string",
+  "WitmJcatLabCompCode" : "string",
+  "WitmJcatLabJobCode" : "string",
+  "WitmJcatLabPhsCode" : "string",
+  "WitmJcatLabourCode" : "string",
+  "WitmJcatPartsCompCode" : "string",
+  "WitmJcatPartsJobCode" : "string",
+  "WitmJcatPartsPhsCode" : "string",
+  "WitmJcatPartsCode" : "string",
+  "WitmJcatConCompCode" : "string",
+  "WitmJcatConJobCode" : "string",
+  "WitmJcatConPhsCode" : "string",
+  "WitmJcatContractorCode" : "string",
+  "WitmJcatEqCompCode" : "string",
+  "WitmJcatEqJobCode" : "string",
+  "WitmJcatEqPhsCode" : "string",
+  "WitmJcatEquipmentCode" : "string",
+  "WitmJcatOthCompCode" : "string",
+  "WitmJcatOthJobCode" : "string",
+  "WitmJcatOthPhsCode" : "string",
+  "WitmJcatOtherCode" : "string",
+  "WitmWiccCompCode" : "string",
+  "WitmWiccLabourCode" : "string",
+  "WitmWiccPartsCode" : "string",
+  "WitmWiccContractorCode" : "string",
+  "WitmWiccEquipmentCode" : "string",
+  "WitmWiccOtherCode" : "string",
+  "WitmStatus" : "string",
+  "WitmComments" : "string",
+  "WitmCompletionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmClass1" : "string",
+  "WitmClass2" : "string",
+  "WitmClass3" : "string",
+  "WitmClass4" : "string",
+  "WitmVendorCode" : "string",
+  "WitmScheduleDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmActiveFlag" : "string",
+  "WitmTeamCode" : "string",
+  "WitmBchNum" : 0,
+  "WitmPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmSrcCompCode" : "string",
+  "WitmJobCode" : "string",
+  "WitmPhsCode" : "string",
+  "WitmDeptCode" : "string",
+  "WitmPriority" : 0,
+  "WitmIssueId" : "string",
+  "WitmDeliveryDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmAppTypeCode" : "string",
+  "WitmDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmCreatedBy" : "string",
+  "WitmDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmModifiedBy" : "string",
+  "WitmScheduleEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmBillingType" : "string",
+  "WitmSubmittedBillingFlag" : "string",
+  "WitmBillingStateCode" : "string",
+  "WitmChargeJobFlag" : "string",
+  "WitmChargeCompCode" : "string",
+  "WitmChargeJobCode" : "string",
+  "WitmChargePhsCode" : "string",
+  "WitmChargeCatCode" : "string",
+  "WitmWoEntry2Flag" : "string",
+  "WitmBuildingCode" : "string",
+  "WitmFloorNo" : "string",
+  "WitmRoomNo" : "string",
+  "WitmUserField2" : "string",
+  "WitmUserField3" : "string",
+  "WitmSelectFlag" : "string",
+  "WitmVUuid" : "string",
+  "WitmIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmIuCreateUser" : "string",
+  "WitmIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmIuUpdateUser" : "string",
+  "WitmWoVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="74aa47e1-9974-46ee-8394-e42eaf1a1fa9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="0721c2b6-19df-4938-be7d-a1357b299f43" method="PATCH">
+    <con:description>Update a Specific PRM work item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WitmWorkItemType" : "string",
+  "WitmTaskCode" : "string",
+  "WitmTaskPtgtType" : "string",
+  "WitmTgtType" : "string",
+  "WitmWoCompCode" : "string",
+  "WitmWoCode" : "string",
+  "WitmLineNumber" : 0,
+  "WitmWoStepTitle" : "string",
+  "WitmWoStepDescription" : "string",
+  "WitmDeadlineDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmThresholdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmRecurringFlag" : "string",
+  "WitmMissedTaskCount" : 0,
+  "WitmAcumTypeCode" : "string",
+  "WitmJcatLabCompCode" : "string",
+  "WitmJcatLabJobCode" : "string",
+  "WitmJcatLabPhsCode" : "string",
+  "WitmJcatLabourCode" : "string",
+  "WitmJcatPartsCompCode" : "string",
+  "WitmJcatPartsJobCode" : "string",
+  "WitmJcatPartsPhsCode" : "string",
+  "WitmJcatPartsCode" : "string",
+  "WitmJcatConCompCode" : "string",
+  "WitmJcatConJobCode" : "string",
+  "WitmJcatConPhsCode" : "string",
+  "WitmJcatContractorCode" : "string",
+  "WitmJcatEqCompCode" : "string",
+  "WitmJcatEqJobCode" : "string",
+  "WitmJcatEqPhsCode" : "string",
+  "WitmJcatEquipmentCode" : "string",
+  "WitmJcatOthCompCode" : "string",
+  "WitmJcatOthJobCode" : "string",
+  "WitmJcatOthPhsCode" : "string",
+  "WitmJcatOtherCode" : "string",
+  "WitmWiccCompCode" : "string",
+  "WitmWiccLabourCode" : "string",
+  "WitmWiccPartsCode" : "string",
+  "WitmWiccContractorCode" : "string",
+  "WitmWiccEquipmentCode" : "string",
+  "WitmWiccOtherCode" : "string",
+  "WitmStatus" : "string",
+  "WitmComments" : "string",
+  "WitmCompletionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmClass1" : "string",
+  "WitmClass2" : "string",
+  "WitmClass3" : "string",
+  "WitmClass4" : "string",
+  "WitmVendorCode" : "string",
+  "WitmScheduleDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmActiveFlag" : "string",
+  "WitmTeamCode" : "string",
+  "WitmBchNum" : 0,
+  "WitmPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmSrcCompCode" : "string",
+  "WitmJobCode" : "string",
+  "WitmPhsCode" : "string",
+  "WitmDeptCode" : "string",
+  "WitmPriority" : 0,
+  "WitmIssueId" : "string",
+  "WitmDeliveryDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmAppTypeCode" : "string",
+  "WitmDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmCreatedBy" : "string",
+  "WitmDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmModifiedBy" : "string",
+  "WitmScheduleEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmBillingType" : "string",
+  "WitmSubmittedBillingFlag" : "string",
+  "WitmBillingStateCode" : "string",
+  "WitmChargeJobFlag" : "string",
+  "WitmChargeCompCode" : "string",
+  "WitmChargeJobCode" : "string",
+  "WitmChargePhsCode" : "string",
+  "WitmChargeCatCode" : "string",
+  "WitmWoEntry2Flag" : "string",
+  "WitmBuildingCode" : "string",
+  "WitmFloorNo" : "string",
+  "WitmRoomNo" : "string",
+  "WitmUserField2" : "string",
+  "WitmUserField3" : "string",
+  "WitmSelectFlag" : "string",
+  "WitmVUuid" : "string",
+  "WitmIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmIuCreateUser" : "string",
+  "WitmIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WitmIuUpdateUser" : "string",
+  "WitmWoVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"WitmWoCompCode":"ZZ","WitmWoCode":"ROSHAN15","WitmWoStepTitle":"okay boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="ecb1035d-4402-4882-bb8a-9a0f85513bba" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WitmWoCompCode":"ZZ","WitmWoCode":"ROSHAN15","WitmWoStepTitle":"okay boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Patch Example" id="a9d784d4-e9b9-4e3c-be90-384d4284d946" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WitmComments":"bobicus was here"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

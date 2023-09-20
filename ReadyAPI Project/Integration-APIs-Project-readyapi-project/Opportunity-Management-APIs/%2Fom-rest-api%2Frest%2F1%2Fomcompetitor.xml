@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/om-rest-api/rest/1/omcompetitor" path="/om-rest-api/rest/1/omcompetitor" id="615a54d9-077b-425a-ae42-ba58c7eccea8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="615a54d9-077b-425a-ae42-ba58c7eccea8fileName">%2Fom-rest-api%2Frest%2F1%2Fomcompetitor</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="391c6efb-a6a4-46ba-8b94-f34d4ec5f0ea" method="GET">
+    <con:description>Retrieve OM Competitors</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectCompetitor</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>competitorCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Competitor Code (selectCompetitor)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmcCompetitorCode" : "string",
+  "OmcName" : "string",
+  "OmcProductName" : "string",
+  "OmcStrengths" : "string",
+  "OmcWeaknesses" : "string",
+  "OmcRating" : "string",
+  "OmcPartnCode" : "string",
+  "OmcPartnTypeCode" : "string",
+  "OmcContactCode" : "string",
+  "OmcOpportunities" : "string",
+  "OmcThreats" : "string",
+  "OmcIuCreateDate" : "YYYY-MM-dd",
+  "OmcIuCreateUser" : "string",
+  "OmcIuUpdateDate" : "YYYY-MM-dd",
+  "OmcIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "OmcVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="baedfb6c-e7c1-4397-806b-1c29c196e1cb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f8ed7dc1-a76f-4184-8a8d-873e168767ea" method="POST">
+    <con:description>Create an OM Competitor</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmcCompetitorCode" : "string",
+  "OmcName" : "string",
+  "OmcProductName" : "string",
+  "OmcStrengths" : "string",
+  "OmcWeaknesses" : "string",
+  "OmcRating" : "string",
+  "OmcPartnCode" : "string",
+  "OmcPartnTypeCode" : "string",
+  "OmcContactCode" : "string",
+  "OmcOpportunities" : "string",
+  "OmcThreats" : "string",
+  "OmcIuCreateDate" : "YYYY-MM-dd",
+  "OmcIuCreateUser" : "string",
+  "OmcIuUpdateDate" : "YYYY-MM-dd",
+  "OmcIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "OmcVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"OmcCompetitorCode":"string","OmcName":"string","OmcVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="356694e8-54d3-43bc-b1f9-8df2e0dc6024" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"OmcCompetitorCode":"string","OmcName":"string","OmcVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="87c224cc-d7cc-47c6-b2b3-2f297bd59bba" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"OmcWeaknesses":"Mostly Medical - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyetimesheet/{Vuuid}" path="/hcm-rest-api/rest/1/pyetimesheet/{Vuuid}" id="79f65209-deb1-42da-b63b-98580958899f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="79f65209-deb1-42da-b63b-98580958899ffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyetimesheet%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9a288d98-c0ee-4c19-a19d-b7afc040e665" method="GET">
+    <con:description>Retrieve a Specific PY E-Timesheet</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshSeqNo" : 0,
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshHoursCode" : "string",
+  "TshHours" : 0,
+  "TshOhType" : "string",
+  "TshDocumentNo" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshComment" : "string",
+  "TshAccessCode" : "string",
+  "TshVUuid" : "string",
+  "TshCompCode" : "string",
+  "TshPprPeriod" : 0,
+  "TshPprYear" : 0,
+  "TshPrnCode" : "string",
+  "TshBatchFlag" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3d1e4311-6b18-4a51-9468-c324654118f0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="1256e9fa-6d2d-4d7d-8160-e080e17cc1f5" method="PATCH">
+    <con:description>Update a specific PY E-Timesheet</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshSeqNo" : 0,
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshHoursCode" : "string",
+  "TshHours" : 0,
+  "TshOhType" : "string",
+  "TshDocumentNo" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshComment" : "string",
+  "TshAccessCode" : "string",
+  "TshVUuid" : "string",
+  "TshCompCode" : "string",
+  "TshPprPeriod" : 0,
+  "TshPprYear" : 0,
+  "TshPrnCode" : "string",
+  "TshBatchFlag" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TshAccessCode":"string","TshCompCode":"string","TshDate":"string","TshEmpNo":"string","TshHours":"integer","TshJobCode":"string","TshPhase":"string","TshCategory":"string","TshPprPeriod":"string","TshPprYear":"string","TshPrnCode":"string","TshWorkCompCode":"string","TshVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="fe5ae6b6-829a-479b-9621-5965b36c6cb4" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshAccessCode":"string","TshCompCode":"string","TshDate":"string","TshEmpNo":"string","TshHours":"integer","TshJobCode":"string","TshPhase":"string","TshCategory":"string","TshPprPeriod":"string","TshPprYear":"string","TshPrnCode":"string","TshWorkCompCode":"string","TshVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="bc3c37c2-82da-466d-a51f-980241367107" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshAccessCode":"string","TshHours":5,"TshDocumentNo":"TEST321"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

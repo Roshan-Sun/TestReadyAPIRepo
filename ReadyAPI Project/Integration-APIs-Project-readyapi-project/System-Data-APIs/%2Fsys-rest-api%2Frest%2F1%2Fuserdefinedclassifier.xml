@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/userdefinedclassifier" path="/sys-rest-api/rest/1/userdefinedclassifier" id="85d7cd8e-adad-4968-b110-88263da74b70" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="85d7cd8e-adad-4968-b110-88263da74b70fileName">%2Fsys-rest-api%2Frest%2F1%2Fuserdefinedclassifier</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a284bf9c-bdd6-42de-964f-8a9430e07998" method="GET">
+    <con:description>Retrieve User Defined Classifiers</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UserDefinedClassifierFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectType</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Type being queried for (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>UdfCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UDF Code (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey1</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 1 - typically Company Code (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey2</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 2 - typically Project Code (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey3</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 3 (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectKey4</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Key 4 (UserDefinedClassifierFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmcvUdfCode" : "string",
+  "OmcvObjectType" : "string",
+  "OmcvActualValue" : "string",
+  "OmcvIuCreateDate" : "YYYY-MM-dd",
+  "OmcvIuUpdateDate" : "YYYY-MM-dd",
+  "OmcvObjectKey1" : "string",
+  "OmcvObjectKey2" : "string",
+  "OmcvObjectKey3" : "string",
+  "OmcvObjectKey4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d6e038aa-7efa-46cc-9e2e-41ec57fda03a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="546b17d9-ad8c-4667-9c10-f85afa53b308" method="POST">
+    <con:description>Create a Specific User Defined Classifier</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmcvUdfCode" : "string",
+  "OmcvObjectType" : "string",
+  "OmcvActualValue" : "string",
+  "OmcvIuCreateDate" : "YYYY-MM-dd",
+  "OmcvIuUpdateDate" : "YYYY-MM-dd",
+  "OmcvObjectKey1" : "string",
+  "OmcvObjectKey2" : "string",
+  "OmcvObjectKey3" : "string",
+  "OmcvObjectKey4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"OmcvUdfCode":"string","OmcvObjectType":"string","OmcvObjectKey1":"string","OmcvObjectKey2":"string","OmcvObjectKey3":"integer","OmcvActualValue":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="05f81bd8-6377-4970-a33e-a678324b1284" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"OmcvUdfCode":"string","OmcvObjectType":"string","OmcvObjectKey1":"string","OmcvObjectKey2":"string","OmcvObjectKey3":"integer","OmcvActualValue":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

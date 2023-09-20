@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmpunchlistdet" path="/pm-rest-api/rest/1/pmpunchlistdet" id="45903851-575a-4686-87ea-6c5029ff50ab" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="45903851-575a-4686-87ea-6c5029ff50abfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchlistdet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ea90d049-15a5-4e16-a238-c45d0e4f9caf" method="GET">
+    <con:description>Retrieve PM Punchlist Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompany</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompany)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmpldCompCode" : "string",
+  "PmpldItemCode" : "string",
+  "PmpldArea1Value" : "string",
+  "PmpldArea2Value" : "string",
+  "PmpldArea3Value" : "string",
+  "PmpldArea4Value" : "string",
+  "PmpldDesc" : "string",
+  "PmpldStatusCode" : "string",
+  "PmpldStatusDesc" : "string",
+  "PmpldPartnCode" : "string",
+  "PmpldPartnTypeCode" : "string",
+  "PmpldPartnName" : "string",
+  "PmpldContCode" : "string",
+  "PmpldChgCode" : "string",
+  "PmpldContName" : "string",
+  "PmpldContactCode" : "string",
+  "PmpldContactName" : "string",
+  "PmpldReceivedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldIssuedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldSchdComplDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldCompletedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldInspectedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldSignedOffDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldClvValueCode1" : "string",
+  "PmpldClvValueCode2" : "string",
+  "PmpldClvValueCode3" : "string",
+  "PmpldClvValueCode4" : "string",
+  "PmpldClvValueCode5" : "string",
+  "PmpldClvValueCode6" : "string",
+  "PmpldReinspectedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldCmCode" : "string",
+  "PmpldInspPartnCode" : "string",
+  "PmpldInspPtypeCode" : "string",
+  "PmpldInspContactCode" : "string",
+  "PmpldInspPartnName" : "string",
+  "PmpldInspContactName" : "string",
+  "PmpldGlobalUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpldVUuid" : "string",
+  "PmpldPmplCode" : "string",
+  "PmpldPmdlDescription" : "string",
+  "PmpldPmttCode" : "string",
+  "PmpldPmttDesc" : "string",
+  "PmpldPmplTitle" : "string",
+  "PmpldPmdlCode" : "string",
+  "PmpldStatusClassCode" : "string",
+  "PmpldRecordStatus" : "string",
+  "PmpldCurRespPartnCode" : "string",
+  "PmpldCurRespPartnTypeCode" : "string",
+  "PmpldCurRespContactCode" : "string",
+  "PmpldCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="67ddff78-de5e-4144-af4f-5fd9ceaa6609" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

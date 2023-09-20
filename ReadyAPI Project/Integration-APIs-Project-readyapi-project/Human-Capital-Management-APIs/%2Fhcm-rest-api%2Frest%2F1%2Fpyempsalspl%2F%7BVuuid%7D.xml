@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempsalspl/{Vuuid}" path="/hcm-rest-api/rest/1/pyempsalspl/{Vuuid}" id="7234bfc7-6306-4c01-934c-b49c8c1abcee" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7234bfc7-6306-4c01-934c-b49c8c1abceefileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempsalspl%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="aa5bf658-3076-4859-ab96-f6fe7a86f049" method="GET">
+    <con:description>Retrieve a Specific PY Employee Pay Split</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EssCompCode" : "string",
+  "EssEmpNo" : "string",
+  "EssSplitNumber" : 0,
+  "EssSplitType" : "string",
+  "EssBankAccNumber" : "string",
+  "EssBankCode" : "string",
+  "EssBranchCode" : "string",
+  "EssSplitPercent" : 0,
+  "EssUser" : "string",
+  "EssLastUpdDate" : "YYYY-MM-dd",
+  "EssAchTranCode" : "string",
+  "EssPrenoteCnt" : 0,
+  "EssEmpSalSplitType" : "string",
+  "EssSplitMethod" : "string",
+  "EssTranType" : "string",
+  "EssTranCode" : "string",
+  "EssNormTranCode" : "string",
+  "EssVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d6dbb54e-c527-45aa-a169-735456aec703" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="dd918444-37e5-40ef-b180-c66ae480f0fd" method="PATCH">
+    <con:description>Update a Specific PY Employee Pay Split</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EssCompCode" : "string",
+  "EssEmpNo" : "string",
+  "EssSplitNumber" : 0,
+  "EssSplitType" : "string",
+  "EssBankAccNumber" : "string",
+  "EssBankCode" : "string",
+  "EssBranchCode" : "string",
+  "EssSplitPercent" : 0,
+  "EssUser" : "string",
+  "EssLastUpdDate" : "YYYY-MM-dd",
+  "EssAchTranCode" : "string",
+  "EssPrenoteCnt" : 0,
+  "EssEmpSalSplitType" : "string",
+  "EssSplitMethod" : "string",
+  "EssTranType" : "string",
+  "EssTranCode" : "string",
+  "EssNormTranCode" : "string",
+  "EssVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EssCompCode":"string","EssEmpNo":"string","EssBankCode":"string","EssSplitNumber":"number","EssLastUpdDate":"string","EssUser":"string","EssVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="9f138fe8-c68f-48cb-a932-b512a1e5218a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EssCompCode":"string","EssEmpNo":"string","EssBankCode":"string","EssSplitNumber":"number","EssLastUpdDate":"string","EssUser":"string","EssVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f0d2f4c3-e07a-488e-9c86-9c74328f6c5f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EssSplitPercent":99}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

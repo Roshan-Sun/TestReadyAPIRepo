@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsubmitpkgstatus" path="/pm-rest-api/rest/1/pmsubmitpkgstatus" id="bb1f465b-b9e8-44a3-abf1-5f9d5db52c28" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bb1f465b-b9e8-44a3-abf1-5f9d5db52c28fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmitpkgstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ea1be9b8-01ea-4372-b67e-b94a7eef7019" method="GET">
+    <con:description>Retrieve PM Submittal Package Statuses</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmpsStatusCode" : "string",
+  "PmsmpsStatusName" : "string",
+  "PmsmpsStatusClassCode" : "string",
+  "PmsmpsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpsIuCreateUser" : "string",
+  "PmsmpsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpsIuUpdateUser" : "string",
+  "PmsmpsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="8a04a2e5-8d30-4199-a00c-6e90978f8798" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="ae8426f5-022d-4ea6-85fe-fb6d022cd67c" method="POST">
+    <con:description>Create a PM Submittal Package Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmpsStatusCode" : "string",
+  "PmsmpsStatusName" : "string",
+  "PmsmpsStatusClassCode" : "string",
+  "PmsmpsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpsIuCreateUser" : "string",
+  "PmsmpsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpsIuUpdateUser" : "string",
+  "PmsmpsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmpsStatusCode":"string","PmsmpsStatusClassCode":"string","PmsmpsVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="faaeedb2-2e3e-4dbd-9cd5-be855a64303f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmpsStatusCode":"string","PmsmpsStatusClassCode":"string","PmsmpsVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="78fcbc4b-9a96-4acb-879f-1e1c5e25237a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmpsStatusName":"Voided - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

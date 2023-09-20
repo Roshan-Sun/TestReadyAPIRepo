@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmstatus" path="/cm-rest-api/rest/1/cmstatus" id="f553c190-42ea-4a94-945c-066640d9eb02" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f553c190-42ea-4a94-945c-066640d9eb02fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ff3a5adf-24e2-4fbc-8419-291aee78a080" method="GET">
+    <con:description>Retrieve PCI Statuses</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>CmStatusFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (CmStatusFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status code (CmStatusFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmstCompCode" : "string",
+  "CmstCompName" : "string",
+  "CmstStatCode" : "string",
+  "CmstStatName" : "string",
+  "CmstPendingTypeCode" : "string",
+  "CmstProceedingFlag" : "string",
+  "CmstInclForecastFlag" : "string",
+  "CmstPciBillingFlag" : "string",
+  "CmstAtRiskFlag" : "string",
+  "CmstIsPciBillingEnabled" : "string",
+  "CmstInclWipCostFlag" : "string",
+  "CmstInclWipRevFlag" : "string",
+  "CmstIuCreateDate" : "YYYY-MM-dd",
+  "CmstIuCreateUser" : "string",
+  "CmstIuUpdateDate" : "YYYY-MM-dd",
+  "CmstIuUpdateUser" : "string",
+  "CmstVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ac40b8a4-8d9e-4a6f-8058-2dd31c45d9bb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="3492e4d3-50e7-435d-8aa3-c5262e58e9b7" method="POST">
+    <con:description>Create a PCI Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmstCompCode" : "string",
+  "CmstCompName" : "string",
+  "CmstStatCode" : "string",
+  "CmstStatName" : "string",
+  "CmstPendingTypeCode" : "string",
+  "CmstProceedingFlag" : "string",
+  "CmstInclForecastFlag" : "string",
+  "CmstPciBillingFlag" : "string",
+  "CmstAtRiskFlag" : "string",
+  "CmstIsPciBillingEnabled" : "string",
+  "CmstInclWipCostFlag" : "string",
+  "CmstInclWipRevFlag" : "string",
+  "CmstIuCreateDate" : "YYYY-MM-dd",
+  "CmstIuCreateUser" : "string",
+  "CmstIuUpdateDate" : "YYYY-MM-dd",
+  "CmstIuUpdateUser" : "string",
+  "CmstVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmstCompCode":"string","CmstStatCode":"string","CmstAtRiskFlag":"string","CmstInclWipRevFlag":"string","CmstInclWipCostFlag":"string","CmstVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="8930ce4b-2d0f-4931-96f8-9b8d03e1baa7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmstCompCode":"string","CmstStatCode":"string","CmstAtRiskFlag":"string","CmstInclWipRevFlag":"string","CmstInclWipCostFlag":"string","CmstVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0991d1e4-77a6-4315-9437-d2abcb576de2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmstStatName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

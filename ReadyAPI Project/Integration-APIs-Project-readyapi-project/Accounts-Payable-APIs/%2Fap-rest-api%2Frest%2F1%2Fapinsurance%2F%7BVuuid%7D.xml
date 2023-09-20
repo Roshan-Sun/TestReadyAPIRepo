@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apinsurance/{Vuuid}" path="/ap-rest-api/rest/1/apinsurance/{Vuuid}" id="4a7cba1e-8606-4be7-82c0-b016a5f7d1a3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4a7cba1e-8606-4be7-82c0-b016a5f7d1a3fileName">%2Fap-rest-api%2Frest%2F1%2Fapinsurance%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-ap-insurance-by-company-vendor-job-and-compliance-codes" id="917ca5d3-0fb9-4ad9-a9b7-471f81e305fc" method="GET">
+    <con:description>Retrieval of compliance for a specific vendor, within a specific company, for a specific Job and specific compliance code</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InsComplType" : "string",
+  "InsVouNum" : 0,
+  "InsVenCode" : "string",
+  "InsCoverTypeCode" : "string",
+  "InsCoverTypeDesc" : "string",
+  "InsInscompCode" : "string",
+  "InsInscompName" : "string",
+  "InsVouRemitDesc" : "string",
+  "InsCertNum" : "string",
+  "InsCertLoc" : "string",
+  "InsCompCode" : "string",
+  "InsScContCode" : "string",
+  "InsScJobCode" : "string",
+  "InsPoNum" : "string",
+  "InsPoReleaseNum" : 0,
+  "InsStartDate" : "YYYY-MM-dd",
+  "InsEndDate" : "YYYY-MM-dd",
+  "InsAmt" : 0,
+  "InsComplianceFlag" : "string",
+  "InsDateComplianceFlag" : "string",
+  "InsScAutoAssignFlag" : "string",
+  "InsPoAutoAssignFlag" : "string",
+  "InsNotesFlag" : "string",
+  "InsUpdateUser" : "string",
+  "InsUpdateDate" : "YYYY-MM-dd",
+  "InsUpdateFlag" : "string",
+  "InsDeleteFlag" : "string",
+  "InsDateSensitiveFlag" : "string",
+  "InsCScAutoAssignFlag" : "string",
+  "InsCPoAutoAssignFlag" : "string",
+  "OrigInscompCode" : "string",
+  "OrigCertNum" : "string",
+  "DiscriminatorCode" : "string",
+  "InsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6fc71e36-4806-4cfd-8096-8ead1b41776c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="delete-a-specific-ap-insurance" id="9cea1cf6-7888-448f-91f4-c47b44b4c825" method="DELETE">
+    <con:description>Delete a Specific AP Insurance</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4b64de08-d89a-47f8-9306-3de40f5dc29e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="update-ap-insurance" id="ade871b2-1055-45d4-bf01-a017eff27b46" method="PATCH">
+    <con:description>Update a Specific AP Insurance</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InsComplType" : "string",
+  "InsVouNum" : 0,
+  "InsVenCode" : "string",
+  "InsCoverTypeCode" : "string",
+  "InsCoverTypeDesc" : "string",
+  "InsInscompCode" : "string",
+  "InsInscompName" : "string",
+  "InsVouRemitDesc" : "string",
+  "InsCertNum" : "string",
+  "InsCertLoc" : "string",
+  "InsCompCode" : "string",
+  "InsScContCode" : "string",
+  "InsScJobCode" : "string",
+  "InsPoNum" : "string",
+  "InsPoReleaseNum" : 0,
+  "InsStartDate" : "YYYY-MM-dd",
+  "InsEndDate" : "YYYY-MM-dd",
+  "InsAmt" : 0,
+  "InsComplianceFlag" : "string",
+  "InsDateComplianceFlag" : "string",
+  "InsScAutoAssignFlag" : "string",
+  "InsPoAutoAssignFlag" : "string",
+  "InsNotesFlag" : "string",
+  "InsUpdateUser" : "string",
+  "InsUpdateDate" : "YYYY-MM-dd",
+  "InsUpdateFlag" : "string",
+  "InsDeleteFlag" : "string",
+  "InsDateSensitiveFlag" : "string",
+  "InsCScAutoAssignFlag" : "string",
+  "InsCPoAutoAssignFlag" : "string",
+  "OrigInscompCode" : "string",
+  "OrigCertNum" : "string",
+  "DiscriminatorCode" : "string",
+  "InsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"InsComplType":"string","InsCompCode":"CMICINC","InsInscompCode":"string","InsVenCode":"string","InsCoverTypeCode":"string","InsVouNum":"integer","InsCertNum":"string","InsAmt":1.01,"InsVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="daa5e649-2543-4b99-84ee-5b28a1e56d31" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"InsComplType":"string","InsCompCode":"CMICINC","InsInscompCode":"string","InsVenCode":"string","InsCoverTypeCode":"string","InsVouNum":"integer","InsCertNum":"string","InsAmt":1.01,"InsVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

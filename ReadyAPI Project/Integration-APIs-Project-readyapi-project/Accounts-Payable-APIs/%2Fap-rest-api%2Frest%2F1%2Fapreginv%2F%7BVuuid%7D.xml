@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreginv/{Vuuid}" path="/ap-rest-api/rest/1/apreginv/{Vuuid}" id="1debc896-a2c8-4fea-abc6-2ac9ffc30cde" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1debc896-a2c8-4fea-abc6-2ac9ffc30cdefileName">%2Fap-rest-api%2Frest%2F1%2Fapreginv%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-a-specific-ap-reginv" id="941fef6f-4b03-4d6b-8979-9fe09e3c8ef6" method="GET">
+    <con:description>Retrieve AP Registered Invoice By Unique ID</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of the record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ApriCompCode" : "string",
+  "ApriCompName" : "string",
+  "ApriGroupCode" : "string",
+  "ApriGroupName" : "string",
+  "ApriVenCode" : "string",
+  "ApriVenName" : "string",
+  "ApriInvCode" : "string",
+  "ApriInvSerCode" : "string",
+  "ApriInvSerName" : "string",
+  "ApriInvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriDesc" : "string",
+  "ApriStatCode" : "string",
+  "ApriValidFlag" : "string",
+  "ApriDiscDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriVouNum" : 0,
+  "ApriDiscCheckFlag" : "string",
+  "ApriCurrCode" : "string",
+  "ApriCurrName" : "string",
+  "ApriTax1Code" : "string",
+  "ApriTax2Code" : "string",
+  "ApriTax3Code" : "string",
+  "ApriTax1TaxableFlag" : "string",
+  "ApriTax2TaxableFlag" : "string",
+  "ApriTax3TaxableFlag" : "string",
+  "Apri1099Code" : "string",
+  "Apri1099Name" : "string",
+  "ApriExpDeptCode" : "string",
+  "ApriExpDeptName" : "string",
+  "ApriRemitDesc" : "string",
+  "ApriJobCode" : "string",
+  "ApriJobName" : "string",
+  "ApriVenAddCode" : "string",
+  "ApriHoldPaymentFlag" : "string",
+  "ApriHoldPaymentDays" : 0,
+  "ApriSourceCode" : "string",
+  "ApriAppr1" : "string",
+  "ApriAppr2" : "string",
+  "ApriRoutDept" : "string",
+  "ApriRoutJob" : "string",
+  "ApriChqHandleCode" : "string",
+  "ApriInvCopyCheck" : "string",
+  "ApriPayByManualChqFlag" : "string",
+  "ApriImageFilename" : "string",
+  "ApriContCode" : "string",
+  "ApriChgCode" : "string",
+  "ApriEftFlag" : "string",
+  "ApriPoNum" : "string",
+  "ApriPoReleaseNum" : 0,
+  "ApriAdjustingInvCode" : "string",
+  "ApriOriginatingVouNum" : 0,
+  "ApriPoPickFlag" : "string",
+  "ApriEqpCode" : "string",
+  "ApriDeptCode" : "string",
+  "ApriCashAccCode" : "string",
+  "ApriTax4Code" : "string",
+  "ApriTax5Code" : "string",
+  "ApriTax4TaxableFlag" : "string",
+  "ApriTax5TaxableFlag" : "string",
+  "ApriWoCode" : "string",
+  "ApriPayCode" : "string",
+  "ApriDrawNum" : 0,
+  "ApriImgTaxInfo" : "string",
+  "ApriTppayCode" : "string",
+  "ApriDetailHyperlink" : "string",
+  "ApriEditHyperlink" : "string",
+  "ApriApprovedFlag" : "string",
+  "ApriDiscAllocMethCode" : "string",
+  "ApriDetExists" : "string",
+  "ApriAcctDescription" : "string",
+  "ApriVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "ApriIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriIuCreateUser" : "string",
+  "ApriIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ae8d4dc1-6ae2-4d72-8846-b771303eeaef" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="delete-a-specific-ap-invoice" id="508642cf-326e-4843-a12d-55f021f81d7b" method="DELETE">
+    <con:description>Delete a Specific AP Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="02632613-3445-42c1-aced-bcf25bf98a81" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="update-a-specific-ap-reg-invoice" id="13b9ca98-1afe-46de-9b1e-1c38ea463efa" method="PATCH">
+    <con:description>Update a Specific AP Reg Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ApriCompCode" : "string",
+  "ApriCompName" : "string",
+  "ApriGroupCode" : "string",
+  "ApriGroupName" : "string",
+  "ApriVenCode" : "string",
+  "ApriVenName" : "string",
+  "ApriInvCode" : "string",
+  "ApriInvSerCode" : "string",
+  "ApriInvSerName" : "string",
+  "ApriInvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriDesc" : "string",
+  "ApriStatCode" : "string",
+  "ApriValidFlag" : "string",
+  "ApriDiscDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriVouNum" : 0,
+  "ApriDiscCheckFlag" : "string",
+  "ApriCurrCode" : "string",
+  "ApriCurrName" : "string",
+  "ApriTax1Code" : "string",
+  "ApriTax2Code" : "string",
+  "ApriTax3Code" : "string",
+  "ApriTax1TaxableFlag" : "string",
+  "ApriTax2TaxableFlag" : "string",
+  "ApriTax3TaxableFlag" : "string",
+  "Apri1099Code" : "string",
+  "Apri1099Name" : "string",
+  "ApriExpDeptCode" : "string",
+  "ApriExpDeptName" : "string",
+  "ApriRemitDesc" : "string",
+  "ApriJobCode" : "string",
+  "ApriJobName" : "string",
+  "ApriVenAddCode" : "string",
+  "ApriHoldPaymentFlag" : "string",
+  "ApriHoldPaymentDays" : 0,
+  "ApriSourceCode" : "string",
+  "ApriAppr1" : "string",
+  "ApriAppr2" : "string",
+  "ApriRoutDept" : "string",
+  "ApriRoutJob" : "string",
+  "ApriChqHandleCode" : "string",
+  "ApriInvCopyCheck" : "string",
+  "ApriPayByManualChqFlag" : "string",
+  "ApriImageFilename" : "string",
+  "ApriContCode" : "string",
+  "ApriChgCode" : "string",
+  "ApriEftFlag" : "string",
+  "ApriPoNum" : "string",
+  "ApriPoReleaseNum" : 0,
+  "ApriAdjustingInvCode" : "string",
+  "ApriOriginatingVouNum" : 0,
+  "ApriPoPickFlag" : "string",
+  "ApriEqpCode" : "string",
+  "ApriDeptCode" : "string",
+  "ApriCashAccCode" : "string",
+  "ApriTax4Code" : "string",
+  "ApriTax5Code" : "string",
+  "ApriTax4TaxableFlag" : "string",
+  "ApriTax5TaxableFlag" : "string",
+  "ApriWoCode" : "string",
+  "ApriPayCode" : "string",
+  "ApriDrawNum" : 0,
+  "ApriImgTaxInfo" : "string",
+  "ApriTppayCode" : "string",
+  "ApriDetailHyperlink" : "string",
+  "ApriEditHyperlink" : "string",
+  "ApriApprovedFlag" : "string",
+  "ApriDiscAllocMethCode" : "string",
+  "ApriDetExists" : "string",
+  "ApriAcctDescription" : "string",
+  "ApriVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "ApriIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriIuCreateUser" : "string",
+  "ApriIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ApriIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="2c96bec9-127c-4b88-a938-72f11c085785" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

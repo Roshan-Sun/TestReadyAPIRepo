@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" path="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" id="863ca273-ed7c-49af-acc8-ca8a1eaab1dd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="863ca273-ed7c-49af-acc8-ca8a1eaab1ddfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrtrainings%2F%7BGtraiTrnCode%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a12e9105-e5f1-4537-9b12-c6bedd0d2433" method="GET">
+    <con:description>Retrieve a specific HR Training</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>GtraiTrnCode</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Training Code</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GtraiTrnCode" : "string",
+  "GtraiTrnName" : "string",
+  "GtraiTrnShortName" : "string",
+  "GtraiTrnInternalFlag" : "string",
+  "GtraiTrnPeriod" : "string",
+  "GtraiTrnLongDesc" : "string",
+  "GtraiTrnLastDescUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GtraiTrnStickerFlag" : "string",
+  "GtraiTrnUser" : "string",
+  "GtraiTrnLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GtraiTrnCodeDependentOn" : "string",
+  "GtraiFrqCode" : "string",
+  "GtraiPartnCode" : "string",
+  "GtraiPartnTypeCode" : "string",
+  "GtraiTypeCode" : "string",
+  "GtraiTrnrCode" : "string",
+  "GtraiSs" : "string",
+  "GtraiTeamCode" : "string",
+  "GtraiIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GtraiIuCreateUser" : "string",
+  "GtraiIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GtraiIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4eddee86-d720-40c2-a677-4b96d06729d7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

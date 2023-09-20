@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmrfqextend" path="/cm-rest-api/rest/1/cmrfqextend" id="39d0b8c5-f79c-4856-8e07-dab955f919b7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="39d0b8c5-f79c-4856-8e07-dab955f919b7fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmrfqextend</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="87ed0c37-2e3b-447d-8208-cfcab2feb639" method="GET">
+    <con:description>Retrieve PCI RFQ Extensions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>CmRfqExtendFinder1 or CmRfqExtendFinder2</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (CmRfqExtendFinder1 and CmRfqExtendFinder2)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (CmRfqExtendFinder1 and CmRfqExtendFinder2)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ChgCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Change code (CmRfqExtendFinder1)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VenCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor code (CmRfqExtendFinder2)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdvdPostedFlag" : "string",
+  "CmdvdCompCode" : "string",
+  "CmdvdJobCode" : "string",
+  "CmdvdChgCode" : "string",
+  "CmdvdVenCode" : "string",
+  "CmdvdRfqDueDate" : "YYYY-MM-dd",
+  "CmdvdRfqSentDate" : "YYYY-MM-dd",
+  "CmdvdRfqReceivedDate" : "YYYY-MM-dd",
+  "CmdvdRfqComments" : "string",
+  "CmdvdContactCode" : "string",
+  "CmdvdPrintFlag" : "string",
+  "CmdvdQuotedRate" : 0,
+  "CmdvdQuotedQty" : 0,
+  "CmdvdQuotedAmt" : 0,
+  "CmdvdOrigQuoteAmt" : 0,
+  "CmdvdPartnTypeCode" : "string",
+  "CmdvdInternalFlag" : "string",
+  "CmdvdInternalDesc" : "string",
+  "CmdvdScPricingStatus" : "string",
+  "CmdvdIuCreateDate" : "YYYY-MM-dd",
+  "CmdvdIuCreateUser" : "string",
+  "CmdvdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdvdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdvdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="46e85aab-13a4-40d3-9419-3eabf79daa83" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="7c61599a-0476-427d-b7b0-7cb3f0941e03" method="POST">
+    <con:description>"CmdvdPostedFlag" cannot be set and the default value is 'N'.
+
+"CmdvdInternalFlag" cannot be set and the default value is '1'.
+
+"CmdvdInternalDesc" cannot be set and the default value is "Regular PCI (unposted)".</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdvdPostedFlag" : "string",
+  "CmdvdCompCode" : "string",
+  "CmdvdJobCode" : "string",
+  "CmdvdChgCode" : "string",
+  "CmdvdVenCode" : "string",
+  "CmdvdRfqDueDate" : "YYYY-MM-dd",
+  "CmdvdRfqSentDate" : "YYYY-MM-dd",
+  "CmdvdRfqReceivedDate" : "YYYY-MM-dd",
+  "CmdvdRfqComments" : "string",
+  "CmdvdContactCode" : "string",
+  "CmdvdPrintFlag" : "string",
+  "CmdvdQuotedRate" : 0,
+  "CmdvdQuotedQty" : 0,
+  "CmdvdQuotedAmt" : 0,
+  "CmdvdOrigQuoteAmt" : 0,
+  "CmdvdPartnTypeCode" : "string",
+  "CmdvdInternalFlag" : "string",
+  "CmdvdInternalDesc" : "string",
+  "CmdvdScPricingStatus" : "string",
+  "CmdvdIuCreateDate" : "YYYY-MM-dd",
+  "CmdvdIuCreateUser" : "string",
+  "CmdvdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdvdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdvdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmdvdCompCode":"string","CmdvdJobCode":"string","CmdvdVenCode":"string","CmdvdChgCode":"string","CmdvdPartnTypeCode":"string","CmdvdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="ad51c222-57a7-4a28-8364-21c1694b3070" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdvdCompCode":"string","CmdvdJobCode":"string","CmdvdVenCode":"string","CmdvdChgCode":"string","CmdvdPartnTypeCode":"string","CmdvdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="79070894-f34a-4c31-b1de-31913ec73509" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdvdPrintFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

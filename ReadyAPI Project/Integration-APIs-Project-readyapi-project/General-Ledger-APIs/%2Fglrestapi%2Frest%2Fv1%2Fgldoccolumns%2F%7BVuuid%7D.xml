@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldoccolumns/{Vuuid}" path="/glrestapi/rest/v1/gldoccolumns/{Vuuid}" id="05a16f04-8605-4bad-87c1-7e36b8753b83" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="05a16f04-8605-4bad-87c1-7e36b8753b83fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldoccolumns%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="516bb9a4-04a3-4473-9ac6-c09584171a5e" method="GET">
+    <con:description>Retrieve a Specific GL document column</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DclDocCode" : "string",
+  "DclDocName" : "string",
+  "DclColNum" : 0,
+  "DclFuncType" : "string",
+  "DclFuncTypeName" : "string",
+  "DclColCode" : "string",
+  "DclColName" : "string",
+  "DclColYr" : 0,
+  "DclColPer" : 0,
+  "DclCol1Num" : 0,
+  "DclCol2Num" : 0,
+  "DclRatioCode" : "string",
+  "DclTitle1" : "string",
+  "DclTitle2" : "string",
+  "DclPrintCode" : "string",
+  "DclCon2Code" : "string",
+  "DclCon2Name" : "string",
+  "DclTypeCode" : "string",
+  "DclMaskCode" : "string",
+  "DclMaskName" : "string",
+  "DclPscaleNum" : 0,
+  "DclScaleCode" : "string",
+  "DclUser" : "string",
+  "DclWidthNum" : 0,
+  "DclCon2OverrideCode" : "string",
+  "DclBudgCode" : "string",
+  "DclBudgName" : "string",
+  "DclRevCode" : "string",
+  "DclSignOverrideFlag" : "string",
+  "DclIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DclIuCreateUser" : "string",
+  "DclIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DclIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DclVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="75b1a7fb-765c-4036-b044-2742038b094c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="0db78086-4ce4-4028-b4f2-48fd12de73d3" method="DELETE">
+    <con:description>Delete a Specific GL document column</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b7bbdaf1-cb91-43bf-b234-04effad82409" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="33e77324-fd8e-48f0-aacd-0b41a9d5d3ec" method="PATCH">
+    <con:description>Update GL document column</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row Id</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DclDocCode" : "string",
+  "DclDocName" : "string",
+  "DclColNum" : 0,
+  "DclFuncType" : "string",
+  "DclFuncTypeName" : "string",
+  "DclColCode" : "string",
+  "DclColName" : "string",
+  "DclColYr" : 0,
+  "DclColPer" : 0,
+  "DclCol1Num" : 0,
+  "DclCol2Num" : 0,
+  "DclRatioCode" : "string",
+  "DclTitle1" : "string",
+  "DclTitle2" : "string",
+  "DclPrintCode" : "string",
+  "DclCon2Code" : "string",
+  "DclCon2Name" : "string",
+  "DclTypeCode" : "string",
+  "DclMaskCode" : "string",
+  "DclMaskName" : "string",
+  "DclPscaleNum" : 0,
+  "DclScaleCode" : "string",
+  "DclUser" : "string",
+  "DclWidthNum" : 0,
+  "DclCon2OverrideCode" : "string",
+  "DclBudgCode" : "string",
+  "DclBudgName" : "string",
+  "DclRevCode" : "string",
+  "DclSignOverrideFlag" : "string",
+  "DclIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DclIuCreateUser" : "string",
+  "DclIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DclIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DclVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DclColNum":"integer","DclDocCode":"string","DclColCode":"string","DclCon2Code":"string","DclMaskCode":"string","DclVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="e5337518-80ad-438e-a895-01738c0db516" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DclColNum":"integer","DclDocCode":"string","DclColCode":"string","DclCon2Code":"string","DclMaskCode":"string","DclVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

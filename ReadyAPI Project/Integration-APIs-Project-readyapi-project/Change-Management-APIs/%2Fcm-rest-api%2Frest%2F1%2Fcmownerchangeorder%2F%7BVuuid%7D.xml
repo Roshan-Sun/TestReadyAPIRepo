@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmownerchangeorder/{Vuuid}" path="/cm-rest-api/rest/1/cmownerchangeorder/{Vuuid}" id="9d32e65a-335f-4931-a05f-359df63a5634" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9d32e65a-335f-4931-a05f-359df63a5634fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmownerchangeorder%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c4679378-ccc2-4342-a15c-5019ab5b1ff1" method="GET">
+    <con:description>Retrieve a Specific Owner Change Order</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmocnCode" : "string",
+  "CmocnCompCode" : "string",
+  "CmocnCompName" : "string",
+  "CmocnJobCode" : "string",
+  "CmocnJobName" : "string",
+  "CmocnTitle" : "string",
+  "CmocnPostDate" : "YYYY-MM-dd",
+  "CmocnSentDate" : "YYYY-MM-dd",
+  "CmocnReceivedDate" : "YYYY-MM-dd",
+  "CmocnBchNum" : 0,
+  "CmocnProposalCode" : "string",
+  "CmocnProposalName" : "string",
+  "CmocnNotes" : "string",
+  "CmocnIssuedDate" : "YYYY-MM-dd",
+  "CmocnExecutedDate" : "YYYY-MM-dd",
+  "CmocnImpactDays" : 0,
+  "CmocnClosed" : "string",
+  "CmocnJbContCode" : "string",
+  "CmocnOwnerCoCode" : "string",
+  "CmocnIuCreateDate" : "YYYY-MM-dd",
+  "CmocnIuCreateUser" : "string",
+  "CmocnIuUpdateDate" : "YYYY-MM-dd",
+  "CmocnIuUpdateUser" : "string",
+  "CmocnTotalMarginAmtTitle" : "string",
+  "CmocnTotalMarginAmt" : 0,
+  "CmocnMarginPercentageTitle" : "string",
+  "CmocnMarginPercentage" : 0,
+  "CmocnOrigContractAmtTitle" : "string",
+  "CmocnOrigContractAmt" : 0,
+  "CmocnPriorChangeAmtTitle" : "string",
+  "CmocnPriorChangesAmt" : 0,
+  "CmocnCurrentChangeAmtTitle" : "string",
+  "CmocnCurrentChangeAmt" : 0,
+  "CmocnNewContractAmtTitle" : "string",
+  "CmocnNewContractAmt" : 0,
+  "CmocnOrigComplDateTitle" : "string",
+  "CmocnOrigComplDate" : "YYYY-MM-dd",
+  "CmocnPriorChangeDaysTitle" : "string",
+  "CmocnPriorChangeDays" : 0,
+  "CmocnCurChangeDaysTitle" : "string",
+  "CmocnCurrentChangeDays" : 0,
+  "CmocnNewComplDateTitle" : "string",
+  "CmocnNewComplDate" : "YYYY-MM-dd",
+  "CmocnCurrentNonRejectedAmt" : 0,
+  "CmocnOwnerApprvdAmt" : 0,
+  "CmocnUserPrvlgFlag" : "string",
+  "Cdummy" : "string",
+  "DiscriminatorCode" : "string",
+  "CmocnVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="384814f2-9523-41d9-8df2-36f8fe39294c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="d2573770-b8c2-4397-bbd9-16dd168a6066" method="PATCH">
+    <con:description>Update a Specific Owner Change Order</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmocnCode" : "string",
+  "CmocnCompCode" : "string",
+  "CmocnCompName" : "string",
+  "CmocnJobCode" : "string",
+  "CmocnJobName" : "string",
+  "CmocnTitle" : "string",
+  "CmocnPostDate" : "YYYY-MM-dd",
+  "CmocnSentDate" : "YYYY-MM-dd",
+  "CmocnReceivedDate" : "YYYY-MM-dd",
+  "CmocnBchNum" : 0,
+  "CmocnProposalCode" : "string",
+  "CmocnProposalName" : "string",
+  "CmocnNotes" : "string",
+  "CmocnIssuedDate" : "YYYY-MM-dd",
+  "CmocnExecutedDate" : "YYYY-MM-dd",
+  "CmocnImpactDays" : 0,
+  "CmocnClosed" : "string",
+  "CmocnJbContCode" : "string",
+  "CmocnOwnerCoCode" : "string",
+  "CmocnIuCreateDate" : "YYYY-MM-dd",
+  "CmocnIuCreateUser" : "string",
+  "CmocnIuUpdateDate" : "YYYY-MM-dd",
+  "CmocnIuUpdateUser" : "string",
+  "CmocnTotalMarginAmtTitle" : "string",
+  "CmocnTotalMarginAmt" : 0,
+  "CmocnMarginPercentageTitle" : "string",
+  "CmocnMarginPercentage" : 0,
+  "CmocnOrigContractAmtTitle" : "string",
+  "CmocnOrigContractAmt" : 0,
+  "CmocnPriorChangeAmtTitle" : "string",
+  "CmocnPriorChangesAmt" : 0,
+  "CmocnCurrentChangeAmtTitle" : "string",
+  "CmocnCurrentChangeAmt" : 0,
+  "CmocnNewContractAmtTitle" : "string",
+  "CmocnNewContractAmt" : 0,
+  "CmocnOrigComplDateTitle" : "string",
+  "CmocnOrigComplDate" : "YYYY-MM-dd",
+  "CmocnPriorChangeDaysTitle" : "string",
+  "CmocnPriorChangeDays" : 0,
+  "CmocnCurChangeDaysTitle" : "string",
+  "CmocnCurrentChangeDays" : 0,
+  "CmocnNewComplDateTitle" : "string",
+  "CmocnNewComplDate" : "YYYY-MM-dd",
+  "CmocnCurrentNonRejectedAmt" : 0,
+  "CmocnOwnerApprvdAmt" : 0,
+  "CmocnUserPrvlgFlag" : "string",
+  "Cdummy" : "string",
+  "DiscriminatorCode" : "string",
+  "CmocnVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmocnCompCode":"string","CmocnJobCode":"string","CmocnCode":"string","CmocnVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="b8bdbff0-fbb0-4d7e-a7be-60210f823f94" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmocnCompCode":"string","CmocnJobCode":"string","CmocnCode":"string","CmocnVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="577a46b1-1e8a-48ba-a9d5-2c0982aca64c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmocnNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcbatch" path="/jc-rest-api/rest/1/jcbatch" id="7d3b1e25-4adf-47ec-9025-bc3d663e1df4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7d3b1e25-4adf-47ec-9025-bc3d663e1df4fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcbatch</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d0ebda8d-ba00-4022-ad58-0f4728d2a524" method="GET">
+    <con:description>Retrieve JC Job Batch Elements</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectJobBatch</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectJobBatch)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcbchCompCode" : "string",
+  "JcbchNum" : 0,
+  "JcbchName" : "string",
+  "JcbchUser" : "string",
+  "JcbchAmt" : 0,
+  "JcbchDate" : "YYYY-MM-dd",
+  "JcbchPostDate" : "YYYY-MM-dd",
+  "JcbchTypeCode" : "string",
+  "JcbchAutoCreatedFlag" : "string",
+  "JcbchDsrcCode" : "string",
+  "JcbchTranDate" : "YYYY-MM-dd",
+  "JcbchCostTypeCode" : "string",
+  "JcbchIuCreateDate" : "YYYY-MM-dd",
+  "JcbchIuCreateUser" : "string",
+  "JcbchIuUpdateDate" : "YYYY-MM-dd",
+  "JcbchIuUpdateUser" : "string",
+  "JcbchVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="34dc423a-4f7e-4ccc-a9c4-d4f51338f6c8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="913fba5f-db83-4cb7-aa1c-54871630599f" method="POST">
+    <con:description>Create a JC Batch</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcbchCompCode" : "string",
+  "JcbchNum" : 0,
+  "JcbchName" : "string",
+  "JcbchUser" : "string",
+  "JcbchAmt" : 0,
+  "JcbchDate" : "YYYY-MM-dd",
+  "JcbchPostDate" : "YYYY-MM-dd",
+  "JcbchTypeCode" : "string",
+  "JcbchAutoCreatedFlag" : "string",
+  "JcbchDsrcCode" : "string",
+  "JcbchTranDate" : "YYYY-MM-dd",
+  "JcbchCostTypeCode" : "string",
+  "JcbchIuCreateDate" : "YYYY-MM-dd",
+  "JcbchIuCreateUser" : "string",
+  "JcbchIuUpdateDate" : "YYYY-MM-dd",
+  "JcbchIuUpdateUser" : "string",
+  "JcbchVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JcbchCompCode":"string","JcbchAutoCreatedFlag":"string","JcbchDate":"string","JcbchTypeCode":"string","JcbchVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="b520300c-b6ff-4493-b59f-8e71bf60bf1a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcbchCompCode":"string","JcbchAutoCreatedFlag":"string","JcbchDate":"string","JcbchTypeCode":"string","JcbchVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="8be2746d-7a71-48da-bf69-9d42da1b623c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcbchName":"bobicus test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

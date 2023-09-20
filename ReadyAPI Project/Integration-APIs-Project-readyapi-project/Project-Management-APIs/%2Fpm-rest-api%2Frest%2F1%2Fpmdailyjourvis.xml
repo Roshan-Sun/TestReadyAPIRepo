@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourvis" path="/pm-rest-api/rest/1/pmdailyjourvis" id="eb1488a0-b485-4767-9811-c7020f57fbd3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="eb1488a0-b485-4767-9811-c7020f57fbd3fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourvis</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e45c1dff-789d-4147-9f63-b24d25a06086" method="GET">
+    <con:description>Retrieve PM Daily Journal Visitors</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjviTime" : "string",
+  "PmjviPartnCode" : "string",
+  "PmjviPartnTypeCode" : "string",
+  "PmjviPartnName" : "string",
+  "PmjviContactCode" : "string",
+  "PmjviContactName" : "string",
+  "PmjviNotes" : "string",
+  "PmjviIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjviIuCreateUser" : "string",
+  "PmjviIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjviIuUpdateUser" : "string",
+  "PmjviVUuid" : "string",
+  "PmjviJourVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="5489f829-8555-4b0d-81b0-00e593557c6e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="0bb43ca5-cb31-42df-9c27-73863db6a073" method="POST">
+    <con:description>Create a PM Daily Journal Visitor</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjviTime" : "string",
+  "PmjviPartnCode" : "string",
+  "PmjviPartnTypeCode" : "string",
+  "PmjviPartnName" : "string",
+  "PmjviContactCode" : "string",
+  "PmjviContactName" : "string",
+  "PmjviNotes" : "string",
+  "PmjviIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjviIuCreateUser" : "string",
+  "PmjviIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjviIuUpdateUser" : "string",
+  "PmjviVUuid" : "string",
+  "PmjviJourVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjviJourVuuid":"string","PmjviPartnCode":"string","PmjviPartnTypeCode":"string","PmjviVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="b6b96d5c-2a52-4a1b-86f0-85cdb1e7bdd6" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjviJourVuuid":"string","PmjviPartnCode":"string","PmjviPartnTypeCode":"string","PmjviVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="c0a23e4c-bce9-41e3-b017-a4b9e3a47697" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjviNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

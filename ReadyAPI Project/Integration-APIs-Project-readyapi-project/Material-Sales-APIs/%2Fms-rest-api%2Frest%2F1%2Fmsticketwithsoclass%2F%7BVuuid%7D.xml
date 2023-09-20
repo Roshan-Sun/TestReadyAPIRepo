@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ms-rest-api/rest/1/msticketwithsoclass/{Vuuid}" path="/ms-rest-api/rest/1/msticketwithsoclass/{Vuuid}" id="9ea4154d-2243-415d-9db1-f19455cf9516" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9ea4154d-2243-415d-9db1-f19455cf9516fileName">%2Fms-rest-api%2Frest%2F1%2Fmsticketwithsoclass%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d23ad107-cb7e-4b20-acac-ebf9f799e70b" method="GET">
+    <con:description>Retrieve Specific Material Sales Ticket</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "MstCompCode" : "string",
+  "MstTicketCode" : "string",
+  "MstTicketDate" : "YYYY-MM-dd",
+  "MstCiItemLocCode" : "string",
+  "MstTicketLocCode" : "string",
+  "MstTruckerCode" : "string",
+  "MstTruckerName" : "string",
+  "MstTruckerType" : "string",
+  "MstTruckCode" : "string",
+  "MstTruckName" : "string",
+  "MstSalesOrderCode" : "string",
+  "MstSalesOrderName" : "string",
+  "MstSalesOrderType" : "string",
+  "MstSalesOrderExpiryDate" : "YYYY-MM-dd",
+  "MstMssoSalesOrderType" : "string",
+  "MstMssoJobCompCode" : "string",
+  "MstMssoJobOrCustCode" : "string",
+  "MstMssoJobLocation" : "string",
+  "MstMssoQuoteFlag" : "string",
+  "MstJobCompCode" : "string",
+  "MstJobOrCustCode" : "string",
+  "MstJobOrCustName" : "string",
+  "MstCiClassCode" : "string",
+  "MstCiItemCode" : "string",
+  "MstCiItemName" : "string",
+  "MstCiItemTypeCode" : "string",
+  "MstDestination" : "string",
+  "MstQty" : 0,
+  "MstWmCode" : "string",
+  "MstPricePerWm" : 0,
+  "MstExtendedAmt" : 0,
+  "MstTicketSource" : "string",
+  "MstTruckerPayPricePerWm" : 0,
+  "MstTruckerPayExtendedAmt" : 0,
+  "MstBillingBchNum" : 0,
+  "MstBillingInvoiceNum" : "string",
+  "MstOrigin" : "string",
+  "MstOperatingHours" : 0,
+  "MstRegTruckerHour" : 0,
+  "MstOtTruckerHour" : 0,
+  "MstDotTruckerHour" : 0,
+  "MstBillingFlag" : "string",
+  "MstBillingPostFlag" : "string",
+  "MstTpBchNum" : 0,
+  "MstTpInvNum" : "string",
+  "MstTpCompCode" : "string",
+  "MstTpInvFlag" : "string",
+  "MstTpPostFlag" : "string",
+  "MstServiceChargeFlag" : "string",
+  "MstNotes" : "string",
+  "MstPrintArInvNotesFlag" : "string",
+  "MstCiBchNum" : 0,
+  "MstClvValueCode1" : "string",
+  "MstClvValueCode2" : "string",
+  "MstClvValueCode3" : "string",
+  "MstClvValueCode4" : "string",
+  "MstClvValueCode5" : "string",
+  "MstClvValueCode6" : "string",
+  "MstFromZoneCode" : "string",
+  "MstToZoneCode" : "string",
+  "MstMaxProtect" : 0,
+  "MstMinProtect" : 0,
+  "MstOverrideAcPc" : 0,
+  "MstTax1" : "string",
+  "MstTax2" : "string",
+  "MstTax3" : "string",
+  "MstDeliveryChargeTax1" : "string",
+  "MstDeliveryChargeTax2" : "string",
+  "MstDeliveryChargeTax3" : "string",
+  "MstDeliverySurchargeTax1" : "string",
+  "MstDeliverySurchargeTax2" : "string",
+  "MstDeliverySurchargeTax3" : "string",
+  "MstTruckerPayTax1" : "string",
+  "MstTruckerPayTax2" : "string",
+  "MstTruckerPayTax3" : "string",
+  "MstTruckerSurchargeTax1" : "string",
+  "MstTruckerSurchargeTax2" : "string",
+  "MstTruckerSurchargeTax3" : "string",
+  "MstDeliveryChargesPerWm" : 0,
+  "MstDeliveryChargesWmCode" : "string",
+  "MstDeliveryChargesMinQty" : 0,
+  "MstDeliveryChargesMinAmt" : 0,
+  "MstTruckerPayPerWm" : 0,
+  "MstTruckerPayWmCode" : "string",
+  "MstTruckerPayMinQty" : 0,
+  "MstTruckerPayMinAmt" : 0,
+  "MstDeliverySurchargePct" : 0,
+  "MstDeliverySurchargeWmCode" : "string",
+  "MstDeliverySurchargePerWm" : 0,
+  "MstDeliverySurchargeLmpSum" : 0,
+  "MstTruckerSurchargePct" : 0,
+  "MstTruckerSurchargeWmCode" : "string",
+  "MstTruckerSurchargePerWm" : 0,
+  "MstTruckerSurchargeLmpSum" : 0,
+  "MstDeliveryCharges" : 0,
+  "MstTruckerPay" : 0,
+  "MstDeliverySurcharge" : 0,
+  "MstTruckerSurcharge" : 0,
+  "MstItemCompCode" : "string",
+  "MstTicketTypeCode" : "string",
+  "MstCodFlag" : "string",
+  "MstDailyOrderCode" : "string",
+  "MstDailyOrderDate" : "YYYY-MM-dd",
+  "MstDailyOrderJobCode" : "string",
+  "MstDailyOrderJobName" : "string",
+  "MstDailyOrderPhsCode" : "string",
+  "MstDailyOrderPhsName" : "string",
+  "MstAcUnitPrice" : 0,
+  "MstAcTotalAmt" : 0,
+  "MstDailyOrderPoNum" : "string",
+  "MstOrigExtendedAmt" : 0,
+  "MstOrigAcAmt" : 0,
+  "MstOrigDelChrgAmt" : 0,
+  "MstOrigDelSurchrgAmt" : 0,
+  "MstOrigTpPayAmt" : 0,
+  "MstOrigTpSurchrgAmt" : 0,
+  "MstLastArAdjBchNum" : 0,
+  "MstLastArAdjInvNum" : "string",
+  "MstLastApAdjBchNum" : 0,
+  "MstLastApAdjVouNum" : "string",
+  "MstTotalAmt" : 0,
+  "MstBillingCompCode" : "string",
+  "MstPayRate" : 0,
+  "MstTotalTruckerHours" : 0,
+  "MstTollStbyTicketType" : "string",
+  "MstEqpAssembly" : "string",
+  "MstDumpFeeAmt" : 0,
+  "MstForeman" : "string",
+  "MstSoPoLine" : "string",
+  "MstSoldAsItemCode" : "string",
+  "MstSoldAsItemClass" : "string",
+  "MstSoldAsItemType" : "string",
+  "MstSoldAsItemLoc" : "string",
+  "MstSoPriceList" : "string",
+  "MstSoDetReqFlag" : "string",
+  "MstIuCreateUser" : "string",
+  "MstIuCreateDate" : "YYYY-MM-dd",
+  "MstIuUpdateUser" : "string",
+  "MstIuUpdateDate" : "YYYY-MM-dd",
+  "MstVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "MstSelectFlag" : "string",
+  "cSalesOrderExpiryDate" : "YYYY-MM-dd"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c7037354-963b-4816-a338-e29797810c43" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="a4aaa31c-9ef0-4f70-bbb4-813377bc0647" method="DELETE">
+    <con:description>Delete a Specific Material Sales Ticket</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4ee2817f-fc39-4066-9e4d-f3d44716902e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

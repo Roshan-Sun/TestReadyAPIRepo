@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmrfi" path="/pm-rest-api/rest/1/pmrfi" id="787c1053-24ea-465e-a679-9a78971fbb03" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="787c1053-24ea-465e-a679-9a78971fbb03fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmrfi</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="174cb71d-146a-4b54-88b3-2575d9e24dbd" method="GET">
+    <con:description>Retrieve PM RFIs</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectRfi, selectProjRfi, selectByStatus or selectProjRfiStatus</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectRfi, selectProjRfi and selectProjRfiStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectRfi, selectProjRfi and selectProjRfiStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>statusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Code (selectProjRfiStatus and selectByStatus)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmrfiCompCode" : "string",
+  "PmrfiProjCode" : "string",
+  "PmrfiRfiId" : "string",
+  "PmrfiSubject" : "string",
+  "PmrfiStatusCode" : "string",
+  "PmrfiCreateDate" : "YYYY-MM-dd",
+  "PmrfiRequiredDate" : "YYYY-MM-dd",
+  "PmrfiAnsweredDate" : "YYYY-MM-dd",
+  "PmrfiFromPartnCode" : "string",
+  "PmrfiFromPartnTypeCode" : "string",
+  "PmrfiFromContactCode" : "string",
+  "PmrfiRefId" : "string",
+  "PmrfiQuestion" : "string",
+  "PmrfiToPartnCode" : "string",
+  "PmrfiToPartnTypeCode" : "string",
+  "PmrfiToContactCode" : "string",
+  "PmrfiAnswer" : "string",
+  "PmrfiCoRespondentList" : "string",
+  "PmrfiCostAmt" : 0,
+  "PmrfiCmCode" : "string",
+  "PmrfiCostImpactFlag" : "string",
+  "PmrfiSuggestion" : "string",
+  "PmrfiAcceptSuggestionFlag" : "string",
+  "PmrfiProceedFlag" : "string",
+  "PmrfiAnswerByPartnCode" : "string",
+  "PmrfiAnswerByPtCode" : "string",
+  "PmrfiAnswerByContactCode" : "string",
+  "PmrfiEnteredByPartnCode" : "string",
+  "PmrfiEnteredByPartnTCode" : "string",
+  "PmrfiEnteredByContactCode" : "string",
+  "PmrfiScheduleImpactFlag" : "string",
+  "PmrfiScheduleDaysNum" : 0,
+  "PmrfiSrcCode" : "string",
+  "PmrfiSuggCostImpactFlag" : "string",
+  "PmrfiSuggCostAmt" : 0,
+  "PmrfiSuggSchedImpactFlag" : "string",
+  "PmrfiSuggSchedDaysNum" : 0,
+  "PmrfiSubmittedDate" : "YYYY-MM-dd",
+  "PmrfiCoauthorPartnCode" : "string",
+  "PmrfiCoauthorPartnTypeCode" : "string",
+  "PmrfiCoauthorContactCode" : "string",
+  "PmrfiClvValueCode1" : "string",
+  "PmrfiClvValueCode2" : "string",
+  "PmrfiClvValueCode3" : "string",
+  "PmrfiClvValueCode4" : "string",
+  "PmrfiClvValueCode5" : "string",
+  "PmrfiClvValueCode6" : "string",
+  "PmrfiIuCreateDate" : "YYYY-MM-dd",
+  "PmrfiIuCreateUser" : "string",
+  "PmrfiIuUpdateDate" : "YYYY-MM-dd",
+  "PmrfiIuUpdateUser" : "string",
+  "PmrfiVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bfaea6c1-ca23-40c6-b9de-ed42ff2fdba5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="973e6553-1ac9-4c7b-8822-252df299f7f3" method="POST">
+    <con:description>Create a PM RFI</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmrfiCompCode" : "string",
+  "PmrfiProjCode" : "string",
+  "PmrfiRfiId" : "string",
+  "PmrfiSubject" : "string",
+  "PmrfiStatusCode" : "string",
+  "PmrfiCreateDate" : "YYYY-MM-dd",
+  "PmrfiRequiredDate" : "YYYY-MM-dd",
+  "PmrfiAnsweredDate" : "YYYY-MM-dd",
+  "PmrfiFromPartnCode" : "string",
+  "PmrfiFromPartnTypeCode" : "string",
+  "PmrfiFromContactCode" : "string",
+  "PmrfiRefId" : "string",
+  "PmrfiQuestion" : "string",
+  "PmrfiToPartnCode" : "string",
+  "PmrfiToPartnTypeCode" : "string",
+  "PmrfiToContactCode" : "string",
+  "PmrfiAnswer" : "string",
+  "PmrfiCoRespondentList" : "string",
+  "PmrfiCostAmt" : 0,
+  "PmrfiCmCode" : "string",
+  "PmrfiCostImpactFlag" : "string",
+  "PmrfiSuggestion" : "string",
+  "PmrfiAcceptSuggestionFlag" : "string",
+  "PmrfiProceedFlag" : "string",
+  "PmrfiAnswerByPartnCode" : "string",
+  "PmrfiAnswerByPtCode" : "string",
+  "PmrfiAnswerByContactCode" : "string",
+  "PmrfiEnteredByPartnCode" : "string",
+  "PmrfiEnteredByPartnTCode" : "string",
+  "PmrfiEnteredByContactCode" : "string",
+  "PmrfiScheduleImpactFlag" : "string",
+  "PmrfiScheduleDaysNum" : 0,
+  "PmrfiSrcCode" : "string",
+  "PmrfiSuggCostImpactFlag" : "string",
+  "PmrfiSuggCostAmt" : 0,
+  "PmrfiSuggSchedImpactFlag" : "string",
+  "PmrfiSuggSchedDaysNum" : 0,
+  "PmrfiSubmittedDate" : "YYYY-MM-dd",
+  "PmrfiCoauthorPartnCode" : "string",
+  "PmrfiCoauthorPartnTypeCode" : "string",
+  "PmrfiCoauthorContactCode" : "string",
+  "PmrfiClvValueCode1" : "string",
+  "PmrfiClvValueCode2" : "string",
+  "PmrfiClvValueCode3" : "string",
+  "PmrfiClvValueCode4" : "string",
+  "PmrfiClvValueCode5" : "string",
+  "PmrfiClvValueCode6" : "string",
+  "PmrfiIuCreateDate" : "YYYY-MM-dd",
+  "PmrfiIuCreateUser" : "string",
+  "PmrfiIuUpdateDate" : "YYYY-MM-dd",
+  "PmrfiIuUpdateUser" : "string",
+  "PmrfiVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmrfiCompCode":"string","PmrfiProjCode":"string","PmrfiFromPartnCode":"string","PmrfiFromPartnTypeCode":"string","PmrfiFromContactCode":"string","PmrfiToPartnCode":"string","PmrfiToPartnTypeCode":"string","PmrfiToContactCode":"string","PmrfiSubject":"string","PmrfiAcceptSuggestionFlag":"string","PmrfiVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="75134c5d-a426-499d-b946-7db6ed320cd8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmrfiCompCode":"string","PmrfiProjCode":"string","PmrfiFromPartnCode":"string","PmrfiFromPartnTypeCode":"string","PmrfiFromContactCode":"string","PmrfiToPartnCode":"string","PmrfiToPartnTypeCode":"string","PmrfiToContactCode":"string","PmrfiSubject":"string","PmrfiAcceptSuggestionFlag":"string","PmrfiVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="22fb86ba-8e66-41c6-a317-d5b26107bb63" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmrfiStatusCode":"CLOSED"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

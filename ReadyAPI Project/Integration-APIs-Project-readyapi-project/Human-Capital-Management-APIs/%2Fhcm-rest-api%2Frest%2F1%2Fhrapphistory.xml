@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrapphistory" path="/hcm-rest-api/rest/1/hrapphistory" id="3829d757-149d-4c36-ad4d-98e68b759f0c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3829d757-149d-4c36-ad4d-98e68b759f0cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapphistory</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="bfa4694c-340a-415e-a754-a08eb00e90ab" method="GET">
+    <con:description>Retrieve HR Application Histories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AppNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Application Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Code (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrapphistAppNo" : "string",
+  "HrapphistDate" : "YYYY-MM-dd",
+  "HrapphistUser" : "string",
+  "HrapphistActionCode" : "string",
+  "HrapphistNotes" : "string",
+  "HrapphistStatusCode" : "string",
+  "HrapphistDueDate" : "YYYY-MM-dd",
+  "HrapphistAlertDate" : "YYYY-MM-dd",
+  "HrapphistComplDate" : "YYYY-MM-dd",
+  "HrapphistComplNotes" : "string",
+  "HrapphistUpdatedBy" : "string",
+  "HrapphistPriority" : 0,
+  "HrapphistVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="eb3d41ff-f5c7-4b46-bf61-c3a0bce83d21" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="8f56352f-d07e-4dce-9315-d210e9d531e0" method="POST">
+    <con:description>Create an HR Application History</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrapphistAppNo" : "string",
+  "HrapphistDate" : "YYYY-MM-dd",
+  "HrapphistUser" : "string",
+  "HrapphistActionCode" : "string",
+  "HrapphistNotes" : "string",
+  "HrapphistStatusCode" : "string",
+  "HrapphistDueDate" : "YYYY-MM-dd",
+  "HrapphistAlertDate" : "YYYY-MM-dd",
+  "HrapphistComplDate" : "YYYY-MM-dd",
+  "HrapphistComplNotes" : "string",
+  "HrapphistUpdatedBy" : "string",
+  "HrapphistPriority" : 0,
+  "HrapphistVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"HrapphistDate":"string","HrapphistUser":"string","HrapphistVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4077630e-db3f-46c1-9c17-6d80a282e839" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrapphistDate":"string","HrapphistUser":"string","HrapphistVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="2ebbbd41-fd2b-4635-a95a-ad71f4b741ce" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrapphistComplNotes":"testing 1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/ciclass" path="/ci-rest-api/rest/1/ciclass" id="b273c6b6-f84e-44fb-a4f5-7a456b6b77ef" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b273c6b6-f84e-44fb-a4f5-7a456b6b77effileName">%2Fci-rest-api%2Frest%2F1%2Fciclass</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="26f57f1a-b8c4-4da3-9dd4-cb11010ab02d" method="GET">
+    <con:description>Retrieve CI Classes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CiclasCompCode" : "string",
+  "CiclasCompName" : "string",
+  "CiclasClassCode" : "string",
+  "CiclasClassName" : "string",
+  "CiclasInvAccCode" : "string",
+  "CiclasInvAccName" : "string",
+  "CiclasRevAccCode" : "string",
+  "CiclasRevAccName" : "string",
+  "CiclasWriAccCode" : "string",
+  "CiclasWriAccName" : "string",
+  "CiclasVarAccCode" : "string",
+  "CiclasVarAccName" : "string",
+  "CiclasAdjAccCode" : "string",
+  "CiclasAdjAccName" : "string",
+  "CiclasSuspAccCode" : "string",
+  "CiclasSuspAccName" : "string",
+  "CiclasCtrlClassCode" : "string",
+  "CiclasCtrlClassName" : "string",
+  "CiclasHier" : "string",
+  "CiclasCostMethCode" : "string",
+  "CiclasSerialFlag" : "string",
+  "CiclasLotCtrlFlag" : "string",
+  "CiclasVelocityCode" : "string",
+  "CiclasCostUpdateLevelCode" : "string",
+  "CiclasUsageCode" : "string",
+  "CiclasDeprExpAccCode" : "string",
+  "CiclasDeprExpAccName" : "string",
+  "CiclasAccumDeprAccCode" : "string",
+  "CiclasAccumDeprAccName" : "string",
+  "CiclasTax1Code" : "string",
+  "CiclasTax1Name" : "string",
+  "CiclasTax2Code" : "string",
+  "CiclasTax2Name" : "string",
+  "CiclasTax3Code" : "string",
+  "CiclasTax3Name" : "string",
+  "CiclasSellPriceOrPctCode" : "string",
+  "CiclasBbPriceOrPctCode" : "string",
+  "CiclasSoldAtCostAccCode" : "string",
+  "CiclasSoldAtCostAccName" : "string",
+  "CiclasSalesTax1Code" : "string",
+  "CiclasSalesTax1Name" : "string",
+  "CiclasSalesTax2Code" : "string",
+  "CiclasSalesTax2Name" : "string",
+  "CiclasSalesTax3Code" : "string",
+  "CiclasSalesTax3Name" : "string",
+  "CiclasCmpFlag" : "string",
+  "CiclasRtrnFlag" : "string",
+  "CiclasPartialDasmblFlag" : "string",
+  "CiclasAffilRevAccCode" : "string",
+  "CiclasAffilRevAccName" : "string",
+  "CiclasCustRevAccCode" : "string",
+  "CiclasCustRevAccName" : "string",
+  "CiclasAllowNegQtyFlag" : "string",
+  "CiclasProdFlag" : "string",
+  "CiclasEmCostComponCode" : "string",
+  "CiclasEmCostComponName" : "string",
+  "CiclasCreditJcCatCode" : "string",
+  "CiclasCreditJcCatName" : "string",
+  "CiclasSalesProductFlag" : "string",
+  "CiclasMsAvailableFlag" : "string",
+  "CiclasSellPrice" : 0,
+  "CiclasMszpcCode" : "string",
+  "CiclasTruckClassCode" : "string",
+  "CiclasDefaultLocCode" : "string",
+  "CiclasDefaultLocName" : "string",
+  "CiclasAutoBuildCmpFlag" : "string",
+  "CiclasIuCreateDate" : "YYYY-MM-dd",
+  "CiclasIuCreateUser" : "string",
+  "CiclasIuUpdateDate" : "YYYY-MM-dd",
+  "CiclasIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CiclasVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e097fbc3-b972-4272-b7c9-3a51591f5d4d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="86a1d51a-0091-4b75-86e2-d40d220db74e" method="POST">
+    <con:description>Create a CI Class</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CiclasCompCode" : "string",
+  "CiclasCompName" : "string",
+  "CiclasClassCode" : "string",
+  "CiclasClassName" : "string",
+  "CiclasInvAccCode" : "string",
+  "CiclasInvAccName" : "string",
+  "CiclasRevAccCode" : "string",
+  "CiclasRevAccName" : "string",
+  "CiclasWriAccCode" : "string",
+  "CiclasWriAccName" : "string",
+  "CiclasVarAccCode" : "string",
+  "CiclasVarAccName" : "string",
+  "CiclasAdjAccCode" : "string",
+  "CiclasAdjAccName" : "string",
+  "CiclasSuspAccCode" : "string",
+  "CiclasSuspAccName" : "string",
+  "CiclasCtrlClassCode" : "string",
+  "CiclasCtrlClassName" : "string",
+  "CiclasHier" : "string",
+  "CiclasCostMethCode" : "string",
+  "CiclasSerialFlag" : "string",
+  "CiclasLotCtrlFlag" : "string",
+  "CiclasVelocityCode" : "string",
+  "CiclasCostUpdateLevelCode" : "string",
+  "CiclasUsageCode" : "string",
+  "CiclasDeprExpAccCode" : "string",
+  "CiclasDeprExpAccName" : "string",
+  "CiclasAccumDeprAccCode" : "string",
+  "CiclasAccumDeprAccName" : "string",
+  "CiclasTax1Code" : "string",
+  "CiclasTax1Name" : "string",
+  "CiclasTax2Code" : "string",
+  "CiclasTax2Name" : "string",
+  "CiclasTax3Code" : "string",
+  "CiclasTax3Name" : "string",
+  "CiclasSellPriceOrPctCode" : "string",
+  "CiclasBbPriceOrPctCode" : "string",
+  "CiclasSoldAtCostAccCode" : "string",
+  "CiclasSoldAtCostAccName" : "string",
+  "CiclasSalesTax1Code" : "string",
+  "CiclasSalesTax1Name" : "string",
+  "CiclasSalesTax2Code" : "string",
+  "CiclasSalesTax2Name" : "string",
+  "CiclasSalesTax3Code" : "string",
+  "CiclasSalesTax3Name" : "string",
+  "CiclasCmpFlag" : "string",
+  "CiclasRtrnFlag" : "string",
+  "CiclasPartialDasmblFlag" : "string",
+  "CiclasAffilRevAccCode" : "string",
+  "CiclasAffilRevAccName" : "string",
+  "CiclasCustRevAccCode" : "string",
+  "CiclasCustRevAccName" : "string",
+  "CiclasAllowNegQtyFlag" : "string",
+  "CiclasProdFlag" : "string",
+  "CiclasEmCostComponCode" : "string",
+  "CiclasEmCostComponName" : "string",
+  "CiclasCreditJcCatCode" : "string",
+  "CiclasCreditJcCatName" : "string",
+  "CiclasSalesProductFlag" : "string",
+  "CiclasMsAvailableFlag" : "string",
+  "CiclasSellPrice" : 0,
+  "CiclasMszpcCode" : "string",
+  "CiclasTruckClassCode" : "string",
+  "CiclasDefaultLocCode" : "string",
+  "CiclasDefaultLocName" : "string",
+  "CiclasAutoBuildCmpFlag" : "string",
+  "CiclasIuCreateDate" : "YYYY-MM-dd",
+  "CiclasIuCreateUser" : "string",
+  "CiclasIuUpdateDate" : "YYYY-MM-dd",
+  "CiclasIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CiclasVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CiclasVarAccCode":"string","CiclasBbPriceOrPctCode":"string","CiclasLotCtrlFlag":"string","CiclasRevAccCode":"string","CiclasAdjAccCode":"string","CiclasCompCode":"string","CiclasHier":"string","CiclasMsAvailableFlag":"string","CiclasWriAccCode":"string","CiclasSerialFlag":"string","CiclasCostUpdateLevelCode":"string","CiclasAutoBuildCmpFlag":"string","CiclasSellPriceOrPctCode":"string","CiclasSuspAccCode":"string","CiclasClassCode":"string","CiclasInvAccCode":"string","CiclasUsageCode":"string","CiclasCostMethCode":"string","CiclasVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="3e120eab-0ed5-42a8-ba72-5189de347989" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CiclasVarAccCode":"string","CiclasBbPriceOrPctCode":"string","CiclasLotCtrlFlag":"string","CiclasRevAccCode":"string","CiclasAdjAccCode":"string","CiclasCompCode":"string","CiclasHier":"string","CiclasMsAvailableFlag":"string","CiclasWriAccCode":"string","CiclasSerialFlag":"string","CiclasCostUpdateLevelCode":"string","CiclasAutoBuildCmpFlag":"string","CiclasSellPriceOrPctCode":"string","CiclasSuspAccCode":"string","CiclasClassCode":"string","CiclasInvAccCode":"string","CiclasUsageCode":"string","CiclasCostMethCode":"string","CiclasVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ae4f3181-aa83-4f20-867b-d9d2ca5e37bc" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CiclasAllowNegQtyFlag":"Y"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

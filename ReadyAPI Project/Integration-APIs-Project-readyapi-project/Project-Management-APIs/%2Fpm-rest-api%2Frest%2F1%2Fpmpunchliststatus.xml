@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmpunchliststatus" path="/pm-rest-api/rest/1/pmpunchliststatus" id="14215887-2fe3-41e7-abeb-d0fd525ace8c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="14215887-2fe3-41e7-abeb-d0fd525ace8cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchliststatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e761ac1f-6230-4693-9910-fa61f254d7c8" method="GET">
+    <con:description>Retrieve PM Punchlist Statuses</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByStatusCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Code (selectByStatusCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmplsStatusCode" : "string",
+  "PmplsStatusName" : "string",
+  "PmplsStatusClassCode" : "string",
+  "PmplsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplsIuCreateUser" : "string",
+  "PmplsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplsIuUpdateUser" : "string",
+  "PmplsLastSessioninfo" : "string",
+  "PmplsOrigSessioninfo" : "string",
+  "PmplsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="25f73159-28d4-451a-b138-adaa42895aec" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="4fd8cee2-2a72-43dd-8713-39abaf78cbaa" method="POST">
+    <con:description>Create a PM Punchlist Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmplsStatusCode" : "string",
+  "PmplsStatusName" : "string",
+  "PmplsStatusClassCode" : "string",
+  "PmplsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplsIuCreateUser" : "string",
+  "PmplsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplsIuUpdateUser" : "string",
+  "PmplsLastSessioninfo" : "string",
+  "PmplsOrigSessioninfo" : "string",
+  "PmplsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmplsStatusClassCode":"string","PmplsStatusCode":"string","PmplsStatusName":"string","PmplsVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="9f687e09-8ab0-41a8-8e49-87cf1a5f844a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmplsStatusClassCode":"string","PmplsStatusCode":"string","PmplsStatusName":"string","PmplsVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="3aa50747-63d2-4115-a4cb-f4605a5ecac1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmplsStatusName":"Voided -test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

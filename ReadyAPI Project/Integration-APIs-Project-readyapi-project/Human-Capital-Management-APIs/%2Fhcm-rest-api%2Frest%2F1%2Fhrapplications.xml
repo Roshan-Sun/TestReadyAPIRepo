@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrapplications" path="/hcm-rest-api/rest/1/hrapplications" id="c5f1216b-60e9-4e5a-913d-839cd385ecd9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c5f1216b-60e9-4e5a-913d-839cd385ecd9fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapplications</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d7de20b7-c144-499b-9f1f-5c10c681a71e" method="GET">
+    <con:description>Retrieve HR Applications</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ApplicationFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AplNoVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Application Number (ApplicationFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AplStatus</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Application Status (ApplicationFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TrdCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Trade Code (ApplicationFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrapAplNo" : "string",
+  "HrapTrdCode" : "string",
+  "HrapDate" : "YYYY-MM-dd",
+  "HrapSourceType" : "string",
+  "HrapNotes" : "string",
+  "HrapStatus" : "string",
+  "HrapViewedStatus" : "string",
+  "HrapViewedNewDate" : "YYYY-MM-dd",
+  "HrapViewedModifiedDate" : "YYYY-MM-dd",
+  "HrapVUuid" : "string",
+  "HrapReqCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6ff16b3c-22bf-4ca6-ad33-57558f60ecfb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="78325e8d-0297-401c-8b5a-6823f742cf9a" method="POST">
+    <con:description>Create an HR Application</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrapAplNo" : "string",
+  "HrapTrdCode" : "string",
+  "HrapDate" : "YYYY-MM-dd",
+  "HrapSourceType" : "string",
+  "HrapNotes" : "string",
+  "HrapStatus" : "string",
+  "HrapViewedStatus" : "string",
+  "HrapViewedNewDate" : "YYYY-MM-dd",
+  "HrapViewedModifiedDate" : "YYYY-MM-dd",
+  "HrapVUuid" : "string",
+  "HrapReqCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"HrapAplNo":"string","HrapReqCode":"string","HrapVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="f708c7f6-3620-40c4-b4a5-895fae918a23" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrapAplNo":"string","HrapReqCode":"string","HrapVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="6d699a5f-578b-4d82-bb7d-3782d03eaefd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrapNotes":"Hired by PY - yessir"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

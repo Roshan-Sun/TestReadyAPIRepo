@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimecrewemp" path="/hcm-rest-api/rest/1/pyctimecrewemp" id="fa6c44b1-4fed-4308-b43c-e12668c3b2b1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fa6c44b1-4fed-4308-b43c-e12668c3b2b1fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimecrewemp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f17fb86f-1020-4f16-99fa-6b007f7402bd" method="GET">
+    <con:description>Retrieve Crew Time Crew Employees</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PyceVUuid" : "string",
+  "PyceAccessCode" : "string",
+  "PyceCrewCode" : "string",
+  "PyceEmpNo" : "string",
+  "PyceStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuCreateUser" : "string",
+  "PyceIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="47b64c92-f003-4ea8-916e-ba912e2e4c63" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f0fe8cc1-4206-4a79-9f73-3b53059aea7d" method="POST">
+    <con:description>Create a Crew Time Crew Employee</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PyceVUuid" : "string",
+  "PyceAccessCode" : "string",
+  "PyceCrewCode" : "string",
+  "PyceEmpNo" : "string",
+  "PyceStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuCreateUser" : "string",
+  "PyceIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PyceIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PyceAccessCode":"MASTER","PyceCrewCode":"TEST-01","PyceEmpNo":"KL00009","PyceStartDate":"2021-09-09T00:00:00-04:00","PyceVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="36641d19-8325-4e7d-844f-7a298dd4ecbf" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PyceAccessCode":"MASTER","PyceCrewCode":"TEST-01","PyceEmpNo":"KL00009","PyceStartDate":"2021-09-09T00:00:00-04:00","PyceVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

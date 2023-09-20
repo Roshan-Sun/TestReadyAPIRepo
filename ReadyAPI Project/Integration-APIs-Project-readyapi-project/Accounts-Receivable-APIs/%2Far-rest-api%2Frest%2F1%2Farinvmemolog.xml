@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arinvmemolog" path="/ar-rest-api/rest/1/arinvmemolog" id="696d12d2-c4ef-49aa-8591-69d7514a4ff4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="696d12d2-c4ef-49aa-8591-69d7514a4ff4fileName">%2Far-rest-api%2Frest%2F1%2Farinvmemolog</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d12ab7aa-df69-4a14-97ca-3950269b3b65" method="GET">
+    <con:description>Retrieve AR Invoice Memo Logs</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectMemoLog</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectMemoLog)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>invNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Code/Number (selectMemoLog)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>bchNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Batch Number (selectMemoLog)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArinvmemoCompCode" : "string",
+  "ArinvmemoInvNum" : "string",
+  "ArinvmemoOrigInvNum" : "string",
+  "ArinvmemoSalesAmt" : 0,
+  "ArinvmemoHldbkAmt" : 0,
+  "ArinvmemoDiscAmt" : 0,
+  "ArinvmemoMemoAmt" : 0,
+  "ArinvmemoArAmt" : 0,
+  "ArinvmemoOsAmt" : 0,
+  "ArinvmemoDesc" : "string",
+  "ArinvmemoOrdNum" : "string",
+  "ArinvmemoApplyNum" : "string",
+  "ArinvmemoBchNum" : 0,
+  "ArinvmemoCustCode" : "string",
+  "ArinvmemoOrigSalesAmt" : 0,
+  "ArinvmemoSdiscAmt" : 0,
+  "ArinvmemoOrigMemoAmt" : 0,
+  "ArinvmemoNodiscAmt" : 0,
+  "ArinvmemoOrigDiscAmt" : 0,
+  "ArinvmemoOrigHldbkAmt" : 0,
+  "ArinvmemoFrtAmt" : 0,
+  "ArinvmemoMiscAmt" : 0,
+  "ArinvmemoInsAmt" : 0,
+  "ArinvmemoOrigArAmt" : 0,
+  "ArinvmemoOrigOsAmt" : 0,
+  "ArinvmemoSman1CommAmt" : 0,
+  "ArinvmemoSman2CommAmt" : 0,
+  "ArinvmemoSman3CommAmt" : 0,
+  "ArinvmemoTax1Amt" : 0,
+  "ArinvmemoTax1HldbkAmt" : 0,
+  "ArinvmemoTax2Amt" : 0,
+  "ArinvmemoTax3Amt" : 0,
+  "ArinvmemoDetTaxAmt" : 0,
+  "ArinvmemoTax1Code" : "string",
+  "ArinvmemoTax2Code" : "string",
+  "ArinvmemoTax3Code" : "string",
+  "ArinvmemoCurrCode" : "string",
+  "ArinvmemoDate" : "YYYY-MM-dd",
+  "ArinvmemoPostDate" : "YYYY-MM-dd",
+  "ArinvmemoOePrtCode" : "string",
+  "ArinvmemoTax1TaxableFlag" : "string",
+  "ArinvmemoTax2TaxableFlag" : "string",
+  "ArinvmemoTax3TaxableFlag" : "string",
+  "ArinvmemoIuCreateDate" : "YYYY-MM-dd",
+  "ArinvmemoIuUpdateDate" : "YYYY-MM-dd"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="eb58b6cc-ad85-4d9c-bddc-20b00f90b595" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

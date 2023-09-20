@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/om-rest-api/rest/1/omclassifierval" path="/om-rest-api/rest/1/omclassifierval" id="06535af5-6951-4c3c-995b-7146f454f8b2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="06535af5-6951-4c3c-995b-7146f454f8b2fileName">%2Fom-rest-api%2Frest%2F1%2Fomclassifierval</con:setting>
+  </con:settings>
+  <con:parameters/>
+</con:resource>

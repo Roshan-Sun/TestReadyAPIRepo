@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/artaxitems/" path="/ar-rest-api/rest/1/artaxitems/" id="42702719-14b6-4805-b767-f81e2ab4ddf6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="42702719-14b6-4805-b767-f81e2ab4ddf6fileName">%2Far-rest-api%2Frest%2F1%2Fartaxitems%2F</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-ar-tax-items" id="10796228-9abc-4895-a561-803d7ecf6509" method="GET">
+    <con:description>Retrieve AR Tax Items</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompCode or selectByCompTaxCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompCode and selectByCompTaxCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Tax Code (selectByCompTaxCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArtaxCompCode" : "string",
+  "ArtaxCode" : "string",
+  "ArtaxName" : "string",
+  "ArtaxShortName" : "string",
+  "ArtaxDeptCode" : "string",
+  "ArtaxAccCode" : "string",
+  "ArtaxHldbkDeptCode" : "string",
+  "ArtaxHldbkAccCode" : "string",
+  "ArtaxApDeptCode" : "string",
+  "ArtaxApAccCode" : "string",
+  "ArtaxApHldbkDeptCode" : "string",
+  "ArtaxApHldbkAccCode" : "string",
+  "ArtaxPercent" : 0,
+  "ArtaxFrtCode" : "string",
+  "ArtaxInsCode" : "string",
+  "ArtaxMiscCode" : "string",
+  "ArtaxTaxCode" : "string",
+  "ArtaxLneCode" : "string",
+  "ArtaxFobCode" : "string",
+  "ArtaxApIncFlag" : "string",
+  "ArtaxApCreditFlag" : "string",
+  "ArtaxApDirectPayFlag" : "string",
+  "ArtaxApLiabDeptCode" : "string",
+  "ArtaxApLiabAccCode" : "string",
+  "ArtaxPayJourCode" : "string",
+  "ArtaxDirectPayVenCode" : "string",
+  "ArtaxCompoundTaxFlag" : "string",
+  "ArtaxNonTaxableFlag" : "string",
+  "ArtaxJbInvTaxRegistration" : "string",
+  "ArtaxJbCostPhsCode" : "string",
+  "ArtaxJbCostCatCode" : "string",
+  "ArtaxActiveFlag" : "string",
+  "ArtaxPayPercent" : 0,
+  "ArtaxTdsTax" : "string",
+  "ArtaxVUuid" : "string",
+  "ArtaxIuCreateDate" : "YYYY-MM-dd",
+  "ArtaxIuCreateUser" : "string",
+  "ArtaxIuUpdateDate" : "YYYY-MM-dd",
+  "ArtaxIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="aa7f2a6f-f394-49a9-b9ff-b5ca886b8280" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="047a47f3-35a6-4c31-be8a-f23637ffde6c" method="POST">
+    <con:description>Create an AR Tax Item</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArtaxCompCode" : "string",
+  "ArtaxCode" : "string",
+  "ArtaxName" : "string",
+  "ArtaxShortName" : "string",
+  "ArtaxDeptCode" : "string",
+  "ArtaxAccCode" : "string",
+  "ArtaxHldbkDeptCode" : "string",
+  "ArtaxHldbkAccCode" : "string",
+  "ArtaxApDeptCode" : "string",
+  "ArtaxApAccCode" : "string",
+  "ArtaxApHldbkDeptCode" : "string",
+  "ArtaxApHldbkAccCode" : "string",
+  "ArtaxPercent" : 0,
+  "ArtaxFrtCode" : "string",
+  "ArtaxInsCode" : "string",
+  "ArtaxMiscCode" : "string",
+  "ArtaxTaxCode" : "string",
+  "ArtaxLneCode" : "string",
+  "ArtaxFobCode" : "string",
+  "ArtaxApIncFlag" : "string",
+  "ArtaxApCreditFlag" : "string",
+  "ArtaxApDirectPayFlag" : "string",
+  "ArtaxApLiabDeptCode" : "string",
+  "ArtaxApLiabAccCode" : "string",
+  "ArtaxPayJourCode" : "string",
+  "ArtaxDirectPayVenCode" : "string",
+  "ArtaxCompoundTaxFlag" : "string",
+  "ArtaxNonTaxableFlag" : "string",
+  "ArtaxJbInvTaxRegistration" : "string",
+  "ArtaxJbCostPhsCode" : "string",
+  "ArtaxJbCostCatCode" : "string",
+  "ArtaxActiveFlag" : "string",
+  "ArtaxPayPercent" : 0,
+  "ArtaxTdsTax" : "string",
+  "ArtaxVUuid" : "string",
+  "ArtaxIuCreateDate" : "YYYY-MM-dd",
+  "ArtaxIuCreateUser" : "string",
+  "ArtaxIuUpdateDate" : "YYYY-MM-dd",
+  "ArtaxIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ArtaxCode":"string","ArtaxCompCode":"string","ArtaxActiveFlag":"string","ArtaxDeptCode":"string","ArtaxAccCode":"string","ArtaxHldbkAccCode":"string","ArtaxHldbkDeptCode":"string","ArtaxPercent":"integer","ArtaxFrtCode":"string","ArtaxInsCode":"string","ArtaxMiscCode":"string","ArtaxTaxCode":"string","ArtaxLneCode":"string","ArtaxFobCode":"string","ArtaxApIncFlag":"string","ArtaxApCreditFlag":"string","ArtaxApAccCode":"string","ArtaxApDeptCode":"string","ArtaxApHldbkAccCode":"string","ArtaxApHldbkDeptCode":"string","ArtaxApDirectPayFlag":"string","ArtaxCompoundTaxFlag":"string","ArtaxNonTaxableFlag":"string","ArtaxVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="0e9d7649-7d75-4e0b-82b7-4400f315e56e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ArtaxCode":"string","ArtaxCompCode":"string","ArtaxActiveFlag":"string","ArtaxDeptCode":"string","ArtaxAccCode":"string","ArtaxHldbkAccCode":"string","ArtaxHldbkDeptCode":"string","ArtaxPercent":"integer","ArtaxFrtCode":"string","ArtaxInsCode":"string","ArtaxMiscCode":"string","ArtaxTaxCode":"string","ArtaxLneCode":"string","ArtaxFobCode":"string","ArtaxApIncFlag":"string","ArtaxApCreditFlag":"string","ArtaxApAccCode":"string","ArtaxApDeptCode":"string","ArtaxApHldbkAccCode":"string","ArtaxApHldbkDeptCode":"string","ArtaxApDirectPayFlag":"string","ArtaxCompoundTaxFlag":"string","ArtaxNonTaxableFlag":"string","ArtaxVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

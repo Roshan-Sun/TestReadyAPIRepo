@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/ciitem" path="/ci-rest-api/rest/1/ciitem" id="c3a230f0-4c1e-4af2-98b9-b3c4de049514" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c3a230f0-4c1e-4af2-98b9-b3c4de049514fileName">%2Fci-rest-api%2Frest%2F1%2Fciitem</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8c1294b8-bdc0-45ed-ab58-80c244f99fe2" method="GET">
+    <con:description>Retrieve CI Items</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode and selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ItemCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Item Code (selectByCode and selectByDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to check against create/update dates (selectByCode and selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CiitemCompCode" : "string",
+  "CiitemCompName" : "string",
+  "CiitemItemCode" : "string",
+  "CiitemItemClassCode" : "string",
+  "CiitemClassName" : "string",
+  "CiitemLotCtrlFlag" : "string",
+  "CiitemSerialFlag" : "string",
+  "CiitemUsageCode" : "string",
+  "CiitemUsageName" : "string",
+  "CiitemCostUpdateLevelCode" : "string",
+  "CiitemCostUpdateLevelName" : "string",
+  "CiitemInvAccCode" : "string",
+  "CiitemInvAccName" : "string",
+  "CiitemRevAccCode" : "string",
+  "CiitemRevAccName" : "string",
+  "CiitemWriAccCode" : "string",
+  "CiitemWriAccName" : "string",
+  "CiitemAdjAccCode" : "string",
+  "CiitemAdjAccName" : "string",
+  "CiitemVarAccCode" : "string",
+  "CiitemVarAccName" : "string",
+  "CiitemSuspAccCode" : "string",
+  "CiitemSuspAccName" : "string",
+  "CiitemAltWmAllowFlag" : "string",
+  "CiitemCostMethCode" : "string",
+  "CiitemCostMethName" : "string",
+  "CiitemAutoBuildCmpFlag" : "string",
+  "CiitemMsAvailableFlag" : "string",
+  "CiitemSellPriceOrPctCode" : "string",
+  "CiitemSellPriceOrPctName" : "string",
+  "CiitemBbPriceOrPctCode" : "string",
+  "CiitemBbPriceOrPctName" : "string",
+  "CiitemItemName" : "string",
+  "CiitemItemDesc" : "string",
+  "CiitemWmCode" : "string",
+  "CiitemWmName" : "string",
+  "CiitemVelocityCode" : "string",
+  "CiitemMinOrderQty" : 0,
+  "CiitemStdOrderQty" : 0,
+  "CiitemMaxOrderQty" : 0,
+  "CiitemMinOnhandQty" : 0,
+  "CiitemMaxOnhandQty" : 0,
+  "CiitemStdOnhandQty" : 0,
+  "CiitemMarketPriceAmt" : 0,
+  "CiitemSellPriceAmt" : 0,
+  "CiitemBuybackPriceAmt" : 0,
+  "CiitemRestockPriceAmt" : 0,
+  "CiitemCrtDate" : "YYYY-MM-dd",
+  "CiitemCrtUserCode" : "string",
+  "CiitemLastModifyDate" : "YYYY-MM-dd",
+  "CiitemLastModifyUserCode" : "string",
+  "CiitemDeprExpAccCode" : "string",
+  "CiitemDeprExpAccName" : "string",
+  "CiitemAccumDeprAccCode" : "string",
+  "CiitemAccumDeprAccName" : "string",
+  "CiitemImageFilename" : "string",
+  "CiitemItemFixedLengthFlag" : "string",
+  "CiitemItemLengthValue" : 0,
+  "CiitemTax1Code" : "string",
+  "CiitemTax1Name" : "string",
+  "CiitemTax2Code" : "string",
+  "CiitemTax2Name" : "string",
+  "CiitemTax3Code" : "string",
+  "CiitemTax3Name" : "string",
+  "CiitemSalesTax1Code" : "string",
+  "CiitemSalesTax1Name" : "string",
+  "CiitemSalesTax2Code" : "string",
+  "CiitemSalesTax2Name" : "string",
+  "CiitemSalesTax3Code" : "string",
+  "CiitemSalesTax3Name" : "string",
+  "CiitemSoldAtCostAccCode" : "string",
+  "CiitemSoldAtCostAccName" : "string",
+  "CiitemCmpFlag" : "string",
+  "CiitemRtrnFlag" : "string",
+  "CiitemPartialDasmblFlag" : "string",
+  "CiitemAffilRevAccCode" : "string",
+  "CiitemAffilRevAccName" : "string",
+  "CiitemCustRevAccCode" : "string",
+  "CiitemCustRevAccName" : "string",
+  "CiitemAllowNegQtyFlag" : "string",
+  "CiitemProdFlag" : "string",
+  "CiitemEmCostComponCode" : "string",
+  "CiitemEmCostComponName" : "string",
+  "CiitemCreditJcCatCode" : "string",
+  "CiitemCreditJcCatName" : "string",
+  "CiitemInventoryItemCode" : "string",
+  "CiitemInventoryItemName" : "string",
+  "CiitemSalesProductFlag" : "string",
+  "CiitemMszpcCode" : "string",
+  "CiitemMsptCode" : "string",
+  "CiitemDefaultItemTypeCode" : "string",
+  "CiitemDefaultLocCode" : "string",
+  "CiitemIuCreateDate" : "YYYY-MM-dd",
+  "CiitemIuCreateUser" : "string",
+  "CiitemIuUpdateDate" : "YYYY-MM-dd",
+  "CiitemIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CiitemVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="12230a0a-a79c-49ed-825c-d3c986eb80ce" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2912ac2a-68e2-481b-b3fc-4753e4581ad7" method="POST">
+    <con:description>Create a CI Item</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CiitemCompCode" : "string",
+  "CiitemCompName" : "string",
+  "CiitemItemCode" : "string",
+  "CiitemItemClassCode" : "string",
+  "CiitemClassName" : "string",
+  "CiitemLotCtrlFlag" : "string",
+  "CiitemSerialFlag" : "string",
+  "CiitemUsageCode" : "string",
+  "CiitemUsageName" : "string",
+  "CiitemCostUpdateLevelCode" : "string",
+  "CiitemCostUpdateLevelName" : "string",
+  "CiitemInvAccCode" : "string",
+  "CiitemInvAccName" : "string",
+  "CiitemRevAccCode" : "string",
+  "CiitemRevAccName" : "string",
+  "CiitemWriAccCode" : "string",
+  "CiitemWriAccName" : "string",
+  "CiitemAdjAccCode" : "string",
+  "CiitemAdjAccName" : "string",
+  "CiitemVarAccCode" : "string",
+  "CiitemVarAccName" : "string",
+  "CiitemSuspAccCode" : "string",
+  "CiitemSuspAccName" : "string",
+  "CiitemAltWmAllowFlag" : "string",
+  "CiitemCostMethCode" : "string",
+  "CiitemCostMethName" : "string",
+  "CiitemAutoBuildCmpFlag" : "string",
+  "CiitemMsAvailableFlag" : "string",
+  "CiitemSellPriceOrPctCode" : "string",
+  "CiitemSellPriceOrPctName" : "string",
+  "CiitemBbPriceOrPctCode" : "string",
+  "CiitemBbPriceOrPctName" : "string",
+  "CiitemItemName" : "string",
+  "CiitemItemDesc" : "string",
+  "CiitemWmCode" : "string",
+  "CiitemWmName" : "string",
+  "CiitemVelocityCode" : "string",
+  "CiitemMinOrderQty" : 0,
+  "CiitemStdOrderQty" : 0,
+  "CiitemMaxOrderQty" : 0,
+  "CiitemMinOnhandQty" : 0,
+  "CiitemMaxOnhandQty" : 0,
+  "CiitemStdOnhandQty" : 0,
+  "CiitemMarketPriceAmt" : 0,
+  "CiitemSellPriceAmt" : 0,
+  "CiitemBuybackPriceAmt" : 0,
+  "CiitemRestockPriceAmt" : 0,
+  "CiitemCrtDate" : "YYYY-MM-dd",
+  "CiitemCrtUserCode" : "string",
+  "CiitemLastModifyDate" : "YYYY-MM-dd",
+  "CiitemLastModifyUserCode" : "string",
+  "CiitemDeprExpAccCode" : "string",
+  "CiitemDeprExpAccName" : "string",
+  "CiitemAccumDeprAccCode" : "string",
+  "CiitemAccumDeprAccName" : "string",
+  "CiitemImageFilename" : "string",
+  "CiitemItemFixedLengthFlag" : "string",
+  "CiitemItemLengthValue" : 0,
+  "CiitemTax1Code" : "string",
+  "CiitemTax1Name" : "string",
+  "CiitemTax2Code" : "string",
+  "CiitemTax2Name" : "string",
+  "CiitemTax3Code" : "string",
+  "CiitemTax3Name" : "string",
+  "CiitemSalesTax1Code" : "string",
+  "CiitemSalesTax1Name" : "string",
+  "CiitemSalesTax2Code" : "string",
+  "CiitemSalesTax2Name" : "string",
+  "CiitemSalesTax3Code" : "string",
+  "CiitemSalesTax3Name" : "string",
+  "CiitemSoldAtCostAccCode" : "string",
+  "CiitemSoldAtCostAccName" : "string",
+  "CiitemCmpFlag" : "string",
+  "CiitemRtrnFlag" : "string",
+  "CiitemPartialDasmblFlag" : "string",
+  "CiitemAffilRevAccCode" : "string",
+  "CiitemAffilRevAccName" : "string",
+  "CiitemCustRevAccCode" : "string",
+  "CiitemCustRevAccName" : "string",
+  "CiitemAllowNegQtyFlag" : "string",
+  "CiitemProdFlag" : "string",
+  "CiitemEmCostComponCode" : "string",
+  "CiitemEmCostComponName" : "string",
+  "CiitemCreditJcCatCode" : "string",
+  "CiitemCreditJcCatName" : "string",
+  "CiitemInventoryItemCode" : "string",
+  "CiitemInventoryItemName" : "string",
+  "CiitemSalesProductFlag" : "string",
+  "CiitemMszpcCode" : "string",
+  "CiitemMsptCode" : "string",
+  "CiitemDefaultItemTypeCode" : "string",
+  "CiitemDefaultLocCode" : "string",
+  "CiitemIuCreateDate" : "YYYY-MM-dd",
+  "CiitemIuCreateUser" : "string",
+  "CiitemIuUpdateDate" : "YYYY-MM-dd",
+  "CiitemIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CiitemVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CiitemCompCode":"string","CiitemItemCode":"string","CiitemBbPriceOrPctCode":"string","CiitemWriAccCode":"string","CiitemRevAccCode":"string","CiitemInvAccCode":"string","CiitemSuspAccCode":"string","CiitemVarAccCode":"string","CiitemItemClassCode":"string","CiitemCostUpdateLevelCode":"string","CiitemCostMethCode":"string","CiitemSellPriceOrPctCode":"string","CiitemAdjAccCode":"string","CiitemWmCode":"string","CiitemSerialFlag":"string","CiitemMsAvailableFlag":"string","CiitemAutoBuildCmpFlag":"string","CiitemUsageCode":"string","CiitemAltWmAllowFlag":"string","CiitemLotCtrlFlag":"string","CiitemVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="958e6cd9-5c6e-4823-8076-b68bf0286823" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CiitemCompCode":"string","CiitemItemCode":"string","CiitemBbPriceOrPctCode":"string","CiitemWriAccCode":"string","CiitemRevAccCode":"string","CiitemInvAccCode":"string","CiitemSuspAccCode":"string","CiitemVarAccCode":"string","CiitemItemClassCode":"string","CiitemCostUpdateLevelCode":"string","CiitemCostMethCode":"string","CiitemSellPriceOrPctCode":"string","CiitemAdjAccCode":"string","CiitemWmCode":"string","CiitemSerialFlag":"string","CiitemMsAvailableFlag":"string","CiitemAutoBuildCmpFlag":"string","CiitemUsageCode":"string","CiitemAltWmAllowFlag":"string","CiitemLotCtrlFlag":"string","CiitemVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="4305a095-f2b0-4403-b24c-45e2bce5e4a0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CiitemDefaultItemTypeCode":"Z"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

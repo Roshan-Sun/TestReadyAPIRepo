@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/ukgpayearnings" path="/hcm-rest-api/rest/1/ukgpayearnings" id="ec90f4f5-98cb-431c-a3ca-1ce6335c510e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ec90f4f5-98cb-431c-a3ca-1ce6335c510efileName">%2Fhcm-rest-api%2Frest%2F1%2Fukgpayearnings</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="75a2f4e0-60a4-4bce-a7b0-a578bda892a8" method="GET">
+    <con:description>Retrieve Pay Deductions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectEarnings</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectEarnings)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>employeeNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectEarnings)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payRunCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Run Code (selectEarnings)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payYear</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Year (selectEarnings)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Period (selectEarnings)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmpernCompCode" : "string",
+  "EmpernEmpNo" : "string",
+  "EmpernPayRunCode" : "string",
+  "EmpernLastName" : "string",
+  "EmpernFirstName" : "string",
+  "EmpernSsnNo" : "string",
+  "EmpernDocNo" : "string",
+  "EmpernPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpernPayPeriod" : 0,
+  "EmpernChqSeqNo" : "string",
+  "EmpernEarnCode" : "string",
+  "EmpernEarnDesc" : "string",
+  "EmpernExclinTotalhours" : "string",
+  "EmpernJobCode" : "string",
+  "EmpernLocationDesc" : "string",
+  "EmpernOrgLvl1" : "string",
+  "EmpernOrgLvl2" : "string",
+  "EmpernOrgLvl3" : "string",
+  "EmpernOrgLvl4" : "string",
+  "EmpernPieceCount" : "string",
+  "EmpernPieceUnit" : "string",
+  "EmpernPerEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpernPerStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpernEarnType" : "string",
+  "EmpernPayYear" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fda20092-be3f-4410-bcb3-d3209666377a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

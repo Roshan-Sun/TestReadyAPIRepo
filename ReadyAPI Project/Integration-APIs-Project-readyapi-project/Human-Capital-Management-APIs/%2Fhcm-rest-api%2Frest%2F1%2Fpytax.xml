@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytax" path="/hcm-rest-api/rest/1/pytax" id="1f284da7-9973-4fa9-aae1-d1ad238ba239" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1f284da7-9973-4fa9-aae1-d1ad238ba239fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytax</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f7663100-8222-4c22-bfae-a18057e94d08" method="GET">
+    <con:description>Retrieve PY Taxes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TaxCode" : "string",
+  "TaxDescription" : "string",
+  "TaxShortDescription" : "string",
+  "TaxLevel" : "string",
+  "TaxLevelName" : "string",
+  "TaxGrpCode" : "string",
+  "TaxGrpName" : "string",
+  "TaxPaidEmplr" : "string",
+  "TaxJobAllocation" : "string",
+  "TaxDeptAllocation" : "string",
+  "TaxSsFlag" : "string",
+  "TaxCreateApVoucher" : "string",
+  "TaxVertexTaxid" : "string",
+  "TaxVertexTaxidName" : "string",
+  "TaxCalcmeth" : "string",
+  "TaxCalcmethName" : "string",
+  "TaxAltCalcCode" : "string",
+  "TaxAltCalcName" : "string",
+  "TaxPrintOrder" : 0,
+  "TaxRealVertexTaxId" : "string",
+  "TaxUser" : "string",
+  "TaxLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaxIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaxIuCreateUser" : "string",
+  "TaxIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaxIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="309faf54-7ea4-4ad6-9230-708f6c80571c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/voudistphssegmsum" path="/ap-rest-api/rest/1/voudistphssegmsum" id="fb70ce45-fef8-418d-9904-819cc359236d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fb70ce45-fef8-418d-9904-819cc359236dfileName">%2Fap-rest-api%2Frest%2F1%2Fvoudistphssegmsum</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-ap-voudist-rollups" id="caee7168-9252-48c3-8e4b-05de694bfacb" method="GET">
+    <con:description>All Dist Rollups or specific ones via finder</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>VoudistPhsSegmSumfinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (VoudistPhsSegmSumfinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (VoudistPhsSegmSumfinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contract Code (VoudistPhsSegmSumfinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ChgCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Change Code (VoudistPhsSegmSumfinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "VdistVouNum" : 0,
+  "VdistCompCode" : "string",
+  "VdistJobCode" : "string",
+  "VdistContCode" : "string",
+  "VdistChgCode" : "string",
+  "VdistPhsCodeSeg1" : "string",
+  "VdistTaskCode" : "string",
+  "VdistRecordStatusCode" : "string",
+  "VdistScApprovedFlag" : "string",
+  "VdistWbsvCode3" : "string",
+  "VdistPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VdistPostFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c9d1eab8-bc7e-405e-9d2f-afe42889209d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

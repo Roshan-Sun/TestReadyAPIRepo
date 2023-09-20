@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/voudistphssegm" path="/ap-rest-api/rest/1/voudistphssegm" id="a33418f2-8630-4f95-8cff-91ecf03f61a1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a33418f2-8630-4f95-8cff-91ecf03f61a1fileName">%2Fap-rest-api%2Frest%2F1%2Fvoudistphssegm</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="7e9067f4-96f6-4b13-a3f3-5fc26d31d3aa" method="GET">
+    <con:description>All Distribution Segments</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "VdistVouNum" : 0,
+  "VdistLineNum" : 0,
+  "VdistBchNum" : 0,
+  "VdistCompCode" : "string",
+  "VdistJobCode" : "string",
+  "VdistContCode" : "string",
+  "VdistChgCode" : "string",
+  "VdistWbsvCode3" : "string",
+  "VdistPhsCodeSeg1" : "string",
+  "VdistRecordStatusCode" : "string",
+  "VdistScApprovedFlag" : "string",
+  "VdistPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VdistPostFlag" : "string",
+  "VdistPhsCode" : "string",
+  "VdistCatCode" : "string",
+  "VdistWm" : "string",
+  "VdistSchedLineNum" : 0,
+  "VdistTaskCode" : "string",
+  "VdistTaskName" : "string",
+  "ScschVUuid" : "string",
+  "VouInvCode" : "string",
+  "VouVenCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d0db8cf4-6fb2-4e33-a20a-efcec3d64aed" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

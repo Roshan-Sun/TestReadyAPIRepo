@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/cilocation/{Vuuid}" path="/ci-rest-api/rest/1/cilocation/{Vuuid}" id="f561866b-8bf6-45c7-a344-6ac4a8d47c93" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f561866b-8bf6-45c7-a344-6ac4a8d47c93fileName">%2Fci-rest-api%2Frest%2F1%2Fcilocation%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a546e0e8-54e5-4f02-b511-1a2b4b32fcef" method="GET">
+    <con:description>Retrieve a Specific CI Location</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CilocCompCode" : "string",
+  "CilocCode" : "string",
+  "CilocName" : "string",
+  "CilocDeptCode" : "string",
+  "CilocTypeCode" : "string",
+  "CilocCtrlCode" : "string",
+  "CilocBinCtrlFlag" : "string",
+  "CilocPctUsed" : 0,
+  "CilocDeptDistFlag" : "string",
+  "CilocHier" : "string",
+  "CilocInvSerCode" : "string",
+  "CilocMszoneCode" : "string",
+  "CilocIuCreateDate" : "YYYY-MM-dd",
+  "CilocIuCreateUser" : "string",
+  "CilocIuUpdateDate" : "YYYY-MM-dd",
+  "CilocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CilocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0cff9f4c-7623-4ff6-a841-a99ba68ef535" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="0f11c24b-96c2-490f-b81b-9a6b2d1bf8ab" method="DELETE">
+    <con:description>Delete a Specific CI Location</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="43b916f8-3dc0-4a71-b21d-a300e97e8c9e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="988fabd1-9217-4320-b53f-b241cb9f39f9" method="PATCH">
+    <con:description>Update a Specific CI Location</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CilocCompCode" : "string",
+  "CilocCode" : "string",
+  "CilocName" : "string",
+  "CilocDeptCode" : "string",
+  "CilocTypeCode" : "string",
+  "CilocCtrlCode" : "string",
+  "CilocBinCtrlFlag" : "string",
+  "CilocPctUsed" : 0,
+  "CilocDeptDistFlag" : "string",
+  "CilocHier" : "string",
+  "CilocInvSerCode" : "string",
+  "CilocMszoneCode" : "string",
+  "CilocIuCreateDate" : "YYYY-MM-dd",
+  "CilocIuCreateUser" : "string",
+  "CilocIuUpdateDate" : "YYYY-MM-dd",
+  "CilocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CilocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CilocDeptCode":"string","CilocCompCode":"string","CilocCode":"string","CilocName":"string","CilocDeptDistFlag":"string","CilocVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="86b70db9-055b-4c21-878e-aa67ce3efe30" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CilocDeptCode":"string","CilocCompCode":"string","CilocCode":"string","CilocName":"string","CilocDeptDistFlag":"string","CilocVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ec6d8fde-1980-419a-860f-71643c102ed0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CilocName":"testerino123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

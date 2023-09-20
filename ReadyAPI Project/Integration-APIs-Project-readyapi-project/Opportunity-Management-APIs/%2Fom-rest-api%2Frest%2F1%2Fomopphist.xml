@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/om-rest-api/rest/1/omopphist" path="/om-rest-api/rest/1/omopphist" id="7315ba1b-fbb0-4bae-b9a1-39f159b5a492" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7315ba1b-fbb0-4bae-b9a1-39f159b5a492fileName">%2Fom-rest-api%2Frest%2F1%2Fomopphist</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="dcb4fa03-c97a-424e-a6ce-0d9f33f6ab76" method="GET">
+    <con:description>Retrieve OM Opportunity Histories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompany or selectByAuditDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompany)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByAuditDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmophPartnCode" : "string",
+  "OmophPartnName" : "string",
+  "OmophPartnTypeCode" : "string",
+  "OmophCompCode" : "string",
+  "OmophCompName" : "string",
+  "OmophOppoCode" : "string",
+  "OmophOppoName" : "string",
+  "OmophProjectName" : "string",
+  "OmophMarketSector" : "string",
+  "OmophContractType" : "string",
+  "OmophGnrlLiab" : "string",
+  "OmophWrkrsComp" : "string",
+  "OmophStageCode" : "string",
+  "OmophPotentialRevAmt" : 0,
+  "OmophClosingPc" : 0,
+  "OmophClosingDate" : "YYYY-MM-dd",
+  "OmophLastUpdDate" : "YYYY-MM-dd",
+  "OmophUser" : "string",
+  "OmophProposalCode" : "string",
+  "OmophSalesRepPartnCode" : "string",
+  "OmophSalesRepPartnTCode" : "string",
+  "OmophSalesRepCode" : "string",
+  "OmophCampcmpntCode" : "string",
+  "OmophGenLiabilRate" : 0,
+  "OmophWorkersCompRate" : 0,
+  "OmophFeePc" : 0,
+  "OmophNonreimbursableAmt" : 0,
+  "OmophDurationMonths" : 0,
+  "OmophSubcontractedVolumeAmt" : 0,
+  "OmophCompanyPayrollAmt" : 0,
+  "OmophSubcontractPayrollAmt" : 0,
+  "OmophRuleCode" : "string",
+  "OmophIncAsTarget" : "string",
+  "OmophActualClosingDate" : "YYYY-MM-dd",
+  "OmophCcipVolumeAmt" : 0,
+  "OmophSdiSubcontractVolAmt" : 0,
+  "OmophIuCreateDate" : "YYYY-MM-dd",
+  "OmophIuCreateUser" : "string",
+  "OmophIuUpdateDate" : "YYYY-MM-dd",
+  "OmophIuUpdateUser" : "string",
+  "OmophWinningBidPc" : 0,
+  "OmophProjProceedsPc" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e4a90d3c-8aa3-49ac-9f2f-4425233861f5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

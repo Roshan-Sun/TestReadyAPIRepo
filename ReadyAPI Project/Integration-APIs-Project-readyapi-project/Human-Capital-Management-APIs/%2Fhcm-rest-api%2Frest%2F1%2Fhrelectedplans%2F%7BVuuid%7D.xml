@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrelectedplans/{Vuuid}" path="/hcm-rest-api/rest/1/hrelectedplans/{Vuuid}" id="dd3d9ddb-f618-4fa8-a87c-a2854aa4076e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dd3d9ddb-f618-4fa8-a87c-a2854aa4076efileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrelectedplans%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b58f5167-24c6-41e8-88e5-961e9a82a21e" method="GET">
+    <con:description>Retrieve a Specific HR Employee Elected Plan</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EldEmpNo" : "string",
+  "EldCompCode" : "string",
+  "EldPrnCode" : "string",
+  "EldPygCode" : "string",
+  "EldCode" : "string",
+  "EldVendor" : "string",
+  "EldCodeType" : "string",
+  "EldBdCodeDesc" : "string",
+  "EldBdTypeDesc" : "string",
+  "EldPlanCode" : "string",
+  "EldPloCode" : "string",
+  "EldEffectiveDate" : "YYYY-MM-dd",
+  "EldOldEffectiveDate" : "YYYY-MM-dd",
+  "EldRemittanceTotAmt" : 0,
+  "EldBdAmount" : 0,
+  "EldLtdTotalAmt" : 0,
+  "EldEndDate" : "YYYY-MM-dd",
+  "EldEmplrEffectiveDate" : "YYYY-MM-dd",
+  "EldVendorComments" : "string",
+  "EldEndedPlan" : "string",
+  "EldRowCreationUser" : "string",
+  "EldRowCreationDate" : "YYYY-MM-dd",
+  "EldLastUpdUser" : "string",
+  "EldLastUpdDate" : "YYYY-MM-dd",
+  "EldEnrollDependentFlag" : "string",
+  "EldRowTag" : "string",
+  "EldNewRow" : "string",
+  "EldVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f3c58394-11af-48bf-8a2c-509024e3e3b3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="712f207a-f281-4c7e-9f37-d652fd09f043" method="PATCH">
+    <con:description>Update a specific HR Employee Elected Plan</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EldEmpNo" : "string",
+  "EldCompCode" : "string",
+  "EldPrnCode" : "string",
+  "EldPygCode" : "string",
+  "EldCode" : "string",
+  "EldVendor" : "string",
+  "EldCodeType" : "string",
+  "EldBdCodeDesc" : "string",
+  "EldBdTypeDesc" : "string",
+  "EldPlanCode" : "string",
+  "EldPloCode" : "string",
+  "EldEffectiveDate" : "YYYY-MM-dd",
+  "EldOldEffectiveDate" : "YYYY-MM-dd",
+  "EldRemittanceTotAmt" : 0,
+  "EldBdAmount" : 0,
+  "EldLtdTotalAmt" : 0,
+  "EldEndDate" : "YYYY-MM-dd",
+  "EldEmplrEffectiveDate" : "YYYY-MM-dd",
+  "EldVendorComments" : "string",
+  "EldEndedPlan" : "string",
+  "EldRowCreationUser" : "string",
+  "EldRowCreationDate" : "YYYY-MM-dd",
+  "EldLastUpdUser" : "string",
+  "EldLastUpdDate" : "YYYY-MM-dd",
+  "EldEnrollDependentFlag" : "string",
+  "EldRowTag" : "string",
+  "EldNewRow" : "string",
+  "EldVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EldEmpNo":"1044217","EldCode":"BEN1","EldCompCode":"SWC","EldPrnCode":"AEWK","EldVendor":"1000-230","EldCodeType":"BN","EldPlanCode":"DEFAULT","EldPloCode":"DEFAULT","EldBdAmount":10,"EldEffectiveDate":"2022-11-30"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e92e8e65-d574-4bcf-85dc-336a80fb62c9" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EldEmpNo":"1044217","EldCode":"BEN1","EldCompCode":"SWC","EldPrnCode":"AEWK","EldVendor":"1000-230","EldCodeType":"BN","EldPlanCode":"DEFAULT","EldPloCode":"DEFAULT","EldBdAmount":10,"EldEffectiveDate":"2022-11-30"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="cadc533e-3f70-45f2-be4c-0b1fdf8ff3cb" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EldVendorComments":"testing123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

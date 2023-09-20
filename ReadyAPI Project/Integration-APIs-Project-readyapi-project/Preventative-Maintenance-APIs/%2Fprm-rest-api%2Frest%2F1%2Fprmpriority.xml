@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/prmpriority" path="/prm-rest-api/rest/1/prmpriority" id="cd2974c8-591b-4a8b-9607-b3dc22427cf6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cd2974c8-591b-4a8b-9607-b3dc22427cf6fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmpriority</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="626281ff-f9de-45fd-8a51-ce88dff9ea96" method="GET">
+    <con:description>Retrieve PRM Priority List</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrmprLevel" : 0,
+  "PrmprDesc" : "string",
+  "PrmprVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="2e67101a-6242-4c07-8a2a-9e44597c1f3d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="a3759481-e94f-4f11-a30c-834266c3d28d" method="POST">
+    <con:description>Create a PRM Priority</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrmprLevel" : 0,
+  "PrmprDesc" : "string",
+  "PrmprVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PrmprLevel":"string","PrmprDesc":"string","PrmprVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4a5366f9-b8d9-41b7-bb78-fed07c1c7752" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PrmprLevel":"string","PrmprDesc":"string","PrmprVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0440e696-348c-42f3-ad64-7e68d1427429" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PrmprDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

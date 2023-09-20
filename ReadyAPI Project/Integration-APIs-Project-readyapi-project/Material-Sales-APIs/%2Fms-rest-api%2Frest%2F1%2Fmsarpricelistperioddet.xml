@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ms-rest-api/rest/1/msarpricelistperioddet" path="/ms-rest-api/rest/1/msarpricelistperioddet" id="d4e1e092-0d68-4a7c-8647-8799ce353216" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d4e1e092-0d68-4a7c-8647-8799ce353216fileName">%2Fms-rest-api%2Frest%2F1%2Fmsarpricelistperioddet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f5936f70-8723-43d8-a110-d90d784f3cd6" method="GET">
+    <con:description>Retrieve Material Sales AR Price List Period Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PriceListDetailFinder or AuditDateFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (PriceListDetailFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>LocationCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Location code (PriceListDetailFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PriceCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Price code (PriceListDetailFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StartDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Starting date (YYYY-MM-dd - PriceListDetailFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to search created or updated items (YYYY-MM-dd - AuditDateFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArplpdCompCode" : "string",
+  "ArplpdPriceListCode" : "string",
+  "ArplpdStartDate" : "YYYY-MM-dd",
+  "ArplpdCiItemCode" : "string",
+  "ArplpdCiLocCode" : "string",
+  "ArplpdCiItemTypeCode" : "string",
+  "ArplpdWmCode" : "string",
+  "ArplpdCiClassCode" : "string",
+  "ArplpdPricePerWm" : 0,
+  "ArplpdIuCreateDate" : "YYYY-MM-dd",
+  "ArplpdIuCreateUser" : "string",
+  "ArplpdIuUpdateDate" : "YYYY-MM-dd",
+  "ArplpdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0e5cacab-216a-46ad-8232-ead93db70cdf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

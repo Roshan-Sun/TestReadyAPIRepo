@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pybenefit" path="/hcm-rest-api/rest/1/pybenefit" id="100724d0-7b83-47f0-9cc7-90d27b986062" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="100724d0-7b83-47f0-9cc7-90d27b986062fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpybenefit</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b565fc49-f489-4133-8098-36e9905fcb7c" method="GET">
+    <con:description>Retrieve Benefit Codes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BenCode" : "string",
+  "BenDescription" : "string",
+  "BenShortDesc" : "string",
+  "BenGrpCode" : "string",
+  "BenGrpName" : "string",
+  "BenPwFlag" : "string",
+  "BenType" : "string",
+  "BenBaseCode" : "string",
+  "BenBaseName" : "string",
+  "BenCash" : "string",
+  "BenJobAllocation" : "string",
+  "BenPrintOrder" : 0,
+  "BenDedCode" : "string",
+  "BenDedName" : "string",
+  "BenEmpleContrFlag" : "string",
+  "BenComment" : "string",
+  "BenForDepFlag" : "string",
+  "BenCalcFlag" : "string",
+  "BenWrlAllocation" : "string",
+  "BenJobAllocationAll" : "string",
+  "BenCreateApVoucher" : "string",
+  "BenExcludeFlag" : "string",
+  "BenPrintCheckOnly" : "string",
+  "BenAssignedCheckNum" : 0,
+  "BenCreateSeprateCheck" : "string",
+  "BenLimitGrpCode" : "string",
+  "BenLimitGrpName" : "string",
+  "BenInclInGcfStaffFlag" : "string",
+  "BenCalcPyOverheadFlag" : "string",
+  "BenDeptAllocation" : "string",
+  "BenAllocationMethod" : "string",
+  "BenUser" : "string",
+  "BenLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenBasecdAllocationFlag" : "string",
+  "BenAccrualPaidoutFlag" : "string",
+  "BenInclPyFcBurdenCal" : "string",
+  "BenInclInRetropayCalcFlag" : "string",
+  "BenLumpSum1planFlag" : "string",
+  "BenIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenIuCreateUser" : "string",
+  "BenIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenIuUpdateUser" : "string",
+  "BenProRatedFlag" : "string",
+  "BenPkgFlag" : "string",
+  "BenVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b880b118-9d14-4544-b219-58771f841994" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="cf72f772-d8ba-4b17-9ca2-826bde1c2fbe" method="POST">
+    <con:description>Create new Benefit Code</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BenCode" : "string",
+  "BenDescription" : "string",
+  "BenShortDesc" : "string",
+  "BenGrpCode" : "string",
+  "BenGrpName" : "string",
+  "BenPwFlag" : "string",
+  "BenType" : "string",
+  "BenBaseCode" : "string",
+  "BenBaseName" : "string",
+  "BenCash" : "string",
+  "BenJobAllocation" : "string",
+  "BenPrintOrder" : 0,
+  "BenDedCode" : "string",
+  "BenDedName" : "string",
+  "BenEmpleContrFlag" : "string",
+  "BenComment" : "string",
+  "BenForDepFlag" : "string",
+  "BenCalcFlag" : "string",
+  "BenWrlAllocation" : "string",
+  "BenJobAllocationAll" : "string",
+  "BenCreateApVoucher" : "string",
+  "BenExcludeFlag" : "string",
+  "BenPrintCheckOnly" : "string",
+  "BenAssignedCheckNum" : 0,
+  "BenCreateSeprateCheck" : "string",
+  "BenLimitGrpCode" : "string",
+  "BenLimitGrpName" : "string",
+  "BenInclInGcfStaffFlag" : "string",
+  "BenCalcPyOverheadFlag" : "string",
+  "BenDeptAllocation" : "string",
+  "BenAllocationMethod" : "string",
+  "BenUser" : "string",
+  "BenLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenBasecdAllocationFlag" : "string",
+  "BenAccrualPaidoutFlag" : "string",
+  "BenInclPyFcBurdenCal" : "string",
+  "BenInclInRetropayCalcFlag" : "string",
+  "BenLumpSum1planFlag" : "string",
+  "BenIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenIuCreateUser" : "string",
+  "BenIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BenIuUpdateUser" : "string",
+  "BenProRatedFlag" : "string",
+  "BenPkgFlag" : "string",
+  "BenVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BenCode":"RST","BenDescription":"roshan test","BenShortDesc":"roast","BenType":"D","BenBaseCode":"DALY","BenCalcSeq":91922,"BenAllocationMethod":"DEF","BenForDepFlag":"N"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="54410e1a-2d7f-43dd-86cd-a50029d5913c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BenCode":"RST","BenDescription":"roshan test","BenShortDesc":"roast","BenType":"D","BenBaseCode":"DALY","BenCalcSeq":91922,"BenAllocationMethod":"DEF","BenForDepFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5d9ae632-0825-4d81-8e9c-881b25c115d1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BenShortDesc":"roshan"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

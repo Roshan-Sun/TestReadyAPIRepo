@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/workitem/{Vuuid}" path="/prm-rest-api/rest/1/workitem/{Vuuid}" id="18402a07-4f45-47cf-8136-677e748cfbb8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="18402a07-4f45-47cf-8136-677e748cfbb8fileName">%2Fprm-rest-api%2Frest%2F1%2Fworkitem%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="1a69f4e6-15a6-452a-a52a-9ec426151860" method="GET">
+    <con:description>Retrieve a Specific Work Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WitmWorkItemType" : "string",
+  "WitmTaskCode" : "string",
+  "WitmTaskPtgtType" : "string",
+  "WitmTgtType" : "string",
+  "WitmWoCompCode" : "string",
+  "WitmWoCode" : "string",
+  "WitmLineNumber" : 0,
+  "WitmWoStepTitle" : "string",
+  "WitmWoStepDescription" : "string",
+  "WitmDeadlineDate" : "YYYY-MM-dd",
+  "WitmDeadlineDateOnly" : "string",
+  "WitmDeadlineTime" : "string",
+  "WitmThresholdDate" : "YYYY-MM-dd",
+  "WitmRecurringFlag" : "string",
+  "WitmMissedTaskCount" : 0,
+  "WitmAcumTypeCode" : "string",
+  "WitmJcatLabCompCode" : "string",
+  "WitmJcatLabJobCode" : "string",
+  "WitmJcatLabPhsCode" : "string",
+  "WitmJcatLabourCode" : "string",
+  "WitmJcatPartsCompCode" : "string",
+  "WitmJcatPartsJobCode" : "string",
+  "WitmJcatPartsPhsCode" : "string",
+  "WitmJcatPartsCode" : "string",
+  "WitmJcatConCompCode" : "string",
+  "WitmJcatConJobCode" : "string",
+  "WitmJcatConPhsCode" : "string",
+  "WitmJcatContractorCode" : "string",
+  "WitmJcatEqCompCode" : "string",
+  "WitmJcatEqJobCode" : "string",
+  "WitmJcatEqPhsCode" : "string",
+  "WitmJcatEquipmentCode" : "string",
+  "WitmJcatOthCompCode" : "string",
+  "WitmJcatOthJobCode" : "string",
+  "WitmJcatOthPhsCode" : "string",
+  "WitmJcatOtherCode" : "string",
+  "WitmWiccCompCode" : "string",
+  "WitmWiccLabourCode" : "string",
+  "WitmWiccPartsCode" : "string",
+  "WitmWiccContractorCode" : "string",
+  "WitmWiccEquipmentCode" : "string",
+  "WitmWiccOtherCode" : "string",
+  "WitmStatus" : "string",
+  "WitmStatusDesc" : "string",
+  "WitmComments" : "string",
+  "WitmCompletionDate" : "YYYY-MM-dd",
+  "WitmClass1" : "string",
+  "WitmClass2" : "string",
+  "WitmClass3" : "string",
+  "WitmClass4" : "string",
+  "WitmVendorCode" : "string",
+  "WitmScheduleDate" : "YYYY-MM-dd",
+  "WitmScheduleDateOnly" : "string",
+  "WitmScheduleTime" : "string",
+  "WitmActiveFlag" : "string",
+  "WitmTeamCode" : "string",
+  "WitmBchNum" : 0,
+  "WitmPostDate" : "YYYY-MM-dd",
+  "WitmSrcCompCode" : "string",
+  "WitmJobCode" : "string",
+  "WitmPhsCode" : "string",
+  "WitmDeptCode" : "string",
+  "WitmPriority" : 0,
+  "WitmIssueId" : "string",
+  "WitmAppTypeCode" : "string",
+  "WitmDateCreated" : "YYYY-MM-dd",
+  "WitmCreatedBy" : "string",
+  "WitmDateModified" : "YYYY-MM-dd",
+  "WitmModifiedBy" : "string",
+  "WitmScheduleEndDate" : "YYYY-MM-dd",
+  "WitmScheduleEndDateOnly" : "string",
+  "WitmScheduleEndTime" : "string",
+  "WitmBillingType" : "string",
+  "WitmBillingTypeDesc" : "string",
+  "WitmBillingTotal" : 0,
+  "WitmBillingTotalFrmtd" : "string",
+  "WitmSubmittedBillingFlag" : "string",
+  "WitmBillingAmtFrmtd" : "string",
+  "WitmBillingStateCode" : "string",
+  "WitmUnits" : 0,
+  "WitmWoEntry2Flag" : "string",
+  "WitmBuildingCode" : "string",
+  "WitmFloorNo" : "string",
+  "WitmRoomNo" : "string",
+  "WitmUnpostedCount" : 0,
+  "WitmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="822a05f1-bc87-4aa8-9409-d4af70a954c1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

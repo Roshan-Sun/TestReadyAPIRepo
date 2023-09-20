@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glperiod" path="/glrestapi/rest/v1/glperiod" id="c9a036b7-bf60-49c7-bcfa-3ffaea258624" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c9a036b7-bf60-49c7-bcfa-3ffaea258624fileName">%2Fglrestapi%2Frest%2Fv1%2Fglperiod</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="26006c88-b074-4e8a-bde5-5b534b245573" method="GET">
+    <con:description>Retrieve GL Periods</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectPeriod</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>chartCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Chart Code (selectPeriod)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PerConschartCode" : "string",
+  "PerYr" : 0,
+  "PerPer" : 0,
+  "PerStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PerEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PerAdjFlag" : "string",
+  "PerSeqNum" : 0,
+  "PerOpenPeriodFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e9b95f8a-d966-4c6c-bcf9-8c0f359e6cb0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

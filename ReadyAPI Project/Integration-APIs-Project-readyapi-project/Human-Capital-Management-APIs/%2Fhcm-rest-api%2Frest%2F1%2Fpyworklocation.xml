@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyworklocation" path="/hcm-rest-api/rest/1/pyworklocation" id="7d498fa2-0619-43e7-b85f-89dd9614f903" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7d498fa2-0619-43e7-b85f-89dd9614f903fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyworklocation</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="27b32711-777f-4e6b-8310-0eaf1cfff99c" method="GET">
+    <con:description>Retrieve PY Work Locations</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WrlCode" : "string",
+  "WrlName" : "string",
+  "WrlShortName" : "string",
+  "WrlCountryCode" : "string",
+  "WrlCountryName" : "string",
+  "WrlStateCode" : "string",
+  "WrlStateName" : "string",
+  "WrlCountyCode" : "string",
+  "WrlCountyName" : "string",
+  "WrlCityCode" : "string",
+  "WrlCityName" : "string",
+  "WrlZipCode" : "string",
+  "WrlStartZipCode" : "string",
+  "WrlEndZipCode" : "string",
+  "WrlVertexGeocode" : "string",
+  "WrlVertexSchdist" : 0,
+  "WrlVertexPsdcode" : 0,
+  "WrlUser" : "string",
+  "WrlLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WrlSickPolicyCode" : "string",
+  "WrlRegionCode" : "string",
+  "WrlIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WrlIuCreateUser" : "string",
+  "WrlIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WrlIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e98f0047-b54e-4541-be55-0b828c22ab64" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

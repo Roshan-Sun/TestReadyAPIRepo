@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hremrelatives/{Vuuid}" path="/hcm-rest-api/rest/1/hremrelatives/{Vuuid}" id="fc01766e-bfdc-4b26-aef3-06b4c865b1ec" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fc01766e-bfdc-4b26-aef3-06b4c865b1ecfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhremrelatives%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="20afe84e-1cb8-4835-944b-09302e79460c" method="GET">
+    <con:description>Retrieve a Specific HR Employee Relative</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EdpFirstName" : "string",
+  "EdpMiddleName" : "string",
+  "EdpLastName" : "string",
+  "EdpAddress1" : "string",
+  "EdpAddress2" : "string",
+  "EdpAddress3" : "string",
+  "EdpZipCode" : "string",
+  "EdpSex" : "string",
+  "EdpDependFlag" : "string",
+  "EdpEmgconFlag" : "string",
+  "EdpBenfFlag" : "string",
+  "EdpBenfType" : "string",
+  "EdpDateBirth" : "YYYY-MM-dd",
+  "EdpPlaceBirth" : "string",
+  "EdpLivingFlag" : "string",
+  "EdpMedicalSuppFlag" : "string",
+  "EdpFullStudentFlag" : "string",
+  "EdpPrimPhone" : "string",
+  "EdpAltPhone" : "string",
+  "EdpFax" : "string",
+  "EdpCellNo" : "string",
+  "EdpPager" : "string",
+  "EdpEmailAddress" : "string",
+  "EdpPriority" : 0,
+  "EmployeeEmpNo" : "string",
+  "CountryCtrCountryCode" : "string",
+  "StateStaCountryCode" : "string",
+  "StateStaStateCode" : "string",
+  "CountyCntCountyCode" : "string",
+  "CountyCntStateCode" : "string",
+  "CountyCntCountryCode" : "string",
+  "CityCtyCountryCode" : "string",
+  "CityCtyStateCode" : "string",
+  "CityCtyCountyCode" : "string",
+  "CityCtyCityCode" : "string",
+  "EmployeeEmpNoWorkingAs" : "string",
+  "EdpRelCode" : "string",
+  "EdpRelName" : "string",
+  "EdpSsnNum" : "string",
+  "EdpInsur1Pct" : 0,
+  "EdpInsur2Pct" : 0,
+  "EdpCompCode" : "string",
+  "EdpUser" : "string",
+  "EdpLastUpdDate" : "YYYY-MM-dd",
+  "EdpVUuid" : "string",
+  "EdpSeqNo" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="76276ec8-4e1f-4c7c-a839-e8be5e961b05" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="8ae1e092-b0ca-4c6d-bc07-3d0fc4a664c9" method="PATCH">
+    <con:description>Update a Specific HR Employee Relative</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EdpFirstName" : "string",
+  "EdpMiddleName" : "string",
+  "EdpLastName" : "string",
+  "EdpAddress1" : "string",
+  "EdpAddress2" : "string",
+  "EdpAddress3" : "string",
+  "EdpZipCode" : "string",
+  "EdpSex" : "string",
+  "EdpDependFlag" : "string",
+  "EdpEmgconFlag" : "string",
+  "EdpBenfFlag" : "string",
+  "EdpBenfType" : "string",
+  "EdpDateBirth" : "YYYY-MM-dd",
+  "EdpPlaceBirth" : "string",
+  "EdpLivingFlag" : "string",
+  "EdpMedicalSuppFlag" : "string",
+  "EdpFullStudentFlag" : "string",
+  "EdpPrimPhone" : "string",
+  "EdpAltPhone" : "string",
+  "EdpFax" : "string",
+  "EdpCellNo" : "string",
+  "EdpPager" : "string",
+  "EdpEmailAddress" : "string",
+  "EdpPriority" : 0,
+  "EmployeeEmpNo" : "string",
+  "CountryCtrCountryCode" : "string",
+  "StateStaCountryCode" : "string",
+  "StateStaStateCode" : "string",
+  "CountyCntCountyCode" : "string",
+  "CountyCntStateCode" : "string",
+  "CountyCntCountryCode" : "string",
+  "CityCtyCountryCode" : "string",
+  "CityCtyStateCode" : "string",
+  "CityCtyCountyCode" : "string",
+  "CityCtyCityCode" : "string",
+  "EmployeeEmpNoWorkingAs" : "string",
+  "EdpRelCode" : "string",
+  "EdpRelName" : "string",
+  "EdpSsnNum" : "string",
+  "EdpInsur1Pct" : 0,
+  "EdpInsur2Pct" : 0,
+  "EdpCompCode" : "string",
+  "EdpUser" : "string",
+  "EdpLastUpdDate" : "YYYY-MM-dd",
+  "EdpVUuid" : "string",
+  "EdpSeqNo" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EdpFirstName":"string","EdpLastName":"string","EdpSex":"string","EdpDateBirth":"string","EmployeeEmpNo":"string","EdpDependFlag":"string","EdpEmgconFlag":"string","EdpBenfFlag":"string","EdpLivingFlag":"string","EdpMedicalSuppFlag":"string","EdpFullStudentFlag":"string","EdpUser":"string","EdpLastUpdDate":"string","EdpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="26f127c5-48ee-4be9-b697-c5eb1785f00f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EdpFirstName":"string","EdpLastName":"string","EdpSex":"string","EdpDateBirth":"string","EmployeeEmpNo":"string","EdpDependFlag":"string","EdpEmgconFlag":"string","EdpBenfFlag":"string","EdpLivingFlag":"string","EdpMedicalSuppFlag":"string","EdpFullStudentFlag":"string","EdpUser":"string","EdpLastUpdDate":"string","EdpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="44d8c965-84b9-4076-b85d-274be3f7c031" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EdpPlaceBirth":"Toronto"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

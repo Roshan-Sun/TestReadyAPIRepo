@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrdepded" path="/hcm-rest-api/rest/1/hrdepded" id="3a8aa9e7-d2a0-4266-b0ef-0a860ffb2247" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3a8aa9e7-d2a0-4266-b0ef-0a860ffb2247fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrdepded</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="5dafdcfa-98d2-4f55-ab48-0abe6370a34f" method="GET">
+    <con:description>Retrieve HR Dependent Deductions</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DpdCompCode" : "string",
+  "DpdDedCode" : "string",
+  "DpbDedName" : "string",
+  "DpdEmpNo" : "string",
+  "DpdEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdOutOfAreaFlag" : "string",
+  "DpdOthInsurFlag" : "string",
+  "DpdOthInsurVendor" : "string",
+  "DpdVenName" : "string",
+  "DpdOthPolicyNo" : "string",
+  "DpdEffStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdCreatedBy" : "string",
+  "DpdModifiedBy" : "string",
+  "DpdDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdOthPolicyName" : "string",
+  "DpdDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdOthInsurEffDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdPlanCode" : "string",
+  "DpdIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdIuCreateUser" : "string",
+  "DpdIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpdIuUpdateUser" : "string",
+  "DpdFromProgram" : "string",
+  "DiscriminatorCode" : "string",
+  "DpdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="56765149-9a3f-43ae-8497-2cbb6d4cdacf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

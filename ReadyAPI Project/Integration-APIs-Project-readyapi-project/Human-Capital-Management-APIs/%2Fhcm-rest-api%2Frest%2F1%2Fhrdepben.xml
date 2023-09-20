@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrdepben" path="/hcm-rest-api/rest/1/hrdepben" id="1ccc06d4-619d-4482-8de1-8d064d564b0c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1ccc06d4-619d-4482-8de1-8d064d564b0cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrdepben</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a0b041ca-56a9-41b6-930f-d6fca8743a62" method="GET">
+    <con:description>Retrieve HR Dependent Benefits</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DpbCompCode" : "string",
+  "DpbBenCode" : "string",
+  "DpbBenName" : "string",
+  "DpbEmpNo" : "string",
+  "DpbEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbOutOfAreaFlag" : "string",
+  "DpbOthInsurFlag" : "string",
+  "DpbOthInsurVendor" : "string",
+  "DpbVenName" : "string",
+  "DpbOthPolicyNo" : "string",
+  "DpbEffStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbCreatedBy" : "string",
+  "DpbModifiedBy" : "string",
+  "DpbDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbOthPolicyName" : "string",
+  "DpbDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbOthInsurEffDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbPlanCode" : "string",
+  "DpbIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbIuCreateUser" : "string",
+  "DpbIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DpbIuUpdateUser" : "string",
+  "DpbVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c983d78e-a5ff-4cdc-ae5d-e7d1ccef6702" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

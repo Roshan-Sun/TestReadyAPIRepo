@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrrequisitions" path="/hcm-rest-api/rest/1/hrrequisitions" id="82a7e8e0-e0b2-4c7b-b530-9a1953540c32" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="82a7e8e0-e0b2-4c7b-b530-9a1953540c32fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrrequisitions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ce6b6314-c826-4e3d-80d5-fd4788cd36c4" method="GET">
+    <con:description>Retrieve HR Requisitons</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>RequisitionFinder or OpenRequisitionsFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>RequisitionCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Requisition Code (RequisitionFinder and OpenRequisitionsFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Code (RequisitionFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TradeCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Trade Code (RequisitionFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>HireOfficeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Hired Office (RequisitionFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobTitleVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Title (RequisitionFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrrCode" : "string",
+  "HrrDate" : "YYYY-MM-dd",
+  "HrrQty" : 0,
+  "HrrTrdCode" : "string",
+  "HrrRequestedBy" : "string",
+  "HrrPropHireDate" : "YYYY-MM-dd",
+  "HrrPropJobTitle" : "string",
+  "HrrJobDesc" : "string",
+  "HrrResp" : "string",
+  "HrrSalaryRange" : "string",
+  "HrrPropSalary" : 0,
+  "HrrStatusCode" : "string",
+  "HrrAccountingCode" : "string",
+  "HrrNotes" : "string",
+  "HrrFullparttime" : "string",
+  "HrrTemporary" : "string",
+  "HrrType" : "string",
+  "HrrHireOffice" : "string",
+  "HrrVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="5915a488-feeb-42d4-8917-23d08c50fa39" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="fb81a107-b18a-45d3-89cc-48b5530693ff" method="POST">
+    <con:description>Create an HR Requisition</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrrCode" : "string",
+  "HrrDate" : "YYYY-MM-dd",
+  "HrrQty" : 0,
+  "HrrTrdCode" : "string",
+  "HrrRequestedBy" : "string",
+  "HrrPropHireDate" : "YYYY-MM-dd",
+  "HrrPropJobTitle" : "string",
+  "HrrJobDesc" : "string",
+  "HrrResp" : "string",
+  "HrrSalaryRange" : "string",
+  "HrrPropSalary" : 0,
+  "HrrStatusCode" : "string",
+  "HrrAccountingCode" : "string",
+  "HrrNotes" : "string",
+  "HrrFullparttime" : "string",
+  "HrrTemporary" : "string",
+  "HrrType" : "string",
+  "HrrHireOffice" : "string",
+  "HrrVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"HrrCode":"string","HrrDate":"string","HrrTrdCode":"string","HrrRequestedBy":"string","HrrPropJobTitle":"string","HrrJobDesc":"string","HrrResp":"string","HrrHireOffice":"string","HrrVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="790afab2-8aff-47bc-ae0f-4c2c481fa984" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrrCode":"string","HrrDate":"string","HrrTrdCode":"string","HrrRequestedBy":"string","HrrPropJobTitle":"string","HrrJobDesc":"string","HrrResp":"string","HrrHireOffice":"string","HrrVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="865bf26e-cee9-446b-be21-c0aee25132bc" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrrJobDesc":"test1235"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

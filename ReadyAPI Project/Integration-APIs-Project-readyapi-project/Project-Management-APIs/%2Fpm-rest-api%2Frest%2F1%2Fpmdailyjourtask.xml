@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourtask" path="/pm-rest-api/rest/1/pmdailyjourtask" id="1919e764-5cda-4588-a6d7-d05cd34d6006" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1919e764-5cda-4588-a6d7-d05cd34d6006fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourtask</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="41bfe9bc-5787-42e0-aaa2-0cb1761afab1" method="GET">
+    <con:description>Retrieve PM Daily Journal Tasks</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal or PmDailyJourTaskFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal and PmDailyJourTaskFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ProjCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (PmDailyJourTaskFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PartnCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Partner Code (PmDailyJourTaskFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtJournalVUuid" : "string",
+  "PmjtProjCode" : "string",
+  "PmjtPartnCode" : "string",
+  "PmjtPartnTypeCode" : "string",
+  "PmjtWorkersNumber" : 0,
+  "PmjtActCode" : "string",
+  "PmjtNotes" : "string",
+  "PmjtClvValueCode1" : "string",
+  "PmjtClvValueCode2" : "string",
+  "PmjtClvValueCode3" : "string",
+  "PmjtClvValueCode4" : "string",
+  "PmjtClvValueCode5" : "string",
+  "PmjtClvValueCode6" : "string",
+  "PmjtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuCreateUser" : "string",
+  "PmjtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuUpdateUser" : "string",
+  "PmjtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="04716fb3-9f98-47ab-9589-3a36cc1adb48" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="1ad5564f-5af0-48f1-a292-76bbea3f6690" method="POST">
+    <con:description>Create a PM Daily Journal Task</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtJournalVUuid" : "string",
+  "PmjtProjCode" : "string",
+  "PmjtPartnCode" : "string",
+  "PmjtPartnTypeCode" : "string",
+  "PmjtWorkersNumber" : 0,
+  "PmjtActCode" : "string",
+  "PmjtNotes" : "string",
+  "PmjtClvValueCode1" : "string",
+  "PmjtClvValueCode2" : "string",
+  "PmjtClvValueCode3" : "string",
+  "PmjtClvValueCode4" : "string",
+  "PmjtClvValueCode5" : "string",
+  "PmjtClvValueCode6" : "string",
+  "PmjtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuCreateUser" : "string",
+  "PmjtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuUpdateUser" : "string",
+  "PmjtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjtJournalVUuid":"string","PmjtPartnCode":"string","PmjtPartnTypeCode":"string","PmjtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="052c1deb-1bea-4c5c-88ef-43c11ada930a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtJournalVUuid":"string","PmjtPartnCode":"string","PmjtPartnTypeCode":"string","PmjtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="162207df-79e8-43c1-b795-e94e95913a8d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

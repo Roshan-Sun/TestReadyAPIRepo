@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimecrew" path="/hcm-rest-api/rest/1/pyctimecrew" id="7fe39568-dd84-4c0c-954a-54c46114f9b3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7fe39568-dd84-4c0c-954a-54c46114f9b3fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimecrew</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="742f1c23-cca1-4734-8b94-f1521e9546d0" method="GET">
+    <con:description>Retrieve Crew Time Crews</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CrewCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Crew Code (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycrVUuid" : "string",
+  "PycrCode" : "string",
+  "PycrName" : "string",
+  "PycrForemanEmpNo" : "string",
+  "PycrResponsibleEmpNo" : "string",
+  "PycrJobCompCode" : "string",
+  "PycrJobCode" : "string",
+  "PycrShiftCode" : "string",
+  "PycrScheduleCode" : "string",
+  "PycrReqSignoffsignatureFlag" : "string",
+  "PycrReqForemanSignFlag" : "string",
+  "PycrRequireInoutTimesFlag" : "string",
+  "PycrStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuCreateUser" : "string",
+  "PycrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuUpdateUser" : "string",
+  "PycrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c9258b36-9938-4739-bc7f-302825dd5c0a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="3e77a5cb-0f5f-4cee-b524-6659bcde7341" method="POST">
+    <con:description>Create a Crew Time Crew</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycrVUuid" : "string",
+  "PycrCode" : "string",
+  "PycrName" : "string",
+  "PycrForemanEmpNo" : "string",
+  "PycrResponsibleEmpNo" : "string",
+  "PycrJobCompCode" : "string",
+  "PycrJobCode" : "string",
+  "PycrShiftCode" : "string",
+  "PycrScheduleCode" : "string",
+  "PycrReqSignoffsignatureFlag" : "string",
+  "PycrReqForemanSignFlag" : "string",
+  "PycrRequireInoutTimesFlag" : "string",
+  "PycrStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuCreateUser" : "string",
+  "PycrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycrIuUpdateUser" : "string",
+  "PycrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PycrCode":"string","PycrName":"string","PycrForemanEmpNo":"string","PycrResponsibleEmpNo":"string","PycrJobCompCode":"string","PycrJobCode":"string","PycrShiftCode":"string","PycrScheduleCode":"string","PycrReqSignoffsignatureFlag":"string","PycrReqForemanSignFlag":"string","PycrRequireInoutTimesFlag":"string","PycrStartDate":"string","PycrVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="7442b80b-5961-4ba6-a920-61149c7f932f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycrCode":"string","PycrName":"string","PycrForemanEmpNo":"string","PycrResponsibleEmpNo":"string","PycrJobCompCode":"string","PycrJobCode":"string","PycrShiftCode":"string","PycrScheduleCode":"string","PycrReqSignoffsignatureFlag":"string","PycrReqForemanSignFlag":"string","PycrRequireInoutTimesFlag":"string","PycrStartDate":"string","PycrVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="bcb5aafc-707a-4f38-b283-b1570f1b39e0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

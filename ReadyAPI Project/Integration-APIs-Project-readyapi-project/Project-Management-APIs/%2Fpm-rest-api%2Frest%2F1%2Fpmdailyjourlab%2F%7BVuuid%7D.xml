@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourlab/{Vuuid}" path="/pm-rest-api/rest/1/pmdailyjourlab/{Vuuid}" id="24959b9f-24f3-4ab8-942f-907225d73dbb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="24959b9f-24f3-4ab8-942f-907225d73dbbfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourlab%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ae1a0b8c-5959-45b5-a3ce-86ba0130e0f1" method="GET">
+    <con:description>Retrieve a Specific PM Daily Journal Labour</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjolCompCode" : "string",
+  "PmjolEmpNo" : "string",
+  "PmjolEmpName" : "string",
+  "PmjolJobCode" : "string",
+  "PmjolPhsCode" : "string",
+  "PmjolCatCode" : "string",
+  "PmjolOhType" : "string",
+  "PmjolNotes" : "string",
+  "PmjolSubmittedFlag" : "string",
+  "PmjolExpCode" : "string",
+  "PmjolExpDesc" : "string",
+  "PmjolIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjolIuCreateUser" : "string",
+  "PmjolIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjolIuUpdateUser" : "string",
+  "PmjolVUuid" : "string",
+  "PmjolJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="394f0484-e857-4cce-bc74-f8bf74fc2f00" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="0494c2c3-e41f-4427-af32-5ec154557cd8" method="DELETE">
+    <con:description>Delete a Specific PM Daily Journal Labour</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="32f952ae-43cd-426f-adb5-898fa5d881cc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="b925eae9-66da-4730-bf72-e97beac427ef" method="PATCH">
+    <con:description>Update a Specific PM Daily Journal Labour</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjolCompCode" : "string",
+  "PmjolEmpNo" : "string",
+  "PmjolEmpName" : "string",
+  "PmjolJobCode" : "string",
+  "PmjolPhsCode" : "string",
+  "PmjolCatCode" : "string",
+  "PmjolOhType" : "string",
+  "PmjolNotes" : "string",
+  "PmjolSubmittedFlag" : "string",
+  "PmjolExpCode" : "string",
+  "PmjolExpDesc" : "string",
+  "PmjolIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjolIuCreateUser" : "string",
+  "PmjolIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjolIuUpdateUser" : "string",
+  "PmjolVUuid" : "string",
+  "PmjolJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjolJournalVUuid":"string","PmjolCompCode":"string","PmjolVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="f9e40871-cd26-4a77-894a-a852332c7467" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjolJournalVUuid":"string","PmjolCompCode":"string","PmjolVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="7b523586-874a-4643-9c62-adbf0efaaf24" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjolSubmittedFlag":"Y"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

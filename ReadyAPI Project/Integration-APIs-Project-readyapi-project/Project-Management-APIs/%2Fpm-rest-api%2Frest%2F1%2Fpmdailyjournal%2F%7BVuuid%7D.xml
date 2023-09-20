@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjournal/{Vuuid}" path="/pm-rest-api/rest/1/pmdailyjournal/{Vuuid}" id="bd8084da-e687-40b6-a7ce-ff815388b386" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bd8084da-e687-40b6-a7ce-ff815388b386fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjournal%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ccffd1de-446d-4e4b-8b7d-ff22ca1934fd" method="GET">
+    <con:description>Retrieve a Specific PM Daily Journal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GpmjJournalId" : "string",
+  "GpmjCompCode" : "string",
+  "GpmjProjCode" : "string",
+  "GpmjDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjPrepPartnCode" : "string",
+  "GpmjPrepPartnTypeCode" : "string",
+  "GpmjPrepContactCode" : "string",
+  "GpmjClvValueCode1" : "string",
+  "GpmjClvValueCode2" : "string",
+  "GpmjClvValueCode3" : "string",
+  "GpmjClvValueCode4" : "string",
+  "GpmjClvValueCode5" : "string",
+  "GpmjClvValueCode6" : "string",
+  "GpmjSkyConditions" : "string",
+  "GpmjWindConditions" : "string",
+  "GpmjRainDayFlag" : "string",
+  "GpmjRecordStatus" : "string",
+  "GpmjModifiedBy" : "string",
+  "GpmjModifiedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjCreationDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjUtranStatusCode" : "string",
+  "GpycrhCommonName" : "string",
+  "GpmjActivities" : "string",
+  "GpmffsFieldPrompt1" : "string",
+  "GpmffsFieldPrompt2" : "string",
+  "GpmffsFieldPrompt3" : "string",
+  "GpmffsFieldPrompt4" : "string",
+  "GpmffsFieldPrompt5" : "string",
+  "GpmffsFieldPrompt6" : "string",
+  "GpmffdField1" : "string",
+  "GpmffdField2" : "string",
+  "GpmffdField3" : "string",
+  "GpmffdField4" : "string",
+  "GpmffdField5" : "string",
+  "GpmffdField6" : "string",
+  "GpmjIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjIuCreateUser" : "string",
+  "GpmjIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjIuUpdateUser" : "string",
+  "GpmjVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e7c54269-f12a-4a0e-83b1-f47a2fd48631" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="88501a2a-ee91-4b74-aa9b-2ed5c49bd62e" method="PATCH">
+    <con:description>Update a Specific PM Daily Journal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GpmjJournalId" : "string",
+  "GpmjCompCode" : "string",
+  "GpmjProjCode" : "string",
+  "GpmjDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjPrepPartnCode" : "string",
+  "GpmjPrepPartnTypeCode" : "string",
+  "GpmjPrepContactCode" : "string",
+  "GpmjClvValueCode1" : "string",
+  "GpmjClvValueCode2" : "string",
+  "GpmjClvValueCode3" : "string",
+  "GpmjClvValueCode4" : "string",
+  "GpmjClvValueCode5" : "string",
+  "GpmjClvValueCode6" : "string",
+  "GpmjSkyConditions" : "string",
+  "GpmjWindConditions" : "string",
+  "GpmjRainDayFlag" : "string",
+  "GpmjRecordStatus" : "string",
+  "GpmjModifiedBy" : "string",
+  "GpmjModifiedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjCreationDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjUtranStatusCode" : "string",
+  "GpycrhCommonName" : "string",
+  "GpmjActivities" : "string",
+  "GpmffsFieldPrompt1" : "string",
+  "GpmffsFieldPrompt2" : "string",
+  "GpmffsFieldPrompt3" : "string",
+  "GpmffsFieldPrompt4" : "string",
+  "GpmffsFieldPrompt5" : "string",
+  "GpmffsFieldPrompt6" : "string",
+  "GpmffdField1" : "string",
+  "GpmffdField2" : "string",
+  "GpmffdField3" : "string",
+  "GpmffdField4" : "string",
+  "GpmffdField5" : "string",
+  "GpmffdField6" : "string",
+  "GpmjIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjIuCreateUser" : "string",
+  "GpmjIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmjIuUpdateUser" : "string",
+  "GpmjVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"GpmjCompCode":"string","GpmjProjCode":"string","GpmjJournalId":"string","GpmjPrepContactCode":"string","GpmjPrepPartnCode":"string","GpmjPrepPartnTypeCode":"string","GpmjVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="f19498cd-77ff-427d-a423-6f8fdf32e777" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GpmjCompCode":"string","GpmjProjCode":"string","GpmjJournalId":"string","GpmjPrepContactCode":"string","GpmjPrepPartnCode":"string","GpmjPrepPartnTypeCode":"string","GpmjVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="6ea89ca2-e451-4ba0-b4c2-fffa49314807" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GpmjRainDayFlag":"Y"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

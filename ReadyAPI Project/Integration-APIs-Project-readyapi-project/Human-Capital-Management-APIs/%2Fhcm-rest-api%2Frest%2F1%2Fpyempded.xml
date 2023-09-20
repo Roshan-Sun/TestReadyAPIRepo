@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempded" path="/hcm-rest-api/rest/1/pyempded" id="9e8ff7a7-d628-4d1d-9a81-91dfe0f76a20" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9e8ff7a7-d628-4d1d-9a81-91dfe0f76a20fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempded</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f88d720f-1004-4c9e-8ea3-3b472076b213" method="GET">
+    <con:description>Retrieve PY Employee Deductions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>DedCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Deduction Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PlanCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Plan Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PloCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Plan Option code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EffStartDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Deduction Effective Start Date (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EndDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Deduction Ending Date (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmdCompCode" : "string",
+  "EmdPrnCode" : "string",
+  "EmdEmpNo" : "string",
+  "EmdDedCode" : "string",
+  "EmdDedName" : "string",
+  "EmdStartDate" : "YYYY-MM-dd",
+  "EmdEffStartDate" : "YYYY-MM-dd",
+  "EmdEndDate" : "YYYY-MM-dd",
+  "EmdDedAmount" : 0,
+  "EmdDedType" : "string",
+  "EmdBaseCode" : "string",
+  "EmdContrAmt" : 0,
+  "EmdContrMaxAmt" : 0,
+  "EmdBaseAmt" : 0,
+  "EmdPlanCode" : "string",
+  "EmdPlanName" : "string",
+  "EmdPloCode" : "string",
+  "EmdPloName" : "string",
+  "EmdVendor" : "string",
+  "EmdVenName" : "string",
+  "EmdOutOfAreaFlag" : "string",
+  "EmdOthInsurFlag" : "string",
+  "EmdOthInsurVendor" : "string",
+  "EmdOthPolicyNo" : "string",
+  "EmdOthPolicyName" : "string",
+  "EmdOthInsurEffDate" : "YYYY-MM-dd",
+  "EmdComment" : "string",
+  "EmdDeductionSeq" : 0,
+  "EmdVendorAddCode" : "string",
+  "EmdDefaultAmount" : 0,
+  "EmdMinMax" : "string",
+  "EmdMinMaxAmt" : 0,
+  "EmdTotalAmt" : 0,
+  "EmdEmplrContrEffectiveDate" : "YYYY-MM-dd",
+  "EmdLtdTotalAmt" : 0,
+  "EmdUser" : "string",
+  "EmdStartDateDisplay" : "string",
+  "EmdLastUpdDate" : "YYYY-MM-dd",
+  "EmdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fca8bc77-c90a-4ee1-acf8-29e05541b89c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="306eb441-492d-4004-a99d-d2617754d1ff" method="POST">
+    <con:description>Create a PY Employee Deduction</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmdCompCode" : "string",
+  "EmdPrnCode" : "string",
+  "EmdEmpNo" : "string",
+  "EmdDedCode" : "string",
+  "EmdDedName" : "string",
+  "EmdStartDate" : "YYYY-MM-dd",
+  "EmdEffStartDate" : "YYYY-MM-dd",
+  "EmdEndDate" : "YYYY-MM-dd",
+  "EmdDedAmount" : 0,
+  "EmdDedType" : "string",
+  "EmdBaseCode" : "string",
+  "EmdContrAmt" : 0,
+  "EmdContrMaxAmt" : 0,
+  "EmdBaseAmt" : 0,
+  "EmdPlanCode" : "string",
+  "EmdPlanName" : "string",
+  "EmdPloCode" : "string",
+  "EmdPloName" : "string",
+  "EmdVendor" : "string",
+  "EmdVenName" : "string",
+  "EmdOutOfAreaFlag" : "string",
+  "EmdOthInsurFlag" : "string",
+  "EmdOthInsurVendor" : "string",
+  "EmdOthPolicyNo" : "string",
+  "EmdOthPolicyName" : "string",
+  "EmdOthInsurEffDate" : "YYYY-MM-dd",
+  "EmdComment" : "string",
+  "EmdDeductionSeq" : 0,
+  "EmdVendorAddCode" : "string",
+  "EmdDefaultAmount" : 0,
+  "EmdMinMax" : "string",
+  "EmdMinMaxAmt" : 0,
+  "EmdTotalAmt" : 0,
+  "EmdEmplrContrEffectiveDate" : "YYYY-MM-dd",
+  "EmdLtdTotalAmt" : 0,
+  "EmdUser" : "string",
+  "EmdStartDateDisplay" : "string",
+  "EmdLastUpdDate" : "YYYY-MM-dd",
+  "EmdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmdPloName":"string","EmdPloCode":"string","EmdStartDate":"string","EmdCompCode":"string","EmdPrnCode":"string","EmdDedCode":"string","EmdDedType":"string","EmdPlanCode":"string","EmdPlanName":"string","EmdEmpNo":"string","EmdEffStartDate":"string","EmdLastUpdDate":"string","EmdUser":"string","EmdOutOfAreaFlag":"string","EmdOthInsurFlag":"string","EmdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e44e415b-daf4-4829-a746-fedf97a87d78" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmdPloName":"string","EmdPloCode":"string","EmdStartDate":"string","EmdCompCode":"string","EmdPrnCode":"string","EmdDedCode":"string","EmdDedType":"string","EmdPlanCode":"string","EmdPlanName":"string","EmdEmpNo":"string","EmdEffStartDate":"string","EmdLastUpdDate":"string","EmdUser":"string","EmdOutOfAreaFlag":"string","EmdOthInsurFlag":"string","EmdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="960b4a39-30a3-4328-8242-759d7ab302ff" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmdComment":"testing123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

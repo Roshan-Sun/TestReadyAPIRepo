@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/businesspartner/{Vuuid}" path="/sys-rest-api/rest/1/businesspartner/{Vuuid}" id="5093e396-fa2d-4d29-8c3b-f520a325b8be" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5093e396-fa2d-4d29-8c3b-f520a325b8befileName">%2Fsys-rest-api%2Frest%2F1%2Fbusinesspartner%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="af19ff7c-3f81-43d3-a77d-3c7d5433aa62" method="GET">
+    <con:description>Retrieve a Specific Business Partner</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpCode" : "string",
+  "BpName" : "string",
+  "BpAkaName" : "string",
+  "BpAbbrevCode" : "string",
+  "BpShortName" : "string",
+  "BpParentCode" : "string",
+  "BpParentName" : "string",
+  "BpAdd1" : "string",
+  "BpAdd2" : "string",
+  "BpAdd3" : "string",
+  "BpRegionCode" : "string",
+  "BpRegionName" : "string",
+  "BpPostalCode" : "string",
+  "BpCountry" : "string",
+  "BpContactName" : "string",
+  "BpPhone" : "string",
+  "BpFax" : "string",
+  "BpEmail" : "string",
+  "BpWebSite" : "string",
+  "BpLegalentTypeCode" : "string",
+  "BpLegalentTypeName" : "string",
+  "BpRegistrationCode" : "string",
+  "BpVatCountryCode" : "string",
+  "BpVatRegistrationNum" : "string",
+  "BpClassCode" : "string",
+  "BpClassName" : "string",
+  "BpStartDate" : "YYYY-MM-dd",
+  "BpOneTimeFlag" : "string",
+  "BpActiveFlag" : "string",
+  "Bp1099Code" : "string",
+  "Bp1099Name" : "string",
+  "BpModFlag" : "string",
+  "BpCustBalAmt" : 0,
+  "BpTypeCode" : "string",
+  "BpOmOnlyFlag" : "string",
+  "BpUeValidFlag" : "string",
+  "BpSsnFlag" : "string",
+  "BpVendorStatusFlag" : "string",
+  "BpCustomerStatusFlag" : "string",
+  "BpClvValueCode1" : "string",
+  "BpClvValueCode1Prompt" : "string",
+  "BpClvValueCode2" : "string",
+  "BpClvValueCode2Prompt" : "string",
+  "BpClvValueCode3" : "string",
+  "BpClvValueCode3Prompt" : "string",
+  "BpClvValueCode4" : "string",
+  "BpClvValueCode4Prompt" : "string",
+  "BpClvValueCode5" : "string",
+  "BpClvValueCode5Prompt" : "string",
+  "BpClvValueCode6" : "string",
+  "BpClvValueCode6Prompt" : "string",
+  "BpPrequalRequiredFlag" : "string",
+  "BpSysBpAutoNumberFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "BpLegalName" : "string",
+  "BpDispatchFlag" : "string",
+  "BpCreateDefaultVendorComp" : "string",
+  "BpCreateDefaultCustComp" : "string",
+  "BpVUuid" : "string",
+  "BpIuCreateDate" : "YYYY-MM-dd",
+  "BpIuCreateUser" : "string",
+  "BpIuUpdateDate" : "YYYY-MM-dd",
+  "BpIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="10d0ff57-f7e8-43bb-a069-d053b76798b0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="4b9d63ac-14f4-48ce-8b90-9161ba670e38" method="PATCH">
+    <con:description>Update a Specific Business Partner</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpCode" : "string",
+  "BpName" : "string",
+  "BpAkaName" : "string",
+  "BpAbbrevCode" : "string",
+  "BpShortName" : "string",
+  "BpParentCode" : "string",
+  "BpParentName" : "string",
+  "BpAdd1" : "string",
+  "BpAdd2" : "string",
+  "BpAdd3" : "string",
+  "BpRegionCode" : "string",
+  "BpRegionName" : "string",
+  "BpPostalCode" : "string",
+  "BpCountry" : "string",
+  "BpContactName" : "string",
+  "BpPhone" : "string",
+  "BpFax" : "string",
+  "BpEmail" : "string",
+  "BpWebSite" : "string",
+  "BpLegalentTypeCode" : "string",
+  "BpLegalentTypeName" : "string",
+  "BpRegistrationCode" : "string",
+  "BpVatCountryCode" : "string",
+  "BpVatRegistrationNum" : "string",
+  "BpClassCode" : "string",
+  "BpClassName" : "string",
+  "BpStartDate" : "YYYY-MM-dd",
+  "BpOneTimeFlag" : "string",
+  "BpActiveFlag" : "string",
+  "Bp1099Code" : "string",
+  "Bp1099Name" : "string",
+  "BpModFlag" : "string",
+  "BpCustBalAmt" : 0,
+  "BpTypeCode" : "string",
+  "BpOmOnlyFlag" : "string",
+  "BpUeValidFlag" : "string",
+  "BpSsnFlag" : "string",
+  "BpVendorStatusFlag" : "string",
+  "BpCustomerStatusFlag" : "string",
+  "BpClvValueCode1" : "string",
+  "BpClvValueCode1Prompt" : "string",
+  "BpClvValueCode2" : "string",
+  "BpClvValueCode2Prompt" : "string",
+  "BpClvValueCode3" : "string",
+  "BpClvValueCode3Prompt" : "string",
+  "BpClvValueCode4" : "string",
+  "BpClvValueCode4Prompt" : "string",
+  "BpClvValueCode5" : "string",
+  "BpClvValueCode5Prompt" : "string",
+  "BpClvValueCode6" : "string",
+  "BpClvValueCode6Prompt" : "string",
+  "BpPrequalRequiredFlag" : "string",
+  "BpSysBpAutoNumberFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "BpLegalName" : "string",
+  "BpDispatchFlag" : "string",
+  "BpCreateDefaultVendorComp" : "string",
+  "BpCreateDefaultCustComp" : "string",
+  "BpVUuid" : "string",
+  "BpIuCreateDate" : "YYYY-MM-dd",
+  "BpIuCreateUser" : "string",
+  "BpIuUpdateDate" : "YYYY-MM-dd",
+  "BpIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BpDispatchFlag":"string","BpPrequalRequiredFlag":"string","BpAbbrevCode":"string","BpCode":"string","BpName":"string","BpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="c1da6d3b-31a6-4f40-b772-8d155ec7f419" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpDispatchFlag":"string","BpPrequalRequiredFlag":"string","BpAbbrevCode":"string","BpCode":"string","BpName":"string","BpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0a652e4c-9041-4fc0-8087-de09a6d1b81d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpAdd2":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

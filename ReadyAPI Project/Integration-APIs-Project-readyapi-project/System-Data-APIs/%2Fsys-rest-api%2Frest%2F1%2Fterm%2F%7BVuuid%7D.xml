@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/term/{Vuuid}" path="/sys-rest-api/rest/1/term/{Vuuid}" id="6b0fd3e2-c863-4001-b077-ce25ee30c6ba" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6b0fd3e2-c863-4001-b077-ce25ee30c6bafileName">%2Fsys-rest-api%2Frest%2F1%2Fterm%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="995c88a1-de8d-4872-898d-b0263fdfcdfa" method="GET">
+    <con:description>Retrieve a Specific Term</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TermCompCode" : "string",
+  "TermCode" : "string",
+  "TermName" : "string",
+  "TermCtrlCode" : "string",
+  "TermDueModay" : 0,
+  "TermDueDay" : 0,
+  "TermDiscMonthDay" : 0,
+  "TermDiscDay" : 0,
+  "TermPc" : 0,
+  "TermHldbkPc" : 0,
+  "TermSubmitDays" : 0,
+  "TermPayNoticeDays" : 0,
+  "TermFinalPayDays" : 0,
+  "TermPaylessNoticeDays" : 0,
+  "TermVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="7e141beb-3381-4501-99bf-87bf1a6319a1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="8255428e-efe3-44d8-bc58-f072c1113cad" method="DELETE">
+    <con:description>Delete a Specific Term</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f26e28e9-0865-4585-9e34-82b54f9845f4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="d9740981-cff8-4389-8e07-f16f9bf09369" method="PATCH">
+    <con:description>Update a Specific Term</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TermCompCode" : "string",
+  "TermCode" : "string",
+  "TermName" : "string",
+  "TermCtrlCode" : "string",
+  "TermDueModay" : 0,
+  "TermDueDay" : 0,
+  "TermDiscMonthDay" : 0,
+  "TermDiscDay" : 0,
+  "TermPc" : 0,
+  "TermHldbkPc" : 0,
+  "TermSubmitDays" : 0,
+  "TermPayNoticeDays" : 0,
+  "TermFinalPayDays" : 0,
+  "TermPaylessNoticeDays" : 0,
+  "TermVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TermCode":"string","TermCompCode":"string","TermDueDay":"integer","TermDiscDay":"integer","TermVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="a79a6d3d-8326-4201-ad30-9eaaa11d1324" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TermCode":"string","TermCompCode":"string","TermDueDay":"integer","TermDiscDay":"integer","TermVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="3a79bc62-6068-4b0e-94d1-eeef1df69134" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TermName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

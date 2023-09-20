@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/prmtask" path="/prm-rest-api/rest/1/prmtask" id="3105b866-635b-4a00-b84f-fba1bd1a0200" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3105b866-635b-4a00-b84f-fba1bd1a0200fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmtask</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2af0c59a-f646-4eb3-ba41-0f605a05d438" method="GET">
+    <con:description>Retrieve PRM Tasks</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TaskCode" : "string",
+  "TaskPtgtType" : "string",
+  "TaskTitle" : "string",
+  "TaskDescription" : "string",
+  "TaskMteamCode" : "string",
+  "TaskVendorCode" : "string",
+  "TaskActiveFlag" : "string",
+  "TaskGroupTaskFlag" : "string",
+  "TaskCmpoComponentCode" : "string",
+  "TaskWiccLabCompCode" : "string",
+  "TaskWiccLabCode" : "string",
+  "TaskWiccMatCompCode" : "string",
+  "TaskWiccMatCode" : "string",
+  "TaskWiccConCompCode" : "string",
+  "TaskWiccConCode" : "string",
+  "TaskWiccEqCompCode" : "string",
+  "TaskWiccEqCode" : "string",
+  "TaskWiccOthCompCode" : "string",
+  "TaskWiccOthCode" : "string",
+  "TaskDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskCreatedBy" : "string",
+  "TaskDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskModifiedBy" : "string",
+  "TaskClass1" : "string",
+  "TaskClass2" : "string",
+  "TaskClass3" : "string",
+  "TaskClass4" : "string",
+  "TaskSrcCompCode" : "string",
+  "TaskJobCode" : "string",
+  "TaskPhsCode" : "string",
+  "TaskDeptCode" : "string",
+  "TaskTypeCode" : "string",
+  "TaskBillingPricePerUnitWm" : "string",
+  "TaskEntry3Code" : "string",
+  "TaskUpdateOnlyEqpFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "TaskIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f2d5b7ae-c346-4a66-950e-7b2cbcdd591e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f287eb48-fa1c-41fb-bd31-f604399d79fb" method="POST">
+    <con:description>Create a PRM Task</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TaskCode" : "string",
+  "TaskPtgtType" : "string",
+  "TaskTitle" : "string",
+  "TaskDescription" : "string",
+  "TaskMteamCode" : "string",
+  "TaskVendorCode" : "string",
+  "TaskActiveFlag" : "string",
+  "TaskGroupTaskFlag" : "string",
+  "TaskCmpoComponentCode" : "string",
+  "TaskWiccLabCompCode" : "string",
+  "TaskWiccLabCode" : "string",
+  "TaskWiccMatCompCode" : "string",
+  "TaskWiccMatCode" : "string",
+  "TaskWiccConCompCode" : "string",
+  "TaskWiccConCode" : "string",
+  "TaskWiccEqCompCode" : "string",
+  "TaskWiccEqCode" : "string",
+  "TaskWiccOthCompCode" : "string",
+  "TaskWiccOthCode" : "string",
+  "TaskDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskCreatedBy" : "string",
+  "TaskDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskModifiedBy" : "string",
+  "TaskClass1" : "string",
+  "TaskClass2" : "string",
+  "TaskClass3" : "string",
+  "TaskClass4" : "string",
+  "TaskSrcCompCode" : "string",
+  "TaskJobCode" : "string",
+  "TaskPhsCode" : "string",
+  "TaskDeptCode" : "string",
+  "TaskTypeCode" : "string",
+  "TaskBillingPricePerUnitWm" : "string",
+  "TaskEntry3Code" : "string",
+  "TaskUpdateOnlyEqpFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "TaskIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TaskVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TaskTitle":"string","TaskCode":"string","TaskPtgtType":"string","TaskActiveFlag":"string","TaskGroupTaskFlag":"string","TaskVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="98ce76bd-2643-4e22-a940-ddcc9c7cad6e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TaskTitle":"string","TaskCode":"string","TaskPtgtType":"string","TaskActiveFlag":"string","TaskGroupTaskFlag":"string","TaskVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="c8712b07-463b-4866-ae43-704e73fd46e3" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TaskDescription":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

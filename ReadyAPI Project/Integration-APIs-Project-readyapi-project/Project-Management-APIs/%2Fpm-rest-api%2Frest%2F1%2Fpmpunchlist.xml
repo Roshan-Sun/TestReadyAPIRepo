@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmpunchlist" path="/pm-rest-api/rest/1/pmpunchlist" id="125c9fd0-f87a-446c-991b-3ef6d98e5e03" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="125c9fd0-f87a-446c-991b-3ef6d98e5e03fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchlist</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b58d3b24-2799-474d-9724-150044c045da" method="GET">
+    <con:description>Retrieve PM Punchlists</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompany</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompany)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmplCompCode" : "string",
+  "PmplProjName" : "string",
+  "PmplCode" : "string",
+  "PmplTitle" : "string",
+  "PmplToPartnCode" : "string",
+  "PmplToPartnTypeCode" : "string",
+  "PmplToContactCode" : "string",
+  "PmplToContactName" : "string",
+  "PmplFromPartnCode" : "string",
+  "PmplFromPartnTypeCode" : "string",
+  "PmplFromContactCode" : "string",
+  "PmplFromContactName" : "string",
+  "PmplDesc" : "string",
+  "PmplArea1Name" : "string",
+  "PmplArea2Name" : "string",
+  "PmplArea3Name" : "string",
+  "PmplArea4Name" : "string",
+  "PmplRecordStatus" : "string",
+  "PmplReceivedFlag" : "string",
+  "PmplReceivedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplReceivedDateFrmtd" : "string",
+  "PmplSubmittedDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplSubmittedDateFrmtd" : "string",
+  "PmplStatusCode" : "string",
+  "PmplClvValueCode1" : "string",
+  "PmplClvValueCode2" : "string",
+  "PmplClvValueCode3" : "string",
+  "PmplClvValueCode4" : "string",
+  "PmplClvValueCode5" : "string",
+  "PmplClvValueCode6" : "string",
+  "PmplGlobalUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmplVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3e78335b-b228-4edc-8510-d7697f88219f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyjobpayrate" path="/hcm-rest-api/rest/1/pyjobpayrate" id="b1c1376b-e9e4-4548-a259-0e9587616d84" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b1c1376b-e9e4-4548-a259-0e9587616d84fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyjobpayrate</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f930937d-5c42-480d-be66-1992ab913ee5" method="GET">
+    <con:description>Retrieve PY Job Pay Rates</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PhsCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Phase Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ShiftCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Shift Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TrdCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Trade Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EffDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Rate Effective Date (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JprCompCode" : "string",
+  "JprCompName" : "string",
+  "JprJobCode" : "string",
+  "JprJobName" : "string",
+  "JprPhsCode" : "string",
+  "JprPhsName" : "string",
+  "JprCatCode" : "string",
+  "JprCatName" : "string",
+  "JprTrdCode" : "string",
+  "JprTrdName" : "string",
+  "JprEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JprUser" : "string",
+  "JprLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JprChargeMultiFlag" : "string",
+  "JprBillMultiFlag" : "string",
+  "JprEmpNo" : "string",
+  "JprEmpName" : "string",
+  "JprEmpUniCode" : "string",
+  "JprOtDotPayMultiFlag" : "string",
+  "JprShiftCode" : "string",
+  "JprIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JprIuCreateUser" : "string",
+  "JprIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JprIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JprVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3837e96e-82d2-4acb-ab8c-721c1e990bc5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

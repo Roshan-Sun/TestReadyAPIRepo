@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmfwd/{Vuuid}" path="/pm-rest-api/rest/1/pmfwd/{Vuuid}" id="4989e4c1-6688-4928-8465-8508204f3ed1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4989e4c1-6688-4928-8465-8508204f3ed1fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmfwd%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2f1446bf-1a6d-4237-8986-4a68c1443a4d" method="GET">
+    <con:description>Retrieve a Specific PM Field Work Directive</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfwdCompCode" : "string",
+  "PmfwdFwdId" : "string",
+  "PmfwdSubject" : "string",
+  "PmfwdStatusCode" : "string",
+  "PmfwdToPartnCode" : "string",
+  "PmfwdToPartnTypeCode" : "string",
+  "PmfwdToContactCode" : "string",
+  "PmfwdRespStatusCode" : "string",
+  "PmfwdFromPartnCode" : "string",
+  "PmfwdFromPartnTypeCode" : "string",
+  "PmfwdFromContactCode" : "string",
+  "PmfwdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdRefDesc" : "string",
+  "PmfwdDesc" : "string",
+  "PmfwdFollowupNotes" : "string",
+  "PmfwdFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdFollowupRequiredFlag" : "string",
+  "PmfwdClvValueCode1" : "string",
+  "PmfwdClvValueCode2" : "string",
+  "PmfwdClvValueCode3" : "string",
+  "PmfwdClvValueCode4" : "string",
+  "PmfwdClvValueCode5" : "string",
+  "PmfwdClvValueCode6" : "string",
+  "PmfwdRecordStatus" : "string",
+  "PmfwdCmCode" : "string",
+  "PmfwdFlwpPartnCode" : "string",
+  "PmfwdFlwpPartnTypeCode" : "string",
+  "PmfwdFlwpContactCode" : "string",
+  "PmfwdProjCode" : "string",
+  "PmfwdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="7865ca41-53f8-4943-890c-5e3a8e62734e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="10bac1ed-b35f-4952-8df6-79afcc9079a0" method="DELETE">
+    <con:description>Delete a Specific PM Field Work Directive</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="5ef1636c-94eb-4438-87db-084f278a8058" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="aa326d70-0ef0-4831-bdcb-dee021695023" method="PATCH">
+    <con:description>Update a Specific PM Field Work Directive</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmfwdCompCode" : "string",
+  "PmfwdFwdId" : "string",
+  "PmfwdSubject" : "string",
+  "PmfwdStatusCode" : "string",
+  "PmfwdToPartnCode" : "string",
+  "PmfwdToPartnTypeCode" : "string",
+  "PmfwdToContactCode" : "string",
+  "PmfwdRespStatusCode" : "string",
+  "PmfwdFromPartnCode" : "string",
+  "PmfwdFromPartnTypeCode" : "string",
+  "PmfwdFromContactCode" : "string",
+  "PmfwdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdRefDesc" : "string",
+  "PmfwdDesc" : "string",
+  "PmfwdFollowupNotes" : "string",
+  "PmfwdFollowupDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdFollowupDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmfwdFollowupRequiredFlag" : "string",
+  "PmfwdClvValueCode1" : "string",
+  "PmfwdClvValueCode2" : "string",
+  "PmfwdClvValueCode3" : "string",
+  "PmfwdClvValueCode4" : "string",
+  "PmfwdClvValueCode5" : "string",
+  "PmfwdClvValueCode6" : "string",
+  "PmfwdRecordStatus" : "string",
+  "PmfwdCmCode" : "string",
+  "PmfwdFlwpPartnCode" : "string",
+  "PmfwdFlwpPartnTypeCode" : "string",
+  "PmfwdFlwpContactCode" : "string",
+  "PmfwdProjCode" : "string",
+  "PmfwdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmfwdCompCode":"string","PmfwdProjCode":"string","PmfwdFollowupRequiredFlag":"string","PmfwdFwdId":"string","PmfwdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="9130ced1-116d-447f-b106-d5580494c736" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfwdCompCode":"string","PmfwdProjCode":"string","PmfwdFollowupRequiredFlag":"string","PmfwdFwdId":"string","PmfwdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="6bc4856b-1140-4473-a87e-e61d5f499e68" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmfwdRefDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

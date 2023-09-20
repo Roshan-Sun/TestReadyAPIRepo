@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/aragedreport" path="/ar-rest-api/rest/1/aragedreport" id="26104cee-9137-4063-91bf-35646cb84ce6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="26104cee-9137-4063-91bf-35646cb84ce6fileName">%2Far-rest-api%2Frest%2F1%2Faragedreport</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="cd8eed9f-baf1-4ba7-a4fa-068ffeb5b28f" method="GET">
+    <con:description>Please note - finder MUST be used - data won't be retrieved otherwise.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ar1000d</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>FromCompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code Starting Range (ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ToCompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code Ending Range (ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>JobCustGroup</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Customer Group Name (ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CustZeroAccTotalFlag</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to include Zero Accounts (Y or N - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>IncludeDeposit</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to include Deposits (Y or N - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>AgeDeposit</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to Age the Deposits (Y or N - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ShowDeposit</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to Show Deposits (Y or N - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>AgingDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Report Starting Date (YYYY-MM-dd - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CutOffDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Report Cut Off Date (YYYY-MM-dd - ar1000d)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>ClosedInvoice</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Flag to include closed invoices (Y or N - ar1000d)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GlarCompCode" : "string",
+  "GlarCustCode" : "string",
+  "GlarCurrCode" : "string",
+  "GlarCurrName" : "string",
+  "GlarGroup1Title" : "string",
+  "GlarGroup1Code" : "string",
+  "GlarGroup1Name" : "string",
+  "GlarGroup2Title" : "string",
+  "GlarGroup2Code" : "string",
+  "GlarGroup2Name" : "string",
+  "GlarCustClassCode" : "string",
+  "GlarClassTypeCode" : "string",
+  "GlarSumDate" : "YYYY-MM-dd",
+  "GlarSumNum" : "string",
+  "GlarTypeCode" : "string",
+  "GlarPrintTypeCode" : "string",
+  "GlarDate" : "YYYY-MM-dd",
+  "GlarCustomerContract" : "string",
+  "GlarDetNum" : "string",
+  "GlarAgeNum" : 0,
+  "GlarOrigAmt" : 0,
+  "GlarHldbkAmt" : 0,
+  "GlarOutstHldbkAmt" : 0,
+  "GlarDiscAmt" : 0,
+  "GlarNetOutstandAmt" : 0,
+  "GlarTitle1" : "string",
+  "GlarTitle2" : "string",
+  "GlarTitle3" : "string",
+  "GlarTitle4" : "string",
+  "GlarDayNum1" : 0,
+  "GlarDayNum2" : 0,
+  "GlarDayNum3" : 0,
+  "GlarDayNum4" : 0,
+  "GlarDeptCode" : "string",
+  "GlarCheckPrintFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="cc961bd3-79bc-4dcb-96d3-3e77fa6b0038" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

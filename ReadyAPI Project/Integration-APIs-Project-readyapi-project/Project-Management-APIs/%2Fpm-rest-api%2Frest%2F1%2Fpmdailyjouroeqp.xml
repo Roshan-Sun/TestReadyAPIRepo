@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjouroeqp" path="/pm-rest-api/rest/1/pmdailyjouroeqp" id="e115ec7d-7786-41ff-9ed9-a808e1e9a087" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e115ec7d-7786-41ff-9ed9-a808e1e9a087fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjouroeqp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f88c0f1b-612e-4072-8a26-b9c327db327e" method="GET">
+    <con:description>Retrieve PM Daily Journal Owner Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjoeCompCode" : "string",
+  "PmjoeEqpCode" : "string",
+  "PmjoeEqpName" : "string",
+  "PmjoeTrancodeCode" : "string",
+  "PmjoeJobCode" : "string",
+  "PmjoePhsCode" : "string",
+  "PmjoeCatCode" : "string",
+  "PmjoeNotes" : "string",
+  "PmjoeSubmittedFlag" : "string",
+  "PmjtlCatName" : "string",
+  "PmjoePartnTypeCode" : "string",
+  "PmjoePartnName" : "string",
+  "PmjoeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjoeIuCreateUser" : "string",
+  "PmjoeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjoeIuUpdateUser" : "string",
+  "PmjoeVUuid" : "string",
+  "PmjoeJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6b75e7e3-636c-42a6-bde4-9f6a6ae40e38" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="c98b2300-cd71-402c-93fa-3d26157f4c1e" method="POST">
+    <con:description>Create a PM Daily Journal Owner Equipment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjoeCompCode" : "string",
+  "PmjoeEqpCode" : "string",
+  "PmjoeEqpName" : "string",
+  "PmjoeTrancodeCode" : "string",
+  "PmjoeJobCode" : "string",
+  "PmjoePhsCode" : "string",
+  "PmjoeCatCode" : "string",
+  "PmjoeNotes" : "string",
+  "PmjoeSubmittedFlag" : "string",
+  "PmjtlCatName" : "string",
+  "PmjoePartnTypeCode" : "string",
+  "PmjoePartnName" : "string",
+  "PmjoeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjoeIuCreateUser" : "string",
+  "PmjoeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjoeIuUpdateUser" : "string",
+  "PmjoeVUuid" : "string",
+  "PmjoeJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjoeCompCode":"string","PmjoeJournalVUuid":"string","PmjoeVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="abd9ae9d-3b9a-4a1d-b692-b93d53638427" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjoeCompCode":"string","PmjoeJournalVUuid":"string","PmjoeVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f908dd97-073c-4655-9fe4-f1f838eb0df3" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjoeNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

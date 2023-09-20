@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/po-rest-api/rest/1/porequisitiondet" path="/po-rest-api/rest/1/porequisitiondet" id="5693f55f-f236-4d06-a0ea-38c160dde9d4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5693f55f-f236-4d06-a0ea-38c160dde9d4fileName">%2Fpo-rest-api%2Frest%2F1%2Fporequisitiondet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="08857012-7066-4d62-ab1c-e22c41c52ef6" method="GET">
+    <con:description>Retrieve PO Requisition Details</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PoreqdCompCode" : "string",
+  "PoreqdNum" : "string",
+  "PoreqdReqdDate" : "YYYY-MM-dd",
+  "PoreqdUpdateIvDate" : "YYYY-MM-dd",
+  "PoreqdPickDate" : "YYYY-MM-dd",
+  "PoreqdPostDate" : "YYYY-MM-dd",
+  "PoreqdLineNum" : 0,
+  "PoreqdDeptCode" : "string",
+  "PoreqdItmCode" : "string",
+  "PoreqdItmName" : "string",
+  "PoreqdItmtypCode" : "string",
+  "PoreqdWmCode" : "string",
+  "PoreqdReqQty" : 0,
+  "PoreqdOrdQty" : 0,
+  "PoreqdPickQty" : 0,
+  "PoreqdPicktodateQty" : 0,
+  "PoreqdLstPriceAmt" : 0,
+  "PoreqdJobCode" : "string",
+  "PoreqdPhsCode" : "string",
+  "PoreqdCatCode" : "string",
+  "PoreqdEcEqpCode" : "string",
+  "PoreqdEcCstCode" : "string",
+  "PoreqdLocCode" : "string",
+  "PoreqdIvFlag" : "string",
+  "PoreqdActionCode" : "string",
+  "PoreqdSelectionCode" : "string",
+  "PoreqdStatCode" : "string",
+  "PoreqdQtetodateQty" : 0,
+  "PoreqdWipDeptCode" : "string",
+  "PoreqdWipAccCode" : "string",
+  "PoreqdTxt1Code" : "string",
+  "PoreqdTxt2Code" : "string",
+  "PoreqdTxt3Code" : "string",
+  "PoreqdSugPrice" : 0,
+  "PoreqdJobCtrlCode" : "string",
+  "PoreqdPhsCtrlCode" : "string",
+  "PoreqdCatCtrlCode" : "string",
+  "PoreqdWbsvCode1" : "string",
+  "PoreqdWbsvCode2" : "string",
+  "PoreqdWbsvCode3" : "string",
+  "PoreqdWbsvCode4" : "string",
+  "PoreqdWbsvCode5" : "string",
+  "PoreqdWbsvCode6" : "string",
+  "PoreqdWbsvCode7" : "string",
+  "PoreqdWbsvCode8" : "string",
+  "PoreqdWbsvCode9" : "string",
+  "PoreqdWbsvCode10" : "string",
+  "PoreqdWbsvCode11" : "string",
+  "PoreqdWbsvCode12" : "string",
+  "PoreqdPmCode" : "string",
+  "PoreqdEqpCode" : "string",
+  "PoreqdComponCode" : "string",
+  "PoreqdTrancodeCode" : "string",
+  "PoreqdClassCode" : "string",
+  "PoreqdSrcCompCode" : "string",
+  "PoreqdTypeCode" : "string",
+  "PoreqdHeading1" : "string",
+  "PoreqdHeading2" : "string",
+  "PoreqdHeading3" : "string",
+  "PoreqdTendpackCode" : "string",
+  "PoreqdTendpackLineNum" : 0,
+  "PoreqdSiNum" : 0,
+  "PoreqdSiLineNum" : 0,
+  "PoreqdOutstandingQty" : 0,
+  "PoreqdInvTypeCode" : "string",
+  "PoreqdItemLocCode" : "string",
+  "PoreqdCiitemtypeCode" : "string",
+  "PoreqdSiMastJobCode" : "string",
+  "PoreqdBlanketFlag" : "string",
+  "PoreqdPoCode" : "string",
+  "PoreqdCrepoCode" : "string",
+  "PoreqdCrepoReleaseNum" : 0,
+  "PoreqdPoLineNum" : 0,
+  "PoreqdInvTransFlag" : "string",
+  "PoreqdLineItmType" : "string",
+  "PoreqdRecIntoInvFlag" : "string",
+  "PoreqdVenCode" : "string",
+  "PoreqdBuyCode" : "string",
+  "PoreqdOutstandinqQty" : 0,
+  "PoreqdPoAmt" : 0,
+  "PoreqdBypassValidation" : "string",
+  "DiscriminatorCode" : "string",
+  "PoreqdUserField5" : "string",
+  "PoreqdUserField6" : "string",
+  "PoreqdUserField7" : "string",
+  "PoreqdUserField8" : "string",
+  "PoreqdCalledFromAppCode" : "string",
+  "PoreqdUserFieldEdtFlag5" : "string",
+  "PoreqdUserFieldEdtFlag6" : "string",
+  "PoreqdUserFieldEdtFlag7" : "string",
+  "PoreqdUserFieldEdtFlag8" : "string",
+  "PoreqdUserFieldName5" : "string",
+  "PoreqdUserFieldName6" : "string",
+  "PoreqdUserFieldName7" : "string",
+  "PoreqdUserFieldName8" : "string",
+  "PoreqdWbsSetupFlag" : "string",
+  "PoreqdTacSetupFlag" : "string",
+  "PoreqdItmDesc" : "string",
+  "PoreqdIuCreateDate" : "YYYY-MM-dd",
+  "PoreqdIuCreateUser" : "string",
+  "PoreqdIuUpdateDate" : "YYYY-MM-dd",
+  "PoreqdIuUpdateUser" : "string",
+  "PoreqdReqVUuid" : "string",
+  "PoreqdVUuid" : "string",
+  "PoreqdOnHandQty" : 0,
+  "PoreqdOnReserveQty" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="7a69e350-126d-449e-b0b3-9fa1592d7cc4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="b51d41cd-4c60-4086-9120-28648a402ce0" method="POST">
+    <con:description>Create PO Requisition Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PoreqdCompCode" : "string",
+  "PoreqdNum" : "string",
+  "PoreqdReqdDate" : "YYYY-MM-dd",
+  "PoreqdUpdateIvDate" : "YYYY-MM-dd",
+  "PoreqdPickDate" : "YYYY-MM-dd",
+  "PoreqdPostDate" : "YYYY-MM-dd",
+  "PoreqdLineNum" : 0,
+  "PoreqdDeptCode" : "string",
+  "PoreqdItmCode" : "string",
+  "PoreqdItmName" : "string",
+  "PoreqdItmtypCode" : "string",
+  "PoreqdWmCode" : "string",
+  "PoreqdReqQty" : 0,
+  "PoreqdOrdQty" : 0,
+  "PoreqdPickQty" : 0,
+  "PoreqdPicktodateQty" : 0,
+  "PoreqdLstPriceAmt" : 0,
+  "PoreqdJobCode" : "string",
+  "PoreqdPhsCode" : "string",
+  "PoreqdCatCode" : "string",
+  "PoreqdEcEqpCode" : "string",
+  "PoreqdEcCstCode" : "string",
+  "PoreqdLocCode" : "string",
+  "PoreqdIvFlag" : "string",
+  "PoreqdActionCode" : "string",
+  "PoreqdSelectionCode" : "string",
+  "PoreqdStatCode" : "string",
+  "PoreqdQtetodateQty" : 0,
+  "PoreqdWipDeptCode" : "string",
+  "PoreqdWipAccCode" : "string",
+  "PoreqdTxt1Code" : "string",
+  "PoreqdTxt2Code" : "string",
+  "PoreqdTxt3Code" : "string",
+  "PoreqdSugPrice" : 0,
+  "PoreqdJobCtrlCode" : "string",
+  "PoreqdPhsCtrlCode" : "string",
+  "PoreqdCatCtrlCode" : "string",
+  "PoreqdWbsvCode1" : "string",
+  "PoreqdWbsvCode2" : "string",
+  "PoreqdWbsvCode3" : "string",
+  "PoreqdWbsvCode4" : "string",
+  "PoreqdWbsvCode5" : "string",
+  "PoreqdWbsvCode6" : "string",
+  "PoreqdWbsvCode7" : "string",
+  "PoreqdWbsvCode8" : "string",
+  "PoreqdWbsvCode9" : "string",
+  "PoreqdWbsvCode10" : "string",
+  "PoreqdWbsvCode11" : "string",
+  "PoreqdWbsvCode12" : "string",
+  "PoreqdPmCode" : "string",
+  "PoreqdEqpCode" : "string",
+  "PoreqdComponCode" : "string",
+  "PoreqdTrancodeCode" : "string",
+  "PoreqdClassCode" : "string",
+  "PoreqdSrcCompCode" : "string",
+  "PoreqdTypeCode" : "string",
+  "PoreqdHeading1" : "string",
+  "PoreqdHeading2" : "string",
+  "PoreqdHeading3" : "string",
+  "PoreqdTendpackCode" : "string",
+  "PoreqdTendpackLineNum" : 0,
+  "PoreqdSiNum" : 0,
+  "PoreqdSiLineNum" : 0,
+  "PoreqdOutstandingQty" : 0,
+  "PoreqdInvTypeCode" : "string",
+  "PoreqdItemLocCode" : "string",
+  "PoreqdCiitemtypeCode" : "string",
+  "PoreqdSiMastJobCode" : "string",
+  "PoreqdBlanketFlag" : "string",
+  "PoreqdPoCode" : "string",
+  "PoreqdCrepoCode" : "string",
+  "PoreqdCrepoReleaseNum" : 0,
+  "PoreqdPoLineNum" : 0,
+  "PoreqdInvTransFlag" : "string",
+  "PoreqdLineItmType" : "string",
+  "PoreqdRecIntoInvFlag" : "string",
+  "PoreqdVenCode" : "string",
+  "PoreqdBuyCode" : "string",
+  "PoreqdOutstandinqQty" : 0,
+  "PoreqdPoAmt" : 0,
+  "PoreqdBypassValidation" : "string",
+  "DiscriminatorCode" : "string",
+  "PoreqdUserField5" : "string",
+  "PoreqdUserField6" : "string",
+  "PoreqdUserField7" : "string",
+  "PoreqdUserField8" : "string",
+  "PoreqdCalledFromAppCode" : "string",
+  "PoreqdUserFieldEdtFlag5" : "string",
+  "PoreqdUserFieldEdtFlag6" : "string",
+  "PoreqdUserFieldEdtFlag7" : "string",
+  "PoreqdUserFieldEdtFlag8" : "string",
+  "PoreqdUserFieldName5" : "string",
+  "PoreqdUserFieldName6" : "string",
+  "PoreqdUserFieldName7" : "string",
+  "PoreqdUserFieldName8" : "string",
+  "PoreqdWbsSetupFlag" : "string",
+  "PoreqdTacSetupFlag" : "string",
+  "PoreqdItmDesc" : "string",
+  "PoreqdIuCreateDate" : "YYYY-MM-dd",
+  "PoreqdIuCreateUser" : "string",
+  "PoreqdIuUpdateDate" : "YYYY-MM-dd",
+  "PoreqdIuUpdateUser" : "string",
+  "PoreqdReqVUuid" : "string",
+  "PoreqdVUuid" : "string",
+  "PoreqdOnHandQty" : 0,
+  "PoreqdOnReserveQty" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PoreqdCompCode":"ZZ","PoreqdNum":"000001","PoreqdItmCode":"5033015","PoreqdWmCode":"GL","PoreqdReqQty":3,"PoreqdTypeCode":"I","PoreqdLineItmType":"I","PoreqdCiitemtypeCode":"2","PoreqdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="74c2feaf-468c-47de-9845-5afe4f87367b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PoreqdCompCode":"ZZ","PoreqdNum":"000001","PoreqdItmCode":"5033015","PoreqdWmCode":"GL","PoreqdReqQty":3,"PoreqdTypeCode":"I","PoreqdLineItmType":"I","PoreqdCiitemtypeCode":"2","PoreqdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="4f985576-b7b0-452c-bcb3-3c57a2521fad" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PoreqdIvFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

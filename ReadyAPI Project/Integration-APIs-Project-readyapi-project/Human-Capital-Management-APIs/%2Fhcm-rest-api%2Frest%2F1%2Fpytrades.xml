@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytrades" path="/hcm-rest-api/rest/1/pytrades" id="5d6db988-9ed9-4c6b-ab7a-42d5c8fe46b8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5d6db988-9ed9-4c6b-ab7a-42d5c8fe46b8fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytrades</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="eca7f868-396a-46e2-a6df-9aa6ac740987" method="GET">
+    <con:description>Retrieve PY Trades</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TrdCode" : "string",
+  "TrdDescription" : "string",
+  "TrdShortDesc" : "string",
+  "TrdTradeCode" : "string",
+  "TrdTradeName" : "string",
+  "TrdEeoClass" : "string",
+  "TrdUser" : "string",
+  "TrdLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TrdRpAvailblFlag" : "string",
+  "TrdIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TrdIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TrdCertFlag" : "string",
+  "TrdType" : "string",
+  "TrdTypeDesc" : "string",
+  "TrdClassCode" : "string",
+  "TrdSocCode" : "string",
+  "TrdSocDescription" : "string",
+  "TrdCraftCode" : "string",
+  "TrdCraftDesc" : "string",
+  "TrdLaborClass" : "string",
+  "TrdLaborClassDesc" : "string",
+  "TrdEeoClassDesc" : "string",
+  "TrdApprentice" : "string",
+  "TrdApprenticeDesc" : "string",
+  "TrdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d37e7048-1155-4ba4-97f6-c0f5b44b1cf2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

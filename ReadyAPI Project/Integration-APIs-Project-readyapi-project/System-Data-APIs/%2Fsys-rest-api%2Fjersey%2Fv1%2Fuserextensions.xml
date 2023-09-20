@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/jersey/v1/userextensions" path="/sys-rest-api/jersey/v1/userextensions" id="09de4e17-363a-4b18-a2e5-fc76c10ca7ed" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="09de4e17-363a-4b18-a2e5-fc76c10ca7edfileName">%2Fsys-rest-api%2Fjersey%2Fv1%2Fuserextensions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="49be7c95-7915-40cd-9a73-a02dad90b85a" method="POST">
+    <con:description>UE Table required fields MUST be provided in **data** object - you can also include dateFormat, defaulted as YYYY-MM-DD, in the request payload (at same level as **tableCode**) to specify a specific format</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "message" : "Successfully inserted 1 row."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:sampleContent>
+    </con:representation>
+    <con:request name="Regular Insert Example" id="1e522b40-38c8-4f93-82ba-a55df0317245" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Insert with dateFormat Example" id="4e8d4935-c27b-4871-8e24-bbfa63c4e7ba" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"tableCode":"string","dateFormat":"DD-MON-YY","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="65236809-36c4-4287-a94a-bb244e68888d" method="DELETE">
+    <con:description>UE Table required fields MUST be provided in **data** object, and should be the only ones provided but others are also optional. All fields given will be used as criteria to delete upon</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "message" : "Successfully deleted 1 row."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:sampleContent>
+    </con:representation>
+    <con:request name="Regular Delete Example" id="2269a266-e8e4-4527-a234-1ce06376898a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="e663e2c3-2934-4afc-8fd0-67b7364bc0ad" method="PATCH">
+    <con:description>UE Table required fields MUST be provided in **data** object - you can also include dateFormat, defaulted as YYYY-MM-DD, in the request payload (at same level as **tableCode**) to specify a specific format</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "message" : "Successfully updated 1 row."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:sampleContent>
+    </con:representation>
+    <con:request name="Regular Update Example" id="fd3af0c3-41be-45bb-8a23-9a14a030052e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Update with dateFormat Example" id="fd5318cc-b4b5-4d38-b056-07007afbb6c6" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"tableCode":"string","dateFormat":"DD-MON-YY","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmnotes/{Vuuid}" path="/pm-rest-api/rest/1/pmnotes/{Vuuid}" id="9086abe3-12bf-4d55-8866-891023acc8de" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9086abe3-12bf-4d55-8866-891023acc8defileName">%2Fpm-rest-api%2Frest%2F1%2Fpmnotes%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="67fdabae-cee4-4cb9-bea0-4d085256177f" method="GET">
+    <con:description>Retrieve a Specific PM Note</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmnNum" : 0,
+  "PmnContactName" : "string",
+  "PmnDate" : "YYYY-MM-dd",
+  "PmnClosedFlag" : "string",
+  "PmnSubject" : "string",
+  "PmnNote" : "string",
+  "PmnUser" : "string",
+  "PmnComment" : "string",
+  "PmnPartnCode" : "string",
+  "PmnPartnTypeCode" : "string",
+  "PmnContactCode" : "string",
+  "PmnStatusCode" : "string",
+  "PmnInternalFlag" : "string",
+  "PmnObjectType" : "string",
+  "PmnSrcCode" : "string",
+  "PmnSrcDesc" : "string",
+  "DiscriminatorCode" : "string",
+  "PmnVUuid" : "string",
+  "PmnObjCompCode" : "string",
+  "PmnObjProjCode" : "string",
+  "PmnObjKey1" : "string",
+  "PmnObjKey2" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="18ae3d7b-75bd-4559-b653-04482378dfa2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="9d6e80a0-f982-41d3-8959-f10db49fde7d" method="DELETE">
+    <con:description>Delete a Specific PM Note</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="94f8f867-ad80-48b3-a21f-40a1dc87da59" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="cfbb4e35-f35c-452c-b3c6-5fcd0a1f8047" method="PATCH">
+    <con:description>Update a Specific PM Note</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmnNum" : 0,
+  "PmnContactName" : "string",
+  "PmnDate" : "YYYY-MM-dd",
+  "PmnClosedFlag" : "string",
+  "PmnSubject" : "string",
+  "PmnNote" : "string",
+  "PmnUser" : "string",
+  "PmnComment" : "string",
+  "PmnPartnCode" : "string",
+  "PmnPartnTypeCode" : "string",
+  "PmnContactCode" : "string",
+  "PmnStatusCode" : "string",
+  "PmnInternalFlag" : "string",
+  "PmnObjectType" : "string",
+  "PmnSrcCode" : "string",
+  "PmnSrcDesc" : "string",
+  "DiscriminatorCode" : "string",
+  "PmnVUuid" : "string",
+  "PmnObjCompCode" : "string",
+  "PmnObjProjCode" : "string",
+  "PmnObjKey1" : "string",
+  "PmnObjKey2" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmnNum":"integer","PmnObjectType":"string","PmnObjCompCode":"string","PmnObjProjCode":"string","PmnObjKey1":"string","PmnVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="cfb6b8fb-f762-4d10-b312-a1f254b86e5b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmnNum":"integer","PmnObjectType":"string","PmnObjCompCode":"string","PmnObjProjCode":"string","PmnObjKey1":"string","PmnVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="03391aec-fcad-41e7-99e5-4abf422862b1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmnSrcDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

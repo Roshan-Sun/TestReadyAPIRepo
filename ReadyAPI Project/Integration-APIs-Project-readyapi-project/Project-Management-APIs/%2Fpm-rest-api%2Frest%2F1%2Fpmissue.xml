@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmissue" path="/pm-rest-api/rest/1/pmissue" id="c9eb889f-6df5-49a6-9af0-98cd85372f41" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c9eb889f-6df5-49a6-9af0-98cd85372f41fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmissue</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ee884ceb-2c54-439e-90bd-d66a76e8fb39" method="GET">
+    <con:description>Retrieve PM Issues</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmiProjCode" : "string",
+  "DmiCompCode" : "string",
+  "DmiIssueId" : "string",
+  "DmiTitle" : "string",
+  "DmiClvValueCode1" : "string",
+  "DmiClvValueCode2" : "string",
+  "DmiClvValueCode3" : "string",
+  "DmiClvValueCode4" : "string",
+  "DmiClvValueCode5" : "string",
+  "DmiClvValueCode6" : "string",
+  "DmiPartnCode" : "string",
+  "DmiPartnTypeCode" : "string",
+  "DmiContactCode" : "string",
+  "DmiToPartnCode" : "string",
+  "DmiToPartnTypeCode" : "string",
+  "DmiToContactCode" : "string",
+  "DmiRespPartnCode" : "string",
+  "DmiRespPartnTypeCode" : "string",
+  "DmiRespContactCode" : "string",
+  "DmiRespComment" : "string",
+  "DmiDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiUser" : "string",
+  "DmiTypeCode" : "string",
+  "DmiStatusCode" : "string",
+  "DmiDescription" : "string",
+  "DmiPriorityCode" : "string",
+  "DmiResolution" : "string",
+  "DmiSuggestion" : "string",
+  "DmiCustIssueId" : "string",
+  "DmiResolutionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiCreatedByObjType" : "string",
+  "DmiInternalFlag" : "string",
+  "DmiVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="293a81d1-17c3-4fbd-96e0-b02dfb5dc06f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="e5bb0f8e-d9f6-4d9e-be6b-de862f273299" method="POST">
+    <con:description>Create a PM Issue</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmiProjCode" : "string",
+  "DmiCompCode" : "string",
+  "DmiIssueId" : "string",
+  "DmiTitle" : "string",
+  "DmiClvValueCode1" : "string",
+  "DmiClvValueCode2" : "string",
+  "DmiClvValueCode3" : "string",
+  "DmiClvValueCode4" : "string",
+  "DmiClvValueCode5" : "string",
+  "DmiClvValueCode6" : "string",
+  "DmiPartnCode" : "string",
+  "DmiPartnTypeCode" : "string",
+  "DmiContactCode" : "string",
+  "DmiToPartnCode" : "string",
+  "DmiToPartnTypeCode" : "string",
+  "DmiToContactCode" : "string",
+  "DmiRespPartnCode" : "string",
+  "DmiRespPartnTypeCode" : "string",
+  "DmiRespContactCode" : "string",
+  "DmiRespComment" : "string",
+  "DmiDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiUser" : "string",
+  "DmiTypeCode" : "string",
+  "DmiStatusCode" : "string",
+  "DmiDescription" : "string",
+  "DmiPriorityCode" : "string",
+  "DmiResolution" : "string",
+  "DmiSuggestion" : "string",
+  "DmiCustIssueId" : "string",
+  "DmiResolutionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiCreatedByObjType" : "string",
+  "DmiInternalFlag" : "string",
+  "DmiVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="fbb5baac-b69e-4e40-a29e-f873247a6514" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="158c43d6-baa5-4c1e-8bde-370715ee8f14" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmiDescription":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

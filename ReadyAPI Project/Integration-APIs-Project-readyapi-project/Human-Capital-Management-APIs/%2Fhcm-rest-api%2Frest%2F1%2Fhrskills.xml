@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrskills" path="/hcm-rest-api/rest/1/hrskills" id="74511be9-333e-4554-a253-a902a713b00e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="74511be9-333e-4554-a253-a902a713b00efileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrskills</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9be89f80-a5a7-4056-8295-385795750eee" method="GET">
+    <con:description>Retrieve HR Employee Skills</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsklCode" : "string",
+  "GsklDescription" : "string",
+  "GsklShortDesc" : "string",
+  "GsklRate" : 0,
+  "GsklWmCode" : "string",
+  "GsklUser" : "string",
+  "GsklLastUpdDate" : "YYYY-MM-dd",
+  "GsklVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="073beb39-106b-45a6-8202-b8940ef1d394" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2e3003c0-0be6-485c-96d7-c49db01395a0" method="POST">
+    <con:description>Create an HR Employee Skill</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsklCode" : "string",
+  "GsklDescription" : "string",
+  "GsklShortDesc" : "string",
+  "GsklRate" : 0,
+  "GsklWmCode" : "string",
+  "GsklUser" : "string",
+  "GsklLastUpdDate" : "YYYY-MM-dd",
+  "GsklVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"GsklCode":"string","GsklUser":"string","GsklLastUpdDate":"string","GsklVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="c4250ad7-457d-430e-a20e-34014a854dec" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsklCode":"string","GsklUser":"string","GsklLastUpdDate":"string","GsklVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="c5dbdd0e-0cb4-4872-bed6-c56d553c5d60" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsklShortDesc":"yessir"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

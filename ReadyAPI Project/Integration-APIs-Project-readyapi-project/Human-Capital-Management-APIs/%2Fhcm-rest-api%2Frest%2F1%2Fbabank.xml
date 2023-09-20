@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/babank" path="/hcm-rest-api/rest/1/babank" id="438daecf-eaeb-4386-8a69-9989462224d8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="438daecf-eaeb-4386-8a69-9989462224d8fileName">%2Fhcm-rest-api%2Frest%2F1%2Fbabank</con:setting>
+  </con:settings>
+  <con:parameters/>
+</con:resource>

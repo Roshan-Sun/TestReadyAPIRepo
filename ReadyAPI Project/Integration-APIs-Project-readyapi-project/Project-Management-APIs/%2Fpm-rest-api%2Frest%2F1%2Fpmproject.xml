@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmproject" path="/pm-rest-api/rest/1/pmproject" id="2d6581ff-7a43-4ace-bf27-e25e89343a6d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2d6581ff-7a43-4ace-bf27-e25e89343a6dfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmproject</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0651f7f5-b395-46c9-9dc0-e980b4d7eb6e" method="GET">
+    <con:description>Retrieve PM Projects</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompProj, selectByCompany, selectByJobCode or selectByPmProjInfo</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompProj, selectByCompany and selectByJobCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projectCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectByCompProj and selectByJobCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (selectByCompProj, selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>pmprojstatCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Status Code (selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>pmprojectDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Date (selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GrpmpCompCode" : "string",
+  "GrpmpCompName" : "string",
+  "GrpmpProjCode" : "string",
+  "GrpmpProjCtrlCode" : "string",
+  "GrpmpJobCode" : "string",
+  "GrpmpJobName" : "string",
+  "GrpmpProjName" : "string",
+  "GrpmpProjDescription" : "string",
+  "GrpmpCustCode" : "string",
+  "GrpmpCustName" : "string",
+  "GrpmpCustAddCode" : "string",
+  "GrpmpCustAddContactName" : "string",
+  "GrpmpCustAdd1" : "string",
+  "GrpmpCustAdd2" : "string",
+  "GrpmpCustAdd3" : "string",
+  "GrpmpCustRegionCode" : "string",
+  "GrpmpCustPostalCode" : "string",
+  "GrpmpCustCountry" : "string",
+  "GrpmpManagerName" : "string",
+  "GrpmpArchitectName" : "string",
+  "GrpmpSuperintName" : "string",
+  "GrpmpStartDate" : "YYYY-MM-dd",
+  "GrpmpEndDate" : "YYYY-MM-dd",
+  "GrpmpBidDate" : "YYYY-MM-dd",
+  "GrpmpBidWonLostDate" : "YYYY-MM-dd",
+  "GrpmpJobCreationDate" : "YYYY-MM-dd",
+  "GrpmpWorkLocCode" : "string",
+  "GrpmpWorkLocName" : "string",
+  "GrpmpAddContactName" : "string",
+  "GrpmpAddLine1" : "string",
+  "GrpmpAddLine2" : "string",
+  "GrpmpAddLine3" : "string",
+  "GrpmpRegionCode" : "string",
+  "GrpmpRegionName" : "string",
+  "GrpmpPostalCode" : "string",
+  "GrpmpCountry" : "string",
+  "GrpmpPhoneNum" : "string",
+  "GrpmpFaxNum" : "string",
+  "GrpmpClvValueCode1" : "string",
+  "GrpmpClvValueCode2" : "string",
+  "GrpmpClvValueCode3" : "string",
+  "GrpmpClvValueCode4" : "string",
+  "GrpmpClvValueCode5" : "string",
+  "GrpmpClvValueCode6" : "string",
+  "GrpmpDefaultDeliveryPeriod" : 0,
+  "GrpmpDefaultBilltoAddCode" : "string",
+  "GrpmpDefaultBilltoAddName" : "string",
+  "GrpmpDefaultShiptoAddCode" : "string",
+  "GrpmpDefaultShiptoAddName" : "string",
+  "GrpmpDefaultReqCode" : "string",
+  "GrpmpDefaultBuyCode" : "string",
+  "GrpmpDfltMeetingFootnote" : "string",
+  "GrpmpBidJobCode" : "string",
+  "GrpmpBidJobName" : "string",
+  "GrpmpDfltCmdetailMode" : "string",
+  "GrpmpDfltRfiPartnCode" : "string",
+  "GrpmpDfltRfiPartnTypeCode" : "string",
+  "GrpmpDfltRfiContactCode" : "string",
+  "GrpmpDfltRfiContactName" : "string",
+  "GrpmpDfltSbmtPartnCode" : "string",
+  "GrpmpDfltSbmtPtnTypeCode" : "string",
+  "GrpmpDfltSbmtContactCode" : "string",
+  "GrpmpDfltSbmtContactName" : "string",
+  "GrpmpDfltDjGeneralFlag" : "string",
+  "GrpmpDfltDjOwnLabFlag" : "string",
+  "GrpmpDfltDjTradeLabFlag" : "string",
+  "GrpmpDfltDjTlCompFlag" : "string",
+  "GrpmpDfltDjOwnEqpFlag" : "string",
+  "GrpmpDfltDjOeOnJobFlag" : "string",
+  "GrpmpDfltDjTradeEqpFlag" : "string",
+  "GrpmpDfltDjMaterialsFlag" : "string",
+  "GrpmpDfltDjVisitorsFlag" : "string",
+  "GrpmpDfltDjSafetyFlag" : "string",
+  "GrpmpDfltDjUnitcFlag" : "string",
+  "GrpmpDfltDjNotesFlag" : "string",
+  "GrpmpDfltDjAttachmentFlag" : "string",
+  "GrpmpDeptCode" : "string",
+  "GrpmpDeptName" : "string",
+  "GrpmpJobAllowTransFlag" : "string",
+  "GrpmpStartPageUrl" : "string",
+  "GrpmpDefaultBillTypeCode" : "string",
+  "GrpmpDefaultBillTypeName" : "string",
+  "GrpmpDefaultInvoiceFormat" : "string",
+  "GrpmpDfltInvoiceFormatNm" : "string",
+  "GrpmpDefaultJbMapCode" : "string",
+  "GrpmpDefaultJbMapName" : "string",
+  "GrpmpDefaultJobBillMethod" : "string",
+  "GrpmpDefaultRfiPeriod" : 0,
+  "GrpmpDfltLeadTimeStage5" : 0,
+  "GrpmpDfltLeadTimeStage1" : 0,
+  "GrpmpDfltLeadTimeStage2" : 0,
+  "GrpmpDfltLeadTimeStage6" : 0,
+  "GrpmpDfltLeadTimeStage3" : 0,
+  "GrpmpDfltLeadTimeStage4" : 0,
+  "GrpmpDfltPlistComplPeriod" : 0,
+  "GrpmpLienWaiverText" : "string",
+  "GrpmpDfltDjLabForceFlag" : "string",
+  "GrpmpJobDeptCode" : "string",
+  "GrpmpJobDeptName" : "string",
+  "GrpmpProjPhotoUrl" : "string",
+  "GrpmpSubcontractedVolumeAmt" : 0,
+  "GrpmpJobBillMethCode" : "string",
+  "GrpmpJobBillingTypeCode" : "string",
+  "GrpmpJobBillingTypeName" : "string",
+  "GrpmpJobInvoiceFormatCode" : "string",
+  "GrpmpJobInvoiceFormatNm" : "string",
+  "GrpmpJobJbMapCode" : "string",
+  "GrpmpJobJbMapName" : "string",
+  "GrpmpJobBidFlag" : "string",
+  "GrpmpJobSecGroup" : "string",
+  "GrpmpBidMask" : "string",
+  "GrpmpBidMaskOverride" : "string",
+  "GrpmpBidMaskSeqProj" : "string",
+  "GrpmpSbmtMask" : "string",
+  "GrpmpSbmtMaskOverride" : "string",
+  "GrpmpSbmtMaskSeqProj" : "string",
+  "GrpmpCommlgMask" : "string",
+  "GrpmpCommlgMaskOverride" : "string",
+  "GrpmpCommlgMaskSeqProj" : "string",
+  "GrpmpDayjrMask" : "string",
+  "GrpmpDayjrMaskOverride" : "string",
+  "GrpmpDayjrMaskSeqProj" : "string",
+  "GrpmpFwdMask" : "string",
+  "GrpmpFwdMaskOverride" : "string",
+  "GrpmpFwdMaskSeqProj" : "string",
+  "GrpmpNoticeMask" : "string",
+  "GrpmpNoticeMaskOverride" : "string",
+  "GrpmpNoticeMaskSeqProj" : "string",
+  "GrpmpRfiMask" : "string",
+  "GrpmpRfiMaskOverride" : "string",
+  "GrpmpRfiMaskSeqProj" : "string",
+  "GrpmpTrnsmMask" : "string",
+  "GrpmpTrnsmMaskOverride" : "string",
+  "GrpmpTrnsmMaskSeqProj" : "string",
+  "GrpmpIssueIdMask" : "string",
+  "GrpmpIssueIdMaskOverride" : "string",
+  "GrpmpIssueIdMaskSeqProj" : "string",
+  "GrpmpSbmtpMask" : "string",
+  "GrpmpSbmtpMaskOverride" : "string",
+  "GrpmpSbmtpMaskSeqProj" : "string",
+  "GrpmpRsschedVerCode" : "string",
+  "GrpmpRsschedVerName" : "string",
+  "GrpmpStatusCode" : "string",
+  "GrpmpClosedDate" : "YYYY-MM-dd",
+  "GrpmpCorrespondenceAddrCode" : "string",
+  "GrpmpCorrAddContactName" : "string",
+  "GrpmpCorrAdd1" : "string",
+  "GrpmpCorrAdd2" : "string",
+  "GrpmpCorrAdd3" : "string",
+  "GrpmpCorrRegionCode" : "string",
+  "GrpmpCorrPostalCode" : "string",
+  "GrpmpCorrCountry" : "string",
+  "GrpmpJobOrigBudgetEffDate" : "YYYY-MM-dd",
+  "GrpmpBidJobDeptCode" : "string",
+  "GrpmpBidJobDeptName" : "string",
+  "GrpmpDfltDjTasksFlag" : "string",
+  "GrpmpMeetingIdMask" : "string",
+  "GrpmpAgendaItemIdMask" : "string",
+  "GrpmpDfltRfqReviewDays" : 0,
+  "GrpmpSbmtApprvPartnCode" : "string",
+  "GrpmpSbmtApprvPtnTypeCode" : "string",
+  "GrpmpSbmtApprvContactCode" : "string",
+  "GrpmpBallInCourtReportFlg" : "string",
+  "GrpmpCurrContAmt" : 0,
+  "GrpmpOrigContOverrideAmt" : 0,
+  "GrpmpJobStatusCode" : "string",
+  "GrpmpOcoOrigContAmtOvrd" : "string",
+  "GrpmpProjEndDtUpdateable" : "string",
+  "GrpmpPartnAbbrevInRfiId" : "string",
+  "GrpmpPartnAbbrevInTrnsmId" : "string",
+  "GrpmpPmplMask" : "string",
+  "GrpmpPmplMaskOverride" : "string",
+  "GrpmpPmplMaskSeqProj" : "string",
+  "GrpmpPmpliMaskSeqProj" : "string",
+  "GrpmpPmpliMask" : "string",
+  "GrpmpKeyWordDesc" : "string",
+  "GrpmpCalcOcoDtOnWrkdys" : "string",
+  "GrpmpCalcRfiDtOnWrkdys" : "string",
+  "GrpmpCalcSbmtDtOnWrkdys" : "string",
+  "GrpmpCalcIssueDtOnWrkdys" : "string",
+  "GrpmpCalcPmntcDtOnWrkdys" : "string",
+  "GrpmpCalcPmplDtOnWrkdys" : "string",
+  "GrpmpDfltPmntcRevPeriod" : 0,
+  "GrpmpDfltIssueRevPeriod" : 0,
+  "GrpmpHardBidFlag" : "string",
+  "GrpmpItbSenderEmail" : "string",
+  "GrpmpUseBidItemEaFlag" : "string",
+  "GrpmpEntryRfiAnsByFlag" : "string",
+  "GrpmpEntryRfiAnsDateFlag" : "string",
+  "GrpmpPciUseScopeAmtFlag" : "string",
+  "GrpmpItbSenderName" : "string",
+  "GrpmpIuCreateDate" : "YYYY-MM-dd",
+  "GrpmpIuCreateUser" : "string",
+  "GrpmpIuUpdateDate" : "YYYY-MM-dd",
+  "GrpmpIuUpdateUser" : "string",
+  "GrpmpCreateJobFlag" : "string",
+  "GrpmpCollabUrl" : "string",
+  "GrpmpMobileUrl" : "string",
+  "GrpmpAutoCalcMarkupFlag" : "string",
+  "GrpmpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f1efd594-64bb-4157-8e83-a4d2278e8dd0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="b77f3903-782d-425f-aa7a-d7efbb108972" method="POST">
+    <con:description>Create a PM Project</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GrpmpCompCode" : "string",
+  "GrpmpCompName" : "string",
+  "GrpmpProjCode" : "string",
+  "GrpmpProjCtrlCode" : "string",
+  "GrpmpJobCode" : "string",
+  "GrpmpJobName" : "string",
+  "GrpmpProjName" : "string",
+  "GrpmpProjDescription" : "string",
+  "GrpmpCustCode" : "string",
+  "GrpmpCustName" : "string",
+  "GrpmpCustAddCode" : "string",
+  "GrpmpCustAddContactName" : "string",
+  "GrpmpCustAdd1" : "string",
+  "GrpmpCustAdd2" : "string",
+  "GrpmpCustAdd3" : "string",
+  "GrpmpCustRegionCode" : "string",
+  "GrpmpCustPostalCode" : "string",
+  "GrpmpCustCountry" : "string",
+  "GrpmpManagerName" : "string",
+  "GrpmpArchitectName" : "string",
+  "GrpmpSuperintName" : "string",
+  "GrpmpStartDate" : "YYYY-MM-dd",
+  "GrpmpEndDate" : "YYYY-MM-dd",
+  "GrpmpBidDate" : "YYYY-MM-dd",
+  "GrpmpBidWonLostDate" : "YYYY-MM-dd",
+  "GrpmpJobCreationDate" : "YYYY-MM-dd",
+  "GrpmpWorkLocCode" : "string",
+  "GrpmpWorkLocName" : "string",
+  "GrpmpAddContactName" : "string",
+  "GrpmpAddLine1" : "string",
+  "GrpmpAddLine2" : "string",
+  "GrpmpAddLine3" : "string",
+  "GrpmpRegionCode" : "string",
+  "GrpmpRegionName" : "string",
+  "GrpmpPostalCode" : "string",
+  "GrpmpCountry" : "string",
+  "GrpmpPhoneNum" : "string",
+  "GrpmpFaxNum" : "string",
+  "GrpmpClvValueCode1" : "string",
+  "GrpmpClvValueCode2" : "string",
+  "GrpmpClvValueCode3" : "string",
+  "GrpmpClvValueCode4" : "string",
+  "GrpmpClvValueCode5" : "string",
+  "GrpmpClvValueCode6" : "string",
+  "GrpmpDefaultDeliveryPeriod" : 0,
+  "GrpmpDefaultBilltoAddCode" : "string",
+  "GrpmpDefaultBilltoAddName" : "string",
+  "GrpmpDefaultShiptoAddCode" : "string",
+  "GrpmpDefaultShiptoAddName" : "string",
+  "GrpmpDefaultReqCode" : "string",
+  "GrpmpDefaultBuyCode" : "string",
+  "GrpmpDfltMeetingFootnote" : "string",
+  "GrpmpBidJobCode" : "string",
+  "GrpmpBidJobName" : "string",
+  "GrpmpDfltCmdetailMode" : "string",
+  "GrpmpDfltRfiPartnCode" : "string",
+  "GrpmpDfltRfiPartnTypeCode" : "string",
+  "GrpmpDfltRfiContactCode" : "string",
+  "GrpmpDfltRfiContactName" : "string",
+  "GrpmpDfltSbmtPartnCode" : "string",
+  "GrpmpDfltSbmtPtnTypeCode" : "string",
+  "GrpmpDfltSbmtContactCode" : "string",
+  "GrpmpDfltSbmtContactName" : "string",
+  "GrpmpDfltDjGeneralFlag" : "string",
+  "GrpmpDfltDjOwnLabFlag" : "string",
+  "GrpmpDfltDjTradeLabFlag" : "string",
+  "GrpmpDfltDjTlCompFlag" : "string",
+  "GrpmpDfltDjOwnEqpFlag" : "string",
+  "GrpmpDfltDjOeOnJobFlag" : "string",
+  "GrpmpDfltDjTradeEqpFlag" : "string",
+  "GrpmpDfltDjMaterialsFlag" : "string",
+  "GrpmpDfltDjVisitorsFlag" : "string",
+  "GrpmpDfltDjSafetyFlag" : "string",
+  "GrpmpDfltDjUnitcFlag" : "string",
+  "GrpmpDfltDjNotesFlag" : "string",
+  "GrpmpDfltDjAttachmentFlag" : "string",
+  "GrpmpDeptCode" : "string",
+  "GrpmpDeptName" : "string",
+  "GrpmpJobAllowTransFlag" : "string",
+  "GrpmpStartPageUrl" : "string",
+  "GrpmpDefaultBillTypeCode" : "string",
+  "GrpmpDefaultBillTypeName" : "string",
+  "GrpmpDefaultInvoiceFormat" : "string",
+  "GrpmpDfltInvoiceFormatNm" : "string",
+  "GrpmpDefaultJbMapCode" : "string",
+  "GrpmpDefaultJbMapName" : "string",
+  "GrpmpDefaultJobBillMethod" : "string",
+  "GrpmpDefaultRfiPeriod" : 0,
+  "GrpmpDfltLeadTimeStage5" : 0,
+  "GrpmpDfltLeadTimeStage1" : 0,
+  "GrpmpDfltLeadTimeStage2" : 0,
+  "GrpmpDfltLeadTimeStage6" : 0,
+  "GrpmpDfltLeadTimeStage3" : 0,
+  "GrpmpDfltLeadTimeStage4" : 0,
+  "GrpmpDfltPlistComplPeriod" : 0,
+  "GrpmpLienWaiverText" : "string",
+  "GrpmpDfltDjLabForceFlag" : "string",
+  "GrpmpJobDeptCode" : "string",
+  "GrpmpJobDeptName" : "string",
+  "GrpmpProjPhotoUrl" : "string",
+  "GrpmpSubcontractedVolumeAmt" : 0,
+  "GrpmpJobBillMethCode" : "string",
+  "GrpmpJobBillingTypeCode" : "string",
+  "GrpmpJobBillingTypeName" : "string",
+  "GrpmpJobInvoiceFormatCode" : "string",
+  "GrpmpJobInvoiceFormatNm" : "string",
+  "GrpmpJobJbMapCode" : "string",
+  "GrpmpJobJbMapName" : "string",
+  "GrpmpJobBidFlag" : "string",
+  "GrpmpJobSecGroup" : "string",
+  "GrpmpBidMask" : "string",
+  "GrpmpBidMaskOverride" : "string",
+  "GrpmpBidMaskSeqProj" : "string",
+  "GrpmpSbmtMask" : "string",
+  "GrpmpSbmtMaskOverride" : "string",
+  "GrpmpSbmtMaskSeqProj" : "string",
+  "GrpmpCommlgMask" : "string",
+  "GrpmpCommlgMaskOverride" : "string",
+  "GrpmpCommlgMaskSeqProj" : "string",
+  "GrpmpDayjrMask" : "string",
+  "GrpmpDayjrMaskOverride" : "string",
+  "GrpmpDayjrMaskSeqProj" : "string",
+  "GrpmpFwdMask" : "string",
+  "GrpmpFwdMaskOverride" : "string",
+  "GrpmpFwdMaskSeqProj" : "string",
+  "GrpmpNoticeMask" : "string",
+  "GrpmpNoticeMaskOverride" : "string",
+  "GrpmpNoticeMaskSeqProj" : "string",
+  "GrpmpRfiMask" : "string",
+  "GrpmpRfiMaskOverride" : "string",
+  "GrpmpRfiMaskSeqProj" : "string",
+  "GrpmpTrnsmMask" : "string",
+  "GrpmpTrnsmMaskOverride" : "string",
+  "GrpmpTrnsmMaskSeqProj" : "string",
+  "GrpmpIssueIdMask" : "string",
+  "GrpmpIssueIdMaskOverride" : "string",
+  "GrpmpIssueIdMaskSeqProj" : "string",
+  "GrpmpSbmtpMask" : "string",
+  "GrpmpSbmtpMaskOverride" : "string",
+  "GrpmpSbmtpMaskSeqProj" : "string",
+  "GrpmpRsschedVerCode" : "string",
+  "GrpmpRsschedVerName" : "string",
+  "GrpmpStatusCode" : "string",
+  "GrpmpClosedDate" : "YYYY-MM-dd",
+  "GrpmpCorrespondenceAddrCode" : "string",
+  "GrpmpCorrAddContactName" : "string",
+  "GrpmpCorrAdd1" : "string",
+  "GrpmpCorrAdd2" : "string",
+  "GrpmpCorrAdd3" : "string",
+  "GrpmpCorrRegionCode" : "string",
+  "GrpmpCorrPostalCode" : "string",
+  "GrpmpCorrCountry" : "string",
+  "GrpmpJobOrigBudgetEffDate" : "YYYY-MM-dd",
+  "GrpmpBidJobDeptCode" : "string",
+  "GrpmpBidJobDeptName" : "string",
+  "GrpmpDfltDjTasksFlag" : "string",
+  "GrpmpMeetingIdMask" : "string",
+  "GrpmpAgendaItemIdMask" : "string",
+  "GrpmpDfltRfqReviewDays" : 0,
+  "GrpmpSbmtApprvPartnCode" : "string",
+  "GrpmpSbmtApprvPtnTypeCode" : "string",
+  "GrpmpSbmtApprvContactCode" : "string",
+  "GrpmpBallInCourtReportFlg" : "string",
+  "GrpmpCurrContAmt" : 0,
+  "GrpmpOrigContOverrideAmt" : 0,
+  "GrpmpJobStatusCode" : "string",
+  "GrpmpOcoOrigContAmtOvrd" : "string",
+  "GrpmpProjEndDtUpdateable" : "string",
+  "GrpmpPartnAbbrevInRfiId" : "string",
+  "GrpmpPartnAbbrevInTrnsmId" : "string",
+  "GrpmpPmplMask" : "string",
+  "GrpmpPmplMaskOverride" : "string",
+  "GrpmpPmplMaskSeqProj" : "string",
+  "GrpmpPmpliMaskSeqProj" : "string",
+  "GrpmpPmpliMask" : "string",
+  "GrpmpKeyWordDesc" : "string",
+  "GrpmpCalcOcoDtOnWrkdys" : "string",
+  "GrpmpCalcRfiDtOnWrkdys" : "string",
+  "GrpmpCalcSbmtDtOnWrkdys" : "string",
+  "GrpmpCalcIssueDtOnWrkdys" : "string",
+  "GrpmpCalcPmntcDtOnWrkdys" : "string",
+  "GrpmpCalcPmplDtOnWrkdys" : "string",
+  "GrpmpDfltPmntcRevPeriod" : 0,
+  "GrpmpDfltIssueRevPeriod" : 0,
+  "GrpmpHardBidFlag" : "string",
+  "GrpmpItbSenderEmail" : "string",
+  "GrpmpUseBidItemEaFlag" : "string",
+  "GrpmpEntryRfiAnsByFlag" : "string",
+  "GrpmpEntryRfiAnsDateFlag" : "string",
+  "GrpmpPciUseScopeAmtFlag" : "string",
+  "GrpmpItbSenderName" : "string",
+  "GrpmpIuCreateDate" : "YYYY-MM-dd",
+  "GrpmpIuCreateUser" : "string",
+  "GrpmpIuUpdateDate" : "YYYY-MM-dd",
+  "GrpmpIuUpdateUser" : "string",
+  "GrpmpCreateJobFlag" : "string",
+  "GrpmpCollabUrl" : "string",
+  "GrpmpMobileUrl" : "string",
+  "GrpmpAutoCalcMarkupFlag" : "string",
+  "GrpmpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"GrpmpAutoCalcMarkupFlag":"string","GrpmpPmplMaskOverride":"string","GrpmpUseBidItemEaFlag":"string","GrpmpHardBidFlag":"string","GrpmpProjCode":"string","GrpmpProjName":"string","GrpmpCompCode":"string","GrpmpJobSecGroup":"string","GrpmpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="847d8d41-5f40-44e0-a79e-ce37daad79db" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GrpmpAutoCalcMarkupFlag":"string","GrpmpPmplMaskOverride":"string","GrpmpUseBidItemEaFlag":"string","GrpmpHardBidFlag":"string","GrpmpProjCode":"string","GrpmpProjName":"string","GrpmpCompCode":"string","GrpmpJobSecGroup":"string","GrpmpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e254e070-37e0-414d-8075-a35ea0e197f4" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GrpmpAddLine1":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

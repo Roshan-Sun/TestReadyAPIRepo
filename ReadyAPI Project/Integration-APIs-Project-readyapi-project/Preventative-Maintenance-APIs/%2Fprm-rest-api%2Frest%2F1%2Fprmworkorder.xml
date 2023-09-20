@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/prmworkorder" path="/prm-rest-api/rest/1/prmworkorder" id="759827a1-70a5-4c4b-a819-6b13eb1baf88" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="759827a1-70a5-4c4b-a819-6b13eb1baf88fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmworkorder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2c55c3c7-c1c7-4490-98ec-0bc303178b5e" method="GET">
+    <con:description>Retrieve PRM Work Orders</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode or selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>workOrderCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Work Order Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WoCompCode" : "string",
+  "WoCompName" : "string",
+  "WoCode" : "string",
+  "WoNumber" : 0,
+  "WoDescription" : "string",
+  "WoType" : "string",
+  "WoCostingType" : "string",
+  "WoBillingType" : "string",
+  "WoStatus" : "string",
+  "WoShopWoFlag" : "string",
+  "WoReceivedDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoReqStartDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoReqEndDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoDispatchedDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoStartDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoCompletionDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoComments" : "string",
+  "WoClass1" : "string",
+  "WoClass2" : "string",
+  "WoClass3" : "string",
+  "WoClass4" : "string",
+  "WoPrintCounter" : 0,
+  "WoMteamCode" : "string",
+  "WoCreatedBy" : "string",
+  "WoDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoModifiedBy" : "string",
+  "WoDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoTranType" : "string",
+  "WoCostCompCode" : "string",
+  "WoCostCompName" : "string",
+  "WoCostDeptCode" : "string",
+  "WoCostDeptName" : "string",
+  "WoVendorCode" : "string",
+  "WoTitle" : "string",
+  "WoDeptCode" : "string",
+  "WoDeptName" : "string",
+  "WoCostJobCode" : "string",
+  "WoCostJobName" : "string",
+  "WoCustCode" : "string",
+  "WoCustName" : "string",
+  "WoAppTypeCode" : "string",
+  "WoIssueId" : "string",
+  "WoDmLocCode" : "string",
+  "WoBillingRateTableCode" : "string",
+  "WoInvoiceFormat" : "string",
+  "WoClvValueCode1" : "string",
+  "WoClvValueCode2" : "string",
+  "WoClvValueCode3" : "string",
+  "WoClvValueCode4" : "string",
+  "WoClvValueCode5" : "string",
+  "WoClvValueCode6" : "string",
+  "WoEntry2Flag" : "string",
+  "WoUserField1" : "string",
+  "WoReceivedTimeHh" : "string",
+  "WoReceivedTimeMi" : "string",
+  "WoReceivedTimeAmPm" : "string",
+  "WoIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoIuCreateUser" : "string",
+  "WoIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoIuUpdateUser" : "string",
+  "WoVUuid" : "string",
+  "WoEqpCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c9a5b1ba-3f38-4fd1-830d-5823046cea03" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="73bc2050-4e73-4113-bd9d-0af4c6460d7b" method="POST">
+    <con:description>Create a PRM Work Order</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WoCompCode" : "string",
+  "WoCompName" : "string",
+  "WoCode" : "string",
+  "WoNumber" : 0,
+  "WoDescription" : "string",
+  "WoType" : "string",
+  "WoCostingType" : "string",
+  "WoBillingType" : "string",
+  "WoStatus" : "string",
+  "WoShopWoFlag" : "string",
+  "WoReceivedDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoReqStartDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoReqEndDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoDispatchedDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoStartDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoCompletionDateTime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoComments" : "string",
+  "WoClass1" : "string",
+  "WoClass2" : "string",
+  "WoClass3" : "string",
+  "WoClass4" : "string",
+  "WoPrintCounter" : 0,
+  "WoMteamCode" : "string",
+  "WoCreatedBy" : "string",
+  "WoDateCreated" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoModifiedBy" : "string",
+  "WoDateModified" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoTranType" : "string",
+  "WoCostCompCode" : "string",
+  "WoCostCompName" : "string",
+  "WoCostDeptCode" : "string",
+  "WoCostDeptName" : "string",
+  "WoVendorCode" : "string",
+  "WoTitle" : "string",
+  "WoDeptCode" : "string",
+  "WoDeptName" : "string",
+  "WoCostJobCode" : "string",
+  "WoCostJobName" : "string",
+  "WoCustCode" : "string",
+  "WoCustName" : "string",
+  "WoAppTypeCode" : "string",
+  "WoIssueId" : "string",
+  "WoDmLocCode" : "string",
+  "WoBillingRateTableCode" : "string",
+  "WoInvoiceFormat" : "string",
+  "WoClvValueCode1" : "string",
+  "WoClvValueCode2" : "string",
+  "WoClvValueCode3" : "string",
+  "WoClvValueCode4" : "string",
+  "WoClvValueCode5" : "string",
+  "WoClvValueCode6" : "string",
+  "WoEntry2Flag" : "string",
+  "WoUserField1" : "string",
+  "WoReceivedTimeHh" : "string",
+  "WoReceivedTimeMi" : "string",
+  "WoReceivedTimeAmPm" : "string",
+  "WoIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoIuCreateUser" : "string",
+  "WoIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoIuUpdateUser" : "string",
+  "WoVUuid" : "string",
+  "WoEqpCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"G","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoCostDeptCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN19","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}},{"id":"part2","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN20","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="G-Type Example" id="6e953a63-21c8-475a-af6f-7ca9b54b4196" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"G","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoCostDeptCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="J-Type Example" id="196a7a95-e232-4a67-82b1-f197cd0dc1ef" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"J","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoCostJobCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="E-Type Example" id="4aa9f68c-dc7d-46dd-9fc8-18aa53e91101" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"E","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoEqpCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Work Order with Work Item Example" id="51f1a6e4-89cb-42af-9306-58fdb28107cd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN30","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"i'm so lost","WitmWoStepDescription":"keep going bro","WitmPriority":2,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Work Order with Multiple Work Items Example" id="ac6463f7-b776-4e9d-9dce-3dbca0890afe" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN21","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Patch Example" id="56d52af3-11bc-4992-aa02-aeed5eeb0d93" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"WoDescription":"bobicus was here"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multiple Work orders with Work Items Example" id="a1edc971-9d16-4b79-93ce-6ed86cf6c9f5" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN19","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}},{"id":"part2","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN20","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

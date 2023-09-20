@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsubmitpkg/{Vuuid}" path="/pm-rest-api/rest/1/pmsubmitpkg/{Vuuid}" id="2f5392f3-030c-452f-a4cd-25d8943713d7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f5392f3-030c-452f-a4cd-25d8943713d7fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmitpkg%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0a2a00b3-47a5-44e0-a462-ed42c6f9d534" method="GET">
+    <con:description>Retrieve a Specific PM Submittal Package</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmpCompCode" : "string",
+  "PmsmpProjCode" : "string",
+  "PmsmpSbmtpCode" : "string",
+  "PmsmpSbmtpName" : "string",
+  "PmsmpSbmtpStatusCode" : "string",
+  "PmsmpRecFromPartnCode" : "string",
+  "PmsmpRecFromPartnTypeCode" : "string",
+  "PmsmpRecFromContactCode" : "string",
+  "PmsmpRetByPartnCode" : "string",
+  "PmsmpRetByPartnTypeCode" : "string",
+  "PmsmpRetByContactCode" : "string",
+  "PmsmpSentToPartnCode" : "string",
+  "PmsmpSentToPartnTypeCode" : "string",
+  "PmsmpSentToContactCode" : "string",
+  "PmsmpFwdToPartnCode" : "string",
+  "PmsmpFwdToPartnTypeCode" : "string",
+  "PmsmpFwdToContactCode" : "string",
+  "PmsmpRequiredStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpRequiredEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpRespPartnCode" : "string",
+  "PmsmpRespPartnTypeCode" : "string",
+  "PmsmpRespContactCode" : "string",
+  "PmsmpLastUpdRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdSentDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdRetDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdFwdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdRecPCode" : "string",
+  "PmsmpLastUpdRecPTCode" : "string",
+  "PmsmpLastUpdRecCCode" : "string",
+  "PmsmpLastUpdRetPCode" : "string",
+  "PmsmpLastUpdRetPTCode" : "string",
+  "PmsmpLastUpdRetCCode" : "string",
+  "PmsmpLastUpdSentPCode" : "string",
+  "PmsmpLastUpdSentPTCode" : "string",
+  "PmsmpLastUpdSentCCode" : "string",
+  "PmsmpLastUpdFwdPCode" : "string",
+  "PmsmpLastUpdFwdPTCode" : "string",
+  "PmsmpLastUpdFwdCCode" : "string",
+  "PmsmpLastUpdStatusCode" : "string",
+  "PmsmpSpecSectionCode" : "string",
+  "PmsmpIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpIuCreateUser" : "string",
+  "PmsmpIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpIuUpdateUser" : "string",
+  "PmsmpClvValueCode1" : "string",
+  "PmsmpClvValueCode2" : "string",
+  "PmsmpClvValueCode3" : "string",
+  "PmsmpClvValueCode4" : "string",
+  "PmsmpClvValueCode5" : "string",
+  "PmsmpClvValueCode6" : "string",
+  "PmsmpLastSessioninfo" : "string",
+  "PmsmpOrigSessioninfo" : "string",
+  "PmsmpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="5fdbca6c-fc2c-49f9-bcd6-01b110ffa0bd" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="9c139915-6cf7-4341-a289-c592aac90b33" method="DELETE">
+    <con:description>Delete a Specific PM Submittal Package</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="7a160e65-c294-4fa2-8612-0e5febe5b47f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="bf32bd07-a004-468c-8d87-b7488facb359" method="PATCH">
+    <con:description>Update a Specific PM Submittal Package</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmpCompCode" : "string",
+  "PmsmpProjCode" : "string",
+  "PmsmpSbmtpCode" : "string",
+  "PmsmpSbmtpName" : "string",
+  "PmsmpSbmtpStatusCode" : "string",
+  "PmsmpRecFromPartnCode" : "string",
+  "PmsmpRecFromPartnTypeCode" : "string",
+  "PmsmpRecFromContactCode" : "string",
+  "PmsmpRetByPartnCode" : "string",
+  "PmsmpRetByPartnTypeCode" : "string",
+  "PmsmpRetByContactCode" : "string",
+  "PmsmpSentToPartnCode" : "string",
+  "PmsmpSentToPartnTypeCode" : "string",
+  "PmsmpSentToContactCode" : "string",
+  "PmsmpFwdToPartnCode" : "string",
+  "PmsmpFwdToPartnTypeCode" : "string",
+  "PmsmpFwdToContactCode" : "string",
+  "PmsmpRequiredStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpRequiredEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpRespPartnCode" : "string",
+  "PmsmpRespPartnTypeCode" : "string",
+  "PmsmpRespContactCode" : "string",
+  "PmsmpLastUpdRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdSentDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdRetDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdFwdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpLastUpdRecPCode" : "string",
+  "PmsmpLastUpdRecPTCode" : "string",
+  "PmsmpLastUpdRecCCode" : "string",
+  "PmsmpLastUpdRetPCode" : "string",
+  "PmsmpLastUpdRetPTCode" : "string",
+  "PmsmpLastUpdRetCCode" : "string",
+  "PmsmpLastUpdSentPCode" : "string",
+  "PmsmpLastUpdSentPTCode" : "string",
+  "PmsmpLastUpdSentCCode" : "string",
+  "PmsmpLastUpdFwdPCode" : "string",
+  "PmsmpLastUpdFwdPTCode" : "string",
+  "PmsmpLastUpdFwdCCode" : "string",
+  "PmsmpLastUpdStatusCode" : "string",
+  "PmsmpSpecSectionCode" : "string",
+  "PmsmpIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpIuCreateUser" : "string",
+  "PmsmpIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmpIuUpdateUser" : "string",
+  "PmsmpClvValueCode1" : "string",
+  "PmsmpClvValueCode2" : "string",
+  "PmsmpClvValueCode3" : "string",
+  "PmsmpClvValueCode4" : "string",
+  "PmsmpClvValueCode5" : "string",
+  "PmsmpClvValueCode6" : "string",
+  "PmsmpLastSessioninfo" : "string",
+  "PmsmpOrigSessioninfo" : "string",
+  "PmsmpVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmpCompCode":"string","PmsmpProjCode":"string","PmsmpSbmtpCode":"string","PmsmpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="3b8d5e9c-bddf-44a2-9240-bc792be1f7ce" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmpCompCode":"string","PmsmpProjCode":"string","PmsmpSbmtpCode":"string","PmsmpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="aee599d1-3c48-45b1-bddc-3298545242e0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmpClvValueCode1":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

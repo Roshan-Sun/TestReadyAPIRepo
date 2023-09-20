@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arinvpay" path="/ar-rest-api/rest/1/arinvpay" id="3b928260-aa9d-4925-94d9-ac835bcf9189" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3b928260-aa9d-4925-94d9-ac835bcf9189fileName">%2Far-rest-api%2Frest%2F1%2Farinvpay</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="28279560-9261-45e7-9427-0c40ea2c0ef5" method="GET">
+    <con:description>Retrieve AR Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompInvNum or selectByCompDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompInvNum and selectByCompDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>InvNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Code/Number (selectByCompInvNum)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StartDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Starting Date of interval to search within (selectByCompDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EndDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ending Date of interval to search within (selectByCompDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "IpayCompCode" : "string",
+  "IpaySeqNum" : 0,
+  "IpayInvCompCode" : "string",
+  "IpayInvNum" : "string",
+  "IpaySourceCode" : "string",
+  "IpayInvToNum" : "string",
+  "IpayInvDate" : "YYYY-MM-dd",
+  "IpayCurrPayAmt" : 0,
+  "IpayCurrDiscAmt" : 0,
+  "IpayCurrWoAmt" : 0,
+  "IpayCurrAllowAmt" : 0,
+  "IpayCurrTaxAmt" : 0,
+  "IpayCurrWoTaxAmt" : 0,
+  "IpayOldCurrPayAmt" : 0,
+  "IpayInvDiscDate" : "YYYY-MM-dd",
+  "IpayInvOutstandAmt" : 0,
+  "IpayInvDiscAmt" : 0,
+  "IpayInvHldbkAmt" : 0,
+  "IpayInvTotalTaxAmt" : 0,
+  "IpayInvStatusCode" : "string",
+  "IpayRemainingAmt" : 0,
+  "IpayWoModifiedFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "IpayIuCreateDate" : "YYYY-MM-dd",
+  "IpayIuUpdateDate" : "YYYY-MM-dd",
+  "IpayVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b6eb318e-1805-4f1f-8b8c-77a9b2b16217" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="ba9ccd8b-a9d1-489b-a849-89199b329d84" method="POST">
+    <con:description>Create an AR Invoice Payment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "IpayCompCode" : "string",
+  "IpaySeqNum" : 0,
+  "IpayInvCompCode" : "string",
+  "IpayInvNum" : "string",
+  "IpaySourceCode" : "string",
+  "IpayInvToNum" : "string",
+  "IpayInvDate" : "YYYY-MM-dd",
+  "IpayCurrPayAmt" : 0,
+  "IpayCurrDiscAmt" : 0,
+  "IpayCurrWoAmt" : 0,
+  "IpayCurrAllowAmt" : 0,
+  "IpayCurrTaxAmt" : 0,
+  "IpayCurrWoTaxAmt" : 0,
+  "IpayOldCurrPayAmt" : 0,
+  "IpayInvDiscDate" : "YYYY-MM-dd",
+  "IpayInvOutstandAmt" : 0,
+  "IpayInvDiscAmt" : 0,
+  "IpayInvHldbkAmt" : 0,
+  "IpayInvTotalTaxAmt" : 0,
+  "IpayInvStatusCode" : "string",
+  "IpayRemainingAmt" : 0,
+  "IpayWoModifiedFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "IpayIuCreateDate" : "YYYY-MM-dd",
+  "IpayIuUpdateDate" : "YYYY-MM-dd",
+  "IpayVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"IpayCompCode":"string","IpaySeqNum":"string","IpayInvNum":"string","IpayInvCompCode":"string","IpayCurrPayAmt":"float","IpayVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="dc54a776-af81-4641-a2a4-97e53717cd66" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"IpayCompCode":"string","IpaySeqNum":"string","IpayInvNum":"string","IpayInvCompCode":"string","IpayCurrPayAmt":"float","IpayVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

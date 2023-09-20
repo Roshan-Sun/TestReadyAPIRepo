@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmdetail" path="/cm-rest-api/rest/1/cmdetail" id="3ec90660-d0e3-456b-b21c-6ea8d47ff90d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3ec90660-d0e3-456b-b21c-6ea8d47ff90dfileName">%2Fcm-rest-api%2Frest%2F1%2Fcmdetail</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3b8679d8-950d-4881-9ea5-3ef105f6c7f3" method="GET">
+    <con:description>All PCI Details or specific ones via finder</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCodes, selectByMaster or selectByProject</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (selectByCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>mastJobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Header Job code (selectByCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>phaseCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Phase code (selectByCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>categoryCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Category code (selectByCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>changeCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PCI Change code (selectByCodes and selectByProject)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>cmMastVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Uuid of PCI Header (selectByMaster)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByProject)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project code (selectByProject)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdBillAmt" : 0,
+  "CmdBillAmtChangeDate" : "YYYY-MM-dd",
+  "CmdBillCatCode" : "string",
+  "CmdBillCode" : "string",
+  "CmdBillDrawNum" : 0,
+  "CmdBillName" : "string",
+  "CmdBillPhsCode" : "string",
+  "CmdBillRevisionNum" : 0,
+  "CmdBillTypeCode" : "string",
+  "CmdBillUnit" : 0,
+  "CmdBillUnitRate" : 0,
+  "CmdBudgAmt" : 0,
+  "CmdBudgAmtChangeDate" : "YYYY-MM-dd",
+  "CmdBudgEstUnitRate" : 0,
+  "CmdBudgQty" : 0,
+  "CmdBudgQuotedUnitRate" : 0,
+  "CmdBudgRevAmt" : 0,
+  "CmdBudgRevUnitRate" : 0,
+  "CmdBudgUnitRate" : 0,
+  "CmdBudgWmCode" : "string",
+  "CmdCatCode" : "string",
+  "CmdChgCode" : "string",
+  "CmdClvParameterValue" : "string",
+  "CmdClvValueCode1" : "string",
+  "CmdClvValueCode2" : "string",
+  "CmdClvValueCode3" : "string",
+  "CmdClvValueCode4" : "string",
+  "CmdClvValueCode5" : "string",
+  "CmdClvValueCode6" : "string",
+  "CmdCompCode" : "string",
+  "CmdCycleLineNum" : 0,
+  "CmdDaysImpact" : 0,
+  "CmdDisplayOrder" : 0,
+  "CmdEffectiveEndDate" : "YYYY-MM-dd",
+  "CmdEffectiveStartDate" : "YYYY-MM-dd",
+  "CmdEstBillAmt" : 0,
+  "CmdEstBudgAmt" : 0,
+  "CmdGroupCode" : "string",
+  "CmdInvCode" : "string",
+  "CmdInScopeAmt" : 0,
+  "CmdJobCode" : "string",
+  "CmdLastSessioninfo" : "string",
+  "CmdMarkupIndicatorFlag" : "string",
+  "CmdMastJobCode" : "string",
+  "CmdNegBillAmt" : 0,
+  "CmdNegBudgAmt" : 0,
+  "CmdOrigSessioninfo" : "string",
+  "CmdOutOfScopeAmt" : 0,
+  "CmdOverrideMarkupFlag" : "string",
+  "CmdOwnerChgCode" : "string",
+  "CmdOwnerRefNumber" : "string",
+  "CmdPciSelectedFlag" : "string",
+  "CmdPhsCode" : "string",
+  "CmdPhsUnit" : 0,
+  "CmdPhsWmCode" : "string",
+  "CmdPotentialBudgAmt" : 0,
+  "CmdProjAmt" : 0,
+  "CmdProjUnit" : 0,
+  "CmdQuotedBillAmt" : 0,
+  "CmdQuotedBudgAmt" : 0,
+  "CmdRefName" : "string",
+  "CmdScChgCode" : "string",
+  "CmdScCompCode" : "string",
+  "CmdScContCode" : "string",
+  "CmdScRequestId" : "string",
+  "CmdScTaskCode" : "string",
+  "CmdScVenCode" : "string",
+  "CmdSeparateBillingRefCode" : "string",
+  "CmdStatusCode" : "string",
+  "CmdSubcRefNumber" : "string",
+  "CmdWbsvCode1" : "string",
+  "CmdWbsvCode2" : "string",
+  "CmdWbsvCode3" : "string",
+  "CmdWbsvCode4" : "string",
+  "CmdIuCreateDate" : "YYYY-MM-dd",
+  "CmdIuCreateUser" : "string",
+  "CmdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdIuUpdateUser" : "string",
+  "CmdPostingFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdCmmastVuuid" : "string",
+  "CmdPhsCodeSeg1" : "string",
+  "CmdProjCode" : "string",
+  "CmdProjCompCode" : "string",
+  "CmdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fdf8cd89-0d20-40d0-ac7a-45925a4ab932" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="49db13da-bbf4-48db-862d-87c8a9dfa9cc" method="POST">
+    <con:description>Create a PCI Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdBillAmt" : 0,
+  "CmdBillAmtChangeDate" : "YYYY-MM-dd",
+  "CmdBillCatCode" : "string",
+  "CmdBillCode" : "string",
+  "CmdBillDrawNum" : 0,
+  "CmdBillName" : "string",
+  "CmdBillPhsCode" : "string",
+  "CmdBillRevisionNum" : 0,
+  "CmdBillTypeCode" : "string",
+  "CmdBillUnit" : 0,
+  "CmdBillUnitRate" : 0,
+  "CmdBudgAmt" : 0,
+  "CmdBudgAmtChangeDate" : "YYYY-MM-dd",
+  "CmdBudgEstUnitRate" : 0,
+  "CmdBudgQty" : 0,
+  "CmdBudgQuotedUnitRate" : 0,
+  "CmdBudgRevAmt" : 0,
+  "CmdBudgRevUnitRate" : 0,
+  "CmdBudgUnitRate" : 0,
+  "CmdBudgWmCode" : "string",
+  "CmdCatCode" : "string",
+  "CmdChgCode" : "string",
+  "CmdClvParameterValue" : "string",
+  "CmdClvValueCode1" : "string",
+  "CmdClvValueCode2" : "string",
+  "CmdClvValueCode3" : "string",
+  "CmdClvValueCode4" : "string",
+  "CmdClvValueCode5" : "string",
+  "CmdClvValueCode6" : "string",
+  "CmdCompCode" : "string",
+  "CmdCycleLineNum" : 0,
+  "CmdDaysImpact" : 0,
+  "CmdDisplayOrder" : 0,
+  "CmdEffectiveEndDate" : "YYYY-MM-dd",
+  "CmdEffectiveStartDate" : "YYYY-MM-dd",
+  "CmdEstBillAmt" : 0,
+  "CmdEstBudgAmt" : 0,
+  "CmdGroupCode" : "string",
+  "CmdInvCode" : "string",
+  "CmdInScopeAmt" : 0,
+  "CmdJobCode" : "string",
+  "CmdLastSessioninfo" : "string",
+  "CmdMarkupIndicatorFlag" : "string",
+  "CmdMastJobCode" : "string",
+  "CmdNegBillAmt" : 0,
+  "CmdNegBudgAmt" : 0,
+  "CmdOrigSessioninfo" : "string",
+  "CmdOutOfScopeAmt" : 0,
+  "CmdOverrideMarkupFlag" : "string",
+  "CmdOwnerChgCode" : "string",
+  "CmdOwnerRefNumber" : "string",
+  "CmdPciSelectedFlag" : "string",
+  "CmdPhsCode" : "string",
+  "CmdPhsUnit" : 0,
+  "CmdPhsWmCode" : "string",
+  "CmdPotentialBudgAmt" : 0,
+  "CmdProjAmt" : 0,
+  "CmdProjUnit" : 0,
+  "CmdQuotedBillAmt" : 0,
+  "CmdQuotedBudgAmt" : 0,
+  "CmdRefName" : "string",
+  "CmdScChgCode" : "string",
+  "CmdScCompCode" : "string",
+  "CmdScContCode" : "string",
+  "CmdScRequestId" : "string",
+  "CmdScTaskCode" : "string",
+  "CmdScVenCode" : "string",
+  "CmdSeparateBillingRefCode" : "string",
+  "CmdStatusCode" : "string",
+  "CmdSubcRefNumber" : "string",
+  "CmdWbsvCode1" : "string",
+  "CmdWbsvCode2" : "string",
+  "CmdWbsvCode3" : "string",
+  "CmdWbsvCode4" : "string",
+  "CmdIuCreateDate" : "YYYY-MM-dd",
+  "CmdIuCreateUser" : "string",
+  "CmdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdIuUpdateUser" : "string",
+  "CmdPostingFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdCmmastVuuid" : "string",
+  "CmdPhsCodeSeg1" : "string",
+  "CmdProjCode" : "string",
+  "CmdProjCompCode" : "string",
+  "CmdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmdCompCode":"string","CmdJobCode":"string","CmdMastJobCode":"string","CmdChgCode":"string","CmdPhsCode":"string","CmdCatCode":"string","CmdBillAmt":"float","CmdStatusCode":"string","CmdPostingFlag":"string","CmdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="61589a4a-d0cc-4abd-83af-b076c6464870" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdCompCode":"string","CmdJobCode":"string","CmdMastJobCode":"string","CmdChgCode":"string","CmdPhsCode":"string","CmdCatCode":"string","CmdBillAmt":"float","CmdStatusCode":"string","CmdPostingFlag":"string","CmdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="50978f67-78a9-4235-853b-b414c6d99ebe" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmdRefName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

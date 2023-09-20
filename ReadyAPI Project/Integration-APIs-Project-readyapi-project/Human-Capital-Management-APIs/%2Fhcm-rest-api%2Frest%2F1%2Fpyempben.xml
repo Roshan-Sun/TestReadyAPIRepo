@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempben" path="/hcm-rest-api/rest/1/pyempben" id="8aba5a27-5ce8-4d35-a981-af15136d29df" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8aba5a27-5ce8-4d35-a981-af15136d29dffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempben</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ee36b8e8-09e9-4465-ab77-b11537237f27" method="GET">
+    <con:description>Retrieve PY Employee Benefits</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BenCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Benefit Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PlanCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Plan Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PloCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Plan Option code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EffStartDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Benefit Effective Start Date (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EndDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Benefit Ending Date (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmbCompCode" : "string",
+  "EmbPrnCode" : "string",
+  "EmbEmpNo" : "string",
+  "EmbBenCode" : "string",
+  "EmbBenName" : "string",
+  "EmbStartDate" : "YYYY-MM-dd",
+  "EmbEffStartDate" : "YYYY-MM-dd",
+  "EmbEndDate" : "YYYY-MM-dd",
+  "EmbBenAmount" : 0,
+  "EmbUser" : "string",
+  "EmbLastUpdDate" : "YYYY-MM-dd",
+  "EmbBenType" : "string",
+  "EmbBaseCode" : "string",
+  "EmbContrAmt" : 0,
+  "EmbContrMaxAmt" : 0,
+  "EmbBaseAmt" : 0,
+  "EmbPlanCode" : "string",
+  "EmbPlanName" : "string",
+  "EmbPloCode" : "string",
+  "EmbPloName" : "string",
+  "EmbVendor" : "string",
+  "EmbVenName" : "string",
+  "EmbOutOfAreaFlag" : "string",
+  "EmbOthInsurFlag" : "string",
+  "EmbOthInsurVendor" : "string",
+  "EmbOthPolicyNo" : "string",
+  "EmbOthPolicyName" : "string",
+  "EmbOthInsurEffDate" : "YYYY-MM-dd",
+  "EmbComment" : "string",
+  "EmbBenefitSeq" : 0,
+  "EmbVendorAddCode" : "string",
+  "EmbDefaultAmount" : 0,
+  "EmbStartDateDisplay" : "string",
+  "EmbVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="27076442-d635-4bc1-9ba8-01618d88d864" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="dc0b6850-c0dc-49a2-84c7-bb0f41d5ce4c" method="POST">
+    <con:description>Create a PY Employee Benefit</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmbCompCode" : "string",
+  "EmbPrnCode" : "string",
+  "EmbEmpNo" : "string",
+  "EmbBenCode" : "string",
+  "EmbBenName" : "string",
+  "EmbStartDate" : "YYYY-MM-dd",
+  "EmbEffStartDate" : "YYYY-MM-dd",
+  "EmbEndDate" : "YYYY-MM-dd",
+  "EmbBenAmount" : 0,
+  "EmbUser" : "string",
+  "EmbLastUpdDate" : "YYYY-MM-dd",
+  "EmbBenType" : "string",
+  "EmbBaseCode" : "string",
+  "EmbContrAmt" : 0,
+  "EmbContrMaxAmt" : 0,
+  "EmbBaseAmt" : 0,
+  "EmbPlanCode" : "string",
+  "EmbPlanName" : "string",
+  "EmbPloCode" : "string",
+  "EmbPloName" : "string",
+  "EmbVendor" : "string",
+  "EmbVenName" : "string",
+  "EmbOutOfAreaFlag" : "string",
+  "EmbOthInsurFlag" : "string",
+  "EmbOthInsurVendor" : "string",
+  "EmbOthPolicyNo" : "string",
+  "EmbOthPolicyName" : "string",
+  "EmbOthInsurEffDate" : "YYYY-MM-dd",
+  "EmbComment" : "string",
+  "EmbBenefitSeq" : 0,
+  "EmbVendorAddCode" : "string",
+  "EmbDefaultAmount" : 0,
+  "EmbStartDateDisplay" : "string",
+  "EmbVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmbPloName":"string","EmbPloCode":"string","EmbStartDate":"string","EmbCompCode":"string","EmbPrnCode":"string","EmbBenCode":"string","EmbPlanCode":"string","EmbPlanName":"string","EmbEmpNo":"string","EmbEffStartDate":"string","EmbLastUpdDate":"string","EmbUser":"string","EmbOutOfAreaFlag":"string","EmbOthInsurFlag":"string","EmbVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4b7b217f-6ca5-4e2c-a761-5b6f9f38feb6" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmbPloName":"string","EmbPloCode":"string","EmbStartDate":"string","EmbCompCode":"string","EmbPrnCode":"string","EmbBenCode":"string","EmbPlanCode":"string","EmbPlanName":"string","EmbEmpNo":"string","EmbEffStartDate":"string","EmbLastUpdDate":"string","EmbUser":"string","EmbOutOfAreaFlag":"string","EmbOthInsurFlag":"string","EmbVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="a6c50e01-0545-4d21-b974-3b7c70a8433c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmbComment":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

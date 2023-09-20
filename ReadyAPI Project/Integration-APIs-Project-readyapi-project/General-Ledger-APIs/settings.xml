@@ -1,0 +1,3265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="14f6921e-87c7-42a9-b7a8-3481a812a669" name="General Ledger APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-GLRESTAPI-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># GL-REST-API
+API documentation for **General Ledger** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="14f6921e-87c7-42a9-b7a8-3481a812a669fileName">General-Ledger-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-GLRESTAPI-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-GLRESTAPI-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: General Ledger APIs
+  description: |
+    # GL-REST-API
+    API documentation for **General Ledger** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: glaccounts
+  description: GL Accounts
+- name: glbudget
+  description: GL Budgets
+- name: glcompany
+  description: GL Companies
+- name: glcons2
+  description: GL Consolidations
+- name: glconschart
+  description: GL Consolidation Charts
+- name: gldoccolumns
+  description: GL Document Columns
+- name: gldocdrilldown
+  description: GL Document Drill Downs
+- name: gldocrows
+  description: GL Document Rows
+- name: gldoctoplevel
+  description: GL Document Top Levels
+- name: gldocument
+  description: GL Documents
+- name: gljournal
+  description: GL Journals
+- name: glperactivitylog
+  description: GL Period Activity Log
+- name: glperiod
+  description: GL Periods
+- name: gltrialbalancebyacct
+  description: GL Trial Balance Report by Account
+- name: rtigenericgldepts
+  description: GL Departments
+- name: rtigledgerwithyearperiod
+  description: GL Ledger with Year/Period
+paths:
+  /glrestapi/rest/v1/glaccounts:
+    get:
+      tags:
+      - glaccounts
+      summary: Retrieve GL accounts
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectAccounts
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: chartCode
+        in: query
+        description: Chart Code (selectAccounts)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlAccounts'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glbudget:
+    get:
+      tags:
+      - glbudget
+      summary: Retrieve GL budgets
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByglbudFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByglbudFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AccCode
+        in: query
+        description: Account Code (selectByglbudFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: BudgetYr
+        in: query
+        description: Budget Year (selectByglbudFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glbudget/{BudPk}:
+    get:
+      tags:
+      - glbudget
+      summary: Retrieve specific GL budget
+      description: ""
+      parameters:
+      - name: BudPk
+        in: path
+        description: unique identifier for budget
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glcompany:
+    get:
+      tags:
+      - glcompany
+      summary: Retrieve GL Companies
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectCompany or selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company Code (selectCompany)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlCompany'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glcons2:
+    get:
+      tags:
+      - glcons2
+      summary: Retrieve GL Consolidations
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlCons2'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glconschart:
+    get:
+      tags:
+      - glconschart
+      summary: Retrieve GL Consolidation Charts
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlConsChart'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldoccolumns:
+    get:
+      tags:
+      - gldoccolumns
+      summary: Retrieve GL document columns
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectDocColumns
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: documentCode
+        in: query
+        description: Document Code (selectDocColumns)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocColumns'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - gldoccolumns
+      summary: Create a GL document column
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocColumnsRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocColumns'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldoccolumns/{Vuuid}:
+    get:
+      tags:
+      - gldoccolumns
+      summary: Retrieve a Specific GL document column
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocColumns'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - gldoccolumns
+      summary: Delete a Specific GL document column
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - gldoccolumns
+      summary: Update GL document column
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocColumnsRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocColumns'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldocdrilldown:
+    get:
+      tags:
+      - gldocdrilldown
+      summary: Retrieve GL document drill downs
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocDrillDown'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldocrows:
+    get:
+      tags:
+      - gldocrows
+      summary: Retrieve GL document rows
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectDocRows
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: documentCode
+        in: query
+        description: Document Code (selectDocRows)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocRows'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - gldocrows
+      summary: Create a GL document row
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocRowsRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocRows'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldocrows/{Vuuid}:
+    get:
+      tags:
+      - gldocrows
+      summary: Retrieve a Specific GL document row
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocRows'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - gldocrows
+      summary: Delete a Specific GL document row
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - gldocrows
+      summary: Update GL document row
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocRowsRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocRows'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldoctoplevel:
+    get:
+      tags:
+      - gldoctoplevel
+      summary: Retrieve GL document top levels
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlAccounts'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldocument:
+    get:
+      tags:
+      - gldocument
+      summary: Retrieve GL documents
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectDocument
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: documentCode
+        in: query
+        description: Document Code (selectDocument)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocument'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - gldocument
+      summary: Create a GL document
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocumentRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocument'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gldocument/{Vuuid}:
+    get:
+      tags:
+      - gldocument
+      summary: Retrieve a Specific GL document
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocument'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - gldocument
+      summary: Delete a Specific GL document
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - gldocument
+      summary: Update GL document
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/GlDocumentRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlDocument'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gljournal:
+    get:
+      tags:
+      - gljournal
+      summary: Retrieve GL journals
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlJournal'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - gljournal
+      summary: Create a GL journal
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/GlJournalRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlJournal'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gljournal/{JourCode}:
+    get:
+      tags:
+      - gljournal
+      summary: Retrieve a Specific GL journal
+      description: ""
+      parameters:
+      - name: JourCode
+        in: path
+        description: Unique journal code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlJournal'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - gljournal
+      summary: Delete a Specific GL journal
+      description: ""
+      parameters:
+      - name: JourCode
+        in: path
+        description: Unique journal code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - gljournal
+      summary: Update GL journal
+      description: ""
+      parameters:
+      - name: JourCode
+        in: path
+        description: Unique journal code
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/GlJournalRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlJournal'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glperactivitylog:
+    get:
+      tags:
+      - glperactivitylog
+      summary: Retrieve GL Period Activity Logs
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: GlPerActivityLogFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (GlPerActivityLogFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AccCode
+        in: query
+        description: Account Code (GlPerActivityLogFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PerYr
+        in: query
+        description: Period Year (GlPerActivityLogFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlPerActivityLog'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/glperiod:
+    get:
+      tags:
+      - glperiod
+      summary: Retrieve GL Periods
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectPeriod
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: chartCode
+        in: query
+        description: Chart Code (selectPeriod)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlPeriod'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/gltrialbalancebyacct:
+    get:
+      tags:
+      - gltrialbalancebyacct
+      summary: Retrieve GL Trial Balance Report
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: gl2000
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: acctPickList
+        in: query
+        description: Account Pick List (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company Code (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyGroupCode
+        in: query
+        description: Company Group Code (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: deptDetail
+        in: query
+        description: Department Detail (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: deptPickList
+        in: query
+        description: Department Pick List (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fiscalYear
+        in: query
+        description: Fiscal Year (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: number
+      - name: fromAcctCode
+        in: query
+        description: Account Code to start search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: toAcctCode
+        in: query
+        description: Account Code to end search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fromDeptCode
+        in: query
+        description: Department Code to start search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: toDeptCode
+        in: query
+        description: Department Code to end search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fromPeriod
+        in: query
+        description: Period to start search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: number
+      - name: toPeriod
+        in: query
+        description: Period to end search interval (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: number
+      - name: homeCurrency
+        in: query
+        description: Currency Type (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: showZeroFlag
+        in: query
+        description: Flag to show zero records (gl2000)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlTrialBalanceByAcct'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/rtigenericgldepts:
+    get:
+      tags:
+      - rtigenericgldepts
+      summary: Retrieve GL Departments
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectDeptCompany
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: deptCompanyCode
+        in: query
+        description: Company Code (selectDeptCompany)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RtiGenericGlDepts'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /glrestapi/rest/v1/rtigledgerwithyearperiod:
+    get:
+      tags:
+      - rtigledgerwithyearperiod
+      summary: Retrieve GL Ledgers
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: glSummary
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company Code (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: departmentCode
+        in: query
+        description: Department Code (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: accountCode
+        in: query
+        description: Account Code (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fiscalYear
+        in: query
+        description: Fiscal Year (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fiscalQuarter
+        in: query
+        description: Fiscal Quarter (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fiscalPeriod
+        in: query
+        description: Fiscal Period (glSummary)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RtiGLedgerWithYearPeriod'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    GlAccounts:
+      type: object
+      properties:
+        AccConschartCode:
+          maxLength: 7
+          type: string
+          description: Account Chart Code. Must be a valid Chart Code in CMiC.
+        AccConschartName:
+          maxLength: 30
+          type: string
+        AccCode:
+          maxLength: 16
+          type: string
+          description: Account Code.
+        AccName:
+          maxLength: 30
+          type: string
+          description: Account Name.
+        AccCounterAcc:
+          maxLength: 16
+          type: string
+        AccDistCode:
+          maxLength: 2
+          type: string
+        AccTypeCode:
+          maxLength: 3
+          type: string
+          description: "Account Type. Must be a valid Account Type in CMiC (ie. A,L,O,R,E)"
+        AccTypeName:
+          maxLength: 30
+          type: string
+        AccSafCode:
+          maxLength: 1
+          type: string
+        AccCompressCode:
+          maxLength: 1
+          type: string
+        AccNormalBalCode:
+          maxLength: 1
+          type: string
+          description: "Normal Balance Code., ‘D’ – Debit, ‘C’ – Credit"
+        AccNormalBalName:
+          maxLength: 30
+          type: string
+        AccSequence:
+          maxLength: 16
+          type: integer
+          description: Account Sequence. This is often the same as the Account Code. Must be within the sequence range of the Account Type.
+        AccSubledgCode:
+          maxLength: 2
+          type: string
+          description: "Sub ledger Control Code. (ie. If this is the sub ledger control account for Accounts Payable, we would enter ‘AP’ here.)"
+        AccSubledgName:
+          maxLength: 30
+          type: string
+        AccSummaryCode:
+          maxLength: 1
+          type: string
+          description: "Sub Ledger Summary Code. ‘Y’ or ‘N’. , ‘Y’ – if the amounts posted to this account will be summarized in GL."
+        AccWmCode:
+          maxLength: 2
+          type: string
+          description: Account Weight/Measure Code.
+        AccWmName:
+          maxLength: 10
+          type: string
+        AccLongCode:
+          maxLength: 24
+          type: string
+          description: Account Long Code is an alternate code. It is not displayed by any current programs.
+        AccCtrlCode:
+          maxLength: 16
+          type: string
+          description: Controlling Account. Must be a valid Account. You will have to load this table one Account Level Code at a time. Leave null/blank if there is no control account.
+        AccCtrlName:
+          maxLength: 30
+          type: string
+        AccLevelCode:
+          maxLength: 2
+          type: integer
+          description: "Account Level Code. 1,2,3,… (ie. Accnt 1000 = level 1, Accnt 1010 = level 2)"
+        AccLowFlag:
+          maxLength: 1
+          type: string
+          description: "Low Flag. ‘Y’ or ‘N’. , ‘Y’ – if this is the lowest level account to which you will be posting transactions. (ie. Accnt 1010 is lowest level)"
+        AccMonetaryFlag:
+          maxLength: 1
+          type: string
+        AccInterCompAccFlag:
+          maxLength: 1
+          type: string
+          description: Inter Company Account Flag. ‘Y’ or ‘N’.
+        AccOfConcatenatedSegments:
+          maxLength: 240
+          type: string
+          description: Leave Null
+        AccHier:
+          maxLength: 250
+          type: string
+          description: "Account Hierarchy., System Generated – LEAVE THIS NULL"
+        AccTavCode1:
+          maxLength: 10
+          type: string
+          description: Leave Null
+        AccTavCode2:
+          maxLength: 10
+          type: string
+          description: Leave Null
+        AccTavCode3:
+          maxLength: 10
+          type: string
+          description: Leave Null
+        AccTavCode4:
+          maxLength: 10
+          type: string
+          description: Leave Null
+        AccTavRequiredFlag1:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavRequiredFlag2:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavRequiredFlag3:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavRequiredFlag4:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavValidatedFlag1:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavValidatedFlag2:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavValidatedFlag3:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavValidatedFlag4:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavEditableFlag1:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavEditableFlag2:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavEditableFlag3:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccTavEditableFlag4:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        AccMarkedForProcessFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ’N’
+        AccCostpoolAllowedFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ’N’
+        AccSchedgReportLevelFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ’N’
+        AccCurrCode:
+          maxLength: 3
+          type: string
+          description: Foreign Exchange Currency
+        AccCurrName:
+          maxLength: 30
+          type: string
+        AccFxAccCode:
+          maxLength: 16
+          type: string
+          description: Foreign Exchange Account
+        AccFxAccName:
+          maxLength: 30
+          type: string
+        AccTacEnableFlag:
+          maxLength: 1
+          type: string
+        AccGroupCode1:
+          maxLength: 35
+          type: string
+        AccGroupCode2:
+          maxLength: 35
+          type: string
+        AccGroupCode3:
+          maxLength: 35
+          type: string
+        AccGroupCode4:
+          maxLength: 35
+          type: string
+        AccGroupCode5:
+          maxLength: 35
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        AccVUuid:
+          maxLength: 64
+          type: string
+    GlBudget:
+      type: object
+      properties:
+        BudPk:
+          maxLength: 72
+          type: string
+        BudCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        BudDeptCode:
+          maxLength: 6
+          type: string
+          description: Budget Department
+        BudDeptName:
+          maxLength: 30
+          type: string
+        BudAccCode:
+          maxLength: 16
+          type: string
+          description: Account Code
+        BudAccName:
+          maxLength: 30
+          type: string
+        BudYr:
+          maxLength: 4
+          type: integer
+          description: Budget Year
+        BudTypeCode:
+          maxLength: 2
+          type: string
+          description: Budget Code
+        BudPer1Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer2Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer3Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer4Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer5Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer6Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer7Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer8Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer9Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer10Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer11Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer12Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudPer13Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        BudNewRecFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    GlCompany:
+      type: object
+      properties:
+        CompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CompName:
+          maxLength: 30
+          type: string
+        CompAdd1:
+          maxLength: 40
+          type: string
+        CompAdd2:
+          maxLength: 40
+          type: string
+        CompAdd3:
+          maxLength: 40
+          type: string
+        CompRegionCode:
+          maxLength: 3
+          type: string
+        CompRegionName:
+          maxLength: 30
+          type: string
+        CompCountry:
+          maxLength: 30
+          type: string
+        CompPostalCode:
+          maxLength: 12
+          type: string
+        CompPhoneCountryCode:
+          maxLength: 3
+          type: string
+        CompPhoneAreaCode:
+          maxLength: 5
+          type: string
+        CompPhoneNum:
+          maxLength: 9
+          type: string
+        CompFaxCountryCode:
+          maxLength: 3
+          type: string
+        CompFaxAreaCode:
+          maxLength: 5
+          type: string
+        CompFaxNum:
+          maxLength: 9
+          type: string
+        CompTelexNum:
+          maxLength: 20
+          type: string
+        CompCableNum:
+          maxLength: 20
+          type: string
+        CompTerrCode:
+          maxLength: 4
+          type: string
+        CompPerNum:
+          maxLength: 2
+          type: integer
+        CompCurrPer:
+          maxLength: 2
+          type: integer
+        CompFiscalYr:
+          maxLength: 4
+          type: integer
+        CompCurrCode:
+          maxLength: 3
+          type: string
+        CompCurrName:
+          maxLength: 30
+          type: string
+        CompRepCurr1Code:
+          maxLength: 3
+          type: string
+        CompRepCurr1Name:
+          maxLength: 30
+          type: string
+        CompRepCurr2Code:
+          maxLength: 3
+          type: string
+        CompRepCurr2Name:
+          maxLength: 30
+          type: string
+        CompRepCurr3Code:
+          maxLength: 3
+          type: string
+        CompRepCurr3Name:
+          maxLength: 30
+          type: string
+        CompDeptCode:
+          maxLength: 6
+          type: string
+        CompArchDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompTaxCode:
+          maxLength: 50
+          type: string
+        CompCompoundGstCode:
+          maxLength: 1
+          type: string
+        CompCalcStartDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompCalcEndDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompIcDeptCode:
+          maxLength: 6
+          type: string
+        CompIcAccCode:
+          maxLength: 16
+          type: string
+        CompConschartCode:
+          maxLength: 7
+          type: string
+        CompConschartName:
+          maxLength: 30
+          type: string
+        CompConschartTypeCode:
+          maxLength: 1
+          type: string
+        CompAccByCompFlag:
+          maxLength: 1
+          type: string
+        CompAccByDeptFlag:
+          maxLength: 1
+          type: string
+        CompIntintCode:
+          maxLength: 8
+          type: string
+        CompMocrrCode:
+          maxLength: 8
+          type: string
+        CompFedTax1Code:
+          maxLength: 50
+          type: string
+        CompFedTax2Code:
+          maxLength: 50
+          type: string
+        CompCkDigitCode:
+          maxLength: 3
+          type: string
+        CompTypeCode:
+          maxLength: 1
+          type: string
+        CompEmpNum:
+          maxLength: 6
+          type: integer
+        CompCtrlCode:
+          maxLength: 8
+          type: string
+        CompOwnershipPc:
+          maxLength: 6
+          type: number
+          format: float - 3 decimals
+        CompEstablishDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompTaxDist:
+          maxLength: 50
+          type: string
+        CompVatRegNum:
+          maxLength: 50
+          type: string
+        CompOfGlFlag:
+          maxLength: 1
+          type: string
+        CompOfGlSetOfBooksId:
+          maxLength: 15
+          type: integer
+        CompOfGlIdFlexCode:
+          maxLength: 4
+          type: string
+        CompOfGlIdFlexNum:
+          maxLength: 15
+          type: integer
+        CompOfGlSegments:
+          maxLength: 240
+          type: string
+        CompOfGlValues:
+          maxLength: 240
+          type: string
+        CompUseTacFlag:
+          maxLength: 1
+          type: string
+        CompConsCode:
+          maxLength: 7
+          type: string
+        CompDistGlCompCode:
+          maxLength: 8
+          type: string
+        CompDistGlDeptCode:
+          maxLength: 6
+          type: string
+        CompDistGlLogDaysNum:
+          maxLength: 38
+          type: number
+          format: float - 12 decimals
+        CompDistGlFlag:
+          maxLength: 1
+          type: string
+        CompIntClrDeptCode:
+          maxLength: 6
+          type: string
+        CompLegalName:
+          maxLength: 60
+          type: string
+        CompLogoFile:
+          maxLength: 250
+          type: string
+        CompWebAdd:
+          maxLength: 50
+          type: string
+        CompEmailAdd:
+          maxLength: 50
+          type: string
+        CompLogoFileOnWeb:
+          maxLength: 250
+          type: string
+        CompIncomeCloseDeptCode:
+          maxLength: 6
+          type: string
+        CompIncomeCloseAccCode:
+          maxLength: 16
+          type: string
+        CompT619RegistrationCode:
+          maxLength: 9
+          type: string
+        CompDefaultPyCountryCode:
+          maxLength: 4
+          type: string
+        CompArctrlLogoFile:
+          maxLength: 250
+          type: string
+        CompCtrlFileExists:
+          maxLength: 1
+          type: string
+        CompContactName:
+          maxLength: 50
+          type: string
+        CompF5trGstRegNo:
+          maxLength: 50
+          type: string
+        CompF5trDeclrName:
+          maxLength: 50
+          type: string
+        CompF5trDeclrId:
+          maxLength: 50
+          type: string
+        CompF5trDesignation:
+          maxLength: 50
+          type: string
+        CompF5trContPerson:
+          maxLength: 50
+          type: string
+        CompF5trContTelNo:
+          maxLength: 15
+          type: string
+        CompF5trRefNo:
+          maxLength: 50
+          type: string
+        CompArDepartmentName:
+          maxLength: 250
+          type: string
+        CompRecognizeFxFlag:
+          maxLength: 1
+          type: string
+        CompMaintainBalcurrFlag:
+          maxLength: 1
+          type: string
+        CompRemeasureAdjAccCode:
+          maxLength: 8
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CompVUuid:
+          maxLength: 64
+          type: string
+        CompIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompIuCreateUser:
+          maxLength: 30
+          type: string
+        CompIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        CompIuUpdateUser:
+          maxLength: 30
+          type: string
+    GlCons2:
+      type: object
+      properties:
+        Cons2Code:
+          maxLength: 7
+          type: string
+        Cons2Name:
+          maxLength: 30
+          type: string
+        Cons2ConschartCode:
+          maxLength: 7
+          type: string
+        Cons2ConshierFlag:
+          maxLength: 1
+          type: string
+        Cons2CurrCode:
+          maxLength: 3
+          type: string
+        Cons2CurrName:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        Cons2VUuid:
+          maxLength: 64
+          type: string
+    GlConsChart:
+      type: object
+      properties:
+        ConschartCode:
+          maxLength: 7
+          type: string
+        ConschartName:
+          maxLength: 30
+          type: string
+        ConschartChkdgTypeCode:
+          maxLength: 3
+          type: string
+        ConschartMaxPerNum:
+          maxLength: 2
+          type: integer
+        ConschartUpdParentBalFlag:
+          maxLength: 1
+          type: string
+        ConschartTavCode1:
+          maxLength: 10
+          type: string
+        ConschartTavCode2:
+          maxLength: 10
+          type: string
+        ConschartTavCode3:
+          maxLength: 10
+          type: string
+        ConschartTavCode4:
+          maxLength: 10
+          type: string
+        ConschartTavRequiredFlag1:
+          maxLength: 1
+          type: string
+        ConschartTavRequiredFlag2:
+          maxLength: 1
+          type: string
+        ConschartTavRequiredFlag3:
+          maxLength: 1
+          type: string
+        ConschartTavRequiredFlag4:
+          maxLength: 1
+          type: string
+        ConschartTavValidatedFlag1:
+          maxLength: 1
+          type: string
+        ConschartTavValidatedFlag2:
+          maxLength: 1
+          type: string
+        ConschartTavValidatedFlag3:
+          maxLength: 1
+          type: string
+        ConschartTavValidatedFlag4:
+          maxLength: 1
+          type: string
+        ConschartTavEditableFlag1:
+          maxLength: 1
+          type: string
+        ConschartTavEditableFlag2:
+          maxLength: 1
+          type: string
+        ConschartTavEditableFlag3:
+          maxLength: 1
+          type: string
+        ConschartTavEditableFlag4:
+          maxLength: 1
+          type: string
+        ConschartOpenPeriodFlag:
+          maxLength: 1
+          type: string
+        ConschartIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        ConschartIuCreateUser:
+          maxLength: 30
+          type: string
+        ConschartIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        ConschartIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        ConschartVUuid:
+          maxLength: 64
+          type: string
+    GlDocColumns:
+      type: object
+      properties:
+        DclDocCode:
+          maxLength: 8
+          type: string
+        DclDocName:
+          maxLength: 30
+          type: string
+        DclColNum:
+          maxLength: 2
+          type: integer
+        DclFuncType:
+          maxLength: 1
+          type: string
+        DclFuncTypeName:
+          maxLength: 9
+          type: string
+        DclColCode:
+          maxLength: 2
+          type: string
+        DclColName:
+          maxLength: 30
+          type: string
+        DclColYr:
+          maxLength: 4
+          type: integer
+        DclColPer:
+          maxLength: 2
+          type: integer
+        DclCol1Num:
+          maxLength: 2
+          type: integer
+        DclCol2Num:
+          maxLength: 2
+          type: integer
+        DclRatioCode:
+          maxLength: 1
+          type: string
+        DclTitle1:
+          maxLength: 15
+          type: string
+        DclTitle2:
+          maxLength: 15
+          type: string
+        DclPrintCode:
+          maxLength: 1
+          type: string
+        DclCon2Code:
+          maxLength: 7
+          type: string
+        DclCon2Name:
+          maxLength: 30
+          type: string
+        DclTypeCode:
+          maxLength: 1
+          type: string
+        DclMaskCode:
+          maxLength: 2
+          type: string
+        DclMaskName:
+          maxLength: 30
+          type: string
+        DclPscaleNum:
+          maxLength: 5
+          type: integer
+        DclScaleCode:
+          maxLength: 1
+          type: string
+        DclUser:
+          maxLength: 30
+          type: string
+        DclWidthNum:
+          maxLength: 3
+          type: integer
+        DclCon2OverrideCode:
+          maxLength: 1
+          type: string
+        DclBudgCode:
+          maxLength: 2
+          type: string
+        DclBudgName:
+          maxLength: 60
+          type: string
+        DclRevCode:
+          maxLength: 1
+          type: string
+        DclSignOverrideFlag:
+          maxLength: 1
+          type: string
+        DclFactor1:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        DclFactor2:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        DclIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DclIuCreateUser:
+          maxLength: 30
+          type: string
+        DclIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DclIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        DclVUuid:
+          maxLength: 64
+          type: string
+    GlDocDrillDown:
+      type: object
+      properties:
+        RDocCode:
+          maxLength: 256
+          type: string
+        RType:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RSeqNum:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RAccCode:
+          maxLength: 16
+          type: string
+        RAccSeq:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RTotalNum:
+          maxLength: 1
+          type: string
+        RDapLineCode:
+          maxLength: 1
+          type: string
+        RDocDesc:
+          maxLength: 80
+          type: string
+        R01:
+          maxLength: 21
+          type: string
+        R02:
+          maxLength: 21
+          type: string
+        R03:
+          maxLength: 21
+          type: string
+        R04:
+          maxLength: 21
+          type: string
+        R05:
+          maxLength: 21
+          type: string
+        R06:
+          maxLength: 21
+          type: string
+        R07:
+          maxLength: 21
+          type: string
+        R08:
+          maxLength: 21
+          type: string
+        R09:
+          maxLength: 21
+          type: string
+        R10:
+          maxLength: 21
+          type: string
+        R11:
+          maxLength: 21
+          type: string
+        R12:
+          maxLength: 21
+          type: string
+        R13:
+          maxLength: 21
+          type: string
+        R14:
+          maxLength: 21
+          type: string
+        R15:
+          maxLength: 21
+          type: string
+        R16:
+          maxLength: 21
+          type: string
+        R17:
+          maxLength: 21
+          type: string
+        R18:
+          maxLength: 21
+          type: string
+        R19:
+          maxLength: 21
+          type: string
+        R20:
+          maxLength: 21
+          type: string
+        RJobid:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RSessionid:
+          maxLength: 30
+          type: string
+        RRunPeriod:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RRunYear:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        RSuppressDetailLines:
+          maxLength: 1
+          type: string
+        RSuppressTotalLines:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    GlDocRows:
+      type: object
+      properties:
+        DapDocCode:
+          maxLength: 8
+          type: string
+        DapDocName:
+          maxLength: 30
+          type: string
+        DapSeqNum:
+          maxLength: 4
+          type: integer
+        DapLineCode:
+          maxLength: 1
+          type: string
+        DapLineName:
+          maxLength: 30
+          type: string
+        DapStartAccSeq:
+          maxLength: 8
+          type: integer
+        DapEndAccSeq:
+          maxLength: 8
+          type: integer
+        DapRatioCode:
+          maxLength: 1
+          type: string
+        DapPrintCode:
+          maxLength: 1
+          type: string
+        DapCentreCode:
+          maxLength: 1
+          type: string
+        DapDesc:
+          maxLength: 80
+          type: string
+        DapDrcrCode:
+          maxLength: 1
+          type: string
+        DapRevCode:
+          maxLength: 1
+          type: string
+        DapShiftCode:
+          maxLength: 1
+          type: string
+        DapTotal1Code:
+          maxLength: 1
+          type: string
+        DapTotal2Code:
+          maxLength: 1
+          type: string
+        DapTotalNum:
+          maxLength: 1
+          type: integer
+        DapColSkip:
+          maxLength: 1
+          type: integer
+        DapLineSkip:
+          maxLength: 1
+          type: integer
+        DapStartAccCode:
+          maxLength: 16
+          type: string
+        DapEndAccCode:
+          maxLength: 16
+          type: string
+        DapMatchCode:
+          maxLength: 1
+          type: string
+        DapStoreCode:
+          maxLength: 1
+          type: string
+        DapCon2Code:
+          maxLength: 7
+          type: string
+        DapCon2Name:
+          maxLength: 30
+          type: string
+        DapEndPageFlag:
+          maxLength: 1
+          type: string
+        DapIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DapIuCreateUser:
+          maxLength: 30
+          type: string
+        DapIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DapIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        DapVUuid:
+          maxLength: 64
+          type: string
+    GlDocument:
+      type: object
+      properties:
+        DocCode:
+          maxLength: 8
+          type: string
+        DocName:
+          maxLength: 30
+          type: string
+        DocDesc:
+          maxLength: 60
+          type: string
+        DocCatCode:
+          maxLength: 2
+          type: string
+        DocCatName:
+          maxLength: 30
+          type: string
+        DocBudgtypeCode:
+          maxLength: 2
+          type: string
+        DocSeqtypeCode:
+          maxLength: 1
+          type: string
+        DocActionCode:
+          maxLength: 1
+          type: string
+        DocLstRunPer:
+          maxLength: 2
+          type: integer
+        DocSuprDetCode:
+          maxLength: 1
+          type: string
+        DocSuprTtlCode:
+          maxLength: 1
+          type: string
+        DocTypeCode:
+          maxLength: 1
+          type: string
+        DocLstRunYr:
+          maxLength: 4
+          type: integer
+        DocCompCode:
+          maxLength: 8
+          type: string
+        DocCon2Code:
+          maxLength: 7
+          type: string
+        DocDesc2:
+          maxLength: 60
+          type: string
+        DocDesc3:
+          maxLength: 60
+          type: string
+        DocDesc4:
+          maxLength: 60
+          type: string
+        DocUserCode:
+          maxLength: 30
+          type: string
+        DocConschartCode:
+          maxLength: 7
+          type: string
+        DocConschartName:
+          maxLength: 30
+          type: string
+        DocWidthNum:
+          maxLength: 3
+          type: integer
+        DocLengthNum:
+          maxLength: 3
+          type: integer
+        DocBalTableName:
+          maxLength: 30
+          type: string
+        DocBudgTableName:
+          maxLength: 30
+          type: string
+        DocAccTableName:
+          maxLength: 30
+          type: string
+        DocCurrCode:
+          maxLength: 3
+          type: string
+        DocFuncCode:
+          maxLength: 3
+          type: string
+        DocMaxPer:
+          maxLength: 2
+          type: integer
+        DocPrvYr:
+          maxLength: 4
+          type: integer
+        DocInterCompAccFlag:
+          maxLength: 1
+          type: string
+        DocCtrlAccFlag:
+          maxLength: 1
+          type: string
+        DocIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DocIuCreateUser:
+          maxLength: 30
+          type: string
+        DocIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DocIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        DocVUuid:
+          maxLength: 64
+          type: string
+    GlJournal:
+      type: object
+      properties:
+        JourCode:
+          maxLength: 2
+          type: string
+        JourName:
+          maxLength: 30
+          type: string
+        JourSeqNum:
+          maxLength: 11
+          type: integer
+        JourGlAppFlag:
+          maxLength: 1
+          type: string
+        JourIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        JourIuCreateUser:
+          maxLength: 30
+          type: string
+        JourIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        JourIuUpdateUser:
+          maxLength: 30
+          type: string
+    GlPerActivityLog:
+      type: object
+      properties:
+        GlpalCompCode:
+          maxLength: 8
+          type: string
+        GlpalDeptCode:
+          maxLength: 6
+          type: string
+        GlpalDeptName:
+          maxLength: 30
+          type: string
+        GlpalAccCode:
+          maxLength: 16
+          type: string
+        GlpalAccName:
+          maxLength: 30
+          type: string
+        GlpalPerYr:
+          maxLength: 4
+          type: integer
+        GlpalPer1Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer2Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer3Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer4Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer5Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer6Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer7Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer8Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer9Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer10Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer11Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlpalPer12Amt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+    GlPeriod:
+      type: object
+      properties:
+        PerConschartCode:
+          maxLength: 7
+          type: string
+        PerYr:
+          maxLength: 4
+          type: integer
+        PerPer:
+          maxLength: 2
+          type: integer
+        PerStartDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        PerEndDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        PerAdjFlag:
+          maxLength: 1
+          type: string
+        PerSeqNum:
+          maxLength: 11
+          type: integer
+        PerOpenPeriodFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    GlTrialBalanceByAcct:
+      type: object
+      properties:
+        GlCompCode:
+          maxLength: 8
+          type: string
+        GlCompName:
+          maxLength: 30
+          type: string
+        GlAcctypeName:
+          maxLength: 30
+          type: string
+        GlAcctypeSeqNum:
+          maxLength: 2
+          type: integer
+        GlAccNum:
+          maxLength: 40
+          type: string
+        GlAccSort:
+          maxLength: 16
+          type: string
+        GlAccName:
+          maxLength: 30
+          type: string
+        GlAccClearFlag:
+          maxLength: 1
+          type: string
+        GlAccCode:
+          maxLength: 16
+          type: string
+        Gl2000OpenBal:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        Gl2000TableEndBal:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        Gl2000DebitActivityAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        Gl2000CreditActivityAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        Gl2000DeptCode:
+          maxLength: 6
+          type: string
+        Gl2000DeptCode1:
+          maxLength: 6
+          type: string
+        Gl2000DeptName:
+          maxLength: 30
+          type: string
+        Gl2000CompArchDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        Gl2000CompOpenBalAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlAcctPicklist:
+          maxLength: 10
+          type: string
+        GlCompGroupCode:
+          maxLength: 10
+          type: string
+        GlDeptDetail:
+          maxLength: 10
+          type: string
+        GlFiscalYear:
+          maxLength: 10
+          type: integer
+        GlFromAcctCode:
+          maxLength: 10
+          type: string
+        GlFromDeptCode:
+          maxLength: 10
+          type: string
+        GlFromPeriod:
+          maxLength: 10
+          type: integer
+        GlHomeCurrency:
+          maxLength: 10
+          type: string
+        GlShowAcctW0activity:
+          maxLength: 10
+          type: string
+        GlToAcctCode:
+          maxLength: 10
+          type: string
+        GlToDeptCode:
+          maxLength: 10
+          type: string
+        GlToPeriod:
+          maxLength: 10
+          type: integer
+        GlCurrentRunSeq:
+          maxLength: 10
+          type: string
+        GlDeptPicklist:
+          maxLength: 10
+          type: string
+        GlPortalUser:
+          maxLength: 10
+          type: string
+    RtiGenericGlDepts:
+      type: object
+      properties:
+        DeptCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        DeptCode:
+          maxLength: 6
+          type: string
+          description: Department Code
+        DeptCtrlCode:
+          maxLength: 6
+          type: string
+          description: "Controlling Department Code., Mandatory if DEPT_CODE is not ‘00’."
+        DeptCtrlName:
+          maxLength: 30
+          type: string
+        DeptName:
+          maxLength: 30
+          type: string
+          description: Department Name
+        DeptAdd1:
+          maxLength: 40
+          type: string
+          description: Address Line 1
+        DeptAdd2:
+          maxLength: 40
+          type: string
+          description: Address Line 2
+        DeptAdd3:
+          maxLength: 40
+          type: string
+          description: Address Line 3
+        DeptRegionCode:
+          maxLength: 3
+          type: string
+          description: Region/State/Province Code
+        DeptRegionName:
+          maxLength: 30
+          type: string
+        DeptCountry:
+          maxLength: 30
+          type: string
+          description: Country
+        DeptPostalCode:
+          maxLength: 12
+          type: string
+          description: Zip Code/Postal Code
+        DeptCountryCode:
+          maxLength: 3
+          type: string
+          description: Leave Null
+        DeptAreaCode:
+          maxLength: 5
+          type: string
+          description: Area Code
+        DeptPhoneNum:
+          maxLength: 9
+          type: string
+          description: Telephone Number
+        DeptFaxCountryCode:
+          maxLength: 3
+          type: string
+        DeptFaxAreaCode:
+          maxLength: 5
+          type: string
+        DeptFaxNum:
+          maxLength: 9
+          type: string
+        DeptInterClearAccCode:
+          maxLength: 16
+          type: string
+          description: "Inter-Department Clearing Account. , Only populate if you are using Inter-departmental clearing. Otherwise leave null."
+        DeptIncomeCloseDeptCode:
+          maxLength: 6
+          type: string
+          description: "Income Closing Department. , Enter a valid department for Income Closing Transactions. (ie. ‘00’)"
+        DeptIncomeCloseAccCode:
+          maxLength: 16
+          type: string
+          description: "Income Closing Account. , Enter a valid GL Account. (ie. ‘3000’)"
+        DeptYr:
+          maxLength: 4
+          type: integer
+          description: Enter current year for this department.
+        DeptBuCode:
+          maxLength: 2
+          type: string
+          description: Enter Business Unit Code. Populate with ‘00’ if you do not use Business Units.
+        DeptBuName:
+          maxLength: 40
+          type: string
+        DeptPer:
+          maxLength: 2
+          type: integer
+          description: Current period for this department.
+        DeptCloseYr:
+          maxLength: 4
+          type: integer
+          description: Closed Year. Enter the last closed year for this department.
+        DeptBalanceFlag:
+          maxLength: 1
+          type: string
+          description: "Self-Balancing Flag. Set to ‘Y’ or ‘N’. , ‘Y’ if you wish to have automatic balancing transactions created for interdepartmental transactions."
+        DeptTaxCode:
+          maxLength: 10
+          type: string
+          description: Leave Null
+        DeptFedTax1Code:
+          maxLength: 15
+          type: string
+          description: Leave Null
+        DeptFedTax2Code:
+          maxLength: 20
+          type: string
+          description: Leave Null
+        DeptCkDigitCode:
+          maxLength: 3
+          type: string
+          description: Leave Null
+        DeptTax1Code:
+          maxLength: 11
+          type: string
+        DeptTax1IncinvFlag:
+          maxLength: 1
+          type: string
+        DeptTax2Code:
+          maxLength: 11
+          type: string
+        DeptTax2IncinvFlag:
+          maxLength: 1
+          type: string
+        DeptTax3Code:
+          maxLength: 11
+          type: string
+        DeptTax3IncinvFlag:
+          maxLength: 1
+          type: string
+        DeptTax4Code:
+          maxLength: 11
+          type: string
+        DeptTax4IncinvFlag:
+          maxLength: 1
+          type: string
+        DeptTax5Code:
+          maxLength: 11
+          type: string
+        DeptTax5IncinvFlag:
+          maxLength: 1
+          type: string
+        DeptHier:
+          maxLength: 127
+          type: string
+        DeptWcbCode:
+          maxLength: 4
+          type: string
+          description: Leave Null
+        DeptAddrCode:
+          maxLength: 8
+          type: string
+          description: Leave Null
+        DeptIbRevAccCode:
+          maxLength: 16
+          type: string
+          description: Leave Null
+        DeptApTax1Code:
+          maxLength: 11
+          type: string
+          description: AP Tax Code 1. Must be a valid Tax Code.
+        DeptApTax2Code:
+          maxLength: 11
+          type: string
+          description: AP Tax Code 2. Must be a valid Tax Code.
+        DeptApTax3Code:
+          maxLength: 11
+          type: string
+          description: AP Tax Code 3. Must be a valid Tax Code.
+        DeptAddrCompCode:
+          maxLength: 8
+          type: string
+          description: Leave Null
+        DeptJbAltCompAddCode:
+          maxLength: 8
+          type: string
+          description: Leave Null
+        DeptJbAltRemitAddCode:
+          maxLength: 8
+          type: string
+          description: Leave Null
+        DeptBillingRateCode:
+          maxLength: 10
+          type: string
+        DeptConschartCode:
+          maxLength: 7
+          type: string
+          description: Account Chart Code. Must be a valid Chart Code in CMiC.
+        DeptActiveFlag:
+          maxLength: 1
+          type: string
+        DeptRecalSalChrgrateFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    RtiGLedgerWithYearPeriod:
+      type: object
+      properties:
+        GlFiscalYear:
+          maxLength: 4
+          type: integer
+        GlFiscalQuarter:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlFiscalPeriod:
+          maxLength: 2
+          type: integer
+        GlNum:
+          maxLength: 11
+          type: integer
+          description: "This is a unique transaction number applied to each transaction posted to the GL.  , For conversion purposes, this should be the same as the batch number (field 1)"
+        GlCompCode:
+          maxLength: 8
+          type: string
+          description: Must be a VALID CMiC company code
+        GlDsrcCompCode:
+          maxLength: 8
+          type: string
+          description: "This is the source company code, set this to equal the transaction company code"
+        GlDeptCode:
+          maxLength: 6
+          type: string
+          description: Must be a VALID CMiC department for the company code entered in field 2
+        GlAccCode:
+          maxLength: 16
+          type: string
+          description: Must be a VALID CMiC account code for the company entered in field 2
+        GlJourCode:
+          maxLength: 2
+          type: string
+          description: Must be a VALID CMiC Journal code.
+        GlBchNum:
+          maxLength: 15
+          type: integer
+          description: "Start with batch number –1 and increment by 1 for each separate ASCII file created.  (i.e. –1, -2, -3…)"
+        GlDsrcCode:
+          maxLength: 2
+          type: string
+        GlSrcCode:
+          maxLength: 16
+          type: string
+          description: "This field is the ‘Source Code’ of the transaction, i.e. if this transaction was created in AP this would be the vendor code, if created from AR this is the customer code.  If you are importing in summary format then this field should be set to something similar to ‘SUMMARY BALANCE’"
+        GlSrcDesc:
+          maxLength: 30
+          type: string
+          description: "This field is the ‘Source Description’ of the transaction, i.e. if this transaction was created in AP this would be the Vendor Name.  If you are importing in summary format then this field should be set to something similar to ‘Summary Converted Data’"
+        GlRefCode:
+          maxLength: 25
+          type: string
+          description: "This is the ‘Reference Code’ of the transaction, i.e. if this transaction was created via AP then this would be the AP Invoice Number.  If you are importing in summary format then this field should be similar to ‘JUNE/03’"
+        GlRefDate:
+          type: string
+          description: "This is the reference/document date.  This is NOT the post date and does not have to be the same as the post date, i.e. If the transaction is from AP this date will be the invoice date, which in most cases is not the same as the post date.  If you are importing in summary method then set this date to the Period End date of the transaction."
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlPostDate:
+          type: string
+          description: This is the POST Date.  This is the date the transaction will be considered entered in the GL.  If you are importing in summary method then this is the Period End date of the transaction.
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlRefDesc:
+          maxLength: 60
+          type: string
+          description: "This is the ‘Reference Description’ field, i.e. if this transaction was created in AP this would be a short description of the invoice.  If you are importing in summary format then this field should be set to something similar to ‘Converted Summary Balance June/97’"
+        GlAmt:
+          maxLength: 18
+          type: number
+          description: This is the amount of the transaction.  This amount should not be zero or blank.
+          format: float - 2 decimals
+        GlUnit:
+          maxLength: 16
+          type: number
+          format: float - 8 decimals
+        GlCalcCode:
+          maxLength: 1
+          type: string
+        GlWmCode:
+          maxLength: 2
+          type: string
+          description: This must be a VALID CMiC weight/measure code.  In almost all cases you will have defined default WM code for use in the GL insert this value.  (usually either ‘LS’ or ‘NA’)
+        GlAccrualCode:
+          maxLength: 1
+          type: string
+        GlPreliminary:
+          maxLength: 1
+          type: string
+        GlAdjYr:
+          maxLength: 4
+          type: integer
+          description: This field should be left blank if the transaction is not a YEAREND closing transaction.  If it is a YEAREND closing transaction then this field should contain the closing year in the format of ‘YYYY’ (1997)
+        GlAdjPer:
+          maxLength: 2
+          type: integer
+          description: This field should be left blank if the transaction is not a YEAREND closing transaction.  If it is a YEAREND closing transaction then this field should contain the adjustment period number. (i.e. 13)
+        GlCurrCode:
+          maxLength: 3
+          type: string
+          description: "This is the company currency code, this must be set to the GL_COMP_CODE company currency code."
+        GlFuncAmt:
+          maxLength: 19
+          type: number
+          format: float - 2 decimals
+        GlTransNum:
+          maxLength: 11
+          type: integer
+        GlUser:
+          maxLength: 30
+          type: string
+        GlDateTimeEntry:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlTaxRemitFlag:
+          maxLength: 1
+          type: string
+        GlDebitAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        GlCreditAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        GlTavCode1:
+          maxLength: 10
+          type: string
+          description: "Transaction Allocation (TAC) code., If TAC codes are not being used leave this field blank, otherwise this must be a valid value for the TAC according to the pre-defined TAC rule"
+        GlTavCode2:
+          maxLength: 10
+          type: string
+          description: Leave null
+        GlTavCode3:
+          maxLength: 10
+          type: string
+          description: Leave null
+        GlTavCode4:
+          maxLength: 10
+          type: string
+          description: Leave null
+        GlLineNum:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        GlDistSummaryCode:
+          maxLength: 1
+          type: string
+        GlExchgCurrCode:
+          maxLength: 3
+          type: string
+          description: "This is the original currency code of the transaction.  For conversion purposes, this should be the same as the GL_CURR_CODE."
+        GlExchgRate:
+          maxLength: 12
+          type: number
+          description: This is the conversion rate used to convert GL_EXCHG_AMT to the company currency – For conversion purposes this should be 1
+          format: float - 7 decimals
+        GlExchgAmt:
+          maxLength: 18
+          type: number
+          description: This is the Amount of the transaction in the originating currency.  For conversion this must be the same as the GL_AMT.
+          format: float - 2 decimals
+        GlCurrAccFlag:
+          maxLength: 1
+          type: string
+        GlPostDateChangeDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlIuCreateUser:
+          maxLength: 30
+          type: string
+        GlIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlIuUpdateUser:
+          maxLength: 30
+          type: string
+        GlPyoverheadFlag:
+          maxLength: 1
+          type: string
+          description: "Set to Y,N,U. , ‘Y’ - PY Overhead transaction. , ‘N’ - NOT a PY Overhead Transaction. , ‘U’ - Unknown transaction (not possible to determine if it's overhead or not - transaction was created before introducing flag). , For conversion purposes use ‘N’."
+        GlLastSessioninfo:
+          maxLength: 249
+          type: string
+        GlOrigSessioninfo:
+          maxLength: 249
+          type: string
+        GlRep1CurrCode:
+          maxLength: 3
+          type: string
+        GlRep1Rate:
+          maxLength: 12
+          type: number
+          format: float - 7 decimals
+        GlRep1Amt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        GlRep2CurrCode:
+          maxLength: 3
+          type: string
+        GlRep2Rate:
+          maxLength: 12
+          type: number
+          format: float - 7 decimals
+        GlRep2Amt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        GlRep3CurrCode:
+          maxLength: 3
+          type: string
+        GlRep3Rate:
+          maxLength: 12
+          type: number
+          format: float - 7 decimals
+        GlRep3Amt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        GlTransAppCode:
+          maxLength: 8
+          type: string
+        GlTransType:
+          maxLength: 7
+          type: string
+        GlAdjTransFlag:
+          maxLength: 1
+          type: string
+        GlInvDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        GlAcctDescription:
+          maxLength: 500
+          type: string
+        GlJobCode:
+          maxLength: 10
+          type: string
+        GlPyoverheadCr:
+          maxLength: 1
+          type: string
+  responses:
+    GlAccountsResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlAccounts'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    GlBudgetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlBudget'
+    GlCompanyResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlCompany'
+    GlCons2Response:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlCons2'
+    GlConsChartResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlConsChart'
+    GlDocColumnsResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlDocColumns'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    GlDocDrillDownResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlDocDrillDown'
+    GlDocRowsResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlDocRows'
+    GlDocumentResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlDocument'
+    GlJournalResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlJournal'
+    GlPerActivityLogResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlPerActivityLog'
+    GlPeriodResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlPeriod'
+    GlTrialBalanceByAcctResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GlTrialBalanceByAcct'
+    RtiGenericGlDeptsResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RtiGenericGlDepts'
+    RtiGLedgerWithYearPeriodResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RtiGLedgerWithYearPeriod'
+  requestBodies:
+    GlDocColumnsRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/GlDocColumns'
+          examples:
+            Request Example:
+              value:
+                DclColNum: integer
+                DclDocCode: string
+                DclColCode: string
+                DclCon2Code: string
+                DclMaskCode: string
+                DclVUuid: string
+    GlDocRowsRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/GlDocRows'
+          examples:
+            Request Example:
+              value:
+                DapDocCode: string
+                DapSeqNum: integer
+                DapLineCode: string
+                DapVUuid: string
+    GlDocumentRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/GlDocument'
+          examples:
+            Request Example:
+              value:
+                DocCode: string
+                DocName: string
+                DocCatCode: string
+                DocSeqtypeCode: string
+                DocConschartCode: string
+                DocVUuid: string
+    GlJournalRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/GlJournal'
+          examples:
+            Request Example:
+              value:
+                JourCode: string
+                JourName: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

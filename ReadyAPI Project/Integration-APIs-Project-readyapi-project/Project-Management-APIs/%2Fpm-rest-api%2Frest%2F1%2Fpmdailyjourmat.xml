@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourmat" path="/pm-rest-api/rest/1/pmdailyjourmat" id="dc79c932-c66b-468d-9073-b56521e70de7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dc79c932-c66b-468d-9073-b56521e70de7fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourmat</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0387e49d-6ac3-4bc6-9846-9d2c47be6b28" method="GET">
+    <con:description>Retrieve PM Daily Journal Materials</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjmtCompCode" : "string",
+  "PmjmtItemCode" : "string",
+  "PmjmtItemType" : "string",
+  "PmjmtItemName" : "string",
+  "PmjmtRecvWmCode" : "string",
+  "PmjmtTicketCode" : "string",
+  "PmjmtRecvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtRecvPartnCode" : "string",
+  "PmjmtRecvPartnTypeCode" : "string",
+  "PmjmtRecvContactCode" : "string",
+  "PmjmtVendorCode" : "string",
+  "PmjmtPoNum" : "string",
+  "PmjmtPoRelNum" : 0,
+  "PmjmtPoLineNum" : 0,
+  "PmjmtNotes" : "string",
+  "PmjmtSubmittedFlag" : "string",
+  "PmjmtPartnTypeCode" : "string",
+  "PmjmtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtIuCreateUser" : "string",
+  "PmjmtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtIuUpdateUser" : "string",
+  "PmjmtVUuid" : "string",
+  "PmjmtJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="48483b32-c4bd-42a0-9ac2-b5578b7c2227" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="c5da0a35-6d68-47a8-a655-8c9019324c9e" method="POST">
+    <con:description>Create a PM Daily Journal Material</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjmtCompCode" : "string",
+  "PmjmtItemCode" : "string",
+  "PmjmtItemType" : "string",
+  "PmjmtItemName" : "string",
+  "PmjmtRecvWmCode" : "string",
+  "PmjmtTicketCode" : "string",
+  "PmjmtRecvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtRecvPartnCode" : "string",
+  "PmjmtRecvPartnTypeCode" : "string",
+  "PmjmtRecvContactCode" : "string",
+  "PmjmtVendorCode" : "string",
+  "PmjmtPoNum" : "string",
+  "PmjmtPoRelNum" : 0,
+  "PmjmtPoLineNum" : 0,
+  "PmjmtNotes" : "string",
+  "PmjmtSubmittedFlag" : "string",
+  "PmjmtPartnTypeCode" : "string",
+  "PmjmtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtIuCreateUser" : "string",
+  "PmjmtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjmtIuUpdateUser" : "string",
+  "PmjmtVUuid" : "string",
+  "PmjmtJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjmtJournalVUuid":"string","PmjmtCompCode":"string","PmjmtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="436d6753-2a59-491c-b38c-f431bd3482aa" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjmtJournalVUuid":"string","PmjmtCompCode":"string","PmjmtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="9aa365ca-7491-4a48-b267-f2570cac44db" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjmtNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

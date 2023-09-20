@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/workbudget/{Vuuid}" path="/prm-rest-api/rest/1/workbudget/{Vuuid}" id="bc3218f3-7b25-4f02-b717-337cb4a0da7f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bc3218f3-7b25-4f02-b717-337cb4a0da7ffileName">%2Fprm-rest-api%2Frest%2F1%2Fworkbudget%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="bd6a7bcf-7713-4cc8-b8a6-711da2f987b9" method="GET">
+    <con:description>Retrieve a Specific Work Budget</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrmbdObjectTypeCode" : "string",
+  "PrmbdBudgTypeCode" : "string",
+  "PrmbdExpCode" : "string",
+  "PrmbdExpName" : "string",
+  "PrmbdMactCode" : "string",
+  "PrmbdSklCode" : "string",
+  "PrmbdPostDate" : "YYYY-MM-dd",
+  "PrmbdWmCode" : "string",
+  "PrmbdBudgAmtFrmtd" : "string",
+  "PrmbdMateType" : "string",
+  "PrmbdNonstockFlag" : "string",
+  "PrmbdMateItemClassCode" : "string",
+  "PrmbdMateItemClassName" : "string",
+  "PrmbdMateMevwCompCode" : "string",
+  "PrmbdMateMevwCompName" : "string",
+  "PrmbdMateMevwItemCode" : "string",
+  "PrmbdMateMevwItemName" : "string",
+  "PrmbdMateMevwItemTypeCode" : "string",
+  "PrmbdMateMevwItemTypeName" : "string",
+  "PrmbdToolCode" : "string",
+  "PrmbdDesc" : "string",
+  "PrmbdMechanicCode" : "string",
+  "PrmbdCostFlag" : "string",
+  "PrmbdBchNum" : 0,
+  "PrmbdWbsvCode1" : "string",
+  "PrmbdWbsvCode2" : "string",
+  "PrmbdWbsvCode3" : "string",
+  "PrmbdWbsvCode4" : "string",
+  "PrmbdPartnCode" : "string",
+  "PrmbdPartnTypeCode" : "string",
+  "PrmbdPartnName" : "string",
+  "PrmbdContactCode" : "string",
+  "PrmbdContactName" : "string",
+  "PrmbdTrdCode" : "string",
+  "PrmbdTrdDescription" : "string",
+  "PrmbdEqpCompCode" : "string",
+  "PrmbdEqpCompName" : "string",
+  "PrmbdEqpCode" : "string",
+  "PrmbdEqpName" : "string",
+  "PrmbdVenCompCode" : "string",
+  "PrmbdVenCode" : "string",
+  "PrmbdVenCompName" : "string",
+  "PrmbdVenName" : "string",
+  "PrmbdRateFrmtd" : "string",
+  "PrmbdEqpTrancodeCode" : "string",
+  "PrmbdEqpTrancodeName" : "string",
+  "PrmbdBilledFlag" : "string",
+  "PrmbdManualEntryFlag" : "string",
+  "PrmbdBillAmtFrmtd" : "string",
+  "PrmbdFixedFeeLumpSumFlag" : "string",
+  "PrmbdMateLocCode" : "string",
+  "PrmbdMateLocName" : "string",
+  "PrmbdSubmitFlag" : "string",
+  "PrmbdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c54d8d0c-af0f-45e9-93ca-b1da37092054" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

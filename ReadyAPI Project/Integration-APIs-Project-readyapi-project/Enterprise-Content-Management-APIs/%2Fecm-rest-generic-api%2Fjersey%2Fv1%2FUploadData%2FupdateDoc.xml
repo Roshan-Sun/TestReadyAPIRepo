@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ecm-rest-generic-api/jersey/v1/UploadData/updateDoc" path="/ecm-rest-generic-api/jersey/v1/UploadData/updateDoc" id="d26a1023-63d6-48e5-af91-98395333cf29" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d26a1023-63d6-48e5-af91-98395333cf29fileName">%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploadData%2FupdateDoc</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="6f243747-4aab-4765-8d03-89fd4af83ca2" method="POST">
+    <con:description>Update an Existing Imaging Document</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>400</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>multipart/form-data</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="631dfe1d-4f9d-4460-a8b0-3edfa5145959" mediaType="multipart/form-data">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

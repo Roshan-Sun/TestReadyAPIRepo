@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmcontracttype/{Vuuid}" path="/pm-rest-api/rest/1/pmcontracttype/{Vuuid}" id="8dd9bf44-477c-4896-964c-df12b216defe" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8dd9bf44-477c-4896-964c-df12b216defefileName">%2Fpm-rest-api%2Frest%2F1%2Fpmcontracttype%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a0ace53c-3899-45bd-a1f6-0f07c276fe4a" method="GET">
+    <con:description>Retrieve a Specific PM Contract Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmctCompCode" : "string",
+  "PmctCompName" : "string",
+  "PmctContractType" : "string",
+  "PmctActiveFlag" : "string",
+  "PmctContTypeCode" : "string",
+  "DiscriminatorCode" : "string",
+  "PmctVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e7dc5436-cb29-40ae-ab3a-6a527ec351f5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="11e515c6-7ce8-4349-9ec2-e392a6620ca5" method="DELETE">
+    <con:description>Delete a Specific PM Contract Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e360c65e-71e8-4d78-a70f-0bbf0a0f311a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="c2c44810-0b43-4311-aaec-9f9a71cee76d" method="PATCH">
+    <con:description>Update a Specific PM Contract Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmctCompCode" : "string",
+  "PmctCompName" : "string",
+  "PmctContractType" : "string",
+  "PmctActiveFlag" : "string",
+  "PmctContTypeCode" : "string",
+  "DiscriminatorCode" : "string",
+  "PmctVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmctContractType":"string","PmctActiveFlag":"string","PmctCompCode":"string","PmctVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="00e92896-923c-4d60-a374-484665a4b152" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmctContractType":"string","PmctActiveFlag":"string","PmctCompCode":"string","PmctVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e7eaf106-7644-4e43-aac2-ff0c6a5a46f7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmctActiveFlag":"N"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

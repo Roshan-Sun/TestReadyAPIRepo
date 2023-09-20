@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glcons2" path="/glrestapi/rest/v1/glcons2" id="2f8d315d-eefc-43dd-866c-6db527f52bf9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f8d315d-eefc-43dd-866c-6db527f52bf9fileName">%2Fglrestapi%2Frest%2Fv1%2Fglcons2</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="1e7ec6ca-874f-4e0e-b274-996376edeeb3" method="GET">
+    <con:description>Retrieve GL Consolidations</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "Cons2Code" : "string",
+  "Cons2Name" : "string",
+  "Cons2ConschartCode" : "string",
+  "Cons2ConshierFlag" : "string",
+  "Cons2CurrCode" : "string",
+  "Cons2CurrName" : "string",
+  "DiscriminatorCode" : "string",
+  "Cons2VUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="51a1abd1-4a22-40a8-92f4-d357a19f8402" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsbmtpdetail" path="/pm-rest-api/rest/1/pmsbmtpdetail" id="d485e993-16fd-4f0b-b7bf-dad5059c9d9a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d485e993-16fd-4f0b-b7bf-dad5059c9d9afileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsbmtpdetail</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="41e1badf-7bed-4909-8349-27fc2c242fb5" method="GET">
+    <con:description>Retrieve PM Submittal Package Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCompCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmdCompCode" : "string",
+  "PmsmdProjCode" : "string",
+  "PmsmdSbmtpCode" : "string",
+  "PmsmdSbmtId" : "string",
+  "PmsmdIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmdIuCreateUser" : "string",
+  "PmsmdIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmdIuUpdateUser" : "string",
+  "PmsmdVUuid" : "string",
+  "PmsmdSbmtVuuid" : "string",
+  "PmsmdSbmtpVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e0efc6fa-1f6c-439d-8b6e-9473049cf118" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f725eba1-b3ef-4afc-8e41-8016639e5fc0" method="POST">
+    <con:description>Create a PM Submittal Package Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmdCompCode" : "string",
+  "PmsmdProjCode" : "string",
+  "PmsmdSbmtpCode" : "string",
+  "PmsmdSbmtId" : "string",
+  "PmsmdIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmdIuCreateUser" : "string",
+  "PmsmdIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmsmdIuUpdateUser" : "string",
+  "PmsmdVUuid" : "string",
+  "PmsmdSbmtVuuid" : "string",
+  "PmsmdSbmtpVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmdSbmtpCode":"string","PmsmdSbmtId":"string","PmsmdSbmtpVuuid":"string","PmsmdCompCode":"string","PmsmdSbmtVuuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="42712d31-237e-47f4-8669-d0c0265aa8bf" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmdSbmtpCode":"string","PmsmdSbmtId":"string","PmsmdSbmtpVuuid":"string","PmsmdCompCode":"string","PmsmdSbmtVuuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="7d7e9c0b-2185-4a74-b5ac-27d818e83168" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmdProjCode":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pystate" path="/hcm-rest-api/rest/1/pystate" id="606c3a55-9134-40b2-a532-8bd299522d0d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="606c3a55-9134-40b2-a532-8bd299522d0dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpystate</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f1312bf6-9e88-41ee-bfa7-8af99695190a" method="GET">
+    <con:description>Retrieve PY States</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByCountry or findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>countryCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Country Code (findByCountry)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for (findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "StaCountryCode" : "string",
+  "StaStateCode" : "string",
+  "StaStateName" : "string",
+  "StaShortName" : "string",
+  "StaPrtPrevailingWageRate" : "string",
+  "StaUser" : "string",
+  "StaLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "StaIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "StaIuCreateUser" : "string",
+  "StaIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "StaIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c878f27a-dc30-4506-8583-4564a4066ee8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

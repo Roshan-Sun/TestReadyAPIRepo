@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" path="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" id="964155e1-c794-48da-a1c8-cd35099d7be4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="964155e1-c794-48da-a1c8-cd35099d7be4fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeempint%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f0e43a89-91ad-4494-b854-5888dde5ec01" method="GET">
+    <con:description>Retrieve a Specific Crew Time Employee</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshVUuid" : "string",
+  "TshHdrJobCompCode" : "string",
+  "TshHdrJobCode" : "string",
+  "TshDocumentNo" : "string",
+  "TshDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshDataType" : "string",
+  "TshWorkCompCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshEquipment" : "string",
+  "TshEquipCategory" : "string",
+  "TshEquipTranCode" : "string",
+  "TshWoCode" : "string",
+  "TshWitmLineNumber" : "string",
+  "TshWoExpCode" : "string",
+  "TshPrimaryEmpNo" : "string",
+  "TshHoursCode" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshProcessFlag" : "string",
+  "TshTimeIn1" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut1" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn2" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut2" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn3" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut3" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn4" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut4" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn5" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut5" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuCreateUser" : "string",
+  "TshIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuUpdateUser" : "string",
+  "TshAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d1677384-8405-4d2a-9afc-50545a824c76" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="a13c2a93-0a2d-49e5-b56c-156ac633dc3e" method="PATCH">
+    <con:description>Update a Specific PY Crew Time Employee</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshVUuid" : "string",
+  "TshHdrJobCompCode" : "string",
+  "TshHdrJobCode" : "string",
+  "TshDocumentNo" : "string",
+  "TshDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshDataType" : "string",
+  "TshWorkCompCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshEquipment" : "string",
+  "TshEquipCategory" : "string",
+  "TshEquipTranCode" : "string",
+  "TshWoCode" : "string",
+  "TshWitmLineNumber" : "string",
+  "TshWoExpCode" : "string",
+  "TshPrimaryEmpNo" : "string",
+  "TshHoursCode" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshProcessFlag" : "string",
+  "TshTimeIn1" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut1" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn2" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut2" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn3" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut3" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn4" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut4" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeIn5" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshTimeOut5" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuCreateUser" : "string",
+  "TshIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TshIuUpdateUser" : "string",
+  "TshAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TshAccessCode":"string","TshDocumentNo":"string","TshHdrJobCompCode":"string","TshWorkCompCode":"string","TshHdrJobCode":"string","TshDate":"string","TshDataType":"string","TshPhase":"string","TshCategory":"string","TshJobCode":"string","TshPrimaryEmpNo":"string","TshHoursCode":"string","TshSubmitFlag":"string","TshAprvStatus":"string","TshDay01":"integer","TshTimeIn1":"string","TshTimeOut1":"string","TshVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="b05e51ec-e7a1-4253-82e2-c03c384f548f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshAccessCode":"string","TshDocumentNo":"string","TshHdrJobCompCode":"string","TshWorkCompCode":"string","TshHdrJobCode":"string","TshDate":"string","TshDataType":"string","TshPhase":"string","TshCategory":"string","TshJobCode":"string","TshPrimaryEmpNo":"string","TshHoursCode":"string","TshSubmitFlag":"string","TshAprvStatus":"string","TshDay01":"integer","TshTimeIn1":"string","TshTimeOut1":"string","TshVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="69d1e94a-afd0-44a0-9364-9a0f2b007a5c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/cilocation" path="/ci-rest-api/rest/1/cilocation" id="037b0b00-d7e3-48b9-bc6c-f0ce8a849554" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="037b0b00-d7e3-48b9-bc6c-f0ce8a849554fileName">%2Fci-rest-api%2Frest%2F1%2Fcilocation</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9c1cf2fc-ea56-46b2-b6ed-7ebaf960bca8" method="GET">
+    <con:description>Retrieve CI Locations</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode and selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>LocCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Location Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to check against create/update dates (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CilocCompCode" : "string",
+  "CilocCode" : "string",
+  "CilocName" : "string",
+  "CilocDeptCode" : "string",
+  "CilocTypeCode" : "string",
+  "CilocCtrlCode" : "string",
+  "CilocBinCtrlFlag" : "string",
+  "CilocPctUsed" : 0,
+  "CilocDeptDistFlag" : "string",
+  "CilocHier" : "string",
+  "CilocInvSerCode" : "string",
+  "CilocMszoneCode" : "string",
+  "CilocIuCreateDate" : "YYYY-MM-dd",
+  "CilocIuCreateUser" : "string",
+  "CilocIuUpdateDate" : "YYYY-MM-dd",
+  "CilocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CilocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="367c04b1-2edd-4fdd-9ebb-2fa8a2ef9f1a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="d73db9dc-d9ae-4d94-b5c4-0bdb295cbbd5" method="POST">
+    <con:description>Create a CI Location</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CilocCompCode" : "string",
+  "CilocCode" : "string",
+  "CilocName" : "string",
+  "CilocDeptCode" : "string",
+  "CilocTypeCode" : "string",
+  "CilocCtrlCode" : "string",
+  "CilocBinCtrlFlag" : "string",
+  "CilocPctUsed" : 0,
+  "CilocDeptDistFlag" : "string",
+  "CilocHier" : "string",
+  "CilocInvSerCode" : "string",
+  "CilocMszoneCode" : "string",
+  "CilocIuCreateDate" : "YYYY-MM-dd",
+  "CilocIuCreateUser" : "string",
+  "CilocIuUpdateDate" : "YYYY-MM-dd",
+  "CilocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CilocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CilocDeptCode":"string","CilocCompCode":"string","CilocCode":"string","CilocName":"string","CilocDeptDistFlag":"string","CilocVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="7a68498e-11bb-4fff-a091-97811b632234" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CilocDeptCode":"string","CilocCompCode":"string","CilocCode":"string","CilocName":"string","CilocDeptDistFlag":"string","CilocVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="9100ad71-7cbb-444d-bf78-f383b23ff324" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CilocName":"testerino123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

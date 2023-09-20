@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytrdpayrate" path="/hcm-rest-api/rest/1/pytrdpayrate" id="563b9e82-4e94-4ee2-8a90-f59856c1e848" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="563b9e82-4e94-4ee2-8a90-f59856c1e848fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytrdpayrate</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a7499cae-0be6-4feb-8851-bd852dab7e4f" method="GET">
+    <con:description>Retrieve PY Trade Pay Rates</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TrdCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Trade Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EffDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Rate Effective Date (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TprCompCode" : "string",
+  "TprCompName" : "string",
+  "TprTrdCode" : "string",
+  "TprEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TprUser" : "string",
+  "TprLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TprChargeMultiFlag" : "string",
+  "TprBillMultiFlag" : "string",
+  "TprOtDotPayMultiFlag" : "string",
+  "TprIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TprIuCreateUser" : "string",
+  "TprIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "TprIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "TprVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ab3ea8f7-af81-4d08-8ff1-1e62a676f4b0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

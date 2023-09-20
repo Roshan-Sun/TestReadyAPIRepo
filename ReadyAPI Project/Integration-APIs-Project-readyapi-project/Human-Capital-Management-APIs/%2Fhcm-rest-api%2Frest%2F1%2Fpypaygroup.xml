@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pypaygroup" path="/hcm-rest-api/rest/1/pypaygroup" id="73e16fb7-bf85-498e-9881-7f57f7ed826f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="73e16fb7-bf85-498e-9881-7f57f7ed826ffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpypaygroup</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="89059e15-4e3b-474a-8e2b-16fc2cce785d" method="GET">
+    <con:description>Retrieve PY Company Pay Groups</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByCompany or findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (findByCompany)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for (findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PygCompCode" : "string",
+  "PygCode" : "string",
+  "PygDescription" : "string",
+  "PygShortDesc" : "string",
+  "PygBankCode" : "string",
+  "PygBranchCode" : "string",
+  "PygBankAccNumber" : "string",
+  "PygCrAccCode" : "string",
+  "PygUser" : "string",
+  "PygLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PygDeptCode" : "string",
+  "PygSignFile1" : "string",
+  "PygSignFile2" : "string",
+  "PygCompanyLogoFile" : "string",
+  "PygPrintAddressFlag" : "string",
+  "PygSecureFlag" : "string",
+  "PygMessage" : "string",
+  "PygDirectDepSepAccFlag" : "string",
+  "PygDdBankCode" : "string",
+  "PygDdBranchCode" : "string",
+  "PygDdBankAccNumber" : "string",
+  "PygDdCrAccCode" : "string",
+  "PygDdDeptCode" : "string",
+  "PygOvtmruleMethod" : "string",
+  "PygSecurePayRate" : "string",
+  "PygUniqueSsnIgnoreFlag" : "string",
+  "PygOtDotChecksFlag" : "string",
+  "PygIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PygIuCreateUser" : "string",
+  "PygIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PygIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="db512866-5caf-49ba-927a-ede379348baa" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

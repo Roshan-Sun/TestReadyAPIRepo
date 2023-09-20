@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcjobcombinedjobrel" path="/jc-rest-api/rest/1/jcjobcombinedjobrel" id="cae2ce01-b1b7-4240-9fd9-0392b822c21c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cae2ce01-b1b7-4240-9fd9-0392b822c21cfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcjobcombinedjobrel</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2f72fcdb-e687-4bcd-9a8d-1f4d7d512208" method="GET">
+    <con:description>Retrieve all combined job relations</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcrCompCodeMain" : "string",
+  "JcrJobCodeMain" : "string",
+  "JcrJobNameMain" : "string",
+  "JcrCompCodeRel" : "string",
+  "JcrJobCodeRel" : "string",
+  "JcrJobNameRel" : "string",
+  "JcrExcRevenueFlag" : "string",
+  "JcrExcBillingFlag" : "string",
+  "JcrExcContractFlag" : "string",
+  "JcrActiveFlag" : "string",
+  "JcrVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "JcrIuCreateDate" : "YYYY-MM-dd",
+  "JcrIuCreateUser" : "string",
+  "JcrIuUpdateDate" : "YYYY-MM-dd",
+  "JcrIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e8e8581b-a75f-4ef7-97cc-6b9efa951462" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

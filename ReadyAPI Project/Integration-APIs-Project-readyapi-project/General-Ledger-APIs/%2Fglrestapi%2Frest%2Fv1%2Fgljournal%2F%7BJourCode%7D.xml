@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gljournal/{JourCode}" path="/glrestapi/rest/v1/gljournal/{JourCode}" id="6a6f4a56-709e-46f8-beb4-ece3c950e6fb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6a6f4a56-709e-46f8-beb4-ece3c950e6fbfileName">%2Fglrestapi%2Frest%2Fv1%2Fgljournal%2F%7BJourCode%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8d14f7bd-0119-433d-8fee-4482df46def8" method="GET">
+    <con:description>Retrieve a Specific GL journal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>JourCode</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique journal code</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JourCode" : "string",
+  "JourName" : "string",
+  "JourSeqNum" : 0,
+  "JourGlAppFlag" : "string",
+  "JourIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JourIuCreateUser" : "string",
+  "JourIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JourIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="75c88381-4d87-4f65-89c8-2550e0c0450d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="f903f1bb-cbca-4298-804a-3f98bccabea6" method="DELETE">
+    <con:description>Delete a Specific GL journal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>JourCode</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique journal code</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d567230e-339e-46b2-9825-a89ef6255df1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="7742d6f4-19c3-49b6-b543-3124095266fe" method="PATCH">
+    <con:description>Update GL journal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>JourCode</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique journal code</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JourCode" : "string",
+  "JourName" : "string",
+  "JourSeqNum" : 0,
+  "JourGlAppFlag" : "string",
+  "JourIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JourIuCreateUser" : "string",
+  "JourIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "JourIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JourCode":"string","JourName":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="a822551b-f334-4a53-8dae-1dd52471a744" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JourCode":"string","JourName":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

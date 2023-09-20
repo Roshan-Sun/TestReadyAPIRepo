@@ -1,0 +1,2800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="5acf5bcf-0620-41d1-ac74-4eaa933ad046" name="Change Management APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-CM-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># CM-REST-API
+API documentation for **Change Management** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="5acf5bcf-0620-41d1-ac74-4eaa933ad046fileName">Change-Management-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-CM-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-CM-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: Change Management APIs
+  description: |
+    # CM-REST-API
+    API documentation for **Change Management** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: cmdetail
+  description: PCI Details
+- name: cmdetailunposted
+  description: Unposted PCI Details
+- name: cmmast
+  description: PCI Headers
+- name: cmownerchangeorder
+  description: Owner Change Orders
+- name: cmrfqextend
+  description: RFQ (Request for Quote) Extensions
+- name: cmstatus
+  description: CM Statuses
+- name: cmtype
+  description: CM Types
+- name: cmvendordetail
+  description: CM Vendor Details
+paths:
+  /cm-rest-api/rest/1/cmdetail:
+    get:
+      tags:
+      - cmdetail
+      summary: Retrieve PCI details
+      description: All PCI Details or specific ones via finder
+      parameters:
+      - name: finder
+        in: query
+        description: "selectByCodes, selectByMaster or selectByProject"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company code (selectByCodes)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: jobCode
+        in: query
+        description: Job code (selectByCodes)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: mastJobCode
+        in: query
+        description: Header Job code (selectByCodes)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: phaseCode
+        in: query
+        description: Phase code (selectByCodes)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: categoryCode
+        in: query
+        description: Category code (selectByCodes)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: changeCode
+        in: query
+        description: PCI Change code (selectByCodes and selectByProject)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: cmMastVuuid
+        in: query
+        description: Uuid of PCI Header (selectByMaster)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: projCompCode
+        in: query
+        description: Company code (selectByProject)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: projCode
+        in: query
+        description: Project code (selectByProject)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmdetail
+      summary: Create a PCI Detail
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmDetailRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmdetail/{Vuuid}:
+    get:
+      tags:
+      - cmdetail
+      summary: Retrieve a Specific PCI Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - cmdetail
+      summary: Delete a Specific PCI Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmdetail
+      summary: Update a Specific PCI Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmDetailRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmdetailunposted:
+    get:
+      tags:
+      - cmdetailunposted
+      summary: Retrieve Unposted PCI Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmDetailUnpostedFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCode
+        in: query
+        description: Job code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: MastJobCode
+        in: query
+        description: Header Job code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PhsCode
+        in: query
+        description: Phase code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CatCode
+        in: query
+        description: Category code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ChgCode
+        in: query
+        description: PCI Change code (CmDetailUnpostedFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmDetailUnposted'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmmast:
+    get:
+      tags:
+      - cmmast
+      summary: Retrieve PCI Masters
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: "selectByCompJob, selectByCompJobCMCode or selectByWorkflow"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company code (selectByCompJob and selectByCompJobCMCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: jobCode
+        in: query
+        description: Job code (selectByCompJob and selectByCompJobCMCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: typeCode
+        in: query
+        description: "PCI Type code (selectByCompJob, selectByCompJobCMCode and selectByWorkflow)"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: cmCode
+        in: query
+        description: Change code (selectByCompJobCMCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Date to check against create/update dates (selectByWorkflow)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: workflowStatus
+        in: query
+        description: PCI workflow status (selectByWorkflow)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmMast'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmmast
+      summary: Create a PCI Header
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmMastRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmMast'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmmast/{Vuuid}:
+    get:
+      tags:
+      - cmmast
+      summary: Retrieve a Specific PCI Header
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmMast'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - cmmast
+      summary: Delete a Specific PCI Header
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmmast
+      summary: Update a Specific PCI Master
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmMastRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmMast'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmownerchangeorder:
+    get:
+      tags:
+      - cmownerchangeorder
+      summary: Retrieve Owner Change Orders
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmOwnerChangeOrderFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmOwnerChangeOrderFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCode
+        in: query
+        description: Job code (CmOwnerChangeOrderFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmOwnerChangeOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmownerchangeorder
+      summary: Create an Owner Change Order
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmOwnerChangeOrderRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmOwnerChangeOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmownerchangeorder/{Vuuid}:
+    get:
+      tags:
+      - cmownerchangeorder
+      summary: Retrieve a Specific Owner Change Order
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmOwnerChangeOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmownerchangeorder
+      summary: Update a Specific Owner Change Order
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmOwnerChangeOrderRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmOwnerChangeOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmrfqextend:
+    get:
+      tags:
+      - cmrfqextend
+      summary: Retrieve PCI RFQ Extensions
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmRfqExtendFinder1 or CmRfqExtendFinder2
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmRfqExtendFinder1 and CmRfqExtendFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCode
+        in: query
+        description: Job code (CmRfqExtendFinder1 and CmRfqExtendFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ChgCode
+        in: query
+        description: Change code (CmRfqExtendFinder1)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VenCode
+        in: query
+        description: Vendor code (CmRfqExtendFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmRfqExtend'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmrfqextend
+      summary: Create a PCI RFQ Extension
+      description: |
+        "CmdvdPostedFlag" cannot be set and the default value is 'N'.
+
+        "CmdvdInternalFlag" cannot be set and the default value is '1'.
+
+        "CmdvdInternalDesc" cannot be set and the default value is "Regular PCI (unposted)".
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmRfqExtendRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmRfqExtend'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmrfqextend/{Vuuid}:
+    get:
+      tags:
+      - cmrfqextend
+      summary: Retrieve a Specific RFQ Extension
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmRfqExtend'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmrfqextend
+      summary: Update a Specific RFQ Extension
+      description: |
+        Currently experiencing issues with this endpoint, use at your own advisement.
+
+        "CmdvdPostedFlag", "CmdvdInternalFlag", and "CmdvdInternalDesc" cannot be set.
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmRfqExtendRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmRfqExtend'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+      deprecated: true
+  /cm-rest-api/rest/1/cmstatus:
+    get:
+      tags:
+      - cmstatus
+      summary: Retrieve PCI Statuses
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmStatusFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmStatusFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StatusCode
+        in: query
+        description: Status code (CmStatusFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmstatus
+      summary: Create a PCI Status
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmStatusRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmstatus/{Vuuid}:
+    get:
+      tags:
+      - cmstatus
+      summary: Retrieve a Specific PCI Status
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmstatus
+      summary: Update a Specific PCI Status
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmStatusRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmtype:
+    get:
+      tags:
+      - cmtype
+      summary: Retrieve PCI Types
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmTypeFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmTypeFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmtype
+      summary: Create a PCI Type
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmTypeRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmtype/{Vuuid}:
+    get:
+      tags:
+      - cmtype
+      summary: Retrieve a Specific PCI Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - cmtype
+      summary: Delete a Specific PCI Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmtype
+      summary: Update a Specific PCI Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmTypeRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmvendordetail:
+    get:
+      tags:
+      - cmvendordetail
+      summary: Retrieve PCI Change Order SC Vendor Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CmVendorDetailFinder1 or CmVendorDetailFinder2
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (CmVendorDetailFinder1 and CmVendorDetailFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCode
+        in: query
+        description: Job code (CmVendorDetailFinder1 and CmVendorDetailFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ChgCode
+        in: query
+        description: Change code (CmVendorDetailFinder1)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VenCode
+        in: query
+        description: Vendor code (CmVendorDetailFinder2)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmVendorDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cmvendordetail
+      summary: Create a PCI Change Order SC Vendor Detail
+      description: |
+        "CmdvdPostingFlag" cannot be set and the default value is "UNPOSTED".
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CmVendorDetailRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmVendorDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /cm-rest-api/rest/1/cmvendordetail/{Vuuid}:
+    get:
+      tags:
+      - cmvendordetail
+      summary: Retrieve a Specific PCI Change Order SC Vendor Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmVendorDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cmvendordetail
+      summary: Update a Specific PCI Change Order SC Vendor Detail
+      description: |
+        "CmdvdPostingFlag" cannot be set.
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CmVendorDetailRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CmVendorDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    CmDetail:
+      type: object
+      properties:
+        CmdBillAmt:
+          maxLength: 18
+          type: integer
+          description: Billing Amount for this detail line. – External C/O Only
+        CmdBillAmtChangeDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdBillCatCode:
+          maxLength: 16
+          type: string
+          description: This is the Job Costing Category for Billing this Change Order. – External C/O Only
+        CmdBillCode:
+          maxLength: 50
+          type: string
+          description: Job Billing bill code for this detail line. – External C/O Only
+        CmdBillDrawNum:
+          maxLength: 6
+          type: integer
+        CmdBillName:
+          maxLength: 60
+          type: string
+          description: Job Billing Description for this billing code.  – External C/O Only
+        CmdBillPhsCode:
+          maxLength: 16
+          type: string
+          description: This is the Job Costing Phase for Billing this Change Order. – External C/O Only
+        CmdBillRevisionNum:
+          maxLength: 3
+          type: integer
+        CmdBillTypeCode:
+          maxLength: 4
+          type: string
+          description: What JB Billing type should this change item create
+        CmdBillUnit:
+          maxLength: 10
+          type: integer
+          description: Billing Units – External C/O Only
+        CmdBillUnitRate:
+          maxLength: 18
+          type: integer
+          description: Billing Unit rate  – External C/O Only
+        CmdBudgAmt:
+          maxLength: 18
+          type: integer
+          description: "Dollars budgeted for this detail line. , If you do not have an amount and cannot determine the amount, use 0 (Zero)."
+        CmdBudgAmtChangeDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdBudgEstUnitRate:
+          maxLength: 16
+          type: integer
+          description: Estimated Unit Rate – PM only
+        CmdBudgQty:
+          maxLength: 16
+          type: integer
+          description: "Amount must be filled in.  Do not use NULL. If you do not have an amount and cannot determine the amount, use 0 (Zero).  Number of units budgeted for this detail line."
+        CmdBudgQuotedUnitRate:
+          maxLength: 16
+          type: integer
+          description: Quoted Unit Rate – PM Only
+        CmdBudgRevAmt:
+          maxLength: 18
+          type: integer
+          description: This is the revenue budget change amount.
+        CmdBudgRevUnitRate:
+          maxLength: 16
+          type: integer
+        CmdBudgUnitRate:
+          maxLength: 16
+          type: integer
+          description: Budget Unit Rate
+        CmdBudgWmCode:
+          maxLength: 2
+          type: string
+          description: Unit of Measure for budgeted quantity.
+        CmdCatCode:
+          maxLength: 16
+          type: string
+          description: The category code for this change order.
+        CmdChgCode:
+          maxLength: 11
+          type: string
+          description: Change Order Number
+        CmdClvParameterValue:
+          maxLength: 50
+          type: string
+        CmdClvValueCode1:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode2:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode3:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode4:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode5:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode6:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmdCycleLineNum:
+          maxLength: 1
+          type: integer
+        CmdDaysImpact:
+          maxLength: 10
+          type: integer
+          description: PM Only – number of days impact to schedule
+        CmdDisplayOrder:
+          maxLength: 3
+          type: integer
+          description: Line number for change item – Start numbering from 1 for each unique change order.
+        CmdEffectiveEndDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdEffectiveStartDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdEstBillAmt:
+          maxLength: 18
+          type: integer
+          description: Estimated Billing Amount – PM Only
+        CmdEstBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Estimated C/O Line Budget Amount – PM Only
+        CmdGroupCode:
+          maxLength: 35
+          type: string
+          description: Job Billing Group Code.  – External C/O Only
+        CmdInvCode:
+          maxLength: 35
+          type: string
+          description: Invoicing Code – make this the same as the CMD_BILL_CODE field –  External C/O Only
+        CmdInScopeAmt:
+          maxLength: 18
+          type: integer
+        CmdJobCode:
+          maxLength: 10
+          type: string
+          description: "Job code that this detail line is posted to.  It must be the same as CMD_MAST_JOB_CODE, or a sub-job of CMD_MAST_JOB_CODE."
+        CmdLastSessioninfo:
+          maxLength: 249
+          type: string
+        CmdMarkupIndicatorFlag:
+          maxLength: 1
+          type: string
+        CmdMastJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code that the Master Change Order applies to.
+        CmdNegBillAmt:
+          maxLength: 18
+          type: integer
+        CmdNegBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Not Currently utilized
+        CmdOrigSessioninfo:
+          maxLength: 249
+          type: string
+        CmdOutOfScopeAmt:
+          maxLength: 18
+          type: integer
+        CmdOverrideMarkupFlag:
+          maxLength: 1
+          type: string
+        CmdOwnerChgCode:
+          maxLength: 20
+          type: string
+        CmdOwnerRefNumber:
+          maxLength: 16
+          type: string
+        CmdPciSelectedFlag:
+          maxLength: 1
+          type: string
+        CmdPhsCode:
+          maxLength: 16
+          type: string
+          description: The phase code for this change order.
+        CmdPhsUnit:
+          maxLength: 16
+          type: integer
+          description: Number of phase units budgeted for this detail line. Only if Phase budgeting is being utilized
+        CmdPhsWmCode:
+          maxLength: 2
+          type: string
+          description: Unit of Measure for budgeted phase quantity –Only if phase budgeting is being utilized
+        CmdPotentialBudgAmt:
+          maxLength: 18
+          type: integer
+        CmdProjAmt:
+          maxLength: 18
+          type: integer
+          description: Projected Cost Amount
+        CmdProjUnit:
+          maxLength: 0
+          type: integer
+          description: Projected Units
+        CmdQuotedBillAmt:
+          maxLength: 18
+          type: integer
+        CmdQuotedBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Quoted C/O line Budget Amount – PM Only
+        CmdRefName:
+          maxLength: 4000
+          type: string
+          description: Long Description of the change item line
+        CmdScChgCode:
+          maxLength: 12
+          type: string
+          description: Change Order for subcontract on this line.
+        CmdScCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for subcontract on this line.
+        CmdScContCode:
+          maxLength: 20
+          type: string
+          description: Contract code for subcontract on this line.
+        CmdScRequestId:
+          maxLength: 10
+          type: string
+        CmdScTaskCode:
+          maxLength: 16
+          type: string
+          description: Subcontract Task Code  - This must match to SCSCHED.
+        CmdScVenCode:
+          maxLength: 8
+          type: string
+          description: Vendor code for subcontract on this line.
+        CmdSeparateBillingRefCode:
+          maxLength: 10
+          type: string
+        CmdStatusCode:
+          maxLength: 10
+          type: string
+          description: Must be a valid CM Status code set up in CMiC.
+        CmdSubcRefNumber:
+          maxLength: 16
+          type: string
+        CmdWbsvCode1:
+          maxLength: 10
+          type: string
+          description: WBS Value
+        CmdWbsvCode2:
+          maxLength: 10
+          type: string
+          description: WBS Value
+        CmdWbsvCode3:
+          maxLength: 10
+          type: string
+          description: WBS Value
+        CmdWbsvCode4:
+          maxLength: 10
+          type: string
+          description: WBS Value
+        CmdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdIuCreateUser:
+          maxLength: 30
+          type: string
+        CmdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdIuUpdateUser:
+          maxLength: 30
+          type: string
+        CmdPostingFlag:
+          maxLength: 12
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmdCmmastVuuid:
+          maxLength: 64
+          type: string
+        CmdPhsCodeSeg1:
+          maxLength: 16
+          type: string
+        CmdProjCode:
+          maxLength: 10
+          type: string
+        CmdProjCompCode:
+          maxLength: 8
+          type: string
+        CmdVUuid:
+          maxLength: 64
+          type: string
+    CmDetailUnposted:
+      type: object
+      properties:
+        CmdCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmdCompName:
+          maxLength: 30
+          type: string
+        CmdMastJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code that the Master Change Order applies to.
+        CmdChgCode:
+          maxLength: 11
+          type: string
+          description: Change Order Number
+        CmdCmmName:
+          maxLength: 200
+          type: string
+        CmdJobCode:
+          maxLength: 10
+          type: string
+          description: "Job code that this detail line is posted to.  It must be the same as CMD_MAST_JOB_CODE, or a sub-job of CMD_MAST_JOB_CODE."
+        CmdJobName:
+          maxLength: 60
+          type: string
+        CmdPhsCode:
+          maxLength: 16
+          type: string
+          description: The phase code for this change order.
+        CmdPhsName:
+          maxLength: 50
+          type: string
+        CmdCatCode:
+          maxLength: 16
+          type: string
+          description: The category code for this change order.
+        CmdCatName:
+          maxLength: 30
+          type: string
+        CmdRefName:
+          maxLength: 4000
+          type: string
+          description: Long Description of the change item line
+        CmdBillCode:
+          maxLength: 50
+          type: string
+          description: Job Billing bill code for this detail line. – External C/O Only
+        CmdBillName:
+          maxLength: 60
+          type: string
+          description: Job Billing Description for this billing code.  – External C/O Only
+        CmdInvCode:
+          maxLength: 35
+          type: string
+          description: Invoicing Code – make this the same as the CMD_BILL_CODE field –  External C/O Only
+        CmdBillAmt:
+          maxLength: 18
+          type: integer
+          description: Billing Amount for this detail line. – External C/O Only
+        CmdBillPhsCode:
+          maxLength: 16
+          type: string
+          description: This is the Job Costing Phase for Billing this Change Order. – External C/O Only
+        CmdBillCatCode:
+          maxLength: 16
+          type: string
+          description: This is the Job Costing Category for Billing this Change Order. – External C/O Only
+        CmdBudgQty:
+          maxLength: 16
+          type: integer
+          description: "Amount must be filled in.  Do not use NULL. If you do not have an amount and cannot determine the amount, use 0 (Zero).  Number of units budgeted for this detail line."
+        CmdBudgWmCode:
+          maxLength: 2
+          type: string
+          description: Unit of Measure for budgeted quantity.
+        CmdBudgAmt:
+          maxLength: 18
+          type: integer
+          description: "Dollars budgeted for this detail line. , If you do not have an amount and cannot determine the amount, use 0 (Zero)."
+        CmdScCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for subcontract on this line.
+        CmdScVenCode:
+          maxLength: 8
+          type: string
+          description: Vendor code for subcontract on this line.
+        CmdScContCode:
+          maxLength: 20
+          type: string
+          description: Contract code for subcontract on this line.
+        CmdScChgCode:
+          maxLength: 12
+          type: string
+          description: Change Order for subcontract on this line.
+        CmdScRequestId:
+          maxLength: 10
+          type: string
+        CmdBudgRevAmt:
+          maxLength: 18
+          type: integer
+          description: This is the revenue budget change amount.
+        CmdBudgUnitRate:
+          maxLength: 16
+          type: integer
+          description: Budget Unit Rate
+        CmdBudgRevUnitRate:
+          maxLength: 16
+          type: integer
+        CmdPhsUnit:
+          maxLength: 16
+          type: integer
+          description: Number of phase units budgeted for this detail line. Only if Phase budgeting is being utilized
+        CmdPhsWmCode:
+          maxLength: 2
+          type: string
+          description: Unit of Measure for budgeted phase quantity –Only if phase budgeting is being utilized
+        CmdGroupCode:
+          maxLength: 35
+          type: string
+          description: Job Billing Group Code.  – External C/O Only
+        CmdScTaskCode:
+          maxLength: 16
+          type: string
+          description: Subcontract Task Code  - This must match to SCSCHED.
+        CmdBillUnit:
+          maxLength: 10
+          type: integer
+          description: Billing Units – External C/O Only
+        CmdBillUnitRate:
+          maxLength: 18
+          type: integer
+          description: Billing Unit rate  – External C/O Only
+        CmdEstBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Estimated C/O Line Budget Amount – PM Only
+        CmdQuotedBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Quoted C/O line Budget Amount – PM Only
+        CmdNegBudgAmt:
+          maxLength: 18
+          type: integer
+          description: Not Currently utilized
+        CmdEstBillAmt:
+          maxLength: 18
+          type: integer
+          description: Estimated Billing Amount – PM Only
+        CmdQuotedBillAmt:
+          maxLength: 18
+          type: integer
+        CmdNegBillAmt:
+          maxLength: 18
+          type: integer
+        CmdBudgAmtChangeDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdBillAmtChangeDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdBudgEstUnitRate:
+          maxLength: 16
+          type: integer
+          description: Estimated Unit Rate – PM only
+        CmdBudgQuotedUnitRate:
+          maxLength: 16
+          type: integer
+          description: Quoted Unit Rate – PM Only
+        CmdBillTypeCode:
+          maxLength: 4
+          type: string
+          description: What JB Billing type should this change item create
+        CmdMarkupIndicatorFlag:
+          maxLength: 1
+          type: string
+        CmdDaysImpact:
+          maxLength: 10
+          type: integer
+          description: PM Only – number of days impact to schedule
+        CmdDisplayOrder:
+          maxLength: 3
+          type: integer
+          description: Line number for change item – Start numbering from 1 for each unique change order.
+        CmdClvValueCode1:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode2:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode3:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode4:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode5:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvValueCode6:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmdClvParameterValue:
+          maxLength: 50
+          type: string
+        CmdEffectiveStartDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdEffectiveEndDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdCycleLineNum:
+          maxLength: 1
+          type: integer
+        CmdPciSelectedFlag:
+          maxLength: 1
+          type: string
+        CmdPciBillingFlag:
+          maxLength: 1
+          type: string
+        CmdPciDeferBillingFlag:
+          maxLength: 1
+          type: string
+        CmdPciPrevBilledAmt:
+          maxLength: 18
+          type: integer
+        CmdPciCurrOverrideAmt:
+          maxLength: 18
+          type: integer
+        CmdPciCurrBillAmt:
+          maxLength: 18
+          type: integer
+        CmdPciCurrOverridePc:
+          maxLength: 18
+          type: integer
+        CmdPciAlwaysBelowFlag:
+          maxLength: 1
+          type: string
+        CmdOwnerChgCode:
+          maxLength: 20
+          type: string
+        CmdWbsvCode1:
+          maxLength: 60
+          type: string
+          description: WBS Value
+        CmdWbsvCode2:
+          maxLength: 60
+          type: string
+          description: WBS Value
+        CmdWbsvCode3:
+          maxLength: 60
+          type: string
+          description: WBS Value
+        CmdWbsvCode4:
+          maxLength: 60
+          type: string
+          description: WBS Value
+        CmdIuCreateUser:
+          maxLength: 30
+          type: string
+        CmdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdIuUpdateUser:
+          maxLength: 30
+          type: string
+        CmdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdInScopeAmt:
+          maxLength: 18
+          type: integer
+        CmdOutOfScopeAmt:
+          maxLength: 18
+          type: integer
+        CmdStatusCode:
+          maxLength: 10
+          type: string
+          description: Must be a valid CM Status code set up in CMiC.
+        CmdProjAmt:
+          maxLength: 18
+          type: integer
+          description: Projected Cost Amount
+        CmdProjUnit:
+          maxLength: 0
+          type: integer
+          description: Projected Units
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    CmMast:
+      type: object
+      properties:
+        CmmCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmmJobCode:
+          maxLength: 10
+          type: string
+          description: "Job Code, as assigned on the Project"
+        CmmCode:
+          maxLength: 11
+          type: string
+          description: Change Order Number
+        CmmName:
+          maxLength: 200
+          type: string
+          description: Change Order Description
+        CmmTypeCode:
+          maxLength: 4
+          type: string
+          description: Valid CM Type Code – Set this to a valid CMiC Type code for the change orders
+        CmmSrcId:
+          maxLength: 30
+          type: string
+          description: PM – Object Number ID that created change order
+        CmmRefDate:
+          type: string
+          description: Reference Date for this Change Order
+          format: full-date
+          example: YYYY-MM-dd
+        CmmPrepostStatCode:
+          maxLength: 10
+          type: string
+          description: Valid CM Status Code (prior to posting) – Set this to an “Approved” CM Status Code.
+        CmmImpactDays:
+          maxLength: 4
+          type: integer
+          description: Days of impact to the schedule
+        CmmEffectiveStartDate:
+          type: string
+          description: Default effective start date for time phased budgeting
+          format: full-date
+          example: YYYY-MM-dd
+        CmmOwnerChgCode:
+          maxLength: 20
+          type: string
+          description: "Owner Change Code. , Must exist in CMOWNCHGNUM."
+        CmmDueToOwnerDate:
+          type: string
+          description: PM – Date Change Order is due to be given to the owner.
+          format: full-date
+          example: YYYY-MM-dd
+        CmmEffectiveEndDate:
+          type: string
+          description: Default effective end date for time phased budgeting
+          format: full-date
+          example: YYYY-MM-dd
+        CmmPostContrFlag:
+          maxLength: 1
+          type: string
+          description: "This field indicates whether vendor subcontracts will be posted when the change order is posted.  Since data conversion brings change orders that were already posted into the system, leave this field as ‘N’."
+        CmmUpdProjAmtFlag:
+          maxLength: 1
+          type: string
+          description: Update the JC Budget Projected Amount when posting this C/O.
+        CmmCalcProjAmtMethod:
+          maxLength: 1
+          type: string
+          description: "Calculation method for projected amount when a CO is posted and “Update Projected Amount” is checked. , Set to ‘A’ or ‘R’."
+        CmmClvValueCode1:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmClvValueCode2:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmClvValueCode3:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmClvValueCode4:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmClvValueCode5:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmClvValueCode6:
+          maxLength: 16
+          type: string
+          description: User defined values.
+        CmmUser:
+          maxLength: 30
+          type: string
+          description: User who entered this Change Order
+        CmmAprvFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ - Change Order is approved, ‘N’ - Change Order is not approved"
+        CmmPendFlag:
+          maxLength: 1
+          type: string
+          description: "‘N’ – Pre-Pending , ‘P’ – Pending, ‘A’ – Approved, ‘R’ – Rejected, ‘C’ – Cancelled"
+        CmmBillMethCode:
+          maxLength: 1
+          type: string
+          description: "‘D’ - Detail. This is the only valid value., Summary method no longer applicable"
+        CmmActionCode:
+          maxLength: 1
+          type: string
+          description: Leave NULL – Internal processing flag
+        CmmPostDate:
+          type: string
+          description: Date Change Order was posted
+          format: full-date
+          example: YYYY-MM-dd
+        CmmStatCode:
+          maxLength: 1
+          type: string
+          description: Internal Processing code
+        CmmPmObjectCode:
+          maxLength: 10
+          type: string
+          description: PM – Project object that created this Change Order
+        CmmScopeDesc:
+          maxLength: 4000
+          type: string
+          description: Free form text regarding scope of change order
+        CmmRfqDueDate:
+          type: string
+          description: Request for quote Due Date – PM related only
+          format: full-date
+          example: YYYY-MM-dd
+        CmmRfqProceedFlag:
+          maxLength: 1
+          type: string
+          description: "Proceed with quote – PM only , Set to ‘Y’ or ‘N’"
+        CmmRfqLimitAmt:
+          maxLength: 18
+          type: integer
+          description: Request for quote – dollar limit – PM Only
+        CmmClassCode:
+          maxLength: 1
+          type: string
+          description: "‘E’ - External, ‘I’ - Internal, ‘T’ - Transfer, Must match the Class Code that the CMM_TYPE_CODE possesses."
+        CmmAllowance:
+          maxLength: 1
+          type: string
+        CmmOwnerAllowanceAmt:
+          maxLength: 18
+          type: integer
+        CmmOrigOwnerAllowanceAmt:
+          maxLength: 18
+          type: integer
+        CmmSourceText:
+          maxLength: 200
+          type: string
+        CmmReasonText:
+          maxLength: 200
+          type: string
+        CmmPostDateDummy:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmmAutoCalcMarkupFlag:
+          maxLength: 1
+          type: string
+        CmmBchNum:
+          maxLength: 11
+          type: integer
+          description: "Start with a large negative number such as –100000 and decrement by 1 as each batch is converted., , Each set of change orders that is brought into the system should get a unique batch number."
+        CmmBiditemFlag:
+          maxLength: 1
+          type: string
+        CmmBillCatCode:
+          maxLength: 16
+          type: string
+          description: Not currently utilized – leave this field blank
+        CmmBillCode:
+          maxLength: 50
+          type: string
+          description: Not currently utilized – leave this field blank
+        CmmBillName:
+          maxLength: 20
+          type: string
+          description: Not currently utilized – leave this field blank
+        CmmBillPhsCode:
+          maxLength: 16
+          type: string
+          description: Not currently utilized – leave this field blank
+        CmmBillRevisAmt:
+          maxLength: 18
+          type: integer
+          description: Not currently utilized – leave this field blank
+        CmmChgSentToOwnerDate:
+          type: string
+          description: Date when changes sent to owner.
+          format: full-date
+          example: YYYY-MM-dd
+        CmmChgSignedByOwnerDate:
+          type: string
+          description: Date when changes have been signed by owner.
+          format: full-date
+          example: YYYY-MM-dd
+        CmmCtrlJobCode:
+          maxLength: 10
+          type: string
+          description: "The job that controls CMM_JOB_CODE, or ‘ALL’ if CMM_JOB_CODE is a control job."
+        CmmCycleNum:
+          maxLength: 4
+          type: integer
+          description: Cycle Number
+        CmmFundsourceCode:
+          maxLength: 16
+          type: string
+          description: Fund Source
+        CmmGlobalUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmmInvCode:
+          maxLength: 4
+          type: string
+          description: Not currently utilized – leave this field blank
+        CmmLastSessioninfo:
+          maxLength: 249
+          type: string
+        CmmOrigCmmCode:
+          maxLength: 11
+          type: string
+          description: Original Change Order Number
+        CmmOrigSessioninfo:
+          maxLength: 249
+          type: string
+        CmmPmFlag:
+          maxLength: 1
+          type: string
+          description: Created via PM. Set to ‘Y’ or ‘N’
+        CmmPropIssuedToOwnerDate:
+          type: string
+          description: Date when proposal issued to owner.
+          format: full-date
+          example: YYYY-MM-dd
+        CmmPropSignedByOwnerDate:
+          type: string
+          description: Date when proposal signed by owner.
+          format: full-date
+          example: YYYY-MM-dd
+        CmmRefCmmCode:
+          maxLength: 11
+          type: string
+          description: Reference Change Order
+        CmmStatCodeUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmmUpdPcComplFlag:
+          maxLength: 1
+          type: string
+          description: "This field indicates whether job cost percent complete will be updated when the change order is posted.  Since data conversion brings change orders that were already posted into the system, leave this field as ‘N’."
+        CmmIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmmIuCreateUser:
+          maxLength: 30
+          type: string
+        CmmIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmmIuUpdateUser:
+          maxLength: 30
+          type: string
+        CmmLumpsumFlag:
+          maxLength: 1
+          type: string
+          description: Set to ‘N’ (Regular PCI)
+        CmmPostingFlag:
+          maxLength: 12
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmmVUuid:
+          maxLength: 64
+          type: string
+        CmmWorkflowStatus:
+          maxLength: 100
+          type: string
+    CmOwnerChangeOrder:
+      type: object
+      properties:
+        CmocnCode:
+          maxLength: 20
+          type: string
+          description: Owner Change Code
+        CmocnCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmocnCompName:
+          maxLength: 30
+          type: string
+        CmocnJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        CmocnJobName:
+          maxLength: 60
+          type: string
+        CmocnTitle:
+          maxLength: 200
+          type: string
+          description: Title
+        CmocnPostDate:
+          type: string
+          description: Post Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnSentDate:
+          type: string
+          description: Sent Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnReceivedDate:
+          type: string
+          description: Received Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnBchNum:
+          maxLength: 11
+          type: integer
+          description: Batch Number. Applicable if the record is posted.
+        CmocnProposalCode:
+          maxLength: 10
+          type: string
+          description: Must be a valid Proposal Code in CMiC. (CMPROPOSAL).
+        CmocnProposalName:
+          maxLength: 60
+          type: string
+        CmocnNotes:
+          maxLength: 4000
+          type: string
+          description: Notes
+        CmocnIssuedDate:
+          type: string
+          description: Date Issued.
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnExecutedDate:
+          type: string
+          description: Date Executed.
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnImpactDays:
+          maxLength: 4
+          type: integer
+          description: Impact Days
+        CmocnClosed:
+          maxLength: 1
+          type: string
+          description: Closed Flag. ‘Y’ or ‘N’.
+        CmocnJbContCode:
+          maxLength: 20
+          type: string
+        CmocnOwnerCoCode:
+          maxLength: 10
+          type: string
+          description: Internal Owner Change Code (for documentation)
+        CmocnIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnIuCreateUser:
+          maxLength: 30
+          type: string
+        CmocnIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnIuUpdateUser:
+          maxLength: 30
+          type: string
+        CmocnTotalMarginAmtTitle:
+          maxLength: 19
+          type: string
+        CmocnTotalMarginAmt:
+          maxLength: 0
+          type: integer
+        CmocnMarginPercentageTitle:
+          maxLength: 21
+          type: string
+        CmocnMarginPercentage:
+          maxLength: 0
+          type: integer
+        CmocnOrigContractAmtTitle:
+          maxLength: 29
+          type: string
+        CmocnOrigContractAmt:
+          maxLength: 0
+          type: integer
+        CmocnPriorChangeAmtTitle:
+          maxLength: 56
+          type: string
+        CmocnPriorChangesAmt:
+          maxLength: 0
+          type: integer
+        CmocnCurrentChangeAmtTitle:
+          maxLength: 37
+          type: string
+        CmocnCurrentChangeAmt:
+          maxLength: 0
+          type: integer
+        CmocnNewContractAmtTitle:
+          maxLength: 48
+          type: string
+        CmocnNewContractAmt:
+          maxLength: 0
+          type: integer
+        CmocnOrigComplDateTitle:
+          maxLength: 32
+          type: string
+        CmocnOrigComplDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnPriorChangeDaysTitle:
+          maxLength: 43
+          type: string
+        CmocnPriorChangeDays:
+          maxLength: 0
+          type: integer
+        CmocnCurChangeDaysTitle:
+          maxLength: 35
+          type: string
+        CmocnCurrentChangeDays:
+          maxLength: 0
+          type: integer
+        CmocnNewComplDateTitle:
+          maxLength: 72
+          type: string
+        CmocnNewComplDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmocnCurrentNonRejectedAmt:
+          maxLength: 0
+          type: integer
+        CmocnOwnerApprvdAmt:
+          maxLength: 18
+          type: integer
+        CmocnUserPrvlgFlag:
+          maxLength: 4000
+          type: string
+        Cdummy:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmocnVUuid:
+          maxLength: 64
+          type: string
+    CmRfqExtend:
+      type: object
+      properties:
+        CmdvdPostedFlag:
+          maxLength: 1
+          type: string
+        CmdvdCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmdvdJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        CmdvdChgCode:
+          maxLength: 11
+          type: string
+          description: Change Order Number
+        CmdvdVenCode:
+          maxLength: 8
+          type: string
+          description: Vendor Code
+        CmdvdRfqDueDate:
+          type: string
+          description: RFQ Due Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqSentDate:
+          type: string
+          description: RFQ Send Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqReceivedDate:
+          type: string
+          description: RFQ Received Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqComments:
+          maxLength: 4000
+          type: string
+          description: RFQ Comments
+        CmdvdContactCode:
+          maxLength: 10
+          type: string
+          description: Contact Code
+        CmdvdPrintFlag:
+          maxLength: 1
+          type: string
+          description: Print Flag. ‘Y’ or ‘N’.
+        CmdvdQuotedRate:
+          maxLength: 16
+          type: integer
+          description: Quoted Rate
+        CmdvdQuotedQty:
+          maxLength: 16
+          type: integer
+          description: Quoted Quantity
+        CmdvdQuotedAmt:
+          maxLength: 18
+          type: integer
+          description: Quoted Amount
+        CmdvdOrigQuoteAmt:
+          maxLength: 18
+          type: integer
+        CmdvdPartnTypeCode:
+          maxLength: 1
+          type: string
+        CmdvdInternalFlag:
+          maxLength: 1
+          type: string
+        CmdvdInternalDesc:
+          maxLength: 28
+          type: string
+        CmdvdScPricingStatus:
+          maxLength: 20
+          type: string
+        CmdvdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdIuCreateUser:
+          maxLength: 30
+          type: string
+        CmdvdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmdvdVUuid:
+          maxLength: 64
+          type: string
+    CmStatus:
+      type: object
+      properties:
+        CmstCompCode:
+          maxLength: 8
+          type: string
+        CmstCompName:
+          maxLength: 30
+          type: string
+        CmstStatCode:
+          maxLength: 10
+          type: string
+        CmstStatName:
+          maxLength: 60
+          type: string
+        CmstPendingTypeCode:
+          maxLength: 1
+          type: string
+        CmstProceedingFlag:
+          maxLength: 1
+          type: string
+        CmstInclForecastFlag:
+          maxLength: 1
+          type: string
+        CmstPciBillingFlag:
+          maxLength: 1
+          type: string
+        CmstAtRiskFlag:
+          maxLength: 1
+          type: string
+        CmstIsPciBillingEnabled:
+          maxLength: 4000
+          type: string
+        CmstInclWipCostFlag:
+          maxLength: 1
+          type: string
+        CmstInclWipRevFlag:
+          maxLength: 1
+          type: string
+        CmstIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmstIuCreateUser:
+          maxLength: 30
+          type: string
+        CmstIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmstIuUpdateUser:
+          maxLength: 30
+          type: string
+        CmstVUuid:
+          maxLength: 64
+          type: string
+    CmType:
+      type: object
+      properties:
+        CmtCompCode:
+          maxLength: 8
+          type: string
+        CmtTypeCode:
+          maxLength: 4
+          type: string
+        CmtName:
+          maxLength: 30
+          type: string
+        CmtClassCode:
+          maxLength: 1
+          type: string
+        CmtChgOrdNumberMask:
+          maxLength: 11
+          type: string
+        CmtPciMaskOverrideFlag:
+          maxLength: 1
+          type: string
+        CmtIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmtIuCreateUser:
+          maxLength: 30
+          type: string
+        CmtIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmtIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmtVUuid:
+          maxLength: 64
+          type: string
+        CmtNotAllowBillAmtFlag:
+          maxLength: 1
+          type: string
+        CmtAllowCostsFlag:
+          maxLength: 1
+          type: string
+    CmVendorDetail:
+      type: object
+      properties:
+        CmdvdCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        CmdvdJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        CmdvdChgCode:
+          maxLength: 11
+          type: string
+          description: Change Order Number
+        CmdvdVenCode:
+          maxLength: 8
+          type: string
+          description: Vendor Code
+        CmdvdBpAbbrevCode:
+          maxLength: 4000
+          type: string
+        CmdvdVenName:
+          maxLength: 4000
+          type: string
+        CmdvdContactCode:
+          maxLength: 10
+          type: string
+          description: Contact Code
+        CmdvdContactName:
+          maxLength: 4000
+          type: string
+        CmdvdQuotedQty:
+          maxLength: 16
+          type: integer
+          description: Quoted Quantity
+        CmdvdQuotedRate:
+          maxLength: 16
+          type: integer
+          description: Quoted Rate
+        CmdvdQuotedAmt:
+          maxLength: 18
+          type: integer
+          description: Quoted Amount
+        CmdvdRfqSentDate:
+          type: string
+          description: RFQ Send Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqDueDate:
+          type: string
+          description: RFQ Due Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqReceivedDate:
+          type: string
+          description: RFQ Received Date
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdRfqComments:
+          maxLength: 4000
+          type: string
+          description: RFQ Comments
+        CmdvdPrintFlag:
+          maxLength: 1
+          type: string
+          description: Print Flag. ‘Y’ or ‘N’.
+        CmdvdOrigQuoteAmt:
+          maxLength: 18
+          type: integer
+        CmdvdPartnTypeCode:
+          maxLength: 1
+          type: string
+        CmdvdPostingFlag:
+          maxLength: 12
+          type: string
+        CmdvdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdIuCreateUser:
+          maxLength: 30
+          type: string
+        CmdvdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CmdvdIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CmdvdVUuid:
+          maxLength: 64
+          type: string
+  responses:
+    CmDetailResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmDetail'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    CmDetailUnpostedResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmDetailUnposted'
+    CmMastResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmMast'
+    CmOwnerChangeOrderResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmOwnerChangeOrder'
+    CmRfqExtendResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmRfqExtend'
+    CmStatusResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmStatus'
+    CmTypeResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmType'
+    CmVendorDetailResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CmVendorDetail'
+  requestBodies:
+    CmDetailRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmDetail'
+          examples:
+            POST Example:
+              value:
+                CmdCompCode: string
+                CmdJobCode: string
+                CmdMastJobCode: string
+                CmdChgCode: string
+                CmdPhsCode: string
+                CmdCatCode: string
+                CmdBillAmt: float
+                CmdStatusCode: string
+                CmdPostingFlag: string
+                CmdVUuid: ""
+            PATCH Example:
+              value:
+                CmdRefName: bobicus
+    CmMastRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmMast'
+          examples:
+            POST Example:
+              value:
+                CmmCompCode: string
+                CmmJobCode: string
+                CmmTypeCode: string
+                CmmCode: string
+                CmmName: string
+                CmmRefDate: string
+                CmmPrepostStatCode: string
+                CmmCalcProjAmtMethod: string
+                CmmVUuid: ""
+            PATCH Example:
+              value:
+                CmmWorkflowStatus: REJECTED
+    CmOwnerChangeOrderRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmOwnerChangeOrder'
+          examples:
+            POST Example:
+              value:
+                CmocnCompCode: string
+                CmocnJobCode: string
+                CmocnCode: string
+                CmocnVUuid: ""
+            PATCH Example:
+              value:
+                CmocnNotes: test123
+    CmRfqExtendRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmRfqExtend'
+          examples:
+            POST Example:
+              value:
+                CmdvdCompCode: string
+                CmdvdJobCode: string
+                CmdvdVenCode: string
+                CmdvdChgCode: string
+                CmdvdPartnTypeCode: string
+                CmdvdVUuid: ""
+            PATCH Example:
+              value:
+                CmdvdPrintFlag: "N"
+    CmStatusRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmStatus'
+          examples:
+            POST Example:
+              value:
+                CmstCompCode: string
+                CmstStatCode: string
+                CmstAtRiskFlag: string
+                CmstInclWipRevFlag: string
+                CmstInclWipCostFlag: string
+                CmstVUuid: ""
+            PATCH Example:
+              value:
+                CmstStatName: bobicus
+    CmTypeRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmType'
+          examples:
+            POST Example:
+              value:
+                CmtCompCode: string
+                CmtTypeCode: string
+                CmtName: string
+                CmtClassCode: string
+                CmtChgOrdNumberMask: string
+                CmtAllowCostsFlag: string
+                CmtVUuid: ""
+            PATCH Example:
+              value:
+                CmtName: bobicus
+    CmVendorDetailRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CmVendorDetail'
+          examples:
+            POST Example:
+              value:
+                CmdvdCompCode: string
+                CmdvdJobCode: string
+                CmdvdChgCode: string
+                CmdvdVenCode: string
+                CmdvdPostingFlag: string
+                CmdvdVUuid: ""
+            PATCH Example:
+              value:
+                CmdvdRfqComments: test1234
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

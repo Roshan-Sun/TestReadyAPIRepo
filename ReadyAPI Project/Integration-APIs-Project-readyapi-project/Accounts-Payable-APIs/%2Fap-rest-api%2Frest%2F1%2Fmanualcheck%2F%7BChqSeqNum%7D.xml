@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/manualcheck/{ChqSeqNum}" path="/ap-rest-api/rest/1/manualcheck/{ChqSeqNum}" id="a52978e3-ade9-47b2-a764-652a21296735" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a52978e3-ade9-47b2-a764-652a21296735fileName">%2Fap-rest-api%2Frest%2F1%2Fmanualcheck%2F%7BChqSeqNum%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="87e22a2f-1582-46d3-a84b-33c021941cb5" method="GET">
+    <con:description>Retrieve AP Manual Cheques by Cheque Sequence Number</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>ChqSeqNum</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Cheque sequence number</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ChqCompCode" : "string",
+  "ChqNum" : 0,
+  "ChqDate" : "YYYY-MM-dd",
+  "ChqBankCompCode" : "string",
+  "ChqDeptCode" : "string",
+  "ChqAccCode" : "string",
+  "ChqVenCode" : "string",
+  "ChqDesc" : "string",
+  "ChqVouCode" : "string",
+  "ChqJobCode" : "string",
+  "ChqDraftCode" : "string",
+  "ChqPayeeName1" : "string",
+  "ChqPayeeName2" : "string",
+  "ChqPayeeAddr1" : "string",
+  "ChqPayeeAddr2" : "string",
+  "ChqPayeeAddr3" : "string",
+  "ChqPayeeRegCode" : "string",
+  "ChqPayeePostalCode" : "string",
+  "ChqPayeeCountry" : "string",
+  "ChqJointVenName" : "string",
+  "ChqBchNum" : 0,
+  "ChqCurrCode" : "string",
+  "ChqRecCode" : "string",
+  "Chq1099Code" : "string",
+  "ChqSeqNum" : 0,
+  "ChqTempBchNum" : 0,
+  "ChqCurcFactorNum" : 0,
+  "ChqBchName" : "string",
+  "ChqBchPost" : "string",
+  "ChqPostDate" : "YYYY-MM-dd"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="89238119-cdcb-42bd-b9a5-ee415c0a8104" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ms-rest-api/rest/1/mstruckratedetail" path="/ms-rest-api/rest/1/mstruckratedetail" id="2fb62b16-b9ec-486e-bdae-8b0030d799bd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2fb62b16-b9ec-486e-bdae-8b0030d799bdfileName">%2Fms-rest-api%2Frest%2F1%2Fmstruckratedetail</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0e781448-ab3b-4ed8-b8b0-89618ff351dc" method="GET">
+    <con:description>Retrieve Material Sales Truck Rate Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByKeys</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>DeptCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VenCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TruckType</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Truck type</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AsOfDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>As of date field (YYYY-MM-dd)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to search created or updated items (YYYY-MM-dd)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "MstrdCompCode" : "string",
+  "MstrdDeptCode" : "string",
+  "MstrdVenCode" : "string",
+  "MstrdJobCode" : "string",
+  "MstrdTruckType" : "string",
+  "MstrdEffectiveDate" : "YYYY-MM-dd",
+  "MstrdHourlyRate" : 0,
+  "MstrdCommercialRate" : 0,
+  "MstrdWhtsheetRate" : 0,
+  "MstrdHoldtimeRate" : 0,
+  "MstrdIuCreateDate" : "YYYY-MM-dd",
+  "MstrdIuCreateUser" : "string",
+  "MstrdIuUpdateDate" : "YYYY-MM-dd",
+  "MstrdIuUpdateUser" : "string",
+  "HourlyRate" : 0,
+  "CommercialRate" : 0,
+  "HoldtimeRate" : 0,
+  "WhtsheetRate" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="18894a91-0441-4f83-b72f-8c9a423296c4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

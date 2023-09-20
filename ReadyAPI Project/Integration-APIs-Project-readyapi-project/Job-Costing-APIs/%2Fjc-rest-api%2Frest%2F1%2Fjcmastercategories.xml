@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcmastercategories" path="/jc-rest-api/rest/1/jcmastercategories" id="5ee4f338-b924-447e-9533-69efbea2e3f6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5ee4f338-b924-447e-9533-69efbea2e3f6fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcmastercategories</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="71d5abd5-0b94-4d66-bb75-e05f73132508" method="GET">
+    <con:description>Retrieve all Master Categories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectCategory</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectCategory)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>categoryCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Master category code (selectCategory)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CatCompCode" : "string",
+  "CatCode" : "string",
+  "CatName" : "string",
+  "CatCtrlCode" : "string",
+  "CatWmCode" : "string",
+  "CatDefaultBudmethCode" : "string",
+  "CatBudgetFlag" : "string",
+  "CatCostFlag" : "string",
+  "CatBillingFlag" : "string",
+  "CatWipAccCode" : "string",
+  "CatCcAccCode" : "string",
+  "CatBillAccCode" : "string",
+  "CatLtcAccCode" : "string",
+  "CatUnbilledRevAccCode" : "string",
+  "CatReserveRevAccCode" : "string",
+  "CatIbAlternateWipAccCode" : "string",
+  "CatBillGroupCode" : "string",
+  "CatNonRecoverableFlag" : "string",
+  "CatAvailableOnScFlag" : "string",
+  "CatActiveFlag" : "string",
+  "CatRate" : 0,
+  "CatLbcAccCode" : "string",
+  "CatWbsvCode1" : "string",
+  "CatWbsvCode2" : "string",
+  "CatWbsvCode3" : "string",
+  "CatWbsvCode4" : "string",
+  "CatWbsvRequiredFlag1" : "string",
+  "CatWbsvRequiredFlag2" : "string",
+  "CatWbsvRequiredFlag3" : "string",
+  "CatWbsvRequiredFlag4" : "string",
+  "CatWbsvEditableFlag1" : "string",
+  "CatWbsvEditableFlag2" : "string",
+  "CatWbsvEditableFlag3" : "string",
+  "CatWbsvEditableFlag4" : "string",
+  "CatHier" : "string",
+  "CatDefaultBillingType" : "string",
+  "CatDefaultInvFormatCode" : "string",
+  "CatCostTypeCode" : "string",
+  "CatJbBackupCatColumnNum" : 0,
+  "CatEtimeFlag" : "string",
+  "CatInclInForecastFlag" : "string",
+  "CatProcurementFlag" : "string",
+  "CatExclCostBudgWip" : "string",
+  "CatExclCostWip" : "string",
+  "CatFwdLossOvrhPct" : 0,
+  "CatLabourForecastFlag" : "string",
+  "CatJcsCostType" : "string",
+  "CatCostRollupCatCode" : "string",
+  "CatIuCreateDate" : "YYYY-MM-dd",
+  "CatIuCreateUser" : "string",
+  "CatIuUpdateDate" : "YYYY-MM-dd",
+  "CatIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ab3769e6-430a-4aa5-a1df-ede972ee6e6c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

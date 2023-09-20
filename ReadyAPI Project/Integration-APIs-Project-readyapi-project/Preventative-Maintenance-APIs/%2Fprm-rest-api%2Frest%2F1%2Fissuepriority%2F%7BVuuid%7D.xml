@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/issuepriority/{Vuuid}" path="/prm-rest-api/rest/1/issuepriority/{Vuuid}" id="a1bef50c-ca3a-45d7-afb3-9c975dd04375" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a1bef50c-ca3a-45d7-afb3-9c975dd04375fileName">%2Fprm-rest-api%2Frest%2F1%2Fissuepriority%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="1b2853ae-ff26-46fa-80d8-987bf0aaed1c" method="GET">
+    <con:description>Retrieve a Specific Issue Priority</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmipPriorityCode" : "string",
+  "DmipDesc" : "string",
+  "DmipPrmPriorityLevel" : 0,
+  "DmipPrmPriorityDesc" : "string",
+  "DmipVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f530e6a7-bbb4-4e9a-8bed-0e360b9bc7b7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="bdb65f28-53c4-4def-99a0-cd6b19d85f04" method="PATCH">
+    <con:description>Update a Specific Issue Priority</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmipPriorityCode" : "string",
+  "DmipDesc" : "string",
+  "DmipPrmPriorityLevel" : 0,
+  "DmipPrmPriorityDesc" : "string",
+  "DmipVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DmipPriorityCode":"string","DmipDesc":"string","DmipPrmPriorityLevel":"integer","DmipVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="0f9dedf1-aa7b-4739-8eed-5c756c44bf3f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmipPriorityCode":"string","DmipDesc":"string","DmipPrmPriorityLevel":"integer","DmipVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="137e5a4c-089c-4880-8f2b-ebaa8d92e7c9" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmipDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

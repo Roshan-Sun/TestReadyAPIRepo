@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="107f6f28-c840-4f1c-8926-43ddf7798203" name="Material Sales APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-MS-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># MS-REST-API
+API documentation for **Material Sales** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="107f6f28-c840-4f1c-8926-43ddf7798203fileName">Material-Sales-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-MS-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-MS-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: Material Sales APIs
+  description: |
+    # MS-REST-API
+    API documentation for **Material Sales** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: msarpricelistperioddet
+  description: Material Sales AR Price List Period Details
+- name: mssalesorder
+  description: Material Sales Orders
+- name: mssalesorderdet
+  description: Material Sales Order Details
+- name: msticketwithsoclass
+  description: Material Sales Tickets
+- name: mstruckratedetail
+  description: Material Sales Truck Rate Details
+paths:
+  /ms-rest-api/rest/1/msarpricelistperioddet:
+    get:
+      tags:
+      - msarpricelistperioddet
+      summary: Retrieve Material Sales AR Price List Period Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: PriceListDetailFinder or AuditDateFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (PriceListDetailFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: LocationCode
+        in: query
+        description: Location code (PriceListDetailFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PriceCode
+        in: query
+        description: Price code (PriceListDetailFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StartDate
+        in: query
+        description: Starting date (YYYY-MM-dd - PriceListDetailFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to search created or updated items (YYYY-MM-dd - AuditDateFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsArPriceListPeriodDet'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ms-rest-api/rest/1/mssalesorder:
+    get:
+      tags:
+      - mssalesorder
+      summary: Retrieve Material Sales Orders
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByAuditDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to search created or updated items (YYYY-MM-dd - selectByAuditDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsSalesOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ms-rest-api/rest/1/mssalesorderdet:
+    get:
+      tags:
+      - mssalesorderdet
+      summary: Retrieve Material Sales Order Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByAuditDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to search created or updated items (YYYY-MM-dd - selectByAuditDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsSalesOrderDet'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ms-rest-api/rest/1/msticketwithsoclass:
+    get:
+      tags:
+      - msticketwithsoclass
+      summary: Retrieve Material Sales Tickets
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: MsTicketFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TicketCode
+        in: query
+        description: Ticket code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsTicketWithSoClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - msticketwithsoclass
+      summary: Create an MS Ticket
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/MsTicketWithSoClassRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsTicketWithSoClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ms-rest-api/rest/1/msticketwithsoclass/{Vuuid}:
+    get:
+      tags:
+      - msticketwithsoclass
+      summary: Retrieve Specific Material Sales Ticket
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsTicketWithSoClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - msticketwithsoclass
+      summary: Delete a Specific Material Sales Ticket
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ms-rest-api/rest/1/mstruckratedetail:
+    get:
+      tags:
+      - mstruckratedetail
+      summary: Retrieve Material Sales Truck Rate Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: findByKeys
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: DeptCode
+        in: query
+        description: Department code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCode
+        in: query
+        description: Job code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VenCode
+        in: query
+        description: Vendor code
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TruckType
+        in: query
+        description: Truck type
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AsOfDate
+        in: query
+        description: As of date field (YYYY-MM-dd)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to search created or updated items (YYYY-MM-dd)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MsTruckRateDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    MsArPriceListPeriodDet:
+      type: object
+      properties:
+        ArplpdCompCode:
+          maxLength: 8
+          type: string
+        ArplpdPriceListCode:
+          maxLength: 16
+          type: string
+        ArplpdStartDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArplpdCiItemCode:
+          maxLength: 16
+          type: string
+        ArplpdCiLocCode:
+          maxLength: 7
+          type: string
+        ArplpdCiItemTypeCode:
+          maxLength: 2
+          type: string
+        ArplpdWmCode:
+          maxLength: 2
+          type: string
+        ArplpdCiClassCode:
+          maxLength: 4
+          type: string
+        ArplpdPricePerWm:
+          maxLength: 16
+          type: integer
+        ArplpdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArplpdIuCreateUser:
+          maxLength: 30
+          type: string
+        ArplpdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArplpdIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    MsSalesOrder:
+      type: object
+      properties:
+        MssoCompCode:
+          maxLength: 8
+          type: string
+        MssoCompName:
+          maxLength: 30
+          type: string
+        MssoSalesOrderCode:
+          maxLength: 16
+          type: string
+        MssoSalesOrderType:
+          maxLength: 8
+          type: string
+        MssoSystemSource:
+          maxLength: 8
+          type: string
+        MssoJobCompCode:
+          maxLength: 8
+          type: string
+        MssoJobCompName:
+          maxLength: 30
+          type: string
+        MssoJobOrCustCode:
+          maxLength: 10
+          type: string
+        MssoJobOrCustName:
+          maxLength: 60
+          type: string
+        MssoTermCode:
+          maxLength: 6
+          type: string
+        MssoTermName:
+          maxLength: 30
+          type: string
+        MssoOverrideBillAddCode:
+          maxLength: 5
+          type: string
+        MssoOverrideBillAddName:
+          maxLength: 40
+          type: string
+        MssoJobPoOrJobNum:
+          maxLength: 30
+          type: string
+        MssoJobLocation:
+          maxLength: 100
+          type: string
+        MssoJobCity:
+          maxLength: 100
+          type: string
+        MssoJobOwner:
+          maxLength: 100
+          type: string
+        MssoDescription:
+          maxLength: 4000
+          type: string
+        MssoDestination:
+          maxLength: 100
+          type: string
+        MssoQuoteFlag:
+          maxLength: 1
+          type: string
+        MssoStartDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssoExpiryDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssoPartnTypeCode:
+          maxLength: 1
+          type: string
+        MssoPartnCode:
+          maxLength: 8
+          type: string
+        MssoPartnName:
+          maxLength: 50
+          type: string
+        MssoContactCode:
+          maxLength: 10
+          type: string
+        MssoContactName:
+          maxLength: 183
+          type: string
+        MssoOrigin:
+          maxLength: 100
+          type: string
+        MssoOpportunityCode:
+          maxLength: 16
+          type: string
+        MssoMaxProtect:
+          maxLength: 16
+          type: integer
+        MssoMinProtect:
+          maxLength: 16
+          type: integer
+        MssoTruckerPayDiscPc:
+          maxLength: 16
+          type: integer
+        MssoDeliveryChargeDiscPc:
+          maxLength: 16
+          type: integer
+        MssoFullChargeFlag:
+          maxLength: 1
+          type: string
+        MssoTotalAcFlag:
+          maxLength: 1
+          type: string
+        MssoTaxExemptFlag:
+          maxLength: 1
+          type: string
+        MssoQuotationCode:
+          maxLength: 16
+          type: string
+        MssoClvValueCode1:
+          maxLength: 16
+          type: string
+        MssoClvValueCode2:
+          maxLength: 16
+          type: string
+        MssoClvValueCode3:
+          maxLength: 16
+          type: string
+        MssoClvValueCode4:
+          maxLength: 16
+          type: string
+        MssoClvValueCode5:
+          maxLength: 16
+          type: string
+        MssoClvValueCode6:
+          maxLength: 16
+          type: string
+        MssoSalesmanCode:
+          maxLength: 16
+          type: string
+        MssoIndexAmt:
+          maxLength: 16
+          type: integer
+        MssoPriceListCode:
+          maxLength: 16
+          type: string
+        MssoApplyPadotFlag:
+          maxLength: 1
+          type: string
+        MssoStateProvCode:
+          maxLength: 2
+          type: string
+        MssoAddName:
+          maxLength: 139
+          type: string
+        MssoBpccCode:
+          maxLength: 10
+          type: string
+        MssoToMszoneCode:
+          maxLength: 10
+          type: string
+        MssoMszpcCode:
+          maxLength: 10
+          type: string
+        MssoSoClassCode:
+          maxLength: 8
+          type: string
+        MssoSoClassName:
+          maxLength: 100
+          type: string
+        MssoDfltIvLocCode:
+          maxLength: 7
+          type: string
+        MssoDfltIvLocName:
+          maxLength: 60
+          type: string
+        MssoDfltTax1Code:
+          maxLength: 11
+          type: string
+        MssoDfltTax2Code:
+          maxLength: 11
+          type: string
+        MssoDfltTax3Code:
+          maxLength: 11
+          type: string
+        MssoDfltPhsCode:
+          maxLength: 16
+          type: string
+        MssoDfltCatCode:
+          maxLength: 16
+          type: string
+        MssoIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssoIuCreateUser:
+          maxLength: 30
+          type: string
+        MssoIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssoIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    MsSalesOrderDet:
+      type: object
+      properties:
+        MssodCompCode:
+          maxLength: 8
+          type: string
+        MssodCompName:
+          maxLength: 30
+          type: string
+        MssodSalesOrderCode:
+          maxLength: 16
+          type: string
+        MssodStartDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssodCiClassCode:
+          maxLength: 4
+          type: string
+        MssodCiClassName:
+          maxLength: 30
+          type: string
+        MssodCiItemCode:
+          maxLength: 16
+          type: string
+        MssodCiLocCode:
+          maxLength: 7
+          type: string
+        MssodCiLocName:
+          maxLength: 60
+          type: string
+        MssodCiItemTypeCode:
+          maxLength: 2
+          type: string
+        MssodCiItemTypeName:
+          maxLength: 30
+          type: string
+        MssodQty:
+          maxLength: 16
+          type: integer
+        MssodWmCode:
+          maxLength: 2
+          type: string
+        MssodPricePerWm:
+          maxLength: 16
+          type: integer
+        MssodExtendedAmt:
+          maxLength: 16
+          type: integer
+        MssodDiscPct:
+          maxLength: 16
+          type: integer
+        MssodTax1Code:
+          maxLength: 11
+          type: string
+        MssodTax1Name:
+          maxLength: 30
+          type: string
+        MssodTax2Code:
+          maxLength: 11
+          type: string
+        MssodTax2Name:
+          maxLength: 30
+          type: string
+        MssodTax3Code:
+          maxLength: 11
+          type: string
+        MssodTax3Name:
+          maxLength: 30
+          type: string
+        MssodExpiryDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssodOrigin:
+          maxLength: 100
+          type: string
+        MssodDestination:
+          maxLength: 100
+          type: string
+        MssodDiscQtyPerWm:
+          maxLength: 16
+          type: integer
+        MssodPayRatePerWm:
+          maxLength: 16
+          type: integer
+        MssodTruckerVenclassCode:
+          maxLength: 4
+          type: string
+        MssodMszoneCode:
+          maxLength: 10
+          type: string
+        MssodIndexAmt:
+          maxLength: 16
+          type: integer
+        MssodMaxProtect:
+          maxLength: 16
+          type: integer
+        MssodMinProtect:
+          maxLength: 16
+          type: integer
+        MssodOverrideAcPc:
+          maxLength: 16
+          type: integer
+        MssodQuotationCode:
+          maxLength: 16
+          type: string
+        MssodItemCompCode:
+          maxLength: 8
+          type: string
+        MssodItemCompName:
+          maxLength: 30
+          type: string
+        MssodCiItemName:
+          maxLength: 60
+          type: string
+        MssodCreateSoFlag:
+          maxLength: 60
+          type: string
+        MssodToMszoneCode:
+          maxLength: 10
+          type: string
+        MssodDeliveryChargeTax1:
+          maxLength: 11
+          type: string
+        MssodDeliveryChargeTax2:
+          maxLength: 11
+          type: string
+        MssodDeliveryChargeTax3:
+          maxLength: 11
+          type: string
+        MssodDeliverySrchTax1:
+          maxLength: 11
+          type: string
+        MssodDeliverySrchTax2:
+          maxLength: 11
+          type: string
+        MssodDeliverySrchTax3:
+          maxLength: 11
+          type: string
+        MssodTruckerPayTax1:
+          maxLength: 11
+          type: string
+        MssodTruckerPayTax2:
+          maxLength: 11
+          type: string
+        MssodTruckerPayTax3:
+          maxLength: 11
+          type: string
+        MssodTruckerSrchTax1:
+          maxLength: 11
+          type: string
+        MssodTruckerSrchTax2:
+          maxLength: 11
+          type: string
+        MssodTruckerSrchTax3:
+          maxLength: 11
+          type: string
+        MssodDeliveryChargesPerWm:
+          maxLength: 16
+          type: integer
+        MssodDeliveryChargesWmCode:
+          maxLength: 2
+          type: string
+        MssodDeliveryChargesMinQty:
+          maxLength: 16
+          type: integer
+        MssodDeliveryChargesMinAmt:
+          maxLength: 16
+          type: integer
+        MssodTruckerPayWmCode:
+          maxLength: 2
+          type: string
+        MssodTruckerPayMinQty:
+          maxLength: 16
+          type: integer
+        MssodTruckerPayMinAmt:
+          maxLength: 16
+          type: integer
+        MssodDeliverySrchPct:
+          maxLength: 16
+          type: integer
+        MssodDeliverySrchWmCode:
+          maxLength: 2
+          type: string
+        MssodDeliverySrchPerWm:
+          maxLength: 16
+          type: integer
+        MssodDeliverySrchLmpSum:
+          maxLength: 16
+          type: integer
+        MssodTruckerSrchPct:
+          maxLength: 16
+          type: integer
+        MssodTruckerSrchWmCode:
+          maxLength: 2
+          type: string
+        MssodTruckerSrchPerWm:
+          maxLength: 16
+          type: integer
+        MssodTruckerSrchLmpSum:
+          maxLength: 16
+          type: integer
+        MssodDeliveryCharges:
+          maxLength: 16
+          type: integer
+        MssodTruckerPay:
+          maxLength: 16
+          type: integer
+        MssodDeliverySrch:
+          maxLength: 16
+          type: integer
+        MssodTruckerSrch:
+          maxLength: 16
+          type: integer
+        MssodTruckClassCode:
+          maxLength: 10
+          type: string
+        MssodMszpcCode:
+          maxLength: 10
+          type: string
+        MssodHaulNum:
+          maxLength: 10
+          type: string
+        MssodHaulNumPrintFlag:
+          maxLength: 1
+          type: string
+        MssodSubstituteDtlFlag:
+          maxLength: 1
+          type: string
+        MssodSubstituteDtlDesc:
+          maxLength: 169
+          type: string
+        MssodBidMargin:
+          maxLength: 11
+          type: integer
+        MssodEscalationLineFlag:
+          maxLength: 1
+          type: string
+        MssodIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssodIuCreateUser:
+          maxLength: 30
+          type: string
+        MssodIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MssodIuUpdateUser:
+          maxLength: 30
+          type: string
+        MssodDumpFeeRate:
+          maxLength: 16
+          type: integer
+        MssodQuotedPayFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    MsTicketWithSoClass:
+      type: object
+      properties:
+        MstCompCode:
+          maxLength: 8
+          type: string
+        MstTicketCode:
+          maxLength: 16
+          type: string
+        MstTicketDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstCiItemLocCode:
+          maxLength: 7
+          type: string
+        MstTicketLocCode:
+          maxLength: 100
+          type: string
+        MstTruckerCode:
+          maxLength: 16
+          type: string
+        MstTruckerName:
+          maxLength: 182
+          type: string
+        MstTruckerType:
+          maxLength: 10
+          type: string
+        MstTruckCode:
+          maxLength: 16
+          type: string
+        MstTruckName:
+          maxLength: 30
+          type: string
+        MstSalesOrderCode:
+          maxLength: 16
+          type: string
+        MstSalesOrderName:
+          maxLength: 4000
+          type: string
+        MstSalesOrderType:
+          maxLength: 8
+          type: string
+        MstSalesOrderExpiryDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstMssoSalesOrderType:
+          maxLength: 8
+          type: string
+        MstMssoJobCompCode:
+          maxLength: 8
+          type: string
+        MstMssoJobOrCustCode:
+          maxLength: 10
+          type: string
+        MstMssoJobLocation:
+          maxLength: 100
+          type: string
+        MstMssoQuoteFlag:
+          maxLength: 1
+          type: string
+        MstJobCompCode:
+          maxLength: 8
+          type: string
+        MstJobOrCustCode:
+          maxLength: 10
+          type: string
+        MstJobOrCustName:
+          maxLength: 60
+          type: string
+        MstCiClassCode:
+          maxLength: 4
+          type: string
+        MstCiItemCode:
+          maxLength: 16
+          type: string
+        MstCiItemName:
+          maxLength: 60
+          type: string
+        MstCiItemTypeCode:
+          maxLength: 2
+          type: string
+        MstDestination:
+          maxLength: 100
+          type: string
+        MstQty:
+          maxLength: 16
+          type: integer
+        MstWmCode:
+          maxLength: 2
+          type: string
+        MstPricePerWm:
+          maxLength: 16
+          type: integer
+        MstExtendedAmt:
+          maxLength: 18
+          type: integer
+        MstTicketSource:
+          maxLength: 8
+          type: string
+        MstTruckerPayPricePerWm:
+          maxLength: 16
+          type: integer
+        MstTruckerPayExtendedAmt:
+          maxLength: 18
+          type: integer
+        MstBillingBchNum:
+          maxLength: 11
+          type: integer
+        MstBillingInvoiceNum:
+          maxLength: 11
+          type: string
+        MstOrigin:
+          maxLength: 100
+          type: string
+        MstOperatingHours:
+          maxLength: 16
+          type: integer
+        MstRegTruckerHour:
+          maxLength: 16
+          type: integer
+        MstOtTruckerHour:
+          maxLength: 16
+          type: integer
+        MstDotTruckerHour:
+          maxLength: 16
+          type: integer
+        MstBillingFlag:
+          maxLength: 1
+          type: string
+        MstBillingPostFlag:
+          maxLength: 1
+          type: string
+        MstTpBchNum:
+          maxLength: 11
+          type: integer
+        MstTpInvNum:
+          maxLength: 11
+          type: string
+        MstTpCompCode:
+          maxLength: 8
+          type: string
+        MstTpInvFlag:
+          maxLength: 1
+          type: string
+        MstTpPostFlag:
+          maxLength: 1
+          type: string
+        MstServiceChargeFlag:
+          maxLength: 1
+          type: string
+        MstNotes:
+          maxLength: 4000
+          type: string
+        MstPrintArInvNotesFlag:
+          maxLength: 1
+          type: string
+        MstCiBchNum:
+          maxLength: 11
+          type: integer
+        MstClvValueCode1:
+          maxLength: 16
+          type: string
+        MstClvValueCode2:
+          maxLength: 16
+          type: string
+        MstClvValueCode3:
+          maxLength: 16
+          type: string
+        MstClvValueCode4:
+          maxLength: 16
+          type: string
+        MstClvValueCode5:
+          maxLength: 16
+          type: string
+        MstClvValueCode6:
+          maxLength: 16
+          type: string
+        MstFromZoneCode:
+          maxLength: 10
+          type: string
+        MstToZoneCode:
+          maxLength: 10
+          type: string
+        MstMaxProtect:
+          maxLength: 16
+          type: integer
+        MstMinProtect:
+          maxLength: 16
+          type: integer
+        MstOverrideAcPc:
+          maxLength: 16
+          type: integer
+        MstTax1:
+          maxLength: 11
+          type: string
+        MstTax2:
+          maxLength: 11
+          type: string
+        MstTax3:
+          maxLength: 11
+          type: string
+        MstDeliveryChargeTax1:
+          maxLength: 11
+          type: string
+        MstDeliveryChargeTax2:
+          maxLength: 11
+          type: string
+        MstDeliveryChargeTax3:
+          maxLength: 11
+          type: string
+        MstDeliverySurchargeTax1:
+          maxLength: 11
+          type: string
+        MstDeliverySurchargeTax2:
+          maxLength: 11
+          type: string
+        MstDeliverySurchargeTax3:
+          maxLength: 11
+          type: string
+        MstTruckerPayTax1:
+          maxLength: 11
+          type: string
+        MstTruckerPayTax2:
+          maxLength: 11
+          type: string
+        MstTruckerPayTax3:
+          maxLength: 11
+          type: string
+        MstTruckerSurchargeTax1:
+          maxLength: 11
+          type: string
+        MstTruckerSurchargeTax2:
+          maxLength: 11
+          type: string
+        MstTruckerSurchargeTax3:
+          maxLength: 11
+          type: string
+        MstDeliveryChargesPerWm:
+          maxLength: 16
+          type: integer
+        MstDeliveryChargesWmCode:
+          maxLength: 2
+          type: string
+        MstDeliveryChargesMinQty:
+          maxLength: 16
+          type: integer
+        MstDeliveryChargesMinAmt:
+          maxLength: 16
+          type: integer
+        MstTruckerPayPerWm:
+          maxLength: 16
+          type: integer
+        MstTruckerPayWmCode:
+          maxLength: 2
+          type: string
+        MstTruckerPayMinQty:
+          maxLength: 16
+          type: integer
+        MstTruckerPayMinAmt:
+          maxLength: 16
+          type: integer
+        MstDeliverySurchargePct:
+          maxLength: 16
+          type: integer
+        MstDeliverySurchargeWmCode:
+          maxLength: 2
+          type: string
+        MstDeliverySurchargePerWm:
+          maxLength: 16
+          type: integer
+        MstDeliverySurchargeLmpSum:
+          maxLength: 16
+          type: integer
+        MstTruckerSurchargePct:
+          maxLength: 16
+          type: integer
+        MstTruckerSurchargeWmCode:
+          maxLength: 2
+          type: string
+        MstTruckerSurchargePerWm:
+          maxLength: 16
+          type: integer
+        MstTruckerSurchargeLmpSum:
+          maxLength: 16
+          type: integer
+        MstDeliveryCharges:
+          maxLength: 16
+          type: integer
+        MstTruckerPay:
+          maxLength: 16
+          type: integer
+        MstDeliverySurcharge:
+          maxLength: 16
+          type: integer
+        MstTruckerSurcharge:
+          maxLength: 16
+          type: integer
+        MstItemCompCode:
+          maxLength: 8
+          type: string
+        MstTicketTypeCode:
+          maxLength: 10
+          type: string
+        MstCodFlag:
+          maxLength: 1
+          type: string
+        MstDailyOrderCode:
+          maxLength: 16
+          type: string
+        MstDailyOrderDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstDailyOrderJobCode:
+          maxLength: 10
+          type: string
+        MstDailyOrderJobName:
+          maxLength: 60
+          type: string
+        MstDailyOrderPhsCode:
+          maxLength: 16
+          type: string
+        MstDailyOrderPhsName:
+          maxLength: 50
+          type: string
+        MstAcUnitPrice:
+          maxLength: 16
+          type: integer
+        MstAcTotalAmt:
+          maxLength: 16
+          type: integer
+        MstDailyOrderPoNum:
+          maxLength: 30
+          type: string
+        MstOrigExtendedAmt:
+          maxLength: 18
+          type: integer
+        MstOrigAcAmt:
+          maxLength: 18
+          type: integer
+        MstOrigDelChrgAmt:
+          maxLength: 18
+          type: integer
+        MstOrigDelSurchrgAmt:
+          maxLength: 18
+          type: integer
+        MstOrigTpPayAmt:
+          maxLength: 18
+          type: integer
+        MstOrigTpSurchrgAmt:
+          maxLength: 18
+          type: integer
+        MstLastArAdjBchNum:
+          maxLength: 11
+          type: integer
+        MstLastArAdjInvNum:
+          maxLength: 11
+          type: string
+        MstLastApAdjBchNum:
+          maxLength: 11
+          type: integer
+        MstLastApAdjVouNum:
+          maxLength: 11
+          type: string
+        MstTotalAmt:
+          maxLength: 0
+          type: integer
+        MstBillingCompCode:
+          maxLength: 8
+          type: string
+        MstPayRate:
+          maxLength: 0
+          type: integer
+        MstTotalTruckerHours:
+          maxLength: 0
+          type: integer
+        MstTollStbyTicketType:
+          maxLength: 1
+          type: string
+        MstEqpAssembly:
+          maxLength: 4000
+          type: string
+        MstDumpFeeAmt:
+          maxLength: 18
+          type: integer
+        MstForeman:
+          maxLength: 50
+          type: string
+        MstSoPoLine:
+          maxLength: 30
+          type: string
+        MstSoldAsItemCode:
+          maxLength: 16
+          type: string
+        MstSoldAsItemClass:
+          maxLength: 4
+          type: string
+        MstSoldAsItemType:
+          maxLength: 2
+          type: string
+        MstSoldAsItemLoc:
+          maxLength: 7
+          type: string
+        MstSoPriceList:
+          maxLength: 16
+          type: string
+        MstSoDetReqFlag:
+          maxLength: 1
+          type: string
+        MstIuCreateUser:
+          maxLength: 30
+          type: string
+        MstIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstIuUpdateUser:
+          maxLength: 30
+          type: string
+        MstIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstVUuid:
+          maxLength: 64
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        MstSelectFlag:
+          maxLength: 1
+          type: string
+        cSalesOrderExpiryDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+    MsTruckRateDetail:
+      type: object
+      properties:
+        MstrdCompCode:
+          maxLength: 8
+          type: string
+        MstrdDeptCode:
+          maxLength: 6
+          type: string
+        MstrdVenCode:
+          maxLength: 8
+          type: string
+        MstrdJobCode:
+          maxLength: 10
+          type: string
+        MstrdTruckType:
+          maxLength: 20
+          type: string
+        MstrdEffectiveDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstrdHourlyRate:
+          maxLength: 16
+          type: integer
+        MstrdCommercialRate:
+          maxLength: 16
+          type: integer
+        MstrdWhtsheetRate:
+          maxLength: 16
+          type: integer
+        MstrdHoldtimeRate:
+          maxLength: 16
+          type: integer
+        MstrdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstrdIuCreateUser:
+          maxLength: 30
+          type: string
+        MstrdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        MstrdIuUpdateUser:
+          maxLength: 30
+          type: string
+        HourlyRate:
+          maxLength: 0
+          type: integer
+        CommercialRate:
+          maxLength: 0
+          type: integer
+        HoldtimeRate:
+          maxLength: 0
+          type: integer
+        WhtsheetRate:
+          maxLength: 0
+          type: integer
+  responses:
+    MsArPriceListPeriodDetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MsArPriceListPeriodDet'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    MsSalesOrderResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MsSalesOrder'
+    MsSalesOrderDetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MsSalesOrderDet'
+    MsTicketWithSoClassResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MsTicketWithSoClass'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    MsTruckRateDetailResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MsTruckRateDetail'
+  requestBodies:
+    MsTicketWithSoClassRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/MsTicketWithSoClass'
+          examples:
+            Minimal POST Example:
+              value:
+                MstCiItemCode: "1104"
+                MstCiItemLocCode: "300"
+                MstCiItemTypeCode: "1"
+                MstExtendedAmt: ""
+                MstJobOrCustCode: TEST
+                MstPricePerWm: ""
+                MstQty: 2
+                MstSalesOrderCode: SA000015
+                MstServiceChargeFlag: "N"
+                MstSoldAsItemCode: ""
+                MstSoldAsItemLoc: ""
+                MstSoldAsItemType: ""
+                MstTicketCode: TICKFROMWS40
+                MstTicketDate: 2022-11-09
+                MstTicketTypeCode: TYPE1
+                MstTruckCode: ABS-TR2
+                MstWmCode: NA
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

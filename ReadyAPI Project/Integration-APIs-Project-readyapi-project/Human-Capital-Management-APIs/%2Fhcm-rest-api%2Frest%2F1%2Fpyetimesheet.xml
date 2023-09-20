@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyetimesheet" path="/hcm-rest-api/rest/1/pyetimesheet" id="870dcb5e-1d01-4918-b2f6-59333f1bd190" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="870dcb5e-1d01-4918-b2f6-59333f1bd190fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyetimesheet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="27a27e25-b1dc-43a0-826c-54901afd9ef3" method="GET">
+    <con:description>Retrieve PY E-Timesheets</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectETimeSheet</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectETimeSheet)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PrnCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Run Code (selectETimeSheet)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Year</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Timesheet Year (selectETimeSheet)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Period</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Timesheet Period (selectETimeSheet)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshSeqNo" : 0,
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshHoursCode" : "string",
+  "TshHours" : 0,
+  "TshOhType" : "string",
+  "TshDocumentNo" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshComment" : "string",
+  "TshAccessCode" : "string",
+  "TshVUuid" : "string",
+  "TshCompCode" : "string",
+  "TshPprPeriod" : 0,
+  "TshPprYear" : 0,
+  "TshPrnCode" : "string",
+  "TshBatchFlag" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="a80ea53d-d509-4823-9180-77d45face1b8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="11256a04-0df8-42eb-a1ce-672d9d7e1e8e" method="POST">
+    <con:description>Create a PY E-Timesheet</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshSeqNo" : 0,
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshDeptCode" : "string",
+  "TshGlAccCode" : "string",
+  "TshJobCode" : "string",
+  "TshPhase" : "string",
+  "TshCategory" : "string",
+  "TshHoursCode" : "string",
+  "TshHours" : 0,
+  "TshOhType" : "string",
+  "TshDocumentNo" : "string",
+  "TshSubmitFlag" : "string",
+  "TshAprvStatus" : "string",
+  "TshComment" : "string",
+  "TshAccessCode" : "string",
+  "TshVUuid" : "string",
+  "TshCompCode" : "string",
+  "TshPprPeriod" : 0,
+  "TshPprYear" : 0,
+  "TshPrnCode" : "string",
+  "TshBatchFlag" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TshAccessCode":"string","TshCompCode":"string","TshDate":"string","TshEmpNo":"string","TshHours":"integer","TshJobCode":"string","TshPhase":"string","TshCategory":"string","TshPprPeriod":"string","TshPprYear":"string","TshPrnCode":"string","TshWorkCompCode":"string","TshVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="97c94098-f045-4250-8c77-693cf67b1901" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshAccessCode":"string","TshCompCode":"string","TshDate":"string","TshEmpNo":"string","TshHours":"integer","TshJobCode":"string","TshPhase":"string","TshCategory":"string","TshPprPeriod":"string","TshPprYear":"string","TshPrnCode":"string","TshWorkCompCode":"string","TshVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="8181fa08-6024-4b49-b1bc-d2ce46f26dbc" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshAccessCode":"string","TshHours":5,"TshDocumentNo":"TEST321"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

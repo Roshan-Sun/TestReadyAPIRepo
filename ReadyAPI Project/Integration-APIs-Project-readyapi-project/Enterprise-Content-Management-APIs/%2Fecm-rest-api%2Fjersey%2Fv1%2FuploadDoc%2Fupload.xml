@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ecm-rest-api/jersey/v1/uploadDoc/upload" path="/ecm-rest-api/jersey/v1/uploadDoc/upload" id="82e2926b-2025-4197-8f5f-021a3c6d6015" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="82e2926b-2025-4197-8f5f-021a3c6d6015fileName">%2Fecm-rest-api%2Fjersey%2Fv1%2FuploadDoc%2Fupload</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="dc1dbbc4-ad49-4253-9dcd-a191054d741c" method="POST">
+    <con:description>There are required fields set in validation for the header and detail flysheets - all other available fields will be classed as optional.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>200</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>400</con:description>
+      <con:sampleContent>{ }</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>multipart/form-data</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="3a89fecc-6c02-4cc7-89a1-e4802fd20570" mediaType="multipart/form-data">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

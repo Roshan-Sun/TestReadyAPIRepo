@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrpositions" path="/hcm-rest-api/rest/1/hrpositions" id="d741a68b-1a3a-4ffa-9943-9f6c056e139c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d741a68b-1a3a-4ffa-9943-9f6c056e139cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrpositions</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="240da5dc-b0a7-4461-9b2b-fa33b95c5b37" method="GET">
+    <con:description>Retrieve HR Employee Positions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByNameAndStatus or hrpositionsFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PositionName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Name of Position (selectByNameAndStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StatusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Status Code (selectByNameAndStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>HrpEmpNoVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (hrpositionsFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>HrpPositionCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Position Code (hrpositionsFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrpPositionCode" : "string",
+  "HrpPositionName" : "string",
+  "HrpTrdCode" : "string",
+  "HrpEffectiveDate" : "YYYY-MM-dd",
+  "HrpExpiryDate" : "YYYY-MM-dd",
+  "HrpEmpNo" : "string",
+  "HrpJobTitle" : "string",
+  "HrpResp" : "string",
+  "HrpSalary" : 0,
+  "HrpStatusCode" : "string",
+  "HrpRegCode" : "string",
+  "HrpJobSummary" : "string",
+  "HrpVUuid" : "string",
+  "HrpReportTo" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bce37197-eaf3-4d8b-9acf-216a6fbd2636" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="c42ad4b7-86c5-4e3d-b523-681b70619977" method="POST">
+    <con:description>Create an HR Employee Position</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrpPositionCode" : "string",
+  "HrpPositionName" : "string",
+  "HrpTrdCode" : "string",
+  "HrpEffectiveDate" : "YYYY-MM-dd",
+  "HrpExpiryDate" : "YYYY-MM-dd",
+  "HrpEmpNo" : "string",
+  "HrpJobTitle" : "string",
+  "HrpResp" : "string",
+  "HrpSalary" : 0,
+  "HrpStatusCode" : "string",
+  "HrpRegCode" : "string",
+  "HrpJobSummary" : "string",
+  "HrpVUuid" : "string",
+  "HrpReportTo" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"HrpPositionCode":"string","HrpPositionName":"string","HrpTrdCode":"string","HrpReportTo":"string","HrpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="136f90d9-89b3-4c2e-b0cf-9e07579893f2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrpPositionCode":"string","HrpPositionName":"string","HrpTrdCode":"string","HrpReportTo":"string","HrpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f0e6f729-3a5d-4285-a93a-53cb854f56b6" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrpJobTitle":"Carpentry Apprentice - yessir2","HrpReportTo":"."}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

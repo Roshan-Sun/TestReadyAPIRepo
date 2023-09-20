@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempleave" path="/hcm-rest-api/rest/1/pyempleave" id="483518bc-7abf-41d3-8e9f-14a9a1ff155c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="483518bc-7abf-41d3-8e9f-14a9a1ff155cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempleave</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="80bd38f6-1c56-482c-b93f-0f9236c04ddb" method="GET">
+    <con:description>Retrieve Employee Leaves</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByEmpComp, selectByEmpCompLeave or selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByEmpComp and selectByEmpCompLeave)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectByEmpComp and selectByEmpCompLeave)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Year</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Year (selectByEmpComp and selectByEmpCompLeave)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>LeaveCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Leave Code (selectByEmpCompLeave)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Date to check against create/update dates (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EplCompCode" : "string",
+  "EplEmpNo" : "string",
+  "EplPprYear" : 0,
+  "EplLevCode" : "string",
+  "EplLevDesc" : "string",
+  "EplManualOveride" : "string",
+  "EplUser" : "string",
+  "EplLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplDaysCfExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcMethod" : "string",
+  "EplLevCalcStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcMethod2" : "string",
+  "EplVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "EplIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="81097aa8-7e59-436b-8ff5-c8077935158a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="5cd95d1c-9846-4e0a-851d-b878b5a5f683" method="POST">
+    <con:description>Create a PY Employee Leave</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EplCompCode" : "string",
+  "EplEmpNo" : "string",
+  "EplPprYear" : 0,
+  "EplLevCode" : "string",
+  "EplLevDesc" : "string",
+  "EplManualOveride" : "string",
+  "EplUser" : "string",
+  "EplLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplDaysCfExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcMethod" : "string",
+  "EplLevCalcStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplLevCalcMethod2" : "string",
+  "EplVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "EplIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EplIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EplPprYear":"string","EplCompCode":"string","EplEmpNo":"string","EplLevCode":"string","EplVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="c24fa3a5-4856-4bec-9d43-2f0109cc7074" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EplPprYear":"string","EplCompCode":"string","EplEmpNo":"string","EplLevCode":"string","EplVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e6f827bb-1740-4a14-b6f6-4d4b68f56083" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EplDaysUsed":1}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

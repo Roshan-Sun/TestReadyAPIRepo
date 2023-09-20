@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pycomded" path="/hcm-rest-api/rest/1/pycomded" id="e2a349c8-bdf1-412e-9384-6d71b7212f4f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e2a349c8-bdf1-412e-9384-6d71b7212f4ffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpycomded</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e4291016-c6f8-47cf-9898-a8e09a20c3aa" method="GET">
+    <con:description>Retrieve Company Deduction Codes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate or findByKeys</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for (findByDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (findByKeys)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>payGroup</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Groups (findByKeys)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>payRun</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Runs (findByKeys)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CodElegBaseCode" : "string",
+  "CodBaseCode" : "string",
+  "CodBaseName" : "string",
+  "CodDedCode" : "string",
+  "CodDedName" : "string",
+  "CodStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodFrqCode" : 0,
+  "CodEmplrContrFactor" : "string",
+  "CodGlAccCode" : "string",
+  "CodGlAccName" : "string",
+  "CodEmplrContrAccCode" : "string",
+  "CodEmplrContrAccName" : "string",
+  "CodElegFrqCode" : 0,
+  "CodDeptCode" : "string",
+  "CodDeptName" : "string",
+  "CodEmplrContrDeptCode" : "string",
+  "CodEmplrContrDeptName" : "string",
+  "CodDedType" : "string",
+  "CodPlanCode" : "string",
+  "CodPlanName" : "string",
+  "CodPloCode" : "string",
+  "CodPloName" : "string",
+  "CodVendor" : "string",
+  "CodVenName" : "string",
+  "CodCompCode" : "string",
+  "CodPrnCode" : "string",
+  "CodPygCode" : "string",
+  "CodPrintDedFlag" : "string",
+  "CodCalcAfterFirstChkFlag" : "string",
+  "CodContrMaxType" : "string",
+  "CodEmplrContrEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodComment" : "string",
+  "CodRemittanceAmtForAp" : "string",
+  "CodRemittanceFrqCode" : 0,
+  "CodDedSecureFlag" : "string",
+  "CodUser" : "string",
+  "CodLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateUser" : "string",
+  "CodIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuUpdateUser" : "string",
+  "CodEmplrContr" : "string",
+  "CodVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="67332ac9-35b9-469c-a5eb-1512658fe475" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="4399555e-9f44-4de5-9fb3-d0b04049d2b6" method="POST">
+    <con:description>Create new Company Deduction Code</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CodElegBaseCode" : "string",
+  "CodBaseCode" : "string",
+  "CodBaseName" : "string",
+  "CodDedCode" : "string",
+  "CodDedName" : "string",
+  "CodStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodFrqCode" : 0,
+  "CodEmplrContrFactor" : "string",
+  "CodGlAccCode" : "string",
+  "CodGlAccName" : "string",
+  "CodEmplrContrAccCode" : "string",
+  "CodEmplrContrAccName" : "string",
+  "CodElegFrqCode" : 0,
+  "CodDeptCode" : "string",
+  "CodDeptName" : "string",
+  "CodEmplrContrDeptCode" : "string",
+  "CodEmplrContrDeptName" : "string",
+  "CodDedType" : "string",
+  "CodPlanCode" : "string",
+  "CodPlanName" : "string",
+  "CodPloCode" : "string",
+  "CodPloName" : "string",
+  "CodVendor" : "string",
+  "CodVenName" : "string",
+  "CodCompCode" : "string",
+  "CodPrnCode" : "string",
+  "CodPygCode" : "string",
+  "CodPrintDedFlag" : "string",
+  "CodCalcAfterFirstChkFlag" : "string",
+  "CodContrMaxType" : "string",
+  "CodEmplrContrEffectiveDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodComment" : "string",
+  "CodRemittanceAmtForAp" : "string",
+  "CodRemittanceFrqCode" : 0,
+  "CodDedSecureFlag" : "string",
+  "CodUser" : "string",
+  "CodLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuCreateUser" : "string",
+  "CodIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CodIuUpdateUser" : "string",
+  "CodEmplrContr" : "string",
+  "CodVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CodCompCode":"ZZ","CodPygCode":"MO","CodPrnCode":"WEEK","CodDedCode":"RST","CodPlanCode":"SINGLE","CodPloCode":"T-FREE","CodStartDate":"2022-11-16","CodDedType":"D","CodGlAccCode":"1000.100","CodFrqCode":1,"CodDedAmount":1,"CodRemittanceFrqCode":1}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="71efd9f6-d8b7-446d-b56f-40a912024e69" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CodCompCode":"ZZ","CodPygCode":"MO","CodPrnCode":"WEEK","CodDedCode":"RST","CodPlanCode":"SINGLE","CodPloCode":"T-FREE","CodStartDate":"2022-11-16","CodDedType":"D","CodGlAccCode":"1000.100","CodFrqCode":1,"CodDedAmount":1,"CodRemittanceFrqCode":1}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0be5e5c4-8560-4d71-807e-503e08e8d53d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CodVendor":"ZZ-ACME"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

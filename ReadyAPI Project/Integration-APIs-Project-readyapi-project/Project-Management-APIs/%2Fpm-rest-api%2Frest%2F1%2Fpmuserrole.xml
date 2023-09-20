@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmuserrole" path="/pm-rest-api/rest/1/pmuserrole" id="1ef8c3ce-dcc7-4de5-b003-23ba5736610b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1ef8c3ce-dcc7-4de5-b003-23ba5736610bfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmuserrole</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a5433cd4-0d90-42e4-acab-f304da9ed0ef" method="GET">
+    <con:description>Retrieve PM User Roles</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GpmurUser" : "string",
+  "GpmurPartnCode" : "string",
+  "GpmurPartnTypeCode" : "string",
+  "GpmurContactCode" : "string",
+  "GpmurFirstName" : "string",
+  "GpmurLastName" : "string",
+  "GpmurCompCode" : "string",
+  "GpmurProjCode" : "string",
+  "GpmurProjName" : "string",
+  "GpmurRoleCode" : "string",
+  "GpmurRoleName" : "string",
+  "GpmurIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmurIuCreateUser" : "string",
+  "GpmurIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GpmurIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="56bd90e2-7bc5-4d82-8ab1-d0f17628a6fe" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

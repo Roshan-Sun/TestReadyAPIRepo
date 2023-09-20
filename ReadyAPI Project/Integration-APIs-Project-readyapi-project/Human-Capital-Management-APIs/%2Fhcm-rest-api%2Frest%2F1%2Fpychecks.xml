@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pychecks" path="/hcm-rest-api/rest/1/pychecks" id="b3c79eca-d044-4e70-b203-f7c3b190c79d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b3c79eca-d044-4e70-b203-f7c3b190c79dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpychecks</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="75b007ce-63bc-43cd-aab9-4c61388321c3" method="GET">
+    <con:description>Retrieve Check List</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycCompCode" : "string",
+  "PycPrnCode" : "string",
+  "PycYear" : 0,
+  "PycPprPeriod" : 0,
+  "PycEmpNo" : "string",
+  "PycPygCode" : "string",
+  "PycTranType" : "string",
+  "PycBankCode" : "string",
+  "PycBranchCode" : "string",
+  "PycBankAccNum" : "string",
+  "PycEmpBankCode" : "string",
+  "PycEmpBranchCode" : "string",
+  "PycEmpBankAccNum" : "string",
+  "PycCheckNum" : 0,
+  "PycCheckDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycCheckVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecFlag" : "string",
+  "PycStatementDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycUser" : "string",
+  "PycLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycAchTranCode" : "string",
+  "PycManualChkPrint" : "string",
+  "PycPrintCheckOnly" : "string",
+  "PycThirdPartySickPay" : "string",
+  "PycAssignedCheckNum" : 0,
+  "PycCklocCode" : "string",
+  "PycCklocPygCode" : "string",
+  "PycHomeCompCode" : "string",
+  "PycHomeDeptCode" : "string",
+  "PycIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuCreateUser" : "string",
+  "PycIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuUpdateUser" : "string",
+  "PycVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c024aaa9-f4c9-44da-a0e1-eab79c2fdc19" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="f7ce3190-5d30-4d61-a419-83ca731e822c" method="POST">
+    <con:description>Create a Check</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycCompCode" : "string",
+  "PycPrnCode" : "string",
+  "PycYear" : 0,
+  "PycPprPeriod" : 0,
+  "PycEmpNo" : "string",
+  "PycPygCode" : "string",
+  "PycTranType" : "string",
+  "PycBankCode" : "string",
+  "PycBranchCode" : "string",
+  "PycBankAccNum" : "string",
+  "PycEmpBankCode" : "string",
+  "PycEmpBranchCode" : "string",
+  "PycEmpBankAccNum" : "string",
+  "PycCheckNum" : 0,
+  "PycCheckDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycCheckVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecFlag" : "string",
+  "PycStatementDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycUser" : "string",
+  "PycLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycAchTranCode" : "string",
+  "PycManualChkPrint" : "string",
+  "PycPrintCheckOnly" : "string",
+  "PycThirdPartySickPay" : "string",
+  "PycAssignedCheckNum" : 0,
+  "PycCklocCode" : "string",
+  "PycCklocPygCode" : "string",
+  "PycHomeCompCode" : "string",
+  "PycHomeDeptCode" : "string",
+  "PycIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuCreateUser" : "string",
+  "PycIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuUpdateUser" : "string",
+  "PycVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PycCompCode":"string","PycEmpNo":"string","PycPrnCode":"string","PycYear":"integer","PycPprPeriod":"integer","PycCheckSeqNo":"integer","PycRefSeqNo":"integer","PycLastUpdDate":"string","PycUser":"string","PycVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="c4080f9a-6b12-4d57-bd97-20b2b0b57fd7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycCompCode":"string","PycEmpNo":"string","PycPrnCode":"string","PycYear":"integer","PycPprPeriod":"integer","PycCheckSeqNo":"integer","PycRefSeqNo":"integer","PycLastUpdDate":"string","PycUser":"string","PycVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

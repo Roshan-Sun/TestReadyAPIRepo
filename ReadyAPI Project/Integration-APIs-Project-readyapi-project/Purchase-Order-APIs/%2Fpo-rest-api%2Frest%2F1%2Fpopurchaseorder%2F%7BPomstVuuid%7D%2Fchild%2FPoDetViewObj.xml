@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/po-rest-api/rest/1/popurchaseorder/{PomstVuuid}/child/PoDetViewObj" path="/po-rest-api/rest/1/popurchaseorder/{PomstVuuid}/child/PoDetViewObj" id="4b420194-a3ec-43e9-99d3-01823d31bf9c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4b420194-a3ec-43e9-99d3-01823d31bf9cfileName">%2Fpo-rest-api%2Frest%2F1%2Fpopurchaseorder%2F%7BPomstVuuid%7D%2Fchild%2FPoDetViewObj</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="ad33c02d-bd86-4325-80be-0bbbab92c932" method="POST">
+    <con:description>Create PO Detail</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>PomstVuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Vuuid of the header to add the detail registry to</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PodetCompCode" : "string",
+  "PodetNum" : "string",
+  "PodetLineNum" : 0,
+  "PodetBchNum" : 0,
+  "PodetDeptCode" : "string",
+  "PodetItmCode" : "string",
+  "PodetItmName" : "string",
+  "PodetItmtypCode" : "string",
+  "PodetIvDeptCode" : "string",
+  "PodetIvAccCode" : "string",
+  "PodetVarDeptCode" : "string",
+  "PodetVarAccCode" : "string",
+  "PodetExptdDate" : "YYYY-MM-dd",
+  "PodetRecDate" : "YYYY-MM-dd",
+  "PodetExptdPriceAmt" : 0,
+  "PodetActPriceAmt" : 0,
+  "PodetAdjPriceAmt" : 0,
+  "PodetCostAmt" : 0,
+  "PodetStdCostAmt" : 0,
+  "PodetAvgCostAmt" : 0,
+  "PodetLstCostAmt" : 0,
+  "PodetCurrCode" : "string",
+  "PodetOrdQty" : 0,
+  "PodetLstOrdQty" : 0,
+  "PodetRecQty" : 0,
+  "PodetRectodateQty" : 0,
+  "PodetRejQty" : 0,
+  "PodetRejtodateQty" : 0,
+  "PodetClaimQty" : 0,
+  "PodetClaimtodateQty" : 0,
+  "PodetPayQty" : 0,
+  "PodetPaytodateQty" : 0,
+  "PodetInvQty" : 0,
+  "PodetInvtodateQty" : 0,
+  "PodetWmCode" : "string",
+  "PodetOrdWmCode" : "string",
+  "PodetInvWmCode" : "string",
+  "PodetStatCode" : "string",
+  "PodetLocCode" : "string",
+  "PodetJobCode" : "string",
+  "PodetJobCtrlCode" : "string",
+  "PodetPhsCode" : "string",
+  "PodetPhsCtrlCode" : "string",
+  "PodetCatCode" : "string",
+  "PodetCatCtrlCode" : "string",
+  "PodetTxt1Code" : "string",
+  "PodetTxt2Code" : "string",
+  "PodetTxt3Code" : "string",
+  "PodetDesc" : "string",
+  "PodetOrdTrnNum" : 0,
+  "PodetRecTrnNum" : 0,
+  "PodetIvCode" : "string",
+  "PodetCloseCode" : "string",
+  "PodetSubLineNum" : 0,
+  "PodetEcEqpCode" : "string",
+  "PodetEcCstCode" : "string",
+  "PodetQuoteNum" : 0,
+  "PodetTax1Code" : "string",
+  "PodetTax2Code" : "string",
+  "PodetTax3Code" : "string",
+  "PodetLineChgFlag" : "string",
+  "PodetShplCode" : "string",
+  "PodetWipAccCode" : "string",
+  "PodetWipDeptCode" : "string",
+  "PodetPostToApState" : "string",
+  "PodetWbsvCode1" : "string",
+  "PodetWbsvCode2" : "string",
+  "PodetWbsvCode3" : "string",
+  "PodetWbsvCode4" : "string",
+  "PodetWbsvCode5" : "string",
+  "PodetWbsvCode6" : "string",
+  "PodetWbsvCode7" : "string",
+  "PodetWbsvCode8" : "string",
+  "PodetWbsvCode9" : "string",
+  "PodetWbsvCode10" : "string",
+  "PodetWbsvCode11" : "string",
+  "PodetWbsvCode12" : "string",
+  "PodetPmCode" : "string",
+  "PodetReleaseNum" : 0,
+  "PodetEqpCode" : "string",
+  "PodetComponCode" : "string",
+  "PodetTrancodeCode" : "string",
+  "PodetTendpackCode" : "string",
+  "PodetTendpackLineNum" : 0,
+  "PodetSiNum" : 0,
+  "PodetSiLineNum" : 0,
+  "PodetSrcCompCode" : "string",
+  "PodetClassCode" : "string",
+  "PodetCiitemtypCode" : "string",
+  "PodetInvTypeCode" : "string",
+  "PodetItemLocCode" : "string",
+  "PodetTypeCode" : "string",
+  "PodetSiMastJobCode" : "string",
+  "PodetCloseReasonCode" : "string",
+  "PodetAllocatedQty" : 0,
+  "PodetRecIntoInvFlag" : "string",
+  "PodetUserTypeCode" : "string",
+  "PodetUserField1" : "string",
+  "PodetUserField2" : "string",
+  "PodetUserField3" : "string",
+  "PodetUserField4" : "string",
+  "PodetUserField5" : "string",
+  "PodetUserField6" : "string",
+  "PodetUserField7" : "string",
+  "PodetUserField8" : "string",
+  "PodetTavCode1" : "string",
+  "PodetTavCode2" : "string",
+  "PodetTavCode3" : "string",
+  "PodetTavCode4" : "string",
+  "PodetWoCode" : "string",
+  "PodetWitmLineNumber" : 0,
+  "PodetExpCode" : "string",
+  "PodetWDetailCode" : "string",
+  "PodetTax1TaxableFlag" : "string",
+  "PodetTax2TaxableFlag" : "string",
+  "PodetTax3TaxableFlag" : "string",
+  "PoderExtendedAmt" : 0,
+  "PodetPoTypeCode" : "string",
+  "PodetPoItemType" : "string",
+  "PodetItemWmCode" : "string",
+  "PodetItemAllowAltWmFlag" : "string",
+  "PodetUserFieldEdtFlag5" : "string",
+  "PodetUserFieldEdtFlag6" : "string",
+  "PodetUserFieldEdtFlag7" : "string",
+  "PodetUserFieldEdtFlag8" : "string",
+  "PodetUserFieldName5" : "string",
+  "PodetUserFieldName6" : "string",
+  "PodetUserFieldName7" : "string",
+  "PodetUserFieldName8" : "string",
+  "PodetWbsSetupFlag" : "string",
+  "PodetTacSetupFlag" : "string",
+  "PodetVUuid" : "string",
+  "PodetLumpSumPoFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PomstCompCode":"string","PomstCompName":"string","PomstNum":"integer","PomstReleaseNum":"integer","PomstVenCode":"string","PomstTypeCode":"string","PomstJobCompCode":"string","PomstVuuid":"","PoDetViewObj":[{"PodetLineNum":"integer","PodetItmCode":"string","PodetItmName":"string","PodetExptdDate":"string","PodetExptdPriceAmt":"float","PodetCurrCode":"string","PodetOrdQty":"integer","PodetOrdWmCode":"string","PodetStatCode":"string","PodetJobCode":"string","PodetJobCtrlCode":"string","PodetPhsCode":"string","PodetPhsCtrlCode":"string","PodetCatCode":"string","PodetCatCtrlCode":"string","PodetTax1Code":"string","PodetTax2Code":"string","PodetTax3Code":"string","PodetWipAccCode":"string","PodetWipDeptCode":"string","PodetSrcCompCode":"string","PodetRecIntoInvFlag":"string","PodetUserTypeCode":"string","PodetUserField1":"string","PodetUserField2":"string","PodetUserField3":"string","PodetUserField4":"string","PodetTax1TaxableFlag":"string","PodetTax2TaxableFlag":"string","PodetTax3TaxableFlag":"string","PoderExtendedAmt":"float","PodetPoTypeCode":"string","PodetPoItemType":"string","PodetItemAllowAltWmFlag":"string","PodetWbsSetupFlag":"string","PodetTacSetupFlag":"string","PodetVuuid":""}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example (PO Header and Details)" id="ba413c0f-d9da-43c5-93da-e1df3125e079" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PomstCompCode":"string","PomstCompName":"string","PomstNum":"integer","PomstReleaseNum":"integer","PomstVenCode":"string","PomstTypeCode":"string","PomstJobCompCode":"string","PomstVuuid":"","PoDetViewObj":[{"PodetLineNum":"integer","PodetItmCode":"string","PodetItmName":"string","PodetExptdDate":"string","PodetExptdPriceAmt":"float","PodetCurrCode":"string","PodetOrdQty":"integer","PodetOrdWmCode":"string","PodetStatCode":"string","PodetJobCode":"string","PodetJobCtrlCode":"string","PodetPhsCode":"string","PodetPhsCtrlCode":"string","PodetCatCode":"string","PodetCatCtrlCode":"string","PodetTax1Code":"string","PodetTax2Code":"string","PodetTax3Code":"string","PodetWipAccCode":"string","PodetWipDeptCode":"string","PodetSrcCompCode":"string","PodetRecIntoInvFlag":"string","PodetUserTypeCode":"string","PodetUserField1":"string","PodetUserField2":"string","PodetUserField3":"string","PodetUserField4":"string","PodetTax1TaxableFlag":"string","PodetTax2TaxableFlag":"string","PodetTax3TaxableFlag":"string","PoderExtendedAmt":"float","PodetPoTypeCode":"string","PodetPoItemType":"string","PodetItemAllowAltWmFlag":"string","PodetWbsSetupFlag":"string","PodetTacSetupFlag":"string","PodetVuuid":""}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="POST Example 2 (PO Details on existing Header)" id="0959ebf8-e16b-4dfb-b607-ce719cf14702" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PodetLineNum":3,"PodetItmCode":"TOOLS","PodetItmName":"test","PodetExptdDate":"2021-04-01","PodetExptdPriceAmt":1,"PodetCurrCode":"US","PodetOrdQty":12,"PodetOrdWmCode":"NA","PodetStatCode":"N","PodetJobCode":"100001","PodetJobCtrlCode":"ALL","PodetPhsCode":"01-103","PodetPhsCtrlCode":"01","PodetCatCode":"1000","PodetCatCtrlCode":"ALL","PodetTax1Code":"T4","PodetTax2Code":"T5","PodetTax3Code":"T6","PodetWipAccCode":"5200.100","PodetWipDeptCode":"00","PodetSrcCompCode":"RVHQ1001","PodetRecIntoInvFlag":"N","PodetUserTypeCode":"J","PodetUserField1":"RVHQ1001","PodetUserField2":"100001","PodetUserField3":"01-103","PodetUserField4":"1000","PodetTax1TaxableFlag":"Y","PodetTax2TaxableFlag":"Y","PodetTax3TaxableFlag":"Y","PodetObjectOraseq":67424752,"PoderExtendedAmt":12,"PodetPoTypeCode":"S","PodetPoItemType":"F","PodetItemAllowAltWmFlag":"Y","PodetPosOraseq":67424762,"PodetWbsSetupFlag":"N","PodetTacSetupFlag":"N","PodetVuuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

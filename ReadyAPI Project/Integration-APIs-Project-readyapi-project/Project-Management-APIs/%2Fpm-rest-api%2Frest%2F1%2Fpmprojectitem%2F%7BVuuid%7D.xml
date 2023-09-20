@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmprojectitem/{Vuuid}" path="/pm-rest-api/rest/1/pmprojectitem/{Vuuid}" id="eb805673-fa25-4628-8b50-2388f7dc83db" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="eb805673-fa25-4628-8b50-2388f7dc83dbfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojectitem%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d63e170b-2601-4cef-b235-5d9add1245eb" method="GET">
+    <con:description>Retrieve a Specific PM Project Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmpiCompCode" : "string",
+  "PmpiProjCode" : "string",
+  "PmpiMaterialOrTaskCode" : "string",
+  "PmpiItemName" : "string",
+  "PmpiWmCode" : "string",
+  "PmpiPurchasingTypeCode" : "string",
+  "PmpiClvValueCode1" : "string",
+  "PmpiClvValueCode2" : "string",
+  "PmpiClvValueCode3" : "string",
+  "PmpiClvValueCode4" : "string",
+  "PmpiSpecSection" : "string",
+  "PmpiSpecSubsection" : "string",
+  "PmpiPurchasedFlag" : "string",
+  "PmpiPhsCode" : "string",
+  "PmpiCatCode" : "string",
+  "PmpiVenCode" : "string",
+  "PmpiPoOrContCode" : "string",
+  "PmpiRelOrChgCode" : "string",
+  "PmpiTax1Code" : "string",
+  "PmpiTax2Code" : "string",
+  "PmpiTax3Code" : "string",
+  "PmpiSelectedFlag" : "string",
+  "PmpiClvValueCode5" : "string",
+  "PmpiClvValueCode6" : "string",
+  "PmpiJobCode" : "string",
+  "PmpiItemTypeCode" : "string",
+  "PmpiItemLocCode" : "string",
+  "PmpiTargetPurchaseDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiPhsWmCode" : "string",
+  "PmpiUpdBudgetFlag" : "string",
+  "PmpiIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiIuCreateUser" : "string",
+  "PmpiIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiIuUpdateUser" : "string",
+  "PmpiWbsvCode1" : "string",
+  "PmpiWbsvCode2" : "string",
+  "PmpiWbsvCode3" : "string",
+  "PmpiWbsvCode4" : "string",
+  "PmpiTempPciId" : "string",
+  "PmpiMarkupIndicatorFlag" : "string",
+  "PmpiTpTimePhasedFlag" : "string",
+  "PmpiTpRuleCode" : "string",
+  "PmpiTpStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiTpEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiPhsType" : "string",
+  "PmpiForecastMeth" : "string",
+  "PmpiIsIncludedInBudgFlag" : "string",
+  "PmpiIsExistInEmFlag" : "string",
+  "PmpiPhsDescFromEm" : "string",
+  "PmpiBillingTypeCode" : "string",
+  "PmpiLastSessioninfo" : "string",
+  "PmpiOrigSessioninfo" : "string",
+  "PmpiComments" : "string",
+  "PmpiVUuid" : "string",
+  "PmpiWkfStatus" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="260b6fdf-459c-4739-af69-fb4dfa1c345b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="a7af9fe7-48fc-4a68-b107-8348db1cc325" method="PATCH">
+    <con:description>Update a Specific PM Project Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmpiCompCode" : "string",
+  "PmpiProjCode" : "string",
+  "PmpiMaterialOrTaskCode" : "string",
+  "PmpiItemName" : "string",
+  "PmpiWmCode" : "string",
+  "PmpiPurchasingTypeCode" : "string",
+  "PmpiClvValueCode1" : "string",
+  "PmpiClvValueCode2" : "string",
+  "PmpiClvValueCode3" : "string",
+  "PmpiClvValueCode4" : "string",
+  "PmpiSpecSection" : "string",
+  "PmpiSpecSubsection" : "string",
+  "PmpiPurchasedFlag" : "string",
+  "PmpiPhsCode" : "string",
+  "PmpiCatCode" : "string",
+  "PmpiVenCode" : "string",
+  "PmpiPoOrContCode" : "string",
+  "PmpiRelOrChgCode" : "string",
+  "PmpiTax1Code" : "string",
+  "PmpiTax2Code" : "string",
+  "PmpiTax3Code" : "string",
+  "PmpiSelectedFlag" : "string",
+  "PmpiClvValueCode5" : "string",
+  "PmpiClvValueCode6" : "string",
+  "PmpiJobCode" : "string",
+  "PmpiItemTypeCode" : "string",
+  "PmpiItemLocCode" : "string",
+  "PmpiTargetPurchaseDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiPhsWmCode" : "string",
+  "PmpiUpdBudgetFlag" : "string",
+  "PmpiIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiIuCreateUser" : "string",
+  "PmpiIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiIuUpdateUser" : "string",
+  "PmpiWbsvCode1" : "string",
+  "PmpiWbsvCode2" : "string",
+  "PmpiWbsvCode3" : "string",
+  "PmpiWbsvCode4" : "string",
+  "PmpiTempPciId" : "string",
+  "PmpiMarkupIndicatorFlag" : "string",
+  "PmpiTpTimePhasedFlag" : "string",
+  "PmpiTpRuleCode" : "string",
+  "PmpiTpStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiTpEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmpiPhsType" : "string",
+  "PmpiForecastMeth" : "string",
+  "PmpiIsIncludedInBudgFlag" : "string",
+  "PmpiIsExistInEmFlag" : "string",
+  "PmpiPhsDescFromEm" : "string",
+  "PmpiBillingTypeCode" : "string",
+  "PmpiLastSessioninfo" : "string",
+  "PmpiOrigSessioninfo" : "string",
+  "PmpiComments" : "string",
+  "PmpiVUuid" : "string",
+  "PmpiWkfStatus" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmpiCompCode":"string","PmpiProjCode":"string","PmpiLineNum":"integer","PmpiIsExistInEmFlag":"string","PmpiIsIncludedInBudgFlag":"string","PmpiVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="bf14aa87-6cbe-4f60-a76c-7bb83182a496" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmpiCompCode":"string","PmpiProjCode":"string","PmpiLineNum":"integer","PmpiIsExistInEmFlag":"string","PmpiIsIncludedInBudgFlag":"string","PmpiVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="9685c245-9e6c-499a-92ec-123e9f307ccb" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmpiComments":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

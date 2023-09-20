@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourtask/{Vuuid}" path="/pm-rest-api/rest/1/pmdailyjourtask/{Vuuid}" id="d4834111-b718-4892-b185-8ec23918033b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d4834111-b718-4892-b185-8ec23918033bfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourtask%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3b4a10ed-450e-4c16-bcfc-b66bf646c13e" method="GET">
+    <con:description>Retrieve a Specific PM Daily Journal Task</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtJournalVUuid" : "string",
+  "PmjtProjCode" : "string",
+  "PmjtPartnCode" : "string",
+  "PmjtPartnTypeCode" : "string",
+  "PmjtWorkersNumber" : 0,
+  "PmjtActCode" : "string",
+  "PmjtNotes" : "string",
+  "PmjtClvValueCode1" : "string",
+  "PmjtClvValueCode2" : "string",
+  "PmjtClvValueCode3" : "string",
+  "PmjtClvValueCode4" : "string",
+  "PmjtClvValueCode5" : "string",
+  "PmjtClvValueCode6" : "string",
+  "PmjtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuCreateUser" : "string",
+  "PmjtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuUpdateUser" : "string",
+  "PmjtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="63d52e98-ceb1-4a02-a429-a487a7c35278" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="30ca4e07-73a3-4fd5-b9cd-930b7f814388" method="DELETE">
+    <con:description>Delete a Specific PM Daily Journal Task</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="25f9cc5d-d169-49e4-b308-b965827bdd95" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="2e3138ca-d5e3-4567-afa2-f87c1ff66536" method="PATCH">
+    <con:description>Update a Specific PM Daily Journal Task</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjtJournalVUuid" : "string",
+  "PmjtProjCode" : "string",
+  "PmjtPartnCode" : "string",
+  "PmjtPartnTypeCode" : "string",
+  "PmjtWorkersNumber" : 0,
+  "PmjtActCode" : "string",
+  "PmjtNotes" : "string",
+  "PmjtClvValueCode1" : "string",
+  "PmjtClvValueCode2" : "string",
+  "PmjtClvValueCode3" : "string",
+  "PmjtClvValueCode4" : "string",
+  "PmjtClvValueCode5" : "string",
+  "PmjtClvValueCode6" : "string",
+  "PmjtIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuCreateUser" : "string",
+  "PmjtIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjtIuUpdateUser" : "string",
+  "PmjtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjtJournalVUuid":"string","PmjtPartnCode":"string","PmjtPartnTypeCode":"string","PmjtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="a7f64e92-72f3-4299-b60b-cc0bd58a3c34" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtJournalVUuid":"string","PmjtPartnCode":"string","PmjtPartnTypeCode":"string","PmjtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e9a346db-93c9-480c-8a64-5a92ed6b3ede" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjtNotes":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

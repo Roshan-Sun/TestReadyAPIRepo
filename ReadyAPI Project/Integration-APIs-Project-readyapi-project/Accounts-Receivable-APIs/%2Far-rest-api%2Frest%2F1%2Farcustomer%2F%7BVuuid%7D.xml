@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arcustomer/{Vuuid}" path="/ar-rest-api/rest/1/arcustomer/{Vuuid}" id="4a550f4b-f96e-453b-8de3-97fbc4c0072a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4a550f4b-f96e-453b-8de3-97fbc4c0072afileName">%2Far-rest-api%2Frest%2F1%2Farcustomer%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6749f732-b4c9-473f-bf5e-e2157755d39c" method="GET">
+    <con:description>Retrieval of a specific customer by Vuuid</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpcustCompCode" : "string",
+  "BpcustCompName" : "string",
+  "BpcustBpCode" : "string",
+  "BpcustBpName" : "string",
+  "BpcustBpCodeBf" : "string",
+  "BpcustBpNameBf" : "string",
+  "BpcustBillAdd1" : "string",
+  "BpcustBillAdd2" : "string",
+  "BpcustBillAdd3" : "string",
+  "BpcustBillRegionCode" : "string",
+  "BpcustBillRegionName" : "string",
+  "BpcustBillCountry" : "string",
+  "BpcustBillPostalCode" : "string",
+  "BpcustBillContactName" : "string",
+  "BpcustBillPhone" : "string",
+  "BpcustBillFax" : "string",
+  "BpcustBillEmail" : "string",
+  "BpcustCollCode" : "string",
+  "BpcustCollName" : "string",
+  "BpcustClassCode" : "string",
+  "BpcustClassName" : "string",
+  "BpcustTermCode" : "string",
+  "BpcustTermName" : "string",
+  "BpcustActiveFlag" : "string",
+  "BpcustShipAdd1" : "string",
+  "BpcustShipAdd2" : "string",
+  "BpcustShipAdd3" : "string",
+  "BpcustShipRegionCode" : "string",
+  "BpcustShipRegionName" : "string",
+  "BpcustShipCountry" : "string",
+  "BpcustShipPostalCode" : "string",
+  "BpcustShipContactName" : "string",
+  "BpcustShipPhone" : "string",
+  "BpcustShipFax" : "string",
+  "BpcustShipEmail" : "string",
+  "BpcustCurrCode" : "string",
+  "BpcustCurrName" : "string",
+  "BpcustCrLimitAmt" : 0,
+  "BpcustChargeCode" : "string",
+  "BpcustChargeName" : "string",
+  "BpcustBankCode" : "string",
+  "BpcustBankName" : "string",
+  "BpcustBankAccNum1" : "string",
+  "BpcustBankAccNum2" : "string",
+  "BpcustBankAccNum3" : "string",
+  "BpcustDiscPc" : 0,
+  "BpcustHldbkPc" : 0,
+  "BpcustTax1Code" : "string",
+  "BpcustTax1Name" : "string",
+  "BpcustTax2Code" : "string",
+  "BpcustTax2Name" : "string",
+  "BpcustTax3Code" : "string",
+  "BpcustTax3Name" : "string",
+  "BpcustStatementFlag" : "string",
+  "BpcustDunnFlag" : "string",
+  "BpcustTranAllowFlag" : "string",
+  "BpcustArDeptCode" : "string",
+  "BpcustArDeptName" : "string",
+  "BpcustCashDeptCode" : "string",
+  "BpcustCashDeptName" : "string",
+  "BpcustSalesDeptCode" : "string",
+  "BpcustSalesDeptName" : "string",
+  "BpcustDiscDeptCode" : "string",
+  "BpcustDiscDeptName" : "string",
+  "BpcustHldbkDeptCode" : "string",
+  "BpcustHldbkDeptName" : "string",
+  "BpcustArAccCode" : "string",
+  "BpcustArAccName" : "string",
+  "BpcustCashAccCode" : "string",
+  "BpcustCashAccName" : "string",
+  "BpcustSalesAccCode" : "string",
+  "BpcustSalesAccName" : "string",
+  "BpcustDiscAccCode" : "string",
+  "BpcustDiscAccName" : "string",
+  "BpcustHldbkAccCode" : "string",
+  "BpcustHldbkAccName" : "string",
+  "BpcustCreateUser" : "string",
+  "BpcustLastUpdateDate" : "YYYY-MM-dd",
+  "BpcustLastUpdateUser" : "string",
+  "BpcustTaxedCode" : "string",
+  "BpcustMiscDeptCode" : "string",
+  "BpcustMiscDeptName" : "string",
+  "BpcustMiscAccCode" : "string",
+  "BpcustMiscAccName" : "string",
+  "BpcustFrtDeptCode" : "string",
+  "BpcustFrtDeptName" : "string",
+  "BpcustFrtAccCode" : "string",
+  "BpcustFrtAccName" : "string",
+  "BpcustInsDeptCode" : "string",
+  "BpcustInsDeptName" : "string",
+  "BpcustInsAccCode" : "string",
+  "BpcustInsAccName" : "string",
+  "BpcustActiveFromDate" : "YYYY-MM-dd",
+  "BpcustActiveToDate" : "YYYY-MM-dd",
+  "BpcustLastInvDate" : "YYYY-MM-dd",
+  "BpcustDaysOutstInvPaidTtl" : 0,
+  "BpcustFullyPaidInvs" : 0,
+  "BpcustInvDeliq" : 0,
+  "BpcustAvgDaysToPayInv" : 0,
+  "BpcustWebSite" : "string",
+  "BpcustJbInvFormatCode" : "string",
+  "BpcustJbInvFormatName" : "string",
+  "BpcustJbInvGroupCode" : "string",
+  "BpcustJbBillTypeCode" : "string",
+  "BpcustJbBillTypeName" : "string",
+  "BpcustJbBillRateTableCode" : "string",
+  "BpcustJbBillRateTableName" : "string",
+  "BpcustJbMapCode" : "string",
+  "BpcustJbMapName" : "string",
+  "BpcustJbretrCode" : "string",
+  "BpcustJbretrName" : "string",
+  "BpcustSalesmanCode" : "string",
+  "BpcustBpccCode" : "string",
+  "BpcustDeliveryDiscPc" : 0,
+  "BpcustTruckerPayDiscPc" : 0,
+  "BpcustMsPropagateCompFlag" : "string",
+  "BpcustAllocApdiscJobFlag" : "string",
+  "BpcustArStatementEmailFlag" : "string",
+  "BpcustArStatementEmailAdd" : "string",
+  "BpcustIuCreateDate" : "YYYY-MM-dd",
+  "BpcustIuCreateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcustIuCreateUser" : "string",
+  "BpcustIuUpdateDate" : "YYYY-MM-dd",
+  "BpcustIuUpdateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcustIuUpdateUser" : "string",
+  "BpIuCreateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpIuUpdateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DiscriminatorCode" : "string",
+  "BpcustVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="8d39d7ba-e47c-4d85-85ce-29e4743e41eb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="07a05f2e-1c63-4453-998b-ed0067159d91" method="DELETE">
+    <con:description>Delete a Specific AR Customer</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="2d157cfb-d837-4aa0-93aa-523db0722f76" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="3e1e77e9-31de-4bc6-b45a-faad006a2359" method="PATCH">
+    <con:description>Update a specific AR Customer</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpcustCompCode" : "string",
+  "BpcustCompName" : "string",
+  "BpcustBpCode" : "string",
+  "BpcustBpName" : "string",
+  "BpcustBpCodeBf" : "string",
+  "BpcustBpNameBf" : "string",
+  "BpcustBillAdd1" : "string",
+  "BpcustBillAdd2" : "string",
+  "BpcustBillAdd3" : "string",
+  "BpcustBillRegionCode" : "string",
+  "BpcustBillRegionName" : "string",
+  "BpcustBillCountry" : "string",
+  "BpcustBillPostalCode" : "string",
+  "BpcustBillContactName" : "string",
+  "BpcustBillPhone" : "string",
+  "BpcustBillFax" : "string",
+  "BpcustBillEmail" : "string",
+  "BpcustCollCode" : "string",
+  "BpcustCollName" : "string",
+  "BpcustClassCode" : "string",
+  "BpcustClassName" : "string",
+  "BpcustTermCode" : "string",
+  "BpcustTermName" : "string",
+  "BpcustActiveFlag" : "string",
+  "BpcustShipAdd1" : "string",
+  "BpcustShipAdd2" : "string",
+  "BpcustShipAdd3" : "string",
+  "BpcustShipRegionCode" : "string",
+  "BpcustShipRegionName" : "string",
+  "BpcustShipCountry" : "string",
+  "BpcustShipPostalCode" : "string",
+  "BpcustShipContactName" : "string",
+  "BpcustShipPhone" : "string",
+  "BpcustShipFax" : "string",
+  "BpcustShipEmail" : "string",
+  "BpcustCurrCode" : "string",
+  "BpcustCurrName" : "string",
+  "BpcustCrLimitAmt" : 0,
+  "BpcustChargeCode" : "string",
+  "BpcustChargeName" : "string",
+  "BpcustBankCode" : "string",
+  "BpcustBankName" : "string",
+  "BpcustBankAccNum1" : "string",
+  "BpcustBankAccNum2" : "string",
+  "BpcustBankAccNum3" : "string",
+  "BpcustDiscPc" : 0,
+  "BpcustHldbkPc" : 0,
+  "BpcustTax1Code" : "string",
+  "BpcustTax1Name" : "string",
+  "BpcustTax2Code" : "string",
+  "BpcustTax2Name" : "string",
+  "BpcustTax3Code" : "string",
+  "BpcustTax3Name" : "string",
+  "BpcustStatementFlag" : "string",
+  "BpcustDunnFlag" : "string",
+  "BpcustTranAllowFlag" : "string",
+  "BpcustArDeptCode" : "string",
+  "BpcustArDeptName" : "string",
+  "BpcustCashDeptCode" : "string",
+  "BpcustCashDeptName" : "string",
+  "BpcustSalesDeptCode" : "string",
+  "BpcustSalesDeptName" : "string",
+  "BpcustDiscDeptCode" : "string",
+  "BpcustDiscDeptName" : "string",
+  "BpcustHldbkDeptCode" : "string",
+  "BpcustHldbkDeptName" : "string",
+  "BpcustArAccCode" : "string",
+  "BpcustArAccName" : "string",
+  "BpcustCashAccCode" : "string",
+  "BpcustCashAccName" : "string",
+  "BpcustSalesAccCode" : "string",
+  "BpcustSalesAccName" : "string",
+  "BpcustDiscAccCode" : "string",
+  "BpcustDiscAccName" : "string",
+  "BpcustHldbkAccCode" : "string",
+  "BpcustHldbkAccName" : "string",
+  "BpcustCreateUser" : "string",
+  "BpcustLastUpdateDate" : "YYYY-MM-dd",
+  "BpcustLastUpdateUser" : "string",
+  "BpcustTaxedCode" : "string",
+  "BpcustMiscDeptCode" : "string",
+  "BpcustMiscDeptName" : "string",
+  "BpcustMiscAccCode" : "string",
+  "BpcustMiscAccName" : "string",
+  "BpcustFrtDeptCode" : "string",
+  "BpcustFrtDeptName" : "string",
+  "BpcustFrtAccCode" : "string",
+  "BpcustFrtAccName" : "string",
+  "BpcustInsDeptCode" : "string",
+  "BpcustInsDeptName" : "string",
+  "BpcustInsAccCode" : "string",
+  "BpcustInsAccName" : "string",
+  "BpcustActiveFromDate" : "YYYY-MM-dd",
+  "BpcustActiveToDate" : "YYYY-MM-dd",
+  "BpcustLastInvDate" : "YYYY-MM-dd",
+  "BpcustDaysOutstInvPaidTtl" : 0,
+  "BpcustFullyPaidInvs" : 0,
+  "BpcustInvDeliq" : 0,
+  "BpcustAvgDaysToPayInv" : 0,
+  "BpcustWebSite" : "string",
+  "BpcustJbInvFormatCode" : "string",
+  "BpcustJbInvFormatName" : "string",
+  "BpcustJbInvGroupCode" : "string",
+  "BpcustJbBillTypeCode" : "string",
+  "BpcustJbBillTypeName" : "string",
+  "BpcustJbBillRateTableCode" : "string",
+  "BpcustJbBillRateTableName" : "string",
+  "BpcustJbMapCode" : "string",
+  "BpcustJbMapName" : "string",
+  "BpcustJbretrCode" : "string",
+  "BpcustJbretrName" : "string",
+  "BpcustSalesmanCode" : "string",
+  "BpcustBpccCode" : "string",
+  "BpcustDeliveryDiscPc" : 0,
+  "BpcustTruckerPayDiscPc" : 0,
+  "BpcustMsPropagateCompFlag" : "string",
+  "BpcustAllocApdiscJobFlag" : "string",
+  "BpcustArStatementEmailFlag" : "string",
+  "BpcustArStatementEmailAdd" : "string",
+  "BpcustIuCreateDate" : "YYYY-MM-dd",
+  "BpcustIuCreateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcustIuCreateUser" : "string",
+  "BpcustIuUpdateDate" : "YYYY-MM-dd",
+  "BpcustIuUpdateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcustIuUpdateUser" : "string",
+  "BpIuCreateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpIuUpdateDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DiscriminatorCode" : "string",
+  "BpcustVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BpcustBpCode":"string","BpcustCompCode":"string","BpcustBpCodeBf":"string","BpcustCollCode":"string","BpcustTermCode":"string","BpcustCurrCode":"string","BpcustChargeCode":"string","BpcustArDeptCode":"string","BpcustArAccCode":"string","BpcustCashDeptCode":"string","BpcustCashAccCode":"string","BpcustSalesDeptCode":"string","BpcustSalesAccCode":"string","BpcustDiscDeptCode":"string","BpcustDiscAccCode":"string","BpcustHldbkDeptCode":"string","BpcustHldbkAccCode":"string","BpcustFrtDeptCode":"string","BpcustFrtAccCode":"string","BpcustInsDeptCode":"string","BpcustInsAccCode":"string","BpcustMiscDeptCode":"string","BpcustMiscAccCode":"string","BpcustVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="16c2b52c-b716-4a21-adc3-34913b47f750" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpcustBpCode":"string","BpcustCompCode":"string","BpcustBpCodeBf":"string","BpcustCollCode":"string","BpcustTermCode":"string","BpcustCurrCode":"string","BpcustChargeCode":"string","BpcustArDeptCode":"string","BpcustArAccCode":"string","BpcustCashDeptCode":"string","BpcustCashAccCode":"string","BpcustSalesDeptCode":"string","BpcustSalesAccCode":"string","BpcustDiscDeptCode":"string","BpcustDiscAccCode":"string","BpcustHldbkDeptCode":"string","BpcustHldbkAccCode":"string","BpcustFrtDeptCode":"string","BpcustFrtAccCode":"string","BpcustInsDeptCode":"string","BpcustInsAccCode":"string","BpcustMiscDeptCode":"string","BpcustMiscAccCode":"string","BpcustVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

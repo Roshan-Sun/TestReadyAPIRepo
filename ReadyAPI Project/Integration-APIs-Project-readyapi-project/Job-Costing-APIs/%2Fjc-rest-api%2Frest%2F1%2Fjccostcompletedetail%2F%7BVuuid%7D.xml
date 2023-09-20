@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccostcompletedetail/{Vuuid}" path="/jc-rest-api/rest/1/jccostcompletedetail/{Vuuid}" id="c2a04b7b-3300-41ec-a528-a320691b38ad" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c2a04b7b-3300-41ec-a528-a320691b38adfileName">%2Fjc-rest-api%2Frest%2F1%2Fjccostcompletedetail%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="4d14dc09-8be1-480e-b513-0bc1da662453" method="GET">
+    <con:description>Retrieve a specific JC Cost Complete Detail</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FccdCompCode" : "string",
+  "FccdContCode" : "string",
+  "FccdYear" : "string",
+  "FccdPer" : "string",
+  "FccdBillCode" : "string",
+  "FccdJobCode" : "string",
+  "FccdPhsCode" : "string",
+  "FccdCatCode" : "string",
+  "FccdDesc" : "string",
+  "FccdWmCode" : "string",
+  "FccdUnitPrice" : 0,
+  "FccdUnit" : 0,
+  "FccdIuCreateDate" : "YYYY-MM-dd",
+  "FccdIuCreateUser" : "string",
+  "FccdIuUpdateDate" : "YYYY-MM-dd",
+  "FccdIuUpdateUser" : "string",
+  "FccdFromDate" : "YYYY-MM-dd",
+  "FccdToDate" : "YYYY-MM-dd",
+  "FccdFromDateDflt" : "string",
+  "FccdToDateDflt" : "string",
+  "FccdLastSessioninfo" : "string",
+  "FccdOrigSessioninfo" : "string",
+  "FccdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="3798d85d-e15a-4e14-b9ca-f0b093cca223" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="e5b73d0c-4f62-40ef-b191-8f7ee8da2b02" method="PATCH">
+    <con:description>Update a specific JC Cost Complete Detail</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FccdCompCode" : "string",
+  "FccdContCode" : "string",
+  "FccdYear" : "string",
+  "FccdPer" : "string",
+  "FccdBillCode" : "string",
+  "FccdJobCode" : "string",
+  "FccdPhsCode" : "string",
+  "FccdCatCode" : "string",
+  "FccdDesc" : "string",
+  "FccdWmCode" : "string",
+  "FccdUnitPrice" : 0,
+  "FccdUnit" : 0,
+  "FccdIuCreateDate" : "YYYY-MM-dd",
+  "FccdIuCreateUser" : "string",
+  "FccdIuUpdateDate" : "YYYY-MM-dd",
+  "FccdIuUpdateUser" : "string",
+  "FccdFromDate" : "YYYY-MM-dd",
+  "FccdToDate" : "YYYY-MM-dd",
+  "FccdFromDateDflt" : "string",
+  "FccdToDateDflt" : "string",
+  "FccdLastSessioninfo" : "string",
+  "FccdOrigSessioninfo" : "string",
+  "FccdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"FccdDesc":"test123"}</con:sampleContent>
+    </con:representation>
+    <con:request name="PATCH Example" id="f5395251-7201-41a9-b8c1-ac473b6c985f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"FccdDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pycomben/{Vuuid}" path="/hcm-rest-api/rest/1/pycomben/{Vuuid}" id="23cc46c6-b2a8-485b-b191-5a893401a00c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="23cc46c6-b2a8-485b-b191-5a893401a00cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpycomben%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0d9258bf-fc94-4f8e-b432-70cc9a174a34" method="GET">
+    <con:description>Retrieve a Specific Company Benefit</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CobEmpleContrAccCode" : "string",
+  "CobVendor" : "string",
+  "CobVenName" : "string",
+  "CobCompCode" : "string",
+  "CobPrnCode" : "string",
+  "CobPygCode" : "string",
+  "CobBenCode" : "string",
+  "CobBenName" : "string",
+  "CobStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobFrqCode" : 0,
+  "CobDrAccCode" : "string",
+  "CobDrAccName" : "string",
+  "CobEmplrContrDeptCode" : "string",
+  "CobEmplrContrDeptName" : "string",
+  "CobPlanCode" : "string",
+  "CobPlnName" : "string",
+  "CobPloCode" : "string",
+  "CobPloName" : "string",
+  "CobBenType" : "string",
+  "CobEmpleContrFactor" : "string",
+  "CobCrAccCode" : "string",
+  "CobCrAccName" : "string",
+  "CobElegFrqCode" : 0,
+  "CobElegBaseCode" : "string",
+  "CobBaseCode" : "string",
+  "CobBaseName" : "string",
+  "CobDeptCode" : "string",
+  "CobDeptName" : "string",
+  "CobPrintBenFlag" : "string",
+  "CobCalcAfterFirstChkFlag" : "string",
+  "CobComment" : "string",
+  "CobRemittanceAmtForAp" : "string",
+  "CobRemittanceFrqCode" : 0,
+  "CobBenSecureFlag" : "string",
+  "CobUser" : "string",
+  "CobCash" : "string",
+  "CobLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuCreateUser" : "string",
+  "CobIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuUpdateUser" : "string",
+  "CobVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="aeb2d227-65c0-4f38-95e5-46cb3a137112" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="e1076ec2-6e99-4308-9380-37c9038c24da" method="PATCH">
+    <con:description>Update a Specific PY Company Benefit</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CobEmpleContrAccCode" : "string",
+  "CobVendor" : "string",
+  "CobVenName" : "string",
+  "CobCompCode" : "string",
+  "CobPrnCode" : "string",
+  "CobPygCode" : "string",
+  "CobBenCode" : "string",
+  "CobBenName" : "string",
+  "CobStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobFrqCode" : 0,
+  "CobDrAccCode" : "string",
+  "CobDrAccName" : "string",
+  "CobEmplrContrDeptCode" : "string",
+  "CobEmplrContrDeptName" : "string",
+  "CobPlanCode" : "string",
+  "CobPlnName" : "string",
+  "CobPloCode" : "string",
+  "CobPloName" : "string",
+  "CobBenType" : "string",
+  "CobEmpleContrFactor" : "string",
+  "CobCrAccCode" : "string",
+  "CobCrAccName" : "string",
+  "CobElegFrqCode" : 0,
+  "CobElegBaseCode" : "string",
+  "CobBaseCode" : "string",
+  "CobBaseName" : "string",
+  "CobDeptCode" : "string",
+  "CobDeptName" : "string",
+  "CobPrintBenFlag" : "string",
+  "CobCalcAfterFirstChkFlag" : "string",
+  "CobComment" : "string",
+  "CobRemittanceAmtForAp" : "string",
+  "CobRemittanceFrqCode" : 0,
+  "CobBenSecureFlag" : "string",
+  "CobUser" : "string",
+  "CobCash" : "string",
+  "CobLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuCreateUser" : "string",
+  "CobIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CobIuUpdateUser" : "string",
+  "CobVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CobCompCode":"ZZ","CobPygCode":"MO","CobPrnCode":"WEEK","CobBenCode":"BENE","CobPlanCode":"SINGLE","CobPloCode":"T-FREE","CobStartDate":"2022-11-16","CobBenType":"D","CobDrAccCode":"1000.100","CobCrAccCode":"1000.600","CobFrqCode":1,"CobBenAmount":1,"CobRemittanceFrqCode":1}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="83c35f55-3d2a-4dd2-b3ca-15c10e2eb5b2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CobCompCode":"ZZ","CobPygCode":"MO","CobPrnCode":"WEEK","CobBenCode":"BENE","CobPlanCode":"SINGLE","CobPloCode":"T-FREE","CobStartDate":"2022-11-16","CobBenType":"D","CobDrAccCode":"1000.100","CobCrAccCode":"1000.600","CobFrqCode":1,"CobBenAmount":1,"CobRemittanceFrqCode":1}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="3faa5e38-1926-4457-aaa5-8d6bf3380272" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CobVendor":"ZZ-ACME"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

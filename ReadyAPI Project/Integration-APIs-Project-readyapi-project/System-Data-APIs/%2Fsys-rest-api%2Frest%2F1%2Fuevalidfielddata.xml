@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/uevalidfielddata" path="/sys-rest-api/rest/1/uevalidfielddata" id="c1671a59-f912-4d66-bff1-b5cc5012ed7e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c1671a59-f912-4d66-bff1-b5cc5012ed7efileName">%2Fsys-rest-api%2Frest%2F1%2Fuevalidfielddata</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="70db3bf7-f307-4f1d-b01f-eb9b9cd27815" method="GET">
+    <con:description>Retrieve Valid Field Data List</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByFieldCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fieldCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Field Code (selectByFieldCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UevfdFieldCode" : "string",
+  "UevfdDisplayOrder" : "string",
+  "UevfdDataValue" : "string",
+  "UevfdDataValueDesc" : "string",
+  "UevfdIuCreateDate" : "YYYY-MM-dd",
+  "UevfdIuCreateUser" : "string",
+  "UevfdIuUpdateDate" : "YYYY-MM-dd",
+  "UevfdIuUpdateUser" : "string",
+  "UevfdVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="a8486535-272e-4eec-bf9a-97f1076bd6c3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="fe2c6b54-6328-4ba9-8fd8-a77790e0c427" method="POST">
+    <con:description>Create Valid Field Data</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "UevfdFieldCode" : "string",
+  "UevfdDisplayOrder" : "string",
+  "UevfdDataValue" : "string",
+  "UevfdDataValueDesc" : "string",
+  "UevfdIuCreateDate" : "YYYY-MM-dd",
+  "UevfdIuCreateUser" : "string",
+  "UevfdIuUpdateDate" : "YYYY-MM-dd",
+  "UevfdIuUpdateUser" : "string",
+  "UevfdVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"UevfdDataValue":"string","UevfdDisplayOrder":"string","UevfdFieldCode":"string","UevfdDataValueDesc":"string","UevfdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="e584363e-44e2-41b6-b182-c70aa691714e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"UevfdDataValue":"string","UevfdDisplayOrder":"string","UevfdFieldCode":"string","UevfdDataValueDesc":"string","UevfdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

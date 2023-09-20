@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apinsurance" path="/ap-rest-api/rest/1/apinsurance" id="e399097b-7072-44a6-95a8-18345b5d8379" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e399097b-7072-44a6-95a8-18345b5d8379fileName">%2Fap-rest-api%2Frest%2F1%2Fapinsurance</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-ap-insurances" id="ddf5ca19-3cb0-46ae-8c19-1a5a353d8078" method="GET">
+    <con:description>All AP Insurances or specific ones via finder - complTypeIN accepts multiple values separated by commas</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectInsurance</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectInsurance)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (selectInsurance)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>vendorCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor code (selectInsurance)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>complType</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Compliance Type -- > Code value for specific type of compliance (selectInsurance)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>complTypeIN</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Compliance Type -- > Code value for specific type of compliance; multiple types separated by a comma "," (selectInsurance)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InsComplType" : "string",
+  "InsVouNum" : 0,
+  "InsVenCode" : "string",
+  "InsCoverTypeCode" : "string",
+  "InsCoverTypeDesc" : "string",
+  "InsInscompCode" : "string",
+  "InsInscompName" : "string",
+  "InsVouRemitDesc" : "string",
+  "InsCertNum" : "string",
+  "InsCertLoc" : "string",
+  "InsCompCode" : "string",
+  "InsScContCode" : "string",
+  "InsScJobCode" : "string",
+  "InsPoNum" : "string",
+  "InsPoReleaseNum" : 0,
+  "InsStartDate" : "YYYY-MM-dd",
+  "InsEndDate" : "YYYY-MM-dd",
+  "InsAmt" : 0,
+  "InsComplianceFlag" : "string",
+  "InsDateComplianceFlag" : "string",
+  "InsScAutoAssignFlag" : "string",
+  "InsPoAutoAssignFlag" : "string",
+  "InsNotesFlag" : "string",
+  "InsUpdateUser" : "string",
+  "InsUpdateDate" : "YYYY-MM-dd",
+  "InsUpdateFlag" : "string",
+  "InsDeleteFlag" : "string",
+  "InsDateSensitiveFlag" : "string",
+  "InsCScAutoAssignFlag" : "string",
+  "InsCPoAutoAssignFlag" : "string",
+  "OrigInscompCode" : "string",
+  "OrigCertNum" : "string",
+  "DiscriminatorCode" : "string",
+  "InsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="483935b6-9ebd-4fee-acee-156a1f37269e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="create-a-ap-insurance" id="86eb873e-0090-4785-8534-b80fbb7d4826" method="POST">
+    <con:description>Create a AP Insurance</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InsComplType" : "string",
+  "InsVouNum" : 0,
+  "InsVenCode" : "string",
+  "InsCoverTypeCode" : "string",
+  "InsCoverTypeDesc" : "string",
+  "InsInscompCode" : "string",
+  "InsInscompName" : "string",
+  "InsVouRemitDesc" : "string",
+  "InsCertNum" : "string",
+  "InsCertLoc" : "string",
+  "InsCompCode" : "string",
+  "InsScContCode" : "string",
+  "InsScJobCode" : "string",
+  "InsPoNum" : "string",
+  "InsPoReleaseNum" : 0,
+  "InsStartDate" : "YYYY-MM-dd",
+  "InsEndDate" : "YYYY-MM-dd",
+  "InsAmt" : 0,
+  "InsComplianceFlag" : "string",
+  "InsDateComplianceFlag" : "string",
+  "InsScAutoAssignFlag" : "string",
+  "InsPoAutoAssignFlag" : "string",
+  "InsNotesFlag" : "string",
+  "InsUpdateUser" : "string",
+  "InsUpdateDate" : "YYYY-MM-dd",
+  "InsUpdateFlag" : "string",
+  "InsDeleteFlag" : "string",
+  "InsDateSensitiveFlag" : "string",
+  "InsCScAutoAssignFlag" : "string",
+  "InsCPoAutoAssignFlag" : "string",
+  "OrigInscompCode" : "string",
+  "OrigCertNum" : "string",
+  "DiscriminatorCode" : "string",
+  "InsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"InsComplType":"string","InsCompCode":"CMICINC","InsInscompCode":"string","InsVenCode":"string","InsCoverTypeCode":"string","InsVouNum":"integer","InsCertNum":"string","InsAmt":1.01,"InsVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="f6e64207-d223-484a-87a8-551040ff4414" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"InsComplType":"string","InsCompCode":"CMICINC","InsInscompCode":"string","InsVenCode":"string","InsCoverTypeCode":"string","InsVouNum":"integer","InsCertNum":"string","InsAmt":1.01,"InsVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmtype/{Vuuid}" path="/cm-rest-api/rest/1/cmtype/{Vuuid}" id="1660b179-c5d2-4b51-bbea-bb66ed0639bc" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1660b179-c5d2-4b51-bbea-bb66ed0639bcfileName">%2Fcm-rest-api%2Frest%2F1%2Fcmtype%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d9e7ed6f-0081-44a1-b317-5b8b7c4feb44" method="GET">
+    <con:description>Retrieve a Specific PCI Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmtCompCode" : "string",
+  "CmtTypeCode" : "string",
+  "CmtName" : "string",
+  "CmtClassCode" : "string",
+  "CmtChgOrdNumberMask" : "string",
+  "CmtPciMaskOverrideFlag" : "string",
+  "CmtIuCreateDate" : "YYYY-MM-dd",
+  "CmtIuCreateUser" : "string",
+  "CmtIuUpdateDate" : "YYYY-MM-dd",
+  "CmtIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmtVUuid" : "string",
+  "CmtNotAllowBillAmtFlag" : "string",
+  "CmtAllowCostsFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="844221de-0e8d-4419-bd53-6fd58ef33678" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="3d24bb8c-8c4b-422c-8ff1-758a8e6bd8a7" method="DELETE">
+    <con:description>Delete a Specific PCI Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="9aa53e36-15ec-45b5-aab1-187406bc206e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="2aea4607-9d0a-49bd-87d8-815674ca7ece" method="PATCH">
+    <con:description>Update a Specific PCI Type</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmtCompCode" : "string",
+  "CmtTypeCode" : "string",
+  "CmtName" : "string",
+  "CmtClassCode" : "string",
+  "CmtChgOrdNumberMask" : "string",
+  "CmtPciMaskOverrideFlag" : "string",
+  "CmtIuCreateDate" : "YYYY-MM-dd",
+  "CmtIuCreateUser" : "string",
+  "CmtIuUpdateDate" : "YYYY-MM-dd",
+  "CmtIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmtVUuid" : "string",
+  "CmtNotAllowBillAmtFlag" : "string",
+  "CmtAllowCostsFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmtCompCode":"string","CmtTypeCode":"string","CmtName":"string","CmtClassCode":"string","CmtChgOrdNumberMask":"string","CmtAllowCostsFlag":"string","CmtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="cfe5b285-109a-4e42-b9c0-4cac2b7d4d11" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmtCompCode":"string","CmtTypeCode":"string","CmtName":"string","CmtClassCode":"string","CmtChgOrdNumberMask":"string","CmtAllowCostsFlag":"string","CmtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="cec36b13-f139-4fbb-a566-9c733a569787" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmtName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

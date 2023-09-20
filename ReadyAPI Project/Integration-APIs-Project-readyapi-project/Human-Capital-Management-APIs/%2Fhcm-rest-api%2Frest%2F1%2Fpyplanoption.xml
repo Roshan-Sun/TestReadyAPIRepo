@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyplanoption" path="/hcm-rest-api/rest/1/pyplanoption" id="45d5710c-7300-4eb0-8e45-374c9f016a9b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="45d5710c-7300-4eb0-8e45-374c9f016a9bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyplanoption</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="96b171a2-e60a-40ee-bb52-9fc88228e2ec" method="GET">
+    <con:description>Retrieve PY Plan Options</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate or findByPlan</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for (findByDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>planCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Plan Code (findByPlan)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PloPlnCode" : "string",
+  "PloCode" : "string",
+  "PloDescription" : "string",
+  "PloShortDesc" : "string",
+  "PloUser" : "string",
+  "PloDepCovLevel" : 0,
+  "PloMaxAgeInSchool" : 0,
+  "PloMaxAgeNotInSchool" : 0,
+  "PloLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PloIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PloIuCreateUser" : "string",
+  "PloIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PloIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="567661b2-a5ed-4a31-861b-6e47ffdab213" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

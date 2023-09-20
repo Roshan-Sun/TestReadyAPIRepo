@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeetingtrack" path="/pm-rest-api/rest/1/pmmeetingtrack" id="a6205797-2c71-4f85-89b9-143fab01766a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a6205797-2c71-4f85-89b9-143fab01766afileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingtrack</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2ede46e2-2857-40cc-9f00-9d1a671ae1da" method="GET">
+    <con:description>Retrieve PM Meeting Tracks</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectMeetingTrack</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectMeetingTrack)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectMeetingTrack)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmtCompCode" : "string",
+  "PmmtProjCode" : "string",
+  "PmmtProjName" : "string",
+  "PmmtTrackCode" : "string",
+  "PmmtTrackName" : "string",
+  "PmmtItemIdMask" : "string",
+  "PmmtMeetingIdMask" : "string",
+  "PmmtFrequency" : "string",
+  "PmmtMinutesFootnote" : "string",
+  "PmmtNumberingFlag" : "string",
+  "PmmtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="aeecc667-9b21-4d11-9564-567d20d01d61" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="13bfd0c4-443d-482b-a1ba-8052a718e7b7" method="POST">
+    <con:description>Create a PM Meeting Track</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmtCompCode" : "string",
+  "PmmtProjCode" : "string",
+  "PmmtProjName" : "string",
+  "PmmtTrackCode" : "string",
+  "PmmtTrackName" : "string",
+  "PmmtItemIdMask" : "string",
+  "PmmtMeetingIdMask" : "string",
+  "PmmtFrequency" : "string",
+  "PmmtMinutesFootnote" : "string",
+  "PmmtNumberingFlag" : "string",
+  "PmmtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmtCompCode":"string","PmmtProjCode":"string","PmmtTrackCode":"string","PmmtTrackName":"string","PmmtVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="51b43dc0-816c-4330-a2f4-07bfbcbcaee7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmtCompCode":"string","PmmtProjCode":"string","PmmtTrackCode":"string","PmmtTrackName":"string","PmmtVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="8b44892f-b238-4b78-b1fa-60630806cd11" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmtMinutesFootnote":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

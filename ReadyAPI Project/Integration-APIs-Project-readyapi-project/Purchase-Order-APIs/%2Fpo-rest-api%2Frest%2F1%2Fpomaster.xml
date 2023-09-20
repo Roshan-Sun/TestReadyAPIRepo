@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/po-rest-api/rest/1/pomaster" path="/po-rest-api/rest/1/pomaster" id="893889e7-72f8-482e-a659-a8b283bf30b8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="893889e7-72f8-482e-a659-a8b283bf30b8fileName">%2Fpo-rest-api%2Frest%2F1%2Fpomaster</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e70242ed-8a3b-4e50-ba1d-8c2c7042e065" method="GET">
+    <con:description>Retrieve PO Masters (Headers)</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode, selectByCompanyStatus or selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByCode and selectByCompanyStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>masterNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PO Header Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>releaseNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PO Release Number (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>statusCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PO Status code (selectByCompanyStatus)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit date to search for in create/update dates (selectByCompanyStatus and selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PomstCompCode" : "string",
+  "PomstCompName" : "string",
+  "PomstNum" : "string",
+  "PomstBchNum" : 0,
+  "PomstVenCode" : "string",
+  "PomstVenName" : "string",
+  "PomstDeptCode" : "string",
+  "PomstExptdDate" : "YYYY-MM-dd",
+  "PomstOrdDate" : "YYYY-MM-dd",
+  "PomstRecDate" : "YYYY-MM-dd",
+  "PomstTypeCode" : "string",
+  "PomstAdjCode" : "string",
+  "PomstStatCode" : "string",
+  "PomstChgCode" : "string",
+  "PomstTermCode" : "string",
+  "PomstTermName" : "string",
+  "PomstTermDueDay" : 0,
+  "PomstTermDiscDay" : 0,
+  "PomstTermDiscPc" : 0,
+  "PomstInvCode" : "string",
+  "PomstInvDate" : "YYYY-MM-dd",
+  "PomstInvDueDate" : "YYYY-MM-dd",
+  "PomstInvDiscDate" : "YYYY-MM-dd",
+  "PomstInvDiscAmt" : 0,
+  "PomstCurrCode" : "string",
+  "PomstFobCode" : "string",
+  "PomstFobName" : "string",
+  "PomstBuyCode" : "string",
+  "PomstBuyName" : "string",
+  "PomstAddCode" : "string",
+  "PomstAddName" : "string",
+  "PomstShplneCode" : "string",
+  "PomstShplneName" : "string",
+  "PomstShpmetCode" : "string",
+  "PomstShpmetName" : "string",
+  "PomstTxt1Code" : "string",
+  "PomstTxt2Code" : "string",
+  "PomstShpinstDesc" : "string",
+  "PomstDesc1" : "string",
+  "PomstDesc2" : "string",
+  "PomstAdjPrice" : 0,
+  "PomstUnadjPrice" : 0,
+  "PomstCurrConvNum" : 0,
+  "PomstCostedCode" : "string",
+  "PomstRefNum" : "string",
+  "PomstRefDate" : "YYYY-MM-dd",
+  "PomstReqCode" : "string",
+  "PomstReqName" : "string",
+  "PomstRecCode" : "string",
+  "PomstReprintDate" : "YYYY-MM-dd",
+  "PomstWipAccCode" : "string",
+  "PomstWipDeptCode" : "string",
+  "PomstShipinstTxt1Code" : "string",
+  "PomstShipinstTxt2Code" : "string",
+  "PomstShipinstTxt3Code" : "string",
+  "PomstShipinstTxt4Code" : "string",
+  "PomstShipinstTxt5Code" : "string",
+  "PomstReleaseNum" : 0,
+  "PomstBilltoAddCode" : "string",
+  "PomstBilltoAddName" : "string",
+  "PomstReqReason" : "string",
+  "PomstInvTypeCode" : "string",
+  "PomstImageFilename" : "string",
+  "PomstInvSerCode" : "string",
+  "PomstVendOrderAddCode" : "string",
+  "PomstComplianceFlag" : "string",
+  "PomstActionCode" : "string",
+  "PomstPrintStatus" : "string",
+  "PomstJobCompCode" : "string",
+  "PomstJobCode" : "string",
+  "PomstContactCode" : "string",
+  "PomstContactName" : "string",
+  "PomstOrigBidpAmt" : 0,
+  "PomstHoldPaymentFlag" : "string",
+  "PomstHoldPaymentDays" : 0,
+  "PomstAddCompCode" : "string",
+  "PomstAddCompName" : "string",
+  "PomstSuspDeptCode" : "string",
+  "PomstSuspDeptName" : "string",
+  "PomstIuCreateDate" : "YYYY-MM-dd",
+  "PomstIuCreateUser" : "string",
+  "PomstIuUpdateDate" : "YYYY-MM-dd",
+  "PomstIuUpdateUser" : "string",
+  "PomstPorgrCode" : "string",
+  "PomstWkfPriorityCode" : "string",
+  "PomstDefaultRecCode" : "string",
+  "PomstRoutCompCode" : "string",
+  "PomstRoutJobCode" : "string",
+  "PomstDistTypeCode" : "string",
+  "PomstUserField1" : "string",
+  "PomstUserField2" : "string",
+  "PomstUserField3" : "string",
+  "PomstSelectFlag" : "string",
+  "PomstReqNum" : "string",
+  "DiscriminatorCode" : "string",
+  "PomstManPoRecFlag" : "string",
+  "PomstAcctDescription" : "string",
+  "PomstPoAmount" : 0,
+  "PomstStateDesc" : "string",
+  "PomstVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="2156ceb0-8bda-45e8-8126-b1ae5da6373d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="c5bc7729-3b40-48b7-a953-75acf7b1a4f3" method="POST">
+    <con:description>Create PO Header</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PomstCompCode" : "string",
+  "PomstCompName" : "string",
+  "PomstNum" : "string",
+  "PomstBchNum" : 0,
+  "PomstVenCode" : "string",
+  "PomstVenName" : "string",
+  "PomstDeptCode" : "string",
+  "PomstExptdDate" : "YYYY-MM-dd",
+  "PomstOrdDate" : "YYYY-MM-dd",
+  "PomstRecDate" : "YYYY-MM-dd",
+  "PomstTypeCode" : "string",
+  "PomstAdjCode" : "string",
+  "PomstStatCode" : "string",
+  "PomstChgCode" : "string",
+  "PomstTermCode" : "string",
+  "PomstTermName" : "string",
+  "PomstTermDueDay" : 0,
+  "PomstTermDiscDay" : 0,
+  "PomstTermDiscPc" : 0,
+  "PomstInvCode" : "string",
+  "PomstInvDate" : "YYYY-MM-dd",
+  "PomstInvDueDate" : "YYYY-MM-dd",
+  "PomstInvDiscDate" : "YYYY-MM-dd",
+  "PomstInvDiscAmt" : 0,
+  "PomstCurrCode" : "string",
+  "PomstFobCode" : "string",
+  "PomstFobName" : "string",
+  "PomstBuyCode" : "string",
+  "PomstBuyName" : "string",
+  "PomstAddCode" : "string",
+  "PomstAddName" : "string",
+  "PomstShplneCode" : "string",
+  "PomstShplneName" : "string",
+  "PomstShpmetCode" : "string",
+  "PomstShpmetName" : "string",
+  "PomstTxt1Code" : "string",
+  "PomstTxt2Code" : "string",
+  "PomstShpinstDesc" : "string",
+  "PomstDesc1" : "string",
+  "PomstDesc2" : "string",
+  "PomstAdjPrice" : 0,
+  "PomstUnadjPrice" : 0,
+  "PomstCurrConvNum" : 0,
+  "PomstCostedCode" : "string",
+  "PomstRefNum" : "string",
+  "PomstRefDate" : "YYYY-MM-dd",
+  "PomstReqCode" : "string",
+  "PomstReqName" : "string",
+  "PomstRecCode" : "string",
+  "PomstReprintDate" : "YYYY-MM-dd",
+  "PomstWipAccCode" : "string",
+  "PomstWipDeptCode" : "string",
+  "PomstShipinstTxt1Code" : "string",
+  "PomstShipinstTxt2Code" : "string",
+  "PomstShipinstTxt3Code" : "string",
+  "PomstShipinstTxt4Code" : "string",
+  "PomstShipinstTxt5Code" : "string",
+  "PomstReleaseNum" : 0,
+  "PomstBilltoAddCode" : "string",
+  "PomstBilltoAddName" : "string",
+  "PomstReqReason" : "string",
+  "PomstInvTypeCode" : "string",
+  "PomstImageFilename" : "string",
+  "PomstInvSerCode" : "string",
+  "PomstVendOrderAddCode" : "string",
+  "PomstComplianceFlag" : "string",
+  "PomstActionCode" : "string",
+  "PomstPrintStatus" : "string",
+  "PomstJobCompCode" : "string",
+  "PomstJobCode" : "string",
+  "PomstContactCode" : "string",
+  "PomstContactName" : "string",
+  "PomstOrigBidpAmt" : 0,
+  "PomstHoldPaymentFlag" : "string",
+  "PomstHoldPaymentDays" : 0,
+  "PomstAddCompCode" : "string",
+  "PomstAddCompName" : "string",
+  "PomstSuspDeptCode" : "string",
+  "PomstSuspDeptName" : "string",
+  "PomstIuCreateDate" : "YYYY-MM-dd",
+  "PomstIuCreateUser" : "string",
+  "PomstIuUpdateDate" : "YYYY-MM-dd",
+  "PomstIuUpdateUser" : "string",
+  "PomstPorgrCode" : "string",
+  "PomstWkfPriorityCode" : "string",
+  "PomstDefaultRecCode" : "string",
+  "PomstRoutCompCode" : "string",
+  "PomstRoutJobCode" : "string",
+  "PomstDistTypeCode" : "string",
+  "PomstUserField1" : "string",
+  "PomstUserField2" : "string",
+  "PomstUserField3" : "string",
+  "PomstSelectFlag" : "string",
+  "PomstReqNum" : "string",
+  "DiscriminatorCode" : "string",
+  "PomstManPoRecFlag" : "string",
+  "PomstAcctDescription" : "string",
+  "PomstPoAmount" : 0,
+  "PomstStateDesc" : "string",
+  "PomstVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PomstBuyCode":"string","PomstReqCode":"string","PomstVenCode":"string","PomstCompCode":"string","PomstCurrCode":"string","PomstDistTypeCode":"string","PomstJobCompCode":"string","PomstUserField1":"string","PomstUserField2":"string","PomstNum":"string","PomstReqNum":"string","PomstOrdDate":"string","PomstExptdDate":"string","PomstPoAmount":"float","PomstStatCode":"string","PomstTermCode":"string","PomstTermDiscDay":"integer","PomstTermDiscPc":"float","PomstTermDueDay":"integer","PomstTypeCode":"string"}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/pomaster","operation":"create","payload":{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS9109351","PomstReqNum":"RS9109351","PomstOrdDate":"2022-11-09","PomstExptdDate":"2022-11-10","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosLineNum":1,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 410","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"},{"PosLineNum":2,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 431","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":5,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}},{"id":"part2","path":"/1/pomaster","operation":"create","payload":{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS9109352","PomstReqNum":"RS9109352","PomstOrdDate":"2022-11-09","PomstExptdDate":"2022-11-10","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosLineNum":1,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 410","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"},{"PosLineNum":2,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 431","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":5,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Single POST Example" id="475b9321-0129-4ed7-b51b-d5a331dcc460" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PomstBuyCode":"string","PomstReqCode":"string","PomstVenCode":"string","PomstCompCode":"string","PomstCurrCode":"string","PomstDistTypeCode":"string","PomstJobCompCode":"string","PomstUserField1":"string","PomstUserField2":"string","PomstNum":"string","PomstReqNum":"string","PomstOrdDate":"string","PomstExptdDate":"string","PomstPoAmount":"float","PomstStatCode":"string","PomstTermCode":"string","PomstTermDiscDay":"integer","PomstTermDiscPc":"float","PomstTermDueDay":"integer","PomstTypeCode":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Header with Details Example" id="2cb63289-a378-48de-9ddf-373c037cdacd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS9109350","PomstReqNum":"RS9109350","PomstOrdDate":"2022-11-08","PomstExptdDate":"2022-11-09","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 420","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Header with Multiple Details Example" id="a85e6e9d-a0b8-442e-97c6-ce25f9d5edf7" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS910927","PomstReqNum":"RS910927","PomstOrdDate":"2022-11-09","PomstExptdDate":"2022-11-10","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosLineNum":1,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 410","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"},{"PosLineNum":2,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 431","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":5,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="17f854fa-3b8e-4792-aa17-a8e94431519f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PomstDesc1":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multiple Headers with Details Example" id="eb113411-176c-4f1d-92b2-f3aee3f08e37" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/pomaster","operation":"create","payload":{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS9109351","PomstReqNum":"RS9109351","PomstOrdDate":"2022-11-09","PomstExptdDate":"2022-11-10","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosLineNum":1,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 410","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"},{"PosLineNum":2,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 431","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":5,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}},{"id":"part2","path":"/1/pomaster","operation":"create","payload":{"PomstBuyCode":"DA","PomstReqCode":"DA","PomstVenCode":"ZZ-ACME","PomstCompCode":"ZZ","PomstCurrCode":"CA","PomstDistTypeCode":"G","PomstJobCompCode":"ZZ","PomstUserField1":"00","PomstUserField2":"1000.100","PomstNum":"RS9109352","PomstReqNum":"RS9109352","PomstOrdDate":"2022-11-09","PomstExptdDate":"2022-11-10","PomstPoAmount":100,"PomstStatCode":"O","PomstTermCode":"NET30","PomstTermDiscDay":0,"PomstTermDiscPc":0,"PomstTermDueDay":30,"PomstTypeCode":"S","PomstSelectFlag":"Y","PomstPostDate":"2022-11-09","PoDetailViewObj":[{"PosLineNum":1,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 410","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":1,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"},{"PosLineNum":2,"PosCalledFromAppCode":"PO","PosPoItemType":"I","PosCompCode":"ZZ","PosReleaseNum":1,"PosUserTypeCode":"G","PosUserField1":"ZZ","PosUserField2":"00","PosUserField3":"1000.100","PosItmCode":"1104","PosItemLocCode":"TORONTO","PosCiitemtypCode":"1","PosWmCode":"$","PosDesc":"swag master 431","PosExptdPriceAmt":5,"PosExtdAmt":3,"PosOrdQty":5,"PosRecIntoInvFlag":"N","PosTacSetupFlag":"N","PosWbsSetupFlag":"N"}]}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

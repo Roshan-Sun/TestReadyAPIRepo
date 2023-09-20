@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" path="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" id="1d4f5ef3-5ed2-40be-b7ae-37205ff6aa12" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1d4f5ef3-5ed2-40be-b7ae-37205ff6aa12fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemptimesheet%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="779f2c56-4ad5-4c7f-943e-d81b5bf7773e" method="GET">
+    <con:description>Retrieve a specific PY Employee Timesheet</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshDocumentNo" : "string",
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshCompCode" : "string",
+  "TshJobdeptwoId" : "string",
+  "TshPhsacctwiId" : "string",
+  "TshCatexpId" : "string",
+  "TshTypeCode" : "string",
+  "TshNormalHours" : 0,
+  "TshOtHours" : 0,
+  "TshDotHours" : 0,
+  "TshOtherHours" : 0,
+  "TshOhType" : "string",
+  "TshWcbCode" : "string",
+  "TshPrnCode" : "string",
+  "TshPprYear" : 0,
+  "TshPprPeriod" : 0,
+  "TshSeqNo" : 0,
+  "TshVUuid" : "string",
+  "TshExpCode" : "string",
+  "TshScheduleCode" : "string",
+  "TshSectorCode" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshUserField1" : "string",
+  "TshUserField2" : "string",
+  "TshUserField3" : "string",
+  "TshBatchPostFlag" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f9a547a0-f502-4c44-9c79-6ae0bc1389b1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="57ab68e0-fcd2-4696-a541-98264c28d09f" method="PATCH">
+    <con:description>Update a specific PY Employee Timesheet</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TshEmpNo" : "string",
+  "TshDocumentNo" : "string",
+  "TshDate" : "YYYY-MM-dd",
+  "TshWorkCompCode" : "string",
+  "TshCompCode" : "string",
+  "TshJobdeptwoId" : "string",
+  "TshPhsacctwiId" : "string",
+  "TshCatexpId" : "string",
+  "TshTypeCode" : "string",
+  "TshNormalHours" : 0,
+  "TshOtHours" : 0,
+  "TshDotHours" : 0,
+  "TshOtherHours" : 0,
+  "TshOhType" : "string",
+  "TshWcbCode" : "string",
+  "TshPrnCode" : "string",
+  "TshPprYear" : 0,
+  "TshPprPeriod" : 0,
+  "TshSeqNo" : 0,
+  "TshVUuid" : "string",
+  "TshExpCode" : "string",
+  "TshScheduleCode" : "string",
+  "TshSectorCode" : "string",
+  "TshTradeCode" : "string",
+  "TshUnionCode" : "string",
+  "TshUserField1" : "string",
+  "TshUserField2" : "string",
+  "TshUserField3" : "string",
+  "TshBatchPostFlag" : "string",
+  "TshWbsvCode1" : "string",
+  "TshWbsvCode2" : "string",
+  "TshWbsvCode3" : "string",
+  "TshWbsvCode4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TshCompCode":"string","TshEmpNo":"string","TshPrnCode":"string","TshPprYear":"integer","TshPprPeriod":"integer","TshDate":"string","TshTypeCode":"string","TshJobdeptwoId":"string","TshPhsacctwiId":"string","TshCatexpId":"string","TshNormalHours":"integer","TshVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-23","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":3,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB82","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}},{"id":"part2","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-24","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":4,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB83","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example (J-Type)" id="6f012af4-f66d-401b-88a8-62a65a9fa654" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshCompCode":"string","TshEmpNo":"string","TshPrnCode":"string","TshPprYear":"integer","TshPprPeriod":"integer","TshDate":"string","TshTypeCode":"string","TshJobdeptwoId":"string","TshPhsacctwiId":"string","TshCatexpId":"string","TshNormalHours":"integer","TshVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="2717035b-35bd-47b2-bcc6-4ec47893caa8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TshDocumentNo":"TEST123"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Batch POST Example" id="f545d4a3-021a-41a7-a353-09c90b04b141" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-23","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":3,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB82","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}},{"id":"part2","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-24","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":4,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB83","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

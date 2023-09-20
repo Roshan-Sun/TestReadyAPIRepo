@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/issuestatus" path="/sys-rest-api/rest/1/issuestatus" id="58a71130-dcc7-4e19-a1fd-28f9f0c52317" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="58a71130-dcc7-4e19-a1fd-28f9f0c52317fileName">%2Fsys-rest-api%2Frest%2F1%2Fissuestatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+</con:resource>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmprojcontact" path="/pm-rest-api/rest/1/pmprojcontact" id="e201f768-3009-4368-bfe3-59c7fd2b5571" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e201f768-3009-4368-bfe3-59c7fd2b5571fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojcontact</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="4a849bd4-cb32-4998-9151-6153516e8267" method="GET">
+    <con:description>Retrieve PM Project Contacts</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectContact or selectProjContacts</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectContact and selectProjContacts)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectContact and selectProjContacts)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>contactCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contact Code (selectContact)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ContCompCode" : "string",
+  "ContProjCode" : "string",
+  "ContPartnCode" : "string",
+  "ContPartnType" : "string",
+  "ContCode" : "string",
+  "ContLastName" : "string",
+  "ContFirstName" : "string",
+  "ContMiddleName" : "string",
+  "ContTitle" : "string",
+  "ContDescription" : "string",
+  "ContAddStreet" : "string",
+  "ContAddSuite" : "string",
+  "ContAddCity" : "string",
+  "ContAddState" : "string",
+  "ContAddCountry" : "string",
+  "ContAddPostalCode" : "string",
+  "ContPhoneNum" : "string",
+  "ContEmail" : "string",
+  "ContFaxNum" : "string",
+  "ContPagerNum" : "string",
+  "ContMobileNum" : "string",
+  "ContPrefContactMth" : "string",
+  "ContContactActiveFlag" : "string",
+  "ContCollabUserFlag" : "string",
+  "ContProjContactId" : "string",
+  "ContProjContactOnlyFlag" : "string",
+  "ContRtiType" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4417d991-31f1-4151-9184-982dc3bade31" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

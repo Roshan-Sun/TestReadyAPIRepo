@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glbudget" path="/glrestapi/rest/v1/glbudget" id="5c42959a-e9d9-4a40-b798-64dd864c2763" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5c42959a-e9d9-4a40-b798-64dd864c2763fileName">%2Fglrestapi%2Frest%2Fv1%2Fglbudget</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f5c34929-7f01-4439-a6b1-0b95e6cdb07b" method="GET">
+    <con:description>Retrieve GL budgets</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByglbudFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectByglbudFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AccCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Account Code (selectByglbudFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BudgetYr</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Budget Year (selectByglbudFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BudPk" : "string",
+  "BudCompCode" : "string",
+  "BudDeptCode" : "string",
+  "BudDeptName" : "string",
+  "BudAccCode" : "string",
+  "BudAccName" : "string",
+  "BudYr" : 0,
+  "BudTypeCode" : "string",
+  "BudNewRecFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6f731648-62e6-4429-b504-da94531d14d9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

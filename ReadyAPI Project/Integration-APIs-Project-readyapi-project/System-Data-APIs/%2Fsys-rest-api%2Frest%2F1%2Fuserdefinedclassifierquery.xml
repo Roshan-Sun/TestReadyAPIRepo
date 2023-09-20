@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/userdefinedclassifierquery" path="/sys-rest-api/rest/1/userdefinedclassifierquery" id="b2d57c6a-591c-4990-90d1-23b4f4ef4d88" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b2d57c6a-591c-4990-90d1-23b4f4ef4d88fileName">%2Fsys-rest-api%2Frest%2F1%2Fuserdefinedclassifierquery</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="325ae7af-9096-44e2-a47a-1a75e1776150" method="GET">
+    <con:description>Retrieve User Defined Classifier Query</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UDCQueryFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ObjectTypeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Object Type being queried for (UDCQueryFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>UdfCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UDF Code (UDCQueryFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ActualValueVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Actual Value being queried (UDCQueryFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CreateDateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Creation date of Classifier (UDCQueryFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "OmcvUdfCode" : "string",
+  "OmcvObjectType" : "string",
+  "OmcvActualValue" : "string",
+  "OmcvIuCreateDate" : "YYYY-MM-dd",
+  "OmcvIuUpdateDate" : "YYYY-MM-dd",
+  "OmcvObjectKey1" : "string",
+  "OmcvObjectKey2" : "string",
+  "OmcvObjectKey3" : "string",
+  "OmcvObjectKey4" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="98cd13e9-0dd7-4674-8eda-c1e21e504559" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

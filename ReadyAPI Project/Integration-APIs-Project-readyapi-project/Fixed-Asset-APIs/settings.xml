@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="404bad9b-11df-4723-b44e-3f939461e1bb" name="Fixed Asset APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-FA-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># FA-REST-API
+API documentation for **Fixed Asset** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="404bad9b-11df-4723-b44e-3f939461e1bbfileName">Fixed-Asset-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-FA-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-FA-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: Fixed Asset APIs
+  description: |
+    # FA-REST-API
+    API documentation for **Fixed Asset** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: faasset
+  description: Fixed Assets
+paths:
+  /fa-rest-api/rest/1/faasset:
+    get:
+      tags:
+      - faasset
+      summary: Retrieve Fixed Assets
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AssetType
+        in: query
+        description: Asset Type (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CatCode
+        in: query
+        description: Asset Category Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ActivationDate
+        in: query
+        description: Asset Activation Date (YYYY-MM-dd - selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FaAsset'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    FaAsset:
+      type: object
+      properties:
+        FastCompCode:
+          maxLength: 8
+          type: string
+        FastCode:
+          maxLength: 10
+          type: string
+        FastName:
+          maxLength: 30
+          type: string
+        FastAssetType:
+          maxLength: 1
+          type: string
+        FastDesc:
+          maxLength: 2000
+          type: string
+        FastCapApprvCode:
+          maxLength: 16
+          type: string
+        FastPoNum:
+          maxLength: 11
+          type: string
+        FastActivDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastEntryDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastFmv:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastReplValAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastLeaseCode:
+          maxLength: 2
+          type: string
+        FastPstExemptFlag:
+          maxLength: 1
+          type: string
+        FastLienFlag:
+          maxLength: 1
+          type: string
+        FastLienText:
+          maxLength: 2000
+          type: string
+        FastInsGroupCode:
+          maxLength: 10
+          type: string
+        FastIntType:
+          maxLength: 1
+          type: string
+        FastIntRate:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDefaultIntRate:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastCatCode:
+          maxLength: 10
+          type: string
+        FastCatName:
+          maxLength: 30
+          type: string
+        FastMethCode:
+          maxLength: 1
+          type: string
+        FastEconLifeQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDepLifeQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDepAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDepPc:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastOrigCost:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastAdjCostBase:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastInitDepAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastInitMonthQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastAccDep:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastNbv:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastCcaCode:
+          maxLength: 4
+          type: string
+        FastCcaByAssetFlag:
+          maxLength: 1
+          type: string
+        FastRsdlValAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDepInJanFlag:
+          maxLength: 1
+          type: string
+        FastDepInFebFlag:
+          maxLength: 1
+          type: string
+        FastDepInMarFlag:
+          maxLength: 1
+          type: string
+        FastDepInMayFlag:
+          maxLength: 1
+          type: string
+        FastDepInAprFlag:
+          maxLength: 1
+          type: string
+        FastDepInJunFlag:
+          maxLength: 1
+          type: string
+        FastDepInJulFlag:
+          maxLength: 1
+          type: string
+        FastDepInAugFlag:
+          maxLength: 1
+          type: string
+        FastDepInSepFlag:
+          maxLength: 1
+          type: string
+        FastDepInOctFlag:
+          maxLength: 1
+          type: string
+        FastDepInNovFlag:
+          maxLength: 1
+          type: string
+        FastDepInDecFlag:
+          maxLength: 1
+          type: string
+        FastDeDeptCode:
+          maxLength: 6
+          type: string
+        FastDeAccCode:
+          maxLength: 16
+          type: string
+        FastDeAccName:
+          maxLength: 30
+          type: string
+        FastAdDeptCode:
+          maxLength: 6
+          type: string
+        FastAdAccCode:
+          maxLength: 16
+          type: string
+        FastAdAccName:
+          maxLength: 30
+          type: string
+        FastNotesText:
+          maxLength: 2000
+          type: string
+        FastRollNum:
+          maxLength: 16
+          type: string
+        FastAreaWmCode:
+          maxLength: 2
+          type: string
+        FastComAreaQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastUsblAreaQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastZoneText:
+          maxLength: 2000
+          type: string
+        FastEqpCode:
+          maxLength: 30
+          type: string
+        FastEqpName:
+          maxLength: 30
+          type: string
+        EmeEqpCode:
+          maxLength: 10
+          type: string
+        EmeName:
+          maxLength: 30
+          type: string
+        EmeDesc:
+          maxLength: 2000
+          type: string
+        EmecEqpclassCode:
+          maxLength: 10
+          type: string
+        EmecName:
+          maxLength: 30
+          type: string
+        EmhlHomelocCode:
+          maxLength: 10
+          type: string
+        EmhlName:
+          maxLength: 30
+          type: string
+        EmalActuallocCode:
+          maxLength: 10
+          type: string
+        EmalName:
+          maxLength: 60
+          type: string
+        EmeLegalUniqueIdentifier:
+          maxLength: 2000
+          type: string
+        EmeActiveFlag:
+          maxLength: 1
+          type: string
+        EmeEqpHier:
+          maxLength: 127
+          type: string
+        EmeFixedAssetsFlag:
+          maxLength: 1
+          type: string
+        EmeDepreciationFlag:
+          maxLength: 1
+          type: string
+        EmeBillRateRequiredFlag:
+          maxLength: 1
+          type: string
+        EmeAutoChargeoutFlag:
+          maxLength: 1
+          type: string
+        EmeFloatFlag:
+          maxLength: 1
+          type: string
+        EmeCommissionDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastMakeName:
+          maxLength: 30
+          type: string
+        FastModelName:
+          maxLength: 30
+          type: string
+        FastModelYear:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastBoughtFrom:
+          maxLength: 30
+          type: string
+        FastSerNumCode:
+          maxLength: 2000
+          type: string
+        FastWarrantyCode:
+          maxLength: 1
+          type: string
+        FastWarrantyDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastOwnerName:
+          maxLength: 30
+          type: string
+        FastAssignedName:
+          maxLength: 30
+          type: string
+        FastRegisteredTo:
+          maxLength: 30
+          type: string
+        FastLicNumberCode:
+          maxLength: 16
+          type: string
+        FastLicState:
+          maxLength: 3
+          type: string
+        FastLicExpDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastLicCostAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastLicMonthsQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastCapacityQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastGrossWgtQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastInsuredValue:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        FastDspsDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        FastDefaultMethCode:
+          maxLength: 17
+          type: string
+        FastDefaultResidualRatePc:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDefaultDepLifeQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDefaulteConLifeQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastDefaultDepPc:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastCatAdDeptCode:
+          maxLength: 6
+          type: string
+        FastCatAdAccCode:
+          maxLength: 16
+          type: string
+        FastCatAdAccName:
+          maxLength: 30
+          type: string
+        FastCatDeDeptCode:
+          maxLength: 6
+          type: string
+        FastCatDeAccCode:
+          maxLength: 16
+          type: string
+        FastCatDeAccName:
+          maxLength: 30
+          type: string
+        FastCatEqpCatCode:
+          maxLength: 8
+          type: string
+        FastCatEqpCatName:
+          maxLength: 20
+          type: string
+        FastEqpCatCode:
+          maxLength: 8
+          type: string
+        FastEqpCatName:
+          maxLength: 20
+          type: string
+        FastCatEqpTranCode:
+          maxLength: 4
+          type: string
+        FastCatEqpTranName:
+          maxLength: 20
+          type: string
+        FastEqpTranCode:
+          maxLength: 4
+          type: string
+        FastEqpTranName:
+          maxLength: 20
+          type: string
+        FastDefaultRsdlValAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastAcquisitionValue:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        FastAssetDeptCode:
+          maxLength: 6
+          type: string
+        FastAssetAccCode:
+          maxLength: 16
+          type: string
+        FastAssetAccName:
+          maxLength: 4000
+          type: string
+        FastAcquisitionDeptCode:
+          maxLength: 6
+          type: string
+        FastAcquisitionAccCode:
+          maxLength: 16
+          type: string
+        FastAcquisitionAccName:
+          maxLength: 4000
+          type: string
+        FastDisposalDeptCode:
+          maxLength: 6
+          type: string
+        FastDisposalAccCode:
+          maxLength: 16
+          type: string
+        FastDisposalAccName:
+          maxLength: 4000
+          type: string
+        FastAcqBchNum:
+          maxLength: 15
+          type: integer
+        FastAcqOverrideValue:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        FastVUuid:
+          maxLength: 64
+          type: string
+  responses:
+    FaAssetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FaAsset'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

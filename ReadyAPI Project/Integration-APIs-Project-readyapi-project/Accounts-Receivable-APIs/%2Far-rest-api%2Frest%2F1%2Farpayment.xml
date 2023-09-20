@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arpayment" path="/ar-rest-api/rest/1/arpayment" id="8294444f-38b4-485e-bc87-48c8f4214c9b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8294444f-38b4-485e-bc87-48c8f4214c9bfileName">%2Far-rest-api%2Frest%2F1%2Farpayment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e73e8526-add9-470b-8f47-04a72e0420dc" method="GET">
+    <con:description>Retrieve AR Payments</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ArPaymentFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (ArPaymentFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CustCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Customer Code (ArPaymentFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PayFromDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Start Date for search interval (ArPaymentFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PayToDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>End Date for search interval (ArPaymentFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PayCompCode" : "string",
+  "PaySeqNum" : 0,
+  "PayBchNum" : 0,
+  "PayChqNum" : "string",
+  "PayCustCode" : "string",
+  "PayDate" : "YYYY-MM-dd",
+  "PayActualDate" : "YYYY-MM-dd",
+  "PayChqReceivedDate" : "YYYY-MM-dd",
+  "PayBankCompCode" : "string",
+  "PayDeptCode" : "string",
+  "PayAccCode" : "string",
+  "PayCurrAmt" : 0,
+  "PayCurrCode" : "string",
+  "PayDispAmt" : 0,
+  "PayCurcFactorNum" : 0,
+  "PayTypeCode" : "string",
+  "PayJobCode" : "string",
+  "PayCashCode" : "string",
+  "PayNxtSeqNum" : 0,
+  "PayDpstCode" : "string",
+  "PayDesc" : "string",
+  "PayRecDate" : "YYYY-MM-dd",
+  "PayTenderedAmt" : 0,
+  "PayCashRctFlag" : "string",
+  "PayRemainingAmt" : 0,
+  "PaySumInvpayAmt" : 0,
+  "PayInvRelFlag" : "string",
+  "PayCallFormName" : "string",
+  "PayAmtOwed" : 0,
+  "PayChangeAmt" : 0,
+  "DiscriminatorCode" : "string",
+  "PayIuCreateDate" : "YYYY-MM-dd",
+  "PayIuUpdateDate" : "YYYY-MM-dd"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0689662a-bc59-4cdb-9ef4-8b0581e0a102" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

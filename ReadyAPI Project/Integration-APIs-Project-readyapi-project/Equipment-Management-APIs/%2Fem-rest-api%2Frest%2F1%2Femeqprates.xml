@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emeqprates" path="/em-rest-api/rest/1/emeqprates" id="aa69ada8-7db9-4151-9311-d461897d736d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="aa69ada8-7db9-4151-9311-d461897d736dfileName">%2Fem-rest-api%2Frest%2F1%2Femeqprates</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="504a94b6-7075-4a03-ac46-96825cd5d1ed" method="GET">
+    <con:description>Retrieve Equipment Cost Rates</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectEqpRates or selectByAuditDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectEqpRates)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TranCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Transaction Code (selectEqpRates)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StartDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Starting Date  (selectEqpRates)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EndDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ending Date (selectEqpRates)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to compare against create/update dates (selectByAuditDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmetAmountType" : "string",
+  "EmetCompCode" : "string",
+  "EmetEqpCode" : "string",
+  "EmetEqpName" : "string",
+  "EmetTrancodeCode" : "string",
+  "EmetTrancodeName" : "string",
+  "EmetWmCode" : "string",
+  "EmetWmName" : "string",
+  "EmetParentType" : "string",
+  "EmetStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetActiveRateFlag" : "string",
+  "EmetIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetIuCreateUser" : "string",
+  "EmetIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bdee8bed-91fc-41e2-bbc8-145983f34fdf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

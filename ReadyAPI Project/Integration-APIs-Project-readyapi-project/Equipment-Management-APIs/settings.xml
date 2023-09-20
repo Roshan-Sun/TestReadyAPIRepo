@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="b4a5a155-89c9-4dee-aa60-4e3b4210fbc5" name="Equipment Management APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-EM-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># EM-REST-API
+API documentation for **Equipment Management** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="b4a5a155-89c9-4dee-aa60-4e3b4210fbc5fileName">Equipment-Management-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-EM-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-EM-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: Equipment Management APIs
+  description: |
+    # EM-REST-API
+    API documentation for **Equipment Management** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: emactloc
+  description: EM Equipment Actual Locations
+- name: emeqpclass
+  description: EM Equipment Classes
+- name: emeqprates
+  description: EM Equipment Rates
+- name: emequipment
+  description: EM Equipments
+- name: emhomeloc
+  description: EM Equipment Home Locations
+- name: emtranactloc
+  description: EM Transaction Activity Logs
+- name: emtruckdet
+  description: EM Truck Details
+paths:
+  /em-rest-api/rest/1/emactloc:
+    get:
+      tags:
+      - emactloc
+      summary: Retrieve Equipment Actual Locations
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: findByCode or findByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: locationCode
+        in: query
+        description: Location Code (findByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date to compare against create/update dates (findByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmActLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emeqpclass:
+    get:
+      tags:
+      - emeqpclass
+      summary: Retrieve Equipment Classes
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: findByCode or findByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: eqpClassCode
+        in: query
+        description: Equipment Class Code (findByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date to compare against create/update dates (findByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEqpClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emeqprates:
+    get:
+      tags:
+      - emeqprates
+      summary: Retrieve Equipment Cost Rates
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectEqpRates or selectByAuditDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectEqpRates)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TranCode
+        in: query
+        description: Transaction Code (selectEqpRates)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StartDate
+        in: query
+        description: Starting Date  (selectEqpRates)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EndDate
+        in: query
+        description: Ending Date (selectEqpRates)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to compare against create/update dates (selectByAuditDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEqpRates'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emequipment:
+    get:
+      tags:
+      - emequipment
+      summary: Retrieve Equipments
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: "selectByEmeCompCode, selectByCompCodeAndDate, selectByEmeEqpCode, selectByEqpCodeAndDate, selectByEmeHomelocCode or selectByHomeLocCodeAndDate"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EmeCompCode
+        in: query
+        description: Company Code (selectByEmeCompCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: compCode
+        in: query
+        description: Company Code (selectByCompCodeAndDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EmeEqpCode
+        in: query
+        description: Equipment Code (selectByEmeEqpCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: eqpCode
+        in: query
+        description: Equipment Code (selectByEqpCodeAndDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EmeHomelocCode
+        in: query
+        description: Company Code (selectByEmeHomelocCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: homeLocCode
+        in: query
+        description: Company Code (selectByHomeLocCodeAndDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: selectDate
+        in: query
+        description: "Selection Date against create/update dates(selectByCompCodeAndDate, selectByEqpCodeAndDate and selectByHomeLocCodeAndDate)"
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEquipment'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - emequipment
+      summary: Create an Equipment
+      description: POST and PATCH requests must include EmeFastCatCode
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/EmEquipmentRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEquipment'
+        "400":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEquipment'
+  /em-rest-api/rest/1/emequipment/{Vuuid}:
+    get:
+      tags:
+      - emequipment
+      summary: Retrieve Specific Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEquipment'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - emequipment
+      summary: Delete a Specific Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - emequipment
+      summary: Update a specific Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/EmEquipmentRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEquipment'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emhomeloc:
+    get:
+      tags:
+      - emhomeloc
+      summary: Retrieve Equipment Home Locations
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: findByCode or findByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: locationCode
+        in: query
+        description: Location Code (findByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date to compare against create/update dates (findByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmHomeLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emtranactloc:
+    get:
+      tags:
+      - emtranactloc
+      summary: Retrieve Equipment Transaction Location Transfers
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByAuditDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to compare against create/update dates (selectByAuditDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmTranActLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - emtranactloc
+      summary: Create a Location Transfer
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/EmTranActLocRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmTranActLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emtranactloc/{Vuuid}:
+    get:
+      tags:
+      - emtranactloc
+      summary: Retrieve a Specific Location Transfer
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmTranActLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - emtranactloc
+      summary: Delete a Location Transfer
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - emtranactloc
+      summary: Update a Specific Location Transfer
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for record
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/EmTranActLocRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmTranActLoc'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /em-rest-api/rest/1/emtruckdet:
+    get:
+      tags:
+      - emtruckdet
+      summary: Retrieve Equipment Truck Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: VenCode
+        in: query
+        description: Vendor Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: TruckNo
+        in: query
+        description: Truck Number (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmEqpRates'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    EmActLoc:
+      type: object
+      properties:
+        EmalActuallocCode:
+          maxLength: 10
+          type: string
+        EmalName:
+          maxLength: 60
+          type: string
+        EmalSname:
+          maxLength: 16
+          type: string
+        EmalDefaultCompCode:
+          maxLength: 8
+          type: string
+        EmalDefaultCompName:
+          maxLength: 30
+          type: string
+        EmalDefaultJobCode:
+          maxLength: 10
+          type: string
+        EmalDefaultJobName:
+          maxLength: 60
+          type: string
+        EmalDefaultPhsCode:
+          maxLength: 16
+          type: string
+        EmalDefaultPhsName:
+          maxLength: 50
+          type: string
+        EmalDefaultCatCode:
+          maxLength: 16
+          type: string
+        EmalDefaultCatName:
+          maxLength: 30
+          type: string
+        EmalDefaultCustCode:
+          maxLength: 10
+          type: string
+        EmalDefaultCustName:
+          maxLength: 50
+          type: string
+        EmalStatusFlag:
+          maxLength: 1
+          type: string
+        EmalRetireFlag:
+          maxLength: 1
+          type: string
+        EmalExcldTargetUtilCalc:
+          maxLength: 1
+          type: string
+        EmalIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmalIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+    EmEqpClass:
+      type: object
+      properties:
+        EmecEqpclassCode:
+          maxLength: 10
+          type: string
+        EmecName:
+          maxLength: 30
+          type: string
+        EmecCtrlEqpclassCode:
+          maxLength: 10
+          type: string
+        EmecCtrlEqpclassName:
+          maxLength: 30
+          type: string
+        EmecInhTaskAccFlag:
+          maxLength: 1
+          type: string
+        EmecPhsCode:
+          maxLength: 16
+          type: string
+        EmecPhsName:
+          maxLength: 50
+          type: string
+        EmecTradeCode:
+          maxLength: 30
+          type: string
+        EmecTradeName:
+          maxLength: 30
+          type: string
+        EmecPyNhRateCode:
+          maxLength: 4
+          type: string
+        EmecPyOtRateCode:
+          maxLength: 4
+          type: string
+        EmecPyDotRateCode:
+          maxLength: 4
+          type: string
+        EmecPyOthRateCode:
+          maxLength: 4
+          type: string
+        EmecTruckerClass:
+          maxLength: 10
+          type: string
+        EmecMobRate:
+          maxLength: 18
+          type: number
+          format: float - 4 decimals
+        EmecEqpclassHier:
+          maxLength: 127
+          type: string
+        EmecRpAvailblFlag:
+          maxLength: 1
+          type: string
+        EmecExclDiscountsFlag:
+          maxLength: 1
+          type: string
+        EmecExclReplValueFlag:
+          maxLength: 1
+          type: string
+        EmecInclInValueCapFlag:
+          maxLength: 1
+          type: string
+        EmecIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmecIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+    EmEqpRates:
+      type: object
+      properties:
+        EmetAmountType:
+          maxLength: 1
+          type: string
+        EmetCompCode:
+          maxLength: 8
+          type: string
+          description: Company code
+        EmetEqpCode:
+          maxLength: 10
+          type: string
+        EmetEqpName:
+          maxLength: 30
+          type: string
+        EmetTrancodeCode:
+          maxLength: 4
+          type: string
+          description: Reference to the EMTRANCODE table
+        EmetTrancodeName:
+          maxLength: 15
+          type: string
+        EmetWmCode:
+          maxLength: 2
+          type: string
+          description: "Reference to the WGTMES_TABLE table. This field is only required for ADDITIONAL type rate codes. Should not contain HRLY, DAILY, WEEKLY, MONTHLY WM codes as defined in the control file."
+        EmetWmName:
+          maxLength: 10
+          type: string
+        EmetParentType:
+          maxLength: 20
+          type: string
+          description: "Rate on Equipment Level., Must be ‘EMEQP’, for Non-Revenue Rate Types. , Must be ‘EQP’, for Revenue Rate Types."
+        EmetStartDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmetEndDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmetActiveRateFlag:
+          maxLength: 1
+          type: string
+        EmetHrlyChargeAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmetDailyChargeAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmetWeeklyChargeAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmetMonthlyChargeAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmetAddChargeAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmetIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmetIuCreateUser:
+          maxLength: 30
+          type: string
+        EmetIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmetIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+    EmEquipment:
+      type: object
+      properties:
+        EmeEqpCode:
+          maxLength: 10
+          type: string
+          description: Equipment code.
+        EmeName:
+          maxLength: 30
+          type: string
+          description: Equipment name
+        EmeDesc:
+          maxLength: 2000
+          type: string
+          description: Equipment description
+        EmeEqpclassCode:
+          maxLength: 10
+          type: string
+        EmeEqpclassName:
+          maxLength: 30
+          type: string
+        EmeCtrlEqpCode:
+          maxLength: 10
+          type: string
+          description: Either null or the equipment code of the controlling piece of equipment if this is part of a hierarchy
+        EmeCtrlEqpName:
+          maxLength: 30
+          type: string
+        EmeEqpHier:
+          maxLength: 127
+          type: string
+          description: "Equipment Hierarchy., System Generated – LEAVE THIS NULL"
+        EmeHomelocCode:
+          maxLength: 10
+          type: string
+        EmeHomelocName:
+          maxLength: 30
+          type: string
+        EmeCompCode:
+          maxLength: 8
+          type: string
+        EmeActuallocCode:
+          maxLength: 10
+          type: string
+        EmeActuallocName:
+          maxLength: 60
+          type: string
+        EmeCurrActuallocCode:
+          maxLength: 10
+          type: string
+        EmeCurrActuallocName:
+          maxLength: 60
+          type: string
+        EmeJccatCode:
+          maxLength: 16
+          type: string
+          description: Reference to the JCCAT table
+        EmeJccatName:
+          maxLength: 30
+          type: string
+        EmeLegalUniqueIdentifier:
+          maxLength: 2000
+          type: string
+          description: "Unique serial number.  , If no serial number is available, make one up."
+        EmeActiveFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if the equipment is in use.  ‘N’ if not.
+        EmeLegalUidLocation:
+          maxLength: 2000
+          type: string
+          description: The location of the serial number.  This is where the serial number is located on the piece of equipment.
+        EmeAutoChargeoutFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if automatic charge out will be used.  ‘N’ if not.
+        EmeFloatFlag:
+          maxLength: 1
+          type: string
+          description: Set this to ‘N’
+        EmeFixedAssetsFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if this equipment is tracked in the fixed assets system.  ‘N’ if not.  Remember to set this to ‘Y’ if you intend to import into FAASSET.
+        EmeDepreciationFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if this equipment is depreciated in the fixed assets system.  ‘N’ otherwise.
+        EmeCommissionDate:
+          type: string
+          description: Date the equipment was placed into service.
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeCommissionTime:
+          maxLength: 5
+          type: string
+        EmeDecommissionDate:
+          type: string
+          description: Date the equipment was taken out of service. Not currently used
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeBaseUmCode:
+          maxLength: 10
+          type: string
+        EmeBaseUmName:
+          maxLength: 10
+          type: string
+        EmeExpectedUsagePerDay:
+          maxLength: 16
+          type: number
+          format: float - 8 decimals
+        EmeLifeExpectancyInBaseUm:
+          maxLength: 16
+          type: number
+          format: float - 8 decimals
+        EmeLifeExpectancyDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeResponsiblePersonnelName:
+          maxLength: 2000
+          type: string
+        EmeValue:
+          maxLength: 18
+          type: number
+          description: "The value of the piece of equipment. , Leave null/blank if EME_BULK_EQUIPMENT_FLAG = ‘Y’."
+          format: float - 2 decimals
+        EmeChargePc:
+          maxLength: 5
+          type: number
+          description: The maximum percentage of the equipment value that may be charged to a job
+          format: float - 2 decimals
+        EmeBillRateRequiredFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if owner (job) billing rates are required this piece of equipment. ‘N’ if not.
+        EmeWarrantyDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeWarrantyAccTypeCode:
+          maxLength: 2
+          type: string
+        EmeWarrantyExpiryReading:
+          maxLength: 16
+          type: number
+          format: float - 4 decimals
+        EmeWarrantyDesc:
+          maxLength: 2000
+          type: string
+        EmeWarrantyExpireDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeJcphsCode:
+          maxLength: 16
+          type: string
+          description: Default job cost phase code
+        EmeJcphsName:
+          maxLength: 50
+          type: string
+        EmeSlidingScaleRuleFlag:
+          maxLength: 1
+          type: string
+          description: Flag to determine whether the charges would be calculated on a sliding scale basis (best amount) or only the daily rate would be used in the calculation.
+        EmeCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeUeValidFlag:
+          maxLength: 1
+          type: string
+        EmeVendorCode:
+          maxLength: 8
+          type: string
+          description: "For Rented Equipment, this is the Vendor who owns this equipment. Must be a valid vendor from BPVENDORS table."
+        EmeVendorName:
+          maxLength: 50
+          type: string
+        EmeBulkEquipmentFlag:
+          maxLength: 1
+          type: string
+          description: Identifies equipment that allows quantity transfer.  Defaults to ‘N’ if left null.
+        EmeTotalQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeInitialBulkQty:
+          maxLength: 18
+          type: number
+          description: Initial quantity of bulk equipment. This column may only be filled before the equipment record is committed.
+          format: float - 6 decimals
+        EmeTruckType:
+          maxLength: 20
+          type: string
+        EmeMinLoad:
+          maxLength: 18
+          type: number
+          format: float - 3 decimals
+        EmeMaxGross:
+          maxLength: 18
+          type: number
+          format: float - 3 decimals
+        EmeInsurName:
+          maxLength: 50
+          type: string
+        EmeInsurPolicyNo:
+          maxLength: 20
+          type: string
+        EmeTareWeight:
+          maxLength: 18
+          type: number
+          format: float - 3 decimals
+        EmeTareDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeTareTime:
+          maxLength: 5
+          type: string
+        EmeTareType:
+          maxLength: 20
+          type: string
+        EmeNoOfDrops:
+          maxLength: 2
+          type: integer
+        EmeTradeCode:
+          maxLength: 30
+          type: string
+        EmeTradeName:
+          maxLength: 30
+          type: string
+        EmeTruckerClass:
+          maxLength: 10
+          type: string
+        EmeTruckerClassName:
+          maxLength: 30
+          type: string
+        EmeUtilizationCode:
+          maxLength: 16
+          type: string
+        EmeUtilizationName:
+          maxLength: 100
+          type: string
+        EmeCrewCode:
+          maxLength: 30
+          type: string
+        EmeFastCatCode:
+          maxLength: 10
+          type: string
+        EmeFastCatName:
+          maxLength: 30
+          type: string
+        EmeFastMakeName:
+          maxLength: 30
+          type: string
+        EmeFastModelYear:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeFastModelName:
+          maxLength: 30
+          type: string
+        EmeFastSerNumCode:
+          maxLength: 2000
+          type: string
+        EmeFastLicNumberCode:
+          maxLength: 16
+          type: string
+        EmeFastLicExpDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeFastWarrantyCode:
+          maxLength: 1
+          type: string
+        EmeFastGrossWgtQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeFastWarrantyDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeFastOwnerName:
+          maxLength: 30
+          type: string
+        EmeFastAssignedName:
+          maxLength: 30
+          type: string
+        EmeFastLeaseCode:
+          maxLength: 2
+          type: string
+        EmeFastMethCode:
+          maxLength: 1
+          type: string
+        EmeFastRegisteredTo:
+          maxLength: 30
+          type: string
+        EmeFastLicMonthsQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeFastLicCostAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeFastCapacityQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmeFastDspsDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeFastBoughtFrom:
+          maxLength: 30
+          type: string
+        EmeFastLicState:
+          maxLength: 3
+          type: string
+        EmeFastLicStateName:
+          maxLength: 30
+          type: string
+        EmeFastInsuredValue:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        EmeUseMeterReadingFlag:
+          maxLength: 1
+          type: string
+        EmeIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeIuCreateUser:
+          maxLength: 30
+          type: string
+        EmeIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmeIuUpdateUser:
+          maxLength: 30
+          type: string
+        EmeVUuid:
+          maxLength: 64
+          type: string
+    EmHomeLoc:
+      type: object
+      properties:
+        EmhlHomelocCode:
+          maxLength: 10
+          type: string
+        EmhlName:
+          maxLength: 30
+          type: string
+        EmhlSname:
+          maxLength: 16
+          type: string
+        EmhlCompCode:
+          maxLength: 8
+          type: string
+        EmhlCompName:
+          maxLength: 30
+          type: string
+        EmhlDeptCode:
+          maxLength: 6
+          type: string
+        EmhlDeptName:
+          maxLength: 30
+          type: string
+        EmhlIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmhlIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmhlErecIncFlag:
+          maxLength: 1
+          type: string
+    EmTranActLoc:
+      type: object
+      properties:
+        EmtrRefDate:
+          type: string
+          description: Reference Date.
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrRefTime:
+          maxLength: 5
+          type: string
+        EmtrRefNum:
+          maxLength: 12
+          type: string
+        EmtrEqpCode:
+          maxLength: 10
+          type: string
+        EmtrEqpName:
+          maxLength: 30
+          type: string
+        EmtrCurrActuallocCode:
+          maxLength: 10
+          type: string
+        EmtrStartDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrNewActlocCode:
+          maxLength: 10
+          type: string
+        EmtrEqpQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmtrCurrActuallocName:
+          maxLength: 60
+          type: string
+        EmtrCurrCompCode:
+          maxLength: 8
+          type: string
+        EmtrCurrCustCode:
+          maxLength: 8
+          type: string
+        EmtrCurrJobCode:
+          maxLength: 10
+          type: string
+        EmtrCurrPhsCode:
+          maxLength: 16
+          type: string
+        EmtrCurrCatCode:
+          maxLength: 16
+          type: string
+        EmtrAvaialbleBulkQty:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        EmtrCurrTrancodeCode:
+          maxLength: 4
+          type: string
+        EmtrNewActlocName:
+          maxLength: 60
+          type: string
+        EmtrSrcCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code for the Debit side of the transaction.
+        EmtrJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code. Used for “J” lines. Otherwise leave null.
+        EmtrCustCode:
+          maxLength: 8
+          type: string
+          description: "Customer Code. If this is a “Transfer” type transaction, use the JOB_CUST_CODE from JCJOB_TABLE."
+        EmtrPhsCode:
+          maxLength: 16
+          type: string
+          description: Phase Code. Used for “J” lines. Otherwise leave null.
+        EmtrCatCode:
+          maxLength: 16
+          type: string
+          description: Category Code. Used for “J” lines. Otherwise leave null.
+        EmtrTrancodeCode:
+          maxLength: 4
+          type: string
+        EmtrChgFlag:
+          maxLength: 10
+          type: string
+          description: "Charge Flag. Either ‘Y’ or ‘N’. , Used for “Transfer” type transactions."
+        EmtrAntretDate:
+          type: string
+          description: Leave Null.
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrDsrcCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code. Make this the same as the EMTR_COMP_CODE.
+        EmtrPostDate:
+          type: string
+          description: Post Date.
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrPmCode:
+          maxLength: 30
+          type: string
+          description: Leave Null.
+        EmtrWbsvCode1:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode2:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode3:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode4:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode5:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode6:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode7:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode8:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode9:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode10:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode11:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrWbsvCode12:
+          maxLength: 60
+          type: string
+          description: ""
+        EmtrCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code for the Credit side of the transaction.
+        EmtrCompName:
+          maxLength: 30
+          type: string
+        EmtrBchNum:
+          maxLength: 38
+          type: number
+          format: float - 12 decimals
+        EmtrNum:
+          maxLength: 0
+          type: number
+          description: Transaction Number. Make this the same as the EMTR_EMTRAN_ORASEQ.
+          format: float - 0 decimals
+        EmtrCurrJobName:
+          maxLength: 60
+          type: string
+        EmtrCurrCity:
+          maxLength: 40
+          type: string
+        EmtrCurrState:
+          maxLength: 40
+          type: string
+        EmtrJobName:
+          maxLength: 60
+          type: string
+        EmtrCity:
+          maxLength: 40
+          type: string
+        EmtrState:
+          maxLength: 40
+          type: string
+        EmtrUserField1:
+          maxLength: 8
+          type: string
+        EmtrUserField2:
+          maxLength: 10
+          type: string
+        EmtrUserField3:
+          maxLength: 16
+          type: string
+        EmtrUserField4:
+          maxLength: 16
+          type: string
+        EmtrUserField1Name:
+          maxLength: 30
+          type: string
+        EmtrUserField2Name:
+          maxLength: 60
+          type: string
+        EmtrUserField3Name:
+          maxLength: 4000
+          type: string
+        EmtrUserField4Name:
+          maxLength: 30
+          type: string
+        EmtrUserField5:
+          maxLength: 60
+          type: string
+        EmtrUserField6:
+          maxLength: 60
+          type: string
+        EmtrUserField7:
+          maxLength: 60
+          type: string
+        EmtrUserField8:
+          maxLength: 60
+          type: string
+        EmtrUserField5Name:
+          maxLength: 4000
+          type: string
+        EmtrUserField6Name:
+          maxLength: 4000
+          type: string
+        EmtrUserField7Name:
+          maxLength: 4000
+          type: string
+        EmtrUserField8Name:
+          maxLength: 4000
+          type: string
+        EmtrCalledFromAppCode:
+          maxLength: 4
+          type: string
+        EmtrUserFieldEdtFlag5:
+          maxLength: 4000
+          type: string
+        EmtrUserFieldEdtFlag6:
+          maxLength: 4000
+          type: string
+        EmtrUserFieldEdtFlag7:
+          maxLength: 4000
+          type: string
+        EmtrUserFieldEdtFlag8:
+          maxLength: 4000
+          type: string
+        EmtrWbsSetupFlag:
+          maxLength: 4000
+          type: string
+        EmtrTacSetupFlag:
+          maxLength: 4000
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        EmtrVUuid:
+          maxLength: 64
+          type: string
+        EmtrIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrIuCreateUser:
+          maxLength: 30
+          type: string
+        EmtrIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        EmtrIuUpdateUser:
+          maxLength: 30
+          type: string
+  responses:
+    EmActLocResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmActLoc'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    EmEqpClassResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmEqpClass'
+    EmEqpRatesResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmEqpRates'
+    EmEquipmentResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmEquipment'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    EmHomeLocResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmHomeLoc'
+    EmTranActLocResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmTranActLoc'
+  requestBodies:
+    EmEquipmentRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/EmEquipment'
+          examples:
+            Minimal POST Example:
+              value:
+                EmeCompCode: string
+                EmeEqpCode: string
+                EmeName: string
+                EmeEqpclassCode: string
+                EmeEqpHier: string
+                EmeHomelocCode: string
+                EmeHomelocName: string
+                EmeFastCatCode: string
+                EmeActuallocCode: string
+                EmeActiveFlag: string
+                EmeAutoChargeoutFlag: string
+                EmeBillRateRequiredFlag: string
+                EmeBulkEquipmentFlag: string
+                EmeDepreciationFlag: string
+                EmeFixedAssetsFlag: string
+                EmeUseMeterReadingFlag: string
+                EmeVUuid: ""
+            PATCH Example:
+              value:
+                EmeFastCatCode: EQUIPMENT
+                EmeDesc: test1234
+    EmTranActLocRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/EmTranActLoc'
+          examples:
+            Minimal POST Example:
+              value:
+                EmtrSrcCompCode: string
+                EmtrStartDate: string
+                EmtrRefDate: string
+                EmtrEqpCode: string
+                EmtrEqpQty: integer
+                EmtrCurrActuallocCode: string
+                EmtrCurrCompCode: string
+                EmtrCurrCustCode: string
+                EmtrCurrJobCode: string
+                EmtrCurrPhsCode: string
+                EmtrCurrCatCode: string
+                EmtrNewActlocCode: string
+                EmtrCompCode: string
+                EmtrCustCode: string
+                EmtrJobCode: string
+                EmtrPhsCode: string
+                EmtrCatCode: string
+            PATCH Example:
+              value:
+                EmtrEqpQty: 100
+        application/vnd.oracle.adf.batch+json:
+          schema:
+            $ref: '#/components/schemas/EmTranActLoc'
+          examples:
+            Batch POST Example:
+              value:
+                parts:
+                - id: part1
+                  path: /1/emtranactloc
+                  operation: create
+                  payload:
+                    EmtrSrcCompCode: string
+                    EmtrStartDate: string
+                    EmtrRefDate: string
+                    EmtrEqpCode: string
+                    EmtrEqpQty: integer
+                    EmtrCurrActuallocCode: string
+                    EmtrCurrCompCode: string
+                    EmtrCurrCustCode: string
+                    EmtrCurrJobCode: string
+                    EmtrCurrPhsCode: string
+                    EmtrCurrCatCode: string
+                    EmtrNewActlocCode: string
+                    EmtrCompCode: string
+                    EmtrCustCode: string
+                    EmtrJobCode: string
+                    EmtrPhsCode: string
+                    EmtrCatCode: string
+                - id: part2
+                  path: /1/emtranactloc
+                  operation: create
+                  payload:
+                    EmtrSrcCompCode: string
+                    EmtrStartDate: string
+                    EmtrRefDate: string
+                    EmtrEqpCode: string
+                    EmtrEqpQty: integer
+                    EmtrCurrActuallocCode: string
+                    EmtrCurrCompCode: string
+                    EmtrCurrCustCode: string
+                    EmtrCurrJobCode: string
+                    EmtrCurrPhsCode: string
+                    EmtrCurrCatCode: string
+                    EmtrNewActlocCode: string
+                    EmtrCompCode: string
+                    EmtrCustCode: string
+                    EmtrJobCode: string
+                    EmtrPhsCode: string
+                    EmtrCatCode: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

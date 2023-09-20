@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmcommtype" path="/pm-rest-api/rest/1/pmcommtype" id="13967dd6-6403-47ab-9cde-278527e826e1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="13967dd6-6403-47ab-9cde-278527e826e1fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmcommtype</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9a3b1ae7-92ca-49df-843f-3f45b1cad678" method="GET">
+    <con:description>Retrieve PM Communication Types</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpcommCode" : "string",
+  "BpcommName" : "string",
+  "BpcommIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcommIuCreateUser" : "string",
+  "BpcommIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcommIuUpdateUser" : "string",
+  "BpcommSortKey" : 0,
+  "BpcommLastSessioninfo" : "string",
+  "BpcommOrigSessioninfo" : "string",
+  "BpcommVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ce6896fa-a015-4713-aa53-b3defa8d7514" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="8a1d6c4a-df1f-4178-b8d5-2127a1b4415e" method="POST">
+    <con:description>Create a PM Communication Type</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpcommCode" : "string",
+  "BpcommName" : "string",
+  "BpcommIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcommIuCreateUser" : "string",
+  "BpcommIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "BpcommIuUpdateUser" : "string",
+  "BpcommSortKey" : 0,
+  "BpcommLastSessioninfo" : "string",
+  "BpcommOrigSessioninfo" : "string",
+  "BpcommVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BpcommCode":"string","BpcommVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="a1c228b6-601a-4050-bd8d-3636425fd7f2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpcommCode":"string","BpcommVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="34512e45-a726-4992-a8c8-37b43c8ffa72" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpcommName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

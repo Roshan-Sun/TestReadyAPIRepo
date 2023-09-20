@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pypayrun" path="/hcm-rest-api/rest/1/pypayrun" id="47341bbd-a26d-4d6a-aa93-5d4349805bcd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="47341bbd-a26d-4d6a-aa93-5d4349805bcdfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpypayrun</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="4f9dac75-2ec6-43c3-b014-d4f68ce996ef" method="GET">
+    <con:description>Retrieve PY Pay Runs</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrnCode" : "string",
+  "PrnDescription" : "string",
+  "PrnShortDesc" : "string",
+  "PrnType" : "string",
+  "PrnFrqCode" : 0,
+  "PrnUser" : "string",
+  "PrnLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PrnAutoTimshtFlag" : "string",
+  "Prn401kDedFlag" : "string",
+  "PrnIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PrnIuCreateUser" : "string",
+  "PrnIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PrnIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="9650d820-a900-4e41-829b-729f86bb7cff" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

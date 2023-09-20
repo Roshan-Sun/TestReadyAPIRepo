@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourdwp/{Vuuid}" path="/pm-rest-api/rest/1/pmdailyjourdwp/{Vuuid}" id="a1415999-51ea-4279-8df6-46eebabf1b2c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a1415999-51ea-4279-8df6-46eebabf1b2cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourdwp%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b7301e33-0997-4b25-b386-7459889958f5" method="GET">
+    <con:description>Retrieve a Specific PM Daily Journal Daily Work Plan</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjdwpWorkLoc" : "string",
+  "PmjdwpWorkDesc" : "string",
+  "PmjdwpCtgcWorkPlan" : "string",
+  "PmjdwpPlaningPacketFlag" : "string",
+  "PmjdwpQualityChecksReq" : "string",
+  "PmjdwpCoordinationReq" : "string",
+  "PmjdwpQualityIssues" : "string",
+  "PmjdwpTomorrowOverview" : "string",
+  "PmjdwpSuccessFailures" : "string",
+  "PmjdwpInterimGoal1" : "string",
+  "PmjdwpInterimGoal2" : "string",
+  "PmjdwpInterimGoal3" : "string",
+  "PmjdwpPossibleConstraints" : "string",
+  "PmjdwpCrewFeedback" : "string",
+  "PmjdwpGoalsMetTodayFlag" : "string",
+  "PmjdwpGoalsMetReasons" : "string",
+  "PmjdwpAdditionalResources" : "string",
+  "PmjdwpSafetyConcerns" : "string",
+  "PmjdwpTztObserverName" : "string",
+  "PmjdwpToolboxTalkFlag" : "string",
+  "PmjdwpIphMobileEqpFlag" : "string",
+  "PmjdwpIphUndgrdStrikesFlag" : "string",
+  "PmjdwpIphOvrhdPwrlinesFlag" : "string",
+  "PmjdwpIphPtclInEyeFlag" : "string",
+  "PmjdwpIphOvRpWorkFlag" : "string",
+  "PmjdwpIphElevatedLoadsFlag" : "string",
+  "PmjdwpIphFallOverFlag" : "string",
+  "PmjdwpIphDustFlag" : "string",
+  "PmjdwpIphOvhdWorkFlag" : "string",
+  "PmjdwpIphSprainsFlag" : "string",
+  "PmjdwpIphDroppingFlag" : "string",
+  "PmjdwpIphFaultyRiggingFlag" : "string",
+  "PmjdwpIphSlipTripFallFlag" : "string",
+  "PmjdwpIphFireHotFlag" : "string",
+  "PmjdwpIphTrafficCtrlFlag" : "string",
+  "PmjdwpIphAbrasionCutFlag" : "string",
+  "PmjdwpIphCaveInFlag" : "string",
+  "PmjdwpIphHzrdNoiseFlag" : "string",
+  "PmjdwpIphHeatColdFlag" : "string",
+  "PmjdwpIphLoadSecureFlag" : "string",
+  "PmjdwpIphElectricShockFlag" : "string",
+  "PmjdwpIphPinchPointFlag" : "string",
+  "PmjdwpIphCraneCapacityFlag" : "string",
+  "PmjdwpIphBlastingFlag" : "string",
+  "PmjdwpAhePpeHeadFlag" : "string",
+  "PmjdwpAhePpeEyeFlag" : "string",
+  "PmjdwpAhePpeHandFlag" : "string",
+  "PmjdwpAhePpeFootFlag" : "string",
+  "PmjdwpAhePpeHearingFlag" : "string",
+  "PmjdwpAhePpeHarnessFlag" : "string",
+  "PmjdwpAhePpeFallFlag" : "string",
+  "PmjdwpAhePpeRespiFlag" : "string",
+  "PmjdwpAheWzsCrewFlag" : "string",
+  "PmjdwpAheWzsSupervisorFlag" : "string",
+  "PmjdwpAheWzsTrafficFlag" : "string",
+  "PmjdwpAheWzsWarningFlag" : "string",
+  "PmjdwpAheWzsVestsFlag" : "string",
+  "PmjdwpAheWzsFlaggerFlag" : "string",
+  "PmjdwpAheEqpRiggingFlag" : "string",
+  "PmjdwpAheEqpGuardsFlag" : "string",
+  "PmjdwpAheEqpRadiusFlag" : "string",
+  "PmjdwpSafetyObservation" : "string",
+  "PmjdwpInjuriesIncidentsFlag" : "string",
+  "PmjdwpIncidentNearmissFlag" : "string",
+  "PmjdwpInjuredPersonNames" : "string",
+  "PmjdwpIncidentDesc" : "string",
+  "PmjdwpSafetyConcernsNext" : "string",
+  "PmjdwpPlayBookInfo" : "string",
+  "PmjdwpIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjdwpIuCreateUser" : "string",
+  "PmjdwpIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjdwpIuUpdateUser" : "string",
+  "PmjdwpVUuid" : "string",
+  "PmjdwpJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f0576eed-e59a-4b2d-aee9-cd15cc552d9e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="1139ecaf-e530-433a-a814-82ec94314a51" method="DELETE">
+    <con:description>Delete a Specific PM Daily Journal Daily Work Plan</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1161af63-1424-401d-a256-ffdc519be82b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="0fbdc79a-59d6-4a22-b5c5-c52d9698ffc7" method="PATCH">
+    <con:description>Update a Specific PM Daily Journal Daily Work Plan</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjdwpWorkLoc" : "string",
+  "PmjdwpWorkDesc" : "string",
+  "PmjdwpCtgcWorkPlan" : "string",
+  "PmjdwpPlaningPacketFlag" : "string",
+  "PmjdwpQualityChecksReq" : "string",
+  "PmjdwpCoordinationReq" : "string",
+  "PmjdwpQualityIssues" : "string",
+  "PmjdwpTomorrowOverview" : "string",
+  "PmjdwpSuccessFailures" : "string",
+  "PmjdwpInterimGoal1" : "string",
+  "PmjdwpInterimGoal2" : "string",
+  "PmjdwpInterimGoal3" : "string",
+  "PmjdwpPossibleConstraints" : "string",
+  "PmjdwpCrewFeedback" : "string",
+  "PmjdwpGoalsMetTodayFlag" : "string",
+  "PmjdwpGoalsMetReasons" : "string",
+  "PmjdwpAdditionalResources" : "string",
+  "PmjdwpSafetyConcerns" : "string",
+  "PmjdwpTztObserverName" : "string",
+  "PmjdwpToolboxTalkFlag" : "string",
+  "PmjdwpIphMobileEqpFlag" : "string",
+  "PmjdwpIphUndgrdStrikesFlag" : "string",
+  "PmjdwpIphOvrhdPwrlinesFlag" : "string",
+  "PmjdwpIphPtclInEyeFlag" : "string",
+  "PmjdwpIphOvRpWorkFlag" : "string",
+  "PmjdwpIphElevatedLoadsFlag" : "string",
+  "PmjdwpIphFallOverFlag" : "string",
+  "PmjdwpIphDustFlag" : "string",
+  "PmjdwpIphOvhdWorkFlag" : "string",
+  "PmjdwpIphSprainsFlag" : "string",
+  "PmjdwpIphDroppingFlag" : "string",
+  "PmjdwpIphFaultyRiggingFlag" : "string",
+  "PmjdwpIphSlipTripFallFlag" : "string",
+  "PmjdwpIphFireHotFlag" : "string",
+  "PmjdwpIphTrafficCtrlFlag" : "string",
+  "PmjdwpIphAbrasionCutFlag" : "string",
+  "PmjdwpIphCaveInFlag" : "string",
+  "PmjdwpIphHzrdNoiseFlag" : "string",
+  "PmjdwpIphHeatColdFlag" : "string",
+  "PmjdwpIphLoadSecureFlag" : "string",
+  "PmjdwpIphElectricShockFlag" : "string",
+  "PmjdwpIphPinchPointFlag" : "string",
+  "PmjdwpIphCraneCapacityFlag" : "string",
+  "PmjdwpIphBlastingFlag" : "string",
+  "PmjdwpAhePpeHeadFlag" : "string",
+  "PmjdwpAhePpeEyeFlag" : "string",
+  "PmjdwpAhePpeHandFlag" : "string",
+  "PmjdwpAhePpeFootFlag" : "string",
+  "PmjdwpAhePpeHearingFlag" : "string",
+  "PmjdwpAhePpeHarnessFlag" : "string",
+  "PmjdwpAhePpeFallFlag" : "string",
+  "PmjdwpAhePpeRespiFlag" : "string",
+  "PmjdwpAheWzsCrewFlag" : "string",
+  "PmjdwpAheWzsSupervisorFlag" : "string",
+  "PmjdwpAheWzsTrafficFlag" : "string",
+  "PmjdwpAheWzsWarningFlag" : "string",
+  "PmjdwpAheWzsVestsFlag" : "string",
+  "PmjdwpAheWzsFlaggerFlag" : "string",
+  "PmjdwpAheEqpRiggingFlag" : "string",
+  "PmjdwpAheEqpGuardsFlag" : "string",
+  "PmjdwpAheEqpRadiusFlag" : "string",
+  "PmjdwpSafetyObservation" : "string",
+  "PmjdwpInjuriesIncidentsFlag" : "string",
+  "PmjdwpIncidentNearmissFlag" : "string",
+  "PmjdwpInjuredPersonNames" : "string",
+  "PmjdwpIncidentDesc" : "string",
+  "PmjdwpSafetyConcernsNext" : "string",
+  "PmjdwpPlayBookInfo" : "string",
+  "PmjdwpIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjdwpIuCreateUser" : "string",
+  "PmjdwpIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjdwpIuUpdateUser" : "string",
+  "PmjdwpVUuid" : "string",
+  "PmjdwpJournalVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjdwpJournalVUuid":"string","PmjdwpVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="a22488b4-6b5f-4e0e-ae17-7ee0f29d8f91" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjdwpJournalVUuid":"string","PmjdwpVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="49fdc4f9-385c-4397-82b0-847e83fdcad2" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjdwpWorkDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

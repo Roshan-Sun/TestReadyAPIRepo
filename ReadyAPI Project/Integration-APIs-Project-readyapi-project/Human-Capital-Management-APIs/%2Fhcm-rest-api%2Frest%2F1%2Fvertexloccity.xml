@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/vertexloccity" path="/hcm-rest-api/rest/1/vertexloccity" id="7a9c203d-260b-426a-bbcb-6c135afb368e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7a9c203d-260b-426a-bbcb-6c135afb368efileName">%2Fhcm-rest-api%2Frest%2F1%2Fvertexloccity</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e38ceaab-790a-4c03-a7ea-daf311b98374" method="GET">
+    <con:description>Retrieve Vertex Location Cities</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>VertexLocCityFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AbbrevCityVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Abbreviated City (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ApofPoindVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>ApofPoind (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CityNameTypeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>City Name Type (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompressedCityVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Compressed City (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>GeocityVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Geographic City (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>GeocountyVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Geographic County (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>GeostateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Geographic State (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>NameCityVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>City Name (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>UpdFlg</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Updated Flag (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ZipCodeStartVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Starting of Zip Code Interval (VertexLocCityFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ZipCodeEndVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Ending of Zip Code Interval (VertexLocCityFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "Locgeostate" : 0,
+  "Locgeocounty" : 0,
+  "Locgeocity" : 0,
+  "Loccompressedcity" : "string",
+  "Locnamecity" : "string",
+  "Locabbrevcity" : "string",
+  "Loczipcodestart" : "string",
+  "Loczipcodeend" : "string",
+  "Locapofpoind" : 0,
+  "Loccitynametype" : 0,
+  "Locupdflg" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="8281b798-5ca5-436b-aa43-452ffe9876b3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

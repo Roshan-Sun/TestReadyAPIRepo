@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/workorder/{Vuuid}" path="/prm-rest-api/rest/1/workorder/{Vuuid}" id="e99c0e12-e266-4693-9f68-304d5ae0e1ef" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e99c0e12-e266-4693-9f68-304d5ae0e1effileName">%2Fprm-rest-api%2Frest%2F1%2Fworkorder%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="edbd15ca-3e47-479e-9e69-a418cf52e1ca" method="GET">
+    <con:description>Retrieve a Specific Work Order</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "WoCompCode" : "string",
+  "WoCompName" : "string",
+  "WoCode" : "string",
+  "WoNumber" : 0,
+  "WoDescription" : "string",
+  "WoType" : "string",
+  "WoCostingType" : "string",
+  "WoCostingTypeDesc" : "string",
+  "WoBillingType" : "string",
+  "WoBillingTypeDesc" : "string",
+  "WoStatus" : "string",
+  "WoStatusDesc" : "string",
+  "WoShopWoFlag" : "string",
+  "WoPriorityNumber" : 0,
+  "WoReceivedDateTime" : "YYYY-MM-dd",
+  "WoReceivedDate" : "string",
+  "WoReceivedTime" : "string",
+  "WoReqStartDateTime" : "YYYY-MM-dd",
+  "WoReqEndDateTime" : "YYYY-MM-dd",
+  "WoDispatchedDateTime" : "YYYY-MM-dd",
+  "WoStartDateTime" : "YYYY-MM-dd",
+  "WoCompletionDateTime" : "YYYY-MM-dd",
+  "WoComments" : "string",
+  "WoClass1" : "string",
+  "WoClass2" : "string",
+  "WoClass3" : "string",
+  "WoClass4" : "string",
+  "WoPrintCounter" : 0,
+  "WoMteamCode" : "string",
+  "WoCreatedBy" : "string",
+  "WoDateCreated" : "YYYY-MM-dd",
+  "WoModifiedBy" : "string",
+  "WoDateModified" : "YYYY-MM-dd",
+  "WoTranType" : "string",
+  "WoCostCompCode" : "string",
+  "WoCostCompName" : "string",
+  "WoCostDeptCode" : "string",
+  "WoCostDeptName" : "string",
+  "WoVendorCode" : "string",
+  "WoTitle" : "string",
+  "WoDeptCode" : "string",
+  "WoCostJobCode" : "string",
+  "WoCustCode" : "string",
+  "WoCustName" : "string",
+  "WoBillAmtFrmtd" : "string",
+  "WoAppTypeCode" : "string",
+  "WoIssueId" : "string",
+  "WoDmLocCode" : "string",
+  "WoDmLocName" : "string",
+  "WoJobBidFlag" : "string",
+  "WoProjCode" : "string",
+  "WoProjName" : "string",
+  "WoProjJobCode" : "string",
+  "WoBillingRateTableCode" : "string",
+  "WoInvoiceFormat" : "string",
+  "WoInvoiceFormatName" : "string",
+  "WoEntry2Flag" : "string",
+  "WoTax1Code" : "string",
+  "WoTax2Code" : "string",
+  "WoTax3Code" : "string",
+  "WoFfPoNum" : "string",
+  "WoAddrCode" : "string",
+  "WoAddrTypeCode" : "string",
+  "WoVUuid" : "string",
+  "WoIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "WoIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bfbd19fe-3873-46b6-a8e3-f45376dd979c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

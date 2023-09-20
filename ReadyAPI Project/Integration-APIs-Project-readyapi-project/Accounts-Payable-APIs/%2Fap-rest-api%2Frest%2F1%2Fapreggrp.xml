@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreggrp" path="/ap-rest-api/rest/1/apreggrp" id="5a7d7201-2c1e-4c58-960b-c942b8690a6b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5a7d7201-2c1e-4c58-960b-c942b8690a6bfileName">%2Fap-rest-api%2Frest%2F1%2Fapreggrp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="retrieve-ap-invoice-registry-group" id="32bc5805-007e-446b-89ba-cc1784552b9a" method="GET">
+    <con:description>Retrieve AP - Invoice Registry Group</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AprgCompCode" : "string",
+  "AprgCode" : "string",
+  "AprgDesc" : "string",
+  "DiscriminatorCode" : "string",
+  "AprgVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="598a4bbf-7414-4093-bb64-9cc20e0daade" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

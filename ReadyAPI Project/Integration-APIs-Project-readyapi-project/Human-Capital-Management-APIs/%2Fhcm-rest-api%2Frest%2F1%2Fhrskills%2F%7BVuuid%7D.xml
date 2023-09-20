@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrskills/{Vuuid}" path="/hcm-rest-api/rest/1/hrskills/{Vuuid}" id="252f6992-6933-4c48-8a77-d82e693098e2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="252f6992-6933-4c48-8a77-d82e693098e2fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrskills%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e197eeeb-4820-4e4d-a3eb-6e5f5a03d23f" method="GET">
+    <con:description>Retrieve a Specific HR Employee Skill</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsklCode" : "string",
+  "GsklDescription" : "string",
+  "GsklShortDesc" : "string",
+  "GsklRate" : 0,
+  "GsklWmCode" : "string",
+  "GsklUser" : "string",
+  "GsklLastUpdDate" : "YYYY-MM-dd",
+  "GsklVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fbb24799-e62d-4d15-a025-0c1c33cefbc9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="7465d0b0-2c84-42ef-b1e1-c2ceea94ca8a" method="PATCH">
+    <con:description>Update a Specific HR Employee Skill</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsklCode" : "string",
+  "GsklDescription" : "string",
+  "GsklShortDesc" : "string",
+  "GsklRate" : 0,
+  "GsklWmCode" : "string",
+  "GsklUser" : "string",
+  "GsklLastUpdDate" : "YYYY-MM-dd",
+  "GsklVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"GsklCode":"string","GsklUser":"string","GsklLastUpdDate":"string","GsklVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e6ae2d60-324b-4502-81a2-6542ac57a4bd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsklCode":"string","GsklUser":"string","GsklLastUpdDate":"string","GsklVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="8ee25dc4-8121-44e8-83c1-e323ac998686" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsklShortDesc":"yessir"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

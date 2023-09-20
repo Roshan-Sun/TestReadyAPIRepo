@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/ukgpayheader" path="/hcm-rest-api/rest/1/ukgpayheader" id="67698e0a-7f4f-4dc2-adfb-61b2d79f52ff" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="67698e0a-7f4f-4dc2-adfb-61b2d79f52fffileName">%2Fhcm-rest-api%2Frest%2F1%2Fukgpayheader</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="866b47a7-09ec-4a64-9b43-c47f4e912dd0" method="GET">
+    <con:description>Retrieve Pay Headers</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectPaidChq</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectPaidChq)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>employeeNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectPaidChq)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payRunCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Run Code (selectPaidChq)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payYear</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Year (selectPaidChq)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>payPeriod</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Period (selectPaidChq)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmpCompCode" : "string",
+  "EmpNo" : "string",
+  "EmpLastName" : "string",
+  "EmpFirstName" : "string",
+  "EmpSsnNo" : "string",
+  "EmpDocNo" : "string",
+  "EmpPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpPayPeriod" : 0,
+  "EmpPayYear" : 0,
+  "EmpCheckNum" : 0,
+  "EmpChqSeqNo" : "string",
+  "EmpPayCountryCode" : "string",
+  "EmpChqIsVoid" : "string",
+  "EmpChqCurrencyCode" : "string",
+  "EmpAddressLine1" : "string",
+  "EmpAddressLine2" : "string",
+  "EmpAddressMunicipality" : "string",
+  "EmpAddressRegion" : "string",
+  "EmpPostalCode" : "string",
+  "EmpCountryCode" : "string",
+  "EmpJobCode" : "string",
+  "EmpLocationDesc" : "string",
+  "EmpOrgLvl1" : "string",
+  "EmpOrgLvl2" : "string",
+  "EmpOrgLvl3" : "string",
+  "EmpOrgLvl4" : "string",
+  "EmpPayGroup" : "string",
+  "EmpPayRunCode" : "string",
+  "EmpChqPerStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpChqPerEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "SourceSystem" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="655122b4-34e3-493b-b580-415fa3e28970" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

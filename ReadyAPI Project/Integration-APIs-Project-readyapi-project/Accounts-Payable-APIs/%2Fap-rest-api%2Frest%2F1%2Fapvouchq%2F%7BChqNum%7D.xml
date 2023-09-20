@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apvouchq/{ChqNum}" path="/ap-rest-api/rest/1/apvouchq/{ChqNum}" id="f5a9a79b-da1e-4bfa-a7a4-ace4c7c3f2b9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f5a9a79b-da1e-4bfa-a7a4-ace4c7c3f2b9fileName">%2Fap-rest-api%2Frest%2F1%2Fapvouchq%2F%7BChqNum%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ff2d7e75-33d8-4e17-adfb-0f02033f69e7" method="GET">
+    <con:description>Retrieve Cheque by Cheque Number</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>ChqNum</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Cheque Number that was used when paying vouchers</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "VchqCompCode" : "string",
+  "VchqVenCode" : "string",
+  "VchqVenName" : "string",
+  "VchqChqNum" : 0,
+  "VchqChqSeq" : 0,
+  "VchqChqCompCode" : "string",
+  "VchqInvCode" : "string",
+  "VchqVouNum" : 0,
+  "VchqVouDesc" : "string",
+  "VchqPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "Vchq1099Code" : "string",
+  "Vchq1099Name" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="10ee52c2-e6d7-411f-af7a-8c76b5d0ab13" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/babank" path="/sys-rest-api/rest/1/babank" id="bbd92402-b5be-4861-9fc8-4e2dd4dbd150" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bbd92402-b5be-4861-9fc8-4e2dd4dbd150fileName">%2Fsys-rest-api%2Frest%2F1%2Fbabank</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="244d5090-d577-47b0-b05d-e08da9c45c82" method="GET">
+    <con:description>Retrieve Ba Banks</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BnkBankCode" : "string",
+  "BnkBankName" : "string",
+  "BnkShortName" : "string",
+  "BnkUser" : "string",
+  "BnkLastUpdDate" : "YYYY-MM-dd",
+  "BnkExchgProg" : "string",
+  "BnkStmtProg" : "string",
+  "BnkPayordersProg" : "string",
+  "BnkCountryCode" : "string",
+  "BnkSwift" : "string",
+  "BnkActiveFlag" : "string",
+  "BnkJrnlCode" : "string",
+  "BnkExchgFileName" : "string",
+  "BnkStmtFileName" : "string",
+  "BnkPayordersFileName" : "string",
+  "BnkCreateUser" : "string",
+  "BnkCreateDate" : "YYYY-MM-dd",
+  "BnkLastUpdUser" : "string",
+  "BnkAltCode" : "string",
+  "BnkRoutingCode" : "string",
+  "BnkAchLogonText" : "string",
+  "BnkAccNumFormatFlag" : "string",
+  "BnkBankId" : "string",
+  "BnkPassword" : "string",
+  "BnkPpayFileFmt" : "string",
+  "BnkPpayFileName" : "string",
+  "BnkVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="9b442ce6-1761-4ace-b0df-df2e520d9677" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="fa2a9238-2521-4283-8b46-bc9f5d5a9984" method="POST">
+    <con:description>Create a BA Bank</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BnkBankCode" : "string",
+  "BnkBankName" : "string",
+  "BnkShortName" : "string",
+  "BnkUser" : "string",
+  "BnkLastUpdDate" : "YYYY-MM-dd",
+  "BnkExchgProg" : "string",
+  "BnkStmtProg" : "string",
+  "BnkPayordersProg" : "string",
+  "BnkCountryCode" : "string",
+  "BnkSwift" : "string",
+  "BnkActiveFlag" : "string",
+  "BnkJrnlCode" : "string",
+  "BnkExchgFileName" : "string",
+  "BnkStmtFileName" : "string",
+  "BnkPayordersFileName" : "string",
+  "BnkCreateUser" : "string",
+  "BnkCreateDate" : "YYYY-MM-dd",
+  "BnkLastUpdUser" : "string",
+  "BnkAltCode" : "string",
+  "BnkRoutingCode" : "string",
+  "BnkAchLogonText" : "string",
+  "BnkAccNumFormatFlag" : "string",
+  "BnkBankId" : "string",
+  "BnkPassword" : "string",
+  "BnkPpayFileFmt" : "string",
+  "BnkPpayFileName" : "string",
+  "BnkVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BnkBankName":"string","BnkBankCode":"string","BnkShortName":"string","BnkVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="8a51f0df-e37a-465e-86f4-c027902a8602" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BnkBankName":"string","BnkBankCode":"string","BnkShortName":"string","BnkVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="022af732-1a72-4e15-b744-e8563ff0fe9c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BnkCountryCode":"CA"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

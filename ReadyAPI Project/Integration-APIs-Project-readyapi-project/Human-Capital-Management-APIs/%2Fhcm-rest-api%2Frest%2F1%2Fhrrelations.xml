@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrrelations" path="/hcm-rest-api/rest/1/hrrelations" id="8cbb24b0-9320-44d8-8fa8-95cace7967b9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8cbb24b0-9320-44d8-8fa8-95cace7967b9fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrrelations</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="5d6ae01e-7b57-422c-97e3-37bfec395878" method="GET">
+    <con:description>Retrieve HR Relations</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>RelCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Relation Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>RelDesc</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Relation Description (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "RelaCode" : "string",
+  "RelaDescription" : "string",
+  "RelaVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d7ce5b77-3b9a-48d5-a097-fac6ae7dd313" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="abb401e6-3519-4c65-8580-f49a0ffa057e" method="POST">
+    <con:description>Create an HR Relation</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "RelaCode" : "string",
+  "RelaDescription" : "string",
+  "RelaVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"RelaCode":"string","RelaDescription":"string","RelaVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="83dfbcfe-7c89-42e3-9f83-3ff2a9a66725" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"RelaCode":"string","RelaDescription":"string","RelaVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="22e4ac18-d6ee-44f8-8535-86c9b1647caa" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"RelaDescription":"testing 123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

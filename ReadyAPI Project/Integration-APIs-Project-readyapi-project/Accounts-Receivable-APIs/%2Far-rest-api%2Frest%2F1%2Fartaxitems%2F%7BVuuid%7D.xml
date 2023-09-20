@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/artaxitems/{Vuuid}" path="/ar-rest-api/rest/1/artaxitems/{Vuuid}" id="20058108-c033-49c8-847a-f7a01f58b8f7" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="20058108-c033-49c8-847a-f7a01f58b8f7fileName">%2Far-rest-api%2Frest%2F1%2Fartaxitems%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e935fa91-83a8-41ba-846d-cac7725678ab" method="GET">
+    <con:description>Retrieve a specific AR Tax Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique raw ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArtaxCompCode" : "string",
+  "ArtaxCode" : "string",
+  "ArtaxName" : "string",
+  "ArtaxShortName" : "string",
+  "ArtaxDeptCode" : "string",
+  "ArtaxAccCode" : "string",
+  "ArtaxHldbkDeptCode" : "string",
+  "ArtaxHldbkAccCode" : "string",
+  "ArtaxApDeptCode" : "string",
+  "ArtaxApAccCode" : "string",
+  "ArtaxApHldbkDeptCode" : "string",
+  "ArtaxApHldbkAccCode" : "string",
+  "ArtaxPercent" : 0,
+  "ArtaxFrtCode" : "string",
+  "ArtaxInsCode" : "string",
+  "ArtaxMiscCode" : "string",
+  "ArtaxTaxCode" : "string",
+  "ArtaxLneCode" : "string",
+  "ArtaxFobCode" : "string",
+  "ArtaxApIncFlag" : "string",
+  "ArtaxApCreditFlag" : "string",
+  "ArtaxApDirectPayFlag" : "string",
+  "ArtaxApLiabDeptCode" : "string",
+  "ArtaxApLiabAccCode" : "string",
+  "ArtaxPayJourCode" : "string",
+  "ArtaxDirectPayVenCode" : "string",
+  "ArtaxCompoundTaxFlag" : "string",
+  "ArtaxNonTaxableFlag" : "string",
+  "ArtaxJbInvTaxRegistration" : "string",
+  "ArtaxJbCostPhsCode" : "string",
+  "ArtaxJbCostCatCode" : "string",
+  "ArtaxActiveFlag" : "string",
+  "ArtaxPayPercent" : 0,
+  "ArtaxTdsTax" : "string",
+  "ArtaxVUuid" : "string",
+  "ArtaxIuCreateDate" : "YYYY-MM-dd",
+  "ArtaxIuCreateUser" : "string",
+  "ArtaxIuUpdateDate" : "YYYY-MM-dd",
+  "ArtaxIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="19dfa52e-a7df-400f-afcc-5f49f28db387" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="1b3ad900-d4df-4222-b464-e80aa957c774" method="DELETE">
+    <con:description>Delete a Specific AR Tax Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="57f3bf40-26ca-49c9-a700-64ad4fdf7ac8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="21bb39ad-3899-48a0-a3f4-74fa01bbb92a" method="PATCH">
+    <con:description>Update a specific AR Tax Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for raw</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ArtaxCompCode" : "string",
+  "ArtaxCode" : "string",
+  "ArtaxName" : "string",
+  "ArtaxShortName" : "string",
+  "ArtaxDeptCode" : "string",
+  "ArtaxAccCode" : "string",
+  "ArtaxHldbkDeptCode" : "string",
+  "ArtaxHldbkAccCode" : "string",
+  "ArtaxApDeptCode" : "string",
+  "ArtaxApAccCode" : "string",
+  "ArtaxApHldbkDeptCode" : "string",
+  "ArtaxApHldbkAccCode" : "string",
+  "ArtaxPercent" : 0,
+  "ArtaxFrtCode" : "string",
+  "ArtaxInsCode" : "string",
+  "ArtaxMiscCode" : "string",
+  "ArtaxTaxCode" : "string",
+  "ArtaxLneCode" : "string",
+  "ArtaxFobCode" : "string",
+  "ArtaxApIncFlag" : "string",
+  "ArtaxApCreditFlag" : "string",
+  "ArtaxApDirectPayFlag" : "string",
+  "ArtaxApLiabDeptCode" : "string",
+  "ArtaxApLiabAccCode" : "string",
+  "ArtaxPayJourCode" : "string",
+  "ArtaxDirectPayVenCode" : "string",
+  "ArtaxCompoundTaxFlag" : "string",
+  "ArtaxNonTaxableFlag" : "string",
+  "ArtaxJbInvTaxRegistration" : "string",
+  "ArtaxJbCostPhsCode" : "string",
+  "ArtaxJbCostCatCode" : "string",
+  "ArtaxActiveFlag" : "string",
+  "ArtaxPayPercent" : 0,
+  "ArtaxTdsTax" : "string",
+  "ArtaxVUuid" : "string",
+  "ArtaxIuCreateDate" : "YYYY-MM-dd",
+  "ArtaxIuCreateUser" : "string",
+  "ArtaxIuUpdateDate" : "YYYY-MM-dd",
+  "ArtaxIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ArtaxCode":"string","ArtaxCompCode":"string","ArtaxActiveFlag":"string","ArtaxDeptCode":"string","ArtaxAccCode":"string","ArtaxHldbkAccCode":"string","ArtaxHldbkDeptCode":"string","ArtaxPercent":"integer","ArtaxFrtCode":"string","ArtaxInsCode":"string","ArtaxMiscCode":"string","ArtaxTaxCode":"string","ArtaxLneCode":"string","ArtaxFobCode":"string","ArtaxApIncFlag":"string","ArtaxApCreditFlag":"string","ArtaxApAccCode":"string","ArtaxApDeptCode":"string","ArtaxApHldbkAccCode":"string","ArtaxApHldbkDeptCode":"string","ArtaxApDirectPayFlag":"string","ArtaxCompoundTaxFlag":"string","ArtaxNonTaxableFlag":"string","ArtaxVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="b2b467ae-5e99-4069-a66a-3cadf620912d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ArtaxCode":"string","ArtaxCompCode":"string","ArtaxActiveFlag":"string","ArtaxDeptCode":"string","ArtaxAccCode":"string","ArtaxHldbkAccCode":"string","ArtaxHldbkDeptCode":"string","ArtaxPercent":"integer","ArtaxFrtCode":"string","ArtaxInsCode":"string","ArtaxMiscCode":"string","ArtaxTaxCode":"string","ArtaxLneCode":"string","ArtaxFobCode":"string","ArtaxApIncFlag":"string","ArtaxApCreditFlag":"string","ArtaxApAccCode":"string","ArtaxApDeptCode":"string","ArtaxApHldbkAccCode":"string","ArtaxApHldbkDeptCode":"string","ArtaxApDirectPayFlag":"string","ArtaxCompoundTaxFlag":"string","ArtaxNonTaxableFlag":"string","ArtaxVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

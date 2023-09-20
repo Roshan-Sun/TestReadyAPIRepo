@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/gtregion" path="/sys-rest-api/rest/1/gtregion" id="53ca2785-886b-40c8-8edb-d9ae714ca925" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="53ca2785-886b-40c8-8edb-d9ae714ca925fileName">%2Fsys-rest-api%2Frest%2F1%2Fgtregion</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c6434e72-c129-4c8d-8460-09d476e7cf33" method="GET">
+    <con:description>Retrieve Region Lists</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByRegCode or selectByRegName</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>regionCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Region Code (selectByRegCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>regionName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Region Name (selectByRegName)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "RegCode" : "string",
+  "RegName" : "string",
+  "RegComplianceCode" : "string",
+  "RegIuCreateDate" : "YYYY-MM-dd",
+  "RegIuUpdateDate" : "YYYY-MM-dd",
+  "RegVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="72810a2d-23aa-4b62-8e74-cf3dfd3208ca" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="2c56a6be-4b1a-451f-ac53-92b4f482f67a" method="POST">
+    <con:description>Create Region</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "RegCode" : "string",
+  "RegName" : "string",
+  "RegComplianceCode" : "string",
+  "RegIuCreateDate" : "YYYY-MM-dd",
+  "RegIuUpdateDate" : "YYYY-MM-dd",
+  "RegVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"RegCode":"string","RegName":"string","RegVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="cb25a8ca-7fc2-4999-b3a9-7614e9ea8ca1" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"RegCode":"string","RegName":"string","RegVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5b89fc41-2319-4679-84f8-36725b5bd561" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"RegName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

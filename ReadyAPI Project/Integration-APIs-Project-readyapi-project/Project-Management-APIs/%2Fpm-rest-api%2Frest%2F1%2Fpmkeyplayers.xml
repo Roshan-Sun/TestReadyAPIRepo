@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmkeyplayers" path="/pm-rest-api/rest/1/pmkeyplayers" id="9db6af8e-9fac-4e94-8ad8-f7da91ac772f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9db6af8e-9fac-4e94-8ad8-f7da91ac772ffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmkeyplayers</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0e7bf2f9-a193-4724-b102-6e5f7f3c863c" method="GET">
+    <con:description>Retrieve PM Key Players</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectKeyPlayers</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projectuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project UUID (selectKeyPlayers)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmkpCompCode" : "string",
+  "PmkpRoleCode" : "string",
+  "PmkpRoleName" : "string",
+  "PmkpOrderSeq" : 0,
+  "PmkpPartnCode" : "string",
+  "PmkpAbbrevPartnCode" : "string",
+  "PmkpPartnTypeCode" : "string",
+  "PmkpPartnName" : "string",
+  "PmkpContactCode" : "string",
+  "PmkpContactName" : "string",
+  "PmkpPrintOnTrnsmFlag" : "string",
+  "PmkpTrnsmPrintOrderNum" : 0,
+  "PmkpAdminPrivReqFlag" : "string",
+  "PmkpEsignOrderNum" : 0,
+  "PmprojpartnerVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="80a3071b-f90a-440f-a5ea-14168e3b6bfe" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

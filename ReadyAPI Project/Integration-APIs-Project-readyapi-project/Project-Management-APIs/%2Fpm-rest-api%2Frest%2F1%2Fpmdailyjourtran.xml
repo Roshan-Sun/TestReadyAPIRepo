@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourtran" path="/pm-rest-api/rest/1/pmdailyjourtran" id="28f94afa-622a-4cf6-b8bc-152cc064563c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="28f94afa-622a-4cf6-b8bc-152cc064563cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourtran</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e090697f-2380-4e7f-aa33-f837e88ffc42" method="GET">
+    <con:description>Retrieve PM Daily Journal Transactions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByJournal</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JournalVuuid</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>UUID of Journal to link to (selectByJournal)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjutCompCode" : "string",
+  "PmjutJobCode" : "string",
+  "PmjutPhsCode" : "string",
+  "PmjutPhsName" : "string",
+  "PmjutWmCode" : "string",
+  "PmjutPhsActiveFlag" : "string",
+  "PmjutDatePosted" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutNotes" : "string",
+  "PmjutCrewCode" : "string",
+  "PmjutIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutIuCreateUser" : "string",
+  "PmjutIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutIuUpdateUser" : "string",
+  "PmjutVUuid" : "string",
+  "PmjutJourVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ce4b3492-3346-409c-a55a-5bc416246a36" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="d126bbd9-8ef5-4dde-9d13-8c9353140ca0" method="POST">
+    <con:description>Create a PM Daily Journal Transaction</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmjutCompCode" : "string",
+  "PmjutJobCode" : "string",
+  "PmjutPhsCode" : "string",
+  "PmjutPhsName" : "string",
+  "PmjutWmCode" : "string",
+  "PmjutPhsActiveFlag" : "string",
+  "PmjutDatePosted" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutNotes" : "string",
+  "PmjutCrewCode" : "string",
+  "PmjutIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutIuCreateUser" : "string",
+  "PmjutIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmjutIuUpdateUser" : "string",
+  "PmjutVUuid" : "string",
+  "PmjutJourVuuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmjutCompCode":"string","PmjutJobCode":"string","PmjutNotes":"string","PmjutPhsActiveFlag":"string","PmjutPhsCode":"string","PmjutProjQty":"float","PmjutTranQty":"float","PmjutWmCode":"string","PmjutJourVuuid":"string","PmjutVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="d66e2b51-973a-4ffb-9cb4-63a839f13cda" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjutCompCode":"string","PmjutJobCode":"string","PmjutNotes":"string","PmjutPhsActiveFlag":"string","PmjutPhsCode":"string","PmjutProjQty":"float","PmjutTranQty":"float","PmjutWmCode":"string","PmjutJourVuuid":"string","PmjutVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="bd60191e-2205-42c5-86e0-5db572210455" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmjutTranQty":"1"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

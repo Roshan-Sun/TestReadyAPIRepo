@@ -1,0 +1,3570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="b0886c53-1b15-4718-9745-81c8c9daf6da" name="Preventative Maintenance APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-PRM-REST-API-1-resolved.yaml" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description># PRM-REST-API
+API documentation for **Preventative Maintenance** related screens provided by CMiC
+
+_Note: These APIs can only be accessed if already a customer of CMiC._</con:description>
+  <con:settings>
+    <con:setting id="b0886c53-1b15-4718-9745-81c8c9daf6dafileName">Preventative-Maintenance-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-PRM-REST-API-1-resolved.yaml">
+    <con:part>
+      <con:url>file:/C:/cm32/JDevv12/Repositories/TestReadyAPIRepo/YAML/CMiC-PRM-REST-API-1-resolved.yaml</con:url>
+      <con:content>---
+openapi: 3.0.0
+info:
+  title: Preventative Maintenance APIs
+  description: |
+    # PRM-REST-API
+    API documentation for **Preventative Maintenance** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: issuepriority
+  description: Issue Priorities
+- name: issuestatus
+  description: Issue Statuses
+- name: issuetype
+  description: Issue Types
+- name: prmaccumeqp
+  description: PRM Accumulative Equipment
+- name: prmpriority
+  description: PRM Priorities
+- name: prmtask
+  description: PRM Tasks
+- name: prmworkbudget
+  description: PRM Work Budgets
+- name: prmworkitem
+  description: PRM Work Items
+- name: prmworkorder
+  description: PRM Work Orders
+- name: workbudget
+  description: Work Budgets
+- name: workitem
+  description: Work Items
+- name: workorder
+  description: DM Work Orders
+paths:
+  /prm-rest-api/rest/1/issuepriority:
+    get:
+      tags:
+      - issuepriority
+      summary: Retrieve Issue Priorities
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuePriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - issuepriority
+      summary: Create an Issue Priority
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/IssuePriorityRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuePriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/issuepriority/{Vuuid}:
+    get:
+      tags:
+      - issuepriority
+      summary: Retrieve a Specific Issue Priority
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuePriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - issuepriority
+      summary: Update a Specific Issue Priority
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/IssuePriorityRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuePriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/issuestatus:
+    get:
+      tags:
+      - issuestatus
+      summary: Retrieve Issue Statuses
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - issuestatus
+      summary: Create an Issue Status
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/IssueStatusRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/issuestatus/{Vuuid}:
+    get:
+      tags:
+      - issuestatus
+      summary: Retrieve a Specific Issue Status
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - issuestatus
+      summary: Delete a Specific Issue Status
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - issuestatus
+      summary: Update a Specific Issue Status
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/IssueStatusRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueStatus'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/issuetype:
+    get:
+      tags:
+      - issuetype
+      summary: Retrieve Issue Types
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - issuetype
+      summary: Create an Issue Type
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/IssueTypeRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/issuetype/{Vuuid}:
+    get:
+      tags:
+      - issuetype
+      summary: Retrieve a Specific Issue Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - issuetype
+      summary: Delete a Specific Issue Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - issuetype
+      summary: Update a Specific Issue Type
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/IssueTypeRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueType'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmaccumeqp:
+    get:
+      tags:
+      - prmaccumeqp
+      summary: Retrieve PRM Accumulative Equipments
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmAccumEqp'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmaccumeqp
+      summary: Create an Accumulative Equipment
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmAccumEqpRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmAccumEqp'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmaccumeqp/{Vuuid}:
+    get:
+      tags:
+      - prmaccumeqp
+      summary: Retrieve a Specific Accumulated Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmAccumEqp'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - prmaccumeqp
+      summary: Delete a Specific Accumulated Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - prmaccumeqp
+      summary: Update a Specific Accumulated Equipment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/PrmAccumEqpRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmAccumEqp'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmpriority:
+    get:
+      tags:
+      - prmpriority
+      summary: Retrieve PRM Priority List
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmPriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmpriority
+      summary: Create a PRM Priority
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmPriorityRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmPriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmpriority/{Vuuid}:
+    get:
+      tags:
+      - prmpriority
+      summary: Retrieve Specific PRM Priority
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmPriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - prmpriority
+      summary: Update Specific PRM Priority
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/PrmPriorityRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmPriority'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmtask:
+    get:
+      tags:
+      - prmtask
+      summary: Retrieve PRM Tasks
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmTask'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmtask
+      summary: Create a PRM Task
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmTaskRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmTask'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmtask/{Vuuid}:
+    get:
+      tags:
+      - prmtask
+      summary: Retrieve a Specific Task
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmTask'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - prmtask
+      summary: Delete a Specific Task
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - prmtask
+      summary: Update a Specific Task
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/PrmTaskRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmTask'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmworkbudget:
+    get:
+      tags:
+      - prmworkbudget
+      summary: Retrieve PRM Work Budgets
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmworkbudget
+      summary: Create a PRM Work Budget
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmWorkBudgetRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmworkitem:
+    get:
+      tags:
+      - prmworkitem
+      summary: Retrieve PRM Work Items
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: auditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmworkitem
+      summary: Create a PRM Work Item
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmWorkItemRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmworkitem/{Vuuid}:
+    get:
+      tags:
+      - prmworkitem
+      summary: Retrieve a Specific PRM work item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - prmworkitem
+      summary: Update a Specific PRM work item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/PrmWorkItemRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmworkorder:
+    get:
+      tags:
+      - prmworkorder
+      summary: Retrieve PRM Work Orders
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode or selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: compCode
+        in: query
+        description: Company Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: workOrderCode
+        in: query
+        description: Work Order Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - prmworkorder
+      summary: Create a PRM Work Order
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/PrmWorkOrderRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/prmworkorder/{Vuuid}:
+    get:
+      tags:
+      - prmworkorder
+      summary: Retrieve a Specific PRM work order
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - prmworkorder
+      summary: Update a Specific PRM work order
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/PrmWorkOrderRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrmWorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workbudget:
+    get:
+      tags:
+      - workbudget
+      summary: Retrieve Work Budgets
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - workbudget
+      summary: Create a Work Budget
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/WorkBudgetRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workbudget/{Vuuid}:
+    get:
+      tags:
+      - workbudget
+      summary: Retrieve a Specific Work Budget
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkBudget'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workitem:
+    get:
+      tags:
+      - workitem
+      summary: Retrieve Work Items
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - workitem
+      summary: Create a Work Item
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/WorkItemRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workitem/{Vuuid}:
+    get:
+      tags:
+      - workitem
+      summary: Retrieve a Specific Work Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workorder:
+    get:
+      tags:
+      - workorder
+      summary: Retrieve Work Orders
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - workorder
+      summary: Create a Work Order
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/WorkOrderRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /prm-rest-api/rest/1/workorder/{Vuuid}:
+    get:
+      tags:
+      - workorder
+      summary: Retrieve a Specific Work Order
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkOrder'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    IssuePriority:
+      type: object
+      properties:
+        DmipPriorityCode:
+          maxLength: 1
+          type: string
+        DmipDesc:
+          maxLength: 30
+          type: string
+        DmipPrmPriorityLevel:
+          maxLength: 0
+          type: integer
+        DmipPrmPriorityDesc:
+          maxLength: 30
+          type: string
+        DmipVUuid:
+          maxLength: 64
+          type: string
+    IssueStatus:
+      type: object
+      properties:
+        DmisStatusCode:
+          maxLength: 1
+          type: string
+        DmisDesc:
+          maxLength: 30
+          type: string
+        DmisActiveFlag:
+          maxLength: 1
+          type: string
+        DmisIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmisIuCreateUser:
+          maxLength: 30
+          type: string
+        DmisIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmisIuUpdateUser:
+          maxLength: 30
+          type: string
+        DmisVUuid:
+          maxLength: 64
+          type: string
+    IssueType:
+      type: object
+      properties:
+        DmitTypeCode:
+          maxLength: 4
+          type: string
+        DmitDesc:
+          maxLength: 30
+          type: string
+        DmitCloseAllowedFlag:
+          maxLength: 1
+          type: string
+        DmitIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmitIuCreateUser:
+          maxLength: 30
+          type: string
+        DmitIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        DmitIuUpdateUser:
+          maxLength: 30
+          type: string
+        DmitVUuid:
+          maxLength: 64
+          type: string
+    PrmAccumEqp:
+      type: object
+      properties:
+        AccTypeCode:
+          maxLength: 2
+          type: string
+          description: "Account Type. Must be a valid Account Type in CMiC (ie. A,L,O,R,E)"
+        AccDescription:
+          maxLength: 2000
+          type: string
+        AccBaseValue:
+          maxLength: 16
+          type: number
+          format: float - 4 decimals
+        AccValue:
+          maxLength: 16
+          type: number
+          format: float - 4 decimals
+        AccReadingDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        AccDateCreated:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        AccCreatedBy:
+          maxLength: 30
+          type: string
+        AccDateModified:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        AccModifiedBy:
+          maxLength: 30
+          type: string
+        AccEqpName:
+          maxLength: 30
+          type: string
+        AccEqpCode:
+          maxLength: 10
+          type: string
+        AccEqpActiveFlag:
+          maxLength: 1
+          type: string
+        AccEmhlCompCode:
+          maxLength: 8
+          type: string
+        AccAutoupdHrlyAccumFlag:
+          maxLength: 1
+          type: string
+        AccPrevHours:
+          maxLength: 16
+          type: number
+          format: float - 4 decimals
+        AccLastCurrHours:
+          maxLength: 16
+          type: number
+          format: float - 4 decimals
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        AccIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        AccIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        AccVUuid:
+          maxLength: 64
+          type: string
+    PrmPriority:
+      type: object
+      properties:
+        PrmprLevel:
+          maxLength: 10
+          type: integer
+        PrmprDesc:
+          maxLength: 30
+          type: string
+        PrmprVUuid:
+          maxLength: 64
+          type: string
+    PrmTask:
+      type: object
+      properties:
+        TaskCode:
+          maxLength: 10
+          type: string
+          description: Unique identifier of the task
+        TaskPtgtType:
+          maxLength: 2
+          type: string
+          description: "‘EQ’ – Equipment, ‘CL’ – Equipment Class, ‘NO’ – None"
+        TaskTitle:
+          maxLength: 30
+          type: string
+          description: Descriptive name of the task
+        TaskDescription:
+          maxLength: 4000
+          type: string
+          description: More detailed description of the task
+        TaskMteamCode:
+          maxLength: 10
+          type: string
+          description: Team assigned to this task Reference table PRMTEAM (PTEAM_CODE)
+        TaskVendorCode:
+          maxLength: 8
+          type: string
+          description: Vendor for this task
+        TaskEstimatedHours:
+          maxLength: 16
+          type: number
+          description: Estimated duration in hours
+          format: float - 8 decimals
+        TaskActiveFlag:
+          maxLength: 1
+          type: string
+          description: Schedule this task only if this flag = 1
+        TaskGroupTaskFlag:
+          maxLength: 1
+          type: string
+          description: "1 – Yes, 0 – No. If set (1) create a work item for the equipment class."
+        TaskCmpoComponentCode:
+          maxLength: 10
+          type: string
+          description: PRM Component Reference table PRMCOMPONENTS (CMPO_COMPONENT_CODE)
+        TaskWiccLabCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for the labor work item cost code Reference table PRMWICOSTCODE (WICC_COMP_CODE)
+        TaskWiccLabCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code for labor Reference table PRMWICOSTCODE (WICC_CODE)
+        TaskWiccMatCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for the material work item cost code Reference table PRMWICOSTCODE (WICC_COMP_CODE)
+        TaskWiccMatCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code for material Reference table PRMWICOSTCODE (WICC_CODE)
+        TaskWiccConCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for the contractor work item cost code Reference table PRMWICOSTCODE (WICC_COMP_CODE)
+        TaskWiccConCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code for contractor Reference table PRMWICOSTCODE (WICC_CODE)
+        TaskWiccEqCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for the equipment work item cost code Reference table PRMWICOSTCODE (WICC_COMP_CODE)
+        TaskWiccEqCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code for equipment Reference table PRMWICOSTCODE (WICC_CODE)
+        TaskWiccOthCompCode:
+          maxLength: 8
+          type: string
+          description: Company code for the other work item cost code Reference table PRMWICOSTCODE (WICC_COMP_CODE)
+        TaskWiccOthCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code for other Reference table PRMWICOSTCODE (WICC_CODE)
+        TaskDateCreated:
+          type: string
+          description: Date of Task created
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        TaskCreatedBy:
+          maxLength: 30
+          type: string
+          description: Created by which user
+        TaskDateModified:
+          type: string
+          description: Date of Task modified
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        TaskModifiedBy:
+          maxLength: 30
+          type: string
+          description: Modified by which user
+        TaskClass1:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        TaskClass2:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        TaskClass3:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        TaskClass4:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        TaskSrcCompCode:
+          maxLength: 8
+          type: string
+          description: Source Company Code for Job or Department
+        TaskJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code for Job type tasks
+        TaskPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code for Job type tasks
+        TaskDeptCode:
+          maxLength: 6
+          type: string
+          description: Department Code for GL type tasks
+        TaskTypeCode:
+          maxLength: 3
+          type: string
+          description: "‘PRM’ for Eqp or Prm tasks, ‘CRM’ for others"
+        TaskBillingPricePerUnit:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        TaskBillingPricePerUnitWm:
+          maxLength: 2
+          type: string
+        TaskRelationColumn:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        TaskEntry3Code:
+          maxLength: 16
+          type: string
+        TaskUpdateOnlyEqpFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        TaskIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        TaskIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        TaskVUuid:
+          maxLength: 64
+          type: string
+    PrmWorkBudget:
+      type: object
+      properties:
+        PrmbdObjectTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdObjectVUuid:
+          maxLength: 64
+          type: string
+        PrmbdBudgTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdExpCode:
+          maxLength: 4
+          type: string
+        PrmbdMactCode:
+          maxLength: 10
+          type: string
+        PrmbdSklCode:
+          maxLength: 10
+          type: string
+        PrmbdPostDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        PrmbdQty:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdWmCode:
+          maxLength: 2
+          type: string
+        PrmbdBudgAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdMateType:
+          maxLength: 2
+          type: string
+        PrmbdMateItemClassCode:
+          maxLength: 4
+          type: string
+        PrmbdMateMevwCompCode:
+          maxLength: 8
+          type: string
+        PrmbdMateMevwItemCode:
+          maxLength: 16
+          type: string
+        PrmbdMateMevwItemTypeCode:
+          maxLength: 2
+          type: string
+        PrmbdToolCode:
+          maxLength: 10
+          type: string
+        PrmbdDesc:
+          maxLength: 60
+          type: string
+        PrmbdMechanicCode:
+          maxLength: 10
+          type: string
+        PrmbdCostFlag:
+          maxLength: 1
+          type: string
+        PrmbdBchNum:
+          maxLength: 15
+          type: integer
+        PrmbdWbsvCode1:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode2:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode3:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode4:
+          maxLength: 60
+          type: string
+        PrmbdPartnCode:
+          maxLength: 8
+          type: string
+        PrmbdPartnTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdContactCode:
+          maxLength: 10
+          type: string
+        PrmbdTrdCode:
+          maxLength: 30
+          type: string
+        PrmbdVenCompCode:
+          maxLength: 8
+          type: string
+        PrmbdVenCode:
+          maxLength: 8
+          type: string
+        PrmbdVenName:
+          maxLength: 50
+          type: string
+        PrmbdManualEntryFlag:
+          maxLength: 1
+          type: string
+        PrmbdBillAmt:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        PrmbdFixedFeeLumpSumFlag:
+          maxLength: 1
+          type: string
+        PrmbdMateLocCode:
+          maxLength: 7
+          type: string
+        PrmbdSubmitFlag:
+          maxLength: 1
+          type: string
+        PrmbdVUuid:
+          maxLength: 64
+          type: string
+        PrmbdIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        PrmbdIuCreateUser:
+          maxLength: 30
+          type: string
+        PrmbdIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        PrmbdIuUpdateUser:
+          maxLength: 30
+          type: string
+    PrmWorkItem:
+      type: object
+      properties:
+        WitmWorkItemType:
+          maxLength: 2
+          type: string
+        WitmTaskCode:
+          maxLength: 10
+          type: string
+        WitmTaskPtgtType:
+          maxLength: 2
+          type: string
+        WitmTgtType:
+          maxLength: 2
+          type: string
+        WitmWoCompCode:
+          maxLength: 8
+          type: string
+        WitmWoCode:
+          maxLength: 10
+          type: string
+        WitmLineNumber:
+          maxLength: 16
+          type: integer
+        WitmWoStepTitle:
+          maxLength: 30
+          type: string
+        WitmWoStepDescription:
+          maxLength: 4000
+          type: string
+        WitmDeadlineDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmThresholdDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmRecurringFlag:
+          maxLength: 1
+          type: string
+        WitmDeadlineReading:
+          maxLength: 38
+          type: number
+          format: float - 12 decimals
+        WitmMissedTaskCount:
+          maxLength: 16
+          type: integer
+        WitmAcumTypeCode:
+          maxLength: 2
+          type: string
+        WitmJcatLabCompCode:
+          maxLength: 8
+          type: string
+        WitmJcatLabJobCode:
+          maxLength: 10
+          type: string
+        WitmJcatLabPhsCode:
+          maxLength: 16
+          type: string
+        WitmJcatLabourCode:
+          maxLength: 4
+          type: string
+        WitmJcatPartsCompCode:
+          maxLength: 8
+          type: string
+        WitmJcatPartsJobCode:
+          maxLength: 10
+          type: string
+        WitmJcatPartsPhsCode:
+          maxLength: 16
+          type: string
+        WitmJcatPartsCode:
+          maxLength: 4
+          type: string
+        WitmJcatConCompCode:
+          maxLength: 8
+          type: string
+        WitmJcatConJobCode:
+          maxLength: 10
+          type: string
+        WitmJcatConPhsCode:
+          maxLength: 16
+          type: string
+        WitmJcatContractorCode:
+          maxLength: 4
+          type: string
+        WitmJcatEqCompCode:
+          maxLength: 8
+          type: string
+        WitmJcatEqJobCode:
+          maxLength: 10
+          type: string
+        WitmJcatEqPhsCode:
+          maxLength: 16
+          type: string
+        WitmJcatEquipmentCode:
+          maxLength: 4
+          type: string
+        WitmJcatOthCompCode:
+          maxLength: 8
+          type: string
+        WitmJcatOthJobCode:
+          maxLength: 10
+          type: string
+        WitmJcatOthPhsCode:
+          maxLength: 16
+          type: string
+        WitmJcatOtherCode:
+          maxLength: 4
+          type: string
+        WitmWiccCompCode:
+          maxLength: 8
+          type: string
+        WitmWiccLabourCode:
+          maxLength: 4
+          type: string
+        WitmWiccPartsCode:
+          maxLength: 4
+          type: string
+        WitmWiccContractorCode:
+          maxLength: 4
+          type: string
+        WitmWiccEquipmentCode:
+          maxLength: 4
+          type: string
+        WitmWiccOtherCode:
+          maxLength: 4
+          type: string
+        WitmStatus:
+          maxLength: 1
+          type: string
+        WitmComments:
+          maxLength: 2000
+          type: string
+        WitmCompletionDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmCompletionReading:
+          maxLength: 16
+          type: number
+          format: float - 8 decimals
+        WitmNoticePrtCnt:
+          maxLength: 38
+          type: number
+          format: float - 12 decimals
+        WitmClass1:
+          maxLength: 16
+          type: string
+        WitmClass2:
+          maxLength: 16
+          type: string
+        WitmClass3:
+          maxLength: 16
+          type: string
+        WitmClass4:
+          maxLength: 16
+          type: string
+        WitmVendorCode:
+          maxLength: 8
+          type: string
+        WitmScheduleDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmActiveFlag:
+          maxLength: 1
+          type: string
+        WitmTeamCode:
+          maxLength: 10
+          type: string
+        WitmBchNum:
+          maxLength: 15
+          type: integer
+        WitmPostDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmSrcCompCode:
+          maxLength: 8
+          type: string
+        WitmJobCode:
+          maxLength: 10
+          type: string
+        WitmPhsCode:
+          maxLength: 16
+          type: string
+        WitmDeptCode:
+          maxLength: 6
+          type: string
+        WitmPriority:
+          maxLength: 10
+          type: integer
+        WitmIssueId:
+          maxLength: 20
+          type: string
+        WitmDeliveryDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmAppTypeCode:
+          maxLength: 3
+          type: string
+        WitmDateCreated:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmCreatedBy:
+          maxLength: 30
+          type: string
+        WitmDateModified:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmModifiedBy:
+          maxLength: 30
+          type: string
+        WitmScheduleEndDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmBillingType:
+          maxLength: 1
+          type: string
+        WitmSubmittedBillingFlag:
+          maxLength: 1
+          type: string
+        WitmBillingAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        WitmBillingStateCode:
+          maxLength: 2
+          type: string
+        WitmChargeJobFlag:
+          maxLength: 1
+          type: string
+        WitmChargeCompCode:
+          maxLength: 8
+          type: string
+        WitmChargeJobCode:
+          maxLength: 10
+          type: string
+        WitmChargePhsCode:
+          maxLength: 16
+          type: string
+        WitmChargeCatCode:
+          maxLength: 16
+          type: string
+        WitmUnits:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        WitmWoEntry2Flag:
+          maxLength: 1
+          type: string
+        WitmBuildingCode:
+          maxLength: 30
+          type: string
+        WitmFloorNo:
+          maxLength: 30
+          type: string
+        WitmRoomNo:
+          maxLength: 30
+          type: string
+        WitmUserField2:
+          maxLength: 10
+          type: string
+        WitmUserField3:
+          maxLength: 16
+          type: string
+        WitmSelectFlag:
+          maxLength: 1
+          type: string
+        WitmVUuid:
+          maxLength: 64
+          type: string
+        WitmIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmIuCreateUser:
+          maxLength: 30
+          type: string
+        WitmIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WitmIuUpdateUser:
+          maxLength: 30
+          type: string
+        WitmWoVUuid:
+          maxLength: 64
+          type: string
+    PrmWorkOrder:
+      type: object
+      properties:
+        WoCompCode:
+          maxLength: 8
+          type: string
+        WoCompName:
+          maxLength: 30
+          type: string
+        WoCode:
+          maxLength: 10
+          type: string
+        WoNumber:
+          maxLength: 16
+          type: integer
+        WoDescription:
+          maxLength: 2000
+          type: string
+        WoType:
+          maxLength: 1
+          type: string
+        WoCostingType:
+          maxLength: 1
+          type: string
+        WoBillingType:
+          maxLength: 1
+          type: string
+        WoStatus:
+          maxLength: 1
+          type: string
+        WoShopWoFlag:
+          maxLength: 1
+          type: string
+        WoPriorityNumber:
+          maxLength: 0
+          type: number
+          format: float - 0 decimals
+        WoReceivedDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoReqStartDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoReqEndDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoDispatchedDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoStartDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoCompletionDateTime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoComments:
+          maxLength: 2000
+          type: string
+        WoClass1:
+          maxLength: 16
+          type: string
+        WoClass2:
+          maxLength: 16
+          type: string
+        WoClass3:
+          maxLength: 16
+          type: string
+        WoClass4:
+          maxLength: 16
+          type: string
+        WoNormalBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoOtBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoDotBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoPrintCounter:
+          maxLength: 16
+          type: integer
+        WoMteamCode:
+          maxLength: 10
+          type: string
+        WoCreatedBy:
+          maxLength: 30
+          type: string
+        WoDateCreated:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoModifiedBy:
+          maxLength: 30
+          type: string
+        WoDateModified:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoTranType:
+          maxLength: 1
+          type: string
+        WoCostCompCode:
+          maxLength: 8
+          type: string
+        WoCostCompName:
+          maxLength: 30
+          type: string
+        WoCostDeptCode:
+          maxLength: 6
+          type: string
+        WoCostDeptName:
+          maxLength: 30
+          type: string
+        WoVendorCode:
+          maxLength: 8
+          type: string
+        WoTitle:
+          maxLength: 60
+          type: string
+        WoDeptCode:
+          maxLength: 6
+          type: string
+        WoDeptName:
+          maxLength: 30
+          type: string
+        WoCostJobCode:
+          maxLength: 10
+          type: string
+        WoCostJobName:
+          maxLength: 60
+          type: string
+        WoCustCode:
+          maxLength: 10
+          type: string
+        WoCustName:
+          maxLength: 50
+          type: string
+        WoBillAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        WoAppTypeCode:
+          maxLength: 3
+          type: string
+        WoIssueId:
+          maxLength: 20
+          type: string
+        WoDmLocCode:
+          maxLength: 5
+          type: string
+        WoBillingRateTableCode:
+          maxLength: 10
+          type: string
+        WoInvoiceFormat:
+          maxLength: 4
+          type: string
+        WoClvValueCode1:
+          maxLength: 16
+          type: string
+        WoClvValueCode2:
+          maxLength: 16
+          type: string
+        WoClvValueCode3:
+          maxLength: 16
+          type: string
+        WoClvValueCode4:
+          maxLength: 16
+          type: string
+        WoClvValueCode5:
+          maxLength: 16
+          type: string
+        WoClvValueCode6:
+          maxLength: 16
+          type: string
+        WoEntry2Flag:
+          maxLength: 1
+          type: string
+        WoUserField1:
+          maxLength: 10
+          type: string
+        WoReceivedTimeHh:
+          maxLength: 2
+          type: string
+        WoReceivedTimeMi:
+          maxLength: 2
+          type: string
+        WoReceivedTimeAmPm:
+          maxLength: 2
+          type: string
+        WoIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoIuCreateUser:
+          maxLength: 30
+          type: string
+        WoIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoIuUpdateUser:
+          maxLength: 30
+          type: string
+        WoVUuid:
+          maxLength: 64
+          type: string
+        WoEqpCode:
+          maxLength: 80
+          type: string
+    WorkBudget:
+      type: object
+      properties:
+        PrmbdObjectTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdBudgTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdExpCode:
+          maxLength: 4
+          type: string
+        PrmbdExpName:
+          maxLength: 30
+          type: string
+        PrmbdMactCode:
+          maxLength: 10
+          type: string
+        PrmbdSklCode:
+          maxLength: 10
+          type: string
+        PrmbdPostDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        PrmbdQty:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdWmCode:
+          maxLength: 2
+          type: string
+        PrmbdBudgAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdBudgAmtFrmtd:
+          maxLength: 26
+          type: string
+        PrmbdMateType:
+          maxLength: 2
+          type: string
+        PrmbdNonstockFlag:
+          maxLength: 1
+          type: string
+        PrmbdMateItemClassCode:
+          maxLength: 4
+          type: string
+        PrmbdMateItemClassName:
+          maxLength: 30
+          type: string
+        PrmbdMateMevwCompCode:
+          maxLength: 8
+          type: string
+        PrmbdMateMevwCompName:
+          maxLength: 30
+          type: string
+        PrmbdMateMevwItemCode:
+          maxLength: 16
+          type: string
+        PrmbdMateMevwItemName:
+          maxLength: 60
+          type: string
+        PrmbdMateMevwItemTypeCode:
+          maxLength: 2
+          type: string
+        PrmbdMateMevwItemTypeName:
+          maxLength: 30
+          type: string
+        PrmbdToolCode:
+          maxLength: 10
+          type: string
+        PrmbdDesc:
+          maxLength: 60
+          type: string
+        PrmbdMechanicCode:
+          maxLength: 10
+          type: string
+        PrmbdCostFlag:
+          maxLength: 1
+          type: string
+        PrmbdBchNum:
+          maxLength: 15
+          type: integer
+        PrmbdWbsvCode1:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode2:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode3:
+          maxLength: 60
+          type: string
+        PrmbdWbsvCode4:
+          maxLength: 60
+          type: string
+        PrmbdPartnCode:
+          maxLength: 8
+          type: string
+        PrmbdPartnTypeCode:
+          maxLength: 1
+          type: string
+        PrmbdPartnName:
+          maxLength: 50
+          type: string
+        PrmbdContactCode:
+          maxLength: 10
+          type: string
+        PrmbdContactName:
+          maxLength: 121
+          type: string
+        PrmbdTrdCode:
+          maxLength: 30
+          type: string
+        PrmbdTrdDescription:
+          maxLength: 30
+          type: string
+        PrmbdEqpCompCode:
+          maxLength: 8
+          type: string
+        PrmbdEqpCompName:
+          maxLength: 30
+          type: string
+        PrmbdEqpCode:
+          maxLength: 10
+          type: string
+        PrmbdEqpName:
+          maxLength: 30
+          type: string
+        PrmbdVenCompCode:
+          maxLength: 8
+          type: string
+        PrmbdVenCode:
+          maxLength: 8
+          type: string
+        PrmbdVenCompName:
+          maxLength: 30
+          type: string
+        PrmbdVenName:
+          maxLength: 50
+          type: string
+        PrmbdRate:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdRateFrmtd:
+          maxLength: 21
+          type: string
+        PrmbdEqpTrancodeCode:
+          maxLength: 4
+          type: string
+        PrmbdEqpTrancodeName:
+          maxLength: 15
+          type: string
+        PrmbdBilledFlag:
+          maxLength: 1
+          type: string
+        PrmbdManualEntryFlag:
+          maxLength: 1
+          type: string
+        PrmbdBillAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        PrmbdBillAmtFrmtd:
+          maxLength: 26
+          type: string
+        PrmbdFixedFeeLumpSumFlag:
+          maxLength: 1
+          type: string
+        PrmbdMateLocCode:
+          maxLength: 7
+          type: string
+        PrmbdMateLocName:
+          maxLength: 60
+          type: string
+        PrmbdSubmitFlag:
+          maxLength: 1
+          type: string
+        PrmbdVUuid:
+          maxLength: 64
+          type: string
+    WorkItem:
+      type: object
+      properties:
+        WitmWorkItemType:
+          maxLength: 2
+          type: string
+          description: "What this work item is based on., ‘ EQ’ for Equipment, ‘JB’ for Job, or ‘GL’"
+        WitmTaskCode:
+          maxLength: 10
+          type: string
+          description: Reference table PRMTASK  (TASK_CODE)
+        WitmTaskPtgtType:
+          maxLength: 2
+          type: string
+          description: The type of target for the task
+        WitmTgtType:
+          maxLength: 2
+          type: string
+          description: ""
+        WitmWoCompCode:
+          maxLength: 8
+          type: string
+          description: Work Order Company Code
+        WitmWoCode:
+          maxLength: 10
+          type: string
+          description: Work Order Code
+        WitmLineNumber:
+          maxLength: 16
+          type: integer
+          description: Positive or zero Integer
+        WitmWoStepTitle:
+          maxLength: 30
+          type: string
+          description: Name of an item or object
+        WitmWoStepDescription:
+          maxLength: 4000
+          type: string
+          description: Description field
+        WitmDeadlineDate:
+          type: string
+          description: Latest date the task can be performed
+          format: full-date
+          example: YYYY-MM-dd
+        WitmDeadlineDateOnly:
+          maxLength: 10
+          type: string
+        WitmDeadlineTime:
+          maxLength: 7
+          type: string
+        WitmThresholdDate:
+          type: string
+          description: Earliest date the task should be performed
+          format: full-date
+          example: YYYY-MM-dd
+        WitmRecurringFlag:
+          maxLength: 1
+          type: string
+          description: Flag with values of ‘0’ (one-time event) and ‘1’ (recurring event)
+        WitmDeadlineReading:
+          maxLength: 38
+          type: number
+          description: Accumulator Reading when this must be done
+          format: float - 12 decimals
+        WitmMissedTaskCount:
+          maxLength: 16
+          type: integer
+          description: Positive or zero Integer
+        WitmAcumTypeCode:
+          maxLength: 2
+          type: string
+          description: Unit of measurement of the accumulator
+        WitmJcatLabCompCode:
+          maxLength: 8
+          type: string
+          description: Job Company
+        WitmJcatLabJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        WitmJcatLabPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code
+        WitmJcatLabourCode:
+          maxLength: 4
+          type: string
+          description: Job Cat Code
+        WitmJcatPartsCompCode:
+          maxLength: 8
+          type: string
+          description: Job Phase Company
+        WitmJcatPartsJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        WitmJcatPartsPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code
+        WitmJcatPartsCode:
+          maxLength: 4
+          type: string
+          description: Job Cat Code
+        WitmJcatConCompCode:
+          maxLength: 8
+          type: string
+          description: Job Company
+        WitmJcatConJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        WitmJcatConPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code
+        WitmJcatContractorCode:
+          maxLength: 4
+          type: string
+          description: Job Cat Code
+        WitmJcatEqCompCode:
+          maxLength: 8
+          type: string
+          description: Job Phase Company
+        WitmJcatEqJobCode:
+          maxLength: 10
+          type: string
+          description: Job code
+        WitmJcatEqPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code
+        WitmJcatEquipmentCode:
+          maxLength: 4
+          type: string
+          description: Job Cat Code
+        WitmJcatOthCompCode:
+          maxLength: 8
+          type: string
+          description: Job Phase Company
+        WitmJcatOthJobCode:
+          maxLength: 10
+          type: string
+          description: Job code
+        WitmJcatOthPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code
+        WitmJcatOtherCode:
+          maxLength: 4
+          type: string
+          description: Job Cat Code
+        WitmWiccCompCode:
+          maxLength: 8
+          type: string
+          description: Work item cost code company
+        WitmWiccLabourCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code
+        WitmWiccPartsCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code
+        WitmWiccContractorCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code
+        WitmWiccEquipmentCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code
+        WitmWiccOtherCode:
+          maxLength: 4
+          type: string
+          description: Work item cost code
+        WitmStatus:
+          maxLength: 1
+          type: string
+          description: O – Open  or   C - Close
+        WitmStatusDesc:
+          maxLength: 4000
+          type: string
+        WitmComments:
+          maxLength: 2000
+          type: string
+          description: Work item comment
+        WitmCompletionDate:
+          type: string
+          description: Work item completion date
+          format: full-date
+          example: YYYY-MM-dd
+        WitmCompletionReading:
+          maxLength: 16
+          type: number
+          description: Work item completion meter reading
+          format: float - 8 decimals
+        WitmNoticePrtCnt:
+          maxLength: 38
+          type: number
+          description: Notice print count  default should be 0
+          format: float - 12 decimals
+        WitmClass1:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        WitmClass2:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        WitmClass3:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        WitmClass4:
+          maxLength: 16
+          type: string
+          description: User defined classifier for filtering reports/generation workitems
+        WitmVendorCode:
+          maxLength: 8
+          type: string
+          description: Vendor code
+        WitmScheduleDate:
+          type: string
+          description: Schedule date
+          format: full-date
+          example: YYYY-MM-dd
+        WitmScheduleDateOnly:
+          maxLength: 10
+          type: string
+        WitmScheduleTime:
+          maxLength: 7
+          type: string
+        WitmActiveFlag:
+          maxLength: 1
+          type: string
+          description: "Y/N If set, work item will be included into automatic work order generation"
+        WitmTeamCode:
+          maxLength: 10
+          type: string
+          description: Work item team
+        WitmBchNum:
+          maxLength: 15
+          type: integer
+          description: Batch number
+        WitmPostDate:
+          type: string
+          description: Post date
+          format: full-date
+          example: YYYY-MM-dd
+        WitmSrcCompCode:
+          maxLength: 8
+          type: string
+          description: Source Company Code for Job or Department
+        WitmJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code for Job type work items
+        WitmPhsCode:
+          maxLength: 16
+          type: string
+          description: Job Phase Code for Job type work items
+        WitmDeptCode:
+          maxLength: 6
+          type: string
+          description: Department Code for GL type work items
+        WitmPriority:
+          maxLength: 10
+          type: integer
+          description: "Work Item priority., 1 – Critical, 2 – Normal, 3 – Low, 4 - Lowest."
+        WitmIssueId:
+          maxLength: 20
+          type: string
+          description: The issue this work item was created from
+        WitmAppTypeCode:
+          maxLength: 3
+          type: string
+          description: CRM or PRM
+        WitmDateCreated:
+          type: string
+          description: Date of Work Item created
+          format: full-date
+          example: YYYY-MM-dd
+        WitmCreatedBy:
+          maxLength: 30
+          type: string
+          description: Created by which user
+        WitmDateModified:
+          type: string
+          description: Date of Work Item modified
+          format: full-date
+          example: YYYY-MM-dd
+        WitmModifiedBy:
+          maxLength: 30
+          type: string
+          description: Modified by which user
+        WitmScheduleEndDate:
+          type: string
+          description: The scheduled end date for the work item (Delivery Management)
+          format: full-date
+          example: YYYY-MM-dd
+        WitmScheduleEndDateOnly:
+          maxLength: 10
+          type: string
+        WitmScheduleEndTime:
+          maxLength: 7
+          type: string
+        WitmBillingType:
+          maxLength: 1
+          type: string
+          description: "DM Field., ‘T’ - Time and Materials, ‘F’ - Fixed Price, ‘N’ - Not Billed"
+        WitmBillingTypeDesc:
+          maxLength: 4000
+          type: string
+        WitmBillingTotal:
+          maxLength: 0
+          type: integer
+        WitmBillingTotalFrmtd:
+          maxLength: 26
+          type: string
+        WitmSubmittedBillingFlag:
+          maxLength: 1
+          type: string
+          description: "When ‘Y’, the work item has been submitted for billing"
+        WitmBillingAmt:
+          maxLength: 18
+          type: number
+          description: The total billing amount for Fixed Fee type work items
+          format: float - 2 decimals
+        WitmBillingAmtFrmtd:
+          maxLength: 26
+          type: string
+        WitmBillingStateCode:
+          maxLength: 2
+          type: string
+          description: "The work item billing state., ‘NR’ - Not Yet Ready to be Billed, ‘SB’ - Submitted for Billing, ‘FB’ - Submitted for Final Billing, ‘C’ - Closed"
+        WitmUnits:
+          maxLength: 0
+          type: integer
+        WitmWoEntry2Flag:
+          maxLength: 1
+          type: string
+        WitmBuildingCode:
+          maxLength: 30
+          type: string
+        WitmFloorNo:
+          maxLength: 30
+          type: string
+        WitmRoomNo:
+          maxLength: 30
+          type: string
+        WitmUnpostedCount:
+          maxLength: 0
+          type: integer
+        WitmVUuid:
+          maxLength: 64
+          type: string
+    WorkOrder:
+      type: object
+      properties:
+        WoCompCode:
+          maxLength: 8
+          type: string
+        WoCompName:
+          maxLength: 30
+          type: string
+        WoCode:
+          maxLength: 10
+          type: string
+        WoNumber:
+          maxLength: 16
+          type: integer
+        WoDescription:
+          maxLength: 2000
+          type: string
+        WoType:
+          maxLength: 1
+          type: string
+        WoCostingType:
+          maxLength: 1
+          type: string
+        WoCostingTypeDesc:
+          maxLength: 4000
+          type: string
+        WoBillingType:
+          maxLength: 1
+          type: string
+        WoBillingTypeDesc:
+          maxLength: 4000
+          type: string
+        WoStatus:
+          maxLength: 1
+          type: string
+        WoStatusDesc:
+          maxLength: 4000
+          type: string
+        WoShopWoFlag:
+          maxLength: 1
+          type: string
+        WoPriorityNumber:
+          maxLength: 0
+          type: integer
+        WoReceivedDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoReceivedDate:
+          maxLength: 10
+          type: string
+        WoReceivedTime:
+          maxLength: 7
+          type: string
+        WoReqStartDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoReqEndDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoDispatchedDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoStartDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoCompletionDateTime:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoComments:
+          maxLength: 2000
+          type: string
+        WoClass1:
+          maxLength: 16
+          type: string
+        WoClass2:
+          maxLength: 16
+          type: string
+        WoClass3:
+          maxLength: 16
+          type: string
+        WoClass4:
+          maxLength: 16
+          type: string
+        WoNormalBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoOtBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoDotBillRate:
+          maxLength: 10
+          type: number
+          format: float - 2 decimals
+        WoPrintCounter:
+          maxLength: 16
+          type: integer
+        WoMteamCode:
+          maxLength: 10
+          type: string
+        WoCreatedBy:
+          maxLength: 30
+          type: string
+        WoDateCreated:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoModifiedBy:
+          maxLength: 30
+          type: string
+        WoDateModified:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        WoTranType:
+          maxLength: 1
+          type: string
+        WoCostCompCode:
+          maxLength: 8
+          type: string
+        WoCostCompName:
+          maxLength: 30
+          type: string
+        WoCostDeptCode:
+          maxLength: 6
+          type: string
+        WoCostDeptName:
+          maxLength: 30
+          type: string
+        WoVendorCode:
+          maxLength: 8
+          type: string
+        WoTitle:
+          maxLength: 60
+          type: string
+        WoDeptCode:
+          maxLength: 6
+          type: string
+        WoCostJobCode:
+          maxLength: 10
+          type: string
+        WoCustCode:
+          maxLength: 8
+          type: string
+        WoCustName:
+          maxLength: 50
+          type: string
+        WoBillAmt:
+          maxLength: 18
+          type: number
+          format: float - 2 decimals
+        WoBillAmtFrmtd:
+          maxLength: 26
+          type: string
+        WoAppTypeCode:
+          maxLength: 3
+          type: string
+        WoIssueId:
+          maxLength: 20
+          type: string
+        WoDmLocCode:
+          maxLength: 5
+          type: string
+        WoDmLocName:
+          maxLength: 30
+          type: string
+        WoJobBidFlag:
+          maxLength: 1
+          type: string
+        WoProjCode:
+          maxLength: 10
+          type: string
+        WoProjName:
+          maxLength: 200
+          type: string
+        WoProjJobCode:
+          maxLength: 10
+          type: string
+        WoBillingRateTableCode:
+          maxLength: 10
+          type: string
+        WoInvoiceFormat:
+          maxLength: 4
+          type: string
+        WoInvoiceFormatName:
+          maxLength: 60
+          type: string
+        WoEntry2Flag:
+          maxLength: 1
+          type: string
+        WoTax1Code:
+          maxLength: 11
+          type: string
+        WoTax2Code:
+          maxLength: 11
+          type: string
+        WoTax3Code:
+          maxLength: 11
+          type: string
+        WoFfPoNum:
+          maxLength: 11
+          type: string
+        WoAddrCode:
+          maxLength: 8
+          type: string
+        WoAddrTypeCode:
+          maxLength: 1
+          type: string
+        WoVUuid:
+          maxLength: 64
+          type: string
+        WoIuCreateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        WoIuUpdateDate:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+  responses:
+    IssuePriorityResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssuePriority'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    IssueStatusResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssueStatus'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    IssueTypeResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/IssueType'
+    PrmAccumEqpResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmAccumEqp'
+    PrmPriorityResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmPriority'
+    PrmTaskResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmTask'
+    PrmWorkBudgetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkBudget'
+    PrmWorkItemResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkItem'
+    PrmWorkOrderResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkOrder'
+    WorkBudgetResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkBudget'
+    WorkItemResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkItem'
+    WorkOrderResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkOrder'
+  requestBodies:
+    IssuePriorityRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/IssuePriority'
+          examples:
+            Minimal POST Example:
+              value:
+                DmipPriorityCode: string
+                DmipDesc: string
+                DmipPrmPriorityLevel: integer
+                DmipVUuid: ""
+            PATCH Example:
+              value:
+                DmipDesc: test123
+    IssueStatusRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/IssueStatus'
+          examples:
+            Minimal POST Example:
+              value:
+                DmisDesc: string
+                DmisStatusCode: string
+                DmisVUuid: ""
+            PATCH Example:
+              value:
+                DmisDesc: Open - test123
+    IssueTypeRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/IssueType'
+          examples:
+            Minimal POST Example:
+              value:
+                DmitDesc: string
+                DmitTypeCode: string
+                DmitVUuid: ""
+            PATCH Example:
+              value:
+                DmitDesc: Service - test123
+    PrmAccumEqpRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmAccumEqp'
+          examples:
+            Minimal POST Example:
+              value:
+                AccTypeCode: string
+                AccDescription: string
+                AccEqpCode: string
+                AccBaseValue: integer
+                AccValue: integer
+                AccVUuid: ""
+            PATCH Example:
+              value:
+                AccValue: 25
+    PrmPriorityRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmPriority'
+          examples:
+            Minimal POST Example:
+              value:
+                PrmprLevel: string
+                PrmprDesc: string
+                PrmprVUuid: ""
+            PATCH Example:
+              value:
+                PrmprDesc: test123
+    PrmTaskRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmTask'
+          examples:
+            Minimal POST Example:
+              value:
+                TaskTitle: string
+                TaskCode: string
+                TaskPtgtType: string
+                TaskActiveFlag: string
+                TaskGroupTaskFlag: string
+                TaskVUuid: ""
+            PATCH Example:
+              value:
+                TaskDescription: bobicus
+    PrmWorkBudgetRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkBudget'
+          examples:
+            Minimal POST Example:
+              value:
+                PrmbdObjectTypeCode: I
+                PrmbdObjectVUuid: EC7E45F08C9E6459E053508010AC057F
+                PrmbdBudgTypeCode: L
+                PrmbdBudgAmt: "2"
+                PrmbdExpCode: CC-L
+                PrmbdCostFlag: B
+                PrmbdPartnCode: A1WINDOW
+                PrmbdTrdCode: "6424"
+                PrmbdVUuid: ""
+    PrmWorkItemRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkItem'
+          examples:
+            Minimal POST Example:
+              value:
+                WitmWoCompCode: ZZ
+                WitmWoCode: ROSHAN15
+                WitmWoStepTitle: okay boss
+                WitmWoStepDescription: stop everything
+                WitmPriority: 4
+                WitmWorkItemType: JB
+                WitmAppTypeCode: CRM
+                WitmBillingType: F
+                WitmStatus: O
+                WitmMissedTaskCount: "0"
+                WitmRecurringFlag: "0"
+                WitmDeadlineDate: 2022-11-01
+                WitmThresholdDate: 2022-11-01
+            Patch Example:
+              value:
+                WitmComments: bobicus was here
+    PrmWorkOrderRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkOrder'
+          examples:
+            G-Type Example:
+              value:
+                WoReceivedDateTime: string
+                WoType: string
+                WoTranType: G
+                WoStatus: string
+                WoCompCode: string
+                WoCostCompCode: string
+                WoCostDeptCode: string
+                WoCode: string
+                WoNumber: integer
+                WoCostingType: string
+                WoPrintCounter: integer
+                WoPriorityNumber: integer
+                WoBillingType: string
+            J-Type Example:
+              value:
+                WoReceivedDateTime: string
+                WoType: string
+                WoTranType: J
+                WoStatus: string
+                WoCompCode: string
+                WoCostCompCode: string
+                WoCostJobCode: string
+                WoCode: string
+                WoNumber: integer
+                WoCostingType: string
+                WoPrintCounter: integer
+                WoPriorityNumber: integer
+                WoBillingType: string
+            E-Type Example:
+              value:
+                WoReceivedDateTime: string
+                WoType: string
+                WoTranType: E
+                WoStatus: string
+                WoCompCode: string
+                WoCostCompCode: string
+                WoEqpCode: string
+                WoCode: string
+                WoNumber: integer
+                WoCostingType: string
+                WoPrintCounter: integer
+                WoPriorityNumber: integer
+                WoBillingType: string
+            Work Order with Work Item Example:
+              value:
+                WoReceivedDateTime: 2022-11-01
+                WoType: C
+                WoTranType: G
+                WoStatus: S
+                WoCompCode: ZZ
+                WoCostCompCode: ZZ
+                WoCostDeptCode: "00"
+                WoCode: ROSHAN30
+                WoNumber: "7"
+                WoCostingType: "N"
+                WoPrintCounter: "0"
+                WoPriorityNumber: "3"
+                WoBillingType: "N"
+                PrmWorkItemViewObj:
+                - WitmWoStepTitle: i'm so lost
+                  WitmWoStepDescription: keep going bro
+                  WitmPriority: 2
+                  WitmWorkItemType: JB
+                  WitmAppTypeCode: CRM
+                  WitmBillingType: F
+                  WitmStatus: O
+                  WitmMissedTaskCount: "0"
+                  WitmRecurringFlag: "0"
+                  WitmDeadlineDate: 2022-11-02
+                  WitmThresholdDate: 2022-11-02
+            Work Order with Multiple Work Items Example:
+              value:
+                WoReceivedDateTime: 2022-11-01
+                WoType: C
+                WoTranType: G
+                WoStatus: S
+                WoCompCode: ZZ
+                WoCostCompCode: ZZ
+                WoCostDeptCode: "00"
+                WoCode: ROSHAN21
+                WoNumber: "7"
+                WoCostingType: "N"
+                WoPrintCounter: "0"
+                WoPriorityNumber: "3"
+                WoBillingType: "N"
+                PrmWorkItemViewObj:
+                - WitmWoStepTitle: okay 3 boss
+                  WitmWoStepDescription: stop everything
+                  WitmPriority: 4
+                  WitmWorkItemType: JB
+                  WitmAppTypeCode: CRM
+                  WitmBillingType: F
+                  WitmStatus: O
+                  WitmMissedTaskCount: "0"
+                  WitmRecurringFlag: "0"
+                  WitmDeadlineDate: 2022-11-01
+                  WitmThresholdDate: 2022-11-01
+                - WitmWoStepTitle: okay for me - not for you
+                  WitmWoStepDescription: i'm here to test a new life
+                  WitmPriority: 3
+                  WitmWorkItemType: JB
+                  WitmAppTypeCode: CRM
+                  WitmBillingType: F
+                  WitmStatus: O
+                  WitmMissedTaskCount: "0"
+                  WitmRecurringFlag: "0"
+                  WitmDeadlineDate: 2022-11-02
+                  WitmThresholdDate: 2022-11-02
+            Patch Example:
+              value:
+                WoDescription: bobicus was here
+        application/vnd.oracle.adf.batch+json:
+          schema:
+            $ref: '#/components/schemas/PrmWorkOrder'
+          examples:
+            Multiple Work orders with Work Items Example:
+              value:
+                parts:
+                - id: part1
+                  path: /1/prmworkorder
+                  operation: create
+                  payload:
+                    WoReceivedDateTime: 2022-11-01
+                    WoType: C
+                    WoTranType: G
+                    WoStatus: S
+                    WoCompCode: ZZ
+                    WoCostCompCode: ZZ
+                    WoCostDeptCode: "00"
+                    WoCode: ROSHAN19
+                    WoNumber: "7"
+                    WoCostingType: "N"
+                    WoPrintCounter: "0"
+                    WoPriorityNumber: "3"
+                    WoBillingType: "N"
+                    PrmWorkItemViewObj:
+                    - WitmWoStepTitle: okay 3 boss
+                      WitmWoStepDescription: stop everything
+                      WitmPriority: 4
+                      WitmWorkItemType: JB
+                      WitmAppTypeCode: CRM
+                      WitmBillingType: F
+                      WitmStatus: O
+                      WitmMissedTaskCount: "0"
+                      WitmRecurringFlag: "0"
+                      WitmDeadlineDate: 2022-11-01
+                      WitmThresholdDate: 2022-11-01
+                    - WitmWoStepTitle: okay for me - not for you
+                      WitmWoStepDescription: i'm here to test a new life
+                      WitmPriority: 3
+                      WitmWorkItemType: JB
+                      WitmAppTypeCode: CRM
+                      WitmBillingType: F
+                      WitmStatus: O
+                      WitmMissedTaskCount: "0"
+                      WitmRecurringFlag: "0"
+                      WitmDeadlineDate: 2022-11-02
+                      WitmThresholdDate: 2022-11-02
+                - id: part2
+                  path: /1/prmworkorder
+                  operation: create
+                  payload:
+                    WoReceivedDateTime: 2022-11-01
+                    WoType: C
+                    WoTranType: G
+                    WoStatus: S
+                    WoCompCode: ZZ
+                    WoCostCompCode: ZZ
+                    WoCostDeptCode: "00"
+                    WoCode: ROSHAN20
+                    WoNumber: "7"
+                    WoCostingType: "N"
+                    WoPrintCounter: "0"
+                    WoPriorityNumber: "3"
+                    WoBillingType: "N"
+                    PrmWorkItemViewObj:
+                    - WitmWoStepTitle: okay 3 boss
+                      WitmWoStepDescription: stop everything
+                      WitmPriority: 4
+                      WitmWorkItemType: JB
+                      WitmAppTypeCode: CRM
+                      WitmBillingType: F
+                      WitmStatus: O
+                      WitmMissedTaskCount: "0"
+                      WitmRecurringFlag: "0"
+                      WitmDeadlineDate: 2022-11-01
+                      WitmThresholdDate: 2022-11-01
+                    - WitmWoStepTitle: okay for me - not for you
+                      WitmWoStepDescription: i'm here to test a new life
+                      WitmPriority: 3
+                      WitmWorkItemType: JB
+                      WitmAppTypeCode: CRM
+                      WitmBillingType: F
+                      WitmStatus: O
+                      WitmMissedTaskCount: "0"
+                      WitmRecurringFlag: "0"
+                      WitmDeadlineDate: 2022-11-02
+                      WitmThresholdDate: 2022-11-02
+    WorkBudgetRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/WorkBudget'
+          examples:
+            Minimal POST Example:
+              value:
+                PrmbdObjectTypeCode: string
+                PrmbdObjectVUuid: string
+                PrmbdBudgTypeCode: string
+                PrmbdExpCode: string
+                PrmbdCostFlag: string
+                PrmbdPartnCode: string
+                PrmbdTrdCode: string
+                PrmbdVUuid: ""
+    WorkItemRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/WorkItem'
+          examples:
+            Minimal POST Example:
+              value:
+                WitmWoCompCode: string
+                WitmWoCode: string
+                WitmWoStepTitle: string
+                WitmWoStepDescription: string
+                WitmLineNumber: integer
+                WitmPriority: integer
+                WitmWorkItemType: string
+                WitmAppTypeCode: string
+                WitmBillingType: string
+                WitmStatus: string
+                WitmMissedTaskCount: integer
+                WitmRecurringFlag: string
+                WitmWoEntry2Flag: string
+                WitmDeadlineDate: string
+                WitmThresholdDate: string
+                WitmVUuid: ""
+    WorkOrderRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/WorkOrder'
+          examples:
+            Request Example:
+              value:
+                WoCompCode: string
+                WoCode: string
+                WoNumber: integer
+                WoType: string
+                WoCostingType: string
+                WoBillingType: string
+                WoStatus: string
+                WoPriorityNumber: integer
+                WoReceivedDateTime: string
+                WoPrintCounter: integer
+                WoTitle: string
+                WoCustCode: string
+                WoAppTypeCode: CRM
+                WoEntry2Flag: string
+                WoVUuid: ""
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+  </con:endpoints>
+</con:interface>

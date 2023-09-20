@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldoctoplevel" path="/glrestapi/rest/v1/gldoctoplevel" id="f3d1b6ab-9442-42eb-9c42-f2e3565f1825" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f3d1b6ab-9442-42eb-9c42-f2e3565f1825fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldoctoplevel</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="38fb888b-81de-43eb-a80a-d08c0e74f7c2" method="GET">
+    <con:description>Retrieve GL document top levels</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AccConschartCode" : "string",
+  "AccConschartName" : "string",
+  "AccCode" : "string",
+  "AccName" : "string",
+  "AccCounterAcc" : "string",
+  "AccDistCode" : "string",
+  "AccTypeCode" : "string",
+  "AccTypeName" : "string",
+  "AccSafCode" : "string",
+  "AccCompressCode" : "string",
+  "AccNormalBalCode" : "string",
+  "AccNormalBalName" : "string",
+  "AccSequence" : 0,
+  "AccSubledgCode" : "string",
+  "AccSubledgName" : "string",
+  "AccSummaryCode" : "string",
+  "AccWmCode" : "string",
+  "AccWmName" : "string",
+  "AccLongCode" : "string",
+  "AccCtrlCode" : "string",
+  "AccCtrlName" : "string",
+  "AccLevelCode" : 0,
+  "AccLowFlag" : "string",
+  "AccMonetaryFlag" : "string",
+  "AccInterCompAccFlag" : "string",
+  "AccOfConcatenatedSegments" : "string",
+  "AccHier" : "string",
+  "AccTavCode1" : "string",
+  "AccTavCode2" : "string",
+  "AccTavCode3" : "string",
+  "AccTavCode4" : "string",
+  "AccTavRequiredFlag1" : "string",
+  "AccTavRequiredFlag2" : "string",
+  "AccTavRequiredFlag3" : "string",
+  "AccTavRequiredFlag4" : "string",
+  "AccTavValidatedFlag1" : "string",
+  "AccTavValidatedFlag2" : "string",
+  "AccTavValidatedFlag3" : "string",
+  "AccTavValidatedFlag4" : "string",
+  "AccTavEditableFlag1" : "string",
+  "AccTavEditableFlag2" : "string",
+  "AccTavEditableFlag3" : "string",
+  "AccTavEditableFlag4" : "string",
+  "AccMarkedForProcessFlag" : "string",
+  "AccCostpoolAllowedFlag" : "string",
+  "AccSchedgReportLevelFlag" : "string",
+  "AccCurrCode" : "string",
+  "AccCurrName" : "string",
+  "AccFxAccCode" : "string",
+  "AccFxAccName" : "string",
+  "AccTacEnableFlag" : "string",
+  "AccGroupCode1" : "string",
+  "AccGroupCode2" : "string",
+  "AccGroupCode3" : "string",
+  "AccGroupCode4" : "string",
+  "AccGroupCode5" : "string",
+  "DiscriminatorCode" : "string",
+  "AccVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="cdec4bec-5843-49a6-b396-562e34bafe59" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

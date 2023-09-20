@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempsecgrp" path="/hcm-rest-api/rest/1/pyempsecgrp" id="067d44b1-3bf2-437f-8cbf-fe1204aea22b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="067d44b1-3bf2-437f-8cbf-fe1204aea22bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempsecgrp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="32e51f85-d792-4d47-9e17-2793ddd4bcf5" method="GET">
+    <con:description>Retrieve PY Employee Security Groups</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EsgCode" : "string",
+  "EsgName" : "string",
+  "EsgIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EsgIuCreateUser" : "string",
+  "EsgIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EsgIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4f5f11d5-07fc-4577-b488-a64504b0c29d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

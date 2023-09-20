@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glcompany" path="/glrestapi/rest/v1/glcompany" id="20b06cb7-809a-4812-8358-9fa1d72515a4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="20b06cb7-809a-4812-8358-9fa1d72515a4fileName">%2Fglrestapi%2Frest%2Fv1%2Fglcompany</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="94377a1a-4a88-4285-8f24-6e95613474ad" method="GET">
+    <con:description>Retrieve GL Companies</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectCompany or selectByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectCompany)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date (selectByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompCode" : "string",
+  "CompName" : "string",
+  "CompAdd1" : "string",
+  "CompAdd2" : "string",
+  "CompAdd3" : "string",
+  "CompRegionCode" : "string",
+  "CompRegionName" : "string",
+  "CompCountry" : "string",
+  "CompPostalCode" : "string",
+  "CompPhoneCountryCode" : "string",
+  "CompPhoneAreaCode" : "string",
+  "CompPhoneNum" : "string",
+  "CompFaxCountryCode" : "string",
+  "CompFaxAreaCode" : "string",
+  "CompFaxNum" : "string",
+  "CompTelexNum" : "string",
+  "CompCableNum" : "string",
+  "CompTerrCode" : "string",
+  "CompPerNum" : 0,
+  "CompCurrPer" : 0,
+  "CompFiscalYr" : 0,
+  "CompCurrCode" : "string",
+  "CompCurrName" : "string",
+  "CompRepCurr1Code" : "string",
+  "CompRepCurr1Name" : "string",
+  "CompRepCurr2Code" : "string",
+  "CompRepCurr2Name" : "string",
+  "CompRepCurr3Code" : "string",
+  "CompRepCurr3Name" : "string",
+  "CompDeptCode" : "string",
+  "CompArchDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompTaxCode" : "string",
+  "CompCompoundGstCode" : "string",
+  "CompCalcStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompCalcEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompIcDeptCode" : "string",
+  "CompIcAccCode" : "string",
+  "CompConschartCode" : "string",
+  "CompConschartName" : "string",
+  "CompConschartTypeCode" : "string",
+  "CompAccByCompFlag" : "string",
+  "CompAccByDeptFlag" : "string",
+  "CompIntintCode" : "string",
+  "CompMocrrCode" : "string",
+  "CompFedTax1Code" : "string",
+  "CompFedTax2Code" : "string",
+  "CompCkDigitCode" : "string",
+  "CompTypeCode" : "string",
+  "CompEmpNum" : 0,
+  "CompCtrlCode" : "string",
+  "CompEstablishDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompTaxDist" : "string",
+  "CompVatRegNum" : "string",
+  "CompOfGlFlag" : "string",
+  "CompOfGlSetOfBooksId" : 0,
+  "CompOfGlIdFlexCode" : "string",
+  "CompOfGlIdFlexNum" : 0,
+  "CompOfGlSegments" : "string",
+  "CompOfGlValues" : "string",
+  "CompUseTacFlag" : "string",
+  "CompConsCode" : "string",
+  "CompDistGlCompCode" : "string",
+  "CompDistGlDeptCode" : "string",
+  "CompDistGlFlag" : "string",
+  "CompIntClrDeptCode" : "string",
+  "CompLegalName" : "string",
+  "CompLogoFile" : "string",
+  "CompWebAdd" : "string",
+  "CompEmailAdd" : "string",
+  "CompLogoFileOnWeb" : "string",
+  "CompIncomeCloseDeptCode" : "string",
+  "CompIncomeCloseAccCode" : "string",
+  "CompT619RegistrationCode" : "string",
+  "CompDefaultPyCountryCode" : "string",
+  "CompArctrlLogoFile" : "string",
+  "CompCtrlFileExists" : "string",
+  "CompContactName" : "string",
+  "CompF5trGstRegNo" : "string",
+  "CompF5trDeclrName" : "string",
+  "CompF5trDeclrId" : "string",
+  "CompF5trDesignation" : "string",
+  "CompF5trContPerson" : "string",
+  "CompF5trContTelNo" : "string",
+  "CompF5trRefNo" : "string",
+  "CompArDepartmentName" : "string",
+  "CompRecognizeFxFlag" : "string",
+  "CompMaintainBalcurrFlag" : "string",
+  "CompRemeasureAdjAccCode" : "string",
+  "DiscriminatorCode" : "string",
+  "CompVUuid" : "string",
+  "CompIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompIuCreateUser" : "string",
+  "CompIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CompIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4f1596f5-423b-41ac-bef4-0fae5902b2da" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

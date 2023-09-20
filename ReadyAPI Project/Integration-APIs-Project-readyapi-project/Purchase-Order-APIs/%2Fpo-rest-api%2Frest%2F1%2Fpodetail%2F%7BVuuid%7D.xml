@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/po-rest-api/rest/1/podetail/{Vuuid}" path="/po-rest-api/rest/1/podetail/{Vuuid}" id="2f84668b-95b8-408b-974b-71f814b551f1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f84668b-95b8-408b-974b-71f814b551f1fileName">%2Fpo-rest-api%2Frest%2F1%2Fpodetail%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="382d6168-b25f-4525-95f2-a88460b07cdd" method="GET">
+    <con:description>Retrieve a specific PO Detail</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PosCompCode" : "string",
+  "PosPoNum" : "string",
+  "PosReleaseNum" : 0,
+  "PosLineNum" : 0,
+  "PosPoItemType" : "string",
+  "PosClassCode" : "string",
+  "PosItmCode" : "string",
+  "PosItmName" : "string",
+  "PosWmCode" : "string",
+  "PosOrdQty" : 0,
+  "PosExptdPriceAmt" : 0,
+  "PosUserTypeCode" : "string",
+  "PosUserField1" : "string",
+  "PosUserField2" : "string",
+  "PosUserField3" : "string",
+  "PosUserField4" : "string",
+  "PosUserField5" : "string",
+  "PosUserField6" : "string",
+  "PosUserField7" : "string",
+  "PosUserField8" : "string",
+  "PosCiitemtypCode" : "string",
+  "PosItemLocCode" : "string",
+  "PosTax1Code" : "string",
+  "PosTax2Code" : "string",
+  "PosTax3Code" : "string",
+  "PosTax1TaxableFlag" : "string",
+  "PosTax2TaxableFlag" : "string",
+  "PosTax3TaxableFlag" : "string",
+  "PosExtdAmt" : 0,
+  "PosTaxAmt" : 0,
+  "PosTotAmt" : 0,
+  "PosTax1Perc" : 0,
+  "PosTax2Perc" : 0,
+  "PosTax3Perc" : 0,
+  "PosTax1OnTaxFlag" : "string",
+  "PosTax2OnTaxFlag" : "string",
+  "PosTax3OnTaxFlag" : "string",
+  "PosMinOnhandQty" : 0,
+  "PosMinOrderQty" : 0,
+  "PosMaxOnhandQty" : 0,
+  "PosMaxOrderQty" : 0,
+  "PosStdOrderQty" : 0,
+  "PosOnOrderQty" : 0,
+  "PosOnHandQty" : 0,
+  "DiscriminatorCode" : "string",
+  "PosRecIntoInvFlag" : "string",
+  "PosDesc" : "string",
+  "PosCalledFromAppCode" : "string",
+  "PosUserFieldEdtFlag5" : "string",
+  "PosUserFieldEdtFlag6" : "string",
+  "PosUserFieldEdtFlag7" : "string",
+  "PosUserFieldEdtFlag8" : "string",
+  "PosUserFieldName5" : "string",
+  "PosUserFieldName6" : "string",
+  "PosUserFieldName7" : "string",
+  "PosUserFieldName8" : "string",
+  "PosWbsSetupFlag" : "string",
+  "PosTacSetupFlag" : "string",
+  "PosWbsvCode1" : "string",
+  "PosWbsvCode2" : "string",
+  "PosWbsvCode3" : "string",
+  "PosWbsvCode4" : "string",
+  "PosWbsvCode5" : "string",
+  "PosWbsvCode6" : "string",
+  "PosWbsvCode7" : "string",
+  "PosWbsvCode8" : "string",
+  "PosWbsvCode9" : "string",
+  "PosWbsvCode10" : "string",
+  "PosWbsvCode11" : "string",
+  "PosWbsvCode12" : "string",
+  "PosExptdDate" : "YYYY-MM-dd",
+  "PosJobName" : "string",
+  "PosPhsName" : "string",
+  "PosCatName" : "string",
+  "PosVUuid" : "string",
+  "PosLumpSumPoFlag" : "string",
+  "PosIuCreateDate" : "YYYY-MM-dd",
+  "PosIuCreateUser" : "string",
+  "PosIuUpdateDate" : "YYYY-MM-dd",
+  "PosIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f2553628-0343-46e4-8c36-c1229dad8790" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="b3e72e76-4714-41dc-bf2d-14e1cbba3100" method="PATCH">
+    <con:description>Update a specific PO Detail line</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PosCompCode" : "string",
+  "PosPoNum" : "string",
+  "PosReleaseNum" : 0,
+  "PosLineNum" : 0,
+  "PosPoItemType" : "string",
+  "PosClassCode" : "string",
+  "PosItmCode" : "string",
+  "PosItmName" : "string",
+  "PosWmCode" : "string",
+  "PosOrdQty" : 0,
+  "PosExptdPriceAmt" : 0,
+  "PosUserTypeCode" : "string",
+  "PosUserField1" : "string",
+  "PosUserField2" : "string",
+  "PosUserField3" : "string",
+  "PosUserField4" : "string",
+  "PosUserField5" : "string",
+  "PosUserField6" : "string",
+  "PosUserField7" : "string",
+  "PosUserField8" : "string",
+  "PosCiitemtypCode" : "string",
+  "PosItemLocCode" : "string",
+  "PosTax1Code" : "string",
+  "PosTax2Code" : "string",
+  "PosTax3Code" : "string",
+  "PosTax1TaxableFlag" : "string",
+  "PosTax2TaxableFlag" : "string",
+  "PosTax3TaxableFlag" : "string",
+  "PosExtdAmt" : 0,
+  "PosTaxAmt" : 0,
+  "PosTotAmt" : 0,
+  "PosTax1Perc" : 0,
+  "PosTax2Perc" : 0,
+  "PosTax3Perc" : 0,
+  "PosTax1OnTaxFlag" : "string",
+  "PosTax2OnTaxFlag" : "string",
+  "PosTax3OnTaxFlag" : "string",
+  "PosMinOnhandQty" : 0,
+  "PosMinOrderQty" : 0,
+  "PosMaxOnhandQty" : 0,
+  "PosMaxOrderQty" : 0,
+  "PosStdOrderQty" : 0,
+  "PosOnOrderQty" : 0,
+  "PosOnHandQty" : 0,
+  "DiscriminatorCode" : "string",
+  "PosRecIntoInvFlag" : "string",
+  "PosDesc" : "string",
+  "PosCalledFromAppCode" : "string",
+  "PosUserFieldEdtFlag5" : "string",
+  "PosUserFieldEdtFlag6" : "string",
+  "PosUserFieldEdtFlag7" : "string",
+  "PosUserFieldEdtFlag8" : "string",
+  "PosUserFieldName5" : "string",
+  "PosUserFieldName6" : "string",
+  "PosUserFieldName7" : "string",
+  "PosUserFieldName8" : "string",
+  "PosWbsSetupFlag" : "string",
+  "PosTacSetupFlag" : "string",
+  "PosWbsvCode1" : "string",
+  "PosWbsvCode2" : "string",
+  "PosWbsvCode3" : "string",
+  "PosWbsvCode4" : "string",
+  "PosWbsvCode5" : "string",
+  "PosWbsvCode6" : "string",
+  "PosWbsvCode7" : "string",
+  "PosWbsvCode8" : "string",
+  "PosWbsvCode9" : "string",
+  "PosWbsvCode10" : "string",
+  "PosWbsvCode11" : "string",
+  "PosWbsvCode12" : "string",
+  "PosExptdDate" : "YYYY-MM-dd",
+  "PosJobName" : "string",
+  "PosPhsName" : "string",
+  "PosCatName" : "string",
+  "PosVUuid" : "string",
+  "PosLumpSumPoFlag" : "string",
+  "PosIuCreateDate" : "YYYY-MM-dd",
+  "PosIuCreateUser" : "string",
+  "PosIuUpdateDate" : "YYYY-MM-dd",
+  "PosIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PosCalledFromAppCode":"string","PosPoItemType":"string","PosCompCode":"string","PosReleaseNum":"integer","PosPoNum":"string","PosUserTypeCode":"string","PosUserField1":"string","PosUserField2":"string","PosUserField3":"string","PosItmCode":"string","PosItemLocCode":"string","PosCiitemtypCode":"string","PosWmCode":"string","PosDesc":"string","PosExptdPriceAmt":"float","PosExtdAmt":"float","PosOrdQty":"integer","PosRecIntoInvFlag":"string","PosTacSetupFlag":"string","PosWbsSetupFlag":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Single POST Example" id="c5ff195c-da4d-442b-96a4-97d3878d5041" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PosCalledFromAppCode":"string","PosPoItemType":"string","PosCompCode":"string","PosReleaseNum":"integer","PosPoNum":"string","PosUserTypeCode":"string","PosUserField1":"string","PosUserField2":"string","PosUserField3":"string","PosItmCode":"string","PosItemLocCode":"string","PosCiitemtypCode":"string","PosWmCode":"string","PosDesc":"string","PosExptdPriceAmt":"float","PosExtdAmt":"float","PosOrdQty":"integer","PosRecIntoInvFlag":"string","PosTacSetupFlag":"string","PosWbsSetupFlag":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="702183c3-9dcc-449f-907e-e70d247cfc7e" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PosDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

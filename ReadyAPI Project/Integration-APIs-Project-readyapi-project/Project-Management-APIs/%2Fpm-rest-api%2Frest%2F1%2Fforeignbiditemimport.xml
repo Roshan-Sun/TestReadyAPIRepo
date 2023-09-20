@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/foreignbiditemimport" path="/pm-rest-api/rest/1/foreignbiditemimport" id="a5b4260b-d5da-4f55-a05c-7f01584c54d9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a5b4260b-d5da-4f55-a05c-7f01584c54d9fileName">%2Fpm-rest-api%2Frest%2F1%2Fforeignbiditemimport</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ab270d64-de0f-4425-a983-2ecd5ea4846e" method="GET">
+    <con:description>Retrieve PM Foreign Bid Item Imports</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompCode" : "string",
+  "CompName" : "string",
+  "CompCodeError" : "string",
+  "ProjCode" : "string",
+  "ProjName" : "string",
+  "ProjCodeError" : "string",
+  "MtCode" : "string",
+  "MtCodeError" : "string",
+  "ItemName" : "string",
+  "ItemNameError" : "string",
+  "TargetPurchDate" : "YYYY-MM-dd",
+  "WmCode" : "string",
+  "WmCodeError" : "string",
+  "ItypeCode" : "string",
+  "ItypeCodeError" : "string",
+  "PurchTypeCode" : "string",
+  "PurchTypeCodeError" : "string",
+  "EstQty" : 0,
+  "EstPriceAmt" : 0,
+  "EstAmt" : 0,
+  "QuotedQty" : 0,
+  "QuotedPriceAmt" : 0,
+  "QuotedAmt" : 0,
+  "HldbkPct" : 0,
+  "HldbkPctError" : "string",
+  "SpecSection" : "string",
+  "SpecSectionError" : "string",
+  "SpecSubsection" : "string",
+  "SpecSubsectionError" : "string",
+  "PhsCode" : "string",
+  "PhsCodeError" : "string",
+  "CatCode" : "string",
+  "CatCodeError" : "string",
+  "Tax1Code" : "string",
+  "Tax1CodeError" : "string",
+  "Tax2Code" : "string",
+  "Tax2CodeError" : "string",
+  "Tax3Code" : "string",
+  "Tax3CodeError" : "string",
+  "ClvCode1" : "string",
+  "ClvCode1Error" : "string",
+  "ClvCode2" : "string",
+  "ClvCode2Error" : "string",
+  "ClvCode3" : "string",
+  "ClvCode3Error" : "string",
+  "ClvCode4" : "string",
+  "ClvCode4Error" : "string",
+  "ClvCode5" : "string",
+  "ClvCode5Error" : "string",
+  "ClvCode6" : "string",
+  "ClvCode6Error" : "string",
+  "JobCode" : "string",
+  "JobCodeError" : "string",
+  "PhsWmCode" : "string",
+  "PhsWmCodeError" : "string",
+  "PhsQty" : 0,
+  "PhsQtyError" : "string",
+  "PmfbiiUser" : "string",
+  "ToDeleteFlag" : "string",
+  "ToValidateFlag" : "string",
+  "PmfbiiValid" : "string",
+  "IuCreateDate" : "YYYY-MM-dd",
+  "IuCreateUser" : "string",
+  "IuUpdateDate" : "YYYY-MM-dd",
+  "IuUpdateUser" : "string",
+  "PhsFirstSegmValue" : "string",
+  "BillQty" : 0,
+  "BillPrice" : 0,
+  "BillAmt" : 0,
+  "TempPciId" : "string",
+  "WbsCode1" : "string",
+  "WbsCode1Error" : "string",
+  "WbsCode2" : "string",
+  "WbsCode2Error" : "string",
+  "WbsCode3" : "string",
+  "WbsCode3Error" : "string",
+  "WbsCode4" : "string",
+  "WbsCode4Error" : "string",
+  "CustomPricingQty" : 0,
+  "CustomPricingPrice" : 0,
+  "CustomPricingAmt" : 0,
+  "CustomPricingSeq" : 0,
+  "GroupCode" : "string",
+  "GroupCodeError" : "string",
+  "AlterId" : 0,
+  "PhsType" : "string",
+  "PhsTypeError" : "string",
+  "ForecastMeth" : "string",
+  "ForecastMethError" : "string",
+  "IsExistInEmFlag" : "string",
+  "PhsDescFromEm" : "string",
+  "BillingTypeCode" : "string",
+  "BillingTypeCodeError" : "string",
+  "LastSessioninfo" : "string",
+  "OrigSessioninfo" : "string",
+  "WorkDays" : 0,
+  "Comments" : "string",
+  "SessionNo" : "string",
+  "ImportSource" : "string",
+  "BidItemImpDelFlag" : "string",
+  "VUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ebcf1de0-47a5-4053-bbca-2abcd22636b9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="0f046d36-179f-4339-9dde-5713240aa9c5" method="POST">
+    <con:description>Create Multiple Foreign Bid Items"</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompCode" : "string",
+  "CompName" : "string",
+  "CompCodeError" : "string",
+  "ProjCode" : "string",
+  "ProjName" : "string",
+  "ProjCodeError" : "string",
+  "MtCode" : "string",
+  "MtCodeError" : "string",
+  "ItemName" : "string",
+  "ItemNameError" : "string",
+  "TargetPurchDate" : "YYYY-MM-dd",
+  "WmCode" : "string",
+  "WmCodeError" : "string",
+  "ItypeCode" : "string",
+  "ItypeCodeError" : "string",
+  "PurchTypeCode" : "string",
+  "PurchTypeCodeError" : "string",
+  "EstQty" : 0,
+  "EstPriceAmt" : 0,
+  "EstAmt" : 0,
+  "QuotedQty" : 0,
+  "QuotedPriceAmt" : 0,
+  "QuotedAmt" : 0,
+  "HldbkPct" : 0,
+  "HldbkPctError" : "string",
+  "SpecSection" : "string",
+  "SpecSectionError" : "string",
+  "SpecSubsection" : "string",
+  "SpecSubsectionError" : "string",
+  "PhsCode" : "string",
+  "PhsCodeError" : "string",
+  "CatCode" : "string",
+  "CatCodeError" : "string",
+  "Tax1Code" : "string",
+  "Tax1CodeError" : "string",
+  "Tax2Code" : "string",
+  "Tax2CodeError" : "string",
+  "Tax3Code" : "string",
+  "Tax3CodeError" : "string",
+  "ClvCode1" : "string",
+  "ClvCode1Error" : "string",
+  "ClvCode2" : "string",
+  "ClvCode2Error" : "string",
+  "ClvCode3" : "string",
+  "ClvCode3Error" : "string",
+  "ClvCode4" : "string",
+  "ClvCode4Error" : "string",
+  "ClvCode5" : "string",
+  "ClvCode5Error" : "string",
+  "ClvCode6" : "string",
+  "ClvCode6Error" : "string",
+  "JobCode" : "string",
+  "JobCodeError" : "string",
+  "PhsWmCode" : "string",
+  "PhsWmCodeError" : "string",
+  "PhsQty" : 0,
+  "PhsQtyError" : "string",
+  "PmfbiiUser" : "string",
+  "ToDeleteFlag" : "string",
+  "ToValidateFlag" : "string",
+  "PmfbiiValid" : "string",
+  "IuCreateDate" : "YYYY-MM-dd",
+  "IuCreateUser" : "string",
+  "IuUpdateDate" : "YYYY-MM-dd",
+  "IuUpdateUser" : "string",
+  "PhsFirstSegmValue" : "string",
+  "BillQty" : 0,
+  "BillPrice" : 0,
+  "BillAmt" : 0,
+  "TempPciId" : "string",
+  "WbsCode1" : "string",
+  "WbsCode1Error" : "string",
+  "WbsCode2" : "string",
+  "WbsCode2Error" : "string",
+  "WbsCode3" : "string",
+  "WbsCode3Error" : "string",
+  "WbsCode4" : "string",
+  "WbsCode4Error" : "string",
+  "CustomPricingQty" : 0,
+  "CustomPricingPrice" : 0,
+  "CustomPricingAmt" : 0,
+  "CustomPricingSeq" : 0,
+  "GroupCode" : "string",
+  "GroupCodeError" : "string",
+  "AlterId" : 0,
+  "PhsType" : "string",
+  "PhsTypeError" : "string",
+  "ForecastMeth" : "string",
+  "ForecastMethError" : "string",
+  "IsExistInEmFlag" : "string",
+  "PhsDescFromEm" : "string",
+  "BillingTypeCode" : "string",
+  "BillingTypeCodeError" : "string",
+  "LastSessioninfo" : "string",
+  "OrigSessioninfo" : "string",
+  "WorkDays" : 0,
+  "Comments" : "string",
+  "SessionNo" : "string",
+  "ImportSource" : "string",
+  "BidItemImpDelFlag" : "string",
+  "VUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CompCode":"string","ProjCode":"string","ToValidateFlag":"string","PmfbiiValid":"string","ToDeleteFlag":"string","BidItemImpDelFlag":"string","VUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="1842b717-a78e-42b9-959f-fda1e38239ee" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CompCode":"string","ProjCode":"string","ToValidateFlag":"string","PmfbiiValid":"string","ToDeleteFlag":"string","BidItemImpDelFlag":"string","VUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

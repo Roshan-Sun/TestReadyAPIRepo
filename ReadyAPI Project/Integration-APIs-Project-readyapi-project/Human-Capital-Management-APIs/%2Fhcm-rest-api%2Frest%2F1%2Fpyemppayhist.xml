@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyemppayhist" path="/hcm-rest-api/rest/1/pyemppayhist" id="a5a2f86f-387b-47dc-8138-d3dcffbe3f47" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a5a2f86f-387b-47dc-8138-d3dcffbe3f47fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemppayhist</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="1cdb26f7-a05b-4bce-ac7f-7c4841d549d6" method="GET">
+    <con:description>Retrieve PY Employee Pay Histories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectEmpPayHist</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectEmpPayHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>employeeNumber</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (selectEmpPayHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>prnCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Pay Run Code (selectEmpPayHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fromDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>From Date (selectEmpPayHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>toDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>To Date (selectEmpPayHist)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Date to check against create/update dates (selectEmpPayHist)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PhyCompCode" : "string",
+  "PhyPrnCode" : "string",
+  "PhyPprYear" : 0,
+  "PhyPprPeriod" : 0,
+  "PhyEmpNo" : "string",
+  "PhyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyEqpDeptCode" : "string",
+  "PhyEmpDeptCode" : "string",
+  "PhyEmpCrAccCode" : "string",
+  "PhyEqpCrAccCode" : "string",
+  "PhyWorkCompCode" : "string",
+  "PhyDataType" : "string",
+  "PhyDeptCode" : "string",
+  "PhyEmplrContrAccCode" : "string",
+  "PhyGlAccCode" : "string",
+  "PhyJob" : "string",
+  "PhyPhase" : "string",
+  "PhyCategory" : "string",
+  "PhyEquipment" : "string",
+  "PhyEquipCategory" : "string",
+  "PhyEquipTranNo" : "string",
+  "PhyUnionCode" : "string",
+  "PhyTradeCode" : "string",
+  "PhyWorkLocation" : "string",
+  "PhyTranType" : "string",
+  "PhyTranCode" : "string",
+  "PhyRateCode" : "string",
+  "PhyEmplrContrFlag" : "string",
+  "PhyAdjustment" : "string",
+  "PhyBatchNum" : 0,
+  "PhyProcessFlag" : "string",
+  "PhyChequeVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyHireFlag" : "string",
+  "PhyTaxtypeFlag" : "string",
+  "PhyRetpayFlag" : "string",
+  "PhyPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyUser" : "string",
+  "PhyLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyGlpostFlag" : "string",
+  "PhyDrDeptCode" : "string",
+  "PhyEmplrContrDeptCode" : "string",
+  "PhyUpdateBchFlag" : "string",
+  "PhyWoCode" : "string",
+  "PhyWitmLineNumber" : "string",
+  "PhyWoExpCode" : "string",
+  "PhyTavCode1" : "string",
+  "PhyTavCode2" : "string",
+  "PhyTavCode3" : "string",
+  "PhyTavCode4" : "string",
+  "PhyWbsvCode1" : "string",
+  "PhyWbsvCode2" : "string",
+  "PhyWbsvCode3" : "string",
+  "PhyWbsvCode4" : "string",
+  "PhyRedistributedBurdenFlag" : "string",
+  "PhyTshAfterChksFlag" : "string",
+  "PhyRetainTransactions" : "string",
+  "PhyWorkGeocode" : "string",
+  "PhyResidenceGeocode" : "string",
+  "PhyPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyExpectedPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyMonthNumber" : 0,
+  "PhyActualPeriod" : 0,
+  "PhyOriginalTransaction" : "string",
+  "PhyRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyRefDesc" : "string",
+  "PhyManualChkProc" : "string",
+  "PhyManualChkCrAccCode" : "string",
+  "PhyPlanCode" : "string",
+  "PhyPloCode" : "string",
+  "PhyWcbCode" : "string",
+  "PhyReceivableFlag" : "string",
+  "PhyUiFromMidyearForm" : "string",
+  "PhyEmpType" : "string",
+  "PhyEmpPygCode" : "string",
+  "PhyExpClaimFlag" : "string",
+  "PhyVendor" : "string",
+  "PhyComment" : "string",
+  "PhyApvoucherCreatedFlag" : "string",
+  "PhyUserTypeCode" : "string",
+  "PhyWoTranType" : "string",
+  "PhyCreateGlFlag" : "string",
+  "PhyPlCode" : "string",
+  "PhyWcbPolicyNo" : "string",
+  "PhyPlcPolicyNo" : "string",
+  "PhyActualPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyEquipPhsCode" : "string",
+  "PhyEqpHrlyWmCode" : "string",
+  "PhyEqpJccatCode" : "string",
+  "PhyTaxCode1" : "string",
+  "PhyTaxCode2" : "string",
+  "PhyTaxCode3" : "string",
+  "PhyExpStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyExpEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhySuiWrlCode" : "string",
+  "PhyPostDateChangeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyChgPayrateForJobTsh" : "string",
+  "PhyAssignedCheckNum" : 0,
+  "PhyPrintCheckOnly" : "string",
+  "PhyClearingDbAccCode" : "string",
+  "PhyClearingDbDeptCode" : "string",
+  "PhyRedistRecalWcpl" : "string",
+  "PhyEmpEiCode" : "string",
+  "PhyShiftCode" : "string",
+  "PhyCklocCode" : "string",
+  "PhyVendorAddCode" : "string",
+  "PhyVoidckReversalFlag" : "string",
+  "PhyActualPayDateFixFlag" : "string",
+  "PhyFedJurisdiction" : "string",
+  "PhyRefCheckNum" : 0,
+  "PhyActualWorkDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyDocumentNo" : "string",
+  "PhyInclCertPyRepFlag" : "string",
+  "PhyPwFringeOtPremFlag" : "string",
+  "PhyPwDiffDestBen" : "string",
+  "PhyPwDiffCalcDone" : "string",
+  "PhyPwDifferentialBenFlag" : "string",
+  "PhyPwCompCode" : "string",
+  "PhyPwJobCode" : "string",
+  "PhyEquipLocCode" : "string",
+  "PhyCostPoolJob" : "string",
+  "PhyActualWcbCode" : "string",
+  "PhyHomeCompCode" : "string",
+  "PhyHomeDeptCode" : "string",
+  "PhyLeaveTakenTmshtYear" : 0,
+  "PhyLevCalcDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyLevCalcMethod" : "string",
+  "PhyActualPlCode" : "string",
+  "PhyUkPayeTaxCode" : "string",
+  "PhyUkNicCategory" : "string",
+  "PhyVertexPsdcode" : 0,
+  "PhyCostAllocPostedFlag" : "string",
+  "PhyVertexSchdist" : 0,
+  "PhyIePayeExclusionFlag" : "string",
+  "PhyIePayeCalcMethod" : "string",
+  "PhyIePrsiSubclassEe" : "string",
+  "PhyIePrsiSubclassEr" : "string",
+  "PhyLastSessioninfo" : "string",
+  "PhyRetainTransactionsInfo" : "string",
+  "PhyOrigSessioninfo" : "string",
+  "PhyIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyIuCreateUser" : "string",
+  "PhyIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyIuUpdateUser" : "string",
+  "PhyVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="86f7d7a0-0437-4648-8661-8e3677d78f50" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="92c7771a-005d-4760-9685-e721b160f80b" method="POST">
+    <con:description>Create a PY Employee Pay History</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PhyCompCode" : "string",
+  "PhyPrnCode" : "string",
+  "PhyPprYear" : 0,
+  "PhyPprPeriod" : 0,
+  "PhyEmpNo" : "string",
+  "PhyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyEqpDeptCode" : "string",
+  "PhyEmpDeptCode" : "string",
+  "PhyEmpCrAccCode" : "string",
+  "PhyEqpCrAccCode" : "string",
+  "PhyWorkCompCode" : "string",
+  "PhyDataType" : "string",
+  "PhyDeptCode" : "string",
+  "PhyEmplrContrAccCode" : "string",
+  "PhyGlAccCode" : "string",
+  "PhyJob" : "string",
+  "PhyPhase" : "string",
+  "PhyCategory" : "string",
+  "PhyEquipment" : "string",
+  "PhyEquipCategory" : "string",
+  "PhyEquipTranNo" : "string",
+  "PhyUnionCode" : "string",
+  "PhyTradeCode" : "string",
+  "PhyWorkLocation" : "string",
+  "PhyTranType" : "string",
+  "PhyTranCode" : "string",
+  "PhyRateCode" : "string",
+  "PhyEmplrContrFlag" : "string",
+  "PhyAdjustment" : "string",
+  "PhyBatchNum" : 0,
+  "PhyProcessFlag" : "string",
+  "PhyChequeVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyHireFlag" : "string",
+  "PhyTaxtypeFlag" : "string",
+  "PhyRetpayFlag" : "string",
+  "PhyPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyUser" : "string",
+  "PhyLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyGlpostFlag" : "string",
+  "PhyDrDeptCode" : "string",
+  "PhyEmplrContrDeptCode" : "string",
+  "PhyUpdateBchFlag" : "string",
+  "PhyWoCode" : "string",
+  "PhyWitmLineNumber" : "string",
+  "PhyWoExpCode" : "string",
+  "PhyTavCode1" : "string",
+  "PhyTavCode2" : "string",
+  "PhyTavCode3" : "string",
+  "PhyTavCode4" : "string",
+  "PhyWbsvCode1" : "string",
+  "PhyWbsvCode2" : "string",
+  "PhyWbsvCode3" : "string",
+  "PhyWbsvCode4" : "string",
+  "PhyRedistributedBurdenFlag" : "string",
+  "PhyTshAfterChksFlag" : "string",
+  "PhyRetainTransactions" : "string",
+  "PhyWorkGeocode" : "string",
+  "PhyResidenceGeocode" : "string",
+  "PhyPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyExpectedPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyMonthNumber" : 0,
+  "PhyActualPeriod" : 0,
+  "PhyOriginalTransaction" : "string",
+  "PhyRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyRefDesc" : "string",
+  "PhyManualChkProc" : "string",
+  "PhyManualChkCrAccCode" : "string",
+  "PhyPlanCode" : "string",
+  "PhyPloCode" : "string",
+  "PhyWcbCode" : "string",
+  "PhyReceivableFlag" : "string",
+  "PhyUiFromMidyearForm" : "string",
+  "PhyEmpType" : "string",
+  "PhyEmpPygCode" : "string",
+  "PhyExpClaimFlag" : "string",
+  "PhyVendor" : "string",
+  "PhyComment" : "string",
+  "PhyApvoucherCreatedFlag" : "string",
+  "PhyUserTypeCode" : "string",
+  "PhyWoTranType" : "string",
+  "PhyCreateGlFlag" : "string",
+  "PhyPlCode" : "string",
+  "PhyWcbPolicyNo" : "string",
+  "PhyPlcPolicyNo" : "string",
+  "PhyActualPayDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyEquipPhsCode" : "string",
+  "PhyEqpHrlyWmCode" : "string",
+  "PhyEqpJccatCode" : "string",
+  "PhyTaxCode1" : "string",
+  "PhyTaxCode2" : "string",
+  "PhyTaxCode3" : "string",
+  "PhyExpStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyExpEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhySuiWrlCode" : "string",
+  "PhyPostDateChangeDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyChgPayrateForJobTsh" : "string",
+  "PhyAssignedCheckNum" : 0,
+  "PhyPrintCheckOnly" : "string",
+  "PhyClearingDbAccCode" : "string",
+  "PhyClearingDbDeptCode" : "string",
+  "PhyRedistRecalWcpl" : "string",
+  "PhyEmpEiCode" : "string",
+  "PhyShiftCode" : "string",
+  "PhyCklocCode" : "string",
+  "PhyVendorAddCode" : "string",
+  "PhyVoidckReversalFlag" : "string",
+  "PhyActualPayDateFixFlag" : "string",
+  "PhyFedJurisdiction" : "string",
+  "PhyRefCheckNum" : 0,
+  "PhyActualWorkDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyDocumentNo" : "string",
+  "PhyInclCertPyRepFlag" : "string",
+  "PhyPwFringeOtPremFlag" : "string",
+  "PhyPwDiffDestBen" : "string",
+  "PhyPwDiffCalcDone" : "string",
+  "PhyPwDifferentialBenFlag" : "string",
+  "PhyPwCompCode" : "string",
+  "PhyPwJobCode" : "string",
+  "PhyEquipLocCode" : "string",
+  "PhyCostPoolJob" : "string",
+  "PhyActualWcbCode" : "string",
+  "PhyHomeCompCode" : "string",
+  "PhyHomeDeptCode" : "string",
+  "PhyLeaveTakenTmshtYear" : 0,
+  "PhyLevCalcDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyLevCalcMethod" : "string",
+  "PhyActualPlCode" : "string",
+  "PhyUkPayeTaxCode" : "string",
+  "PhyUkNicCategory" : "string",
+  "PhyVertexPsdcode" : 0,
+  "PhyCostAllocPostedFlag" : "string",
+  "PhyVertexSchdist" : 0,
+  "PhyIePayeExclusionFlag" : "string",
+  "PhyIePayeCalcMethod" : "string",
+  "PhyIePrsiSubclassEe" : "string",
+  "PhyIePrsiSubclassEr" : "string",
+  "PhyLastSessioninfo" : "string",
+  "PhyRetainTransactionsInfo" : "string",
+  "PhyOrigSessioninfo" : "string",
+  "PhyIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyIuCreateUser" : "string",
+  "PhyIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PhyIuUpdateUser" : "string",
+  "PhyVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PhyCompCode":"string","PhyEmpNo":"string","PhyPrnCode":"string","PhyPprPeriod":"string","PhyPprYear":"string","PhySeqNo":"string","PhyPayDate":"string","PhyLastUpdDate":"string","PhyTranCode":"string","PhyUser":"string","PhyTranType":"string","PhyVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="22072940-2849-4f6b-8a19-4890f5e2a16a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PhyCompCode":"string","PhyEmpNo":"string","PhyPrnCode":"string","PhyPprPeriod":"string","PhyPprYear":"string","PhySeqNo":"string","PhyPayDate":"string","PhyLastUpdDate":"string","PhyTranCode":"string","PhyUser":"string","PhyTranType":"string","PhyVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0392a796-b121-4ddb-bd94-03a4b81e6b20" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PhyComment":"testing 123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

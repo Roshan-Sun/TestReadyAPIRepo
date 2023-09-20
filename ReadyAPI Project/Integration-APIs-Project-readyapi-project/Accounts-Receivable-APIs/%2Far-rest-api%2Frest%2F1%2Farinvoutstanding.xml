@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arinvoutstanding" path="/ar-rest-api/rest/1/arinvoutstanding" id="0b93e07d-9238-4d03-9c12-9b5e3d942b55" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0b93e07d-9238-4d03-9c12-9b5e3d942b55fileName">%2Far-rest-api%2Frest%2F1%2Farinvoutstanding</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a0b77e46-bb9b-4627-81cc-5e4d712f0a06" method="GET">
+    <con:description>Retrieve AR Outstanding Invoices</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectInvoices</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>InvCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Number/Code (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CustomerCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Customer Code (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>FromInvoiceDateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>From Invoice Date (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ToInvoiceDateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>To Invoice Date (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>FromDueDateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>From Invoice Due Date (selectInvoices)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ToDueDateVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>To Invoice Due Date (selectInvoices)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompanyCode" : "string",
+  "CustomerCode" : "string",
+  "InvoiceCode" : "string",
+  "InvoiceDate" : "YYYY-MM-dd",
+  "OutstandingAmount" : 0,
+  "OutstandingBucketName" : "string",
+  "OutstandingBucketName4" : "string",
+  "OutstandingBucketLabel" : "string",
+  "OutstandingBucketLabel4" : "string",
+  "OutstandingAmountCurrent" : 0,
+  "OutstandingAmount31To60" : 0,
+  "OutstandingAmount61To90" : 0,
+  "OutstandingAmountOver90" : 0,
+  "OutstandingAmount91To120" : 0,
+  "OutstandingAmountOver120" : 0,
+  "InvDueDate" : "YYYY-MM-dd",
+  "InvIuCreateDate" : "YYYY-MM-dd",
+  "InvIuUpdateDate" : "YYYY-MM-dd"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="91e43e44-e96f-4643-acaa-3b99becefb59" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

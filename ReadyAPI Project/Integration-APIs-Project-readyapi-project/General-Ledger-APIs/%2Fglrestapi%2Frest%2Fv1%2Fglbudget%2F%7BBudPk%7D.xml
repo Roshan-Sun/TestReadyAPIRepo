@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glbudget/{BudPk}" path="/glrestapi/rest/v1/glbudget/{BudPk}" id="8e34104e-4345-4d04-85a4-331303ada715" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8e34104e-4345-4d04-85a4-331303ada715fileName">%2Fglrestapi%2Frest%2Fv1%2Fglbudget%2F%7BBudPk%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6f934960-1ec1-4f03-86e8-6814fceba11d" method="GET">
+    <con:description>Retrieve specific GL budget</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>BudPk</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>unique identifier for budget</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BudPk" : "string",
+  "BudCompCode" : "string",
+  "BudDeptCode" : "string",
+  "BudDeptName" : "string",
+  "BudAccCode" : "string",
+  "BudAccName" : "string",
+  "BudYr" : 0,
+  "BudTypeCode" : "string",
+  "BudNewRecFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0b29568f-372d-4968-995d-083c27f2ea49" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

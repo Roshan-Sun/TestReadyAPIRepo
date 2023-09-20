@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/bacurrency" path="/sys-rest-api/rest/1/bacurrency" id="c033bf27-e48a-4a62-a0fd-c7ee8797c41f" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c033bf27-e48a-4a62-a0fd-c7ee8797c41ffileName">%2Fsys-rest-api%2Frest%2F1%2Fbacurrency</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="27089fa3-c9a0-4f5d-af36-2dd6df1ebe00" method="GET">
+    <con:description>Retrieve BA Currencies</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>BacurrencyFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CurrName</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Currency Name (BacurrencyFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BacurrCode" : "string",
+  "BacurrName" : "string",
+  "BacurrLogo" : "string",
+  "BacurrWordMapping" : "string",
+  "BacurrIuCreateDate" : "YYYY-MM-dd",
+  "BacurrIuCreateUser" : "string",
+  "BacurrIuUpdateDate" : "YYYY-MM-dd",
+  "BacurrIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="cfb370bb-165b-4b67-a9ea-9f4202bd3684" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="04399d5e-ed81-4448-8e1a-57f0f21c80da" method="POST">
+    <con:description>Create a BA Currency</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BacurrCode" : "string",
+  "BacurrName" : "string",
+  "BacurrLogo" : "string",
+  "BacurrWordMapping" : "string",
+  "BacurrIuCreateDate" : "YYYY-MM-dd",
+  "BacurrIuCreateUser" : "string",
+  "BacurrIuUpdateDate" : "YYYY-MM-dd",
+  "BacurrIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BacurrCode":"string","BacurrName":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="b310c942-7d52-410f-81bf-1ffc48b4aeb6" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BacurrCode":"string","BacurrName":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0dafc314-4f4b-4c55-9f2a-e7b92905b44a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BacurrName":"test dollar 123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

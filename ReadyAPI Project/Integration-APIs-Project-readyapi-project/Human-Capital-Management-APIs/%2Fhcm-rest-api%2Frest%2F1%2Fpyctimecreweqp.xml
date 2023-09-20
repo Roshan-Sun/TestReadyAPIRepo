@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimecreweqp" path="/hcm-rest-api/rest/1/pyctimecreweqp" id="eee50f1a-3dd7-4df3-814d-25027144fd49" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="eee50f1a-3dd7-4df3-814d-25027144fd49fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimecreweqp</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="130bb8ce-ca72-4300-a37c-7c24622d15ae" method="GET">
+    <con:description>Retrieve Crew Time Crew Equipment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CrweVUuid" : "string",
+  "CrweAccessCode" : "string",
+  "CrweCrewCode" : "string",
+  "CrweCrewempVUuid" : "string",
+  "CrweEqpCode" : "string",
+  "CrweStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuCreateUser" : "string",
+  "CrweIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuUpdateUser" : "string",
+  "CrweCrewempCode" : "string",
+  "CrweCrewempNo" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="062c4196-1a39-49e5-8991-bdc4800b11db" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="5e366505-a2b5-4ecc-8b15-04e2609fe7db" method="POST">
+    <con:description>Create a Crew Time Crew Equipment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CrweVUuid" : "string",
+  "CrweAccessCode" : "string",
+  "CrweCrewCode" : "string",
+  "CrweCrewempVUuid" : "string",
+  "CrweEqpCode" : "string",
+  "CrweStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuCreateUser" : "string",
+  "CrweIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "CrweIuUpdateUser" : "string",
+  "CrweCrewempCode" : "string",
+  "CrweCrewempNo" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CrweAccessCode":"MASTER","CrweCrewCode":"TEST-01","CrweEqpCode":"TRAIL1","CrweStartDate":"2021-09-08T09:27:53-04:00","CrweVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="f5426c52-c2d8-4681-9436-2a07acb857db" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CrweAccessCode":"MASTER","CrweCrewCode":"TEST-01","CrweEqpCode":"TRAIL1","CrweStartDate":"2021-09-08T09:27:53-04:00","CrweVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

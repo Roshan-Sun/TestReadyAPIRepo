@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/prm-rest-api/rest/1/workbudget" path="/prm-rest-api/rest/1/workbudget" id="b5062191-1d18-40fe-ad56-c5e723205b31" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b5062191-1d18-40fe-ad56-c5e723205b31fileName">%2Fprm-rest-api%2Frest%2F1%2Fworkbudget</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="011591cd-5148-4261-9a1e-b310385c3b6c" method="GET">
+    <con:description>Retrieve Work Budgets</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrmbdObjectTypeCode" : "string",
+  "PrmbdBudgTypeCode" : "string",
+  "PrmbdExpCode" : "string",
+  "PrmbdExpName" : "string",
+  "PrmbdMactCode" : "string",
+  "PrmbdSklCode" : "string",
+  "PrmbdPostDate" : "YYYY-MM-dd",
+  "PrmbdWmCode" : "string",
+  "PrmbdBudgAmtFrmtd" : "string",
+  "PrmbdMateType" : "string",
+  "PrmbdNonstockFlag" : "string",
+  "PrmbdMateItemClassCode" : "string",
+  "PrmbdMateItemClassName" : "string",
+  "PrmbdMateMevwCompCode" : "string",
+  "PrmbdMateMevwCompName" : "string",
+  "PrmbdMateMevwItemCode" : "string",
+  "PrmbdMateMevwItemName" : "string",
+  "PrmbdMateMevwItemTypeCode" : "string",
+  "PrmbdMateMevwItemTypeName" : "string",
+  "PrmbdToolCode" : "string",
+  "PrmbdDesc" : "string",
+  "PrmbdMechanicCode" : "string",
+  "PrmbdCostFlag" : "string",
+  "PrmbdBchNum" : 0,
+  "PrmbdWbsvCode1" : "string",
+  "PrmbdWbsvCode2" : "string",
+  "PrmbdWbsvCode3" : "string",
+  "PrmbdWbsvCode4" : "string",
+  "PrmbdPartnCode" : "string",
+  "PrmbdPartnTypeCode" : "string",
+  "PrmbdPartnName" : "string",
+  "PrmbdContactCode" : "string",
+  "PrmbdContactName" : "string",
+  "PrmbdTrdCode" : "string",
+  "PrmbdTrdDescription" : "string",
+  "PrmbdEqpCompCode" : "string",
+  "PrmbdEqpCompName" : "string",
+  "PrmbdEqpCode" : "string",
+  "PrmbdEqpName" : "string",
+  "PrmbdVenCompCode" : "string",
+  "PrmbdVenCode" : "string",
+  "PrmbdVenCompName" : "string",
+  "PrmbdVenName" : "string",
+  "PrmbdRateFrmtd" : "string",
+  "PrmbdEqpTrancodeCode" : "string",
+  "PrmbdEqpTrancodeName" : "string",
+  "PrmbdBilledFlag" : "string",
+  "PrmbdManualEntryFlag" : "string",
+  "PrmbdBillAmtFrmtd" : "string",
+  "PrmbdFixedFeeLumpSumFlag" : "string",
+  "PrmbdMateLocCode" : "string",
+  "PrmbdMateLocName" : "string",
+  "PrmbdSubmitFlag" : "string",
+  "PrmbdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e9896f80-39e3-4cd6-9824-8fdf1eb147ea" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="c79e556f-d09e-4fa6-ba9e-aae32225957d" method="POST">
+    <con:description>Create a Work Budget</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PrmbdObjectTypeCode" : "string",
+  "PrmbdBudgTypeCode" : "string",
+  "PrmbdExpCode" : "string",
+  "PrmbdExpName" : "string",
+  "PrmbdMactCode" : "string",
+  "PrmbdSklCode" : "string",
+  "PrmbdPostDate" : "YYYY-MM-dd",
+  "PrmbdWmCode" : "string",
+  "PrmbdBudgAmtFrmtd" : "string",
+  "PrmbdMateType" : "string",
+  "PrmbdNonstockFlag" : "string",
+  "PrmbdMateItemClassCode" : "string",
+  "PrmbdMateItemClassName" : "string",
+  "PrmbdMateMevwCompCode" : "string",
+  "PrmbdMateMevwCompName" : "string",
+  "PrmbdMateMevwItemCode" : "string",
+  "PrmbdMateMevwItemName" : "string",
+  "PrmbdMateMevwItemTypeCode" : "string",
+  "PrmbdMateMevwItemTypeName" : "string",
+  "PrmbdToolCode" : "string",
+  "PrmbdDesc" : "string",
+  "PrmbdMechanicCode" : "string",
+  "PrmbdCostFlag" : "string",
+  "PrmbdBchNum" : 0,
+  "PrmbdWbsvCode1" : "string",
+  "PrmbdWbsvCode2" : "string",
+  "PrmbdWbsvCode3" : "string",
+  "PrmbdWbsvCode4" : "string",
+  "PrmbdPartnCode" : "string",
+  "PrmbdPartnTypeCode" : "string",
+  "PrmbdPartnName" : "string",
+  "PrmbdContactCode" : "string",
+  "PrmbdContactName" : "string",
+  "PrmbdTrdCode" : "string",
+  "PrmbdTrdDescription" : "string",
+  "PrmbdEqpCompCode" : "string",
+  "PrmbdEqpCompName" : "string",
+  "PrmbdEqpCode" : "string",
+  "PrmbdEqpName" : "string",
+  "PrmbdVenCompCode" : "string",
+  "PrmbdVenCode" : "string",
+  "PrmbdVenCompName" : "string",
+  "PrmbdVenName" : "string",
+  "PrmbdRateFrmtd" : "string",
+  "PrmbdEqpTrancodeCode" : "string",
+  "PrmbdEqpTrancodeName" : "string",
+  "PrmbdBilledFlag" : "string",
+  "PrmbdManualEntryFlag" : "string",
+  "PrmbdBillAmtFrmtd" : "string",
+  "PrmbdFixedFeeLumpSumFlag" : "string",
+  "PrmbdMateLocCode" : "string",
+  "PrmbdMateLocName" : "string",
+  "PrmbdSubmitFlag" : "string",
+  "PrmbdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PrmbdObjectTypeCode":"string","PrmbdObjectVUuid":"string","PrmbdBudgTypeCode":"string","PrmbdExpCode":"string","PrmbdCostFlag":"string","PrmbdPartnCode":"string","PrmbdTrdCode":"string","PrmbdVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="3cea65b1-e94e-4e27-bacc-c8d2e87ab687" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PrmbdObjectTypeCode":"string","PrmbdObjectVUuid":"string","PrmbdBudgTypeCode":"string","PrmbdExpCode":"string","PrmbdCostFlag":"string","PrmbdPartnCode":"string","PrmbdTrdCode":"string","PrmbdVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

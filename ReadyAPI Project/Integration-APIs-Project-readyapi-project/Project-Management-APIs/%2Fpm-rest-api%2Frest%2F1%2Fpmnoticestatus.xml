@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmnoticestatus" path="/pm-rest-api/rest/1/pmnoticestatus" id="151920a7-a07e-49b9-bb48-c233eb94b2f3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="151920a7-a07e-49b9-bb48-c233eb94b2f3fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmnoticestatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="929b3de2-6bc0-4a64-bab0-2a87b99b07fa" method="GET">
+    <con:description>Retrieve PM Notice Statuses</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmnsStatusCode" : "string",
+  "PmnsStatusName" : "string",
+  "PmnsStatusClassCode" : "string",
+  "PmnsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmnsIuCreateUser" : "string",
+  "PmnsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmnsIuUpdateUser" : "string",
+  "PmnsLastSessioninfo" : "string",
+  "PmnsOrigSessioninfo" : "string",
+  "PmnsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="97111869-4355-4308-9769-887f78c72d4c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="fa906fc9-1be5-4342-a87f-eae31f5dce7f" method="POST">
+    <con:description>Create a PM Notice Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmnsStatusCode" : "string",
+  "PmnsStatusName" : "string",
+  "PmnsStatusClassCode" : "string",
+  "PmnsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmnsIuCreateUser" : "string",
+  "PmnsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmnsIuUpdateUser" : "string",
+  "PmnsLastSessioninfo" : "string",
+  "PmnsOrigSessioninfo" : "string",
+  "PmnsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmnsStatusClassCode":"string","PmnsStatusCode":"string","PmnsStatusName":"string","PmnsVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="870ed567-e022-4686-b259-f9c7ba1ac366" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmnsStatusClassCode":"string","PmnsStatusCode":"string","PmnsStatusName":"string","PmnsVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0222d2a0-66f2-4d60-89b3-fea18c5ffdac" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmnsStatusName":"Voided - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

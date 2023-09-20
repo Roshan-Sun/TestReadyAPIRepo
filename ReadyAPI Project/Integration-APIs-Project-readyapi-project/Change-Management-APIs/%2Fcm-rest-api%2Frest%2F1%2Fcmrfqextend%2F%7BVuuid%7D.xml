@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" path="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" id="a8c4a67a-a0f1-4b2b-890f-06389fdfb086" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a8c4a67a-a0f1-4b2b-890f-06389fdfb086fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmrfqextend%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="4abecb10-6da0-41ea-a416-3cd85c89b1c4" method="GET">
+    <con:description>Retrieve a Specific RFQ Extension</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmdvdPostedFlag" : "string",
+  "CmdvdCompCode" : "string",
+  "CmdvdJobCode" : "string",
+  "CmdvdChgCode" : "string",
+  "CmdvdVenCode" : "string",
+  "CmdvdRfqDueDate" : "YYYY-MM-dd",
+  "CmdvdRfqSentDate" : "YYYY-MM-dd",
+  "CmdvdRfqReceivedDate" : "YYYY-MM-dd",
+  "CmdvdRfqComments" : "string",
+  "CmdvdContactCode" : "string",
+  "CmdvdPrintFlag" : "string",
+  "CmdvdQuotedRate" : 0,
+  "CmdvdQuotedQty" : 0,
+  "CmdvdQuotedAmt" : 0,
+  "CmdvdOrigQuoteAmt" : 0,
+  "CmdvdPartnTypeCode" : "string",
+  "CmdvdInternalFlag" : "string",
+  "CmdvdInternalDesc" : "string",
+  "CmdvdScPricingStatus" : "string",
+  "CmdvdIuCreateDate" : "YYYY-MM-dd",
+  "CmdvdIuCreateUser" : "string",
+  "CmdvdIuUpdateDate" : "YYYY-MM-dd",
+  "CmdvdIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CmdvdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b59b50c8-4a4e-4c18-b9b7-ed2a61d03556" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

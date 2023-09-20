@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glaccounts" path="/glrestapi/rest/v1/glaccounts" id="625db806-c35b-4770-9e90-7eca71884f74" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="625db806-c35b-4770-9e90-7eca71884f74fileName">%2Fglrestapi%2Frest%2Fv1%2Fglaccounts</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="a6143588-ecd0-4c9e-8588-1e85589ea392" method="GET">
+    <con:description>Retrieve GL accounts</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectAccounts</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>chartCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Chart Code (selectAccounts)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AccConschartCode" : "string",
+  "AccConschartName" : "string",
+  "AccCode" : "string",
+  "AccName" : "string",
+  "AccCounterAcc" : "string",
+  "AccDistCode" : "string",
+  "AccTypeCode" : "string",
+  "AccTypeName" : "string",
+  "AccSafCode" : "string",
+  "AccCompressCode" : "string",
+  "AccNormalBalCode" : "string",
+  "AccNormalBalName" : "string",
+  "AccSequence" : 0,
+  "AccSubledgCode" : "string",
+  "AccSubledgName" : "string",
+  "AccSummaryCode" : "string",
+  "AccWmCode" : "string",
+  "AccWmName" : "string",
+  "AccLongCode" : "string",
+  "AccCtrlCode" : "string",
+  "AccCtrlName" : "string",
+  "AccLevelCode" : 0,
+  "AccLowFlag" : "string",
+  "AccMonetaryFlag" : "string",
+  "AccInterCompAccFlag" : "string",
+  "AccOfConcatenatedSegments" : "string",
+  "AccHier" : "string",
+  "AccTavCode1" : "string",
+  "AccTavCode2" : "string",
+  "AccTavCode3" : "string",
+  "AccTavCode4" : "string",
+  "AccTavRequiredFlag1" : "string",
+  "AccTavRequiredFlag2" : "string",
+  "AccTavRequiredFlag3" : "string",
+  "AccTavRequiredFlag4" : "string",
+  "AccTavValidatedFlag1" : "string",
+  "AccTavValidatedFlag2" : "string",
+  "AccTavValidatedFlag3" : "string",
+  "AccTavValidatedFlag4" : "string",
+  "AccTavEditableFlag1" : "string",
+  "AccTavEditableFlag2" : "string",
+  "AccTavEditableFlag3" : "string",
+  "AccTavEditableFlag4" : "string",
+  "AccMarkedForProcessFlag" : "string",
+  "AccCostpoolAllowedFlag" : "string",
+  "AccSchedgReportLevelFlag" : "string",
+  "AccCurrCode" : "string",
+  "AccCurrName" : "string",
+  "AccFxAccCode" : "string",
+  "AccFxAccName" : "string",
+  "AccTacEnableFlag" : "string",
+  "AccGroupCode1" : "string",
+  "AccGroupCode2" : "string",
+  "AccGroupCode3" : "string",
+  "AccGroupCode4" : "string",
+  "AccGroupCode5" : "string",
+  "DiscriminatorCode" : "string",
+  "AccVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="59fdae26-e50e-480e-955d-80627b0e95da" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

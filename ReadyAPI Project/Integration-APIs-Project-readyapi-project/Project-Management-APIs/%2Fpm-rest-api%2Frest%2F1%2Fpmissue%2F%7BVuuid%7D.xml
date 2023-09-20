@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmissue/{Vuuid}" path="/pm-rest-api/rest/1/pmissue/{Vuuid}" id="d255aab5-6b00-4192-ae53-aec9ef1a813e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d255aab5-6b00-4192-ae53-aec9ef1a813efileName">%2Fpm-rest-api%2Frest%2F1%2Fpmissue%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="48d5d377-91b3-4576-b6d3-50f94b4f9ef4" method="GET">
+    <con:description>Retrieve a Specific PM Issue</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmiProjCode" : "string",
+  "DmiCompCode" : "string",
+  "DmiIssueId" : "string",
+  "DmiTitle" : "string",
+  "DmiClvValueCode1" : "string",
+  "DmiClvValueCode2" : "string",
+  "DmiClvValueCode3" : "string",
+  "DmiClvValueCode4" : "string",
+  "DmiClvValueCode5" : "string",
+  "DmiClvValueCode6" : "string",
+  "DmiPartnCode" : "string",
+  "DmiPartnTypeCode" : "string",
+  "DmiContactCode" : "string",
+  "DmiToPartnCode" : "string",
+  "DmiToPartnTypeCode" : "string",
+  "DmiToContactCode" : "string",
+  "DmiRespPartnCode" : "string",
+  "DmiRespPartnTypeCode" : "string",
+  "DmiRespContactCode" : "string",
+  "DmiRespComment" : "string",
+  "DmiDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiUser" : "string",
+  "DmiTypeCode" : "string",
+  "DmiStatusCode" : "string",
+  "DmiDescription" : "string",
+  "DmiPriorityCode" : "string",
+  "DmiResolution" : "string",
+  "DmiSuggestion" : "string",
+  "DmiCustIssueId" : "string",
+  "DmiResolutionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiCreatedByObjType" : "string",
+  "DmiInternalFlag" : "string",
+  "DmiVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="857f69dc-7589-416f-839b-c5e7306268e6" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="0be6e0fb-5c93-477f-bddc-a756014b4ce7" method="DELETE">
+    <con:description>Delete a Specific PM Issue</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="639183b0-563d-40cd-a45b-281262a6e574" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="8caa28bb-1bf9-4b58-b3bc-f8db267db546" method="PATCH">
+    <con:description>Update a Specific PM Issue</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DmiProjCode" : "string",
+  "DmiCompCode" : "string",
+  "DmiIssueId" : "string",
+  "DmiTitle" : "string",
+  "DmiClvValueCode1" : "string",
+  "DmiClvValueCode2" : "string",
+  "DmiClvValueCode3" : "string",
+  "DmiClvValueCode4" : "string",
+  "DmiClvValueCode5" : "string",
+  "DmiClvValueCode6" : "string",
+  "DmiPartnCode" : "string",
+  "DmiPartnTypeCode" : "string",
+  "DmiContactCode" : "string",
+  "DmiToPartnCode" : "string",
+  "DmiToPartnTypeCode" : "string",
+  "DmiToContactCode" : "string",
+  "DmiRespPartnCode" : "string",
+  "DmiRespPartnTypeCode" : "string",
+  "DmiRespContactCode" : "string",
+  "DmiRespComment" : "string",
+  "DmiDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiUser" : "string",
+  "DmiTypeCode" : "string",
+  "DmiStatusCode" : "string",
+  "DmiDescription" : "string",
+  "DmiPriorityCode" : "string",
+  "DmiResolution" : "string",
+  "DmiSuggestion" : "string",
+  "DmiCustIssueId" : "string",
+  "DmiResolutionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DmiCreatedByObjType" : "string",
+  "DmiInternalFlag" : "string",
+  "DmiVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="1bbea58a-0c4e-4f6e-bb93-2a11859f8ced" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ecfc2e54-0a69-4fbf-b855-825985c7c390" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DmiDescription":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

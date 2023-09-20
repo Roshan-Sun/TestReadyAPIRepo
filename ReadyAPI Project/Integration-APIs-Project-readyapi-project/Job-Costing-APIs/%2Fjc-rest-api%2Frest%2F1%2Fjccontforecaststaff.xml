@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccontforecaststaff" path="/jc-rest-api/rest/1/jccontforecaststaff" id="2643025a-1a7b-46d4-adcf-1e1b685ad739" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2643025a-1a7b-46d4-adcf-1e1b685ad739fileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecaststaff</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8da16fd0-1c5a-43bc-ab13-13503601e60d" method="GET">
+    <con:description>Retrieve JC Contract Forecasting Staff</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contract code</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>YearPer</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Forecasting year</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit date to check against (create/update dates)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcfsYr" : 0,
+  "JcfsPer" : 0,
+  "JcfsYrPer" : 0,
+  "JcfsCompCode" : "string",
+  "JcfsContCode" : "string",
+  "JcfsContName" : "string",
+  "JcfsType" : "string",
+  "JcfsResource" : "string",
+  "JcfsResourceName" : "string",
+  "JcfsResourceType" : "string",
+  "JcfsResourceTypeDesc" : "string",
+  "JcfsEmpNo" : "string",
+  "JcfsEmpName" : "string",
+  "JcfsBillCode" : "string",
+  "JcfsBillName" : "string",
+  "JcfsJobCode" : "string",
+  "JcfsJobName" : "string",
+  "JcfsBillingRateTableCode" : "string",
+  "JcfsPhsCode" : "string",
+  "JcfsPhsName" : "string",
+  "JcfsCatCode" : "string",
+  "JcfsCatName" : "string",
+  "JcfsStartDate" : "YYYY-MM-dd",
+  "JcfsEndDate" : "YYYY-MM-dd",
+  "JcfsDurationMonths" : 0,
+  "JcfsTradeCode" : "string",
+  "JcfsTradeName" : "string",
+  "JcfsLastRefreshDate" : "YYYY-MM-dd",
+  "JcfsWeeklyCostHrs" : 0,
+  "JcfsWeeklyBillHrs" : 0,
+  "JcfsCostHrRate" : 0,
+  "JcfsCostHrRateOverride" : 0,
+  "JcfsBillHrRate" : 0,
+  "JcfsBillHrRateOverride" : 0,
+  "JcfsEstTotalCostHrs" : 0,
+  "JcfsEstTotalBillHrs" : 0,
+  "JcfsEstToCompleteCostAmt" : 0,
+  "JcfsEstToCompleteBillAmt" : 0,
+  "JcfsTimesheetPostDate" : "YYYY-MM-dd",
+  "JcfsUnionCode" : "string",
+  "JcfsUnionName" : "string",
+  "JcfsRateType" : "string",
+  "JcfsBudgetCostHrs" : 0,
+  "JcfsBudgetCostHrRate" : 0,
+  "JcfsBudgetBillHrs" : 0,
+  "JcfsBudgetBillHrRate" : 0,
+  "JcfsBudgetTotalCostHrs" : 0,
+  "JcfsBudgetTotalBillHrs" : 0,
+  "JcfsBudgetToComplCostAmt" : 0,
+  "JcfsBudgetToComplBillAmt" : 0,
+  "JcfsBidJobFlag" : "string",
+  "JcfsActualHrToDate" : 0,
+  "JcfsActualCostToDate" : 0,
+  "JcfsBudgetHrToDate" : 0,
+  "JcfsBudgetCostToDate" : 0,
+  "JcfsActualBillHrToDate" : 0,
+  "JcfsActualBillToDate" : 0,
+  "JcfsDescription" : "string",
+  "JcfsCostQty" : 0,
+  "JcfsBillQty" : 0,
+  "JcfsBudgetCostQty" : 0,
+  "JcfsBudgetBillQty" : 0,
+  "JcfsProjPosition" : "string",
+  "JcfsSeqNum" : 0,
+  "JcfsDetailOverrideFlag" : "string",
+  "JcfsRpAvailableFlag" : "string",
+  "JcfsTotalProjCostHrs" : 0,
+  "JcfsTotalProjCostAmt" : 0,
+  "JcfsTotalProjBillAmt" : 0,
+  "JcfsAutoCreatedFlag" : "string",
+  "JcfsEtcOnlyFlag" : "string",
+  "JcfsJobStatusCode" : "string",
+  "JcfsOrigCostBudgAmt" : 0,
+  "JcfsOrigCostBudgQty" : 0,
+  "JcfsOrigBillBudgAmt" : 0,
+  "JcfsOrigBillBudgQty" : 0,
+  "JcfsEmpFlsaExemptFlag" : "string",
+  "JcfsEmpUnionizedFlag" : "string",
+  "JcfsWbsMappingFlag" : "string",
+  "JcfsHiredFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "JcfsIuCreateDate" : "YYYY-MM-dd",
+  "JcfsIuCreateUser" : "string",
+  "JcfsIuUpdateDate" : "YYYY-MM-dd",
+  "JcfsIuUpdateUser" : "string",
+  "JcfsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c92fdaa9-66cb-4ced-b9e8-4a091fb48282" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

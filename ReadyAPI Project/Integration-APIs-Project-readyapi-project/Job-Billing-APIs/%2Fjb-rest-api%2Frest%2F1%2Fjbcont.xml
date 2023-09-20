@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jb-rest-api/rest/1/jbcont" path="/jb-rest-api/rest/1/jbcont" id="37fe9746-0281-45bd-b29a-f04e25f14e58" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="37fe9746-0281-45bd-b29a-f04e25f14e58fileName">%2Fjb-rest-api%2Frest%2F1%2Fjbcont</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="bb43e78c-1d84-481e-9040-f00b86ae8e5b" method="GET">
+    <con:description>Retrieve all JB Contracts</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contract code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to check against create/update dates (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JbcCompCode" : "string",
+  "JbcCompName" : "string",
+  "JbcContCode" : "string",
+  "JbcJobCode" : "string",
+  "JbcJobName" : "string",
+  "JbcJobCtrlCode" : "string",
+  "JbcJobCtrlName" : "string",
+  "JbcJobBillingRateCode" : "string",
+  "JbcNegMaxBillAmtFlag" : "string",
+  "JbcCustCode" : "string",
+  "JbcCustName" : "string",
+  "JbcDefaultBillingType" : "string",
+  "JbcName" : "string",
+  "JbcCurrCode" : "string",
+  "JbcCurrName" : "string",
+  "JbcTermCode" : "string",
+  "JbcTermName" : "string",
+  "JbcHldbkPc" : 0,
+  "JbcTax1Code" : "string",
+  "JbcTax1Name" : "string",
+  "JbcTax2Code" : "string",
+  "JbcTax2Name" : "string",
+  "JbcTax3Code" : "string",
+  "JbcTax3Name" : "string",
+  "JbcBidDate" : "YYYY-MM-dd",
+  "JbcContDate" : "YYYY-MM-dd",
+  "JbcLstrevDate" : "YYYY-MM-dd",
+  "JbcClosedDate" : "YYYY-MM-dd",
+  "JbcAddTypeCode" : "string",
+  "JbcAddTypeName" : "string",
+  "JbcContactName" : "string",
+  "JbcAdd1" : "string",
+  "JbcAdd2" : "string",
+  "JbcAdd3" : "string",
+  "JbcRegionCode" : "string",
+  "JbcRegionName" : "string",
+  "JbcCountry" : "string",
+  "JbcPostalCode" : "string",
+  "JbcPhoneNum" : "string",
+  "JbcFaxNum" : "string",
+  "JbcDesc" : "string",
+  "JbcEngName" : "string",
+  "JbcArcName" : "string",
+  "JbcLawName" : "string",
+  "JbcSupName" : "string",
+  "JbcApprovedDate" : "YYYY-MM-dd",
+  "JbcApprovedUser" : "string",
+  "JbcMaxBillingAmt" : 0,
+  "JbcBudgBillingAmt" : 0,
+  "JbcDefaultInvFormatCode" : "string",
+  "JbcDefaultInvFormatName" : "string",
+  "JbcProjectManager" : "string",
+  "JbcDefaultTax1TaxablePct" : 0,
+  "JbcDefaultTax2TaxablePct" : 0,
+  "JbcDefaultTax3TaxablePct" : 0,
+  "JbcArchitectBpCode" : "string",
+  "JbcArchitectBpName" : "string",
+  "JbcStartingDrawNum" : 0,
+  "JbcMinCode" : "string",
+  "JbcMinName" : "string",
+  "JbcInvoiceCurrCode" : "string",
+  "JbcInvoiceCurrName" : "string",
+  "JbcFixedCurrFactorNum" : 0,
+  "JbcPmContactPartnTypeCode" : "string",
+  "JbcPmContactPartnCode" : "string",
+  "JbcPmContactCode" : "string",
+  "JbcPmContactName" : "string",
+  "JbcRetCode" : "string",
+  "JbcRetDescription" : "string",
+  "JbcStartDate" : "YYYY-MM-dd",
+  "JbcEndDate" : "YYYY-MM-dd",
+  "JbcRuleCode" : "string",
+  "JbcTimePhasedFlag" : "string",
+  "JbcAlternateCustName" : "string",
+  "JbcDeptCode" : "string",
+  "JbcDeptName" : "string",
+  "JbcJbpytradeXrefCode" : "string",
+  "JbcJbpytradeXrefName" : "string",
+  "JbcAltCustAddCode" : "string",
+  "JbcExclNoninvReceipts" : "string",
+  "JbcHldbkMethod" : "string",
+  "JbcScRfpCostFlag" : "string",
+  "JbcWCatNoBillCodeFlag" : "string",
+  "JbcInvoiceLevelRetFlag" : "string",
+  "JbcBpAddTypeCode" : "string",
+  "JbcBpAddTypeName" : "string",
+  "JbcMatStoredInternal" : "string",
+  "JbcMatStoredPrintFlag" : "string",
+  "JbcGrpMaxSeqGrp1" : 0,
+  "JbcGrpMaxSeqGrp2" : 0,
+  "JbcGrpMaxSeqGrp3" : 0,
+  "JbcGrpMaxSeqGrp4" : 0,
+  "JbcGrpMaxSeqGrp5" : 0,
+  "JbcUseScrfpHldbkRelFlag" : "string",
+  "JbcWipRollInFlag" : "string",
+  "JbcDtlPciBilling" : "string",
+  "JbcCPciDisableFlag" : "string",
+  "JbcIuCreateDate" : "YYYY-MM-dd",
+  "JbcIuCreateUser" : "string",
+  "JbcIuUpdateDate" : "YYYY-MM-dd",
+  "JbcIuUpdateUser" : "string",
+  "JbcCompCurrCode" : "string",
+  "JbcEtcUseUnbilledRev" : "string",
+  "JbcRoundBillAmtTo" : 0,
+  "JbcRoundBillMethod" : "string",
+  "JbcRoundHldbkAmtTo" : 0,
+  "JbcRoundHldbkMethod" : "string",
+  "JbcTaxOnGrossAmt" : "string",
+  "JbcAcctDescription" : "string",
+  "DiscriminatorCode" : "string",
+  "JbcContractName" : "string",
+  "JbcNoRecalCurComplFlag" : "string",
+  "JbcRemitDetails" : "string",
+  "JbcVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0d972017-144d-45a2-bb43-fba4f46c42f4" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

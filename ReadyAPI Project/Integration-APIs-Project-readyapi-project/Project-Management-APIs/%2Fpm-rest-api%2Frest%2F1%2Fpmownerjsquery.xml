@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmownerjsquery" path="/pm-rest-api/rest/1/pmownerjsquery" id="a34d90f8-3da4-429d-9dbf-665c673c661b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a34d90f8-3da4-429d-9dbf-665c673c661bfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmownerjsquery</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="426deb86-8ade-4f4b-bd71-d0e4402a98d2" method="GET">
+    <con:description>Runs the PM Owner JS Query</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>prepareQuery</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (prepareQuery)</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (prepareQuery)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmojsqCompCode" : "string",
+  "PmojsqJobCode" : "string",
+  "PmojsqPhsCode" : "string",
+  "PmojsqPhsName" : "string",
+  "PmojsqCatCode" : "string",
+  "PmojsqIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmojsqIuCreateUser" : "string",
+  "PmojsqIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmojsqIuUpdateUser" : "string",
+  "PmojsqLastSessioninfo" : "string",
+  "PmojsqCatBudgetFlag" : "string",
+  "PmojsqCatCostFlag" : "string",
+  "PmojsqCatBillingFlag" : "string",
+  "PmojsqOrigSessioninfo" : "string",
+  "PmojsqComments" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="25106126-c404-4b91-a4a4-8abdd965f96b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

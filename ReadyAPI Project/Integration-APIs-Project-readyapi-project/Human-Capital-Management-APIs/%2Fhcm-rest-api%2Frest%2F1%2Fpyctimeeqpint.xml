@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyctimeeqpint" path="/hcm-rest-api/rest/1/pyctimeeqpint" id="c35e517d-d321-4e92-8f93-f9f85514a79b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c35e517d-d321-4e92-8f93-f9f85514a79bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeeqpint</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="62c09ad2-ce7a-4a40-972b-063c2f5416a9" method="GET">
+    <con:description>Retrieve Crew Time Equipments</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmtrVUuid" : "string",
+  "EmtrHdrJobCompCode" : "string",
+  "EmtrHdrJobCode" : "string",
+  "EmtrCrewCode" : "string",
+  "EmtrRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrDistTypeCode" : "string",
+  "EmtrDsrcCompCode" : "string",
+  "EmtrJobCode" : "string",
+  "EmtrPhsCode" : "string",
+  "EmtrCatCode" : "string",
+  "EmtrDistDeptCode" : "string",
+  "EmtrDistAccCode" : "string",
+  "EmtrActEquipment" : "string",
+  "EmtrActEquipCategory" : "string",
+  "EmtrActEquipTranCode" : "string",
+  "EmtrDistWorkorder" : "string",
+  "EmtrDistWitmLineNumber" : "string",
+  "EmtrDistExpCode" : "string",
+  "EmtrRefCode" : "string",
+  "EmtrRowEquipment" : "string",
+  "EmtrRowEquipTranCode" : "string",
+  "EmtrPostFlag" : "string",
+  "EmtrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuCreateUser" : "string",
+  "EmtrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuUpdateUser" : "string",
+  "EmtrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="55ac3326-ffb0-4b95-8dcd-d8fa6bc14e40" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="518bbd91-76e0-49e2-bf77-ea10f4151779" method="POST">
+    <con:description>Create a Crew Time Equipment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmtrVUuid" : "string",
+  "EmtrHdrJobCompCode" : "string",
+  "EmtrHdrJobCode" : "string",
+  "EmtrCrewCode" : "string",
+  "EmtrRefDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrDistTypeCode" : "string",
+  "EmtrDsrcCompCode" : "string",
+  "EmtrJobCode" : "string",
+  "EmtrPhsCode" : "string",
+  "EmtrCatCode" : "string",
+  "EmtrDistDeptCode" : "string",
+  "EmtrDistAccCode" : "string",
+  "EmtrActEquipment" : "string",
+  "EmtrActEquipCategory" : "string",
+  "EmtrActEquipTranCode" : "string",
+  "EmtrDistWorkorder" : "string",
+  "EmtrDistWitmLineNumber" : "string",
+  "EmtrDistExpCode" : "string",
+  "EmtrRefCode" : "string",
+  "EmtrRowEquipment" : "string",
+  "EmtrRowEquipTranCode" : "string",
+  "EmtrPostFlag" : "string",
+  "EmtrIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuCreateUser" : "string",
+  "EmtrIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmtrIuUpdateUser" : "string",
+  "EmtrAccessCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmtrAccessCode":"string","EmtrCrewCode":"string","EmtrHdrJobCompCode":"string","EmtrDsrcCompCode":"string","EmtrHdrJobCode":"string","EmtrRefDate":"string","EmtrDistTypeCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string","EmtrJobCode":"string","EmtrRowEquipment":"string","EmtrRowEquipTranCode":"string","EmtrQty":"string","EmtrPostFlag":"string","EmtrVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="975264a3-4861-44ba-a0a7-ea96f5741b74" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmtrAccessCode":"string","EmtrCrewCode":"string","EmtrHdrJobCompCode":"string","EmtrDsrcCompCode":"string","EmtrHdrJobCode":"string","EmtrRefDate":"string","EmtrDistTypeCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string","EmtrJobCode":"string","EmtrRowEquipment":"string","EmtrRowEquipTranCode":"string","EmtrQty":"string","EmtrPostFlag":"string","EmtrVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="362caf22-2364-4e66-9c73-f5b7611ad58f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

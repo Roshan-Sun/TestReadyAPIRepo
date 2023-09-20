@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcutran/{Vuuid}" path="/jc-rest-api/rest/1/jcutran/{Vuuid}" id="7ac2d02c-692f-4928-9b8a-18bf7f610e28" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7ac2d02c-692f-4928-9b8a-18bf7f610e28fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcutran%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b8315dc8-a00e-4868-98b2-37c0dac5ec55" method="GET">
+    <con:description>Retrieve a Specific JC Unit Complete Transaction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcuCompCode" : "string",
+  "JcuCompName" : "string",
+  "JcuBchNum" : 0,
+  "JcuTranDate" : "YYYY-MM-dd",
+  "JcuJobCode" : "string",
+  "JcuJobName" : "string",
+  "JcuPhsCode" : "string",
+  "JcuPhsName" : "string",
+  "JcuTranQty" : 0,
+  "JcuPhsWmTranQty" : 0,
+  "JcuTranWmCode" : "string",
+  "JcuTranWmName" : "string",
+  "JcuPhsWmCode" : "string",
+  "JcuNotes" : "string",
+  "JcuPhsBudgUnitTot" : 0,
+  "JcuPhsBudgWmCode" : "string",
+  "JcuPhsPrevQtyTot" : 0,
+  "JcuPhsPrevWmCode" : "string",
+  "JcuPhsTdQty" : 0,
+  "JcuPhsTdWmCode" : "string",
+  "JcuPhsActiveFlag" : "string",
+  "JcuPostDate" : "YYYY-MM-dd",
+  "JcuCreationDate" : "YYYY-MM-dd",
+  "JcuDrawNum" : 0,
+  "JcuRevisionNum" : 0,
+  "JcuJbDeferBillingFlag" : "string",
+  "JcuJbDeferralDrawNum" : 0,
+  "JcuJbDeferralRevisionNum" : 0,
+  "JcuVoidAllowedFlag" : "string",
+  "JcuProjQty" : 0,
+  "JcuCrewName" : "string",
+  "JcuSrcObjectType" : "string",
+  "JcuCmmastCmmCode" : "string",
+  "JcuPhsQtyUnposted" : 0,
+  "JcuPhsQtyPosted" : 0,
+  "JcuProjPhsQty" : 0,
+  "JcuWbsvCode1" : "string",
+  "JcuWbsvCode2" : "string",
+  "JcuWbsvCode3" : "string",
+  "JcuWbsvCode4" : "string",
+  "JcuUserField1" : "string",
+  "JcuUserField2" : "string",
+  "JcuUserField3" : "string",
+  "JcuUserField4" : "string",
+  "JcuUserFieldName1" : "string",
+  "JcuUserFieldName2" : "string",
+  "JcuUserFieldName3" : "string",
+  "JcuUserFieldName4" : "string",
+  "JcuUserFieldEdtFlag1" : "string",
+  "JcuUserFieldEdtFlag2" : "string",
+  "JcuUserFieldEdtFlag3" : "string",
+  "JcuUserFieldEdtFlag4" : "string",
+  "JcuWbsSetupFlag" : "string",
+  "JcuIuCreateDate" : "YYYY-MM-dd",
+  "JcuIuCreateUser" : "string",
+  "JcuIuUpdateDate" : "YYYY-MM-dd",
+  "JcuIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcuVUuid" : "string",
+  "JcuPost" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e304f7a5-b427-42d1-9e17-803ff1780288" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="3c1c0d5c-acfe-4dc5-8def-fb202ac1fb1a" method="DELETE">
+    <con:description>Delete a Specific JC Unit Transaction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="a9dc3138-0816-43e8-be7c-55640ab50f96" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="0da1bf72-7bf6-4d2b-b0c4-ac7e73c673d4" method="PATCH">
+    <con:description>Update a Specific JC Units Complete Transaction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcuCompCode" : "string",
+  "JcuCompName" : "string",
+  "JcuBchNum" : 0,
+  "JcuTranDate" : "YYYY-MM-dd",
+  "JcuJobCode" : "string",
+  "JcuJobName" : "string",
+  "JcuPhsCode" : "string",
+  "JcuPhsName" : "string",
+  "JcuTranQty" : 0,
+  "JcuPhsWmTranQty" : 0,
+  "JcuTranWmCode" : "string",
+  "JcuTranWmName" : "string",
+  "JcuPhsWmCode" : "string",
+  "JcuNotes" : "string",
+  "JcuPhsBudgUnitTot" : 0,
+  "JcuPhsBudgWmCode" : "string",
+  "JcuPhsPrevQtyTot" : 0,
+  "JcuPhsPrevWmCode" : "string",
+  "JcuPhsTdQty" : 0,
+  "JcuPhsTdWmCode" : "string",
+  "JcuPhsActiveFlag" : "string",
+  "JcuPostDate" : "YYYY-MM-dd",
+  "JcuCreationDate" : "YYYY-MM-dd",
+  "JcuDrawNum" : 0,
+  "JcuRevisionNum" : 0,
+  "JcuJbDeferBillingFlag" : "string",
+  "JcuJbDeferralDrawNum" : 0,
+  "JcuJbDeferralRevisionNum" : 0,
+  "JcuVoidAllowedFlag" : "string",
+  "JcuProjQty" : 0,
+  "JcuCrewName" : "string",
+  "JcuSrcObjectType" : "string",
+  "JcuCmmastCmmCode" : "string",
+  "JcuPhsQtyUnposted" : 0,
+  "JcuPhsQtyPosted" : 0,
+  "JcuProjPhsQty" : 0,
+  "JcuWbsvCode1" : "string",
+  "JcuWbsvCode2" : "string",
+  "JcuWbsvCode3" : "string",
+  "JcuWbsvCode4" : "string",
+  "JcuUserField1" : "string",
+  "JcuUserField2" : "string",
+  "JcuUserField3" : "string",
+  "JcuUserField4" : "string",
+  "JcuUserFieldName1" : "string",
+  "JcuUserFieldName2" : "string",
+  "JcuUserFieldName3" : "string",
+  "JcuUserFieldName4" : "string",
+  "JcuUserFieldEdtFlag1" : "string",
+  "JcuUserFieldEdtFlag2" : "string",
+  "JcuUserFieldEdtFlag3" : "string",
+  "JcuUserFieldEdtFlag4" : "string",
+  "JcuWbsSetupFlag" : "string",
+  "JcuIuCreateDate" : "YYYY-MM-dd",
+  "JcuIuCreateUser" : "string",
+  "JcuIuUpdateDate" : "YYYY-MM-dd",
+  "JcuIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcuVUuid" : "string",
+  "JcuPost" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JcuCompCode":"string","JcuJobCode":"string","JcuPhsCode":"string","JcuTranWmCode":"string","JcuTranDate":"string","JcuPost":"string","JcuVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="ecfdef67-1d2e-471e-8ca8-86a20ee4e6e5" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcuCompCode":"string","JcuJobCode":"string","JcuPhsCode":"string","JcuTranWmCode":"string","JcuTranDate":"string","JcuPost":"string","JcuVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ac8cf639-02fa-454e-aaef-6514bfb401d0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcuTranQty":11}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

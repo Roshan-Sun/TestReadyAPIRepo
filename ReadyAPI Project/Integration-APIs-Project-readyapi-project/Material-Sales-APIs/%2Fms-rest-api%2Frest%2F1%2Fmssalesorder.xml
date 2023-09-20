@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ms-rest-api/rest/1/mssalesorder" path="/ms-rest-api/rest/1/mssalesorder" id="9eeb505e-2663-4dcd-ab76-dd705eeb1c2a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9eeb505e-2663-4dcd-ab76-dd705eeb1c2afileName">%2Fms-rest-api%2Frest%2F1%2Fmssalesorder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c12aa77a-6a62-40d9-b2f3-cc237c9311bf" method="GET">
+    <con:description>Retrieve Material Sales Orders</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByAuditDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AuditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to search created or updated items (YYYY-MM-dd - selectByAuditDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "MssoCompCode" : "string",
+  "MssoCompName" : "string",
+  "MssoSalesOrderCode" : "string",
+  "MssoSalesOrderType" : "string",
+  "MssoSystemSource" : "string",
+  "MssoJobCompCode" : "string",
+  "MssoJobCompName" : "string",
+  "MssoJobOrCustCode" : "string",
+  "MssoJobOrCustName" : "string",
+  "MssoTermCode" : "string",
+  "MssoTermName" : "string",
+  "MssoOverrideBillAddCode" : "string",
+  "MssoOverrideBillAddName" : "string",
+  "MssoJobPoOrJobNum" : "string",
+  "MssoJobLocation" : "string",
+  "MssoJobCity" : "string",
+  "MssoJobOwner" : "string",
+  "MssoDescription" : "string",
+  "MssoDestination" : "string",
+  "MssoQuoteFlag" : "string",
+  "MssoStartDate" : "YYYY-MM-dd",
+  "MssoExpiryDate" : "YYYY-MM-dd",
+  "MssoPartnTypeCode" : "string",
+  "MssoPartnCode" : "string",
+  "MssoPartnName" : "string",
+  "MssoContactCode" : "string",
+  "MssoContactName" : "string",
+  "MssoOrigin" : "string",
+  "MssoOpportunityCode" : "string",
+  "MssoMaxProtect" : 0,
+  "MssoMinProtect" : 0,
+  "MssoTruckerPayDiscPc" : 0,
+  "MssoDeliveryChargeDiscPc" : 0,
+  "MssoFullChargeFlag" : "string",
+  "MssoTotalAcFlag" : "string",
+  "MssoTaxExemptFlag" : "string",
+  "MssoQuotationCode" : "string",
+  "MssoClvValueCode1" : "string",
+  "MssoClvValueCode2" : "string",
+  "MssoClvValueCode3" : "string",
+  "MssoClvValueCode4" : "string",
+  "MssoClvValueCode5" : "string",
+  "MssoClvValueCode6" : "string",
+  "MssoSalesmanCode" : "string",
+  "MssoIndexAmt" : 0,
+  "MssoPriceListCode" : "string",
+  "MssoApplyPadotFlag" : "string",
+  "MssoStateProvCode" : "string",
+  "MssoAddName" : "string",
+  "MssoBpccCode" : "string",
+  "MssoToMszoneCode" : "string",
+  "MssoMszpcCode" : "string",
+  "MssoSoClassCode" : "string",
+  "MssoSoClassName" : "string",
+  "MssoDfltIvLocCode" : "string",
+  "MssoDfltIvLocName" : "string",
+  "MssoDfltTax1Code" : "string",
+  "MssoDfltTax2Code" : "string",
+  "MssoDfltTax3Code" : "string",
+  "MssoDfltPhsCode" : "string",
+  "MssoDfltCatCode" : "string",
+  "MssoIuCreateDate" : "YYYY-MM-dd",
+  "MssoIuCreateUser" : "string",
+  "MssoIuUpdateDate" : "YYYY-MM-dd",
+  "MssoIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ef9c683e-490b-4044-ad24-c0b2207e4de7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

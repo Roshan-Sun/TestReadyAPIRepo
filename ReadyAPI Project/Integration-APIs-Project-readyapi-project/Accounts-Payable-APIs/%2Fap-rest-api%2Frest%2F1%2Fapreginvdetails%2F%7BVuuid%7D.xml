@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreginvdetails/{Vuuid}" path="/ap-rest-api/rest/1/apreginvdetails/{Vuuid}" id="6774bc2c-d831-4e32-ba5f-f16b22a1d2df" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6774bc2c-d831-4e32-ba5f-f16b22a1d2dffileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdetails%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="fef3bcc6-c9e6-4b14-80ae-89f0fc8a1562" method="GET">
+    <con:description>Retrieve Registered Invoice Details by Vuuid</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Vuuid</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "AprdistInvCode" : "string",
+  "AprdistInvVenCode" : "string",
+  "AprdistInvCompCode" : "string",
+  "AprdistInvVUuid" : "string",
+  "AprdistLineNum" : 0,
+  "AprdistCompCode" : "string",
+  "AprdistTypeCode" : "string",
+  "AprdistDeptCode" : "string",
+  "AprdistAccCode" : "string",
+  "AprdistJobCode" : "string",
+  "AprdistJobCtrlCode" : "string",
+  "AprdistPhsCode" : "string",
+  "AprdistPhsCtrlCode" : "string",
+  "AprdistCatCode" : "string",
+  "AprdistCatCtrlCode" : "string",
+  "AprdistEqpCode" : "string",
+  "AprdistComCode" : "string",
+  "AprdistTrancodeCode" : "string",
+  "AprdistWmCode" : "string",
+  "AprdistWbsvCode1" : "string",
+  "AprdistWbsvCode2" : "string",
+  "AprdistWbsvCode3" : "string",
+  "AprdistWbsvCode4" : "string",
+  "AprdistWbsvCode5" : "string",
+  "AprdistWbsvCode6" : "string",
+  "AprdistWbsvCode7" : "string",
+  "AprdistWbsvCode8" : "string",
+  "AprdistWbsvCode9" : "string",
+  "AprdistWbsvCode10" : "string",
+  "AprdistWbsvCode11" : "string",
+  "AprdistWbsvCode12" : "string",
+  "AprdistTavCode1" : "string",
+  "AprdistTavCode2" : "string",
+  "AprdistTavCode3" : "string",
+  "AprdistTavCode4" : "string",
+  "AprdistUserTypeCode" : "string",
+  "AprdistUserField1" : "string",
+  "AprdistUserField2" : "string",
+  "AprdistUserField3" : "string",
+  "AprdistUserField4" : "string",
+  "AprdistUserField5" : "string",
+  "AprdistUserField6" : "string",
+  "AprdistUserField7" : "string",
+  "AprdistUserField8" : "string",
+  "AprdistWoCode" : "string",
+  "AprdistWitmLineNumber" : 0,
+  "AprdistExpCode" : "string",
+  "AprdistWDetailCode" : "string",
+  "AprdistPoNum" : "string",
+  "AprdistPoReleaseNum" : 0,
+  "AprdistPoLineNum" : 0,
+  "AprdistApplCode" : "string",
+  "AprdistOverrideTradeCode" : "string",
+  "AprdistDesc" : "string",
+  "AprdistInvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "AprdistInvCurrCode" : "string",
+  "AprdistInvJobCode" : "string",
+  "AprdistInvContCode" : "string",
+  "AprdistInvChgCode" : "string",
+  "AprdistInvPoPickFlag" : "string",
+  "AprdistInvExpDeptCode" : "string",
+  "AprdistCalledFromAppCode" : "string",
+  "AprdistUserFieldEdtFlag5" : "string",
+  "AprdistUserFieldEdtFlag6" : "string",
+  "AprdistUserFieldEdtFlag7" : "string",
+  "AprdistUserFieldEdtFlag8" : "string",
+  "AprdistUserFieldName5" : "string",
+  "AprdistUserFieldName6" : "string",
+  "AprdistUserFieldName7" : "string",
+  "AprdistUserFieldName8" : "string",
+  "AprdistWbsSetupFlag" : "string",
+  "AprdistTacSetupFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "AprdistVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1cf86031-e6f8-4cb4-995e-4e82735eed98" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

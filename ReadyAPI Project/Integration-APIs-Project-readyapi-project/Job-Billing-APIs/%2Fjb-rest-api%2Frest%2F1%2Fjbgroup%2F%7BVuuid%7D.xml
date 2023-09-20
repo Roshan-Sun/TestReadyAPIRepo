@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jb-rest-api/rest/1/jbgroup/{Vuuid}" path="/jb-rest-api/rest/1/jbgroup/{Vuuid}" id="838f5c60-47e7-48f3-8e31-5a8a74611f70" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="838f5c60-47e7-48f3-8e31-5a8a74611f70fileName">%2Fjb-rest-api%2Frest%2F1%2Fjbgroup%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c99e537f-3e50-4de2-8cf5-843a6cd30118" method="GET">
+    <con:description>Retrieve a Specific JB Group</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JbgCompCode" : "string",
+  "JbgContCode" : "string",
+  "JbgGroupNum" : 0,
+  "JbgGroupCode" : "string",
+  "JbgName" : "string",
+  "JbgGroupMaxBillingAmt" : 0,
+  "JbgGroupPremiumSplitFlag" : "string",
+  "JbgIuCreateDate" : "YYYY-MM-dd",
+  "JbgIuCreateUser" : "string",
+  "JbgIuUpdateDate" : "YYYY-MM-dd",
+  "JbgIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JbgVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="518145bf-0d93-429b-a31c-c57f4f4c7db2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="6ce965b3-c234-4b53-b69c-c40b39c4fc08" method="PATCH">
+    <con:description>Update a Specific JB Group</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JbgCompCode" : "string",
+  "JbgContCode" : "string",
+  "JbgGroupNum" : 0,
+  "JbgGroupCode" : "string",
+  "JbgName" : "string",
+  "JbgGroupMaxBillingAmt" : 0,
+  "JbgGroupPremiumSplitFlag" : "string",
+  "JbgIuCreateDate" : "YYYY-MM-dd",
+  "JbgIuCreateUser" : "string",
+  "JbgIuUpdateDate" : "YYYY-MM-dd",
+  "JbgIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JbgVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JbgCompCode":"string","JbgContCode":"string","JbgGroupNum":"integer","JbgGroupCode":"string","JbgName":"string","JbgGroupPremiumSplitFlag":"string","JbgVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="587b19d5-f631-42f1-88d9-a9d1b8e07105" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JbgCompCode":"string","JbgContCode":"string","JbgGroupNum":"integer","JbgGroupCode":"string","JbgName":"string","JbgGroupPremiumSplitFlag":"string","JbgVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="20036176-fc6c-47db-bc1d-2d1eba503192" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JbgName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

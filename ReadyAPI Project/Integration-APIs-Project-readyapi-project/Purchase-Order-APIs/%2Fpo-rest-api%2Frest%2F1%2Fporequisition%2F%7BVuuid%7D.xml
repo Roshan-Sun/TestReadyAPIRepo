@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/po-rest-api/rest/1/porequisition/{Vuuid}" path="/po-rest-api/rest/1/porequisition/{Vuuid}" id="e8d79ad8-fc6f-47bc-a02b-748e5d114ac9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e8d79ad8-fc6f-47bc-a02b-748e5d114ac9fileName">%2Fpo-rest-api%2Frest%2F1%2Fporequisition%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b99e01cf-8a64-4667-b0c8-6ef4ba87558e" method="GET">
+    <con:description>Retrieve a specific PO Requisition</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PoreqCompCode" : "string",
+  "PoreqNum" : "string",
+  "PoreqDate" : "YYYY-MM-dd",
+  "PoreqPostDate" : "YYYY-MM-dd",
+  "PoreqReqdDate" : "YYYY-MM-dd",
+  "PoreqUpdQuoteDate" : "YYYY-MM-dd",
+  "PoreqReqCode" : "string",
+  "PoreqStatCode" : "string",
+  "PoreqJobCode" : "string",
+  "PoreqPhsCode" : "string",
+  "PoreqCatCode" : "string",
+  "PoreqEcEqpCode" : "string",
+  "PoreqEcCstCode" : "string",
+  "PoreqReason1Desc" : "string",
+  "PoreqReason2Desc" : "string",
+  "PoreqReason3Desc" : "string",
+  "PoreqReason4Desc" : "string",
+  "PoreqRefuseReason1Desc" : "string",
+  "PoreqRefuseReason2Desc" : "string",
+  "PoreqRefuseReason3Desc" : "string",
+  "PoreqRefuseReason4Desc" : "string",
+  "PoreqInvDocTypeCode" : "string",
+  "PoreqWipDeptCode" : "string",
+  "PoreqWipAccCode" : "string",
+  "PoreqVenCode" : "string",
+  "PoreqCrepoCode" : "string",
+  "PoreqJobCtrlCode" : "string",
+  "PoreqPhsCtrlCode" : "string",
+  "PoreqCatCtrlCode" : "string",
+  "PoreqBuyCode" : "string",
+  "PoreqQteFlag" : "string",
+  "PoreqWbsvCode1" : "string",
+  "PoreqWbsvCode2" : "string",
+  "PoreqWbsvCode3" : "string",
+  "PoreqWbsvCode4" : "string",
+  "PoreqWbsvCode5" : "string",
+  "PoreqWbsvCode6" : "string",
+  "PoreqWbsvCode7" : "string",
+  "PoreqWbsvCode8" : "string",
+  "PoreqWbsvCode9" : "string",
+  "PoreqWbsvCode10" : "string",
+  "PoreqWbsvCode11" : "string",
+  "PoreqWbsvCode12" : "string",
+  "PoreqPmCode" : "string",
+  "PoreqPoCode" : "string",
+  "PoreqBlanketFlag" : "string",
+  "PoreqCrepoReleaseNum" : 0,
+  "PoreqPoReleaseNum" : 0,
+  "PoreqEqpCode" : "string",
+  "PoreqComponCode" : "string",
+  "PoreqTrancodeCode" : "string",
+  "PoreqInvTypeCode" : "string",
+  "PoreqInvLocCode" : "string",
+  "PoreqInvTransFlag" : "string",
+  "PoreqCreatePoSessionid" : 0,
+  "PoreqSelectFlag" : "string",
+  "PoreqSeqCode" : "string",
+  "DiscriminatorCode" : "string",
+  "PoreqStatDesc" : "string",
+  "PoreqIuCreateDate" : "YYYY-MM-dd",
+  "PoreqIuCreateUser" : "string",
+  "PoreqIuUpdateDate" : "YYYY-MM-dd",
+  "PoreqIuUpdateUser" : "string",
+  "PoreqVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="eb50f12b-9857-43c5-b9e3-d3dd038e263c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="44e9829c-05e1-44fb-a788-2155a5a79f2b" method="PATCH">
+    <con:description>Update specific PO Requisition</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PoreqCompCode" : "string",
+  "PoreqNum" : "string",
+  "PoreqDate" : "YYYY-MM-dd",
+  "PoreqPostDate" : "YYYY-MM-dd",
+  "PoreqReqdDate" : "YYYY-MM-dd",
+  "PoreqUpdQuoteDate" : "YYYY-MM-dd",
+  "PoreqReqCode" : "string",
+  "PoreqStatCode" : "string",
+  "PoreqJobCode" : "string",
+  "PoreqPhsCode" : "string",
+  "PoreqCatCode" : "string",
+  "PoreqEcEqpCode" : "string",
+  "PoreqEcCstCode" : "string",
+  "PoreqReason1Desc" : "string",
+  "PoreqReason2Desc" : "string",
+  "PoreqReason3Desc" : "string",
+  "PoreqReason4Desc" : "string",
+  "PoreqRefuseReason1Desc" : "string",
+  "PoreqRefuseReason2Desc" : "string",
+  "PoreqRefuseReason3Desc" : "string",
+  "PoreqRefuseReason4Desc" : "string",
+  "PoreqInvDocTypeCode" : "string",
+  "PoreqWipDeptCode" : "string",
+  "PoreqWipAccCode" : "string",
+  "PoreqVenCode" : "string",
+  "PoreqCrepoCode" : "string",
+  "PoreqJobCtrlCode" : "string",
+  "PoreqPhsCtrlCode" : "string",
+  "PoreqCatCtrlCode" : "string",
+  "PoreqBuyCode" : "string",
+  "PoreqQteFlag" : "string",
+  "PoreqWbsvCode1" : "string",
+  "PoreqWbsvCode2" : "string",
+  "PoreqWbsvCode3" : "string",
+  "PoreqWbsvCode4" : "string",
+  "PoreqWbsvCode5" : "string",
+  "PoreqWbsvCode6" : "string",
+  "PoreqWbsvCode7" : "string",
+  "PoreqWbsvCode8" : "string",
+  "PoreqWbsvCode9" : "string",
+  "PoreqWbsvCode10" : "string",
+  "PoreqWbsvCode11" : "string",
+  "PoreqWbsvCode12" : "string",
+  "PoreqPmCode" : "string",
+  "PoreqPoCode" : "string",
+  "PoreqBlanketFlag" : "string",
+  "PoreqCrepoReleaseNum" : 0,
+  "PoreqPoReleaseNum" : 0,
+  "PoreqEqpCode" : "string",
+  "PoreqComponCode" : "string",
+  "PoreqTrancodeCode" : "string",
+  "PoreqInvTypeCode" : "string",
+  "PoreqInvLocCode" : "string",
+  "PoreqInvTransFlag" : "string",
+  "PoreqCreatePoSessionid" : 0,
+  "PoreqSelectFlag" : "string",
+  "PoreqSeqCode" : "string",
+  "DiscriminatorCode" : "string",
+  "PoreqStatDesc" : "string",
+  "PoreqIuCreateDate" : "YYYY-MM-dd",
+  "PoreqIuCreateUser" : "string",
+  "PoreqIuUpdateDate" : "YYYY-MM-dd",
+  "PoreqIuUpdateUser" : "string",
+  "PoreqVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PoreqCompCode":"RVHQ1001","PoreqVenCode":"4CASTER","PoreqNum":"RSTEST123","PoreqReqdDate":"2022-11-01","PoreqReqCode":"RAVI","PoreqVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="5b261119-c8d1-467d-85f1-88ef4454083a" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PoreqCompCode":"RVHQ1001","PoreqVenCode":"4CASTER","PoreqNum":"RSTEST123","PoreqReqdDate":"2022-11-01","PoreqReqCode":"RAVI","PoreqVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="39fd9b86-d871-4da1-9a8b-cf39da65a276" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PoreqBlanketFlag":"Y"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

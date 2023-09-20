@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/sys-rest-api/rest/1/bpaddresses/{Vuuid}" path="/sys-rest-api/rest/1/bpaddresses/{Vuuid}" id="73f289d4-5851-4804-be8a-e0ca8ef811ef" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="73f289d4-5851-4804-be8a-e0ca8ef811effileName">%2Fsys-rest-api%2Frest%2F1%2Fbpaddresses%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c02f33bd-40be-4628-aee6-2b35ff4f1f7d" method="GET">
+    <con:description>Retrieve specific BP Address</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpadBpCode" : "string",
+  "BpadBpVenName" : "string",
+  "BpadBpName" : "string",
+  "BpadAddTypeCode" : "string",
+  "BpadAdd1" : "string",
+  "BpadAdd2" : "string",
+  "BpadAdd3" : "string",
+  "BpadRegionCode" : "string",
+  "BpadCountry" : "string",
+  "BpadPostalCode" : "string",
+  "BpadContactName" : "string",
+  "BpadAddName" : "string",
+  "BpadOrderFromFlag" : "string",
+  "BpadRemitToFlag" : "string",
+  "BpadShipToFlag" : "string",
+  "BpadBillToFlag" : "string",
+  "BpadAddPhone" : "string",
+  "BpadAddEmail" : "string",
+  "BpadAddFax" : "string",
+  "BpadAddPrimaryFlag" : "string",
+  "BpadActiveFlag" : "string",
+  "BpadAddPhone2" : "string",
+  "BpadCompCode" : "string",
+  "BpadCompName" : "string",
+  "BpadOmOnlyFlag" : "string",
+  "BpadName2" : "string",
+  "BpadName3" : "string",
+  "BpadName4" : "string",
+  "BpadIuCreateDate" : "YYYY-MM-dd",
+  "BpadIuCreateUser" : "string",
+  "BpadIuUpdateDate" : "YYYY-MM-dd",
+  "BpadIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "BpadVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="32c735fe-d75c-492b-9c33-2107ff062907" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="fd36945a-8da1-4841-afa3-5bc40c3661db" method="DELETE">
+    <con:description>Delete a Specific BA Address</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e0a5d0fc-b43e-46b0-a62c-8a242b01ee80" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="811a2174-b1a4-4f24-8c00-02ea15a883bb" method="PATCH">
+    <con:description>Update a specific BP Address</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "BpadBpCode" : "string",
+  "BpadBpVenName" : "string",
+  "BpadBpName" : "string",
+  "BpadAddTypeCode" : "string",
+  "BpadAdd1" : "string",
+  "BpadAdd2" : "string",
+  "BpadAdd3" : "string",
+  "BpadRegionCode" : "string",
+  "BpadCountry" : "string",
+  "BpadPostalCode" : "string",
+  "BpadContactName" : "string",
+  "BpadAddName" : "string",
+  "BpadOrderFromFlag" : "string",
+  "BpadRemitToFlag" : "string",
+  "BpadShipToFlag" : "string",
+  "BpadBillToFlag" : "string",
+  "BpadAddPhone" : "string",
+  "BpadAddEmail" : "string",
+  "BpadAddFax" : "string",
+  "BpadAddPrimaryFlag" : "string",
+  "BpadActiveFlag" : "string",
+  "BpadAddPhone2" : "string",
+  "BpadCompCode" : "string",
+  "BpadCompName" : "string",
+  "BpadOmOnlyFlag" : "string",
+  "BpadName2" : "string",
+  "BpadName3" : "string",
+  "BpadName4" : "string",
+  "BpadIuCreateDate" : "YYYY-MM-dd",
+  "BpadIuCreateUser" : "string",
+  "BpadIuUpdateDate" : "YYYY-MM-dd",
+  "BpadIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "BpadVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"BpadAddTypeCode":"string","BpadAddPrimaryFlag":"string","BpadBpCode":"string","BpadAdd1":"string","BpadVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="33a41ecc-7bae-4404-a530-dd630f922340" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpadAddTypeCode":"string","BpadAddPrimaryFlag":"string","BpadBpCode":"string","BpadAdd1":"string","BpadVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="7a152e30-59c7-4998-b1d0-cbd225fb7254" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"BpadName2":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

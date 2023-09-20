@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeetingitem/{Vuuid}" path="/pm-rest-api/rest/1/pmmeetingitem/{Vuuid}" id="c4461c20-51c1-4433-9cca-b95641b16010" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c4461c20-51c1-4433-9cca-b95641b16010fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingitem%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6bc6637f-eadc-426f-afcf-1a87046794e9" method="GET">
+    <con:description>Retrieve a Specific PM Meeting Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmiMeetingDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiItemId" : "string",
+  "PmmiItemDesc" : "string",
+  "PmmiItemStatus" : "string",
+  "PmmiItemStatusName" : "string",
+  "PmmiRespPartnCode" : "string",
+  "PmmiRespPartnType" : "string",
+  "PmmiRespContactCode" : "string",
+  "PmmiRespStatus" : "string",
+  "PmmiRespStatusDesc" : "string",
+  "PmmiRespComment" : "string",
+  "PmmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiDueDateRev" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiDateCompl" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiCmCode" : "string",
+  "PmmiGroupItemFlag" : "string",
+  "PmmiTopic" : "string",
+  "PmmiFfRespContact" : "string",
+  "PmmiFfRespFlag" : "string",
+  "PmmiProjCode" : "string",
+  "PmmiCompCode" : "string",
+  "PmmiVUuid" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="54c7ce36-6748-4d29-af25-97194a0f166c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="89280ebd-8749-45c5-974c-dd98139ef981" method="DELETE">
+    <con:description>Delete a Specific PM Meeting Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="09c19613-15be-4d1f-9a8d-39ce47f6b32b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="60601370-4ef3-49b6-bfe5-1137dfa21ac9" method="PATCH">
+    <con:description>Update a Specific PM Meeting Item</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmiMeetingDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiItemId" : "string",
+  "PmmiItemDesc" : "string",
+  "PmmiItemStatus" : "string",
+  "PmmiItemStatusName" : "string",
+  "PmmiRespPartnCode" : "string",
+  "PmmiRespPartnType" : "string",
+  "PmmiRespContactCode" : "string",
+  "PmmiRespStatus" : "string",
+  "PmmiRespStatusDesc" : "string",
+  "PmmiRespComment" : "string",
+  "PmmiDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiDueDateRev" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiDateCompl" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmiCmCode" : "string",
+  "PmmiGroupItemFlag" : "string",
+  "PmmiTopic" : "string",
+  "PmmiFfRespContact" : "string",
+  "PmmiFfRespFlag" : "string",
+  "PmmiProjCode" : "string",
+  "PmmiCompCode" : "string",
+  "PmmiVUuid" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmiCompCode":"string","PmmiProjCode":"string","PmmiItemId":"string","PmmiItemDesc":"string","PmmiItemStatus":"string","PmmVUuid":"string","PmmiVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="8c4da3f6-e24a-4903-b17a-af283a99462d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmiCompCode":"string","PmmiProjCode":"string","PmmiItemId":"string","PmmiItemDesc":"string","PmmiItemStatus":"string","PmmVUuid":"string","PmmiVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="ad7b70fd-04f2-4b6e-8617-577d83b4fa75" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmiRespComment":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

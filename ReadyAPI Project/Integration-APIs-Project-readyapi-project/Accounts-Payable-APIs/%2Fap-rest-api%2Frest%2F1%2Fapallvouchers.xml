@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apallvouchers" path="/ap-rest-api/rest/1/apallvouchers" id="2d30f4e3-08a8-46e9-a043-bb253b2ff5fd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2d30f4e3-08a8-46e9-a043-bb253b2ff5fdfileName">%2Fap-rest-api%2Frest%2F1%2Fapallvouchers</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Retrieve AP Vouchers" id="efc584db-7d55-4e56-80c3-25b547bbbe1d" method="GET">
+    <con:description>All Vouchers or specific ones via finder</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>VoucherFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (VoucherFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>InvCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Invoice Code (VoucherFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VendorCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor Code (VoucherFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VouNumVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Voucher Number (VoucherFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "VouMaterialInvFlag" : "string",
+  "VouJobCompCode" : "string",
+  "VouJobCode" : "string",
+  "VouInvSeriesCode" : "string",
+  "VouInvHldbkTaxFlag" : "string",
+  "VouInvDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouInvCode" : "string",
+  "VouImportInfo" : "string",
+  "VouImportingGoodsFlag" : "string",
+  "VouImageFilename" : "string",
+  "VouHoldPaymentFlag" : "string",
+  "VouHoldPaymentDays" : 0,
+  "VouHoldFlag" : "string",
+  "VouGsthldbkCode" : "string",
+  "VouFrtDiscCode" : "string",
+  "VouFiscalCode" : "string",
+  "VouFinalRfpFlag" : "string",
+  "VouExpDeptCode" : "string",
+  "VouEftFlag" : "string",
+  "VouDuplicateId" : "string",
+  "VouDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouDrawNum" : 0,
+  "VouDistTypeCode" : "string",
+  "VouDiscDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouDiscAllocMethCode" : "string",
+  "VouDiscreteChqFlag" : "string",
+  "VouDfttaxFromCode" : "string",
+  "VouDesc2" : "string",
+  "VouDesc1" : "string",
+  "VouDeptCodeDist" : "string",
+  "VouDeptCode" : "string",
+  "VouDeptAcct" : "string",
+  "VouCurrCode" : "string",
+  "VouCreatedByJbFlag" : "string",
+  "VouCostCode" : "string",
+  "VouContExceedHoldFlag" : "string",
+  "VouContCode" : "string",
+  "VouContractorPrelimFlag" : "string",
+  "VouContactCode" : "string",
+  "VouCompCode" : "string",
+  "VouChqPayeeName" : "string",
+  "VouChqHandleCode" : "string",
+  "VouChgCode" : "string",
+  "VouCatCode" : "string",
+  "VouCashAccCode" : "string",
+  "VouBchNum" : 0,
+  "VouBchrgInvFlag" : "string",
+  "VouAppr2" : "string",
+  "VouAppr1" : "string",
+  "Vou1099Code" : "string",
+  "VouTax2IncFlag" : "string",
+  "VouTax2HldbkCode" : "string",
+  "VouTax2DiscCode" : "string",
+  "VouTax2DirectFlag" : "string",
+  "VouTax2CreditFlag" : "string",
+  "VouTax2Code" : "string",
+  "VouTax1TaxableFlag" : "string",
+  "VouTax1IncFlag" : "string",
+  "VouTax1DirectFlag" : "string",
+  "VouTax1CreditFlag" : "string",
+  "VouTax1Code" : "string",
+  "VouSubcontrCode" : "string",
+  "VouStatusCode" : "string",
+  "VouSplitByApplCode" : "string",
+  "VouSourceTypeCode" : "string",
+  "VouSourceToDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouSourceFromDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouShplCode" : "string",
+  "VouSeparateBillingRefCode" : "string",
+  "VouSelForVoidFlag" : "string",
+  "VouScSelfBilledFlag" : "string",
+  "VouScModifiedFlag" : "string",
+  "VouScApprovedFlag" : "string",
+  "VouScApplyBchNum" : 0,
+  "VouScmstJobCode" : "string",
+  "VouRoutJob" : "string",
+  "VouRlsTax2Code" : "string",
+  "VouRlsTax1Code" : "string",
+  "VouRlsNum" : 0,
+  "VouRlsInvCode" : "string",
+  "VouRlsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouRlsBchNum" : 0,
+  "VouRevDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouRevBchNum" : 0,
+  "VouRevisionNum" : 0,
+  "VouResaleInfo" : "string",
+  "VouRemitDesc" : "string",
+  "VouRegInvNum" : 0,
+  "VouRecordStatus" : "string",
+  "VouPyTaxVoucherFlag" : "string",
+  "VouPyIrsTaxType" : "string",
+  "VouPyIrsTaxPerEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouPyIrsTaxInfoId" : "string",
+  "VouPrelienComplPayCode" : "string",
+  "VouPoReleaseNum" : 0,
+  "VouPoPrtCode" : "string",
+  "VouPoPickFlag" : "string",
+  "VouPoNum" : "string",
+  "VouPostDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouPayNotes" : "string",
+  "VouPayCode" : "string",
+  "VouPayByManualChqFlag" : "string",
+  "VouPartnTypeCode" : "string",
+  "VouPartnCode" : "string",
+  "VouOrigBchNum" : 0,
+  "VouOriginatingVouNum" : 0,
+  "VouOperationCode" : "string",
+  "VouNum" : 0,
+  "VouNonZeroOweCompVenCode" : "string",
+  "VouNatureOfServices" : "string",
+  "VouMultiControlJobFlag" : "string",
+  "VouMiscDiscCode" : "string",
+  "VouIuUpdateUser" : "string",
+  "VouIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouIuCreateUser" : "string",
+  "VouIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouVenCode" : "string",
+  "VouVenAddCode" : "string",
+  "VouVendorInvCode" : "string",
+  "VouValuateToDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouValuateFromDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "VouUnpostedRfpInfo" : "string",
+  "VouUnpostedPayCodeOverride" : "string",
+  "VouTranCode" : "string",
+  "VouTpPaymodeTypeCode" : "string",
+  "VouTppayCode" : "string",
+  "VouTaxDiscCode" : "string",
+  "VouTax5TaxableFlag" : "string",
+  "VouTax5IncFlag" : "string",
+  "VouTax5DiscCode" : "string",
+  "VouTax5DirectFlag" : "string",
+  "VouTax5CreditFlag" : "string",
+  "VouTax5Code" : "string",
+  "VouTax4TaxableFlag" : "string",
+  "VouTax4IncFlag" : "string",
+  "VouTax4DiscCode" : "string",
+  "VouTax4DirectFlag" : "string",
+  "VouTax4CreditFlag" : "string",
+  "VouTax4Code" : "string",
+  "VouTax3TaxableFlag" : "string",
+  "VouTax3IncFlag" : "string",
+  "VouTax3DiscCode" : "string",
+  "VouTax3DirectFlag" : "string",
+  "VouTax3CreditFlag" : "string",
+  "VouTax3Code" : "string",
+  "VouTax2TaxableFlag" : "string",
+  "VouCreatedByManchqFlag" : "string",
+  "VouAcctDescription" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="46b3a4f4-9898-4076-a48f-21613189c898" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

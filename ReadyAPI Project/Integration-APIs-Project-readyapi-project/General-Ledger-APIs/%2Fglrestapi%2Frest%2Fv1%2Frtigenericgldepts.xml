@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/rtigenericgldepts" path="/glrestapi/rest/v1/rtigenericgldepts" id="801aac1b-6728-412e-bf08-46f44f54714a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="801aac1b-6728-412e-bf08-46f44f54714afileName">%2Fglrestapi%2Frest%2Fv1%2Frtigenericgldepts</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="90138f09-200f-48b9-8b9f-a329bed3464f" method="GET">
+    <con:description>Retrieve GL Departments</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectDeptCompany</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deptCompanyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectDeptCompany)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DeptCompCode" : "string",
+  "DeptCode" : "string",
+  "DeptCtrlCode" : "string",
+  "DeptCtrlName" : "string",
+  "DeptName" : "string",
+  "DeptAdd1" : "string",
+  "DeptAdd2" : "string",
+  "DeptAdd3" : "string",
+  "DeptRegionCode" : "string",
+  "DeptRegionName" : "string",
+  "DeptCountry" : "string",
+  "DeptPostalCode" : "string",
+  "DeptCountryCode" : "string",
+  "DeptAreaCode" : "string",
+  "DeptPhoneNum" : "string",
+  "DeptFaxCountryCode" : "string",
+  "DeptFaxAreaCode" : "string",
+  "DeptFaxNum" : "string",
+  "DeptInterClearAccCode" : "string",
+  "DeptIncomeCloseDeptCode" : "string",
+  "DeptIncomeCloseAccCode" : "string",
+  "DeptYr" : 0,
+  "DeptBuCode" : "string",
+  "DeptBuName" : "string",
+  "DeptPer" : 0,
+  "DeptCloseYr" : 0,
+  "DeptBalanceFlag" : "string",
+  "DeptTaxCode" : "string",
+  "DeptFedTax1Code" : "string",
+  "DeptFedTax2Code" : "string",
+  "DeptCkDigitCode" : "string",
+  "DeptTax1Code" : "string",
+  "DeptTax1IncinvFlag" : "string",
+  "DeptTax2Code" : "string",
+  "DeptTax2IncinvFlag" : "string",
+  "DeptTax3Code" : "string",
+  "DeptTax3IncinvFlag" : "string",
+  "DeptTax4Code" : "string",
+  "DeptTax4IncinvFlag" : "string",
+  "DeptTax5Code" : "string",
+  "DeptTax5IncinvFlag" : "string",
+  "DeptHier" : "string",
+  "DeptWcbCode" : "string",
+  "DeptAddrCode" : "string",
+  "DeptIbRevAccCode" : "string",
+  "DeptApTax1Code" : "string",
+  "DeptApTax2Code" : "string",
+  "DeptApTax3Code" : "string",
+  "DeptAddrCompCode" : "string",
+  "DeptJbAltCompAddCode" : "string",
+  "DeptJbAltRemitAddCode" : "string",
+  "DeptBillingRateCode" : "string",
+  "DeptConschartCode" : "string",
+  "DeptActiveFlag" : "string",
+  "DeptRecalSalChrgrateFlag" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="38b658ef-0604-48d2-a496-fe6bffe15d70" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

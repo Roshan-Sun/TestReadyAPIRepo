@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempclockinout" path="/hcm-rest-api/rest/1/pyempclockinout" id="d894ee3a-642c-4e47-8c9f-a73110e47131" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d894ee3a-642c-4e47-8c9f-a73110e47131fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempclockinout</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="44bef871-1194-443d-abed-dddfa26a1df7" method="GET">
+    <con:description>Retrieve PY Employee Clock Ins/Outs</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByEmpNo</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>empNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to check against (YYYY-MM-dd)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EcioVUuid" : "string",
+  "EcioEmpNo" : "string",
+  "EcioType" : "string",
+  "EcioDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioAutoCreatedFlag" : "string",
+  "EcioIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioIuCreateUser" : "string",
+  "EcioIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ee39277f-5380-4c23-a4f9-3d84b0095fa7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="a97787ef-c8a6-4995-af16-4500b09fab1b" method="POST">
+    <con:description>Create a PY Employee Clock In/Out Record</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EcioVUuid" : "string",
+  "EcioEmpNo" : "string",
+  "EcioType" : "string",
+  "EcioDatetime" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioAutoCreatedFlag" : "string",
+  "EcioIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioIuCreateUser" : "string",
+  "EcioIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EcioIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EcioEmpNo":"MJBW-001","EcioType":"BRKE","EcioDatetime":"2022-10-09T02:30:00-04:00","EcioVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4a5fda19-307b-42a9-aca7-eb59b2135c27" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EcioEmpNo":"MJBW-001","EcioType":"BRKE","EcioDatetime":"2022-10-09T02:30:00-04:00","EcioVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldocrows" path="/glrestapi/rest/v1/gldocrows" id="10832b26-ae2b-4daa-9dfa-e2e80e4465ac" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="10832b26-ae2b-4daa-9dfa-e2e80e4465acfileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocrows</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="518140ea-3877-41b8-a10d-73ab61c9ac1e" method="GET">
+    <con:description>Retrieve GL document rows</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectDocRows</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>documentCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Document Code (selectDocRows)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DapDocCode" : "string",
+  "DapDocName" : "string",
+  "DapSeqNum" : 0,
+  "DapLineCode" : "string",
+  "DapLineName" : "string",
+  "DapStartAccSeq" : 0,
+  "DapEndAccSeq" : 0,
+  "DapRatioCode" : "string",
+  "DapPrintCode" : "string",
+  "DapCentreCode" : "string",
+  "DapDesc" : "string",
+  "DapDrcrCode" : "string",
+  "DapRevCode" : "string",
+  "DapShiftCode" : "string",
+  "DapTotal1Code" : "string",
+  "DapTotal2Code" : "string",
+  "DapTotalNum" : 0,
+  "DapColSkip" : 0,
+  "DapLineSkip" : 0,
+  "DapStartAccCode" : "string",
+  "DapEndAccCode" : "string",
+  "DapMatchCode" : "string",
+  "DapStoreCode" : "string",
+  "DapCon2Code" : "string",
+  "DapCon2Name" : "string",
+  "DapEndPageFlag" : "string",
+  "DapIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuCreateUser" : "string",
+  "DapIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DapVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="d2fa1dba-be78-4f0e-a1dc-4759e42d8188" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="29f8648e-cc7c-43b0-91f8-f9f36b1e2f38" method="POST">
+    <con:description>Create a GL document row</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DapDocCode" : "string",
+  "DapDocName" : "string",
+  "DapSeqNum" : 0,
+  "DapLineCode" : "string",
+  "DapLineName" : "string",
+  "DapStartAccSeq" : 0,
+  "DapEndAccSeq" : 0,
+  "DapRatioCode" : "string",
+  "DapPrintCode" : "string",
+  "DapCentreCode" : "string",
+  "DapDesc" : "string",
+  "DapDrcrCode" : "string",
+  "DapRevCode" : "string",
+  "DapShiftCode" : "string",
+  "DapTotal1Code" : "string",
+  "DapTotal2Code" : "string",
+  "DapTotalNum" : 0,
+  "DapColSkip" : 0,
+  "DapLineSkip" : 0,
+  "DapStartAccCode" : "string",
+  "DapEndAccCode" : "string",
+  "DapMatchCode" : "string",
+  "DapStoreCode" : "string",
+  "DapCon2Code" : "string",
+  "DapCon2Name" : "string",
+  "DapEndPageFlag" : "string",
+  "DapIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuCreateUser" : "string",
+  "DapIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DapVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DapDocCode":"string","DapSeqNum":"integer","DapLineCode":"string","DapVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="f13a77a0-0700-4044-b1be-d086811475db" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DapDocCode":"string","DapSeqNum":"integer","DapLineCode":"string","DapVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

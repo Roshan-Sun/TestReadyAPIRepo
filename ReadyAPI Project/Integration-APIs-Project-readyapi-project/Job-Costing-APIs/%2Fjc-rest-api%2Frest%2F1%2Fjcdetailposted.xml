@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcdetailposted" path="/jc-rest-api/rest/1/jcdetailposted" id="cf51a05c-7e51-4ea1-92aa-f0c911712a15" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cf51a05c-7e51-4ea1-92aa-f0c911712a15fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcdetailposted</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3c637b2e-b584-4288-bf2b-820a6b391acc" method="GET">
+    <con:description>Retrieve Posted JC Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>JcDetailPostedFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (JcDetailPostedFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Num</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Detail Number (JcDetailPostedFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Amt</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Detail Amount (JcDetailPostedFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcdtNum" : 0,
+  "JcdtCompCode" : "string",
+  "JcdtDsrcCompCode" : "string",
+  "JcdtTypeCode" : "string",
+  "JcdtDsrcCode" : "string",
+  "JcdtJobCode" : "string",
+  "JcdtJobCtrlCode" : "string",
+  "JcdtPhsCode" : "string",
+  "JcdtPhsCtrlCode" : "string",
+  "JcdtCatCode" : "string",
+  "JcdtCatCtrlCode" : "string",
+  "JcdtJourCode" : "string",
+  "JcdtBchNum" : 0,
+  "JcdtSrcCode" : "string",
+  "JcdtSrcDesc" : "string",
+  "JcdtRefCode" : "string",
+  "JcdtRefDate" : "YYYY-MM-dd",
+  "JcdtRefDesc" : "string",
+  "JcdtSrcCommCode" : "string",
+  "JcdtPostDate" : "YYYY-MM-dd",
+  "JcdtUnit" : 0,
+  "JcdtAmt" : 0,
+  "JcdtWmCode" : "string",
+  "JcdtInvNum" : "string",
+  "JcdtBillAmt" : 0,
+  "JcdtAccrualFlag" : "string",
+  "JcdtWbsvCode1" : "string",
+  "JcdtWbsvCode2" : "string",
+  "JcdtWbsvCode3" : "string",
+  "JcdtWbsvCode4" : "string",
+  "JcdtWbsvCode5" : "string",
+  "JcdtWbsvCode6" : "string",
+  "JcdtWbsvCode7" : "string",
+  "JcdtWbsvCode8" : "string",
+  "JcdtWbsvCode9" : "string",
+  "JcdtWbsvCode10" : "string",
+  "JcdtWbsvCode11" : "string",
+  "JcdtWbsvCode12" : "string",
+  "JcdtUser" : "string",
+  "JcdtDateTimeEntry" : "YYYY-MM-dd",
+  "JcdtDeptCode" : "string",
+  "JcdtAccCode" : "string",
+  "JcdtInvBchNum" : 0,
+  "JcdtArInvNum" : "string",
+  "JcdtPmCode" : "string",
+  "JcdtUnbilledRevAmt" : 0,
+  "JcdtUnbilledRevRateAmt" : 0,
+  "JcdtBillableState" : "string",
+  "JcdtAdjNum" : 0,
+  "JcdtCloseState" : "string",
+  "JcdtNextBillableState" : "string",
+  "JcdtNextCloseState" : "string",
+  "JcdtDsrcBchNum" : 0,
+  "JcdtBillRateTypeCode" : "string",
+  "JcdtBillPctOrRate" : 0,
+  "JcdtSecPayRun" : "string",
+  "JcdtCreateDate" : "YYYY-MM-dd",
+  "JcdtJbDrawNum" : 0,
+  "JcdtJbRevisionNum" : 0,
+  "JcdtJbDeferBillingFlag" : "string",
+  "JcdtHomeCompCode" : "string",
+  "JcdtHomeDeptCode" : "string",
+  "JcdtIbTransFlag" : "string",
+  "JcdtRevGeneratedAmt" : 0,
+  "JcdtRevAboveGeneratedAmt" : 0,
+  "JcdtCurrCode" : "string",
+  "JcdtExchgCurrCode" : "string",
+  "JcdtExchgRate" : 0,
+  "JcdtExchgAmt" : 0,
+  "JcdtTranSrcCode" : "string",
+  "JcdtIdNum" : 0,
+  "JcdtAdjustmentBchNum" : 0,
+  "JcdtAdjustmentIdNum" : 0,
+  "JcdtIbAboveCostAmt" : 0,
+  "JcdtIbFromCompCode" : "string",
+  "JcdtIbFromDeptCode" : "string",
+  "JcdtIbOutboundCostAmt" : 0,
+  "JcdtSrcCode2" : "string",
+  "JcdtBillCode" : "string",
+  "JcdtBillCodeUpdateFlag" : "string",
+  "JcdtOrigUnbilledRevAmt" : 0,
+  "JcdtTempDate" : "YYYY-MM-dd",
+  "JcdtPostOverhdFlag" : "string",
+  "JcdtSrcCode3" : "string",
+  "JcdtSrcDesc3" : "string",
+  "JcdtIbOutboundLostAmt" : 0,
+  "JcdtPyjbBillingAdjQty" : 0,
+  "JcdtJbContExchgRate" : 0,
+  "JcdtFreezeAdjLineFlag" : "string",
+  "JcdtJbDeferralDrawNum" : 0,
+  "JcdtJbDeferralRevisionNum" : 0,
+  "JcdtBillingRecalcDate" : "YYYY-MM-dd",
+  "JcdtBillingRecalcUser" : "string",
+  "JcdtBillingRecalcOrigAmt" : 0,
+  "JcdtBillingRecalcOrigRate" : 0,
+  "JcdtHldbkAmt" : 0,
+  "JcdtHldbkRlsAmt" : 0,
+  "JcdtHldbkExchgAmt" : 0,
+  "JcdtHldbkRlsExchgAmt" : 0,
+  "JcdtJbHldbkAmt" : 0,
+  "JcdtJbHldbkRlsAmt" : 0,
+  "JcdtVdistVouNum" : 0,
+  "JcdtIbRevenueAmt" : 0,
+  "JcdtExchgOutboundAmt" : 0,
+  "JcdtOverheadBaseAmt" : 0,
+  "JcdtOverheadBaseUnit" : 0,
+  "JcdtOverheadRateTypeCode" : "string",
+  "JcdtOverheadRateOrPct" : 0,
+  "JcdtPoshpLineNum" : 0,
+  "JcdtVouNum" : 0,
+  "JcdtInvCode" : "string",
+  "JcdtInvDate" : "YYYY-MM-dd",
+  "JcdtPostDateChangeDate" : "YYYY-MM-dd",
+  "JcdtDsrcDescription" : "string",
+  "JcdtDesc4" : "string",
+  "JcdtShiftCode" : "string",
+  "JcdtBillingRecalcOrigOrseq" : 0,
+  "JcdtUnionCode" : "string",
+  "JcdtPyPremiumAmt" : 0,
+  "JcdtPyPremiumUnbilledAmt" : 0,
+  "JcdtPyCostPoolJob" : "string",
+  "JcdtImpPoFlag" : "string",
+  "JcdtOrigRefDesc" : "string",
+  "JcdtOvhdWorkLocation" : "string",
+  "JcdtCostRate" : 0,
+  "JcdtPyRateCode" : "string",
+  "JcdtPyBurdenFlag" : "string",
+  "JcdtPyActualBurdenAmt" : 0,
+  "JcdtPyTranType" : "string",
+  "JcdtPyTranDesc" : "string",
+  "JcdtIuCreateDate" : "YYYY-MM-dd",
+  "JcdtIuCreateUser" : "string",
+  "JcdtIuUpdateDate" : "YYYY-MM-dd",
+  "JcdtIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcdtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="a591ce10-c818-4750-a4a0-03e7ea8e9abc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="8321d21c-30a7-4c1d-af28-b7a9d28a0672" method="POST">
+    <con:description>Create a Posted JC Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcdtNum" : 0,
+  "JcdtCompCode" : "string",
+  "JcdtDsrcCompCode" : "string",
+  "JcdtTypeCode" : "string",
+  "JcdtDsrcCode" : "string",
+  "JcdtJobCode" : "string",
+  "JcdtJobCtrlCode" : "string",
+  "JcdtPhsCode" : "string",
+  "JcdtPhsCtrlCode" : "string",
+  "JcdtCatCode" : "string",
+  "JcdtCatCtrlCode" : "string",
+  "JcdtJourCode" : "string",
+  "JcdtBchNum" : 0,
+  "JcdtSrcCode" : "string",
+  "JcdtSrcDesc" : "string",
+  "JcdtRefCode" : "string",
+  "JcdtRefDate" : "YYYY-MM-dd",
+  "JcdtRefDesc" : "string",
+  "JcdtSrcCommCode" : "string",
+  "JcdtPostDate" : "YYYY-MM-dd",
+  "JcdtUnit" : 0,
+  "JcdtAmt" : 0,
+  "JcdtWmCode" : "string",
+  "JcdtInvNum" : "string",
+  "JcdtBillAmt" : 0,
+  "JcdtAccrualFlag" : "string",
+  "JcdtWbsvCode1" : "string",
+  "JcdtWbsvCode2" : "string",
+  "JcdtWbsvCode3" : "string",
+  "JcdtWbsvCode4" : "string",
+  "JcdtWbsvCode5" : "string",
+  "JcdtWbsvCode6" : "string",
+  "JcdtWbsvCode7" : "string",
+  "JcdtWbsvCode8" : "string",
+  "JcdtWbsvCode9" : "string",
+  "JcdtWbsvCode10" : "string",
+  "JcdtWbsvCode11" : "string",
+  "JcdtWbsvCode12" : "string",
+  "JcdtUser" : "string",
+  "JcdtDateTimeEntry" : "YYYY-MM-dd",
+  "JcdtDeptCode" : "string",
+  "JcdtAccCode" : "string",
+  "JcdtInvBchNum" : 0,
+  "JcdtArInvNum" : "string",
+  "JcdtPmCode" : "string",
+  "JcdtUnbilledRevAmt" : 0,
+  "JcdtUnbilledRevRateAmt" : 0,
+  "JcdtBillableState" : "string",
+  "JcdtAdjNum" : 0,
+  "JcdtCloseState" : "string",
+  "JcdtNextBillableState" : "string",
+  "JcdtNextCloseState" : "string",
+  "JcdtDsrcBchNum" : 0,
+  "JcdtBillRateTypeCode" : "string",
+  "JcdtBillPctOrRate" : 0,
+  "JcdtSecPayRun" : "string",
+  "JcdtCreateDate" : "YYYY-MM-dd",
+  "JcdtJbDrawNum" : 0,
+  "JcdtJbRevisionNum" : 0,
+  "JcdtJbDeferBillingFlag" : "string",
+  "JcdtHomeCompCode" : "string",
+  "JcdtHomeDeptCode" : "string",
+  "JcdtIbTransFlag" : "string",
+  "JcdtRevGeneratedAmt" : 0,
+  "JcdtRevAboveGeneratedAmt" : 0,
+  "JcdtCurrCode" : "string",
+  "JcdtExchgCurrCode" : "string",
+  "JcdtExchgRate" : 0,
+  "JcdtExchgAmt" : 0,
+  "JcdtTranSrcCode" : "string",
+  "JcdtIdNum" : 0,
+  "JcdtAdjustmentBchNum" : 0,
+  "JcdtAdjustmentIdNum" : 0,
+  "JcdtIbAboveCostAmt" : 0,
+  "JcdtIbFromCompCode" : "string",
+  "JcdtIbFromDeptCode" : "string",
+  "JcdtIbOutboundCostAmt" : 0,
+  "JcdtSrcCode2" : "string",
+  "JcdtBillCode" : "string",
+  "JcdtBillCodeUpdateFlag" : "string",
+  "JcdtOrigUnbilledRevAmt" : 0,
+  "JcdtTempDate" : "YYYY-MM-dd",
+  "JcdtPostOverhdFlag" : "string",
+  "JcdtSrcCode3" : "string",
+  "JcdtSrcDesc3" : "string",
+  "JcdtIbOutboundLostAmt" : 0,
+  "JcdtPyjbBillingAdjQty" : 0,
+  "JcdtJbContExchgRate" : 0,
+  "JcdtFreezeAdjLineFlag" : "string",
+  "JcdtJbDeferralDrawNum" : 0,
+  "JcdtJbDeferralRevisionNum" : 0,
+  "JcdtBillingRecalcDate" : "YYYY-MM-dd",
+  "JcdtBillingRecalcUser" : "string",
+  "JcdtBillingRecalcOrigAmt" : 0,
+  "JcdtBillingRecalcOrigRate" : 0,
+  "JcdtHldbkAmt" : 0,
+  "JcdtHldbkRlsAmt" : 0,
+  "JcdtHldbkExchgAmt" : 0,
+  "JcdtHldbkRlsExchgAmt" : 0,
+  "JcdtJbHldbkAmt" : 0,
+  "JcdtJbHldbkRlsAmt" : 0,
+  "JcdtVdistVouNum" : 0,
+  "JcdtIbRevenueAmt" : 0,
+  "JcdtExchgOutboundAmt" : 0,
+  "JcdtOverheadBaseAmt" : 0,
+  "JcdtOverheadBaseUnit" : 0,
+  "JcdtOverheadRateTypeCode" : "string",
+  "JcdtOverheadRateOrPct" : 0,
+  "JcdtPoshpLineNum" : 0,
+  "JcdtVouNum" : 0,
+  "JcdtInvCode" : "string",
+  "JcdtInvDate" : "YYYY-MM-dd",
+  "JcdtPostDateChangeDate" : "YYYY-MM-dd",
+  "JcdtDsrcDescription" : "string",
+  "JcdtDesc4" : "string",
+  "JcdtShiftCode" : "string",
+  "JcdtBillingRecalcOrigOrseq" : 0,
+  "JcdtUnionCode" : "string",
+  "JcdtPyPremiumAmt" : 0,
+  "JcdtPyPremiumUnbilledAmt" : 0,
+  "JcdtPyCostPoolJob" : "string",
+  "JcdtImpPoFlag" : "string",
+  "JcdtOrigRefDesc" : "string",
+  "JcdtOvhdWorkLocation" : "string",
+  "JcdtCostRate" : 0,
+  "JcdtPyRateCode" : "string",
+  "JcdtPyBurdenFlag" : "string",
+  "JcdtPyActualBurdenAmt" : 0,
+  "JcdtPyTranType" : "string",
+  "JcdtPyTranDesc" : "string",
+  "JcdtIuCreateDate" : "YYYY-MM-dd",
+  "JcdtIuCreateUser" : "string",
+  "JcdtIuUpdateDate" : "YYYY-MM-dd",
+  "JcdtIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcdtVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JcdtCompCode":"string","JcdtJobCode":"string","JcdtImpPoFlag":"string","JcdtAmt":"float","JcdtNum":"integer","JcdtVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="82bf0f4c-9486-42f2-895b-b3baf9372d4c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcdtCompCode":"string","JcdtJobCode":"string","JcdtImpPoFlag":"string","JcdtAmt":"float","JcdtNum":"integer","JcdtVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="e470da1d-8e40-4d29-b9a3-6209e1879b40" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcdtDsrcDescription":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

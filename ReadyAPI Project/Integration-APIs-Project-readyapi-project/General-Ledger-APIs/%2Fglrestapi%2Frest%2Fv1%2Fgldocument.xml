@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldocument" path="/glrestapi/rest/v1/gldocument" id="a27722bc-9c1b-490d-aff4-cd4c120ea307" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a27722bc-9c1b-490d-aff4-cd4c120ea307fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocument</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="32fe322a-d0d1-4c74-aaca-4f2a7f34b250" method="GET">
+    <con:description>Retrieve GL documents</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectDocument</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>documentCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Document Code (selectDocument)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DocCode" : "string",
+  "DocName" : "string",
+  "DocDesc" : "string",
+  "DocCatCode" : "string",
+  "DocCatName" : "string",
+  "DocBudgtypeCode" : "string",
+  "DocSeqtypeCode" : "string",
+  "DocActionCode" : "string",
+  "DocLstRunPer" : 0,
+  "DocSuprDetCode" : "string",
+  "DocSuprTtlCode" : "string",
+  "DocTypeCode" : "string",
+  "DocLstRunYr" : 0,
+  "DocCompCode" : "string",
+  "DocCon2Code" : "string",
+  "DocDesc2" : "string",
+  "DocDesc3" : "string",
+  "DocDesc4" : "string",
+  "DocUserCode" : "string",
+  "DocConschartCode" : "string",
+  "DocConschartName" : "string",
+  "DocWidthNum" : 0,
+  "DocLengthNum" : 0,
+  "DocBalTableName" : "string",
+  "DocBudgTableName" : "string",
+  "DocAccTableName" : "string",
+  "DocCurrCode" : "string",
+  "DocFuncCode" : "string",
+  "DocMaxPer" : 0,
+  "DocPrvYr" : 0,
+  "DocInterCompAccFlag" : "string",
+  "DocCtrlAccFlag" : "string",
+  "DocIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DocIuCreateUser" : "string",
+  "DocIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="edea6169-39c8-47f5-adf0-5992d5683209" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="e7db22ce-8db8-40d2-ab5d-63f70bae96cd" method="POST">
+    <con:description>Create a GL document</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DocCode" : "string",
+  "DocName" : "string",
+  "DocDesc" : "string",
+  "DocCatCode" : "string",
+  "DocCatName" : "string",
+  "DocBudgtypeCode" : "string",
+  "DocSeqtypeCode" : "string",
+  "DocActionCode" : "string",
+  "DocLstRunPer" : 0,
+  "DocSuprDetCode" : "string",
+  "DocSuprTtlCode" : "string",
+  "DocTypeCode" : "string",
+  "DocLstRunYr" : 0,
+  "DocCompCode" : "string",
+  "DocCon2Code" : "string",
+  "DocDesc2" : "string",
+  "DocDesc3" : "string",
+  "DocDesc4" : "string",
+  "DocUserCode" : "string",
+  "DocConschartCode" : "string",
+  "DocConschartName" : "string",
+  "DocWidthNum" : 0,
+  "DocLengthNum" : 0,
+  "DocBalTableName" : "string",
+  "DocBudgTableName" : "string",
+  "DocAccTableName" : "string",
+  "DocCurrCode" : "string",
+  "DocFuncCode" : "string",
+  "DocMaxPer" : 0,
+  "DocPrvYr" : 0,
+  "DocInterCompAccFlag" : "string",
+  "DocCtrlAccFlag" : "string",
+  "DocIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DocIuCreateUser" : "string",
+  "DocIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DocIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DocVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DocCode":"string","DocName":"string","DocCatCode":"string","DocSeqtypeCode":"string","DocConschartCode":"string","DocVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="8d3b3bef-9d87-443b-989d-943e152c3690" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DocCode":"string","DocName":"string","DocCatCode":"string","DocSeqtypeCode":"string","DocConschartCode":"string","DocVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

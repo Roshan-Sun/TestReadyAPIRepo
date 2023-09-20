@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeeting" path="/pm-rest-api/rest/1/pmmeeting" id="a718720a-6952-4ec2-bb32-144b5751b177" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a718720a-6952-4ec2-bb32-144b5751b177fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeeting</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b862e14b-064f-4c8b-ad98-75fb07f75353" method="GET">
+    <con:description>Retrieve PM Meetings</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmCompCode" : "string",
+  "PmmTrackCode" : "string",
+  "PmmProjCode" : "string",
+  "PmmMeetingId" : "string",
+  "PmmSubject" : "string",
+  "PmmRecordStatus" : "string",
+  "PmmComments" : "string",
+  "PmmDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmLocation" : "string",
+  "PmmMinutesSentLastDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmMinutesFootnote" : "string",
+  "PmmNextDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmNextLocation" : "string",
+  "PmmNextSubject" : "string",
+  "PmmNextComments" : "string",
+  "PmmNextReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmNextPreparedFlag" : "string",
+  "PmmEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmEnteredByUser" : "string",
+  "PmmContactCode" : "string",
+  "PmmPartnCode" : "string",
+  "PmmPartnTypeCode" : "string",
+  "PmmPurpose" : "string",
+  "PmmIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmIuCreateUser" : "string",
+  "PmmIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmIuUpdateUser" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="f66cfb72-02d3-4656-bdcc-c7756d5c8c57" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="a658f1b0-24dd-4982-88af-ea447cdc04dc" method="POST">
+    <con:description>Create a PM Meeting</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmCompCode" : "string",
+  "PmmTrackCode" : "string",
+  "PmmProjCode" : "string",
+  "PmmMeetingId" : "string",
+  "PmmSubject" : "string",
+  "PmmRecordStatus" : "string",
+  "PmmComments" : "string",
+  "PmmDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmLocation" : "string",
+  "PmmMinutesSentLastDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmMinutesFootnote" : "string",
+  "PmmNextDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmNextLocation" : "string",
+  "PmmNextSubject" : "string",
+  "PmmNextComments" : "string",
+  "PmmNextReminderDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmNextPreparedFlag" : "string",
+  "PmmEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmEnteredByUser" : "string",
+  "PmmContactCode" : "string",
+  "PmmPartnCode" : "string",
+  "PmmPartnTypeCode" : "string",
+  "PmmPurpose" : "string",
+  "PmmIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmIuCreateUser" : "string",
+  "PmmIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmIuUpdateUser" : "string",
+  "PmmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmCompCode":"string","PmmProjCode":"string","PmmTrackCode":"string","PmmSubject":"string","PmmMeetingId":"string","PmmVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="e0a9bd73-dad9-45a2-92a0-baa32fb14f30" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmCompCode":"string","PmmProjCode":"string","PmmTrackCode":"string","PmmSubject":"string","PmmMeetingId":"string","PmmVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="34fb6d7c-02ed-480d-9fb6-f65c68b9ed14" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmSubject":"test1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

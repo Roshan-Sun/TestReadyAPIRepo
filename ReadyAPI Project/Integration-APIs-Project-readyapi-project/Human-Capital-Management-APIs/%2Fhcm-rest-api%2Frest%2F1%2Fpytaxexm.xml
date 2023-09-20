@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytaxexm" path="/hcm-rest-api/rest/1/pytaxexm" id="640daf77-af95-42a7-a6c1-879f60989d74" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="640daf77-af95-42a7-a6c1-879f60989d74fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytaxexm</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="ec446904-041b-4869-b52b-3a10e5e25533" method="GET">
+    <con:description>Retrieve PY Tax Exemptions</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PyTaxExmFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNoVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (PyTaxExmFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>StateCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>State Code (PyTaxExmFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxxEmpNo" : "string",
+  "TxxStateCode" : "string",
+  "TxxEffectiveDate" : "YYYY-MM-dd",
+  "TxxFilingStatus" : "string",
+  "TxxNrCertificate" : "string",
+  "TxxExempAmount" : 0,
+  "TxxSuplExpAmount" : 0,
+  "TxxPrimExemp" : 0,
+  "TxxSecnExemp" : 0,
+  "TxxTertExemp" : 0,
+  "TxxUser" : "string",
+  "TxxLastUpdDate" : "YYYY-MM-dd",
+  "TxxWrlCode" : "string",
+  "TxxResidenceLocCode" : "string",
+  "TxxPrimWorkLocCode" : "string",
+  "TxxMultiJobsFlag" : "string",
+  "TxxDepTaxCreditAmt" : 0,
+  "TxxOtherIncomeAmt" : 0,
+  "TxxOtherDeductionAmt" : 0,
+  "TxxVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="29e45509-896e-4663-9a6a-a41dcdb07876" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="4ba75514-118d-4661-89d5-78eaeb1b4cd0" method="POST">
+    <con:description>Create a PY Tax Exemption</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxxEmpNo" : "string",
+  "TxxStateCode" : "string",
+  "TxxEffectiveDate" : "YYYY-MM-dd",
+  "TxxFilingStatus" : "string",
+  "TxxNrCertificate" : "string",
+  "TxxExempAmount" : 0,
+  "TxxSuplExpAmount" : 0,
+  "TxxPrimExemp" : 0,
+  "TxxSecnExemp" : 0,
+  "TxxTertExemp" : 0,
+  "TxxUser" : "string",
+  "TxxLastUpdDate" : "YYYY-MM-dd",
+  "TxxWrlCode" : "string",
+  "TxxResidenceLocCode" : "string",
+  "TxxPrimWorkLocCode" : "string",
+  "TxxMultiJobsFlag" : "string",
+  "TxxDepTaxCreditAmt" : 0,
+  "TxxOtherIncomeAmt" : 0,
+  "TxxOtherDeductionAmt" : 0,
+  "TxxVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TxxEmpNo":"string","TxxStateCode":"string","TxxEffectiveDate":"string","TxxWrlCode":"string","TxxLastUpdDate":"string","TxxUser":"string","TxxVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="fce90dab-70d3-4e25-9934-3eb424b97afe" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxxEmpNo":"string","TxxStateCode":"string","TxxEffectiveDate":"string","TxxWrlCode":"string","TxxLastUpdDate":"string","TxxUser":"string","TxxVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f3d9ea40-57af-4c4f-83dc-2e80760e6bc8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxxOtherDeductionAmt":10}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

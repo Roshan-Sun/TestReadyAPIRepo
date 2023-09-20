@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ci-rest-api/rest/1/ciitemhdr" path="/ci-rest-api/rest/1/ciitemhdr" id="ff1b6695-40cf-41c9-ab4d-21ef55164939" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ff1b6695-40cf-41c9-ab4d-21ef55164939fileName">%2Fci-rest-api%2Frest%2F1%2Fciitemhdr</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="2795f8b7-02df-48b8-853e-1bbad279799d" method="GET">
+    <con:description>Retrieve CI Item Headers</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CithCompCode" : "string",
+  "CithCompName" : "string",
+  "CithItemCode" : "string",
+  "CithItemName" : "string",
+  "CithItemTypeCode" : "string",
+  "CithItemTypeName" : "string",
+  "CithDefaultLocCode" : "string",
+  "CithDefaultLocName" : "string",
+  "CithCostMethCode" : "string",
+  "CithLotCtrlFlag" : "string",
+  "CithSerialFlag" : "string",
+  "CithUsageCode" : "string",
+  "CithCostUpdateLevelCode" : "string",
+  "CithInvAccCode" : "string",
+  "CithRevAccCode" : "string",
+  "CithWriAccCode" : "string",
+  "CithAdjAccCode" : "string",
+  "CithVarAccCode" : "string",
+  "CithSuspAccCode" : "string",
+  "CithMinOrderQty" : 0,
+  "CithStdOrderQty" : 0,
+  "CithMaxOrderQty" : 0,
+  "CithMinOnhandQty" : 0,
+  "CithMaxOnhandQty" : 0,
+  "CithStdOnhandQty" : 0,
+  "CithMarketPriceAmt" : 0,
+  "CithSellPriceAmt" : 0,
+  "CithBuybackPriceAmt" : 0,
+  "CithRestockPriceAmt" : 0,
+  "CithCrtDate" : "YYYY-MM-dd",
+  "CithCrtUserCode" : "string",
+  "CithLastModifyDate" : "YYYY-MM-dd",
+  "CithLastModifyUserCode" : "string",
+  "CithDeprExpAccCode" : "string",
+  "CithAccumDeprAccCode" : "string",
+  "CithTax1Code" : "string",
+  "CithTax2Code" : "string",
+  "CithTax3Code" : "string",
+  "CithSellPriceOrPctCode" : "string",
+  "CithBbPriceOrPctCode" : "string",
+  "CithSoldAtCostAccCode" : "string",
+  "CithSalesTax1Code" : "string",
+  "CithSalesTax2Code" : "string",
+  "CithSalesTax3Code" : "string",
+  "CithCmpFlag" : "string",
+  "CithRtrnFlag" : "string",
+  "CithPartialDasmblFlag" : "string",
+  "CithAffilRevAccCode" : "string",
+  "CithCustRevAccCode" : "string",
+  "CithAllowNegQtyFlag" : "string",
+  "CithProdFlag" : "string",
+  "CithEmCostComponCode" : "string",
+  "CithCreditJcCatCode" : "string",
+  "CithCreditJcCatName" : "string",
+  "CithInventoryItemCode" : "string",
+  "CithInventoryTypeCode" : "string",
+  "CithSalesProductFlag" : "string",
+  "CithMsAvailableFlag" : "string",
+  "CithTotalAcPct" : 0,
+  "CithAutoBuildCmpFlag" : "string",
+  "CithIuCreateDate" : "YYYY-MM-dd",
+  "CithIuCreateUser" : "string",
+  "CithIuUpdateDate" : "YYYY-MM-dd",
+  "CithIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CithVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="9146175f-cc00-4799-bb8b-1c1890068ffd" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="106fa70a-4eed-4b3c-a38d-99fa193d53e8" method="POST">
+    <con:description>Create a CI Item Header</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CithCompCode" : "string",
+  "CithCompName" : "string",
+  "CithItemCode" : "string",
+  "CithItemName" : "string",
+  "CithItemTypeCode" : "string",
+  "CithItemTypeName" : "string",
+  "CithDefaultLocCode" : "string",
+  "CithDefaultLocName" : "string",
+  "CithCostMethCode" : "string",
+  "CithLotCtrlFlag" : "string",
+  "CithSerialFlag" : "string",
+  "CithUsageCode" : "string",
+  "CithCostUpdateLevelCode" : "string",
+  "CithInvAccCode" : "string",
+  "CithRevAccCode" : "string",
+  "CithWriAccCode" : "string",
+  "CithAdjAccCode" : "string",
+  "CithVarAccCode" : "string",
+  "CithSuspAccCode" : "string",
+  "CithMinOrderQty" : 0,
+  "CithStdOrderQty" : 0,
+  "CithMaxOrderQty" : 0,
+  "CithMinOnhandQty" : 0,
+  "CithMaxOnhandQty" : 0,
+  "CithStdOnhandQty" : 0,
+  "CithMarketPriceAmt" : 0,
+  "CithSellPriceAmt" : 0,
+  "CithBuybackPriceAmt" : 0,
+  "CithRestockPriceAmt" : 0,
+  "CithCrtDate" : "YYYY-MM-dd",
+  "CithCrtUserCode" : "string",
+  "CithLastModifyDate" : "YYYY-MM-dd",
+  "CithLastModifyUserCode" : "string",
+  "CithDeprExpAccCode" : "string",
+  "CithAccumDeprAccCode" : "string",
+  "CithTax1Code" : "string",
+  "CithTax2Code" : "string",
+  "CithTax3Code" : "string",
+  "CithSellPriceOrPctCode" : "string",
+  "CithBbPriceOrPctCode" : "string",
+  "CithSoldAtCostAccCode" : "string",
+  "CithSalesTax1Code" : "string",
+  "CithSalesTax2Code" : "string",
+  "CithSalesTax3Code" : "string",
+  "CithCmpFlag" : "string",
+  "CithRtrnFlag" : "string",
+  "CithPartialDasmblFlag" : "string",
+  "CithAffilRevAccCode" : "string",
+  "CithCustRevAccCode" : "string",
+  "CithAllowNegQtyFlag" : "string",
+  "CithProdFlag" : "string",
+  "CithEmCostComponCode" : "string",
+  "CithCreditJcCatCode" : "string",
+  "CithCreditJcCatName" : "string",
+  "CithInventoryItemCode" : "string",
+  "CithInventoryTypeCode" : "string",
+  "CithSalesProductFlag" : "string",
+  "CithMsAvailableFlag" : "string",
+  "CithTotalAcPct" : 0,
+  "CithAutoBuildCmpFlag" : "string",
+  "CithIuCreateDate" : "YYYY-MM-dd",
+  "CithIuCreateUser" : "string",
+  "CithIuUpdateDate" : "YYYY-MM-dd",
+  "CithIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "CithVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CithCompCode":"string","CithItemCode":"string","CithItemTypeCode":"string","CithVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="7fd54465-3311-4a9b-aea9-3c8e15ebb26c" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CithCompCode":"string","CithItemCode":"string","CithItemTypeCode":"string","CithVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="85136ac2-622a-4599-b6f0-284f8fd7ffcd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CithMarketPriceAmt":1}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

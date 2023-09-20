@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmsubmittal" path="/pm-rest-api/rest/1/pmsubmittal" id="9511bbb9-3c37-41b5-af3f-5498e233a478" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9511bbb9-3c37-41b5-af3f-5498e233a478fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmittal</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="237d48b8-37d4-48f9-9aaa-74a54d1a41b8" method="GET">
+    <con:description>Retrieve PM Submittals</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByProject</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>projCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Project Code (selectByProject)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmCompCode" : "string",
+  "PmsmProjCode" : "string",
+  "PmsmSbmtId" : "string",
+  "PmsmSbmtName" : "string",
+  "PmsmRecFromPartnCode" : "string",
+  "PmsmRecFromPartnTypeCode" : "string",
+  "PmsmRecFromContactCode" : "string",
+  "PmsmRetByPartnCode" : "string",
+  "PmsmRetByPartnTypeCode" : "string",
+  "PmsmRetByContactCode" : "string",
+  "PmsmSentToPartnCode" : "string",
+  "PmsmSentToPartnTypeCode" : "string",
+  "PmsmSentToContactCode" : "string",
+  "PmsmFwdToPartnCode" : "string",
+  "PmsmFwdToPartnTypeCode" : "string",
+  "PmsmFwdToContactCode" : "string",
+  "PmsmRequiredStartDate" : "YYYY-MM-dd",
+  "PmsmRequiredEndDate" : "YYYY-MM-dd",
+  "PmsmClvValueCode1" : "string",
+  "PmsmClvValueCode2" : "string",
+  "PmsmClvValueCode3" : "string",
+  "PmsmClvValueCode4" : "string",
+  "PmsmClvValueCode5" : "string",
+  "PmsmClvValueCode6" : "string",
+  "PmsmSbmtStatusCode" : "string",
+  "PmsmActivityStartDate" : "YYYY-MM-dd",
+  "PmsmDateChangeCode" : "string",
+  "PmsmCopiesNum" : 0,
+  "PmsmCmCode" : "string",
+  "PmsmLeadTimeStage6" : 0,
+  "PmsmStartDateStage6" : "YYYY-MM-dd",
+  "PmsmEndDateStage6" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage5" : 0,
+  "PmsmStartDateStage5" : "YYYY-MM-dd",
+  "PmsmEndDateStage5" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage4" : 0,
+  "PmsmStartDateStage4" : "YYYY-MM-dd",
+  "PmsmEndDateStage4" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage3" : 0,
+  "PmsmStartDateStage3" : "YYYY-MM-dd",
+  "PmsmEndDateStage3" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage2" : 0,
+  "PmsmStartDateStage2" : "YYYY-MM-dd",
+  "PmsmEndDateStage2" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage1" : 0,
+  "PmsmStartDateStage1" : "YYYY-MM-dd",
+  "PmsmEndDateStage1" : "YYYY-MM-dd",
+  "PmsmSpecSectionCode" : "string",
+  "PmsmSortOrderNumber" : 0,
+  "PmsmClosedDate" : "YYYY-MM-dd",
+  "PmsmTypeCode" : "string",
+  "PmsmSpecSubSectionCode" : "string",
+  "PmsmActivityCode" : "string",
+  "PmsmIuCreateDate" : "YYYY-MM-dd",
+  "PmsmIuCreateUser" : "string",
+  "PmsmIuUpdateDate" : "YYYY-MM-dd",
+  "PmsmIuUpdateUser" : "string",
+  "PmsmProcurementFlag" : "string",
+  "PmsmComment" : "string",
+  "PmsmCurrLeadTimeStage1" : 0,
+  "PmsmCurrStartDateStage1" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage1" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage2" : 0,
+  "PmsmCurrStartDateStage2" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage2" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage3" : 0,
+  "PmsmCurrStartDateStage3" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage3" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage4" : 0,
+  "PmsmCurrStartDateStage4" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage4" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage5" : 0,
+  "PmsmCurrStartDateStage5" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage5" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage6" : 0,
+  "PmsmCurrStartDateStage6" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage6" : "YYYY-MM-dd",
+  "PmsmCurrProgDateCode" : "string",
+  "PmsmQcRequirementFlag" : "string",
+  "PmsmAutoNotifFlag" : "string",
+  "PmsmAutoNotifDays" : 0,
+  "PmsmLastSessioninfo" : "string",
+  "PmsmOrigSessioninfo" : "string",
+  "PmsmGlobalUpdateDate" : "YYYY-MM-dd",
+  "DiscriminatorCode" : "string",
+  "PmsmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ddbc3267-ed3b-442b-918a-9163071873c9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="748c212f-c705-442e-8078-7de9e30b5ca3" method="POST">
+    <con:description>Create a PM Submittal</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmsmCompCode" : "string",
+  "PmsmProjCode" : "string",
+  "PmsmSbmtId" : "string",
+  "PmsmSbmtName" : "string",
+  "PmsmRecFromPartnCode" : "string",
+  "PmsmRecFromPartnTypeCode" : "string",
+  "PmsmRecFromContactCode" : "string",
+  "PmsmRetByPartnCode" : "string",
+  "PmsmRetByPartnTypeCode" : "string",
+  "PmsmRetByContactCode" : "string",
+  "PmsmSentToPartnCode" : "string",
+  "PmsmSentToPartnTypeCode" : "string",
+  "PmsmSentToContactCode" : "string",
+  "PmsmFwdToPartnCode" : "string",
+  "PmsmFwdToPartnTypeCode" : "string",
+  "PmsmFwdToContactCode" : "string",
+  "PmsmRequiredStartDate" : "YYYY-MM-dd",
+  "PmsmRequiredEndDate" : "YYYY-MM-dd",
+  "PmsmClvValueCode1" : "string",
+  "PmsmClvValueCode2" : "string",
+  "PmsmClvValueCode3" : "string",
+  "PmsmClvValueCode4" : "string",
+  "PmsmClvValueCode5" : "string",
+  "PmsmClvValueCode6" : "string",
+  "PmsmSbmtStatusCode" : "string",
+  "PmsmActivityStartDate" : "YYYY-MM-dd",
+  "PmsmDateChangeCode" : "string",
+  "PmsmCopiesNum" : 0,
+  "PmsmCmCode" : "string",
+  "PmsmLeadTimeStage6" : 0,
+  "PmsmStartDateStage6" : "YYYY-MM-dd",
+  "PmsmEndDateStage6" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage5" : 0,
+  "PmsmStartDateStage5" : "YYYY-MM-dd",
+  "PmsmEndDateStage5" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage4" : 0,
+  "PmsmStartDateStage4" : "YYYY-MM-dd",
+  "PmsmEndDateStage4" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage3" : 0,
+  "PmsmStartDateStage3" : "YYYY-MM-dd",
+  "PmsmEndDateStage3" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage2" : 0,
+  "PmsmStartDateStage2" : "YYYY-MM-dd",
+  "PmsmEndDateStage2" : "YYYY-MM-dd",
+  "PmsmLeadTimeStage1" : 0,
+  "PmsmStartDateStage1" : "YYYY-MM-dd",
+  "PmsmEndDateStage1" : "YYYY-MM-dd",
+  "PmsmSpecSectionCode" : "string",
+  "PmsmSortOrderNumber" : 0,
+  "PmsmClosedDate" : "YYYY-MM-dd",
+  "PmsmTypeCode" : "string",
+  "PmsmSpecSubSectionCode" : "string",
+  "PmsmActivityCode" : "string",
+  "PmsmIuCreateDate" : "YYYY-MM-dd",
+  "PmsmIuCreateUser" : "string",
+  "PmsmIuUpdateDate" : "YYYY-MM-dd",
+  "PmsmIuUpdateUser" : "string",
+  "PmsmProcurementFlag" : "string",
+  "PmsmComment" : "string",
+  "PmsmCurrLeadTimeStage1" : 0,
+  "PmsmCurrStartDateStage1" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage1" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage2" : 0,
+  "PmsmCurrStartDateStage2" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage2" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage3" : 0,
+  "PmsmCurrStartDateStage3" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage3" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage4" : 0,
+  "PmsmCurrStartDateStage4" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage4" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage5" : 0,
+  "PmsmCurrStartDateStage5" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage5" : "YYYY-MM-dd",
+  "PmsmCurrLeadTimeStage6" : 0,
+  "PmsmCurrStartDateStage6" : "YYYY-MM-dd",
+  "PmsmCurrEndDateStage6" : "YYYY-MM-dd",
+  "PmsmCurrProgDateCode" : "string",
+  "PmsmQcRequirementFlag" : "string",
+  "PmsmAutoNotifFlag" : "string",
+  "PmsmAutoNotifDays" : 0,
+  "PmsmLastSessioninfo" : "string",
+  "PmsmOrigSessioninfo" : "string",
+  "PmsmGlobalUpdateDate" : "YYYY-MM-dd",
+  "DiscriminatorCode" : "string",
+  "PmsmVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmsmCompCode":"string","PmsmProjCode":"string","PmsmProcurementFlag":"string","PmsmSbmtId":"string","PmsmVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="96c6c439-7426-433b-ac47-5f97879b4ab8" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmCompCode":"string","PmsmProjCode":"string","PmsmProcurementFlag":"string","PmsmSbmtId":"string","PmsmVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="25ae19b0-617f-4de7-a160-4540b8558a72" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmsmClvValueCode1":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

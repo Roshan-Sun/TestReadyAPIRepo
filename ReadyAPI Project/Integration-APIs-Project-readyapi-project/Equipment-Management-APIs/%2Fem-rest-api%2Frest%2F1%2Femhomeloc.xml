@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emhomeloc" path="/em-rest-api/rest/1/emhomeloc" id="583a4a20-ad5b-42f4-80cb-b85dcd78e8af" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="583a4a20-ad5b-42f4-80cb-b85dcd78e8affileName">%2Fem-rest-api%2Frest%2F1%2Femhomeloc</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="edd625c4-2650-4ce1-84f8-1cb9c1e8dd1b" method="GET">
+    <con:description>Retrieve Equipment Home Locations</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByCode or findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>locationCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Location Code (findByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to compare against create/update dates (findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmhlHomelocCode" : "string",
+  "EmhlName" : "string",
+  "EmhlSname" : "string",
+  "EmhlCompCode" : "string",
+  "EmhlCompName" : "string",
+  "EmhlDeptCode" : "string",
+  "EmhlDeptName" : "string",
+  "EmhlIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmhlIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmhlErecIncFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="5d77c9c4-cac9-4e0f-856e-3bb16139df24" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

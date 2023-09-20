@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/syscontact" path="/hcm-rest-api/rest/1/syscontact" id="d7275be1-5e61-4702-95a5-3db10a5d99d8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d7275be1-5e61-4702-95a5-3db10a5d99d8fileName">%2Fhcm-rest-api%2Frest%2F1%2Fsyscontact</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="13d34409-d48a-40e2-b08d-db36243907bc" method="GET">
+    <con:description>Retrieve System Contacts</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>SysContactFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>EmpNoVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Employee Number (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PartnCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Partner Code (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>PartnTypeCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Partner Type Code (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContactCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contact Code (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Email1Var</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Email Address (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>gsyscDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Date to check against create/update dates (SysContactFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ActiveFlagVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contact Active Flag (SysContactFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsyscContactCode" : "string",
+  "GsyscFirstName" : "string",
+  "GsyscMiddleName" : "string",
+  "GsyscLastName" : "string",
+  "GsyscPrefixName" : "string",
+  "GsyscEmpNo" : "string",
+  "GsyscContactDesc" : "string",
+  "GsyscAddCompCode" : "string",
+  "GsyscAddCode" : "string",
+  "GsyscAddLine1" : "string",
+  "GsyscAddLine2" : "string",
+  "GsyscAddLine3" : "string",
+  "GsyscRegionCode" : "string",
+  "GsyscPostalCode" : "string",
+  "GsyscCountry" : "string",
+  "GsyscWorkPhoneNum" : "string",
+  "GsyscHomePhoneNum" : "string",
+  "GsyscMobileNum" : "string",
+  "GsyscPagerNum" : "string",
+  "GsyscFaxNum1" : "string",
+  "GsyscFaxNum2" : "string",
+  "GsyscEmail1" : "string",
+  "GsyscEmail2" : "string",
+  "GsyscWwwSite" : "string",
+  "GsyscClvValueCode1" : "string",
+  "GsyscClvValueCode2" : "string",
+  "GsyscClvValueCode3" : "string",
+  "GsyscClvValueCode4" : "string",
+  "GsyscClvValueCode5" : "string",
+  "GsyscClvValueCode6" : "string",
+  "GsyscPmRoleCode" : "string",
+  "GsyscOther" : "string",
+  "GsyscPrefContactMth" : "string",
+  "GsyscActiveFlag" : "string",
+  "GsyscPartnCode" : "string",
+  "GsyscPartnTypeCode" : "string",
+  "GsyscPrimaryFlag" : "string",
+  "GsyscBidFlag" : "string",
+  "GsyscLastUpdDate" : "YYYY-MM-dd",
+  "GsyscLastUpdUser" : "string",
+  "GsyscCollabUserFlag" : "string",
+  "GsyscCollabUsagePrice" : 0,
+  "GsyscHtmlEmailFlag" : "string",
+  "GsyscIndepContractorFlag" : "string",
+  "GsysAltFaxMethodPrefix" : "string",
+  "GsysAltFaxMethodSuffix" : "string",
+  "GsyscAltFaxMethodFlag" : "string",
+  "GsyscAltFaxMethodPrefix" : "string",
+  "GsyscAltFaxMethodSuffix" : "string",
+  "GsyscHrssRoleCode" : "string",
+  "GsyscSuffixName" : "string",
+  "GpyempTradeCode" : "string",
+  "GpytrdTradeName" : "string",
+  "GpytrdTradeRate" : 0,
+  "GpytrdTradeChargeRate" : 0,
+  "GpytrdTradeBillingRate" : 0,
+  "GpyempCompCode" : "string",
+  "GpyempWrlCode" : "string",
+  "GpyempWrlName" : "string",
+  "GsyscVUuid" : "string",
+  "GsyscIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GsyscIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="89937f04-6fd8-4fd5-82db-6cb5b7516245" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="b7bab9ec-e1ef-44c8-8c06-c88314a6c646" method="POST">
+    <con:description>Create a System Contact</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "GsyscContactCode" : "string",
+  "GsyscFirstName" : "string",
+  "GsyscMiddleName" : "string",
+  "GsyscLastName" : "string",
+  "GsyscPrefixName" : "string",
+  "GsyscEmpNo" : "string",
+  "GsyscContactDesc" : "string",
+  "GsyscAddCompCode" : "string",
+  "GsyscAddCode" : "string",
+  "GsyscAddLine1" : "string",
+  "GsyscAddLine2" : "string",
+  "GsyscAddLine3" : "string",
+  "GsyscRegionCode" : "string",
+  "GsyscPostalCode" : "string",
+  "GsyscCountry" : "string",
+  "GsyscWorkPhoneNum" : "string",
+  "GsyscHomePhoneNum" : "string",
+  "GsyscMobileNum" : "string",
+  "GsyscPagerNum" : "string",
+  "GsyscFaxNum1" : "string",
+  "GsyscFaxNum2" : "string",
+  "GsyscEmail1" : "string",
+  "GsyscEmail2" : "string",
+  "GsyscWwwSite" : "string",
+  "GsyscClvValueCode1" : "string",
+  "GsyscClvValueCode2" : "string",
+  "GsyscClvValueCode3" : "string",
+  "GsyscClvValueCode4" : "string",
+  "GsyscClvValueCode5" : "string",
+  "GsyscClvValueCode6" : "string",
+  "GsyscPmRoleCode" : "string",
+  "GsyscOther" : "string",
+  "GsyscPrefContactMth" : "string",
+  "GsyscActiveFlag" : "string",
+  "GsyscPartnCode" : "string",
+  "GsyscPartnTypeCode" : "string",
+  "GsyscPrimaryFlag" : "string",
+  "GsyscBidFlag" : "string",
+  "GsyscLastUpdDate" : "YYYY-MM-dd",
+  "GsyscLastUpdUser" : "string",
+  "GsyscCollabUserFlag" : "string",
+  "GsyscCollabUsagePrice" : 0,
+  "GsyscHtmlEmailFlag" : "string",
+  "GsyscIndepContractorFlag" : "string",
+  "GsysAltFaxMethodPrefix" : "string",
+  "GsysAltFaxMethodSuffix" : "string",
+  "GsyscAltFaxMethodFlag" : "string",
+  "GsyscAltFaxMethodPrefix" : "string",
+  "GsyscAltFaxMethodSuffix" : "string",
+  "GsyscHrssRoleCode" : "string",
+  "GsyscSuffixName" : "string",
+  "GpyempTradeCode" : "string",
+  "GpytrdTradeName" : "string",
+  "GpytrdTradeRate" : 0,
+  "GpytrdTradeChargeRate" : 0,
+  "GpytrdTradeBillingRate" : 0,
+  "GpyempCompCode" : "string",
+  "GpyempWrlCode" : "string",
+  "GpyempWrlName" : "string",
+  "GsyscVUuid" : "string",
+  "GsyscIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "GsyscIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"GsyscEmpNo":"string","GsyscEmail1":"string","GsyscPartnCode":"string","GsyscPartnTypeCode":"string","GsyscContactCode":"string","GsyscLastUpdDate":"string","GsyscHtmlEmailFlag":"string","GsyscActiveFlag":"string","GsyscVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="87643b4a-1780-4f25-b1a2-25c318f842ab" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsyscEmpNo":"string","GsyscEmail1":"string","GsyscPartnCode":"string","GsyscPartnTypeCode":"string","GsyscContactCode":"string","GsyscLastUpdDate":"string","GsyscHtmlEmailFlag":"string","GsyscActiveFlag":"string","GsyscVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="8637b2f9-9a68-4cef-8361-dd5f81617af0" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"GsyscContactDesc":"the name is bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

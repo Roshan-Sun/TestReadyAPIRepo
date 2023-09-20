@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempsubstatus" path="/hcm-rest-api/rest/1/pyempsubstatus" id="6a73bbf0-bfbf-4ee4-8751-40cd911a6dba" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6a73bbf0-bfbf-4ee4-8751-40cd911a6dbafileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempsubstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="22c4cab5-e0cc-4b8e-bed1-eb341b3adf0b" method="GET">
+    <con:description>Retrieve PY Employee Work Statuses</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmpsCode" : "string",
+  "EmpsDescription" : "string",
+  "EmpsActiveStatus" : "string",
+  "EmpsSysDefined" : "string",
+  "EmpsIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpsIuCreateUser" : "string",
+  "EmpsIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmpsIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="cd4ecca0-1f5d-4ca3-9296-f0515c7081b1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

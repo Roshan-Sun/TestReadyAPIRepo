@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccostcompletedetail/" path="/jc-rest-api/rest/1/jccostcompletedetail/" id="2553f129-a80e-465a-95b1-7b0719759644" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2553f129-a80e-465a-95b1-7b0719759644fileName">%2Fjc-rest-api%2Frest%2F1%2Fjccostcompletedetail%2F</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="71fb88c2-e991-4320-90a6-3faaa80774a5" method="GET">
+    <con:description>Retrieve JC Cost Complete Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByCompCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FccdCompCode" : "string",
+  "FccdContCode" : "string",
+  "FccdYear" : "string",
+  "FccdPer" : "string",
+  "FccdBillCode" : "string",
+  "FccdJobCode" : "string",
+  "FccdPhsCode" : "string",
+  "FccdCatCode" : "string",
+  "FccdDesc" : "string",
+  "FccdWmCode" : "string",
+  "FccdUnitPrice" : 0,
+  "FccdUnit" : 0,
+  "FccdIuCreateDate" : "YYYY-MM-dd",
+  "FccdIuCreateUser" : "string",
+  "FccdIuUpdateDate" : "YYYY-MM-dd",
+  "FccdIuUpdateUser" : "string",
+  "FccdFromDate" : "YYYY-MM-dd",
+  "FccdToDate" : "YYYY-MM-dd",
+  "FccdFromDateDflt" : "string",
+  "FccdToDateDflt" : "string",
+  "FccdLastSessioninfo" : "string",
+  "FccdOrigSessioninfo" : "string",
+  "FccdVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4f2686f5-ad35-4057-9e38-0178331c5ec9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

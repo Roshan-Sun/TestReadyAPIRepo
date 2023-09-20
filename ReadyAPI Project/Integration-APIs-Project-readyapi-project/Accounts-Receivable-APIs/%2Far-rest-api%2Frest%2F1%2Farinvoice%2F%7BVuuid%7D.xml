@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ar-rest-api/rest/1/arinvoice/{Vuuid}" path="/ar-rest-api/rest/1/arinvoice/{Vuuid}" id="c09e4b76-6b7d-4c9a-8fb4-83bb0b327a83" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c09e4b76-6b7d-4c9a-8fb4-83bb0b327a83fileName">%2Far-rest-api%2Frest%2F1%2Farinvoice%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="9a5ac3c1-7a1e-472c-b1c3-86b99afe0a62" method="GET">
+    <con:description>Retrieve a Specific AR Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InvCompCode" : "string",
+  "InvNum" : "string",
+  "InvOrdNum" : "string",
+  "InvBchNum" : 0,
+  "InvRlsBchNum" : 0,
+  "InvStatusCode" : "string",
+  "InvPostDate" : "YYYY-MM-dd",
+  "InvDate" : "YYYY-MM-dd",
+  "InvDueDate" : "YYYY-MM-dd",
+  "InvDueDateUpd" : "YYYY-MM-dd",
+  "InvDueDays" : 0,
+  "InvDiscDate" : "YYYY-MM-dd",
+  "InvDiscDateUpd" : "YYYY-MM-dd",
+  "InvDiscDays" : 0,
+  "InvStmtDate" : "YYYY-MM-dd",
+  "InvRevDate" : "YYYY-MM-dd",
+  "InvApprovedDate" : "YYYY-MM-dd",
+  "InvTranCode" : "string",
+  "InvCustCode" : "string",
+  "InvJobCode" : "string",
+  "InvPlantCode" : "string",
+  "InvDisputedFlag" : "string",
+  "InvDelinqCode" : "string",
+  "InvOePrtCode" : "string",
+  "InvDeptCode" : "string",
+  "InvCashAccCode" : "string",
+  "InvCurrCode" : "string",
+  "InvCurFactorNum" : 0,
+  "InvTermCode" : "string",
+  "InvChargeCode" : "string",
+  "InvDesc1" : "string",
+  "InvDesc2" : "string",
+  "InvCollCode" : "string",
+  "InvSman1Code" : "string",
+  "InvSman2Code" : "string",
+  "InvSman3Code" : "string",
+  "InvSman1CommPc" : 0,
+  "InvSman2CommPc" : 0,
+  "InvSman3CommPc" : 0,
+  "InvSman1CommAmt" : 0,
+  "InvSman2CommAmt" : 0,
+  "InvSman3CommAmt" : 0,
+  "InvTax1Code" : "string",
+  "InvTax1Name" : "string",
+  "InvTax2Code" : "string",
+  "InvTax2Name" : "string",
+  "InvTax3Code" : "string",
+  "InvTax3Name" : "string",
+  "InvTermPc" : 0,
+  "InvHldbkPc" : 0,
+  "InvTermPcUpd" : 0,
+  "InvHldbkPcUpd" : 0,
+  "InvTaxDiscCode" : "string",
+  "InvFrtDiscCode" : "string",
+  "InvInsDiscCode" : "string",
+  "InvMiscDiscCode" : "string",
+  "InvSalesAmt" : 0,
+  "InvSdiscPercent" : 0,
+  "InvSdiscAmt" : 0,
+  "InvNodiscAmt" : 0,
+  "InvDiscAmt" : 0,
+  "InvHldbkAmt" : 0,
+  "InvDiscAmtUpd" : 0,
+  "InvHldbkAmtUpd" : 0,
+  "InvFrtAmt" : 0,
+  "InvMiscAmt" : 0,
+  "InvInsAmt" : 0,
+  "InvArAmt" : 0,
+  "InvTax1Amt" : 0,
+  "InvTax1HldbkAmt" : 0,
+  "InvTax1HldbkAmtUpd" : 0,
+  "InvTax2Amt" : 0,
+  "InvTax3Amt" : 0,
+  "InvDetTaxAmt" : 0,
+  "InvOutstandAmt" : 0,
+  "InvOrigHldbkAmt" : 0,
+  "InvOrigTax1HldbkAmt" : 0,
+  "InvRlsWAmt" : 0,
+  "InvRlsInvNum" : "string",
+  "InvRlsAmt" : 0,
+  "InvRlsAmtUpd" : 0,
+  "InvRlsTaxAmt" : 0,
+  "InvRlsTax1Amt" : 0,
+  "InvRlsTax1AmtUpd" : 0,
+  "InvDiscTakenAmt" : 0,
+  "InvWoAmt" : 0,
+  "InvAllowAmt" : 0,
+  "InvPaidAmt" : 0,
+  "InvLastPayAmt" : 0,
+  "InvFinAmt" : 0,
+  "InvHldbkPaidAmt" : 0,
+  "InvCreditAmt" : 0,
+  "InvCreditHldbkAmt" : 0,
+  "InvCreditTax1HldbkAmt" : 0,
+  "InvContCode" : "string",
+  "InvDrawNum" : 0,
+  "InvRlsDate" : "YYYY-MM-dd",
+  "InvSerCode" : "string",
+  "InvImageFilename" : "string",
+  "InvSourceCode" : "string",
+  "InvAverageDaysToPay" : 0,
+  "InvAddTypeCode" : "string",
+  "InvTotalRlsTaxAmt" : 0,
+  "InvTax1TaxableFlag" : "string",
+  "InvTax2TaxableFlag" : "string",
+  "InvTax3TaxableFlag" : "string",
+  "InvRevBchNum" : 0,
+  "InvOriginalDueDate" : "YYYY-MM-dd",
+  "InvOriginalDesc1" : "string",
+  "InvOriginalDueDateUpdDate" : "YYYY-MM-dd",
+  "InvOriginalDueDateUpdUser" : "string",
+  "InvOriginalDesc1UpdDate" : "YYYY-MM-dd",
+  "InvOriginalDesc1UpdUser" : "string",
+  "InvReasonDueDateChange" : "string",
+  "InvSeparateBillingRefCode" : "string",
+  "InvNetAmt" : 0,
+  "InvNetAmtUpd" : 0,
+  "InvTaxes" : 0,
+  "InvOtherTaxes" : 0,
+  "InvCRlsAmt" : 0,
+  "InvCRlsTaxAmt" : 0,
+  "InvTax1TaxableAmt" : 0,
+  "InvTax2TaxableAmt" : 0,
+  "InvTax3TaxableAmt" : 0,
+  "InvDetailsExistFlag" : "string",
+  "InvDistributionExistFlag" : "string",
+  "InvInvoiceNewFlag" : "string",
+  "InvAcctDescription" : "string",
+  "InvArLessHldbkAmt" : 0,
+  "InvIuCreateDate" : "YYYY-MM-dd",
+  "InvIuCreateUser" : "string",
+  "InvIuUpdateDate" : "YYYY-MM-dd",
+  "InvIuUpdateUser" : "string",
+  "InvVUuid" : "string",
+  "InvCostCode" : "string",
+  "InvCatCode" : "string",
+  "InvBchPstFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="db48672c-6f6d-4b26-bf6f-f5575161e0a5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="42da2df8-4c0f-481a-b100-62db1cb265ef" method="DELETE">
+    <con:description>Delete a Specific AR Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="9690c1f9-b9fa-4ade-95b1-ceb2c195f534" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="0e6f1f88-f40c-4646-9cc1-982613e0a56c" method="PATCH">
+    <con:description>Update AR Invoice</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row Id</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "InvCompCode" : "string",
+  "InvNum" : "string",
+  "InvOrdNum" : "string",
+  "InvBchNum" : 0,
+  "InvRlsBchNum" : 0,
+  "InvStatusCode" : "string",
+  "InvPostDate" : "YYYY-MM-dd",
+  "InvDate" : "YYYY-MM-dd",
+  "InvDueDate" : "YYYY-MM-dd",
+  "InvDueDateUpd" : "YYYY-MM-dd",
+  "InvDueDays" : 0,
+  "InvDiscDate" : "YYYY-MM-dd",
+  "InvDiscDateUpd" : "YYYY-MM-dd",
+  "InvDiscDays" : 0,
+  "InvStmtDate" : "YYYY-MM-dd",
+  "InvRevDate" : "YYYY-MM-dd",
+  "InvApprovedDate" : "YYYY-MM-dd",
+  "InvTranCode" : "string",
+  "InvCustCode" : "string",
+  "InvJobCode" : "string",
+  "InvPlantCode" : "string",
+  "InvDisputedFlag" : "string",
+  "InvDelinqCode" : "string",
+  "InvOePrtCode" : "string",
+  "InvDeptCode" : "string",
+  "InvCashAccCode" : "string",
+  "InvCurrCode" : "string",
+  "InvCurFactorNum" : 0,
+  "InvTermCode" : "string",
+  "InvChargeCode" : "string",
+  "InvDesc1" : "string",
+  "InvDesc2" : "string",
+  "InvCollCode" : "string",
+  "InvSman1Code" : "string",
+  "InvSman2Code" : "string",
+  "InvSman3Code" : "string",
+  "InvSman1CommPc" : 0,
+  "InvSman2CommPc" : 0,
+  "InvSman3CommPc" : 0,
+  "InvSman1CommAmt" : 0,
+  "InvSman2CommAmt" : 0,
+  "InvSman3CommAmt" : 0,
+  "InvTax1Code" : "string",
+  "InvTax1Name" : "string",
+  "InvTax2Code" : "string",
+  "InvTax2Name" : "string",
+  "InvTax3Code" : "string",
+  "InvTax3Name" : "string",
+  "InvTermPc" : 0,
+  "InvHldbkPc" : 0,
+  "InvTermPcUpd" : 0,
+  "InvHldbkPcUpd" : 0,
+  "InvTaxDiscCode" : "string",
+  "InvFrtDiscCode" : "string",
+  "InvInsDiscCode" : "string",
+  "InvMiscDiscCode" : "string",
+  "InvSalesAmt" : 0,
+  "InvSdiscPercent" : 0,
+  "InvSdiscAmt" : 0,
+  "InvNodiscAmt" : 0,
+  "InvDiscAmt" : 0,
+  "InvHldbkAmt" : 0,
+  "InvDiscAmtUpd" : 0,
+  "InvHldbkAmtUpd" : 0,
+  "InvFrtAmt" : 0,
+  "InvMiscAmt" : 0,
+  "InvInsAmt" : 0,
+  "InvArAmt" : 0,
+  "InvTax1Amt" : 0,
+  "InvTax1HldbkAmt" : 0,
+  "InvTax1HldbkAmtUpd" : 0,
+  "InvTax2Amt" : 0,
+  "InvTax3Amt" : 0,
+  "InvDetTaxAmt" : 0,
+  "InvOutstandAmt" : 0,
+  "InvOrigHldbkAmt" : 0,
+  "InvOrigTax1HldbkAmt" : 0,
+  "InvRlsWAmt" : 0,
+  "InvRlsInvNum" : "string",
+  "InvRlsAmt" : 0,
+  "InvRlsAmtUpd" : 0,
+  "InvRlsTaxAmt" : 0,
+  "InvRlsTax1Amt" : 0,
+  "InvRlsTax1AmtUpd" : 0,
+  "InvDiscTakenAmt" : 0,
+  "InvWoAmt" : 0,
+  "InvAllowAmt" : 0,
+  "InvPaidAmt" : 0,
+  "InvLastPayAmt" : 0,
+  "InvFinAmt" : 0,
+  "InvHldbkPaidAmt" : 0,
+  "InvCreditAmt" : 0,
+  "InvCreditHldbkAmt" : 0,
+  "InvCreditTax1HldbkAmt" : 0,
+  "InvContCode" : "string",
+  "InvDrawNum" : 0,
+  "InvRlsDate" : "YYYY-MM-dd",
+  "InvSerCode" : "string",
+  "InvImageFilename" : "string",
+  "InvSourceCode" : "string",
+  "InvAverageDaysToPay" : 0,
+  "InvAddTypeCode" : "string",
+  "InvTotalRlsTaxAmt" : 0,
+  "InvTax1TaxableFlag" : "string",
+  "InvTax2TaxableFlag" : "string",
+  "InvTax3TaxableFlag" : "string",
+  "InvRevBchNum" : 0,
+  "InvOriginalDueDate" : "YYYY-MM-dd",
+  "InvOriginalDesc1" : "string",
+  "InvOriginalDueDateUpdDate" : "YYYY-MM-dd",
+  "InvOriginalDueDateUpdUser" : "string",
+  "InvOriginalDesc1UpdDate" : "YYYY-MM-dd",
+  "InvOriginalDesc1UpdUser" : "string",
+  "InvReasonDueDateChange" : "string",
+  "InvSeparateBillingRefCode" : "string",
+  "InvNetAmt" : 0,
+  "InvNetAmtUpd" : 0,
+  "InvTaxes" : 0,
+  "InvOtherTaxes" : 0,
+  "InvCRlsAmt" : 0,
+  "InvCRlsTaxAmt" : 0,
+  "InvTax1TaxableAmt" : 0,
+  "InvTax2TaxableAmt" : 0,
+  "InvTax3TaxableAmt" : 0,
+  "InvDetailsExistFlag" : "string",
+  "InvDistributionExistFlag" : "string",
+  "InvInvoiceNewFlag" : "string",
+  "InvAcctDescription" : "string",
+  "InvArLessHldbkAmt" : 0,
+  "InvIuCreateDate" : "YYYY-MM-dd",
+  "InvIuCreateUser" : "string",
+  "InvIuUpdateDate" : "YYYY-MM-dd",
+  "InvIuUpdateUser" : "string",
+  "InvVUuid" : "string",
+  "InvCostCode" : "string",
+  "InvCatCode" : "string",
+  "InvBchPstFlag" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"InvCompCode":"string","InvCustCode":"string","InvNum":"string","InvSalesAmt":"float","InvDate":"string","InvDueDate":"string","InvDiscDate":"string","InvCurrCode":"string","InvCollCode":"string","InvChargeCode":"string","InvVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="ab5cde58-d47e-488a-8fe3-ce52dedaca06" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"InvCompCode":"string","InvCustCode":"string","InvNum":"string","InvSalesAmt":"float","InvDate":"string","InvDueDate":"string","InvDiscDate":"string","InvCurrCode":"string","InvCollCode":"string","InvChargeCode":"string","InvVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

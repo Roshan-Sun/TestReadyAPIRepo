@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmprojpartner/{Vuuid}" path="/pm-rest-api/rest/1/pmprojpartner/{Vuuid}" id="a2620ca6-5a0b-4477-88d7-bfeb42c49048" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a2620ca6-5a0b-4477-88d7-bfeb42c49048fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojpartner%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d95d9c86-790c-4ed4-a0cd-4b5d98604886" method="GET">
+    <con:description>Retrieve a Specific PM Project Partner</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmppCompCode" : "string",
+  "PmppProjCode" : "string",
+  "PmppPartnCode" : "string",
+  "PmppPartnTypeCode" : "string",
+  "PmppAbbrevPartnCode" : "string",
+  "PmppPartnName" : "string",
+  "PmppAdd1" : "string",
+  "PmppAdd2" : "string",
+  "PmppAdd3" : "string",
+  "PmppRegionCode" : "string",
+  "PmppRegionName" : "string",
+  "PmppCountry" : "string",
+  "PmppPostalCode" : "string",
+  "PmppDirGroupCode" : "string",
+  "PmppDirGroupName" : "string",
+  "PmppSortOrder" : 0,
+  "PmppClvValueCode1" : "string",
+  "PmppClvValueCode2" : "string",
+  "PmppClvValueCode3" : "string",
+  "PmppClvValueCode4" : "string",
+  "PmppClvValueCode5" : "string",
+  "PmppClvValueCode6" : "string",
+  "PmppVUuid" : "string",
+  "PmppAddCode" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e171e267-1b3b-497e-a416-c0454d60ada6" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="dee4c968-ed0f-4ec4-b314-15c6093b4716" method="PATCH">
+    <con:description>Update a Specific PM Project Partner</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmppCompCode" : "string",
+  "PmppProjCode" : "string",
+  "PmppPartnCode" : "string",
+  "PmppPartnTypeCode" : "string",
+  "PmppAbbrevPartnCode" : "string",
+  "PmppPartnName" : "string",
+  "PmppAdd1" : "string",
+  "PmppAdd2" : "string",
+  "PmppAdd3" : "string",
+  "PmppRegionCode" : "string",
+  "PmppRegionName" : "string",
+  "PmppCountry" : "string",
+  "PmppPostalCode" : "string",
+  "PmppDirGroupCode" : "string",
+  "PmppDirGroupName" : "string",
+  "PmppSortOrder" : 0,
+  "PmppClvValueCode1" : "string",
+  "PmppClvValueCode2" : "string",
+  "PmppClvValueCode3" : "string",
+  "PmppClvValueCode4" : "string",
+  "PmppClvValueCode5" : "string",
+  "PmppClvValueCode6" : "string",
+  "PmppVUuid" : "string",
+  "PmppAddCode" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmppCompCode":"string","PmppProjCode":"string","PmppPartnCode":"string","PmppPartnTypeCode":"string","PmppAbbrevPartnCode":"string","PmppPartnName":"string","PmppVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4fa03fd5-63f9-494e-84e9-15105607b78b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmppCompCode":"string","PmppProjCode":"string","PmppPartnCode":"string","PmppPartnTypeCode":"string","PmppAbbrevPartnCode":"string","PmppPartnName":"string","PmppVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f1f0274c-8629-4e50-a8b2-1ec7996aa6ad" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmppPartnName":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

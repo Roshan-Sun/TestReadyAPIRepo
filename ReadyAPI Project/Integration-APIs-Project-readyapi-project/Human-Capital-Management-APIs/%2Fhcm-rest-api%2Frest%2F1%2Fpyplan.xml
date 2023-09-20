@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyplan" path="/hcm-rest-api/rest/1/pyplan" id="45d0107a-597d-4658-83f9-cb9d6a641213" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="45d0107a-597d-4658-83f9-cb9d6a641213fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyplan</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="5879f6d6-69cb-4205-ac7e-e0ba875557e1" method="GET">
+    <con:description>Retrieve PY Plans</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to be checked for</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PlnCode" : "string",
+  "PlnDescription" : "string",
+  "PlnShortDesc" : "string",
+  "PlnUser" : "string",
+  "PlnLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlnIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlnIuCreateUser" : "string",
+  "PlnIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PlnIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="e201d4fe-f201-4b21-a122-f3b0e9ca78a0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

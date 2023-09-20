@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pyempben/{Vuuid}" path="/hcm-rest-api/rest/1/pyempben/{Vuuid}" id="43364fe2-3f70-4562-8031-75188774a8ff" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="43364fe2-3f70-4562-8031-75188774a8fffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempben%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c3dfd046-d88a-45f4-a395-bf4d9cf321b7" method="GET">
+    <con:description>Retrieve a Specific PY Employee Benefit</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PycCompCode" : "string",
+  "PycPrnCode" : "string",
+  "PycYear" : 0,
+  "PycPprPeriod" : 0,
+  "PycEmpNo" : "string",
+  "PycPygCode" : "string",
+  "PycTranType" : "string",
+  "PycBankCode" : "string",
+  "PycBranchCode" : "string",
+  "PycBankAccNum" : "string",
+  "PycEmpBankCode" : "string",
+  "PycEmpBranchCode" : "string",
+  "PycEmpBankAccNum" : "string",
+  "PycCheckNum" : 0,
+  "PycCheckDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycCheckVoidDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycRecFlag" : "string",
+  "PycStatementDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycUser" : "string",
+  "PycLastUpdDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycAchTranCode" : "string",
+  "PycManualChkPrint" : "string",
+  "PycPrintCheckOnly" : "string",
+  "PycThirdPartySickPay" : "string",
+  "PycAssignedCheckNum" : 0,
+  "PycCklocCode" : "string",
+  "PycCklocPygCode" : "string",
+  "PycHomeCompCode" : "string",
+  "PycHomeDeptCode" : "string",
+  "PycIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuCreateUser" : "string",
+  "PycIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PycIuUpdateUser" : "string",
+  "PycVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="efa547f7-e7d7-46a4-b5d0-adf70410be7a" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="ed2f7061-adc0-4f3b-856e-9b365a72c791" method="PATCH">
+    <con:description>Update a Specific PY Employee Benefit</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmbCompCode" : "string",
+  "EmbPrnCode" : "string",
+  "EmbEmpNo" : "string",
+  "EmbBenCode" : "string",
+  "EmbBenName" : "string",
+  "EmbStartDate" : "YYYY-MM-dd",
+  "EmbEffStartDate" : "YYYY-MM-dd",
+  "EmbEndDate" : "YYYY-MM-dd",
+  "EmbBenAmount" : 0,
+  "EmbUser" : "string",
+  "EmbLastUpdDate" : "YYYY-MM-dd",
+  "EmbBenType" : "string",
+  "EmbBaseCode" : "string",
+  "EmbContrAmt" : 0,
+  "EmbContrMaxAmt" : 0,
+  "EmbBaseAmt" : 0,
+  "EmbPlanCode" : "string",
+  "EmbPlanName" : "string",
+  "EmbPloCode" : "string",
+  "EmbPloName" : "string",
+  "EmbVendor" : "string",
+  "EmbVenName" : "string",
+  "EmbOutOfAreaFlag" : "string",
+  "EmbOthInsurFlag" : "string",
+  "EmbOthInsurVendor" : "string",
+  "EmbOthPolicyNo" : "string",
+  "EmbOthPolicyName" : "string",
+  "EmbOthInsurEffDate" : "YYYY-MM-dd",
+  "EmbComment" : "string",
+  "EmbBenefitSeq" : 0,
+  "EmbVendorAddCode" : "string",
+  "EmbDefaultAmount" : 0,
+  "EmbStartDateDisplay" : "string",
+  "EmbVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmbPloName":"string","EmbPloCode":"string","EmbStartDate":"string","EmbCompCode":"string","EmbPrnCode":"string","EmbBenCode":"string","EmbPlanCode":"string","EmbPlanName":"string","EmbEmpNo":"string","EmbEffStartDate":"string","EmbLastUpdDate":"string","EmbUser":"string","EmbOutOfAreaFlag":"string","EmbOthInsurFlag":"string","EmbVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="912ddb4f-8937-4e07-a867-37a46e6b372b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmbPloName":"string","EmbPloCode":"string","EmbStartDate":"string","EmbCompCode":"string","EmbPrnCode":"string","EmbBenCode":"string","EmbPlanCode":"string","EmbPlanName":"string","EmbEmpNo":"string","EmbEffStartDate":"string","EmbLastUpdDate":"string","EmbUser":"string","EmbOutOfAreaFlag":"string","EmbOthInsurFlag":"string","EmbVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="1990370a-0cc8-4e72-9be1-c9f4c8aca0f5" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmbComment":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

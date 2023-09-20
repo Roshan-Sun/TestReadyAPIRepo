@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cm-rest-api/rest/1/cmmast" path="/cm-rest-api/rest/1/cmmast" id="653eef1f-e2d2-4da8-b2ce-3ecba191e399" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="653eef1f-e2d2-4da8-b2ce-3ecba191e399fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmmast</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="fdaa17f4-5b0f-41f1-96a8-1386e33b9f81" method="GET">
+    <con:description>Retrieve PCI Masters</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCompJob, selectByCompJobCMCode or selectByWorkflow</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectByCompJob and selectByCompJobCMCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (selectByCompJob and selectByCompJobCMCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>typeCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PCI Type code (selectByCompJob, selectByCompJobCMCode and selectByWorkflow)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>cmCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Change code (selectByCompJobCMCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Date to check against create/update dates (selectByWorkflow)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>workflowStatus</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>PCI workflow status (selectByWorkflow)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmmCompCode" : "string",
+  "CmmJobCode" : "string",
+  "CmmCode" : "string",
+  "CmmName" : "string",
+  "CmmTypeCode" : "string",
+  "CmmSrcId" : "string",
+  "CmmRefDate" : "YYYY-MM-dd",
+  "CmmPrepostStatCode" : "string",
+  "CmmImpactDays" : 0,
+  "CmmEffectiveStartDate" : "YYYY-MM-dd",
+  "CmmOwnerChgCode" : "string",
+  "CmmDueToOwnerDate" : "YYYY-MM-dd",
+  "CmmEffectiveEndDate" : "YYYY-MM-dd",
+  "CmmPostContrFlag" : "string",
+  "CmmUpdProjAmtFlag" : "string",
+  "CmmCalcProjAmtMethod" : "string",
+  "CmmClvValueCode1" : "string",
+  "CmmClvValueCode2" : "string",
+  "CmmClvValueCode3" : "string",
+  "CmmClvValueCode4" : "string",
+  "CmmClvValueCode5" : "string",
+  "CmmClvValueCode6" : "string",
+  "CmmUser" : "string",
+  "CmmAprvFlag" : "string",
+  "CmmPendFlag" : "string",
+  "CmmBillMethCode" : "string",
+  "CmmActionCode" : "string",
+  "CmmPostDate" : "YYYY-MM-dd",
+  "CmmStatCode" : "string",
+  "CmmPmObjectCode" : "string",
+  "CmmScopeDesc" : "string",
+  "CmmRfqDueDate" : "YYYY-MM-dd",
+  "CmmRfqProceedFlag" : "string",
+  "CmmRfqLimitAmt" : 0,
+  "CmmClassCode" : "string",
+  "CmmAllowance" : "string",
+  "CmmOwnerAllowanceAmt" : 0,
+  "CmmOrigOwnerAllowanceAmt" : 0,
+  "CmmSourceText" : "string",
+  "CmmReasonText" : "string",
+  "CmmPostDateDummy" : "YYYY-MM-dd",
+  "CmmAutoCalcMarkupFlag" : "string",
+  "CmmBchNum" : 0,
+  "CmmBiditemFlag" : "string",
+  "CmmBillCatCode" : "string",
+  "CmmBillCode" : "string",
+  "CmmBillName" : "string",
+  "CmmBillPhsCode" : "string",
+  "CmmBillRevisAmt" : 0,
+  "CmmChgSentToOwnerDate" : "YYYY-MM-dd",
+  "CmmChgSignedByOwnerDate" : "YYYY-MM-dd",
+  "CmmCtrlJobCode" : "string",
+  "CmmCycleNum" : 0,
+  "CmmFundsourceCode" : "string",
+  "CmmGlobalUpdateDate" : "YYYY-MM-dd",
+  "CmmInvCode" : "string",
+  "CmmLastSessioninfo" : "string",
+  "CmmOrigCmmCode" : "string",
+  "CmmOrigSessioninfo" : "string",
+  "CmmPmFlag" : "string",
+  "CmmPropIssuedToOwnerDate" : "YYYY-MM-dd",
+  "CmmPropSignedByOwnerDate" : "YYYY-MM-dd",
+  "CmmRefCmmCode" : "string",
+  "CmmStatCodeUpdateDate" : "YYYY-MM-dd",
+  "CmmUpdPcComplFlag" : "string",
+  "CmmIuCreateDate" : "YYYY-MM-dd",
+  "CmmIuCreateUser" : "string",
+  "CmmIuUpdateDate" : "YYYY-MM-dd",
+  "CmmIuUpdateUser" : "string",
+  "CmmLumpsumFlag" : "string",
+  "CmmPostingFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CmmVUuid" : "string",
+  "CmmWorkflowStatus" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="eb1b1d6d-bcb3-4206-9f3f-7fb84e5bb972" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="b8beb46e-74dd-43fd-b630-bb58fd1d49e6" method="POST">
+    <con:description>Create a PCI Header</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CmmCompCode" : "string",
+  "CmmJobCode" : "string",
+  "CmmCode" : "string",
+  "CmmName" : "string",
+  "CmmTypeCode" : "string",
+  "CmmSrcId" : "string",
+  "CmmRefDate" : "YYYY-MM-dd",
+  "CmmPrepostStatCode" : "string",
+  "CmmImpactDays" : 0,
+  "CmmEffectiveStartDate" : "YYYY-MM-dd",
+  "CmmOwnerChgCode" : "string",
+  "CmmDueToOwnerDate" : "YYYY-MM-dd",
+  "CmmEffectiveEndDate" : "YYYY-MM-dd",
+  "CmmPostContrFlag" : "string",
+  "CmmUpdProjAmtFlag" : "string",
+  "CmmCalcProjAmtMethod" : "string",
+  "CmmClvValueCode1" : "string",
+  "CmmClvValueCode2" : "string",
+  "CmmClvValueCode3" : "string",
+  "CmmClvValueCode4" : "string",
+  "CmmClvValueCode5" : "string",
+  "CmmClvValueCode6" : "string",
+  "CmmUser" : "string",
+  "CmmAprvFlag" : "string",
+  "CmmPendFlag" : "string",
+  "CmmBillMethCode" : "string",
+  "CmmActionCode" : "string",
+  "CmmPostDate" : "YYYY-MM-dd",
+  "CmmStatCode" : "string",
+  "CmmPmObjectCode" : "string",
+  "CmmScopeDesc" : "string",
+  "CmmRfqDueDate" : "YYYY-MM-dd",
+  "CmmRfqProceedFlag" : "string",
+  "CmmRfqLimitAmt" : 0,
+  "CmmClassCode" : "string",
+  "CmmAllowance" : "string",
+  "CmmOwnerAllowanceAmt" : 0,
+  "CmmOrigOwnerAllowanceAmt" : 0,
+  "CmmSourceText" : "string",
+  "CmmReasonText" : "string",
+  "CmmPostDateDummy" : "YYYY-MM-dd",
+  "CmmAutoCalcMarkupFlag" : "string",
+  "CmmBchNum" : 0,
+  "CmmBiditemFlag" : "string",
+  "CmmBillCatCode" : "string",
+  "CmmBillCode" : "string",
+  "CmmBillName" : "string",
+  "CmmBillPhsCode" : "string",
+  "CmmBillRevisAmt" : 0,
+  "CmmChgSentToOwnerDate" : "YYYY-MM-dd",
+  "CmmChgSignedByOwnerDate" : "YYYY-MM-dd",
+  "CmmCtrlJobCode" : "string",
+  "CmmCycleNum" : 0,
+  "CmmFundsourceCode" : "string",
+  "CmmGlobalUpdateDate" : "YYYY-MM-dd",
+  "CmmInvCode" : "string",
+  "CmmLastSessioninfo" : "string",
+  "CmmOrigCmmCode" : "string",
+  "CmmOrigSessioninfo" : "string",
+  "CmmPmFlag" : "string",
+  "CmmPropIssuedToOwnerDate" : "YYYY-MM-dd",
+  "CmmPropSignedByOwnerDate" : "YYYY-MM-dd",
+  "CmmRefCmmCode" : "string",
+  "CmmStatCodeUpdateDate" : "YYYY-MM-dd",
+  "CmmUpdPcComplFlag" : "string",
+  "CmmIuCreateDate" : "YYYY-MM-dd",
+  "CmmIuCreateUser" : "string",
+  "CmmIuUpdateDate" : "YYYY-MM-dd",
+  "CmmIuUpdateUser" : "string",
+  "CmmLumpsumFlag" : "string",
+  "CmmPostingFlag" : "string",
+  "DiscriminatorCode" : "string",
+  "CmmVUuid" : "string",
+  "CmmWorkflowStatus" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"CmmCompCode":"string","CmmJobCode":"string","CmmTypeCode":"string","CmmCode":"string","CmmName":"string","CmmRefDate":"string","CmmPrepostStatCode":"string","CmmCalcProjAmtMethod":"string","CmmVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="1e20f282-9f49-458e-8576-d63a8db7c034" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmmCompCode":"string","CmmJobCode":"string","CmmTypeCode":"string","CmmCode":"string","CmmName":"string","CmmRefDate":"string","CmmPrepostStatCode":"string","CmmCalcProjAmtMethod":"string","CmmVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="90ba7448-0586-4469-9f48-676e98fad24b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"CmmWorkflowStatus":"REJECTED"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmmeetingitemstatus" path="/pm-rest-api/rest/1/pmmeetingitemstatus" id="c084a05c-5412-4e6e-8607-7e09c0a467d8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c084a05c-5412-4e6e-8607-7e09c0a467d8fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingitemstatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3e0fa930-0593-4f75-9228-77277aa10cfb" method="GET">
+    <con:description>Retrieve PM Meeting Item Statuses</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmisItemStatus" : "string",
+  "PmmisDesc" : "string",
+  "PmmisClassCode" : "string",
+  "PmmisIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmisIuCreateUser" : "string",
+  "PmmisIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmisIuUpdateUser" : "string",
+  "PmmisLastSessioninfo" : "string",
+  "PmmisOrigSessioninfo" : "string",
+  "PmmisVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="21d8b18a-3959-4fa8-b8cb-567d7daffd57" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="3b3d5b30-8122-49a8-a000-fceebd6a843f" method="POST">
+    <con:description>Create a PM Meeting Item Status</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmmisItemStatus" : "string",
+  "PmmisDesc" : "string",
+  "PmmisClassCode" : "string",
+  "PmmisIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmisIuCreateUser" : "string",
+  "PmmisIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmmisIuUpdateUser" : "string",
+  "PmmisLastSessioninfo" : "string",
+  "PmmisOrigSessioninfo" : "string",
+  "PmmisVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmmisClassCode":"string","PmmisDesc":"string","PmmisItemStatus":"string","PmmisVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="88c72a27-35d6-422e-8fca-18c9ec0a254f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmisClassCode":"string","PmmisDesc":"string","PmmisItemStatus":"string","PmmisVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="65bf2e70-7614-40bd-ae2d-da6dc77f9140" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmmisDesc":"New - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmtransmittal/{Vuuid}" path="/pm-rest-api/rest/1/pmtransmittal/{Vuuid}" id="7fdbd98d-0af1-4045-95c1-48cb2358c79c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7fdbd98d-0af1-4045-95c1-48cb2358c79cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmtransmittal%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3e5f913d-5969-4ddf-9210-70c84919df0b" method="GET">
+    <con:description>Retrieve a Specific PM Transmittal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmtrnCompCode" : "string",
+  "PmtrnProjCode" : "string",
+  "PmtrnTrnsmId" : "string",
+  "PmtrnDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnToPartnCode" : "string",
+  "PmtrnToPartnTypeCode" : "string",
+  "PmtrnToContactCode" : "string",
+  "PmtrnFromPartnCode" : "string",
+  "PmtrnFromPartnTypeCode" : "string",
+  "PmtrnFromContactCode" : "string",
+  "PmtrnContReDesc" : "string",
+  "PmtrnContRefDesc1" : "string",
+  "PmtrnContRefDesc2" : "string",
+  "PmtrnViaAttachedFlag" : "string",
+  "PmtrnCoverViaFlag" : "string",
+  "PmtrnCoverViaDesc" : "string",
+  "PmtrnContDrawingFlag" : "string",
+  "PmtrnContPrintsFlag" : "string",
+  "PmtrnContPlansFlag" : "string",
+  "PmtrnContSpecsFlag" : "string",
+  "PmtrnContLetterFlag" : "string",
+  "PmtrnContChgorderFlag" : "string",
+  "PmtrnContSamplesFlag" : "string",
+  "PmtrnContOtherFlag" : "string",
+  "PmtrnContOtherContent" : "string",
+  "PmtrnActApprovalFlag" : "string",
+  "PmtrnActFyuFlag" : "string",
+  "PmtrnActReqFlag" : "string",
+  "PmtrnActDueFlag" : "string",
+  "PmtrnActDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnActReviewFlag" : "string",
+  "PmtrnActAppsFlag" : "string",
+  "PmtrnActAppnFlag" : "string",
+  "PmtrnActRetLoanFlag" : "string",
+  "PmtrnActResubmitFlag" : "string",
+  "PmtrnActSubmitFlag" : "string",
+  "PmtrnActReturnedFlag" : "string",
+  "PmtrnActRetCorrFlag" : "string",
+  "PmtrnActNote" : "string",
+  "PmtrnAddToPartnName" : "string",
+  "PmtrnAddToContactName" : "string",
+  "PmtrnAddToLine1" : "string",
+  "PmtrnAddToLine2" : "string",
+  "PmtrnAddToLine3" : "string",
+  "PmtrnToRegionCode" : "string",
+  "PmtrnToPostalCode" : "string",
+  "PmtrnToCountry" : "string",
+  "PmtrnAddFromPartnName" : "string",
+  "PmtrnAddFromContactName" : "string",
+  "PmtrnAddFromLine1" : "string",
+  "PmtrnAddFromLine2" : "string",
+  "PmtrnAddFromLine3" : "string",
+  "PmtrnFromRegionCode" : "string",
+  "PmtrnFromPostalCode" : "string",
+  "PmtrnFromCountry" : "string",
+  "PmtrnActOtherFlag" : "string",
+  "PmtrnActOtherContent" : "string",
+  "PmtrnRecordStatus" : "string",
+  "PmtrnReceivedFlag" : "string",
+  "PmtrnActionCode" : "string",
+  "PmtrnCmocnCode" : "string",
+  "PmtrnIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnIuCreateUser" : "string",
+  "PmtrnIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnIuUpdateUser" : "string",
+  "PmtrnToFreeFormFlag" : "string",
+  "PmtrnContSubmittalFlag" : "string",
+  "PmtrnClvValueCode1" : "string",
+  "PmtrnClvValueCode2" : "string",
+  "PmtrnClvValueCode3" : "string",
+  "PmtrnClvValueCode4" : "string",
+  "PmtrnClvValueCode5" : "string",
+  "PmtrnClvValueCode6" : "string",
+  "PmtrnLastSessioninfo" : "string",
+  "PmtrnOrigSessioninfo" : "string",
+  "DiscriminatorCode" : "string",
+  "PmtrnVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="20328c8c-2fc3-4160-899c-0ed3bd7b9f65" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="2aee4724-80ee-4823-bcc5-c72e2066cc14" method="DELETE">
+    <con:description>Delete a Specific PM Transmittal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="472112ff-f32d-4839-bb15-112f63be8e6f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="8cc5977a-ac2a-466f-a69b-26de5eb28074" method="PATCH">
+    <con:description>Update a Specific PM Transmittal</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmtrnCompCode" : "string",
+  "PmtrnProjCode" : "string",
+  "PmtrnTrnsmId" : "string",
+  "PmtrnDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnToPartnCode" : "string",
+  "PmtrnToPartnTypeCode" : "string",
+  "PmtrnToContactCode" : "string",
+  "PmtrnFromPartnCode" : "string",
+  "PmtrnFromPartnTypeCode" : "string",
+  "PmtrnFromContactCode" : "string",
+  "PmtrnContReDesc" : "string",
+  "PmtrnContRefDesc1" : "string",
+  "PmtrnContRefDesc2" : "string",
+  "PmtrnViaAttachedFlag" : "string",
+  "PmtrnCoverViaFlag" : "string",
+  "PmtrnCoverViaDesc" : "string",
+  "PmtrnContDrawingFlag" : "string",
+  "PmtrnContPrintsFlag" : "string",
+  "PmtrnContPlansFlag" : "string",
+  "PmtrnContSpecsFlag" : "string",
+  "PmtrnContLetterFlag" : "string",
+  "PmtrnContChgorderFlag" : "string",
+  "PmtrnContSamplesFlag" : "string",
+  "PmtrnContOtherFlag" : "string",
+  "PmtrnContOtherContent" : "string",
+  "PmtrnActApprovalFlag" : "string",
+  "PmtrnActFyuFlag" : "string",
+  "PmtrnActReqFlag" : "string",
+  "PmtrnActDueFlag" : "string",
+  "PmtrnActDueDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnActReviewFlag" : "string",
+  "PmtrnActAppsFlag" : "string",
+  "PmtrnActAppnFlag" : "string",
+  "PmtrnActRetLoanFlag" : "string",
+  "PmtrnActResubmitFlag" : "string",
+  "PmtrnActSubmitFlag" : "string",
+  "PmtrnActReturnedFlag" : "string",
+  "PmtrnActRetCorrFlag" : "string",
+  "PmtrnActNote" : "string",
+  "PmtrnAddToPartnName" : "string",
+  "PmtrnAddToContactName" : "string",
+  "PmtrnAddToLine1" : "string",
+  "PmtrnAddToLine2" : "string",
+  "PmtrnAddToLine3" : "string",
+  "PmtrnToRegionCode" : "string",
+  "PmtrnToPostalCode" : "string",
+  "PmtrnToCountry" : "string",
+  "PmtrnAddFromPartnName" : "string",
+  "PmtrnAddFromContactName" : "string",
+  "PmtrnAddFromLine1" : "string",
+  "PmtrnAddFromLine2" : "string",
+  "PmtrnAddFromLine3" : "string",
+  "PmtrnFromRegionCode" : "string",
+  "PmtrnFromPostalCode" : "string",
+  "PmtrnFromCountry" : "string",
+  "PmtrnActOtherFlag" : "string",
+  "PmtrnActOtherContent" : "string",
+  "PmtrnRecordStatus" : "string",
+  "PmtrnReceivedFlag" : "string",
+  "PmtrnActionCode" : "string",
+  "PmtrnCmocnCode" : "string",
+  "PmtrnIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnIuCreateUser" : "string",
+  "PmtrnIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmtrnIuUpdateUser" : "string",
+  "PmtrnToFreeFormFlag" : "string",
+  "PmtrnContSubmittalFlag" : "string",
+  "PmtrnClvValueCode1" : "string",
+  "PmtrnClvValueCode2" : "string",
+  "PmtrnClvValueCode3" : "string",
+  "PmtrnClvValueCode4" : "string",
+  "PmtrnClvValueCode5" : "string",
+  "PmtrnClvValueCode6" : "string",
+  "PmtrnLastSessioninfo" : "string",
+  "PmtrnOrigSessioninfo" : "string",
+  "DiscriminatorCode" : "string",
+  "PmtrnVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmtrnCompCode":"string","PmtrnProjCode":"string","PmtrnTrnsmId":"string","PmtrnVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="dca368e0-057c-4e0c-8a67-0fc415068cff" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmtrnCompCode":"string","PmtrnProjCode":"string","PmtrnTrnsmId":"string","PmtrnVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="2c72b811-7f3b-4639-9b7d-4dda1bc20633" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmtrnContReDesc":"testing123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

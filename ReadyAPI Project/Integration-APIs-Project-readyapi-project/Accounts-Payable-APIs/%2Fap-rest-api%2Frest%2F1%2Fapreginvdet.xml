@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ap-rest-api/rest/1/apreginvdet" path="/ap-rest-api/rest/1/apreginvdet" id="80e7e240-c87f-4d89-b68c-cfcf04b8c439" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="80e7e240-c87f-4d89-b68c-cfcf04b8c439fileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b2c85bad-7b02-4f8e-9323-6726bacfdaef" method="GET">
+    <con:description>All AP Registered Invoice Details</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ApridLineNum" : 0,
+  "ApridTax1Code" : "string",
+  "ApridTax1TaxableFlag" : "string",
+  "ApridTax2Code" : "string",
+  "ApridTax2TaxableFlag" : "string",
+  "ApridTax3Code" : "string",
+  "ApridTax3TaxableFlag" : "string",
+  "ApridDesc" : "string",
+  "ApridUserTypeCode" : "string",
+  "ApridUserField1" : "string",
+  "ApridUserField2" : "string",
+  "ApridUserField3" : "string",
+  "ApridUserField4" : "string",
+  "ApridUserField5" : "string",
+  "ApridUserField6" : "string",
+  "ApridUserField7" : "string",
+  "ApridUserField8" : "string",
+  "ApridWbsvCode1" : "string",
+  "ApridWbsvCode2" : "string",
+  "ApridWbsvCode3" : "string",
+  "ApridWbsvCode4" : "string",
+  "ApridDistTypeCode" : "string",
+  "ApridSrcCompCode" : "string",
+  "ApridDeptCode" : "string",
+  "ApridAccCode" : "string",
+  "ApridEqpCode" : "string",
+  "ApridComponCode" : "string",
+  "ApridTrancodeCode" : "string",
+  "ApridJobCode" : "string",
+  "ApridJobCtrlCode" : "string",
+  "ApridPhsCode" : "string",
+  "ApridPhsCtrlCode" : "string",
+  "ApridCatCode" : "string",
+  "ApridCatCtrlCode" : "string",
+  "ApridWoCode" : "string",
+  "ApridWDetailCode" : "string",
+  "ApridItemClassCode" : "string",
+  "ApridItemCode" : "string",
+  "ApridItemTypeCode" : "string",
+  "ApridLocCode" : "string",
+  "ApridWmCode" : "string",
+  "ApridApplCode" : "string",
+  "ApridExpCode" : "string",
+  "ApridPoLineNum" : 0,
+  "ApridPoNum" : "string",
+  "ApridPoReleaseNum" : 0,
+  "ApridTavCode1" : "string",
+  "ApridTavCode2" : "string",
+  "ApridTavCode3" : "string",
+  "ApridTavCode4" : "string",
+  "ApridWitmLineNumber" : 0,
+  "ApridCalledFromAppCode" : "string",
+  "ApridUserFieldEdtFlag5" : "string",
+  "ApridUserFieldEdtFlag6" : "string",
+  "ApridUserFieldEdtFlag7" : "string",
+  "ApridUserFieldEdtFlag8" : "string",
+  "ApridUserFieldName5" : "string",
+  "ApridUserFieldName6" : "string",
+  "ApridUserFieldName7" : "string",
+  "ApridUserFieldName8" : "string",
+  "ApridWbsSetupFlag" : "string",
+  "ApridApriVUuid" : "string",
+  "ApridVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0ae65dcd-c1fc-405d-9162-6f863f4184b7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="1a3d73ca-a154-470d-99dd-5b06370a9d54" method="POST">
+    <con:description>Create AP Registered Invoice Detail Line</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ApridLineNum" : 0,
+  "ApridTax1Code" : "string",
+  "ApridTax1TaxableFlag" : "string",
+  "ApridTax2Code" : "string",
+  "ApridTax2TaxableFlag" : "string",
+  "ApridTax3Code" : "string",
+  "ApridTax3TaxableFlag" : "string",
+  "ApridDesc" : "string",
+  "ApridUserTypeCode" : "string",
+  "ApridUserField1" : "string",
+  "ApridUserField2" : "string",
+  "ApridUserField3" : "string",
+  "ApridUserField4" : "string",
+  "ApridUserField5" : "string",
+  "ApridUserField6" : "string",
+  "ApridUserField7" : "string",
+  "ApridUserField8" : "string",
+  "ApridWbsvCode1" : "string",
+  "ApridWbsvCode2" : "string",
+  "ApridWbsvCode3" : "string",
+  "ApridWbsvCode4" : "string",
+  "ApridDistTypeCode" : "string",
+  "ApridSrcCompCode" : "string",
+  "ApridDeptCode" : "string",
+  "ApridAccCode" : "string",
+  "ApridEqpCode" : "string",
+  "ApridComponCode" : "string",
+  "ApridTrancodeCode" : "string",
+  "ApridJobCode" : "string",
+  "ApridJobCtrlCode" : "string",
+  "ApridPhsCode" : "string",
+  "ApridPhsCtrlCode" : "string",
+  "ApridCatCode" : "string",
+  "ApridCatCtrlCode" : "string",
+  "ApridWoCode" : "string",
+  "ApridWDetailCode" : "string",
+  "ApridItemClassCode" : "string",
+  "ApridItemCode" : "string",
+  "ApridItemTypeCode" : "string",
+  "ApridLocCode" : "string",
+  "ApridWmCode" : "string",
+  "ApridApplCode" : "string",
+  "ApridExpCode" : "string",
+  "ApridPoLineNum" : 0,
+  "ApridPoNum" : "string",
+  "ApridPoReleaseNum" : 0,
+  "ApridTavCode1" : "string",
+  "ApridTavCode2" : "string",
+  "ApridTavCode3" : "string",
+  "ApridTavCode4" : "string",
+  "ApridWitmLineNumber" : 0,
+  "ApridCalledFromAppCode" : "string",
+  "ApridUserFieldEdtFlag5" : "string",
+  "ApridUserFieldEdtFlag6" : "string",
+  "ApridUserFieldEdtFlag7" : "string",
+  "ApridUserFieldEdtFlag8" : "string",
+  "ApridUserFieldName5" : "string",
+  "ApridUserFieldName6" : "string",
+  "ApridUserFieldName7" : "string",
+  "ApridUserFieldName8" : "string",
+  "ApridWbsSetupFlag" : "string",
+  "ApridApriVUuid" : "string",
+  "ApridVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.batch+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"parts":[{"id":"part1","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}},{"id":"part2","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}}]}</con:sampleContent>
+    </con:representation>
+    <con:request name="Header with Details Example" id="851eaba1-58af-4c03-882a-05ffe3539628" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Multi-Insert Invoice Example" id="219f0fd5-cd4e-4f8f-a2f8-50807dc5fb74" mediaType="application/vnd.oracle.adf.batch+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"parts":[{"id":"part1","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}},{"id":"part2","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}}]}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

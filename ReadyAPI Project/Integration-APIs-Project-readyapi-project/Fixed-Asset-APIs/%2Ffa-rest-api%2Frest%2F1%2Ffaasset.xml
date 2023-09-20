@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/fa-rest-api/rest/1/faasset" path="/fa-rest-api/rest/1/faasset" id="ab37b85a-556e-4d92-bfe4-1bc3b7ce486b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ab37b85a-556e-4d92-bfe4-1bc3b7ce486bfileName">%2Ffa-rest-api%2Frest%2F1%2Ffaasset</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="e35d87a5-9917-4feb-a3a0-d4d6ce703db3" method="GET">
+    <con:description>Retrieve Fixed Assets</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>AssetType</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Asset Type (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CatCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Asset Category Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ActivationDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Asset Activation Date (YYYY-MM-dd - selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FastCompCode" : "string",
+  "FastCode" : "string",
+  "FastName" : "string",
+  "FastAssetType" : "string",
+  "FastDesc" : "string",
+  "FastCapApprvCode" : "string",
+  "FastPoNum" : "string",
+  "FastActivDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastEntryDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastLeaseCode" : "string",
+  "FastPstExemptFlag" : "string",
+  "FastLienFlag" : "string",
+  "FastLienText" : "string",
+  "FastInsGroupCode" : "string",
+  "FastIntType" : "string",
+  "FastCatCode" : "string",
+  "FastCatName" : "string",
+  "FastMethCode" : "string",
+  "FastCcaCode" : "string",
+  "FastCcaByAssetFlag" : "string",
+  "FastDepInJanFlag" : "string",
+  "FastDepInFebFlag" : "string",
+  "FastDepInMarFlag" : "string",
+  "FastDepInMayFlag" : "string",
+  "FastDepInAprFlag" : "string",
+  "FastDepInJunFlag" : "string",
+  "FastDepInJulFlag" : "string",
+  "FastDepInAugFlag" : "string",
+  "FastDepInSepFlag" : "string",
+  "FastDepInOctFlag" : "string",
+  "FastDepInNovFlag" : "string",
+  "FastDepInDecFlag" : "string",
+  "FastDeDeptCode" : "string",
+  "FastDeAccCode" : "string",
+  "FastDeAccName" : "string",
+  "FastAdDeptCode" : "string",
+  "FastAdAccCode" : "string",
+  "FastAdAccName" : "string",
+  "FastNotesText" : "string",
+  "FastRollNum" : "string",
+  "FastAreaWmCode" : "string",
+  "FastZoneText" : "string",
+  "FastEqpCode" : "string",
+  "FastEqpName" : "string",
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmecEqpclassCode" : "string",
+  "EmecName" : "string",
+  "EmhlHomelocCode" : "string",
+  "EmhlName" : "string",
+  "EmalActuallocCode" : "string",
+  "EmalName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeEqpHier" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastMakeName" : "string",
+  "FastModelName" : "string",
+  "FastBoughtFrom" : "string",
+  "FastSerNumCode" : "string",
+  "FastWarrantyCode" : "string",
+  "FastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastOwnerName" : "string",
+  "FastAssignedName" : "string",
+  "FastRegisteredTo" : "string",
+  "FastLicNumberCode" : "string",
+  "FastLicState" : "string",
+  "FastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "FastDefaultMethCode" : "string",
+  "FastCatAdDeptCode" : "string",
+  "FastCatAdAccCode" : "string",
+  "FastCatAdAccName" : "string",
+  "FastCatDeDeptCode" : "string",
+  "FastCatDeAccCode" : "string",
+  "FastCatDeAccName" : "string",
+  "FastCatEqpCatCode" : "string",
+  "FastCatEqpCatName" : "string",
+  "FastEqpCatCode" : "string",
+  "FastEqpCatName" : "string",
+  "FastCatEqpTranCode" : "string",
+  "FastCatEqpTranName" : "string",
+  "FastEqpTranCode" : "string",
+  "FastEqpTranName" : "string",
+  "FastAssetDeptCode" : "string",
+  "FastAssetAccCode" : "string",
+  "FastAssetAccName" : "string",
+  "FastAcquisitionDeptCode" : "string",
+  "FastAcquisitionAccCode" : "string",
+  "FastAcquisitionAccName" : "string",
+  "FastDisposalDeptCode" : "string",
+  "FastDisposalAccCode" : "string",
+  "FastDisposalAccName" : "string",
+  "FastAcqBchNum" : 0,
+  "DiscriminatorCode" : "string",
+  "FastVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c3efb886-f061-49e7-964b-d219b0cba35f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

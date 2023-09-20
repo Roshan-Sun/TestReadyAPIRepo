@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/pmrfistatus/{Vuuid}" path="/pm-rest-api/rest/1/pmrfistatus/{Vuuid}" id="416d8ab8-5930-40c4-ba89-89eeac7031ed" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="416d8ab8-5930-40c4-ba89-89eeac7031edfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmrfistatus%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="f7aa11e8-7fdf-4783-b8ec-b645e3d5a515" method="GET">
+    <con:description>Retrieve a Specific PM RFI Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmrfisStatusCode" : "string",
+  "PmrfisStatusName" : "string",
+  "PmrfisStatusClassCode" : "string",
+  "PmrfisSystemFlag" : "string",
+  "PmrfisIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmrfisIuCreateUser" : "string",
+  "PmrfisIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmrfisIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="c71ba21a-f2ae-4dbc-9d1e-8da864f20e16" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="61ccaa58-1147-4ce4-8a81-83907d68f40c" method="PATCH">
+    <con:description>Update a Specific PM RFI Status</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PmrfisStatusCode" : "string",
+  "PmrfisStatusName" : "string",
+  "PmrfisStatusClassCode" : "string",
+  "PmrfisSystemFlag" : "string",
+  "PmrfisIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmrfisIuCreateUser" : "string",
+  "PmrfisIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "PmrfisIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PmrfisStatusClassCode":"string","PmrfisStatusCode":"string","PmrfisSystemFlag":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="672feba2-928f-4f83-a432-84ba4b1df9ed" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmrfisStatusClassCode":"string","PmrfisStatusCode":"string","PmrfisSystemFlag":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="4cfb20a1-23a7-4e22-b3f8-0eddf719ba82" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PmrfisStatusName":"Returned - test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

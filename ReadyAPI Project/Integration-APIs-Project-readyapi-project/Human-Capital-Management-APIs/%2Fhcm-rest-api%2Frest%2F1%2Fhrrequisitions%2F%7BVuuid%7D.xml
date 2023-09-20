@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/hrrequisitions/{Vuuid}" path="/hcm-rest-api/rest/1/hrrequisitions/{Vuuid}" id="344b4888-2583-4831-ae8e-526294ec9faf" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="344b4888-2583-4831-ae8e-526294ec9faffileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrrequisitions%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6ca23041-62fc-4d21-81ac-b1558581d402" method="GET">
+    <con:description>Retrieve a Specific HR Requisiton</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrrCode" : "string",
+  "HrrDate" : "YYYY-MM-dd",
+  "HrrQty" : 0,
+  "HrrTrdCode" : "string",
+  "HrrRequestedBy" : "string",
+  "HrrPropHireDate" : "YYYY-MM-dd",
+  "HrrPropJobTitle" : "string",
+  "HrrJobDesc" : "string",
+  "HrrResp" : "string",
+  "HrrSalaryRange" : "string",
+  "HrrPropSalary" : 0,
+  "HrrStatusCode" : "string",
+  "HrrAccountingCode" : "string",
+  "HrrNotes" : "string",
+  "HrrFullparttime" : "string",
+  "HrrTemporary" : "string",
+  "HrrType" : "string",
+  "HrrHireOffice" : "string",
+  "HrrVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="05e66268-2154-4e19-aaf7-504487064dd7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="bd2b55b1-f9a0-4bab-9ea6-14bba6de849d" method="PATCH">
+    <con:description>Update a Specific HR Requisition</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "HrrCode" : "string",
+  "HrrDate" : "YYYY-MM-dd",
+  "HrrQty" : 0,
+  "HrrTrdCode" : "string",
+  "HrrRequestedBy" : "string",
+  "HrrPropHireDate" : "YYYY-MM-dd",
+  "HrrPropJobTitle" : "string",
+  "HrrJobDesc" : "string",
+  "HrrResp" : "string",
+  "HrrSalaryRange" : "string",
+  "HrrPropSalary" : 0,
+  "HrrStatusCode" : "string",
+  "HrrAccountingCode" : "string",
+  "HrrNotes" : "string",
+  "HrrFullparttime" : "string",
+  "HrrTemporary" : "string",
+  "HrrType" : "string",
+  "HrrHireOffice" : "string",
+  "HrrVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"HrrCode":"string","HrrDate":"string","HrrTrdCode":"string","HrrRequestedBy":"string","HrrPropJobTitle":"string","HrrJobDesc":"string","HrrResp":"string","HrrHireOffice":"string","HrrVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="88ceb635-3460-4eed-b66c-68a705c778cd" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrrCode":"string","HrrDate":"string","HrrTrdCode":"string","HrrRequestedBy":"string","HrrPropJobTitle":"string","HrrJobDesc":"string","HrrResp":"string","HrrHireOffice":"string","HrrVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="f9972047-8a90-4498-8d2f-8963dfc518a3" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"HrrJobDesc":"test1235"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

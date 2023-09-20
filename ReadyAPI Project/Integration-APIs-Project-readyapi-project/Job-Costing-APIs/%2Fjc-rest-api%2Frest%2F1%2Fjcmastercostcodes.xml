@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcmastercostcodes" path="/jc-rest-api/rest/1/jcmastercostcodes" id="40616d53-978e-473d-b652-decfce24895b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="40616d53-978e-473d-b652-decfce24895bfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcmastercostcodes</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="77c4da47-ff7a-4a58-9325-deda057c8ebd" method="GET">
+    <con:description>Retrieve all Master Phases ( Cost Codes )</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectCostCodes</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectCostCodes)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>costCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Master phase code (selectCostCodes)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PhsCompCode" : "string",
+  "PhsCompName" : "string",
+  "PhsCode" : "string",
+  "PhsCtrlCode" : "string",
+  "PhsCtrlName" : "string",
+  "PhsWmCode" : "string",
+  "PhsWmName" : "string",
+  "PhsName" : "string",
+  "PhsAltCode" : "string",
+  "PhsWbsvCode1" : "string",
+  "PhsWbsvCode2" : "string",
+  "PhsWbsvCode3" : "string",
+  "PhsWbsvCode4" : "string",
+  "PhsWbsvRequiredFlag1" : "string",
+  "PhsWbsvRequiredFlag2" : "string",
+  "PhsWbsvRequiredFlag3" : "string",
+  "PhsWbsvRequiredFlag4" : "string",
+  "PhsWbsvEditableFlag1" : "string",
+  "PhsWbsvEditableFlag2" : "string",
+  "PhsWbsvEditableFlag3" : "string",
+  "PhsWbsvEditableFlag4" : "string",
+  "PhsActiveFlag" : "string",
+  "PhsDefaultWcbCode" : "string",
+  "PhsAddedOnTheFlyFlg" : "string",
+  "PhsTypeCode" : "string",
+  "PhsFirstSegmValue" : "string",
+  "PhsSpecialityFlag" : "string",
+  "PhsHier" : "string",
+  "PhsMasterFlag" : "string",
+  "PhsHasLowerLevelPhases" : "string",
+  "PhsProgramName" : "string",
+  "PhsIuCreateDate" : "YYYY-MM-dd",
+  "PhsIuCreateUser" : "string",
+  "PhsIuUpdateDate" : "YYYY-MM-dd",
+  "PhsIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "PhsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1647a0f2-dca9-4503-841a-c78cbc6ffa0b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="9ed1a47a-7e33-4522-adf6-5b7d79f5023d" method="POST">
+    <con:description>Create a JC Job Master Phase/Cost Code</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "PhsCompCode" : "string",
+  "PhsCompName" : "string",
+  "PhsCode" : "string",
+  "PhsCtrlCode" : "string",
+  "PhsCtrlName" : "string",
+  "PhsWmCode" : "string",
+  "PhsWmName" : "string",
+  "PhsName" : "string",
+  "PhsAltCode" : "string",
+  "PhsWbsvCode1" : "string",
+  "PhsWbsvCode2" : "string",
+  "PhsWbsvCode3" : "string",
+  "PhsWbsvCode4" : "string",
+  "PhsWbsvRequiredFlag1" : "string",
+  "PhsWbsvRequiredFlag2" : "string",
+  "PhsWbsvRequiredFlag3" : "string",
+  "PhsWbsvRequiredFlag4" : "string",
+  "PhsWbsvEditableFlag1" : "string",
+  "PhsWbsvEditableFlag2" : "string",
+  "PhsWbsvEditableFlag3" : "string",
+  "PhsWbsvEditableFlag4" : "string",
+  "PhsActiveFlag" : "string",
+  "PhsDefaultWcbCode" : "string",
+  "PhsAddedOnTheFlyFlg" : "string",
+  "PhsTypeCode" : "string",
+  "PhsFirstSegmValue" : "string",
+  "PhsSpecialityFlag" : "string",
+  "PhsHier" : "string",
+  "PhsMasterFlag" : "string",
+  "PhsHasLowerLevelPhases" : "string",
+  "PhsProgramName" : "string",
+  "PhsIuCreateDate" : "YYYY-MM-dd",
+  "PhsIuCreateUser" : "string",
+  "PhsIuUpdateDate" : "YYYY-MM-dd",
+  "PhsIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "PhsVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"PhsCompCode":"string","PhsCode":"string","PhsName":"string","PhsCtrlCode":"string","PhsWmCode":"string","PhsVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="a558a033-c590-4fe5-b77e-5930a7214206" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PhsCompCode":"string","PhsCode":"string","PhsName":"string","PhsCtrlCode":"string","PhsWmCode":"string","PhsVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="a289b11b-4a5a-489a-9774-bcf7b2cfec57" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"PhsName":"bobicus"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

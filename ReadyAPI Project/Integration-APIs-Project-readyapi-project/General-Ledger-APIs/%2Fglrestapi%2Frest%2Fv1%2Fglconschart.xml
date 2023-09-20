@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/glconschart" path="/glrestapi/rest/v1/glconschart" id="816567f2-299e-491f-ba65-79c6794422af" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="816567f2-299e-491f-ba65-79c6794422affileName">%2Fglrestapi%2Frest%2Fv1%2Fglconschart</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c6feafb6-ef12-4090-a5f3-cd7a964341fe" method="GET">
+    <con:description>Retrieve GL Consolidation Charts</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ConschartCode" : "string",
+  "ConschartName" : "string",
+  "ConschartChkdgTypeCode" : "string",
+  "ConschartMaxPerNum" : 0,
+  "ConschartUpdParentBalFlag" : "string",
+  "ConschartTavCode1" : "string",
+  "ConschartTavCode2" : "string",
+  "ConschartTavCode3" : "string",
+  "ConschartTavCode4" : "string",
+  "ConschartTavRequiredFlag1" : "string",
+  "ConschartTavRequiredFlag2" : "string",
+  "ConschartTavRequiredFlag3" : "string",
+  "ConschartTavRequiredFlag4" : "string",
+  "ConschartTavValidatedFlag1" : "string",
+  "ConschartTavValidatedFlag2" : "string",
+  "ConschartTavValidatedFlag3" : "string",
+  "ConschartTavValidatedFlag4" : "string",
+  "ConschartTavEditableFlag1" : "string",
+  "ConschartTavEditableFlag2" : "string",
+  "ConschartTavEditableFlag3" : "string",
+  "ConschartTavEditableFlag4" : "string",
+  "ConschartOpenPeriodFlag" : "string",
+  "ConschartIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ConschartIuCreateUser" : "string",
+  "ConschartIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "ConschartIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "ConschartVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b8d4956e-9a7f-4552-b263-50f66b97e30b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

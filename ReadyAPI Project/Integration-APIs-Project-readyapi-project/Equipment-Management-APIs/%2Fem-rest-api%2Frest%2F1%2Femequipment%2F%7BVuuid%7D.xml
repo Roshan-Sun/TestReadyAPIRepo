@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emequipment/{Vuuid}" path="/em-rest-api/rest/1/emequipment/{Vuuid}" id="a664675c-8c27-4073-bae4-323d693dfe17" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a664675c-8c27-4073-bae4-323d693dfe17fileName">%2Fem-rest-api%2Frest%2F1%2Femequipment%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="bd48e8dd-c5b0-4442-8ca2-b11f12045865" method="GET">
+    <con:description>Retrieve Specific Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmeEqpclassCode" : "string",
+  "EmeEqpclassName" : "string",
+  "EmeCtrlEqpCode" : "string",
+  "EmeCtrlEqpName" : "string",
+  "EmeEqpHier" : "string",
+  "EmeHomelocCode" : "string",
+  "EmeHomelocName" : "string",
+  "EmeCompCode" : "string",
+  "EmeActuallocCode" : "string",
+  "EmeActuallocName" : "string",
+  "EmeCurrActuallocCode" : "string",
+  "EmeCurrActuallocName" : "string",
+  "EmeJccatCode" : "string",
+  "EmeJccatName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeLegalUidLocation" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeCommissionTime" : "string",
+  "EmeDecommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeBaseUmCode" : "string",
+  "EmeBaseUmName" : "string",
+  "EmeLifeExpectancyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeResponsiblePersonnelName" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeWarrantyAccTypeCode" : "string",
+  "EmeWarrantyDesc" : "string",
+  "EmeWarrantyExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeJcphsCode" : "string",
+  "EmeJcphsName" : "string",
+  "EmeSlidingScaleRuleFlag" : "string",
+  "EmeCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeUeValidFlag" : "string",
+  "EmeVendorCode" : "string",
+  "EmeVendorName" : "string",
+  "EmeBulkEquipmentFlag" : "string",
+  "EmeTruckType" : "string",
+  "EmeInsurName" : "string",
+  "EmeInsurPolicyNo" : "string",
+  "EmeTareDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeTareTime" : "string",
+  "EmeTareType" : "string",
+  "EmeNoOfDrops" : 0,
+  "EmeTradeCode" : "string",
+  "EmeTradeName" : "string",
+  "EmeTruckerClass" : "string",
+  "EmeTruckerClassName" : "string",
+  "EmeUtilizationCode" : "string",
+  "EmeUtilizationName" : "string",
+  "EmeCrewCode" : "string",
+  "EmeFastCatCode" : "string",
+  "EmeFastCatName" : "string",
+  "EmeFastMakeName" : "string",
+  "EmeFastModelName" : "string",
+  "EmeFastSerNumCode" : "string",
+  "EmeFastLicNumberCode" : "string",
+  "EmeFastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastWarrantyCode" : "string",
+  "EmeFastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastOwnerName" : "string",
+  "EmeFastAssignedName" : "string",
+  "EmeFastLeaseCode" : "string",
+  "EmeFastMethCode" : "string",
+  "EmeFastRegisteredTo" : "string",
+  "EmeFastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastBoughtFrom" : "string",
+  "EmeFastLicState" : "string",
+  "EmeFastLicStateName" : "string",
+  "EmeUseMeterReadingFlag" : "string",
+  "EmeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuCreateUser" : "string",
+  "EmeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuUpdateUser" : "string",
+  "EmeVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="6ca2cb04-5cb4-4c8e-a140-9dcec53f797f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="424a8939-6fb7-4909-889e-23736aa1c224" method="DELETE">
+    <con:description>Delete a Specific Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fdd68230-6dc7-47cf-b899-0fc222e0a82c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="16ee2864-bdf8-4452-8cfd-d6af22ebfc36" method="PATCH">
+    <con:description>Update a specific Equipment</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID for record</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmeEqpCode" : "string",
+  "EmeName" : "string",
+  "EmeDesc" : "string",
+  "EmeEqpclassCode" : "string",
+  "EmeEqpclassName" : "string",
+  "EmeCtrlEqpCode" : "string",
+  "EmeCtrlEqpName" : "string",
+  "EmeEqpHier" : "string",
+  "EmeHomelocCode" : "string",
+  "EmeHomelocName" : "string",
+  "EmeCompCode" : "string",
+  "EmeActuallocCode" : "string",
+  "EmeActuallocName" : "string",
+  "EmeCurrActuallocCode" : "string",
+  "EmeCurrActuallocName" : "string",
+  "EmeJccatCode" : "string",
+  "EmeJccatName" : "string",
+  "EmeLegalUniqueIdentifier" : "string",
+  "EmeActiveFlag" : "string",
+  "EmeLegalUidLocation" : "string",
+  "EmeAutoChargeoutFlag" : "string",
+  "EmeFloatFlag" : "string",
+  "EmeFixedAssetsFlag" : "string",
+  "EmeDepreciationFlag" : "string",
+  "EmeCommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeCommissionTime" : "string",
+  "EmeDecommissionDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeBaseUmCode" : "string",
+  "EmeBaseUmName" : "string",
+  "EmeLifeExpectancyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeResponsiblePersonnelName" : "string",
+  "EmeBillRateRequiredFlag" : "string",
+  "EmeWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeWarrantyAccTypeCode" : "string",
+  "EmeWarrantyDesc" : "string",
+  "EmeWarrantyExpireDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeJcphsCode" : "string",
+  "EmeJcphsName" : "string",
+  "EmeSlidingScaleRuleFlag" : "string",
+  "EmeCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeUeValidFlag" : "string",
+  "EmeVendorCode" : "string",
+  "EmeVendorName" : "string",
+  "EmeBulkEquipmentFlag" : "string",
+  "EmeTruckType" : "string",
+  "EmeInsurName" : "string",
+  "EmeInsurPolicyNo" : "string",
+  "EmeTareDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeTareTime" : "string",
+  "EmeTareType" : "string",
+  "EmeNoOfDrops" : 0,
+  "EmeTradeCode" : "string",
+  "EmeTradeName" : "string",
+  "EmeTruckerClass" : "string",
+  "EmeTruckerClassName" : "string",
+  "EmeUtilizationCode" : "string",
+  "EmeUtilizationName" : "string",
+  "EmeCrewCode" : "string",
+  "EmeFastCatCode" : "string",
+  "EmeFastCatName" : "string",
+  "EmeFastMakeName" : "string",
+  "EmeFastModelName" : "string",
+  "EmeFastSerNumCode" : "string",
+  "EmeFastLicNumberCode" : "string",
+  "EmeFastLicExpDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastWarrantyCode" : "string",
+  "EmeFastWarrantyDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastOwnerName" : "string",
+  "EmeFastAssignedName" : "string",
+  "EmeFastLeaseCode" : "string",
+  "EmeFastMethCode" : "string",
+  "EmeFastRegisteredTo" : "string",
+  "EmeFastDspsDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeFastBoughtFrom" : "string",
+  "EmeFastLicState" : "string",
+  "EmeFastLicStateName" : "string",
+  "EmeUseMeterReadingFlag" : "string",
+  "EmeIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuCreateUser" : "string",
+  "EmeIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmeIuUpdateUser" : "string",
+  "EmeVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="4bc8e63f-0e10-4ab9-aa7d-46c0eff65569" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5c270183-e371-48bd-b035-a7f1713b361d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"EmeFastCatCode":"EQUIPMENT","EmeDesc":"test1234"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/gldocrows/{Vuuid}" path="/glrestapi/rest/v1/gldocrows/{Vuuid}" id="d0d974ec-935e-4ade-8bbd-5c92f53c2ab5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d0d974ec-935e-4ade-8bbd-5c92f53c2ab5fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocrows%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3e6b9b70-63ea-4a65-9afb-081e69a90c48" method="GET">
+    <con:description>Retrieve a Specific GL document row</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DapDocCode" : "string",
+  "DapDocName" : "string",
+  "DapSeqNum" : 0,
+  "DapLineCode" : "string",
+  "DapLineName" : "string",
+  "DapStartAccSeq" : 0,
+  "DapEndAccSeq" : 0,
+  "DapRatioCode" : "string",
+  "DapPrintCode" : "string",
+  "DapCentreCode" : "string",
+  "DapDesc" : "string",
+  "DapDrcrCode" : "string",
+  "DapRevCode" : "string",
+  "DapShiftCode" : "string",
+  "DapTotal1Code" : "string",
+  "DapTotal2Code" : "string",
+  "DapTotalNum" : 0,
+  "DapColSkip" : 0,
+  "DapLineSkip" : 0,
+  "DapStartAccCode" : "string",
+  "DapEndAccCode" : "string",
+  "DapMatchCode" : "string",
+  "DapStoreCode" : "string",
+  "DapCon2Code" : "string",
+  "DapCon2Name" : "string",
+  "DapEndPageFlag" : "string",
+  "DapIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuCreateUser" : "string",
+  "DapIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DapVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="fd171ef6-1c79-4f06-afae-a9d1291e1d10" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="bdbbf9c1-f722-4934-9485-557f34a90a8e" method="DELETE">
+    <con:description>Delete a Specific GL document row</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row ID</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description>Object has been successfully deleted.</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="1b0ab187-c4d8-41cb-a172-f33aecc451fc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="139184b3-c85d-498f-8004-092eabb98aea" method="PATCH">
+    <con:description>Update GL document row</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique Row Id</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "DapDocCode" : "string",
+  "DapDocName" : "string",
+  "DapSeqNum" : 0,
+  "DapLineCode" : "string",
+  "DapLineName" : "string",
+  "DapStartAccSeq" : 0,
+  "DapEndAccSeq" : 0,
+  "DapRatioCode" : "string",
+  "DapPrintCode" : "string",
+  "DapCentreCode" : "string",
+  "DapDesc" : "string",
+  "DapDrcrCode" : "string",
+  "DapRevCode" : "string",
+  "DapShiftCode" : "string",
+  "DapTotal1Code" : "string",
+  "DapTotal2Code" : "string",
+  "DapTotalNum" : 0,
+  "DapColSkip" : 0,
+  "DapLineSkip" : 0,
+  "DapStartAccCode" : "string",
+  "DapEndAccCode" : "string",
+  "DapMatchCode" : "string",
+  "DapStoreCode" : "string",
+  "DapCon2Code" : "string",
+  "DapCon2Name" : "string",
+  "DapEndPageFlag" : "string",
+  "DapIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuCreateUser" : "string",
+  "DapIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "DapIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "DapVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"DapDocCode":"string","DapSeqNum":"integer","DapLineCode":"string","DapVUuid":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request Example" id="0f6af6fe-29bf-48ad-9b0f-430f169f51da" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"DapDocCode":"string","DapSeqNum":"integer","DapLineCode":"string","DapVUuid":"string"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

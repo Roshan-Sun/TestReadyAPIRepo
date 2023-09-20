@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/scsched" path="/pm-rest-api/rest/1/scsched" id="ebe3b896-dce7-456a-acb0-8e166a4cb0d3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ebe3b896-dce7-456a-acb0-8e166a4cb0d3fileName">%2Fpm-rest-api%2Frest%2F1%2Fscsched</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="06911d14-ce0d-4dcd-b8e9-1e716f5686b3" method="GET">
+    <con:description>Retrieve SC Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectSOV</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company Code (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCodeSOV</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Code (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contract Code (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VendorCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor Code (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CreateDateGTEQ</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Subcontract Detail Create Date (selectSOV - YYYY-MM-DD)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ContCodeVarIn</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Contract Codes -- > Code values for specific subcontracts; multiple codes separated by a comma "," (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ChangeCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Change Code (selectSOV)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>ChangeCodeVarN</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Change Code to Exclude (selectSOV)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ScschCompCode" : "string",
+  "ScschJobCode" : "string",
+  "ScschVenCode" : "string",
+  "ScschContCode" : "string",
+  "ScschChgCode" : "string",
+  "ScschSubcontrCode" : "string",
+  "ScschTaskCode" : "string",
+  "ScschTaskName" : "string",
+  "ScschPhsCode" : "string",
+  "ScschCatCode" : "string",
+  "ScschUnit" : 0,
+  "ScschWmCode" : "string",
+  "ScschUnitRate" : 0,
+  "ScschAmt" : 0,
+  "ScschComplPct" : 0,
+  "ScschComplQty" : 0,
+  "ScschComplAmt" : 0,
+  "ScschPrevCertAmt" : 0,
+  "ScschPrevCertQty" : 0,
+  "ScschLstAmt" : 0,
+  "ScschTax1Code" : "string",
+  "ScschTax2Code" : "string",
+  "ScschTax3Code" : "string",
+  "ScschTax4Code" : "string",
+  "ScschTax5Code" : "string",
+  "ScschHldbkPct" : 0,
+  "ScschBillCode" : "string",
+  "ScschLineNum" : 0,
+  "ScschTendpackLineNum" : 0,
+  "ScschSiNum" : 0,
+  "ScschSiLineNum" : 0,
+  "ScschSiMastJobCode" : "string",
+  "ScschSiRevisNum" : 0,
+  "ScschLongDesc" : "string",
+  "ScschApexpCode" : "string",
+  "ScschWbsvCode1" : "string",
+  "ScschWbsvCode2" : "string",
+  "ScschWbsvCode3" : "string",
+  "ScschWbsvCode4" : "string",
+  "ScschCurrHldbkAmt" : 0,
+  "ScschPrevHldbkAmt" : 0,
+  "ScschCurrHldbkRlsAmt" : 0,
+  "ScschPrevHldbkRlsAmt" : 0,
+  "ScschTax1TaxableFlag" : "string",
+  "ScschTax2TaxableFlag" : "string",
+  "ScschTax3TaxableFlag" : "string",
+  "ScschTax4TaxableFlag" : "string",
+  "ScschTax5TaxableFlag" : "string",
+  "ScschJbContCode" : "string",
+  "ScschJbBillCode" : "string",
+  "ScschOrderNum" : 0,
+  "ScschLineChangedFlag" : "string",
+  "ScschFullyPurchasedFlag" : "string",
+  "ScschIuCreateDate" : "YYYY-MM-dd",
+  "ScschIuCreateUser" : "string",
+  "ScschIuUpdateDate" : "YYYY-MM-dd",
+  "ScschIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "ScschVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="ec4d1e2a-f4ce-4b74-b978-ea71cb84e9c1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="84956496-6637-4a34-8744-d9a7fb724be9" method="POST">
+    <con:description>Create an SC Detail</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "ScschCompCode" : "string",
+  "ScschJobCode" : "string",
+  "ScschVenCode" : "string",
+  "ScschContCode" : "string",
+  "ScschChgCode" : "string",
+  "ScschSubcontrCode" : "string",
+  "ScschTaskCode" : "string",
+  "ScschTaskName" : "string",
+  "ScschPhsCode" : "string",
+  "ScschCatCode" : "string",
+  "ScschUnit" : 0,
+  "ScschWmCode" : "string",
+  "ScschUnitRate" : 0,
+  "ScschAmt" : 0,
+  "ScschComplPct" : 0,
+  "ScschComplQty" : 0,
+  "ScschComplAmt" : 0,
+  "ScschPrevCertAmt" : 0,
+  "ScschPrevCertQty" : 0,
+  "ScschLstAmt" : 0,
+  "ScschTax1Code" : "string",
+  "ScschTax2Code" : "string",
+  "ScschTax3Code" : "string",
+  "ScschTax4Code" : "string",
+  "ScschTax5Code" : "string",
+  "ScschHldbkPct" : 0,
+  "ScschBillCode" : "string",
+  "ScschLineNum" : 0,
+  "ScschTendpackLineNum" : 0,
+  "ScschSiNum" : 0,
+  "ScschSiLineNum" : 0,
+  "ScschSiMastJobCode" : "string",
+  "ScschSiRevisNum" : 0,
+  "ScschLongDesc" : "string",
+  "ScschApexpCode" : "string",
+  "ScschWbsvCode1" : "string",
+  "ScschWbsvCode2" : "string",
+  "ScschWbsvCode3" : "string",
+  "ScschWbsvCode4" : "string",
+  "ScschCurrHldbkAmt" : 0,
+  "ScschPrevHldbkAmt" : 0,
+  "ScschCurrHldbkRlsAmt" : 0,
+  "ScschPrevHldbkRlsAmt" : 0,
+  "ScschTax1TaxableFlag" : "string",
+  "ScschTax2TaxableFlag" : "string",
+  "ScschTax3TaxableFlag" : "string",
+  "ScschTax4TaxableFlag" : "string",
+  "ScschTax5TaxableFlag" : "string",
+  "ScschJbContCode" : "string",
+  "ScschJbBillCode" : "string",
+  "ScschOrderNum" : 0,
+  "ScschLineChangedFlag" : "string",
+  "ScschFullyPurchasedFlag" : "string",
+  "ScschIuCreateDate" : "YYYY-MM-dd",
+  "ScschIuCreateUser" : "string",
+  "ScschIuUpdateDate" : "YYYY-MM-dd",
+  "ScschIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "ScschVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"ScschCompCode":"string","ScschJobCode":"string","ScschVenCode":"string","ScschContCode":"string","ScschChgCode":"string","ScschTaskCode":"string","ScschPhsCode":"string","ScschCatCode":"string","ScschWmCode":"string","ScschAmt":"float","ScschVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="629ba73e-53a3-4bef-8388-3517dd725097" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ScschCompCode":"string","ScschJobCode":"string","ScschVenCode":"string","ScschContCode":"string","ScschChgCode":"string","ScschTaskCode":"string","ScschPhsCode":"string","ScschCatCode":"string","ScschWmCode":"string","ScschAmt":"float","ScschVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5b752a9d-df2c-4f50-84e1-da9218a7fc09" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"ScschLongDesc":"test123"}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

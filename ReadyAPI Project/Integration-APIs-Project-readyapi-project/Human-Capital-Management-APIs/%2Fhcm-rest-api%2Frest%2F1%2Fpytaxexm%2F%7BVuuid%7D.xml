@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/hcm-rest-api/rest/1/pytaxexm/{Vuuid}" path="/hcm-rest-api/rest/1/pytaxexm/{Vuuid}" id="6633e455-4b37-4c89-a28a-106b5adb7113" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6633e455-4b37-4c89-a28a-106b5adb7113fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytaxexm%2F%7BVuuid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="788720b9-8c7e-4387-9ea3-49d2e2a5906a" method="GET">
+    <con:description>Retrieve a Specific PY Tax Exemption</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxxEmpNo" : "string",
+  "TxxStateCode" : "string",
+  "TxxEffectiveDate" : "YYYY-MM-dd",
+  "TxxFilingStatus" : "string",
+  "TxxNrCertificate" : "string",
+  "TxxExempAmount" : 0,
+  "TxxSuplExpAmount" : 0,
+  "TxxPrimExemp" : 0,
+  "TxxSecnExemp" : 0,
+  "TxxTertExemp" : 0,
+  "TxxUser" : "string",
+  "TxxLastUpdDate" : "YYYY-MM-dd",
+  "TxxWrlCode" : "string",
+  "TxxResidenceLocCode" : "string",
+  "TxxPrimWorkLocCode" : "string",
+  "TxxMultiJobsFlag" : "string",
+  "TxxDepTaxCreditAmt" : 0,
+  "TxxOtherIncomeAmt" : 0,
+  "TxxOtherDeductionAmt" : 0,
+  "TxxVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bb5feb27-387b-4818-95fc-6a5ab5c54669" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="721302e0-bd77-4831-a876-830fbd9a45bd" method="PATCH">
+    <con:description>Update a Specific PY Tax Exemption</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Vuuid</con:name>
+        <con:style>TEMPLATE</con:style>
+        <con:description>Unique ID of Row</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "TxxEmpNo" : "string",
+  "TxxStateCode" : "string",
+  "TxxEffectiveDate" : "YYYY-MM-dd",
+  "TxxFilingStatus" : "string",
+  "TxxNrCertificate" : "string",
+  "TxxExempAmount" : 0,
+  "TxxSuplExpAmount" : 0,
+  "TxxPrimExemp" : 0,
+  "TxxSecnExemp" : 0,
+  "TxxTertExemp" : 0,
+  "TxxUser" : "string",
+  "TxxLastUpdDate" : "YYYY-MM-dd",
+  "TxxWrlCode" : "string",
+  "TxxResidenceLocCode" : "string",
+  "TxxPrimWorkLocCode" : "string",
+  "TxxMultiJobsFlag" : "string",
+  "TxxDepTaxCreditAmt" : 0,
+  "TxxOtherIncomeAmt" : 0,
+  "TxxOtherDeductionAmt" : 0,
+  "TxxVUuid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"TxxEmpNo":"string","TxxStateCode":"string","TxxEffectiveDate":"string","TxxWrlCode":"string","TxxLastUpdDate":"string","TxxUser":"string","TxxVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="Minimal POST Example" id="8ee9870a-a499-49d1-a8f2-29a3c750d64b" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxxEmpNo":"string","TxxStateCode":"string","TxxEffectiveDate":"string","TxxWrlCode":"string","TxxLastUpdDate":"string","TxxUser":"string","TxxVUuid":""}</con:request>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="0efb1406-e3df-4061-91de-f7cd33a2cbce" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"TxxOtherDeductionAmt":10}</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
