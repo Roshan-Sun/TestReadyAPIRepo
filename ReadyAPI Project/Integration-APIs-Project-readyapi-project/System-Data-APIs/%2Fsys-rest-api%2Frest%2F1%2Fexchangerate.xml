@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/exchangerate" path="/sys-rest-api/rest/1/exchangerate" id="440f752c-bd50-4dd2-b73c-a7d328a9faa9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/exchangerate" path="/sys-rest-api/rest/1/exchangerate" id="440f752c-bd50-4dd2-b73c-a7d328a9faa9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="440f752c-bd50-4dd2-b73c-a7d328a9faa9fileName">%2Fsys-rest-api%2Frest%2F1%2Fexchangerate</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectRate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>exchRateDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date set on Exchange Rate (selectRate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -50,7 +54,15 @@
     <con:request name="Request 1" id="529df73e-e7c5-43ce-979c-271428c7ad4a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="exchRateDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b8a96616-4bc2-4d22-9015-17ec9326cbe3" method="POST">
@@ -94,12 +106,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BaexratBankCode":"string","BaexratFcurrCode":"string","BaexratTcurrCode":"string","BaexratExchgTypeCode":"string","BaexratDate":"string","BaexratRate1":"integer","BaexratVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="e2743117-78e3-4450-9b83-2d96e7ccf874" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BaexratRate3":25}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

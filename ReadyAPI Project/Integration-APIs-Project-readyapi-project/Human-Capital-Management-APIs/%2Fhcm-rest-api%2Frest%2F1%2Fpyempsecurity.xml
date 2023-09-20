@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyempsecurity" path="/hcm-rest-api/rest/1/pyempsecurity" id="d2337e54-bed9-411d-ac36-ec0fd3537aa7" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyempsecurity" path="/hcm-rest-api/rest/1/pyempsecurity" id="d2337e54-bed9-411d-ac36-ec0fd3537aa7" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d2337e54-bed9-411d-ac36-ec0fd3537aa7fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempsecurity</con:setting>
   </con:settings>
@@ -29,6 +29,11 @@
     <con:request name="Request 1" id="06bceb63-57fe-4c4b-b782-f6a6d56b5905" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -68,12 +73,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Multi-Insert Example" id="8bcd3689-2f0b-421f-9fd0-1c6bc12bd42c" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZZMASTER","EsgeEmpNo":"1044589","EsgeSelectFlag":"Y"}},{"id":"part2","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"ZAMASTER","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}},{"id":"part3","path":"/1/pyempsecurity","operation":"create","payload":{"EsgeGroupCode":"CCCPAYROLL","EsgeEmpNo":"1","EsgeSelectFlag":"Y"}}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

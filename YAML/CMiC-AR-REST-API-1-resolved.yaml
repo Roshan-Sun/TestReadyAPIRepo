@@ -32,6 +32,29 @@ tags:
 - name: artaxitems
   description: AR Tax Items
 paths:
+  /ar-rest-api/rest/1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all AR-REST-API metadata
+      description: All metadata about AR application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /ar-rest-api/rest/1/aragedreport:
     get:
       tags:

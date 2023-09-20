@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-doc-rest-api/jersey/v1/uploadDoc" path="/pm-doc-rest-api/jersey/v1/uploadDoc" id="cfed60de-a824-4a43-8c36-5d1c2d93f2f0" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-doc-rest-api/jersey/v1/uploadDoc" path="/pm-doc-rest-api/jersey/v1/uploadDoc" id="cfed60de-a824-4a43-8c36-5d1c2d93f2f0" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="cfed60de-a824-4a43-8c36-5d1c2d93f2f0fileName">%2Fpm-doc-rest-api%2Fjersey%2Fv1%2FuploadDoc</con:setting>
   </con:settings>
@@ -31,6 +31,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmdId":"","Vuuid":"BAEC26FFFF155818E053508010ACC325","PmdTitle":"OguzRoverTest3-1","PmdDesc1":"OguzRoverTest3-1","PmdDesc2":"OguzRoverTest3-1","PmdProjUuid":"9D73CB3DCDCDBF19E0536900A8C05238","PmdTypeCode":"DRAWMGMT","PmdrComment":"RevisionNumber 1 ","PmdrRcvdDate":"2020-11-02","PmdrRevDate":"2021-12-09"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

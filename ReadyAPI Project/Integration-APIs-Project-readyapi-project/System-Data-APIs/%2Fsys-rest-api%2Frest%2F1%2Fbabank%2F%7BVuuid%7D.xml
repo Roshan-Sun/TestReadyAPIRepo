@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/babank/{Vuuid}" path="/sys-rest-api/rest/1/babank/{Vuuid}" id="8993a31a-9ff3-40ca-872e-9156796e3e5a" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/babank/{Vuuid}" path="/sys-rest-api/rest/1/babank/{Vuuid}" id="8993a31a-9ff3-40ca-872e-9156796e3e5a" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8993a31a-9ff3-40ca-872e-9156796e3e5afileName">%2Fsys-rest-api%2Frest%2F1%2Fbabank%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -58,7 +60,14 @@
     <con:request name="Request 1" id="fac5f463-7bd3-4faf-a670-513bd6bcd75f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="92144e2d-d4c2-4a46-b230-94e0f8fc3aa9" method="PATCH">
@@ -67,7 +76,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -121,13 +132,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BnkBankName":"string","BnkBankCode":"string","BnkShortName":"string","BnkVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="ce330bcc-4e69-40cc-b2e1-27254406e3ce" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BnkCountryCode":"CA"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

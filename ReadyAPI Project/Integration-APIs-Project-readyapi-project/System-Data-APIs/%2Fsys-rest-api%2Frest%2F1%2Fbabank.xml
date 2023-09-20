@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/babank" path="/sys-rest-api/rest/1/babank" id="bbd92402-b5be-4861-9fc8-4e2dd4dbd150" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/babank" path="/sys-rest-api/rest/1/babank" id="bbd92402-b5be-4861-9fc8-4e2dd4dbd150" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="bbd92402-b5be-4861-9fc8-4e2dd4dbd150fileName">%2Fsys-rest-api%2Frest%2F1%2Fbabank</con:setting>
   </con:settings>
@@ -52,6 +52,11 @@
     <con:request name="Request 1" id="9b442ce6-1761-4ace-b0df-df2e520d9677" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -109,12 +114,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BnkBankName":"string","BnkBankCode":"string","BnkShortName":"string","BnkVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="022af732-1a72-4e15-b744-e8563ff0fe9c" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BnkCountryCode":"CA"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

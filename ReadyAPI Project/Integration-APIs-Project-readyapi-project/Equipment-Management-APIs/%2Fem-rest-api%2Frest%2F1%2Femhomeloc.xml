@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emhomeloc" path="/em-rest-api/rest/1/emhomeloc" id="583a4a20-ad5b-42f4-80cb-b85dcd78e8af" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emhomeloc" path="/em-rest-api/rest/1/emhomeloc" id="583a4a20-ad5b-42f4-80cb-b85dcd78e8af" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="583a4a20-ad5b-42f4-80cb-b85dcd78e8affileName">%2Fem-rest-api%2Frest%2F1%2Femhomeloc</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByCode or findByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>locationCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Location Code (findByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to compare against create/update dates (findByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -51,7 +57,16 @@
     <con:request name="Request 1" id="5d77c9c4-cac9-4e0f-856e-3bb16139df24" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="locationCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/gldocument/{Vuuid}" path="/glrestapi/rest/v1/gldocument/{Vuuid}" id="497794eb-64e9-48c9-9f2c-4b3188fbd0cd" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/gldocument/{Vuuid}" path="/glrestapi/rest/v1/gldocument/{Vuuid}" id="497794eb-64e9-48c9-9f2c-4b3188fbd0cd" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="497794eb-64e9-48c9-9f2c-4b3188fbd0cdfileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocument%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -69,7 +71,14 @@
     <con:request name="Request 1" id="33480402-4e19-4842-b01c-ce8b48914be0" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="883b2f41-0b65-4795-b8b3-811d36ebfc22" method="DELETE">
@@ -78,7 +87,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -97,7 +108,14 @@
     <con:request name="Request 1" id="5859bac1-4717-4ea4-a20f-b0175afdab03" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="495e7e93-b987-4d93-b3ca-f85f41a3344b" method="PATCH">
@@ -106,7 +124,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row Id</con:description>
       </con:parameter>
     </con:parameters>
@@ -171,7 +191,13 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DocCode":"string","DocName":"string","DocCatCode":"string","DocSeqtypeCode":"string","DocConschartCode":"string","DocVUuid":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

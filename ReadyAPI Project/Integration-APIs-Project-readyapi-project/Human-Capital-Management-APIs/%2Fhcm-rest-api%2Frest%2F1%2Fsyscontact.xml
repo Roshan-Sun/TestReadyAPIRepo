@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/syscontact" path="/hcm-rest-api/rest/1/syscontact" id="d7275be1-5e61-4702-95a5-3db10a5d99d8" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/syscontact" path="/hcm-rest-api/rest/1/syscontact" id="d7275be1-5e61-4702-95a5-3db10a5d99d8" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d7275be1-5e61-4702-95a5-3db10a5d99d8fileName">%2Fhcm-rest-api%2Frest%2F1%2Fsyscontact</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>SysContactFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PartnCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Partner Code (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PartnTypeCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Partner Type Code (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContactCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contact Code (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Email1Var</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Email Address (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>gsyscDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (SysContactFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ActiveFlagVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contact Active Flag (SysContactFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -128,7 +144,21 @@
     <con:request name="Request 1" id="89937f04-6fd8-4fd5-82db-6cb5b7516245" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="PartnCodeVar" value=""/>
+        <con:entry key="PartnTypeCodeVar" value=""/>
+        <con:entry key="ActiveFlagVar" value=""/>
+        <con:entry key="Email1Var" value=""/>
+        <con:entry key="EmpNoVar" value=""/>
+        <con:entry key="gsyscDate" value=""/>
+        <con:entry key="ContactCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b7bab9ec-e1ef-44c8-8c06-c88314a6c646" method="POST">
@@ -220,12 +250,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GsyscEmpNo":"string","GsyscEmail1":"string","GsyscPartnCode":"string","GsyscPartnTypeCode":"string","GsyscContactCode":"string","GsyscLastUpdDate":"string","GsyscHtmlEmailFlag":"string","GsyscActiveFlag":"string","GsyscVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="8637b2f9-9a68-4cef-8361-dd5f81617af0" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GsyscContactDesc":"the name is bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

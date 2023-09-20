@@ -48,6 +48,29 @@ tags:
 - name: rtigledgerwithyearperiod
   description: GL Ledger with Year/Period
 paths:
+  /glrestapi/rest/v1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all GL-REST-API metadata
+      description: All metadata about GL application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /glrestapi/rest/v1/glaccounts:
     get:
       tags:

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/term/{Vuuid}" path="/sys-rest-api/rest/1/term/{Vuuid}" id="6b0fd3e2-c863-4001-b077-ce25ee30c6ba" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/term/{Vuuid}" path="/sys-rest-api/rest/1/term/{Vuuid}" id="6b0fd3e2-c863-4001-b077-ce25ee30c6ba" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="6b0fd3e2-c863-4001-b077-ce25ee30c6bafileName">%2Fsys-rest-api%2Frest%2F1%2Fterm%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -46,7 +48,14 @@
     <con:request name="Request 1" id="7e141beb-3381-4501-99bf-87bf1a6319a1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="8255428e-efe3-44d8-bc58-f072c1113cad" method="DELETE">
@@ -55,7 +64,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -74,7 +85,14 @@
     <con:request name="Request 1" id="f26e28e9-0865-4585-9e34-82b54f9845f4" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="d9740981-cff8-4389-8e07-f16f9bf09369" method="PATCH">
@@ -83,7 +101,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -125,13 +145,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TermCode":"string","TermCompCode":"string","TermDueDay":"integer","TermDiscDay":"integer","TermVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="3a79bc62-6068-4b0e-94d1-eeef1df69134" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TermName":"test123"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

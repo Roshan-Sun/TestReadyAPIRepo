@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmpunchliststatus/{Vuuid}" path="/pm-rest-api/rest/1/pmpunchliststatus/{Vuuid}" id="2f99f141-711b-4cb3-94df-8aacac3196c2" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmpunchliststatus/{Vuuid}" path="/pm-rest-api/rest/1/pmpunchliststatus/{Vuuid}" id="2f99f141-711b-4cb3-94df-8aacac3196c2" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2f99f141-711b-4cb3-94df-8aacac3196c2fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchliststatus%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -41,7 +43,14 @@
     <con:request name="Request 1" id="21ca13c4-939c-40a8-94d9-99473cce4983" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="c8073858-29c3-4fd0-a243-f9fb8a0b216a" method="DELETE">
@@ -50,7 +59,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -69,7 +80,14 @@
     <con:request name="Request 1" id="df3f53ab-20a6-4380-9e07-92246f27b3bb" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="c678b378-cf41-4b8f-b2a7-9c57df75803d" method="PATCH">
@@ -78,7 +96,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -115,13 +135,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmplsStatusClassCode":"string","PmplsStatusCode":"string","PmplsStatusName":"string","PmplsVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="8817f9ac-f991-4698-a01b-a515075c29a4" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmplsStatusName":"Voided -test123"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

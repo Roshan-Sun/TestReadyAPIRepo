@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrapphistory/{Vuuid}" path="/hcm-rest-api/rest/1/hrapphistory/{Vuuid}" id="0e78a55c-2be8-4af4-a6e8-e749cea542b4" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrapphistory/{Vuuid}" path="/hcm-rest-api/rest/1/hrapphistory/{Vuuid}" id="0e78a55c-2be8-4af4-a6e8-e749cea542b4" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0e78a55c-2be8-4af4-a6e8-e749cea542b4fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapphistory%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -44,7 +46,14 @@
     <con:request name="Request 1" id="8e4e549c-aed9-4f80-8bdf-3cc552c02a16" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="d2aac83c-51c6-47a9-9d2d-456c69dbb3d2" method="PATCH">
@@ -53,7 +62,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -93,13 +104,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapphistDate":"string","HrapphistUser":"string","HrapphistVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="53cb20f1-40ea-46f8-a7f9-bd810844e2b3" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapphistComplNotes":"testing 1234"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

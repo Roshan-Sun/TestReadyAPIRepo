@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyctimeeqpint" path="/hcm-rest-api/rest/1/pyctimeeqpint" id="c35e517d-d321-4e92-8f93-f9f85514a79b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyctimeeqpint" path="/hcm-rest-api/rest/1/pyctimeeqpint" id="c35e517d-d321-4e92-8f93-f9f85514a79b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c35e517d-d321-4e92-8f93-f9f85514a79bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeeqpint</con:setting>
   </con:settings>
@@ -52,6 +52,11 @@
     <con:request name="Request 1" id="55ac3326-ffb0-4b95-8dcd-d8fa6bc14e40" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -109,12 +114,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmtrAccessCode":"string","EmtrCrewCode":"string","EmtrHdrJobCompCode":"string","EmtrDsrcCompCode":"string","EmtrHdrJobCode":"string","EmtrRefDate":"string","EmtrDistTypeCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string","EmtrJobCode":"string","EmtrRowEquipment":"string","EmtrRowEquipTranCode":"string","EmtrQty":"string","EmtrPostFlag":"string","EmtrVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="362caf22-2364-4e66-9c73-f5b7611ad58f" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

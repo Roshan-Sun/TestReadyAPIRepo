@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/bpaddresses" path="/sys-rest-api/rest/1/bpaddresses" id="0aec549c-ecb9-414d-b776-e603be5c35bf" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/bpaddresses" path="/sys-rest-api/rest/1/bpaddresses" id="0aec549c-ecb9-414d-b776-e603be5c35bf" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0aec549c-ecb9-414d-b776-e603be5c35bffileName">%2Fsys-rest-api%2Frest%2F1%2Fbpaddresses</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByBPCode or selectByBPCodeAddress</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>businessPartner</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Business Partner Name (selectByBPCode and selectByBPCodeAddress)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>addressType</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Address Type Code (selectByBPCodeAddress)</con:description>
       </con:parameter>
     </con:parameters>
@@ -75,7 +81,16 @@
     <con:request name="Request 1" id="61acad27-2227-4919-9ff1-63d581261e1b" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="businessPartner" value=""/>
+        <con:entry key="addressType" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b8eae1ee-ba1f-44a1-a42c-e2505620d0b9" method="POST">
@@ -139,12 +154,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BpadAddTypeCode":"string","BpadAddPrimaryFlag":"string","BpadBpCode":"string","BpadAdd1":"string","BpadVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="7181bf15-e097-41b9-bd19-979d209ef3e3" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BpadName2":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemployee/{Vuuid}" path="/hcm-rest-api/rest/1/pyemployee/{Vuuid}" id="9634f945-93d5-4073-813f-ac54dfb99e9a" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemployee/{Vuuid}" path="/hcm-rest-api/rest/1/pyemployee/{Vuuid}" id="9634f945-93d5-4073-813f-ac54dfb99e9a" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="9634f945-93d5-4073-813f-ac54dfb99e9afileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemployee%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -277,7 +279,14 @@
     <con:request name="Request 1" id="26eb6ec1-90e6-421c-8115-69fc96195a6a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

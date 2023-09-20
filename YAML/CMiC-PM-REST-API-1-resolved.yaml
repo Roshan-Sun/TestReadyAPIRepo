@@ -126,6 +126,29 @@ tags:
 - name: scschedphssegsum
   description: Subcontract Sechedule Phase Segment Sums
 paths:
+  /pm-rest-api/rest/1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all PM-REST-API metadata
+      description: All metadata about PM application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /pm-rest-api/rest/1/foreignbiditemimport:
     get:
       tags:

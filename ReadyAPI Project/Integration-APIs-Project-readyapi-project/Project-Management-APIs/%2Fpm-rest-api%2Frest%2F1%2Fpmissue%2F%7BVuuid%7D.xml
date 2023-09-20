@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmissue/{Vuuid}" path="/pm-rest-api/rest/1/pmissue/{Vuuid}" id="d255aab5-6b00-4192-ae53-aec9ef1a813e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmissue/{Vuuid}" path="/pm-rest-api/rest/1/pmissue/{Vuuid}" id="d255aab5-6b00-4192-ae53-aec9ef1a813e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d255aab5-6b00-4192-ae53-aec9ef1a813efileName">%2Fpm-rest-api%2Frest%2F1%2Fpmissue%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -65,7 +67,14 @@
     <con:request name="Request 1" id="857f69dc-7589-416f-839b-c5e7306268e6" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="0be6e0fb-5c93-477f-bddc-a756014b4ce7" method="DELETE">
@@ -74,7 +83,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -93,7 +104,14 @@
     <con:request name="Request 1" id="639183b0-563d-40cd-a45b-281262a6e574" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="8caa28bb-1bf9-4b58-b3bc-f8db267db546" method="PATCH">
@@ -102,7 +120,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -163,13 +183,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="ecfc2e54-0a69-4fbf-b855-825985c7c390" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmiDescription":"test123"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

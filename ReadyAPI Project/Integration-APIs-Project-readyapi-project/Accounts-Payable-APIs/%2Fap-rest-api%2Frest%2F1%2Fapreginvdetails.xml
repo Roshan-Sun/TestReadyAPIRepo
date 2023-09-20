@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apreginvdetails" path="/ap-rest-api/rest/1/apreginvdetails" id="1f6fa6a9-7912-420e-9843-3fdaa73fea3b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apreginvdetails" path="/ap-rest-api/rest/1/apreginvdetails" id="1f6fa6a9-7912-420e-9843-3fdaa73fea3b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1f6fa6a9-7912-420e-9843-3fdaa73fea3bfileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdetails</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompCode, selectByVenCode or selectByInvVUuid</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>finder=selectByInvCode;</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>finder to be used</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>invCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Code (selectByInvCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>venCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (selectByVenCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>invVUuid</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vuuid of the Invoice Header (selectByInvVUuid)</con:description>
       </con:parameter>
     </con:parameters>
@@ -130,7 +142,19 @@
     <con:request name="Request 1" id="86cebf71-3844-4b0a-a37a-103017005307" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="finder=selectByInvCode;" value=""/>
+        <con:entry key="invVUuid" value=""/>
+        <con:entry key="venCode" value=""/>
+        <con:entry key="invCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

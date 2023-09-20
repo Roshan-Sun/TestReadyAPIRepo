@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciitem/{Vuuid}" path="/ci-rest-api/rest/1/ciitem/{Vuuid}" id="877b1e16-95f2-4209-981a-df3833e44632" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciitem/{Vuuid}" path="/ci-rest-api/rest/1/ciitem/{Vuuid}" id="877b1e16-95f2-4209-981a-df3833e44632" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="877b1e16-95f2-4209-981a-df3833e44632fileName">%2Fci-rest-api%2Frest%2F1%2Fciitem%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -129,7 +131,14 @@
     <con:request name="Request 1" id="87a530bf-0fd4-4fb1-80cd-c7604dc7a195" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="d7971a14-42f4-4f2d-b1a7-855185a36f7c" method="DELETE">
@@ -138,7 +147,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -157,7 +168,14 @@
     <con:request name="Request 1" id="d5df3ce5-5636-46fe-ae02-599e4be492d3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="192c4ff4-e23e-4651-b8cf-9f21e93e7722" method="PATCH">
@@ -166,7 +184,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -291,13 +311,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiitemCompCode":"string","CiitemItemCode":"string","CiitemBbPriceOrPctCode":"string","CiitemWriAccCode":"string","CiitemRevAccCode":"string","CiitemInvAccCode":"string","CiitemSuspAccCode":"string","CiitemVarAccCode":"string","CiitemItemClassCode":"string","CiitemCostUpdateLevelCode":"string","CiitemCostMethCode":"string","CiitemSellPriceOrPctCode":"string","CiitemAdjAccCode":"string","CiitemWmCode":"string","CiitemSerialFlag":"string","CiitemMsAvailableFlag":"string","CiitemAutoBuildCmpFlag":"string","CiitemUsageCode":"string","CiitemAltWmAllowFlag":"string","CiitemLotCtrlFlag":"string","CiitemVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="c7a7bbcd-45c7-47e5-8278-9b42e148013d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiitemDefaultItemTypeCode":"Z"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

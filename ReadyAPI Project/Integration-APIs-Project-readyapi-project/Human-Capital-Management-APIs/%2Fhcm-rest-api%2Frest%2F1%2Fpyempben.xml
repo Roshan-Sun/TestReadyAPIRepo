@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyempben" path="/hcm-rest-api/rest/1/pyempben" id="8aba5a27-5ce8-4d35-a981-af15136d29df" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyempben" path="/hcm-rest-api/rest/1/pyempben" id="8aba5a27-5ce8-4d35-a981-af15136d29df" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8aba5a27-5ce8-4d35-a981-af15136d29dffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempben</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>BenCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Benefit Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PlanCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PloCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Option code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EffStartDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Benefit Effective Start Date (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EndDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Benefit Ending Date (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -95,7 +109,20 @@
     <con:request name="Request 1" id="27076442-d635-4bc1-9ba8-01618d88d864" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="PlanCode" value=""/>
+        <con:entry key="EmpNo" value=""/>
+        <con:entry key="BenCode" value=""/>
+        <con:entry key="PloCode" value=""/>
+        <con:entry key="EndDate" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="EffStartDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="dc0b6850-c0dc-49a2-84c7-bb0f41d5ce4c" method="POST">
@@ -159,12 +186,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmbPloName":"string","EmbPloCode":"string","EmbStartDate":"string","EmbCompCode":"string","EmbPrnCode":"string","EmbBenCode":"string","EmbPlanCode":"string","EmbPlanName":"string","EmbEmpNo":"string","EmbEffStartDate":"string","EmbLastUpdDate":"string","EmbUser":"string","EmbOutOfAreaFlag":"string","EmbOthInsurFlag":"string","EmbVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="a6c50e01-0545-4d21-b974-3b7c70a8433c" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmbComment":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

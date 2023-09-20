@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" path="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" id="a8c4a67a-a0f1-4b2b-890f-06389fdfb086" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" path="/cm-rest-api/rest/1/cmrfqextend/{Vuuid}" id="a8c4a67a-a0f1-4b2b-890f-06389fdfb086" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a8c4a67a-a0f1-4b2b-890f-06389fdfb086fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmrfqextend%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -56,7 +58,14 @@
     <con:request name="Request 1" id="b59b50c8-4a4e-4c18-b9b7-ed2a61d03556" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrelectedplans" path="/hcm-rest-api/rest/1/hrelectedplans" id="1975fd88-9914-4047-a590-82d32a74f099" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrelectedplans" path="/hcm-rest-api/rest/1/hrelectedplans" id="1975fd88-9914-4047-a590-82d32a74f099" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1975fd88-9914-4047-a590-82d32a74f099fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrelectedplans</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ElectedCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Elected Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PlanCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PloCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Option code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EffDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Effective Date (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EndDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Plan Ending Date (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -89,7 +103,20 @@
     <con:request name="Request 1" id="f0f3de44-4b42-45e2-b958-2f2f606b17b8" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="PlanCode" value=""/>
+        <con:entry key="EmpNo" value=""/>
+        <con:entry key="EffDate" value=""/>
+        <con:entry key="ElectedCode" value=""/>
+        <con:entry key="PloCode" value=""/>
+        <con:entry key="EndDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="a5e7b55a-7761-4774-ba46-17dad8a5651a" method="POST">
@@ -147,12 +174,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EldEmpNo":"1044217","EldCode":"BEN1","EldCompCode":"SWC","EldPrnCode":"AEWK","EldVendor":"1000-230","EldCodeType":"BN","EldPlanCode":"DEFAULT","EldPloCode":"DEFAULT","EldBdAmount":10,"EldEffectiveDate":"2022-11-30"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="57ac36fc-37cc-4ee8-b7b8-bb085aa54e6b" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EldVendorComments":"testing123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

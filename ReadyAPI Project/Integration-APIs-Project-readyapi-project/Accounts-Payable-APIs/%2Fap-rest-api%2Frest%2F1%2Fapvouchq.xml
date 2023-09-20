@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apvouchq" path="/ap-rest-api/rest/1/apvouchq" id="e63d0a36-f896-4181-96ba-fd4a20d4ae4c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apvouchq" path="/ap-rest-api/rest/1/apvouchq" id="e63d0a36-f896-4181-96ba-fd4a20d4ae4c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="e63d0a36-f896-4181-96ba-fd4a20d4ae4cfileName">%2Fap-rest-api%2Frest%2F1%2Fapvouchq</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectVouChq</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Cheque Number that was used when paying vouchers (selectVouChq)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>invCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Code that was being paid against the cheque (selectVouChq)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>venCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Code that was being paid againt the cheque (selectVouChq)</con:description>
       </con:parameter>
     </con:parameters>
@@ -58,7 +66,17 @@
     <con:request name="Request 1" id="76a332cd-9311-479f-be70-2c5f98fa2778" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="venCode" value=""/>
+        <con:entry key="invCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

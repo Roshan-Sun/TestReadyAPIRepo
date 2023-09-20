@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/issuepriority" path="/prm-rest-api/rest/1/issuepriority" id="85d0095e-e8a4-4046-8b41-a9f4d6fa2ba1" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/issuepriority" path="/prm-rest-api/rest/1/issuepriority" id="85d0095e-e8a4-4046-8b41-a9f4d6fa2ba1" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="85d0095e-e8a4-4046-8b41-a9f4d6fa2ba1fileName">%2Fprm-rest-api%2Frest%2F1%2Fissuepriority</con:setting>
   </con:settings>
@@ -30,6 +30,11 @@
     <con:request name="Request 1" id="a7213009-b441-4962-983b-3024d5ba7669" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -65,12 +70,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmipPriorityCode":"string","DmipDesc":"string","DmipPrmPriorityLevel":"integer","DmipVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="5d2774a5-8ca4-4f01-975b-7578436518a3" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmipDesc":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

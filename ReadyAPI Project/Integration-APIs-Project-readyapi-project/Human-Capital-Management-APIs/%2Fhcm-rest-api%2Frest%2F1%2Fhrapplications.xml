@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrapplications" path="/hcm-rest-api/rest/1/hrapplications" id="c5f1216b-60e9-4e5a-913d-839cd385ecd9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrapplications" path="/hcm-rest-api/rest/1/hrapplications" id="c5f1216b-60e9-4e5a-913d-839cd385ecd9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c5f1216b-60e9-4e5a-913d-839cd385ecd9fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapplications</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>ApplicationFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AplNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Application Number (ApplicationFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AplStatus</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Application Status (ApplicationFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TrdCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Trade Code (ApplicationFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -57,7 +65,17 @@
     <con:request name="Request 1" id="6ff16b3c-22bf-4ca6-ad33-57558f60ecfb" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="TrdCode" value=""/>
+        <con:entry key="AplStatus" value=""/>
+        <con:entry key="AplNoVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="78325e8d-0297-401c-8b5a-6823f742cf9a" method="POST">
@@ -98,12 +116,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapAplNo":"string","HrapReqCode":"string","HrapVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="6d699a5f-578b-4d82-bb7d-3782d03eaefd" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapNotes":"Hired by PY - yessir"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/glperactivitylog" path="/glrestapi/rest/v1/glperactivitylog" id="756d998f-5be5-4a42-b2d5-e02ae63e1466" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/glperactivitylog" path="/glrestapi/rest/v1/glperactivitylog" id="756d998f-5be5-4a42-b2d5-e02ae63e1466" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="756d998f-5be5-4a42-b2d5-e02ae63e1466fileName">%2Fglrestapi%2Frest%2Fv1%2Fglperactivitylog</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>GlPerActivityLogFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (GlPerActivityLogFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AccCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Code (GlPerActivityLogFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PerYr</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period Year (GlPerActivityLogFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -52,7 +60,17 @@
     <con:request name="Request 1" id="fa7ca571-383a-4beb-8ce6-7b7df0315669" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="PerYr" value=""/>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AccCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

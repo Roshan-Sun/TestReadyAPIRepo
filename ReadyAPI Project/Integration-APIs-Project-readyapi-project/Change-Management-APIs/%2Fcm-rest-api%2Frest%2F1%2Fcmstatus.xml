@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/cm-rest-api/rest/1/cmstatus" path="/cm-rest-api/rest/1/cmstatus" id="f553c190-42ea-4a94-945c-066640d9eb02" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/cm-rest-api/rest/1/cmstatus" path="/cm-rest-api/rest/1/cmstatus" id="f553c190-42ea-4a94-945c-066640d9eb02" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="f553c190-42ea-4a94-945c-066640d9eb02fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmstatus</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>CmStatusFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (CmStatusFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status code (CmStatusFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -58,7 +64,16 @@
     <con:request name="Request 1" id="ac40b8a4-8d9e-4a6f-8058-2dd31c45d9bb" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="StatusCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="3492e4d3-50e7-435d-8aa3-c5262e58e9b7" method="POST">
@@ -105,12 +120,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmstCompCode":"string","CmstStatCode":"string","CmstAtRiskFlag":"string","CmstInclWipRevFlag":"string","CmstInclWipCostFlag":"string","CmstVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="0991d1e4-77a6-4315-9437-d2abcb576de2" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmstStatName":"bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

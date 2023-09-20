@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/om-rest-api/rest/1/omopportunity" path="/om-rest-api/rest/1/omopportunity" id="876ea1c3-09e1-4b83-8c3c-0ca85c829802" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/om-rest-api/rest/1/omopportunity" path="/om-rest-api/rest/1/omopportunity" id="876ea1c3-09e1-4b83-8c3c-0ca85c829802" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="876ea1c3-09e1-4b83-8c3c-0ca85c829802fileName">%2Fom-rest-api%2Frest%2F1%2Fomopportunity</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompany or selectByCompProj</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompany and selectByCompProj)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>projectCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project Code (selectByCompany and selectByCompProj)</con:description>
       </con:parameter>
     </con:parameters>
@@ -200,7 +206,16 @@
     <con:request name="Request 1" id="89d64fa5-881f-4a04-9688-6f1ea047cef3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="projectCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="75c5f5f2-3482-48c7-ac5b-4f4626ad0fd9" method="POST">
@@ -389,12 +404,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"OmopvCompCode":"string","OmopvProjCompCode":"string","OmopvOppoCode":"string","OmopvOppoName":"string","OmopvPartnCode":"string","OmopVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="452eb24c-b22c-4ec5-8482-80ef2edd40c2" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"OmopvOppoName":"bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

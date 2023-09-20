@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" path="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" id="cc33cd72-9aee-43ac-9682-c37b5933f89d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" path="/ap-rest-api/rest/1/apreginvdet/{Vuuid}" id="cc33cd72-9aee-43ac-9682-c37b5933f89d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="cc33cd72-9aee-43ac-9682-c37b5933f89dfileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdet%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of the record</con:description>
       </con:parameter>
     </con:parameters>
@@ -94,7 +96,14 @@
     <con:request name="Request 1" id="cfc4ad4b-1652-4d59-af59-07f95871477f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

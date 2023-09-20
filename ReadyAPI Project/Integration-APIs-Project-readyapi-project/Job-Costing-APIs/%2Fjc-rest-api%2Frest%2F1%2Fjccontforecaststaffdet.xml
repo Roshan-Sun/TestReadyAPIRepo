@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jccontforecaststaffdet" path="/jc-rest-api/rest/1/jccontforecaststaffdet" id="d533b24f-4285-455d-b459-eb49ac266d3e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jccontforecaststaffdet" path="/jc-rest-api/rest/1/jccontforecaststaffdet" id="d533b24f-4285-455d-b459-eb49ac266d3e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d533b24f-4285-455d-b459-eb49ac266d3efileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecaststaffdet</con:setting>
   </con:settings>
@@ -76,6 +76,11 @@
     <con:request name="Request 1" id="3c6a0be1-b02e-48fd-a02e-d8239c28537e" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

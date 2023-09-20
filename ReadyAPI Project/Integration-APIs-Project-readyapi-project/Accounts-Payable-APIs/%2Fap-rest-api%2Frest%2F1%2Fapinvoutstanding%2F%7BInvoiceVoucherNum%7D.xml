@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" path="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" id="5e024d41-7fcc-43b6-8862-7f42b442fefb" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" path="/ap-rest-api/rest/1/apinvoutstanding/{InvoiceVoucherNum}" id="5e024d41-7fcc-43b6-8862-7f42b442fefb" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="5e024d41-7fcc-43b6-8862-7f42b442fefbfileName">%2Fap-rest-api%2Frest%2F1%2Fapinvoutstanding%2F%7BInvoiceVoucherNum%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>InvoiceVoucherNum</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Invoice Number to be retrieved</con:description>
       </con:parameter>
     </con:parameters>
@@ -42,7 +44,14 @@
     <con:request name="Request 1" id="c7aae57d-5dec-4d7e-8d2a-1ee871906d88" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="InvoiceVoucherNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

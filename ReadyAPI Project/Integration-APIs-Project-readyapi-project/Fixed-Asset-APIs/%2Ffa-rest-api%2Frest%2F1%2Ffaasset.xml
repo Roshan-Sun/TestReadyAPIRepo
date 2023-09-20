@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/fa-rest-api/rest/1/faasset" path="/fa-rest-api/rest/1/faasset" id="ab37b85a-556e-4d92-bfe4-1bc3b7ce486b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/fa-rest-api/rest/1/faasset" path="/fa-rest-api/rest/1/faasset" id="ab37b85a-556e-4d92-bfe4-1bc3b7ce486b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="ab37b85a-556e-4d92-bfe4-1bc3b7ce486bfileName">%2Ffa-rest-api%2Frest%2F1%2Ffaasset</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AssetType</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Asset Type (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CatCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Asset Category Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ActivationDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Asset Activation Date (YYYY-MM-dd - selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -148,7 +156,17 @@
     <con:request name="Request 1" id="c3efb886-f061-49e7-964b-d219b0cba35f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AssetType" value=""/>
+        <con:entry key="CatCode" value=""/>
+        <con:entry key="ActivationDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/cm-rest-api/rest/1/cmdetail" path="/cm-rest-api/rest/1/cmdetail" id="3ec90660-d0e3-456b-b21c-6ea8d47ff90d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/cm-rest-api/rest/1/cmdetail" path="/cm-rest-api/rest/1/cmdetail" id="3ec90660-d0e3-456b-b21c-6ea8d47ff90d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="3ec90660-d0e3-456b-b21c-6ea8d47ff90dfileName">%2Fcm-rest-api%2Frest%2F1%2Fcmdetail</con:setting>
   </con:settings>
@@ -10,52 +10,72 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCodes, selectByMaster or selectByProject</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>mastJobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Header Job code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>phaseCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Phase code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>categoryCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Category code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>changeCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PCI Change code (selectByCodes and selectByProject)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>cmMastVuuid</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Uuid of PCI Header (selectByMaster)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>projCompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByProject)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>projCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project code (selectByProject)</con:description>
       </con:parameter>
     </con:parameters>
@@ -161,7 +181,23 @@
     <con:request name="Request 1" id="fdf8cd89-0d20-40d0-ac7a-45925a4ab932" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="projCompCode" value=""/>
+        <con:entry key="mastJobCode" value=""/>
+        <con:entry key="projCode" value=""/>
+        <con:entry key="changeCode" value=""/>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="phaseCode" value=""/>
+        <con:entry key="categoryCode" value=""/>
+        <con:entry key="cmMastVuuid" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="49db13da-bbf4-48db-862d-87c8a9dfa9cc" method="POST">
@@ -276,12 +312,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmdCompCode":"string","CmdJobCode":"string","CmdMastJobCode":"string","CmdChgCode":"string","CmdPhsCode":"string","CmdCatCode":"string","CmdBillAmt":"float","CmdStatusCode":"string","CmdPostingFlag":"string","CmdVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="50978f67-78a9-4235-853b-b414c6d99ebe" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmdRefName":"bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

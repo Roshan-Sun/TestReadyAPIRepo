@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jcjobcostcatcodes" path="/jc-rest-api/rest/1/jcjobcostcatcodes" id="e7edf590-102a-43da-85fe-8e4c50c2365f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jcjobcostcatcodes" path="/jc-rest-api/rest/1/jcjobcostcatcodes" id="e7edf590-102a-43da-85fe-8e4c50c2365f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="e7edf590-102a-43da-85fe-8e4c50c2365ffileName">%2Fjc-rest-api%2Frest%2F1%2Fjcjobcostcatcodes</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectCostCatCodes or selectByphaseDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>costCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Cost code (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>phaseActiveFlag</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>cost code/phase active flag (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>categoryCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Category code (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>catActiveFlag</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>category active flag (selectCostCatCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>phaseDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (selectByphaseDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -182,7 +198,21 @@
     <con:request name="Request 1" id="b39d1b8d-d9d5-48b9-be02-e97f20ac4c49" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="costCode" value=""/>
+        <con:entry key="catActiveFlag" value=""/>
+        <con:entry key="phaseActiveFlag" value=""/>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="categoryCode" value=""/>
+        <con:entry key="phaseDate" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

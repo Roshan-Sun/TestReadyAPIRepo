@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/workbudget/{Vuuid}" path="/prm-rest-api/rest/1/workbudget/{Vuuid}" id="bc3218f3-7b25-4f02-b717-337cb4a0da7f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/workbudget/{Vuuid}" path="/prm-rest-api/rest/1/workbudget/{Vuuid}" id="bc3218f3-7b25-4f02-b717-337cb4a0da7f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="bc3218f3-7b25-4f02-b717-337cb4a0da7ffileName">%2Fprm-rest-api%2Frest%2F1%2Fworkbudget%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -85,7 +87,14 @@
     <con:request name="Request 1" id="c54d8d0c-af0f-45e9-93ca-b1da37092054" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

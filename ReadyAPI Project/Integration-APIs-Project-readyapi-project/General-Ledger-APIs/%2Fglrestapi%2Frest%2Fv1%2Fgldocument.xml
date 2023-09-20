@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/gldocument" path="/glrestapi/rest/v1/gldocument" id="a27722bc-9c1b-490d-aff4-cd4c120ea307" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/gldocument" path="/glrestapi/rest/v1/gldocument" id="a27722bc-9c1b-490d-aff4-cd4c120ea307" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a27722bc-9c1b-490d-aff4-cd4c120ea307fileName">%2Fglrestapi%2Frest%2Fv1%2Fgldocument</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectDocument</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>documentCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Document Code (selectDocument)</con:description>
       </con:parameter>
     </con:parameters>
@@ -74,7 +78,15 @@
     <con:request name="Request 1" id="edea6169-39c8-47f5-adf0-5992d5683209" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="documentCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="e7db22ce-8db8-40d2-ab5d-63f70bae96cd" method="POST">
@@ -142,6 +154,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DocCode":"string","DocName":"string","DocCatCode":"string","DocSeqtypeCode":"string","DocConschartCode":"string","DocVUuid":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

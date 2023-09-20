@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemppayhist" path="/hcm-rest-api/rest/1/pyemppayhist" id="a5a2f86f-387b-47dc-8138-d3dcffbe3f47" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemppayhist" path="/hcm-rest-api/rest/1/pyemppayhist" id="a5a2f86f-387b-47dc-8138-d3dcffbe3f47" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a5a2f86f-387b-47dc-8138-d3dcffbe3f47fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemppayhist</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectEmpPayHist</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectEmpPayHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>employeeNumber</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectEmpPayHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>prnCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Pay Run Code (selectEmpPayHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fromDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>From Date (selectEmpPayHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>toDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>To Date (selectEmpPayHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (selectEmpPayHist)</con:description>
       </con:parameter>
     </con:parameters>
@@ -205,7 +219,20 @@
     <con:request name="Request 1" id="86f7d7a0-0437-4648-8661-8e3677d78f50" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="fromDate" value=""/>
+        <con:entry key="toDate" value=""/>
+        <con:entry key="prnCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="employeeNumber" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="92c7771a-005d-4760-9685-e721b160f80b" method="POST">
@@ -379,12 +406,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PhyCompCode":"string","PhyEmpNo":"string","PhyPrnCode":"string","PhyPprPeriod":"string","PhyPprYear":"string","PhySeqNo":"string","PhyPayDate":"string","PhyLastUpdDate":"string","PhyTranCode":"string","PhyUser":"string","PhyTranType":"string","PhyVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="0392a796-b121-4ddb-bd94-03a4b81e6b20" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PhyComment":"testing 123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

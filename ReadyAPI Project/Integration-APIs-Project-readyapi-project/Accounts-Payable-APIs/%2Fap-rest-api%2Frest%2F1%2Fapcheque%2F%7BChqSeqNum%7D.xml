@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apcheque/{ChqSeqNum}" path="/ap-rest-api/rest/1/apcheque/{ChqSeqNum}" id="df1923a2-0f09-44ec-a527-30b1c996db2c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apcheque/{ChqSeqNum}" path="/ap-rest-api/rest/1/apcheque/{ChqSeqNum}" id="df1923a2-0f09-44ec-a527-30b1c996db2c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="df1923a2-0f09-44ec-a527-30b1c996db2cfileName">%2Fap-rest-api%2Frest%2F1%2Fapcheque%2F%7BChqSeqNum%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>ChqSeqNum</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Cheque sequence number</con:description>
       </con:parameter>
     </con:parameters>
@@ -76,7 +78,14 @@
     <con:request name="Request 1" id="df000db3-f04d-4f8d-93a6-21ac4eae0e83" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="ChqSeqNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

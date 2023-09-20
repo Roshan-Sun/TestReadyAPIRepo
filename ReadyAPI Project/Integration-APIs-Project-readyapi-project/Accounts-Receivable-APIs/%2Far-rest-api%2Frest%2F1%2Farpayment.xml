@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ar-rest-api/rest/1/arpayment" path="/ar-rest-api/rest/1/arpayment" id="8294444f-38b4-485e-bc87-48c8f4214c9b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ar-rest-api/rest/1/arpayment" path="/ar-rest-api/rest/1/arpayment" id="8294444f-38b4-485e-bc87-48c8f4214c9b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8294444f-38b4-485e-bc87-48c8f4214c9bfileName">%2Far-rest-api%2Frest%2F1%2Farpayment</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>ArPaymentFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (ArPaymentFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CustCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Customer Code (ArPaymentFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PayFromDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Start Date for search interval (ArPaymentFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PayToDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>End Date for search interval (ArPaymentFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -84,7 +94,18 @@
     <con:request name="Request 1" id="0689662a-bc59-4cdb-9ef4-8b0581e0a102" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="CustCode" value=""/>
+        <con:entry key="PayFromDate" value=""/>
+        <con:entry key="PayToDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

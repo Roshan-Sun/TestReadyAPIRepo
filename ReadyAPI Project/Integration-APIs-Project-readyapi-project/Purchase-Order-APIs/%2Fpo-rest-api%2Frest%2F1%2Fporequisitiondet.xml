@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/po-rest-api/rest/1/porequisitiondet" path="/po-rest-api/rest/1/porequisitiondet" id="5693f55f-f236-4d06-a0ea-38c160dde9d4" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/po-rest-api/rest/1/porequisitiondet" path="/po-rest-api/rest/1/porequisitiondet" id="5693f55f-f236-4d06-a0ea-38c160dde9d4" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="5693f55f-f236-4d06-a0ea-38c160dde9d4fileName">%2Fpo-rest-api%2Frest%2F1%2Fporequisitiondet</con:setting>
   </con:settings>
@@ -131,6 +131,11 @@
     <con:request name="Request 1" id="7a69e350-126d-449e-b0b3-9fa1592d7cc4" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -267,12 +272,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqdCompCode":"ZZ","PoreqdNum":"000001","PoreqdItmCode":"5033015","PoreqdWmCode":"GL","PoreqdReqQty":3,"PoreqdTypeCode":"I","PoreqdLineItmType":"I","PoreqdCiitemtypeCode":"2","PoreqdVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="4f985576-b7b0-452c-bcb3-3c57a2521fad" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqdIvFlag":"N"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

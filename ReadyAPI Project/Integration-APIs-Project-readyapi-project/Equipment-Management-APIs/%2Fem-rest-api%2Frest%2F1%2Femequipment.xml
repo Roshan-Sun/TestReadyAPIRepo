@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emequipment" path="/em-rest-api/rest/1/emequipment" id="a4803de7-dc34-44cc-ab23-ffa6f597157b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emequipment" path="/em-rest-api/rest/1/emequipment" id="a4803de7-dc34-44cc-ab23-ffa6f597157b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a4803de7-dc34-44cc-ab23-ffa6f597157bfileName">%2Fem-rest-api%2Frest%2F1%2Femequipment</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByEmeCompCode, selectByCompCodeAndDate, selectByEmeEqpCode, selectByEqpCodeAndDate, selectByEmeHomelocCode or selectByHomeLocCodeAndDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmeCompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByEmeCompCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompCodeAndDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmeEqpCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Equipment Code (selectByEmeEqpCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>eqpCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Equipment Code (selectByEqpCodeAndDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmeHomelocCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByEmeHomelocCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>homeLocCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByHomeLocCodeAndDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>selectDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Selection Date against create/update dates(selectByCompCodeAndDate, selectByEqpCodeAndDate and selectByHomeLocCodeAndDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -148,7 +164,21 @@
     <con:request name="Request 1" id="4c528976-aade-41a0-a58e-0e748b91d5e1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="eqpCode" value=""/>
+        <con:entry key="EmeEqpCode" value=""/>
+        <con:entry key="EmeHomelocCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="selectDate" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="EmeCompCode" value=""/>
+        <con:entry key="homeLocCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="29a1a215-e93c-4fa6-99b1-273859bbfe6a" method="POST">
@@ -344,12 +374,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="52ecfb02-ed02-4f42-a286-054d694c9520" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmeFastCatCode":"EQUIPMENT","EmeDesc":"test1234"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

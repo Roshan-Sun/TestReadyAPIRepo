@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/scmast" path="/pm-rest-api/rest/1/scmast" id="01fd58b7-8b51-4528-92a5-331ade34767f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/scmast" path="/pm-rest-api/rest/1/scmast" id="01fd58b7-8b51-4528-92a5-331ade34767f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="01fd58b7-8b51-4528-92a5-331ade34767ffileName">%2Fpm-rest-api%2Frest%2F1%2Fscmast</con:setting>
   </con:settings>
@@ -10,57 +10,79 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompany, selectByJob, selectByContract, selectByVendor or selectByPostDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompany, selectByJob, selectByContract, and selectByVendor)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JobCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Code (selectByJob)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract Code (selectByContract)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>VendorCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (selectByVendor)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PostDateGTEQ</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Subcontract Post Date (selectByPostDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChangeCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change Code (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChangeCodeVarN</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change Code to Exclude (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>InvEntryStateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Entry State Code (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status Code (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatCodeVarN</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Stat Code to Exclude (Any finder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -202,7 +224,24 @@
     <con:request name="Request 1" id="fcbdfe1b-f6c3-4113-828c-611906d94969" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="ChangeCodeVarN" value=""/>
+        <con:entry key="ContCodeVar" value=""/>
+        <con:entry key="StatCodeVarN" value=""/>
+        <con:entry key="JobCodeVar" value=""/>
+        <con:entry key="StatusCodeVar" value=""/>
+        <con:entry key="PostDateGTEQ" value=""/>
+        <con:entry key="ChangeCodeVar" value=""/>
+        <con:entry key="InvEntryStateVar" value=""/>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="VendorCodeVar" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="f34eaa74-5495-4237-9119-cfe63786ef95" method="POST">
@@ -353,12 +392,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ScmstCompCode":"string","ScmstJobCode":"string","ScmstVenCode":"string","ScmstContCode":"string","ScmstChgCode":"string","ScmstCurrCode":"string","ScmstSubcontrCode":"string","ScmstName":"string","ScmstBankDept":"string","ScmstBankAccount":"string","ScmstVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="ec753ab3-b1db-4a00-8451-648021dab124" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ScmstDesc":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

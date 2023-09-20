@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/rtigledgerwithyearperiod" path="/glrestapi/rest/v1/rtigledgerwithyearperiod" id="ff0f9fff-7973-4357-b94b-4575e958195e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/rtigledgerwithyearperiod" path="/glrestapi/rest/v1/rtigledgerwithyearperiod" id="ff0f9fff-7973-4357-b94b-4575e958195e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="ff0f9fff-7973-4357-b94b-4575e958195efileName">%2Fglrestapi%2Frest%2Fv1%2Frtigledgerwithyearperiod</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>glSummary</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (glSummary)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>departmentCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Code (glSummary)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>accountCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Code (glSummary)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fiscalYear</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Fiscal Year (glSummary)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fiscalQuarter</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Fiscal Quarter (glSummary)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fiscalPeriod</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Fiscal Period (glSummary)</con:description>
       </con:parameter>
     </con:parameters>
@@ -113,7 +127,20 @@
     <con:request name="Request 1" id="dfd0779f-9e02-496f-9b52-d785de42d094" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="accountCode" value=""/>
+        <con:entry key="fiscalQuarter" value=""/>
+        <con:entry key="departmentCode" value=""/>
+        <con:entry key="fiscalPeriod" value=""/>
+        <con:entry key="fiscalYear" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

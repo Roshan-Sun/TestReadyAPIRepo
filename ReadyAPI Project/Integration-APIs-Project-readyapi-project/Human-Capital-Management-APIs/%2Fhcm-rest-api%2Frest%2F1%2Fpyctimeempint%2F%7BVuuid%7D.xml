@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" path="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" id="964155e1-c794-48da-a1c8-cd35099d7be4" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" path="/hcm-rest-api/rest/1/pyctimeempint/{Vuuid}" id="964155e1-c794-48da-a1c8-cd35099d7be4" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="964155e1-c794-48da-a1c8-cd35099d7be4fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeempint%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -69,7 +71,14 @@
     <con:request name="Request 1" id="d1677384-8405-4d2a-9afc-50545a824c76" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="a13c2a93-0a2d-49e5-b56c-156ac633dc3e" method="PATCH">
@@ -78,7 +87,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -143,13 +154,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshAccessCode":"string","TshDocumentNo":"string","TshHdrJobCompCode":"string","TshWorkCompCode":"string","TshHdrJobCode":"string","TshDate":"string","TshDataType":"string","TshPhase":"string","TshCategory":"string","TshJobCode":"string","TshPrimaryEmpNo":"string","TshHoursCode":"string","TshSubmitFlag":"string","TshAprvStatus":"string","TshDay01":"integer","TshTimeIn1":"string","TshTimeOut1":"string","TshVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="69d1e94a-afd0-44a0-9364-9a0f2b007a5c" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

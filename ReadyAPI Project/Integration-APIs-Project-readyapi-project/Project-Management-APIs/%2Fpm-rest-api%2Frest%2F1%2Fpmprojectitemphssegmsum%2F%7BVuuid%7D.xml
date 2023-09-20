@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmprojectitemphssegmsum/{Vuuid}" path="/pm-rest-api/rest/1/pmprojectitemphssegmsum/{Vuuid}" id="0e2ad428-dec9-4534-8c45-cbd701e0f29c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmprojectitemphssegmsum/{Vuuid}" path="/pm-rest-api/rest/1/pmprojectitemphssegmsum/{Vuuid}" id="0e2ad428-dec9-4534-8c45-cbd701e0f29c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0e2ad428-dec9-4534-8c45-cbd701e0f29cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmprojectitemphssegmsum%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -44,7 +46,14 @@
     <con:request name="Request 1" id="85e39f7a-4498-45ee-bf4a-c998cec2cff0" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

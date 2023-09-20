@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmcomm/{Vuuid}" path="/pm-rest-api/rest/1/pmcomm/{Vuuid}" id="1a1b1b5f-1700-44b5-a29d-e6b2bdc7e4ff" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmcomm/{Vuuid}" path="/pm-rest-api/rest/1/pmcomm/{Vuuid}" id="1a1b1b5f-1700-44b5-a29d-e6b2bdc7e4ff" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1a1b1b5f-1700-44b5-a29d-e6b2bdc7e4fffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmcomm%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -67,7 +69,14 @@
     <con:request name="Request 1" id="93610351-cdb6-4ea9-97e0-3979344bb900" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="8c2872ac-f34c-4676-83dd-d4e9cf2daf32" method="DELETE">
@@ -76,7 +85,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -95,7 +106,14 @@
     <con:request name="Request 1" id="be9a39f2-3a9a-4d12-8bf6-8773a3f53b7f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="87cf5d66-f31e-4031-af3f-b82f00aa58f7" method="PATCH">
@@ -104,7 +122,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -167,13 +187,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmcomCompCode":"string","PmcomProjCode":"string","PmcomFollowupRequiredFlag":"string","PmcomFromPartnCode":"string","PmcomFromPartnTypeCode":"string","PmcomFromContactCode":"string","PmcomToPartnCode":"string","PmcomToPartnTypeCode":"string","PmcomToContactCode":"string","PmcomFollowupByPartnCode":"string","PmcomFollowupByPtCode":"string","PmcomFollowupByContctCode":"string","PmcomEnteredByPartnCode":"string","PmcomEnteredByPartnTCode":"string","PmcomEnteredByContactCode":"string","PmcomVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="b7c9b00d-f525-44ae-b5ab-fee63d075626" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmcomSubject":"testerino123"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

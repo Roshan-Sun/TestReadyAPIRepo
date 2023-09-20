@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jccontforecastarch" path="/jc-rest-api/rest/1/jccontforecastarch" id="b6e56556-2ff2-4bb9-a5c9-d6bb0bfc3ea4" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jccontforecastarch" path="/jc-rest-api/rest/1/jccontforecastarch" id="b6e56556-2ff2-4bb9-a5c9-d6bb0bfc3ea4" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="b6e56556-2ff2-4bb9-a5c9-d6bb0bfc3ea4fileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecastarch</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectCompany, selectJob, or selectPeriod</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectCompany, selectJob and selectPeriod)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>billingJobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectJob)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>year</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Forecasting year (selectPeriod)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>period</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Forecasting period (selectPeriod)</con:description>
       </con:parameter>
     </con:parameters>
@@ -229,7 +239,18 @@
     <con:request name="Request 1" id="5db17d9b-2f22-4723-a206-4ebd2b82b0d1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="billingJobCode" value=""/>
+        <con:entry key="period" value=""/>
+        <con:entry key="year" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

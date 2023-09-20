@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmissue" path="/pm-rest-api/rest/1/pmissue" id="c9eb889f-6df5-49a6-9af0-98cd85372f41" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmissue" path="/pm-rest-api/rest/1/pmissue" id="c9eb889f-6df5-49a6-9af0-98cd85372f41" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c9eb889f-6df5-49a6-9af0-98cd85372f41fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmissue</con:setting>
   </con:settings>
@@ -59,6 +59,11 @@
     <con:request name="Request 1" id="293a81d1-17c3-4fbd-96e0-b02dfb5dc06f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -123,12 +128,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmiTitle":"string","DmiCompCode":"string","DmiProjCode":"string","DmiUser":"string","DmiPartnCode":"string","DmiPartnTypeCode":"string","DmiContactCode":"string","DmiToPartnCode":"string","DmiToPartnTypeCode":"string","DmiToContactCode":"string","DmiRespPartnCode":"string","DmiRespPartnTypeCode":"string","DmiRespContactCode":"string","DmiStatusCode":"string","DmiInternalFlag":"string","DmiDate":"string","DmiVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="158c43d6-baa5-4c1e-8bde-370715ee8f14" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DmiDescription":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

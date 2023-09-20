@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ecm-rest-api/jersey/v1/uploadDoc/upload" path="/ecm-rest-api/jersey/v1/uploadDoc/upload" id="82e2926b-2025-4197-8f5f-021a3c6d6015" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ecm-rest-api/jersey/v1/uploadDoc/upload" path="/ecm-rest-api/jersey/v1/uploadDoc/upload" id="82e2926b-2025-4197-8f5f-021a3c6d6015" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="82e2926b-2025-4197-8f5f-021a3c6d6015fileName">%2Fecm-rest-api%2Fjersey%2Fv1%2FuploadDoc%2Fupload</con:setting>
   </con:settings>
@@ -29,6 +29,11 @@
     <con:request name="Request 1" id="3a89fecc-6c02-4cc7-89a1-e4802fd20570" mediaType="multipart/form-data">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

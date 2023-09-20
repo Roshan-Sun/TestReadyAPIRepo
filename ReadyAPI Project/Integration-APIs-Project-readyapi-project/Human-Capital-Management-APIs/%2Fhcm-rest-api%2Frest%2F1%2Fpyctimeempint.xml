@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyctimeempint" path="/hcm-rest-api/rest/1/pyctimeempint" id="0c18b8ae-0bed-401a-aecb-93386a73a42e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyctimeempint" path="/hcm-rest-api/rest/1/pyctimeempint" id="0c18b8ae-0bed-401a-aecb-93386a73a42e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0c18b8ae-0bed-401a-aecb-93386a73a42efileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimeempint</con:setting>
   </con:settings>
@@ -63,6 +63,11 @@
     <con:request name="Request 1" id="6c4919b2-97f5-4f5e-ad2d-86de005ce8b3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -131,12 +136,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshAccessCode":"string","TshDocumentNo":"string","TshHdrJobCompCode":"string","TshWorkCompCode":"string","TshHdrJobCode":"string","TshDate":"string","TshDataType":"string","TshPhase":"string","TshCategory":"string","TshJobCode":"string","TshPrimaryEmpNo":"string","TshHoursCode":"string","TshSubmitFlag":"string","TshAprvStatus":"string","TshDay01":"integer","TshTimeIn1":"string","TshTimeOut1":"string","TshVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="ead1a8d6-505e-4926-9d91-744accfdc8ae" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PycrResponsibleEmpNo":"GL-BW-HR18"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

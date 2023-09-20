@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pycomben/{Vuuid}" path="/hcm-rest-api/rest/1/pycomben/{Vuuid}" id="23cc46c6-b2a8-485b-b191-5a893401a00c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pycomben/{Vuuid}" path="/hcm-rest-api/rest/1/pycomben/{Vuuid}" id="23cc46c6-b2a8-485b-b191-5a893401a00c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="23cc46c6-b2a8-485b-b191-5a893401a00cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpycomben%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -74,7 +76,14 @@
     <con:request name="Request 1" id="aeb2d227-65c0-4f38-95e5-46cb3a137112" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="e1076ec2-6e99-4308-9380-37c9038c24da" method="PATCH">
@@ -83,7 +92,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -153,13 +164,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CobCompCode":"ZZ","CobPygCode":"MO","CobPrnCode":"WEEK","CobBenCode":"BENE","CobPlanCode":"SINGLE","CobPloCode":"T-FREE","CobStartDate":"2022-11-16","CobBenType":"D","CobDrAccCode":"1000.100","CobCrAccCode":"1000.600","CobFrqCode":1,"CobBenAmount":1,"CobRemittanceFrqCode":1}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="3faa5e38-1926-4457-aaa5-8d6bf3380272" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CobVendor":"ZZ-ACME"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

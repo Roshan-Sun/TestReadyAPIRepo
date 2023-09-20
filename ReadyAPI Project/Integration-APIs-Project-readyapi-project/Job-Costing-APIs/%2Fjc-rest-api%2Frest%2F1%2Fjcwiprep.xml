@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jcwiprep" path="/jc-rest-api/rest/1/jcwiprep" id="384fb3cf-4b45-49ea-ba6b-a5e7635c5ddb" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jcwiprep" path="/jc-rest-api/rest/1/jcwiprep" id="384fb3cf-4b45-49ea-ba6b-a5e7635c5ddb" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="384fb3cf-4b45-49ea-ba6b-a5e7635c5ddbfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcwiprep</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectJcWipRep</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fromJob</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code to start interval (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>toJob</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code to end interval (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobStat</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job status (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>depCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Code (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>currYr</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Year to run report on (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>currPer</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period to run report on (selectJcWipRep)</con:description>
       </con:parameter>
       <con:parameter>
@@ -85,7 +101,9 @@
       </con:parameter>
       <con:parameter>
         <con:name>jobPickList</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Picklist</con:description>
       </con:parameter>
     </con:parameters>
@@ -136,7 +154,27 @@
     <con:request name="Request 1" id="29115f30-a566-40ec-86de-7f4d8e84888a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="currPer" value=""/>
+        <con:entry key="roundDollars" value="N"/>
+        <con:entry key="fromJob" value=""/>
+        <con:entry key="includeActiveJob" value="Y"/>
+        <con:entry key="includeAdjustedJob" value="Y"/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="depCode" value=""/>
+        <con:entry key="toJob" value=""/>
+        <con:entry key="includeNoWipJob" value="N"/>
+        <con:entry key="jobStat" value=""/>
+        <con:entry key="jobPickList" value=""/>
+        <con:entry key="currYr" value=""/>
+        <con:entry key="showCostBillAmnt" value="N"/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

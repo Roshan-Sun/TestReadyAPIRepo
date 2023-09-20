@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/scsched" path="/pm-rest-api/rest/1/scsched" id="ebe3b896-dce7-456a-acb0-8e166a4cb0d3" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/scsched" path="/pm-rest-api/rest/1/scsched" id="ebe3b896-dce7-456a-acb0-8e166a4cb0d3" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="ebe3b896-dce7-456a-acb0-8e166a4cb0d3fileName">%2Fpm-rest-api%2Frest%2F1%2Fscsched</con:setting>
   </con:settings>
@@ -10,47 +10,65 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectSOV</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JobCodeSOV</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Code (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract Code (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>VendorCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CreateDateGTEQ</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Subcontract Detail Create Date (selectSOV - YYYY-MM-DD)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCodeVarIn</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract Codes -- > Code values for specific subcontracts; multiple codes separated by a comma "," (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChangeCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change Code (selectSOV)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChangeCodeVarN</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change Code to Exclude (selectSOV)</con:description>
       </con:parameter>
     </con:parameters>
@@ -130,7 +148,22 @@
     <con:request name="Request 1" id="ec4d1e2a-f4ce-4b74-b978-ea71cb84e9c1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="ChangeCodeVarN" value=""/>
+        <con:entry key="JobCodeSOV" value=""/>
+        <con:entry key="ContCodeVar" value=""/>
+        <con:entry key="ContCodeVarIn" value=""/>
+        <con:entry key="CreateDateGTEQ" value=""/>
+        <con:entry key="ChangeCodeVar" value=""/>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="VendorCodeVar" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="84956496-6637-4a34-8744-d9a7fb724be9" method="POST">
@@ -219,12 +252,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ScschCompCode":"string","ScschJobCode":"string","ScschVenCode":"string","ScschContCode":"string","ScschChgCode":"string","ScschTaskCode":"string","ScschPhsCode":"string","ScschCatCode":"string","ScschWmCode":"string","ScschAmt":"float","ScschVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="5b752a9d-df2c-4f50-84e1-da9218a7fc09" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ScschLongDesc":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

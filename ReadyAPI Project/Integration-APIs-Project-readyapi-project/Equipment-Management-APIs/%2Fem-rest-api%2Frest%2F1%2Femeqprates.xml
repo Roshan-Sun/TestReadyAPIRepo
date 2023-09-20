@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emeqprates" path="/em-rest-api/rest/1/emeqprates" id="aa69ada8-7db9-4151-9311-d461897d736d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emeqprates" path="/em-rest-api/rest/1/emeqprates" id="aa69ada8-7db9-4151-9311-d461897d736d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="aa69ada8-7db9-4151-9311-d461897d736dfileName">%2Fem-rest-api%2Frest%2F1%2Femeqprates</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectEqpRates or selectByAuditDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectEqpRates)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TranCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Transaction Code (selectEqpRates)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StartDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Starting Date  (selectEqpRates)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EndDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Ending Date (selectEqpRates)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to compare against create/update dates (selectByAuditDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -73,7 +85,19 @@
     <con:request name="Request 1" id="bdee8bed-91fc-41e2-bbc8-145983f34fdf" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="StartDate" value=""/>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="TranCode" value=""/>
+        <con:entry key="EndDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

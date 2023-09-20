@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyctimecreweqp" path="/hcm-rest-api/rest/1/pyctimecreweqp" id="eee50f1a-3dd7-4df3-814d-25027144fd49" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyctimecreweqp" path="/hcm-rest-api/rest/1/pyctimecreweqp" id="eee50f1a-3dd7-4df3-814d-25027144fd49" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="eee50f1a-3dd7-4df3-814d-25027144fd49fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyctimecreweqp</con:setting>
   </con:settings>
@@ -38,6 +38,11 @@
     <con:request name="Request 1" id="062c4196-1a39-49e5-8991-bdc4800b11db" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -81,6 +86,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CrweAccessCode":"MASTER","CrweCrewCode":"TEST-01","CrweEqpCode":"TRAIL1","CrweStartDate":"2021-09-08T09:27:53-04:00","CrweVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

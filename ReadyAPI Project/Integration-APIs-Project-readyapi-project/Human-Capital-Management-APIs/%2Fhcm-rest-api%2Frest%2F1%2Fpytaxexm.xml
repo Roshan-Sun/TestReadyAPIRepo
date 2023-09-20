@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pytaxexm" path="/hcm-rest-api/rest/1/pytaxexm" id="640daf77-af95-42a7-a6c1-879f60989d74" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pytaxexm" path="/hcm-rest-api/rest/1/pytaxexm" id="640daf77-af95-42a7-a6c1-879f60989d74" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="640daf77-af95-42a7-a6c1-879f60989d74fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpytaxexm</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PyTaxExmFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (PyTaxExmFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StateCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>State Code (PyTaxExmFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -61,7 +67,16 @@
     <con:request name="Request 1" id="29e45509-896e-4663-9a6a-a41dcdb07876" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="EmpNoVar" value=""/>
+        <con:entry key="StateCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="4ba75514-118d-4661-89d5-78eaeb1b4cd0" method="POST">
@@ -111,12 +126,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TxxEmpNo":"string","TxxStateCode":"string","TxxEffectiveDate":"string","TxxWrlCode":"string","TxxLastUpdDate":"string","TxxUser":"string","TxxVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="f3d9ea40-57af-4c4f-83dc-2e80760e6bc8" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TxxOtherDeductionAmt":10}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

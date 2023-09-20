@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/prmtask" path="/prm-rest-api/rest/1/prmtask" id="3105b866-635b-4a00-b84f-fba1bd1a0200" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/prmtask" path="/prm-rest-api/rest/1/prmtask" id="3105b866-635b-4a00-b84f-fba1bd1a0200" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="3105b866-635b-4a00-b84f-fba1bd1a0200fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmtask</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -75,7 +79,15 @@
     <con:request name="Request 1" id="f2d5b7ae-c346-4a66-950e-7b2cbcdd591e" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="f287eb48-fa1c-41fb-bd31-f604399d79fb" method="POST">
@@ -144,12 +156,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TaskTitle":"string","TaskCode":"string","TaskPtgtType":"string","TaskActiveFlag":"string","TaskGroupTaskFlag":"string","TaskVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="c8712b07-463b-4866-ae43-704e73fd46e3" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TaskDescription":"bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

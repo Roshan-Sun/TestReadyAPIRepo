@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/glrestapi/rest/v1/describe" path="/glrestapi/rest/v1/describe" id="975e8633-e375-4cfe-b7be-2c02ad100faa" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="975e8633-e375-4cfe-b7be-2c02ad100faafileName">%2Fglrestapi%2Frest%2Fv1%2Fdescribe</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Describe Application" id="082f2555-5a3a-428a-8ad2-8c84bd4bcd8d" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="82c4a29c-6e03-42ad-be38-8355527c323d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>nullnull</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

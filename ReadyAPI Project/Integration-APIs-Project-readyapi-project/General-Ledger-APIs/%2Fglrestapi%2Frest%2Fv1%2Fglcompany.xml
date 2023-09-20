@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/glcompany" path="/glrestapi/rest/v1/glcompany" id="20b06cb7-809a-4812-8358-9fa1d72515a4" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/glcompany" path="/glrestapi/rest/v1/glcompany" id="20b06cb7-809a-4812-8358-9fa1d72515a4" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="20b06cb7-809a-4812-8358-9fa1d72515a4fileName">%2Fglrestapi%2Frest%2Fv1%2Fglcompany</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectCompany or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectCompany)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -135,7 +141,16 @@
     <con:request name="Request 1" id="4f1596f5-423b-41ac-bef4-0fae5902b2da" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

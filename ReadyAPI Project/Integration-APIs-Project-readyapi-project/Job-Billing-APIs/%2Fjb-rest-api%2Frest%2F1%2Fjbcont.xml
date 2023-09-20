@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jb-rest-api/rest/1/jbcont" path="/jb-rest-api/rest/1/jbcont" id="37fe9746-0281-45bd-b29a-f04e25f14e58" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jb-rest-api/rest/1/jbcont" path="/jb-rest-api/rest/1/jbcont" id="37fe9746-0281-45bd-b29a-f04e25f14e58" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="37fe9746-0281-45bd-b29a-f04e25f14e58fileName">%2Fjb-rest-api%2Frest%2F1%2Fjbcont</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to check against create/update dates (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -160,7 +168,17 @@
     <con:request name="Request 1" id="0d972017-144d-45a2-bb43-fba4f46c42f4" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="ContCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

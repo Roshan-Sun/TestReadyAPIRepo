@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/om-rest-api/rest/1/omcompetitor" path="/om-rest-api/rest/1/omcompetitor" id="615a54d9-077b-425a-ae42-ba58c7eccea8" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/om-rest-api/rest/1/omcompetitor" path="/om-rest-api/rest/1/omcompetitor" id="615a54d9-077b-425a-ae42-ba58c7eccea8" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="615a54d9-077b-425a-ae42-ba58c7eccea8fileName">%2Fom-rest-api%2Frest%2F1%2Fomcompetitor</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectCompetitor</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>competitorCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Competitor Code (selectCompetitor)</con:description>
       </con:parameter>
     </con:parameters>
@@ -53,7 +57,15 @@
     <con:request name="Request 1" id="baedfb6c-e7c1-4397-806b-1c29c196e1cb" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="competitorCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="f8ed7dc1-a76f-4184-8a8d-873e168767ea" method="POST">
@@ -100,12 +112,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"OmcCompetitorCode":"string","OmcName":"string","OmcVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="87c224cc-d7cc-47c6-b2b3-2f297bd59bba" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"OmcWeaknesses":"Mostly Medical - test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

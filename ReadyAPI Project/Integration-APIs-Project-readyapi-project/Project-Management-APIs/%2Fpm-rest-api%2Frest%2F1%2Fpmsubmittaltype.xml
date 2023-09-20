@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmsubmittaltype" path="/pm-rest-api/rest/1/pmsubmittaltype" id="b6fb2677-487e-4e15-99cc-aee8cfdcda9f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmsubmittaltype" path="/pm-rest-api/rest/1/pmsubmittaltype" id="b6fb2677-487e-4e15-99cc-aee8cfdcda9f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="b6fb2677-487e-4e15-99cc-aee8cfdcda9ffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmsubmittaltype</con:setting>
   </con:settings>
@@ -31,6 +31,11 @@
     <con:request name="Request 1" id="7bac52ec-79c4-43bd-8eab-8d1f67b69480" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -67,12 +72,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmsmtTypeCode":"string","PmsmtTypeDesc":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="1e41417c-e371-4dea-bd48-8384a6010a9d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmsmtTypeDesc":"Warranty - test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

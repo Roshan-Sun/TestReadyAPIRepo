@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciitemhdr" path="/ci-rest-api/rest/1/ciitemhdr" id="ff1b6695-40cf-41c9-ab4d-21ef55164939" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciitemhdr" path="/ci-rest-api/rest/1/ciitemhdr" id="ff1b6695-40cf-41c9-ab4d-21ef55164939" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="ff1b6695-40cf-41c9-ab4d-21ef55164939fileName">%2Fci-rest-api%2Frest%2F1%2Fciitemhdr</con:setting>
   </con:settings>
@@ -91,6 +91,11 @@
     <con:request name="Request 1" id="9146175f-cc00-4799-bb8b-1c1890068ffd" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -187,12 +192,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CithCompCode":"string","CithItemCode":"string","CithItemTypeCode":"string","CithVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="85136ac2-622a-4599-b6f0-284f8fd7ffcd" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CithMarketPriceAmt":1}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

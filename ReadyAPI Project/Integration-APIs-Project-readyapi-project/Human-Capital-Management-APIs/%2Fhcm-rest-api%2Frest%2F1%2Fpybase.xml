@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pybase" path="/hcm-rest-api/rest/1/pybase" id="0088599a-8d12-4bcd-8402-a272995f712a" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pybase" path="/hcm-rest-api/rest/1/pybase" id="0088599a-8d12-4bcd-8402-a272995f712a" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0088599a-8d12-4bcd-8402-a272995f712afileName">%2Fhcm-rest-api%2Frest%2F1%2Fpybase</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findBenefits, findDeductions or findByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to be checked for (findByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -47,7 +51,15 @@
     <con:request name="Request 1" id="90da2bc5-b94a-4755-b36f-841b926ba838" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

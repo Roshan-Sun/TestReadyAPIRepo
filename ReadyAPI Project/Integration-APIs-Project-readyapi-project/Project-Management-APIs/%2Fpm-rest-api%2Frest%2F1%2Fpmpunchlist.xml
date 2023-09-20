@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmpunchlist" path="/pm-rest-api/rest/1/pmpunchlist" id="125c9fd0-f87a-446c-991b-3ef6d98e5e03" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmpunchlist" path="/pm-rest-api/rest/1/pmpunchlist" id="125c9fd0-f87a-446c-991b-3ef6d98e5e03" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="125c9fd0-f87a-446c-991b-3ef6d98e5e03fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchlist</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompany</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompany)</con:description>
       </con:parameter>
     </con:parameters>
@@ -68,7 +72,15 @@
     <con:request name="Request 1" id="3e78335b-b228-4edc-8510-d7697f88219f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

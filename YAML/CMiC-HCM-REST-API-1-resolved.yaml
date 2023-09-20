@@ -144,6 +144,29 @@ tags:
 - name: vertexloccity
   description: Vertex Location Cities
 paths:
+  /hcm-rest-api/rest/1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all HCM-REST-API metadata
+      description: All metadata about HCM application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /hcm-rest-api/rest/1/babank:
     get:
       tags:

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/gltrialbalancebyacct" path="/glrestapi/rest/v1/gltrialbalancebyacct" id="3b3821b0-a6ab-4034-a7d2-c9e806dac5a6" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/gltrialbalancebyacct" path="/glrestapi/rest/v1/gltrialbalancebyacct" id="3b3821b0-a6ab-4034-a7d2-c9e806dac5a6" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="3b3821b0-a6ab-4034-a7d2-c9e806dac5a6fileName">%2Fglrestapi%2Frest%2Fv1%2Fgltrialbalancebyacct</con:setting>
   </con:settings>
@@ -10,77 +10,107 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>gl2000</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>acctPickList</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Pick List (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyGroupCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Group Code (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>deptDetail</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Detail (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>deptPickList</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Pick List (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fiscalYear</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Fiscal Year (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fromAcctCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Code to start search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>toAcctCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Code to end search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fromDeptCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Code to start search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>toDeptCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Code to end search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fromPeriod</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period to start search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>toPeriod</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period to end search interval (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>homeCurrency</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Currency Type (gl2000)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>showZeroFlag</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to show zero records (gl2000)</con:description>
       </con:parameter>
     </con:parameters>
@@ -129,7 +159,28 @@
     <con:request name="Request 1" id="01eb51ce-c9cd-4fb8-894d-dbbe4f1a0e17" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="toAcctCode" value=""/>
+        <con:entry key="deptPickList" value=""/>
+        <con:entry key="deptDetail" value=""/>
+        <con:entry key="fromPeriod" value=""/>
+        <con:entry key="fromAcctCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="homeCurrency" value=""/>
+        <con:entry key="companyGroupCode" value=""/>
+        <con:entry key="showZeroFlag" value=""/>
+        <con:entry key="toDeptCode" value=""/>
+        <con:entry key="toPeriod" value=""/>
+        <con:entry key="fiscalYear" value=""/>
+        <con:entry key="fromDeptCode" value=""/>
+        <con:entry key="acctPickList" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

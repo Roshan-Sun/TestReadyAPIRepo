@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrapplicants" path="/hcm-rest-api/rest/1/hrapplicants" id="1256ac9b-4932-4a3a-8a31-775313a01d73" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrapplicants" path="/hcm-rest-api/rest/1/hrapplicants" id="1256ac9b-4932-4a3a-8a31-775313a01d73" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1256ac9b-4932-4a3a-8a31-775313a01d73fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapplicants</con:setting>
   </con:settings>
@@ -10,57 +10,79 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByNameAndNo or ApplicantFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>FirstName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First Name (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>MiddleName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Middle Name (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>LastName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Last Name (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>SinNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>SIN Number (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ApplicantNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Applicant Number (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ApplicantStatus</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Applicant Status (selectByNameAndNo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>FirstNameVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First Name (ApplicantFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>LastNameVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Last Name (ApplicantFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmailVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Email Address (ApplicantFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CellPhoneVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Cell Phone Number (ApplicantFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -162,7 +184,24 @@
     <con:request name="Request 1" id="1a95d47c-1e63-4737-bbda-43c5e902805d" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="EmailVar" value=""/>
+        <con:entry key="FirstName" value=""/>
+        <con:entry key="ApplicantNo" value=""/>
+        <con:entry key="SinNo" value=""/>
+        <con:entry key="FirstNameVar" value=""/>
+        <con:entry key="LastName" value=""/>
+        <con:entry key="CellPhoneVar" value=""/>
+        <con:entry key="MiddleName" value=""/>
+        <con:entry key="LastNameVar" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="ApplicantStatus" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="6054b618-8500-4693-aa43-bceb48e3b8bf" method="POST">
@@ -273,12 +312,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"AplTravelFlag":"string","AplLastUpdDate":"string","ControlConCompCode":"string","AplUser":"string","AplType":"string","AplFirstName":"string","AplLastName":"string","AplEmailAddress":"string","AplCellPhone":"string","AplSex":"string","AplEthnicCode":"string","AplMaritalStatus":"string","AplResidentStatus":"string","AplMilitaryStatus":"string","AplDominantHand":"string","AplApplyDate":"string","AplVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="f99a9ebf-af73-44ac-8c0f-4fff9d515b5a" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"AplExpectedSalary":1}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

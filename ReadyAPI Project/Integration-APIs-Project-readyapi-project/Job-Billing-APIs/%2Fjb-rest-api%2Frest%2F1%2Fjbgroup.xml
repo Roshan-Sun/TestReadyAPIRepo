@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jb-rest-api/rest/1/jbgroup" path="/jb-rest-api/rest/1/jbgroup" id="664f6a20-ca4d-465c-a00f-cdeca329e5d3" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jb-rest-api/rest/1/jbgroup" path="/jb-rest-api/rest/1/jbgroup" id="664f6a20-ca4d-465c-a00f-cdeca329e5d3" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="664f6a20-ca4d-465c-a00f-cdeca329e5d3fileName">%2Fjb-rest-api%2Frest%2F1%2Fjbgroup</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>GroupCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Group code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>GroupNum</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Group number (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -64,7 +74,18 @@
     <con:request name="Request 1" id="4e884568-56dd-4801-870b-bbfb6679c86f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="ContCode" value=""/>
+        <con:entry key="GroupCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="GroupNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b0fc7154-3ce7-40e6-b14f-270d76b49163" method="POST">
@@ -107,12 +128,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JbgCompCode":"string","JbgContCode":"string","JbgGroupNum":"integer","JbgGroupCode":"string","JbgName":"string","JbgGroupPremiumSplitFlag":"string","JbgVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="d0f5e88c-ffb9-4d4d-b164-739c46924484" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JbgName":"bobicus"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

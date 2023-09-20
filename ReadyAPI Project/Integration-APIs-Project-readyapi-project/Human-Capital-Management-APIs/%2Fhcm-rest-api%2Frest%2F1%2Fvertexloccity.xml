@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/vertexloccity" path="/hcm-rest-api/rest/1/vertexloccity" id="7a9c203d-260b-426a-bbcb-6c135afb368e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/vertexloccity" path="/hcm-rest-api/rest/1/vertexloccity" id="7a9c203d-260b-426a-bbcb-6c135afb368e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="7a9c203d-260b-426a-bbcb-6c135afb368efileName">%2Fhcm-rest-api%2Frest%2F1%2Fvertexloccity</con:setting>
   </con:settings>
@@ -10,62 +10,86 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>VertexLocCityFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AbbrevCityVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Abbreviated City (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ApofPoindVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>ApofPoind (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CityNameTypeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>City Name Type (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompressedCityVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Compressed City (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>GeocityVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Geographic City (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>GeocountyVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Geographic County (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>GeostateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Geographic State (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>NameCityVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>City Name (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>UpdFlg</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Updated Flag (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ZipCodeStartVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Starting of Zip Code Interval (VertexLocCityFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ZipCodeEndVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Ending of Zip Code Interval (VertexLocCityFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -97,7 +121,25 @@
     <con:request name="Request 1" id="8281b798-5ca5-436b-aa43-452ffe9876b3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AbbrevCityVar" value=""/>
+        <con:entry key="CityNameTypeVar" value=""/>
+        <con:entry key="GeostateVar" value=""/>
+        <con:entry key="NameCityVar" value=""/>
+        <con:entry key="GeocountyVar" value=""/>
+        <con:entry key="GeocityVar" value=""/>
+        <con:entry key="CompressedCityVar" value=""/>
+        <con:entry key="UpdFlg" value=""/>
+        <con:entry key="ZipCodeEndVar" value=""/>
+        <con:entry key="ApofPoindVar" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="ZipCodeStartVar" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

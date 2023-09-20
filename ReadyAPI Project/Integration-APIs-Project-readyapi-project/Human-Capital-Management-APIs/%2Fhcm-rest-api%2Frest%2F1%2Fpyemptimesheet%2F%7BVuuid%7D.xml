@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" path="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" id="1d4f5ef3-5ed2-40be-b7ae-37205ff6aa12" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" path="/hcm-rest-api/rest/1/pyemptimesheet/{Vuuid}" id="1d4f5ef3-5ed2-40be-b7ae-37205ff6aa12" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1d4f5ef3-5ed2-40be-b7ae-37205ff6aa12fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemptimesheet%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -64,7 +66,14 @@
     <con:request name="Request 1" id="f9a547a0-f502-4c44-9c79-6ae0bc1389b1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="57ab68e0-fcd2-4696-a541-98264c28d09f" method="PATCH">
@@ -73,7 +82,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID of Row</con:description>
       </con:parameter>
     </con:parameters>
@@ -138,19 +149,37 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshCompCode":"string","TshEmpNo":"string","TshPrnCode":"string","TshPprYear":"integer","TshPprPeriod":"integer","TshDate":"string","TshTypeCode":"string","TshJobdeptwoId":"string","TshPhsacctwiId":"string","TshCatexpId":"string","TshNormalHours":"integer","TshVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="2717035b-35bd-47b2-bcc6-4ec47893caa8" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshDocumentNo":"TEST123"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Batch POST Example" id="f545d4a3-021a-41a7-a353-09c90b04b141" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-23","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":3,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB82","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}},{"id":"part2","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-24","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":4,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB83","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

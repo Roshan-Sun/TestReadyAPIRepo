@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jccontforecaststaff" path="/jc-rest-api/rest/1/jccontforecaststaff" id="2643025a-1a7b-46d4-adcf-1e1b685ad739" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jccontforecaststaff" path="/jc-rest-api/rest/1/jccontforecaststaff" id="2643025a-1a7b-46d4-adcf-1e1b685ad739" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2643025a-1a7b-46d4-adcf-1e1b685ad739fileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecaststaff</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract code</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>YearPer</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Forecasting year</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit date to check against (create/update dates)</con:description>
       </con:parameter>
     </con:parameters>
@@ -137,7 +147,18 @@
     <con:request name="Request 1" id="c92fdaa9-66cb-4ced-b9e8-4a091fb48282" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="YearPer" value=""/>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="ContCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

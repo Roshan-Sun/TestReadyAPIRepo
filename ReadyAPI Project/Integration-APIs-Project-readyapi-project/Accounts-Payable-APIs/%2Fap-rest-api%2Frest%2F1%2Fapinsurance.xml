@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apinsurance" path="/ap-rest-api/rest/1/apinsurance" id="e399097b-7072-44a6-95a8-18345b5d8379" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apinsurance" path="/ap-rest-api/rest/1/apinsurance" id="e399097b-7072-44a6-95a8-18345b5d8379" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="e399097b-7072-44a6-95a8-18345b5d8379fileName">%2Fap-rest-api%2Frest%2F1%2Fapinsurance</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectInsurance</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectInsurance)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectInsurance)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>vendorCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor code (selectInsurance)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>complType</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Compliance Type -- > Code value for specific type of compliance (selectInsurance)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>complTypeIN</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Compliance Type -- > Code value for specific type of compliance; multiple types separated by a comma "," (selectInsurance)</con:description>
       </con:parameter>
     </con:parameters>
@@ -90,7 +102,19 @@
     <con:request name="Request 1" id="483935b6-9ebd-4fee-acee-156a1f37269e" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="complTypeIN" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="complType" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="vendorCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="create-a-ap-insurance" id="86eb873e-0090-4785-8534-b80fbb7d4826" method="POST">
@@ -154,6 +178,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"InsComplType":"string","InsCompCode":"CMICINC","InsInscompCode":"string","InsVenCode":"string","InsCoverTypeCode":"string","InsVouNum":"integer","InsCertNum":"string","InsAmt":1.01,"InsVUuid":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

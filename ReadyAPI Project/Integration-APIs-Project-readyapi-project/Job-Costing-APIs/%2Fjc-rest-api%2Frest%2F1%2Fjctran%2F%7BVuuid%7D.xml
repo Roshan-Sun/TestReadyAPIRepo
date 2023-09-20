@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jctran/{Vuuid}" path="/jc-rest-api/rest/1/jctran/{Vuuid}" id="c7718c69-f982-4ac3-b33e-875f2a67ead8" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jctran/{Vuuid}" path="/jc-rest-api/rest/1/jctran/{Vuuid}" id="c7718c69-f982-4ac3-b33e-875f2a67ead8" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c7718c69-f982-4ac3-b33e-875f2a67ead8fileName">%2Fjc-rest-api%2Frest%2F1%2Fjctran%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>expand</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>JctrandViewObj - applying this object displays transaction details</con:description>
       </con:parameter>
     </con:parameters>
@@ -34,7 +38,15 @@
     <con:request name="Request 1" id="544bef0d-2c68-4b2d-87e2-ace3c7e47bad" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="expand" value=""/>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="e1a44f57-245d-48c7-90cc-aca3b67886cf" method="DELETE">
@@ -43,7 +55,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -62,7 +76,14 @@
     <con:request name="Request 1" id="2fe3d199-2fcf-4239-a145-8831ff43b840" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="077eebc3-7610-406f-a8c1-a51dceec67e0" method="PATCH">
@@ -71,7 +92,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -96,19 +119,37 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthCompCode":"string","JcthJourCode":"string","JcthDate":"string","JcthPost":"string","JcthVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="POST with Details Example" id="2ab40a4a-4de8-4852-82c3-1d3dbcbc8a64" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthCompCode":"ZZ","JcthBchName":"OGUZTEST59","JcthDate":"2020-10-16","JcthJourCode":"JC","JcthCurrCode":"US","JcthDesc":"OGUZTEST59","JcthDefRefDesc":"OGUZTEST59","JcthDsrcCode":"test","JcthTransactionAmt":100,"JcthVuuid":"","JcthPost":"Y","JctrandViewObj":[{"JctdCompCode":"ZZ","JctdUserTypeCode":"J","JctdJobCode":"00-DUPLIC1","JctdPhsCode":"00","JctdCatCode":"1000","JctdAccCode":"4000.700","JctdAmt":20,"JctdWmCode":"HR","JctdRefCode":"Inv SALE1020-07","JctdRefDesc":"OGUZTEST59","JctdDate":"2020-10-05","JctdDebitAmt":0,"JctdCreditAmt":20,"JctdUnionCode":"test","JctdVuuid":""},{"JctdCompCode":"ZZ","JctdUserTypeCode":"G","JctdDeptCode":"00","JctdAccCode":"4000.800","JctdContCode":null,"JctdAmt":20,"JctdRefCode":"Inv SALE1020-07","JctdRefDesc":"OGUZTEST59","JctdDate":"2020-10-05","JctdDebitAmt":20,"JctdCreditAmt":0,"JctdUnionCode":"test","JctdVuuid":""}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="580eb974-bd44-4055-851d-735534195e6d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthDesc":"real transaction"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

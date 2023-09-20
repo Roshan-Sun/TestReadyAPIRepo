@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/glbudget" path="/glrestapi/rest/v1/glbudget" id="5c42959a-e9d9-4a40-b798-64dd864c2763" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/glbudget" path="/glrestapi/rest/v1/glbudget" id="5c42959a-e9d9-4a40-b798-64dd864c2763" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="5c42959a-e9d9-4a40-b798-64dd864c2763fileName">%2Fglrestapi%2Frest%2Fv1%2Fglbudget</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByglbudFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByglbudFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AccCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Account Code (selectByglbudFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>BudgetYr</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Budget Year (selectByglbudFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -56,7 +64,17 @@
     <con:request name="Request 1" id="6f731648-62e6-4429-b504-da94531d14d9" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AccCode" value=""/>
+        <con:entry key="BudgetYr" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciinventoryissue/{Vuuid}" path="/ci-rest-api/rest/1/ciinventoryissue/{Vuuid}" id="ec6c9675-3045-4f0a-882c-7f330083451e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciinventoryissue/{Vuuid}" path="/ci-rest-api/rest/1/ciinventoryissue/{Vuuid}" id="ec6c9675-3045-4f0a-882c-7f330083451e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="ec6c9675-3045-4f0a-882c-7f330083451efileName">%2Fci-rest-api%2Frest%2F1%2Fciinventoryissue%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -166,7 +168,14 @@
     <con:request name="Request 1" id="51f2487b-0d83-4869-8870-dc105fe795c5" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="dd19b25b-7890-4024-8c23-e73678b3e51c" method="PATCH">
@@ -175,7 +184,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -331,7 +342,14 @@
     <con:request name="Request 1" id="628e43ff-3f90-4cb3-af18-a7da29e4ce97" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

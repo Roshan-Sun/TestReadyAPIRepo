@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/unpostedvouchers" path="/ap-rest-api/rest/1/unpostedvouchers" id="2a9f4844-43d0-4d5c-93a7-b497f8357329" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/unpostedvouchers" path="/ap-rest-api/rest/1/unpostedvouchers" id="2a9f4844-43d0-4d5c-93a7-b497f8357329" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2a9f4844-43d0-4d5c-93a7-b497f8357329fileName">%2Fap-rest-api%2Frest%2F1%2Funpostedvouchers</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>UnpostedVoucherFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>WorkflowStatusVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Workflow Status (UnpostedVoucherFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -183,7 +187,15 @@
     <con:request name="Request 1" id="a0203042-0c7e-43bb-b419-6bfe0cc06218" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="WorkflowStatusVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

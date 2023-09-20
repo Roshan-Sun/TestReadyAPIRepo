@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmdistcc" path="/pm-rest-api/rest/1/pmdistcc" id="8f79375b-9015-40b5-a409-bb24c450dc0f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmdistcc" path="/pm-rest-api/rest/1/pmdistcc" id="8f79375b-9015-40b5-a409-bb24c450dc0f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8f79375b-9015-40b5-a409-bb24c450dc0ffileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdistcc</con:setting>
   </con:settings>
@@ -43,6 +43,11 @@
     <con:request name="Request 1" id="2b8d78fc-8a04-48ea-9758-791110dd3fb1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

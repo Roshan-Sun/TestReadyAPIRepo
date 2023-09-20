@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jcdetailposted" path="/jc-rest-api/rest/1/jcdetailposted" id="cf51a05c-7e51-4ea1-92aa-f0c911712a15" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jcdetailposted" path="/jc-rest-api/rest/1/jcdetailposted" id="cf51a05c-7e51-4ea1-92aa-f0c911712a15" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="cf51a05c-7e51-4ea1-92aa-f0c911712a15fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcdetailposted</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>JcDetailPostedFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (JcDetailPostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Num</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Detail Number (JcDetailPostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Amt</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Detail Amount (JcDetailPostedFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -182,7 +190,17 @@
     <con:request name="Request 1" id="a591ce10-c818-4750-a4a0-03e7ea8e9abc" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="Num" value=""/>
+        <con:entry key="Amt" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="8321d21c-30a7-4c1d-af28-b7a9d28a0672" method="POST">
@@ -348,12 +366,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcdtCompCode":"string","JcdtJobCode":"string","JcdtImpPoFlag":"string","JcdtAmt":"float","JcdtNum":"integer","JcdtVUuid":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="e470da1d-8e40-4d29-b9a3-6209e1879b40" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcdtDsrcDescription":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

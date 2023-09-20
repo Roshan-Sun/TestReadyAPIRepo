@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemployee" path="/hcm-rest-api/rest/1/pyemployee" id="d4e53421-ae43-4a01-9ce4-019ebec5b37e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemployee" path="/hcm-rest-api/rest/1/pyemployee" id="d4e53421-ae43-4a01-9ce4-019ebec5b37e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d4e53421-ae43-4a01-9ce4-019ebec5b37efileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemployee</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PyEmployeeFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpPrnVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Pay Run Code (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpStatusVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Status Code (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpTermDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Term Date (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpTypeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Type Code (PyEmployeeFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -302,7 +314,19 @@
     <con:request name="Request 1" id="70ec412c-9532-48f8-9690-30083d1a3854" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="EmpTypeVar" value=""/>
+        <con:entry key="EmpNoVar" value=""/>
+        <con:entry key="EmpTermDate" value=""/>
+        <con:entry key="EmpPrnVar" value=""/>
+        <con:entry key="EmpStatusVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="26ee7990-14d4-44fd-bc8b-5fca2577a0bc" method="POST">
@@ -578,12 +602,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmpUser":"string","EmpFirstName":"string","EmpLastName":"string","EmpSinNo":"string","EmpStatus":"string","EmpDateOfBirth":"string","EmpHireDate":"string","EmpCompCode":"string","EmpDeptCode":"string","EmpPrnCode":"string","EmpPygCode":"string","EmpTrdCode":"string","EmpHourlyRate":"float","EmpChargeOutRate":"float","EmpBillingRate":"float","EmpZipCode":"string","EmpCountryCode":"string","EmpStateCode":"string","EmpSecGrpEmpCode":"string","EmpVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Update Employee Example" id="3558ab30-c3b8-4c12-a672-41220c14e9bd" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmpUser":"string","EmpNo":"string","EmpCompCode":"string","EmhActionCode":"CH","EmpHourlyRate":"float","EmpTxtCode":"string","EmhEffectiveDate":"string","EmpVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

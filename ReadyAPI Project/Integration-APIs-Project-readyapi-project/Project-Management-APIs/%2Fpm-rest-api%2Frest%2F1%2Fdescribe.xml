@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pm-rest-api/rest/1/describe" path="/pm-rest-api/rest/1/describe" id="57c37699-d7ce-4704-b60e-133c0c83820d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="57c37699-d7ce-4704-b60e-133c0c83820dfileName">%2Fpm-rest-api%2Frest%2F1%2Fdescribe</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Describe Application" id="3944d384-7f13-4397-ab24-cb26e3eb1a38" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="b4d7efdb-93b8-4c74-b0b8-e85cd45d23ff" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>nullnull</con:request>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apreginv" path="/ap-rest-api/rest/1/apreginv" id="562d6bda-76c6-472c-84bd-19a1ddb3efe6" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apreginv" path="/ap-rest-api/rest/1/apreginv" id="562d6bda-76c6-472c-84bd-19a1ddb3efe6" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="562d6bda-76c6-472c-84bd-19a1ddb3efe6fileName">%2Fap-rest-api%2Frest%2F1%2Fapreginv</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectApReginv or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectApReginv)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>venCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (selectApReginv)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>invCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Code (selectApReginv)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (yyyy-mm-dd - selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -127,7 +137,18 @@
     <con:request name="Request 1" id="01b79667-53f3-4f9a-8782-48ada2d6faad" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="venCode" value=""/>
+        <con:entry key="invCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="create-ap-reg-inv" id="d7989215-e85a-48ae-aff8-e6db82e57291" method="POST">
@@ -233,6 +254,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriVUuid":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jcjobcostcodes" path="/jc-rest-api/rest/1/jcjobcostcodes" id="835fd675-be65-4bc2-aaa8-fca1d7c93ced" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jcjobcostcodes" path="/jc-rest-api/rest/1/jcjobcostcodes" id="835fd675-be65-4bc2-aaa8-fca1d7c93ced" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="835fd675-be65-4bc2-aaa8-fca1d7c93cedfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcjobcostcodes</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectJobPhases</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectJobPhases)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectJobPhases)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>phaseCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Phase code (selectJobPhases)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (yyyy-mm-dd - selectJobPhases)</con:description>
       </con:parameter>
     </con:parameters>
@@ -109,7 +119,18 @@
     <con:request name="Request 1" id="0a257b9a-eefa-48ee-a3d9-07d81db8be6f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="phaseCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

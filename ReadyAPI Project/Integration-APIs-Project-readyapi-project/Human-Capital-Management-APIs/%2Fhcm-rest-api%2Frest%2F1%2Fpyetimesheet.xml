@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyetimesheet" path="/hcm-rest-api/rest/1/pyetimesheet" id="870dcb5e-1d01-4918-b2f6-59333f1bd190" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyetimesheet" path="/hcm-rest-api/rest/1/pyetimesheet" id="870dcb5e-1d01-4918-b2f6-59333f1bd190" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="870dcb5e-1d01-4918-b2f6-59333f1bd190fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyetimesheet</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectETimeSheet</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectETimeSheet)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PrnCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Pay Run Code (selectETimeSheet)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Year</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Timesheet Year (selectETimeSheet)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Period</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Timesheet Period (selectETimeSheet)</con:description>
       </con:parameter>
     </con:parameters>
@@ -80,7 +90,18 @@
     <con:request name="Request 1" id="a80ea53d-d509-4823-9180-77d45face1b8" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="PrnCode" value=""/>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="Year" value=""/>
+        <con:entry key="Period" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="11256a04-0df8-42eb-a1ce-672d9d7e1e8e" method="POST">
@@ -139,12 +160,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshAccessCode":"string","TshCompCode":"string","TshDate":"string","TshEmpNo":"string","TshHours":"integer","TshJobCode":"string","TshPhase":"string","TshCategory":"string","TshPprPeriod":"string","TshPprYear":"string","TshPrnCode":"string","TshWorkCompCode":"string","TshVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="8181fa08-6024-4b49-b1bc-d2ce46f26dbc" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshAccessCode":"string","TshHours":5,"TshDocumentNo":"TEST321"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/cilocation" path="/ci-rest-api/rest/1/cilocation" id="037b0b00-d7e3-48b9-bc6c-f0ce8a849554" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/cilocation" path="/ci-rest-api/rest/1/cilocation" id="037b0b00-d7e3-48b9-bc6c-f0ce8a849554" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="037b0b00-d7e3-48b9-bc6c-f0ce8a849554fileName">%2Fci-rest-api%2Frest%2F1%2Fcilocation</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode and selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>LocCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Location Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to check against create/update dates (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -64,7 +72,17 @@
     <con:request name="Request 1" id="367c04b1-2edd-4fdd-9ebb-2fa8a2ef9f1a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="LocCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="d73db9dc-d9ae-4d94-b5c4-0bdb295cbbd5" method="POST">
@@ -112,12 +130,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CilocDeptCode":"string","CilocCompCode":"string","CilocCode":"string","CilocName":"string","CilocDeptDistFlag":"string","CilocVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="9100ad71-7cbb-444d-bf78-f383b23ff324" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CilocName":"testerino123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

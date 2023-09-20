@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/po-rest-api/rest/1/porequisitiondet/{Vuuid}" path="/po-rest-api/rest/1/porequisitiondet/{Vuuid}" id="6e6ad442-c289-4e5a-ae47-7fbbf1a0e39e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/po-rest-api/rest/1/porequisitiondet/{Vuuid}" path="/po-rest-api/rest/1/porequisitiondet/{Vuuid}" id="6e6ad442-c289-4e5a-ae47-7fbbf1a0e39e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="6e6ad442-c289-4e5a-ae47-7fbbf1a0e39efileName">%2Fpo-rest-api%2Frest%2F1%2Fporequisitiondet%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -137,7 +139,14 @@
     <con:request name="Request 1" id="da1a65e9-9311-4123-a75f-a45f44d42e6b" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="006e56af-f247-40eb-867d-ff13b6a082c0" method="PATCH">
@@ -146,7 +155,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -279,13 +290,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqdCompCode":"ZZ","PoreqdNum":"000001","PoreqdItmCode":"5033015","PoreqdWmCode":"GL","PoreqdReqQty":3,"PoreqdTypeCode":"I","PoreqdLineItmType":"I","PoreqdCiitemtypeCode":"2","PoreqdVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="ef505e74-ccae-4658-89ee-9bb5b93d0a0d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqdIvFlag":"N"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

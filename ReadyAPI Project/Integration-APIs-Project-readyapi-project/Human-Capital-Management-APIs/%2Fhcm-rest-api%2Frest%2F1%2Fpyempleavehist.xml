@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyempleavehist" path="/hcm-rest-api/rest/1/pyempleavehist" id="d09ac103-c74e-4308-bb44-acebe57c0a6d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyempleavehist" path="/hcm-rest-api/rest/1/pyempleavehist" id="d09ac103-c74e-4308-bb44-acebe57c0a6d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d09ac103-c74e-4308-bb44-acebe57c0a6dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempleavehist</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectLeaveHist</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectLeaveHist)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empNumber</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectLeaveHist)</con:description>
       </con:parameter>
     </con:parameters>
@@ -95,7 +101,16 @@
     <con:request name="Request 1" id="dfca8fff-170f-4622-831d-9968516ee376" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="empNumber" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="cc70b745-2dac-4bb1-9b42-ff40d9a7a376" method="POST">
@@ -179,12 +194,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PlhCompCode":"string","PlhPprYear":"string","PlhTranType":"string","PlhTranCode":"string","PlhPprPeriod":"string","PlhSeqNo":"string","PlhPrnCode":"string","PlhEmpNo":"string","PlhUser":"string","PlhLastUpdDate":"string","PlhVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="b0fabd71-fbd8-4cd0-b9d4-ab2f92fbcaec" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PlhTotalHours":1}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

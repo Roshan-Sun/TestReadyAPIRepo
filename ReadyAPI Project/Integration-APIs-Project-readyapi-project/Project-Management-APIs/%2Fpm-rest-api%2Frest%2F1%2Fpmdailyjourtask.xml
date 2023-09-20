@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmdailyjourtask" path="/pm-rest-api/rest/1/pmdailyjourtask" id="1919e764-5cda-4588-a6d7-d05cd34d6006" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourtask" path="/pm-rest-api/rest/1/pmdailyjourtask" id="1919e764-5cda-4588-a6d7-d05cd34d6006" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1919e764-5cda-4588-a6d7-d05cd34d6006fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourtask</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByJournal or PmDailyJourTaskFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JournalVuuid</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>UUID of Journal to link to (selectByJournal and PmDailyJourTaskFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ProjCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project Code (PmDailyJourTaskFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PartnCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Partner Code (PmDailyJourTaskFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -64,7 +72,17 @@
     <con:request name="Request 1" id="04716fb3-9f98-47ab-9589-3a36cc1adb48" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JournalVuuid" value=""/>
+        <con:entry key="PartnCode" value=""/>
+        <con:entry key="ProjCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="1ad5564f-5af0-48f1-a292-76bbea3f6690" method="POST">
@@ -112,12 +130,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmjtJournalVUuid":"string","PmjtPartnCode":"string","PmjtPartnTypeCode":"string","PmjtVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="162207df-79e8-43c1-b795-e94e95913a8d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmjtNotes":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

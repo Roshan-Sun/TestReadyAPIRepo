@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/jersey/v1/userextensions/{TableCode}" path="/sys-rest-api/jersey/v1/userextensions/{TableCode}" id="a565e59f-db05-4764-ac93-6e125792c0d0" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/jersey/v1/userextensions/{TableCode}" path="/sys-rest-api/jersey/v1/userextensions/{TableCode}" id="a565e59f-db05-4764-ac93-6e125792c0d0" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a565e59f-db05-4764-ac93-6e125792c0d0fileName">%2Fsys-rest-api%2Fjersey%2Fv1%2Fuserextensions%2F%7BTableCode%7D</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>TableCode</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>UE Table code</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date variable</con:description>
       </con:parameter>
       <con:parameter>
@@ -27,7 +31,9 @@
       </con:parameter>
       <con:parameter>
         <con:name>whereVariables</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Semi-colon delimited string to include UDFS and the associated values to filter them on - these are all equals comparisons</con:description>
       </con:parameter>
     </con:parameters>
@@ -49,7 +55,17 @@
     <con:request name="Request 1" id="f4657b6d-14b1-4297-a2d5-46be3bc04a19" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="whereVariables" value=""/>
+        <con:entry key="dateFormat" value="YYYY-MM-DD"/>
+        <con:entry key="TableCode" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

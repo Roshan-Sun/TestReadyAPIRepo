@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pybenefit" path="/hcm-rest-api/rest/1/pybenefit" id="100724d0-7b83-47f0-9cc7-90d27b986062" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pybenefit" path="/hcm-rest-api/rest/1/pybenefit" id="100724d0-7b83-47f0-9cc7-90d27b986062" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="100724d0-7b83-47f0-9cc7-90d27b986062fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpybenefit</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to be checked for</con:description>
       </con:parameter>
     </con:parameters>
@@ -81,7 +85,15 @@
     <con:request name="Request 1" id="b880b118-9d14-4544-b219-58771f841994" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="cf72f772-d8ba-4b17-9ca2-826bde1c2fbe" method="POST">
@@ -156,12 +168,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BenCode":"RST","BenDescription":"roshan test","BenShortDesc":"roast","BenType":"D","BenBaseCode":"DALY","BenCalcSeq":91922,"BenAllocationMethod":"DEF","BenForDepFlag":"N"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="5d9ae632-0825-4d81-8e9c-881b25c115d1" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BenShortDesc":"roshan"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

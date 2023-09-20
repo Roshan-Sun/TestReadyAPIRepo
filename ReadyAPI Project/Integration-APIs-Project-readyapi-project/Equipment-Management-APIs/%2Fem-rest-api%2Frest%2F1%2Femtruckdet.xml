@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emtruckdet" path="/em-rest-api/rest/1/emtruckdet" id="a7e4149c-3c40-4460-901a-126dab26de45" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emtruckdet" path="/em-rest-api/rest/1/emtruckdet" id="a7e4149c-3c40-4460-901a-126dab26de45" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a7e4149c-3c40-4460-901a-126dab26de45fileName">%2Fem-rest-api%2Frest%2F1%2Femtruckdet</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>VenCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TruckNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Truck Number (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -58,7 +64,16 @@
     <con:request name="Request 1" id="a230b5cf-ca76-46a0-b070-0df70d9c3f0c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="VenCode" value=""/>
+        <con:entry key="TruckNo" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ar-rest-api/rest/1/arinvoutstanding" path="/ar-rest-api/rest/1/arinvoutstanding" id="0b93e07d-9238-4d03-9c12-9b5e3d942b55" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ar-rest-api/rest/1/arinvoutstanding" path="/ar-rest-api/rest/1/arinvoutstanding" id="0b93e07d-9238-4d03-9c12-9b5e3d942b55" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0b93e07d-9238-4d03-9c12-9b5e3d942b55fileName">%2Far-rest-api%2Frest%2F1%2Farinvoutstanding</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectInvoices</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>InvCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Invoice Number/Code (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CustomerCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Customer Code (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>FromInvoiceDateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>From Invoice Date (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ToInvoiceDateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>To Invoice Date (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>FromDueDateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>From Invoice Due Date (selectInvoices)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ToDueDateVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>To Invoice Due Date (selectInvoices)</con:description>
       </con:parameter>
     </con:parameters>
@@ -84,7 +100,21 @@
     <con:request name="Request 1" id="91e43e44-e96f-4643-acaa-3b99becefb59" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="FromInvoiceDateVar" value=""/>
+        <con:entry key="ToDueDateVar" value=""/>
+        <con:entry key="ToInvoiceDateVar" value=""/>
+        <con:entry key="InvCodeVar" value=""/>
+        <con:entry key="CustomerCodeVar" value=""/>
+        <con:entry key="FromDueDateVar" value=""/>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

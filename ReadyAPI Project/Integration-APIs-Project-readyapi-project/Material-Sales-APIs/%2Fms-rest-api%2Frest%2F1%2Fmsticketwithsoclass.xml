@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ms-rest-api/rest/1/msticketwithsoclass" path="/ms-rest-api/rest/1/msticketwithsoclass" id="3f0879a3-371f-4669-b841-d1f62f0618be" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ms-rest-api/rest/1/msticketwithsoclass" path="/ms-rest-api/rest/1/msticketwithsoclass" id="3f0879a3-371f-4669-b841-d1f62f0618be" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="3f0879a3-371f-4669-b841-d1f62f0618befileName">%2Fms-rest-api%2Frest%2F1%2Fmsticketwithsoclass</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>MsTicketFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TicketCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Ticket code</con:description>
       </con:parameter>
     </con:parameters>
@@ -184,7 +190,16 @@
     <con:request name="Request 1" id="8e685028-e819-44d1-aee4-25142d8f7ca8" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="TicketCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="c3e16793-7e38-4818-9800-d050265c40b8" method="POST">
@@ -357,6 +372,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"MstCiItemCode":"1104","MstCiItemLocCode":"300","MstCiItemTypeCode":"1","MstExtendedAmt":"","MstJobOrCustCode":"TEST","MstPricePerWm":"","MstQty":2,"MstSalesOrderCode":"SA000015","MstServiceChargeFlag":"N","MstSoldAsItemCode":"","MstSoldAsItemLoc":"","MstSoldAsItemType":"","MstTicketCode":"TICKFROMWS40","MstTicketDate":"2022-11-09","MstTicketTypeCode":"TYPE1","MstTruckCode":"ABS-TR2","MstWmCode":"NA"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

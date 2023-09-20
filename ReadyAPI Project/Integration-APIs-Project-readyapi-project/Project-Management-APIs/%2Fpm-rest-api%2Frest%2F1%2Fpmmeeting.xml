@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmmeeting" path="/pm-rest-api/rest/1/pmmeeting" id="a718720a-6952-4ec2-bb32-144b5751b177" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmmeeting" path="/pm-rest-api/rest/1/pmmeeting" id="a718720a-6952-4ec2-bb32-144b5751b177" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a718720a-6952-4ec2-bb32-144b5751b177fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeeting</con:setting>
   </con:settings>
@@ -54,6 +54,11 @@
     <con:request name="Request 1" id="f66cfb72-02d3-4656-bdcc-c7756d5c8c57" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -113,12 +118,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmmCompCode":"string","PmmProjCode":"string","PmmTrackCode":"string","PmmSubject":"string","PmmMeetingId":"string","PmmVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="34fb6d7c-02ed-480d-9fb6-f65c68b9ed14" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmmSubject":"test1234"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

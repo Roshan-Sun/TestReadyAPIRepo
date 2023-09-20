@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jcwipadjustmentsposted" path="/jc-rest-api/rest/1/jcwipadjustmentsposted" id="068c2c84-72e3-450d-a8b9-6e85fa8b8e7d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jcwipadjustmentsposted" path="/jc-rest-api/rest/1/jcwipadjustmentsposted" id="068c2c84-72e3-450d-a8b9-6e85fa8b8e7d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="068c2c84-72e3-450d-a8b9-6e85fa8b8e7dfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcwipadjustmentsposted</con:setting>
   </con:settings>
@@ -10,42 +10,58 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByComp, findByDate, findByJob or findByWipData</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (findByComp)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (findByJob)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit date to filter records on (findByDate - YYYY-MM-DD)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobStatus</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job status (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>deptCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Department Code (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>year</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Year to get records for (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>period</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period to get records for (Any finder)</con:description>
       </con:parameter>
       <con:parameter>
@@ -169,7 +185,25 @@
     <con:request name="Request 1" id="2366eb45-e410-4f45-b15e-c53d94aa0d90" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="jobStatus" value=""/>
+        <con:entry key="period" value=""/>
+        <con:entry key="year" value=""/>
+        <con:entry key="includeNoWipJobsFlag" value="N"/>
+        <con:entry key="pickList" value="Y"/>
+        <con:entry key="includePostedJobsFlag" value="Y"/>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="includeAllJobsFlag" value="N"/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="deptCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

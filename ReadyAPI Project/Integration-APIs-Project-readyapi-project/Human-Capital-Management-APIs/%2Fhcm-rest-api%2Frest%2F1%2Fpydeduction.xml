@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pydeduction" path="/hcm-rest-api/rest/1/pydeduction" id="0e7722c4-548e-4c6f-b334-d66a7479782f" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pydeduction" path="/hcm-rest-api/rest/1/pydeduction" id="0e7722c4-548e-4c6f-b334-d66a7479782f" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0e7722c4-548e-4c6f-b334-d66a7479782ffileName">%2Fhcm-rest-api%2Frest%2F1%2Fpydeduction</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to be checked for</con:description>
       </con:parameter>
     </con:parameters>
@@ -73,7 +77,15 @@
     <con:request name="Request 1" id="f8db794e-8fd6-4086-aefc-7a85ec365d70" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b812c5b1-de46-4f31-9910-c2e5165d976f" method="POST">
@@ -140,12 +152,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DedCode":"RST3","DedDescription":"TEST DESCRIPTION","DedShortDesc":"TEST SHORT","DedType":"D","DedBaseCode":"STAT","DedCalcSeq":"91921","DedForDepFlag":"N","DedAllocationMethod":"DEF"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="7609274d-974e-4471-b606-83b6ebe0a703" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"DedShortDesc":"roshan"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

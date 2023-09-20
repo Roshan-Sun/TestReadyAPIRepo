@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="c993f193-2b9e-4b29-a7c1-7dc5dcbbd1c7" created="3.45.0" activeEnvironment="Default environment" name="Integration APIs Project" projectVersion="" resourceRoot="" compositeProjectFormat="1.3" updated="3.45.0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+<con:soapui-project id="c993f193-2b9e-4b29-a7c1-7dc5dcbbd1c7" created="3.45.0" activeEnvironment="Default environment" name="Integration APIs Project" projectVersion="" resourceRoot="" compositeProjectFormat="1.3" updated="3.45.0" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c993f193-2b9e-4b29-a7c1-7dc5dcbbd1c7fileName">Integration-APIs-Project-readyapi-project</con:setting>
+  </con:settings>
   <con:properties/>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>

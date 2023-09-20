@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemphourtype" path="/hcm-rest-api/rest/1/pyemphourtype" id="5fdd536b-65bd-4897-b963-fef378a39faa" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemphourtype" path="/hcm-rest-api/rest/1/pyemphourtype" id="5fdd536b-65bd-4897-b963-fef378a39faa" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="5fdd536b-65bd-4897-b963-fef378a39faafileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemphourtype</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectEmpHourType or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectEmpHourType)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empNumber</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectEmpHourType)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>hourCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Hour Code (selectEmpHourType)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -59,7 +69,18 @@
     <con:request name="Request 1" id="4164c5c6-16f3-4783-928e-2c3ef1e3ff38" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="empNumber" value=""/>
+        <con:entry key="hourCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="43beaa87-ed5b-4ce4-82e2-be283c3c5396" method="POST">
@@ -97,6 +118,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EhourCompCode":"string","EhourEmpNo":"string","EhourHourCode":"string","EhourVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

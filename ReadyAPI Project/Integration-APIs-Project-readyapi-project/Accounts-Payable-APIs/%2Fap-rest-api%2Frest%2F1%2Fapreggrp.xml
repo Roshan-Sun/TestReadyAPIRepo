@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apreggrp" path="/ap-rest-api/rest/1/apreggrp" id="5a7d7201-2c1e-4c58-960b-c942b8690a6b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apreggrp" path="/ap-rest-api/rest/1/apreggrp" id="5a7d7201-2c1e-4c58-960b-c942b8690a6b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="5a7d7201-2c1e-4c58-960b-c942b8690a6bfileName">%2Fap-rest-api%2Frest%2F1%2Fapreggrp</con:setting>
   </con:settings>
@@ -30,6 +30,11 @@
     <con:request name="Request 1" id="598a4bbf-7414-4093-bb64-9cc20e0daade" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

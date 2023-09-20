@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apvendor" path="/ap-rest-api/rest/1/apvendor" id="9e0bd147-b809-4f2d-9e56-13c299b6f8c1" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apvendor" path="/ap-rest-api/rest/1/apvendor" id="9e0bd147-b809-4f2d-9e56-13c299b6f8c1" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="9e0bd147-b809-4f2d-9e56-13c299b6f8c1fileName">%2Fap-rest-api%2Frest%2F1%2Fapvendor</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>ApVendorfinder or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (ApVendorfinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>BpCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor code (ApVendorfinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>audit date(yyyy-mm-dd - selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -135,7 +143,17 @@
     <con:request name="Request 1" id="368372b2-ff3d-4745-aa0b-320bfb110702" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="BpCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="0110aff5-2d92-4245-9c97-6bf8ab74139a" method="POST">
@@ -254,6 +272,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"BpvenCompCode":"string","BpvenBpCode":"string","BpvenCheckMergeFlag":"string","BpvenSpecialTermsFlag":"string","BpvenTermCode":"string","BpvenCurrCode":"string","BpvenApDeptCode":"string","BpvenApAccCode":"string","BpvenCashDeptCode":"string","BpvenCashAccCode":"string","BpvenExpDeptCode":"string","BpvenExpAccCode":"string","BpvenPpeDeptCode":"string","BpvenPpeAccCode":"string","BpvenDiscDeptCode":"string","BpvenDiscAccCode":"string","BpvenHldbkDeptCode":"string","BpvenHldbkAccCode":"string","BpvenVUuid":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

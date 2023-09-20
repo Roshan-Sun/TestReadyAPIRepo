@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/cm-rest-api/rest/1/cmdetailunposted" path="/cm-rest-api/rest/1/cmdetailunposted" id="d9f5123a-f97d-4c75-af84-7c025e0eb1c3" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/cm-rest-api/rest/1/cmdetailunposted" path="/cm-rest-api/rest/1/cmdetailunposted" id="d9f5123a-f97d-4c75-af84-7c025e0eb1c3" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d9f5123a-f97d-4c75-af84-7c025e0eb1c3fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmdetailunposted</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>CmDetailUnpostedFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>MastJobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Header Job code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PhsCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Phase code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CatCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Category code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChgCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PCI Change code (CmDetailUnpostedFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -143,7 +157,20 @@
     <con:request name="Request 1" id="ce14c908-de55-40b7-b9bc-7dadd252a718" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="MastJobCode" value=""/>
+        <con:entry key="JobCode" value=""/>
+        <con:entry key="PhsCode" value=""/>
+        <con:entry key="CatCode" value=""/>
+        <con:entry key="ChgCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

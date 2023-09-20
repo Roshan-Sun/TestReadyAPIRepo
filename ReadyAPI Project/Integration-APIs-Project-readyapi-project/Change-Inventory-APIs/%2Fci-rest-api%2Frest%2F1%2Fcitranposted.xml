@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/citranposted" path="/ci-rest-api/rest/1/citranposted" id="4cf590fc-d877-4315-ad3c-5724a93ec553" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/citranposted" path="/ci-rest-api/rest/1/citranposted" id="4cf590fc-d877-4315-ad3c-5724a93ec553" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="4cf590fc-d877-4315-ad3c-5724a93ec553fileName">%2Fci-rest-api%2Frest%2F1%2Fcitranposted</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByBchNum</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByBchNum)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>BchNum</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Batch Number (selectByBchNum)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ReqNum</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Requisition Number (selectByBchNum)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PostDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Posted Date (selectByBchNum)</con:description>
       </con:parameter>
     </con:parameters>
@@ -174,7 +184,18 @@
     <con:request name="Request 1" id="65f72a1a-ef30-4679-82cf-f16bd5891d59" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="ReqNum" value=""/>
+        <con:entry key="BchNum" value=""/>
+        <con:entry key="PostDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

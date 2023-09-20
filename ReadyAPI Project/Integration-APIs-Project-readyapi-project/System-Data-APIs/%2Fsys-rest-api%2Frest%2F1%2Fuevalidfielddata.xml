@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/uevalidfielddata" path="/sys-rest-api/rest/1/uevalidfielddata" id="c1671a59-f912-4d66-bff1-b5cc5012ed7e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/uevalidfielddata" path="/sys-rest-api/rest/1/uevalidfielddata" id="c1671a59-f912-4d66-bff1-b5cc5012ed7e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c1671a59-f912-4d66-bff1-b5cc5012ed7efileName">%2Fsys-rest-api%2Frest%2F1%2Fuevalidfielddata</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByFieldCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>fieldCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Field Code (selectByFieldCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -46,7 +50,15 @@
     <con:request name="Request 1" id="a8486535-272e-4eec-bf9a-97f1076bd6c3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="fieldCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="fe2c6b54-6328-4ba9-8fd8-a77790e0c427" method="POST">
@@ -86,6 +98,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"UevfdDataValue":"string","UevfdDisplayOrder":"string","UevfdFieldCode":"string","UevfdDataValueDesc":"string","UevfdVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

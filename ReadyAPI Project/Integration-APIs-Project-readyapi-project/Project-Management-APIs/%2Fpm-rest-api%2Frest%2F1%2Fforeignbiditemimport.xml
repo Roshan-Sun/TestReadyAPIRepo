@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/foreignbiditemimport" path="/pm-rest-api/rest/1/foreignbiditemimport" id="a5b4260b-d5da-4f55-a05c-7f01584c54d9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/foreignbiditemimport" path="/pm-rest-api/rest/1/foreignbiditemimport" id="a5b4260b-d5da-4f55-a05c-7f01584c54d9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a5b4260b-d5da-4f55-a05c-7f01584c54d9fileName">%2Fpm-rest-api%2Frest%2F1%2Fforeignbiditemimport</con:setting>
   </con:settings>
@@ -126,6 +126,11 @@
     <con:request name="Request 1" id="ebcf1de0-47a5-4053-bbca-2abcd22636b9" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -257,6 +262,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CompCode":"string","ProjCode":"string","ToValidateFlag":"string","PmfbiiValid":"string","ToDeleteFlag":"string","BidItemImpDelFlag":"string","VUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

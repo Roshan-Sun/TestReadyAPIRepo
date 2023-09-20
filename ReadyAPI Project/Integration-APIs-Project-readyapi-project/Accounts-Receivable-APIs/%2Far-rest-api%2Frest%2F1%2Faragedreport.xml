@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ar-rest-api/rest/1/aragedreport" path="/ar-rest-api/rest/1/aragedreport" id="26104cee-9137-4063-91bf-35646cb84ce6" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ar-rest-api/rest/1/aragedreport" path="/ar-rest-api/rest/1/aragedreport" id="26104cee-9137-4063-91bf-35646cb84ce6" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="26104cee-9137-4063-91bf-35646cb84ce6fileName">%2Far-rest-api%2Frest%2F1%2Faragedreport</con:setting>
   </con:settings>
@@ -10,57 +10,79 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>ar1000d</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>FromCompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code Starting Range (ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>ToCompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code Ending Range (ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>JobCustGroup</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Customer Group Name (ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>CustZeroAccTotalFlag</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to include Zero Accounts (Y or N - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>IncludeDeposit</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to include Deposits (Y or N - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>AgeDeposit</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to Age the Deposits (Y or N - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>ShowDeposit</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to Show Deposits (Y or N - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>AgingDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Report Starting Date (YYYY-MM-dd - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>CutOffDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Report Cut Off Date (YYYY-MM-dd - ar1000d)</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>ClosedInvoice</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Flag to include closed invoices (Y or N - ar1000d)</con:description>
       </con:parameter>
     </con:parameters>
@@ -116,7 +138,24 @@
     <con:request name="Request 1" id="cc961bd3-79bc-4dcb-96d3-3e77fa6b0038" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JobCustGroup" value=""/>
+        <con:entry key="ShowDeposit" value=""/>
+        <con:entry key="AgingDate" value=""/>
+        <con:entry key="FromCompCode" value=""/>
+        <con:entry key="ToCompCode" value=""/>
+        <con:entry key="ClosedInvoice" value=""/>
+        <con:entry key="CustZeroAccTotalFlag" value=""/>
+        <con:entry key="IncludeDeposit" value=""/>
+        <con:entry key="AgeDeposit" value=""/>
+        <con:entry key="CutOffDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

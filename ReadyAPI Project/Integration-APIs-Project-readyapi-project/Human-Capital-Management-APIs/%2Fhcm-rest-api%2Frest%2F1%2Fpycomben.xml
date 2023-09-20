@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pycomben" path="/hcm-rest-api/rest/1/pycomben" id="0ec86fa5-85cc-46b5-a4b5-c93c347d088b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pycomben" path="/hcm-rest-api/rest/1/pycomben" id="0ec86fa5-85cc-46b5-a4b5-c93c347d088b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0ec86fa5-85cc-46b5-a4b5-c93c347d088bfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpycomben</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByDate or findByKeys</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to be checked for (findByDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (findByKeys)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>payGroup</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Pay Groups (findByKeys)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>payRun</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Pay Runs (findByKeys)</con:description>
       </con:parameter>
     </con:parameters>
@@ -94,7 +104,18 @@
     <con:request name="Request 1" id="d184a262-1292-44de-9eac-e949cc08b2ae" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="payRun" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+        <con:entry key="payGroup" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="50233260-f835-4639-98c0-78322e436c6d" method="POST">
@@ -167,12 +188,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CobCompCode":"ZZ","CobPygCode":"MO","CobPrnCode":"WEEK","CobBenCode":"BENE","CobPlanCode":"SINGLE","CobPloCode":"T-FREE","CobStartDate":"2022-11-16","CobBenType":"D","CobDrAccCode":"1000.100","CobCrAccCode":"1000.600","CobFrqCode":1,"CobBenAmount":1,"CobRemittanceFrqCode":1}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="9c5ae90f-e48d-437c-b2c2-a0b0edbdf4ea" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CobVendor":"ZZ-ACME"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

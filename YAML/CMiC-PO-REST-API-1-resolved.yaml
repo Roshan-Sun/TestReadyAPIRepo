@@ -26,6 +26,29 @@ tags:
 - name: porequisitiondet
   description: PO Requisition Details
 paths:
+  /po-rest-api/rest/1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all PO-REST-API metadata
+      description: All metadata about PO application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /po-rest-api/rest/1/podetail:
     get:
       tags:

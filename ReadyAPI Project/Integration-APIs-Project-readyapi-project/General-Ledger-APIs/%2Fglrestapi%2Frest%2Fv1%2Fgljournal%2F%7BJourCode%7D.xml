@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/gljournal/{JourCode}" path="/glrestapi/rest/v1/gljournal/{JourCode}" id="6a6f4a56-709e-46f8-beb4-ece3c950e6fb" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/gljournal/{JourCode}" path="/glrestapi/rest/v1/gljournal/{JourCode}" id="6a6f4a56-709e-46f8-beb4-ece3c950e6fb" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="6a6f4a56-709e-46f8-beb4-ece3c950e6fbfileName">%2Fglrestapi%2Frest%2Fv1%2Fgljournal%2F%7BJourCode%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>JourCode</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique journal code</con:description>
       </con:parameter>
     </con:parameters>
@@ -39,7 +41,14 @@
     <con:request name="Request 1" id="75c88381-4d87-4f65-89c8-2550e0c0450d" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JourCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="f903f1bb-cbca-4298-804a-3f98bccabea6" method="DELETE">
@@ -48,7 +57,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>JourCode</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique journal code</con:description>
       </con:parameter>
     </con:parameters>
@@ -67,7 +78,14 @@
     <con:request name="Request 1" id="d567230e-339e-46b2-9825-a89ef6255df1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JourCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="7742d6f4-19c3-49b6-b543-3124095266fe" method="PATCH">
@@ -76,7 +94,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>JourCode</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique journal code</con:description>
       </con:parameter>
     </con:parameters>
@@ -111,7 +131,13 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JourCode":"string","JourName":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JourCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

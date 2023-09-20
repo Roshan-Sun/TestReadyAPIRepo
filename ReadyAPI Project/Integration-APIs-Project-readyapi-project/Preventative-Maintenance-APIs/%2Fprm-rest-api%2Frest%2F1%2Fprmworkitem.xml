@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/prmworkitem" path="/prm-rest-api/rest/1/prmworkitem" id="d327e1c0-881b-43a8-bd8c-ce395031939d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/prmworkitem" path="/prm-rest-api/rest/1/prmworkitem" id="d327e1c0-881b-43a8-bd8c-ce395031939d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d327e1c0-881b-43a8-bd8c-ce395031939dfileName">%2Fprm-rest-api%2Frest%2F1%2Fprmworkitem</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -123,7 +127,15 @@
     <con:request name="Request 1" id="d1109312-38ee-4012-9d68-060e631f5aad" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="e470e36a-c5d6-43ad-8e21-063e6026a7dd" method="POST">
@@ -240,12 +252,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WitmWoCompCode":"ZZ","WitmWoCode":"ROSHAN15","WitmWoStepTitle":"okay boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Patch Example" id="59c71ab1-f9a7-44cf-93c5-1b19fbae7d67" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WitmComments":"bobicus was here"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

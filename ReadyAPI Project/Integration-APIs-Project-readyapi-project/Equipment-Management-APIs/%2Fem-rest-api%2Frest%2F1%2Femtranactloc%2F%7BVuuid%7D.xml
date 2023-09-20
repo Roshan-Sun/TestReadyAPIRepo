@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emtranactloc/{Vuuid}" path="/em-rest-api/rest/1/emtranactloc/{Vuuid}" id="f8f69a3b-857d-4b8b-a90b-df66dc63187b" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emtranactloc/{Vuuid}" path="/em-rest-api/rest/1/emtranactloc/{Vuuid}" id="f8f69a3b-857d-4b8b-a90b-df66dc63187b" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="f8f69a3b-857d-4b8b-a90b-df66dc63187bfileName">%2Fem-rest-api%2Frest%2F1%2Femtranactloc%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -107,7 +109,14 @@
     <con:request name="Request 1" id="4425f135-682a-4035-a323-b4e3ca9e9d49" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="9e893496-0756-424f-a648-da9be0545735" method="DELETE">
@@ -116,7 +125,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -135,7 +146,14 @@
     <con:request name="Request 1" id="84237a68-9d85-4244-83d5-c2da2990f32c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="6bf45f50-4e06-45c3-9423-72e3cc02889a" method="PATCH">
@@ -144,7 +162,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -252,19 +272,37 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="e00890a5-c23d-4445-95d5-55d91f7ae85d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmtrEqpQty":100}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Batch POST Example" id="070799b6-5551-4cb2-9af2-d592e7976fbd" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/emtranactloc","operation":"create","payload":{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}},{"id":"part2","path":"/1/emtranactloc","operation":"create","payload":{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

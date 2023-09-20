@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emtranactloc" path="/em-rest-api/rest/1/emtranactloc" id="355cd89c-e4c0-4c10-9805-d67d066c96af" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emtranactloc" path="/em-rest-api/rest/1/emtranactloc" id="355cd89c-e4c0-4c10-9805-d67d066c96af" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="355cd89c-e4c0-4c10-9805-d67d066c96affileName">%2Fem-rest-api%2Frest%2F1%2Femtranactloc</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByAuditDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to compare against create/update dates (selectByAuditDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -112,7 +116,15 @@
     <con:request name="Request 1" id="cef83140-a868-4068-b4a3-9dbdb2b4bf24" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="18a071df-e113-4644-b99e-3ff2369a9645" method="POST">
@@ -223,18 +235,30 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="462dbcc4-fdfe-42d6-822c-8194271180cb" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmtrEqpQty":100}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Batch POST Example" id="fb5cd426-943a-4b15-95bd-7dafe713c99a" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/emtranactloc","operation":"create","payload":{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}},{"id":"part2","path":"/1/emtranactloc","operation":"create","payload":{"EmtrSrcCompCode":"string","EmtrStartDate":"string","EmtrRefDate":"string","EmtrEqpCode":"string","EmtrEqpQty":"integer","EmtrCurrActuallocCode":"string","EmtrCurrCompCode":"string","EmtrCurrCustCode":"string","EmtrCurrJobCode":"string","EmtrCurrPhsCode":"string","EmtrCurrCatCode":"string","EmtrNewActlocCode":"string","EmtrCompCode":"string","EmtrCustCode":"string","EmtrJobCode":"string","EmtrPhsCode":"string","EmtrCatCode":"string"}}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

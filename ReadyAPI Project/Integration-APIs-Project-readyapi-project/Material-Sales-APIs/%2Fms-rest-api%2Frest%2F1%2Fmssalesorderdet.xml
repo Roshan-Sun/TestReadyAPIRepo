@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ms-rest-api/rest/1/mssalesorderdet" path="/ms-rest-api/rest/1/mssalesorderdet" id="2f8feaf3-399e-48cf-a410-1e0603975253" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ms-rest-api/rest/1/mssalesorderdet" path="/ms-rest-api/rest/1/mssalesorderdet" id="2f8feaf3-399e-48cf-a410-1e0603975253" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2f8feaf3-399e-48cf-a410-1e0603975253fileName">%2Fms-rest-api%2Frest%2F1%2Fmssalesorderdet</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByAuditDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to search created or updated items (YYYY-MM-dd - selectByAuditDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -121,7 +125,15 @@
     <con:request name="Request 1" id="8ebf5e28-4d70-4785-87d0-68b3291238c4" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" path="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" id="863ca273-ed7c-49af-acc8-ca8a1eaab1dd" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" path="/hcm-rest-api/rest/1/hrtrainings/{GtraiTrnCode}" id="863ca273-ed7c-49af-acc8-ca8a1eaab1dd" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="863ca273-ed7c-49af-acc8-ca8a1eaab1ddfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrtrainings%2F%7BGtraiTrnCode%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>GtraiTrnCode</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Training Code</con:description>
       </con:parameter>
     </con:parameters>
@@ -53,7 +55,14 @@
     <con:request name="Request 1" id="4eddee86-d720-40c2-a677-4b96d06729d7" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="GtraiTrnCode" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/po-rest-api/rest/1/podetail" path="/po-rest-api/rest/1/podetail" id="b07f3601-9cd8-49c8-aa34-f0fa30d591ef" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/po-rest-api/rest/1/podetail" path="/po-rest-api/rest/1/podetail" id="b07f3601-9cd8-49c8-aa34-f0fa30d591ef" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="b07f3601-9cd8-49c8-aa34-f0fa30d591effileName">%2Fpo-rest-api%2Frest%2F1%2Fpodetail</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompCode or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByCompCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit date to search for in create/update dates (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -121,7 +127,16 @@
     <con:request name="Request 1" id="c0cb19da-c64d-4f20-b0f6-df2d72866203" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="96c53bf4-6832-4eb0-9870-2385920f9f66" method="POST">
@@ -231,12 +246,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PosCalledFromAppCode":"string","PosPoItemType":"string","PosCompCode":"string","PosReleaseNum":"integer","PosPoNum":"string","PosUserTypeCode":"string","PosUserField1":"string","PosUserField2":"string","PosUserField3":"string","PosItmCode":"string","PosItemLocCode":"string","PosCiitemtypCode":"string","PosWmCode":"string","PosDesc":"string","PosExptdPriceAmt":"float","PosExtdAmt":"float","PosOrdQty":"integer","PosRecIntoInvFlag":"string","PosTacSetupFlag":"string","PosWbsSetupFlag":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="a89fe712-d062-4ab8-bf5b-28631c2df404" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PosDesc":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

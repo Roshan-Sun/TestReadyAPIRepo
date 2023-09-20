@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrapphistory" path="/hcm-rest-api/rest/1/hrapphistory" id="3829d757-149d-4c36-ad4d-98e68b759f0c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrapphistory" path="/hcm-rest-api/rest/1/hrapphistory" id="3829d757-149d-4c36-ad4d-98e68b759f0c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="3829d757-149d-4c36-ad4d-98e68b759f0cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrapphistory</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AppNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Application Number (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status Code (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -54,7 +60,16 @@
     <con:request name="Request 1" id="eb3d41ff-f5c7-4b46-bf61-c3a0bce83d21" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="AppNo" value=""/>
+        <con:entry key="StatusCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="8f56352f-d07e-4dce-9315-d210e9d531e0" method="POST">
@@ -97,12 +112,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapphistDate":"string","HrapphistUser":"string","HrapphistVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="2ebbbd41-fd2b-4635-a95a-ad71f4b741ce" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrapphistComplNotes":"testing 1234"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

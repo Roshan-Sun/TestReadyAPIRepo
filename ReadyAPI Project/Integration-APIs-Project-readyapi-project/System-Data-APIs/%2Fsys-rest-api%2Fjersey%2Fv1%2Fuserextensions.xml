@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/jersey/v1/userextensions" path="/sys-rest-api/jersey/v1/userextensions" id="09de4e17-363a-4b18-a2e5-fc76c10ca7ed" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/jersey/v1/userextensions" path="/sys-rest-api/jersey/v1/userextensions" id="09de4e17-363a-4b18-a2e5-fc76c10ca7ed" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="09de4e17-363a-4b18-a2e5-fc76c10ca7edfileName">%2Fsys-rest-api%2Fjersey%2Fv1%2Fuserextensions</con:setting>
   </con:settings>
@@ -32,12 +32,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Insert with dateFormat Example" id="4e8d4935-c27b-4871-8e24-bbfa63c4e7ba" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"tableCode":"string","dateFormat":"DD-MON-YY","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -69,6 +77,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -100,12 +112,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"tableCode":"string","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Update with dateFormat Example" id="fd5318cc-b4b5-4d38-b056-07007afbb6c6" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"tableCode":"string","dateFormat":"DD-MON-YY","data":{"UDF_FIELD_1":"string","UDF_FIELD_2":"string","UDF_FIELD_N":"string"}}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

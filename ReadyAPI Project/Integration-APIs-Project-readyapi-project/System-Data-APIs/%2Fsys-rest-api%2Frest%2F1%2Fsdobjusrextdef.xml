@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/sdobjusrextdef" path="/sys-rest-api/rest/1/sdobjusrextdef" id="494381b0-7c07-4bf2-804a-c995907ab1bb" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/sdobjusrextdef" path="/sys-rest-api/rest/1/sdobjusrextdef" id="494381b0-7c07-4bf2-804a-c995907ab1bb" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="494381b0-7c07-4bf2-804a-c995907ab1bbfileName">%2Fsys-rest-api%2Frest%2F1%2Fsdobjusrextdef</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>RowFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TableName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Name of Table being looked for (RowFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date (yyyy-mm-dd - RowFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -190,7 +196,16 @@
     <con:request name="Request 1" id="8e083904-3542-478e-88bc-31c68fad4673" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="TableName" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

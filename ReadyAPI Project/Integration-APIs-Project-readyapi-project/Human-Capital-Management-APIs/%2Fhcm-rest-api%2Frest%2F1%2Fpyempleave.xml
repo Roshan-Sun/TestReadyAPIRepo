@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyempleave" path="/hcm-rest-api/rest/1/pyempleave" id="483518bc-7abf-41d3-8e9f-14a9a1ff155c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyempleave" path="/hcm-rest-api/rest/1/pyempleave" id="483518bc-7abf-41d3-8e9f-14a9a1ff155c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="483518bc-7abf-41d3-8e9f-14a9a1ff155cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyempleave</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByEmpComp, selectByEmpCompLeave or selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByEmpComp and selectByEmpCompLeave)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectByEmpComp and selectByEmpCompLeave)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>Year</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Year (selectByEmpComp and selectByEmpCompLeave)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>LeaveCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Leave Code (selectByEmpCompLeave)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -73,7 +85,19 @@
     <con:request name="Request 1" id="81097aa8-7e59-436b-8ff5-c8077935158a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="Year" value=""/>
+        <con:entry key="EmpNo" value=""/>
+        <con:entry key="LeaveCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="5cd95d1c-9846-4e0a-851d-b878b5a5f683" method="POST">
@@ -120,12 +144,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EplPprYear":"string","EplCompCode":"string","EplEmpNo":"string","EplLevCode":"string","EplVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="e6f827bb-1740-4a14-b6f6-4d4b68f56083" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EplDaysUsed":1}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

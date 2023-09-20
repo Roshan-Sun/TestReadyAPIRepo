@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/em-rest-api/rest/1/emequipment/{Vuuid}" path="/em-rest-api/rest/1/emequipment/{Vuuid}" id="a664675c-8c27-4073-bae4-323d693dfe17" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/em-rest-api/rest/1/emequipment/{Vuuid}" path="/em-rest-api/rest/1/emequipment/{Vuuid}" id="a664675c-8c27-4073-bae4-323d693dfe17" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a664675c-8c27-4073-bae4-323d693dfe17fileName">%2Fem-rest-api%2Frest%2F1%2Femequipment%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -113,7 +115,14 @@
     <con:request name="Request 1" id="6ca2cb04-5cb4-4c8e-a140-9dcec53f797f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="424a8939-6fb7-4909-889e-23736aa1c224" method="DELETE">
@@ -122,7 +131,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -141,7 +152,14 @@
     <con:request name="Request 1" id="fdd68230-6dc7-47cf-b899-0fc222e0a82c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="16ee2864-bdf8-4452-8cfd-d6af22ebfc36" method="PATCH">
@@ -150,7 +168,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for record</con:description>
       </con:parameter>
     </con:parameters>
@@ -259,13 +279,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmeCompCode":"string","EmeEqpCode":"string","EmeName":"string","EmeEqpclassCode":"string","EmeEqpHier":"string","EmeHomelocCode":"string","EmeHomelocName":"string","EmeFastCatCode":"string","EmeActuallocCode":"string","EmeActiveFlag":"string","EmeAutoChargeoutFlag":"string","EmeBillRateRequiredFlag":"string","EmeBulkEquipmentFlag":"string","EmeDepreciationFlag":"string","EmeFixedAssetsFlag":"string","EmeUseMeterReadingFlag":"string","EmeVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="5c270183-e371-48bd-b035-a7f1713b361d" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"EmeFastCatCode":"EQUIPMENT","EmeDesc":"test1234"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

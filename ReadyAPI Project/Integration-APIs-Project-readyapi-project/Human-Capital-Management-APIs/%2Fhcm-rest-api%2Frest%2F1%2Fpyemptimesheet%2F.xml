@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemptimesheet/" path="/hcm-rest-api/rest/1/pyemptimesheet/" id="7c8add23-3e53-4538-af9f-7f1739e7cf60" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemptimesheet/" path="/hcm-rest-api/rest/1/pyemptimesheet/" id="7c8add23-3e53-4538-af9f-7f1739e7cf60" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="7c8add23-3e53-4538-af9f-7f1739e7cf60fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemptimesheet%2F</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCodes, selectByEmpDate or selectByEmpPeriod</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empCompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empNumber</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (selectByEmpDate and selectByEmpPeriod)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empPrnCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Pay Run Code (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empYear</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Year (selectByCodes)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empPeriod</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Period (selectByCodes and selectByEmpPeriod)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>empDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Timesheet Date (selectByEmpDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -94,7 +108,20 @@
     <con:request name="Request 1" id="921212aa-8746-41a1-95f3-679906413fa3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="empNumber" value=""/>
+        <con:entry key="empDate" value=""/>
+        <con:entry key="empPrnCode" value=""/>
+        <con:entry key="empCompCode" value=""/>
+        <con:entry key="empPeriod" value=""/>
+        <con:entry key="empYear" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="38595fae-7807-4cb5-b5dd-a894dfd4f02c" method="POST">
@@ -162,18 +189,30 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshCompCode":"string","TshEmpNo":"string","TshPrnCode":"string","TshPprYear":"integer","TshPprPeriod":"integer","TshDate":"string","TshTypeCode":"string","TshJobdeptwoId":"string","TshPhsacctwiId":"string","TshCatexpId":"string","TshNormalHours":"integer","TshVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="d8eea2d3-a516-4172-af60-88fc5704dacf" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"TshDocumentNo":"TEST123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Batch POST Example" id="e5749519-d0af-4513-8c67-b91a3bbcb3e8" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-23","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":3,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB82","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}},{"id":"part2","path":"/1/pyemptimesheet","operation":"create","payload":{"TshCatexpId":"1100","TshCompCode":"ZZ","TshDate":"2019-10-24","TshDocumentNo":null,"TshDotHours":0,"TshEmpNo":"ZZ-900","TshJobdeptwoId":"DEFAULT","TshNormalHours":8,"TshOhType":null,"TshOtHours":1,"TshOtherHours":null,"TshPhsacctwiId":"01-710","TshPprPeriod":4,"TshPprYear":2020,"TshPrnCode":"ZZWK","TshTypeCode":"J","TshVuuid":"20200904OB83","TshWcbCode":"WC","TshWorkCompCode":"ZZ","TshBatchFlag":"Y"}}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

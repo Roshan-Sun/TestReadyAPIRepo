@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/manualcheck" path="/ap-rest-api/rest/1/manualcheck" id="8ae4bb2a-fd99-4ec3-a257-e5682385d24c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/manualcheck" path="/ap-rest-api/rest/1/manualcheck" id="8ae4bb2a-fd99-4ec3-a257-e5682385d24c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8ae4bb2a-fd99-4ec3-a257-e5682385d24cfileName">%2Fap-rest-api%2Frest%2F1%2Fmanualcheck</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Chequefinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (Chequefinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChqNumVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Valid Cheque number (Chequefinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>VenCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (Chequefinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>expand</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>VouChqViewObj or PayamtChqmanViewObj</con:description>
       </con:parameter>
     </con:parameters>
@@ -81,7 +91,18 @@
     <con:request name="Request 1" id="567becd9-fefa-4fbf-805b-75a08df6794c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="expand" value=""/>
+        <con:entry key="VenCodeVar" value=""/>
+        <con:entry key="ChqNumVar" value=""/>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="create-ap-manual-check" id="e88fe35e-65bc-4134-ae9d-60c25d31782a" method="POST">
@@ -141,6 +162,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ChqAccCode":"string","ChqAmt":"float","ChqBankCompCode":"string","ChqBchName":"string","ChqBchPost":"string","ChqPostDate":"string","ChqCompCode":"string","ChqDate":"string","ChqDeptCode":"string","ChqDesc":"string","ChqNum":"integer","ChqRecCode":"string","ChqSeqNum":"string","ChqVenCode":"string","ChqVouCode":"string","PayamtChqmanViewObj":[{"PaCompCode":"string","PaChqCompCode":"string","PaVenCode":"string","PaChqNum":"integer","PaPayCurrAmt":"float","PaAmt":"float","PaVouInvCode":"string","PaDiscAmt":"float","PaChqSeqNum":"string"}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/po-rest-api/rest/1/porequisition" path="/po-rest-api/rest/1/porequisition" id="04b7ad40-d986-4b87-bcf7-e3f138a706dc" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/po-rest-api/rest/1/porequisition" path="/po-rest-api/rest/1/porequisition" id="04b7ad40-d986-4b87-bcf7-e3f138a706dc" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="04b7ad40-d986-4b87-bcf7-e3f138a706dcfileName">%2Fpo-rest-api%2Frest%2F1%2Fporequisition</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>reqNum</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Requisition Number</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>status</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Requisition Status</con:description>
       </con:parameter>
     </con:parameters>
@@ -110,7 +118,17 @@
     <con:request name="Request 1" id="d8f83e35-a1be-4334-bdf2-8c739e95630c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="reqNum" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="status" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="0d6cc35a-cd17-44e5-b9b5-5c7ab5c5d645" method="POST">
@@ -204,12 +222,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqCompCode":"RVHQ1001","PoreqVenCode":"4CASTER","PoreqNum":"RSTEST123","PoreqReqdDate":"2022-11-01","PoreqReqCode":"RAVI","PoreqVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="7c32a373-62e2-4719-b97d-48a4e5b876ef" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PoreqBlanketFlag":"Y"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

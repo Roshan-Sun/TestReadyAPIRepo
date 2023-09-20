@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/prmworkorder/{Vuuid}" path="/prm-rest-api/rest/1/prmworkorder/{Vuuid}" id="e81bba0f-4ec7-46df-989d-742409ca0280" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/prmworkorder/{Vuuid}" path="/prm-rest-api/rest/1/prmworkorder/{Vuuid}" id="e81bba0f-4ec7-46df-989d-742409ca0280" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="e81bba0f-4ec7-46df-989d-742409ca0280fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmworkorder%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -93,7 +95,14 @@
     <con:request name="Request 1" id="03bd0125-f400-460c-b9c1-9902f649b099" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="db986702-e327-4b75-bb74-b629205dbaad" method="PATCH">
@@ -102,7 +111,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -196,43 +207,85 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"G","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoCostDeptCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="J-Type Example" id="9e2ebe7c-8b55-4cd4-8fd8-61b48f0c9971" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"J","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoCostJobCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="E-Type Example" id="298caf99-ee41-43dc-abe8-37a41dcc77ca" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoReceivedDateTime":"string","WoType":"string","WoTranType":"E","WoStatus":"string","WoCompCode":"string","WoCostCompCode":"string","WoEqpCode":"string","WoCode":"string","WoNumber":"integer","WoCostingType":"string","WoPrintCounter":"integer","WoPriorityNumber":"integer","WoBillingType":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Work Order with Work Item Example" id="a3313c49-c018-4f4e-9123-19bbea464ee1" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN30","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"i'm so lost","WitmWoStepDescription":"keep going bro","WitmPriority":2,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Work Order with Multiple Work Items Example" id="fedf1820-7b68-4fe9-8c09-48437d3d3ce0" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN21","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Patch Example" id="4c27c65a-1146-40c2-9500-44f8b2c09514" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WoDescription":"bobicus was here"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Multiple Work orders with Work Items Example" id="6b916f9f-c0ee-4818-a16c-eef56d0d038b" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN19","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}},{"id":"part2","path":"/1/prmworkorder","operation":"create","payload":{"WoReceivedDateTime":"2022-11-01","WoType":"C","WoTranType":"G","WoStatus":"S","WoCompCode":"ZZ","WoCostCompCode":"ZZ","WoCostDeptCode":"00","WoCode":"ROSHAN20","WoNumber":"7","WoCostingType":"N","WoPrintCounter":"0","WoPriorityNumber":"3","WoBillingType":"N","PrmWorkItemViewObj":[{"WitmWoStepTitle":"okay 3 boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"},{"WitmWoStepTitle":"okay for me - not for you","WitmWoStepDescription":"i'm here to test a new life","WitmPriority":3,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-02","WitmThresholdDate":"2022-11-02"}]}}]}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

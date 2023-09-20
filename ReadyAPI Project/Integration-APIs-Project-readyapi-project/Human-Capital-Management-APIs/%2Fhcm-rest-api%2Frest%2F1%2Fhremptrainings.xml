@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hremptrainings" path="/hcm-rest-api/rest/1/hremptrainings" id="f494d326-77f9-4f89-a20f-90f0fd6c0ace" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hremptrainings" path="/hcm-rest-api/rest/1/hremptrainings" id="f494d326-77f9-4f89-a20f-90f0fd6c0ace" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="f494d326-77f9-4f89-a20f-90f0fd6c0acefileName">%2Fhcm-rest-api%2Frest%2F1%2Fhremptrainings</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>HcmEmpTrainingsFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (HcmEmpTrainingsFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -79,7 +83,15 @@
     <con:request name="Request 1" id="9932fd68-51ab-4bda-8d8a-efc639b1c210" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="EmpNo" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="babebec6-284f-4129-8454-764dc22add0d" method="POST">
@@ -152,12 +164,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GemtrEmpNo":"string","GemtrCourseCode":"string","GemtrModuleCode":"string","GemtrStartDate":"string","GemtrDateCompleted":"string","GemtrVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="fe94ec00-aa9a-41d8-8886-d7dabf368cee" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GemtrCost":1.99}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

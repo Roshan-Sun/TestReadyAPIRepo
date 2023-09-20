@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apallvouchers/{VouNum}" path="/ap-rest-api/rest/1/apallvouchers/{VouNum}" id="8381cc2d-03aa-48fe-a75c-11d0b3794032" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apallvouchers/{VouNum}" path="/ap-rest-api/rest/1/apallvouchers/{VouNum}" id="8381cc2d-03aa-48fe-a75c-11d0b3794032" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="8381cc2d-03aa-48fe-a75c-11d0b3794032fileName">%2Fap-rest-api%2Frest%2F1%2Fapallvouchers%2F%7BVouNum%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>VouNum</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Specific voucher number</con:description>
       </con:parameter>
     </con:parameters>
@@ -179,7 +181,14 @@
     <con:request name="Request 1" id="fc650cbb-b1e0-4f76-add1-e6e79b8d2bec" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="VouNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

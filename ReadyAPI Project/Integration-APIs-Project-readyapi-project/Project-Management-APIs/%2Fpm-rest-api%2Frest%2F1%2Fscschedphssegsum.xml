@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/scschedphssegsum" path="/pm-rest-api/rest/1/scschedphssegsum" id="f4792f17-7ff3-43c5-83fd-bf0ee79a74f2" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/scschedphssegsum" path="/pm-rest-api/rest/1/scschedphssegsum" id="f4792f17-7ff3-43c5-83fd-bf0ee79a74f2" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="f4792f17-7ff3-43c5-83fd-bf0ee79a74f2fileName">%2Fpm-rest-api%2Frest%2F1%2Fscschedphssegsum</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>VendorFinder, JobFinder or SubcontractFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (VendorFinder, JobFinder and SubcontractFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>VenCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Vendor Code (VendorFinder and SubcontractFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JobCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Code (JobFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ContCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Contract Code (SubcontractFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ChgCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change Code (SubcontractFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -66,7 +78,19 @@
     <con:request name="Request 1" id="fbf09d7c-dc9c-4e6c-ae45-0f6a3eb0b3ac" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="ChgCodeVar" value=""/>
+        <con:entry key="VenCodeVar" value=""/>
+        <con:entry key="ContCodeVar" value=""/>
+        <con:entry key="JobCodeVar" value=""/>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

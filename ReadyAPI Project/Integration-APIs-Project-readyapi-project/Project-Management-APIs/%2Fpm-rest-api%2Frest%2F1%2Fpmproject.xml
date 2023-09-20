@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmproject" path="/pm-rest-api/rest/1/pmproject" id="2d6581ff-7a43-4ace-bf27-e25e89343a6d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmproject" path="/pm-rest-api/rest/1/pmproject" id="2d6581ff-7a43-4ace-bf27-e25e89343a6d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2d6581ff-7a43-4ace-bf27-e25e89343a6dfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmproject</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompProj, selectByCompany, selectByJobCode or selectByPmProjInfo</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompProj, selectByCompany and selectByJobCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>projectCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project Code (selectByCompProj and selectByJobCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Code (selectByCompProj, selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>pmprojstatCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project Status Code (selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>pmprojectDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Project Date (selectByCompany, selectByJobCode and selectByPmProjInfo)</con:description>
       </con:parameter>
     </con:parameters>
@@ -256,7 +268,19 @@
     <con:request name="Request 1" id="f1efd594-64bb-4157-8e83-a4d2278e8dd0" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="pmprojectDate" value=""/>
+        <con:entry key="projectCode" value=""/>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="pmprojstatCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b77f3903-782d-425f-aa7a-d7efbb108972" method="POST">
@@ -486,12 +510,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GrpmpAutoCalcMarkupFlag":"string","GrpmpPmplMaskOverride":"string","GrpmpUseBidItemEaFlag":"string","GrpmpHardBidFlag":"string","GrpmpProjCode":"string","GrpmpProjName":"string","GrpmpCompCode":"string","GrpmpJobSecGroup":"string","GrpmpVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="e254e070-37e0-414d-8075-a35ea0e197f4" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"GrpmpAddLine1":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

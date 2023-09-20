@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/po-rest-api/rest/1/popurchaseorder/" path="/po-rest-api/rest/1/popurchaseorder/" id="280bc3eb-0a8c-4c19-bbfb-b978f159a9ad" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/po-rest-api/rest/1/popurchaseorder/" path="/po-rest-api/rest/1/popurchaseorder/" id="280bc3eb-0a8c-4c19-bbfb-b978f159a9ad" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="280bc3eb-0a8c-4c19-bbfb-b978f159a9adfileName">%2Fpo-rest-api%2Frest%2F1%2Fpopurchaseorder%2F</con:setting>
   </con:settings>
@@ -133,12 +133,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PomstCompCode":"string","PomstCompName":"string","PomstNum":"integer","PomstReleaseNum":"integer","PomstVenCode":"string","PomstTypeCode":"string","PomstJobCompCode":"string","PomstVuuid":"","PoDetViewObj":[{"PodetLineNum":"integer","PodetItmCode":"string","PodetItmName":"string","PodetExptdDate":"string","PodetExptdPriceAmt":"float","PodetCurrCode":"string","PodetOrdQty":"integer","PodetOrdWmCode":"string","PodetStatCode":"string","PodetJobCode":"string","PodetJobCtrlCode":"string","PodetPhsCode":"string","PodetPhsCtrlCode":"string","PodetCatCode":"string","PodetCatCtrlCode":"string","PodetTax1Code":"string","PodetTax2Code":"string","PodetTax3Code":"string","PodetWipAccCode":"string","PodetWipDeptCode":"string","PodetSrcCompCode":"string","PodetRecIntoInvFlag":"string","PodetUserTypeCode":"string","PodetUserField1":"string","PodetUserField2":"string","PodetUserField3":"string","PodetUserField4":"string","PodetTax1TaxableFlag":"string","PodetTax2TaxableFlag":"string","PodetTax3TaxableFlag":"string","PoderExtendedAmt":"float","PodetPoTypeCode":"string","PodetPoItemType":"string","PodetItemAllowAltWmFlag":"string","PodetWbsSetupFlag":"string","PodetTacSetupFlag":"string","PodetVuuid":""}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="POST Example 2 (PO Details on existing Header)" id="c477c329-e124-42e0-8052-c8fd40a2448c" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PodetLineNum":3,"PodetItmCode":"TOOLS","PodetItmName":"test","PodetExptdDate":"2021-04-01","PodetExptdPriceAmt":1,"PodetCurrCode":"US","PodetOrdQty":12,"PodetOrdWmCode":"NA","PodetStatCode":"N","PodetJobCode":"100001","PodetJobCtrlCode":"ALL","PodetPhsCode":"01-103","PodetPhsCtrlCode":"01","PodetCatCode":"1000","PodetCatCtrlCode":"ALL","PodetTax1Code":"T4","PodetTax2Code":"T5","PodetTax3Code":"T6","PodetWipAccCode":"5200.100","PodetWipDeptCode":"00","PodetSrcCompCode":"RVHQ1001","PodetRecIntoInvFlag":"N","PodetUserTypeCode":"J","PodetUserField1":"RVHQ1001","PodetUserField2":"100001","PodetUserField3":"01-103","PodetUserField4":"1000","PodetTax1TaxableFlag":"Y","PodetTax2TaxableFlag":"Y","PodetTax3TaxableFlag":"Y","PodetObjectOraseq":67424752,"PoderExtendedAmt":12,"PodetPoTypeCode":"S","PodetPoItemType":"F","PodetItemAllowAltWmFlag":"Y","PodetPosOraseq":67424762,"PodetWbsSetupFlag":"N","PodetTacSetupFlag":"N","PodetVuuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

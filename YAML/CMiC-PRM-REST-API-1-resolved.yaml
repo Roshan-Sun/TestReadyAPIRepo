@@ -40,6 +40,29 @@ tags:
 - name: workorder
   description: DM Work Orders
 paths:
+  /prm-rest-api/rest/1/describe:
+    get:
+      tags:
+      - describe
+      summary: Retrieve all PRM-REST-API metadata
+      description: All metadata about PRM application
+      operationId: Describe Application
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
   /prm-rest-api/rest/1/issuepriority:
     get:
       tags:

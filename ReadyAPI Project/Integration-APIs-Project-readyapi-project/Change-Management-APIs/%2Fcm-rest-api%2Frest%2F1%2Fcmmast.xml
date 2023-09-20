@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/cm-rest-api/rest/1/cmmast" path="/cm-rest-api/rest/1/cmmast" id="653eef1f-e2d2-4da8-b2ce-3ecba191e399" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/cm-rest-api/rest/1/cmmast" path="/cm-rest-api/rest/1/cmmast" id="653eef1f-e2d2-4da8-b2ce-3ecba191e399" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="653eef1f-e2d2-4da8-b2ce-3ecba191e399fileName">%2Fcm-rest-api%2Frest%2F1%2Fcmmast</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompJob, selectByCompJobCMCode or selectByWorkflow</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company code (selectByCompJob and selectByCompJobCMCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>jobCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job code (selectByCompJob and selectByCompJobCMCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>typeCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PCI Type code (selectByCompJob, selectByCompJobCMCode and selectByWorkflow)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>cmCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Change code (selectByCompJobCMCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Date to check against create/update dates (selectByWorkflow)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>workflowStatus</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PCI workflow status (selectByWorkflow)</con:description>
       </con:parameter>
     </con:parameters>
@@ -135,7 +149,20 @@
     <con:request name="Request 1" id="eb1b1d6d-bcb3-4206-9f3f-7fb84e5bb972" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="workflowStatus" value=""/>
+        <con:entry key="cmCode" value=""/>
+        <con:entry key="jobCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="typeCode" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="b8beb46e-74dd-43fd-b630-bb58fd1d49e6" method="POST">
@@ -239,12 +266,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmmCompCode":"string","CmmJobCode":"string","CmmTypeCode":"string","CmmCode":"string","CmmName":"string","CmmRefDate":"string","CmmPrepostStatCode":"string","CmmCalcProjAmtMethod":"string","CmmVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="90ba7448-0586-4469-9f48-676e98fad24b" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CmmWorkflowStatus":"REJECTED"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

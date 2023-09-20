@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmdailyjourqc" path="/pm-rest-api/rest/1/pmdailyjourqc" id="0dbeee29-6faf-4f40-9104-0bcb88b38ad9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmdailyjourqc" path="/pm-rest-api/rest/1/pmdailyjourqc" id="0dbeee29-6faf-4f40-9104-0bcb88b38ad9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="0dbeee29-6faf-4f40-9104-0bcb88b38ad9fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmdailyjourqc</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByJournal</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JournalVuuid</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>UUID of Journal to link to (selectByJournal)</con:description>
       </con:parameter>
     </con:parameters>
@@ -49,7 +53,15 @@
     <con:request name="Request 1" id="1c29cb7d-4b26-4931-9f48-3bb2764e3294" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="JournalVuuid" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="cc5f4182-5340-4369-b2e5-43a15976c6d1" method="POST">
@@ -92,12 +104,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmjqcJournalVUuid":"string","PmjqcVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="ee096e2a-8c42-4e9c-a2b0-892e2c878e35" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmjqcWrkComplWithSftyFlag":"N"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

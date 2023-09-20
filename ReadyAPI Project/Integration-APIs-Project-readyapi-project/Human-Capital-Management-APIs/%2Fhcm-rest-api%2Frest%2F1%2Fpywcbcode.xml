@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pywcbcode" path="/hcm-rest-api/rest/1/pywcbcode" id="25039cf0-7f7e-4600-9b30-6c4e3e981643" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pywcbcode" path="/hcm-rest-api/rest/1/pywcbcode" id="25039cf0-7f7e-4600-9b30-6c4e3e981643" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="25039cf0-7f7e-4600-9b30-6c4e3e981643fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpywcbcode</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>findByKeys or findByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>compCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (findByKeys)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>countryCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Country Code (findByKeys)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>stateCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>State Code (findByKeys)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>auditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to check against (findByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -74,7 +84,18 @@
     <con:request name="Request 1" id="2d025d50-286a-48f3-9227-f3d15d43674c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="countryCode" value=""/>
+        <con:entry key="stateCode" value=""/>
+        <con:entry key="compCode" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="auditDate" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

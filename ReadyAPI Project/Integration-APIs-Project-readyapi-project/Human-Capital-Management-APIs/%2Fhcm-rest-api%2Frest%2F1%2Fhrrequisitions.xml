@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrrequisitions" path="/hcm-rest-api/rest/1/hrrequisitions" id="82a7e8e0-e0b2-4c7b-b530-9a1953540c32" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrrequisitions" path="/hcm-rest-api/rest/1/hrrequisitions" id="82a7e8e0-e0b2-4c7b-b530-9a1953540c32" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="82a7e8e0-e0b2-4c7b-b530-9a1953540c32fileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrrequisitions</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>RequisitionFinder or OpenRequisitionsFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>RequisitionCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Requisition Code (RequisitionFinder and OpenRequisitionsFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status Code (RequisitionFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TradeCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Trade Code (RequisitionFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>HireOfficeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Hired Office (RequisitionFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>JobTitleVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Job Title (RequisitionFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -75,7 +87,19 @@
     <con:request name="Request 1" id="5915a488-feeb-42d4-8917-23d08c50fa39" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="TradeCodeVar" value=""/>
+        <con:entry key="JobTitleVar" value=""/>
+        <con:entry key="StatusCodeVar" value=""/>
+        <con:entry key="RequisitionCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+        <con:entry key="HireOfficeVar" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="fb81a107-b18a-45d3-89cc-48b5530693ff" method="POST">
@@ -124,12 +148,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrrCode":"string","HrrDate":"string","HrrTrdCode":"string","HrrRequestedBy":"string","HrrPropJobTitle":"string","HrrJobDesc":"string","HrrResp":"string","HrrHireOffice":"string","HrrVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="865bf26e-cee9-446b-be21-c0aee25132bc" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrrJobDesc":"test1235"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

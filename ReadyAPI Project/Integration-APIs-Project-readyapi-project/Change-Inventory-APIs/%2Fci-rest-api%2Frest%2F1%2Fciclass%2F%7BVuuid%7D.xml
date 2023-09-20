@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciclass/{Vuuid}" path="/ci-rest-api/rest/1/ciclass/{Vuuid}" id="1fcf1be9-e77d-4a4a-941f-1c37e2ed602d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciclass/{Vuuid}" path="/ci-rest-api/rest/1/ciclass/{Vuuid}" id="1fcf1be9-e77d-4a4a-941f-1c37e2ed602d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="1fcf1be9-e77d-4a4a-941f-1c37e2ed602dfileName">%2Fci-rest-api%2Frest%2F1%2Fciclass%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -103,7 +105,14 @@
     <con:request name="Request 1" id="5e076b9e-db7c-4b45-8d35-25797ca7cfa1" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="30d87783-e95b-4e5a-9c95-c8c51faf01b9" method="DELETE">
@@ -112,7 +121,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -131,7 +142,14 @@
     <con:request name="Request 1" id="5b716aa0-5ff0-401b-bf0c-2d16e70deb1b" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="05d3eb65-7ab2-45d4-9417-7f9902a2f43f" method="PATCH">
@@ -140,7 +158,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -239,13 +259,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiclasVarAccCode":"string","CiclasBbPriceOrPctCode":"string","CiclasLotCtrlFlag":"string","CiclasRevAccCode":"string","CiclasAdjAccCode":"string","CiclasCompCode":"string","CiclasHier":"string","CiclasMsAvailableFlag":"string","CiclasWriAccCode":"string","CiclasSerialFlag":"string","CiclasCostUpdateLevelCode":"string","CiclasAutoBuildCmpFlag":"string","CiclasSellPriceOrPctCode":"string","CiclasSuspAccCode":"string","CiclasClassCode":"string","CiclasInvAccCode":"string","CiclasUsageCode":"string","CiclasCostMethCode":"string","CiclasVUuid":""}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="PATCH Example" id="27dba2a5-c6f1-4d13-8ed2-4cf0e301256a" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiclasAllowNegQtyFlag":"Y"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

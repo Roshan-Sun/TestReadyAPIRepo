@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/glperiod" path="/glrestapi/rest/v1/glperiod" id="c9a036b7-bf60-49c7-bcfa-3ffaea258624" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/glperiod" path="/glrestapi/rest/v1/glperiod" id="c9a036b7-bf60-49c7-bcfa-3ffaea258624" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c9a036b7-bf60-49c7-bcfa-3ffaea258624fileName">%2Fglrestapi%2Frest%2Fv1%2Fglperiod</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectPeriod</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>chartCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Chart Code (selectPeriod)</con:description>
       </con:parameter>
     </con:parameters>
@@ -45,7 +49,15 @@
     <con:request name="Request 1" id="e9b95f8a-d966-4c6c-bcf9-8c0f359e6cb0" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="chartCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

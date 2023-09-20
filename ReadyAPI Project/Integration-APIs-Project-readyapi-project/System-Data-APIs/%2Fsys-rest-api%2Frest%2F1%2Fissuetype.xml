@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/issuetype" path="/sys-rest-api/rest/1/issuetype" id="f4f95fd2-6f90-46d1-acc3-1398189ba22d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/issuetype" path="/sys-rest-api/rest/1/issuetype" id="f4f95fd2-6f90-46d1-acc3-1398189ba22d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="f4f95fd2-6f90-46d1-acc3-1398189ba22dfileName">%2Fsys-rest-api%2Frest%2F1%2Fissuetype</con:setting>
   </con:settings>

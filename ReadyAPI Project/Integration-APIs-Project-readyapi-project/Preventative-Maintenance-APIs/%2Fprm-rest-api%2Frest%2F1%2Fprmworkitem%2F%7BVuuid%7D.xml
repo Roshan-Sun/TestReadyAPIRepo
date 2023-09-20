@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" path="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" id="b336ef60-440d-4a31-b00e-4aac066b9d89" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" path="/prm-rest-api/rest/1/prmworkitem/{Vuuid}" id="b336ef60-440d-4a31-b00e-4aac066b9d89" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="b336ef60-440d-4a31-b00e-4aac066b9d89fileName">%2Fprm-rest-api%2Frest%2F1%2Fprmworkitem%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -118,7 +120,14 @@
     <con:request name="Request 1" id="74aa47e1-9974-46ee-8394-e42eaf1a1fa9" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="0721c2b6-19df-4938-be7d-a1357b299f43" method="PATCH">
@@ -127,7 +136,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -241,13 +252,25 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WitmWoCompCode":"ZZ","WitmWoCode":"ROSHAN15","WitmWoStepTitle":"okay boss","WitmWoStepDescription":"stop everything","WitmPriority":4,"WitmWorkItemType":"JB","WitmAppTypeCode":"CRM","WitmBillingType":"F","WitmStatus":"O","WitmMissedTaskCount":"0","WitmRecurringFlag":"0","WitmDeadlineDate":"2022-11-01","WitmThresholdDate":"2022-11-01"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
     <con:request name="Patch Example" id="a9d784d4-e9b9-4e3c-be90-384d4284d946" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"WitmComments":"bobicus was here"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

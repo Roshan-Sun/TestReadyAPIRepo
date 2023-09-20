@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apcheque" path="/ap-rest-api/rest/1/apcheque" id="507efef8-5878-46ad-903c-a910a2822d92" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apcheque" path="/ap-rest-api/rest/1/apcheque" id="507efef8-5878-46ad-903c-a910a2822d92" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="507efef8-5878-46ad-903c-a910a2822d92fileName">%2Fap-rest-api%2Frest%2F1%2Fapcheque</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCompany</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>companyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCompany)</con:description>
       </con:parameter>
     </con:parameters>
@@ -81,7 +85,15 @@
     <con:request name="Request 1" id="0595e68f-9788-4249-87c6-494b99777ca4" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="companyCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="create-a-ap-cheque" id="07b5d14b-84ac-4269-8b09-3cdf0c7d8dfe" method="POST">
@@ -156,6 +168,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ChqCompCode":"string","ChqSeqNum":"integer","ChqNum":"integer","ChqDate":"string","ChqDeptCode":"string","ChqAccCode":"string","ChqAmt":"float","ChqCurcFactorNum":"integer","ChqDraftCode":"string","ChqVenCode":"string","ChqCurrCode":"string","ChqBankCompCode":"string","ChqGlFactorNum":"integer","ChqPayeeFlag":"string","ChqPospayExcludeFlag":"string","ChqPospayFlag":"string","ChqPospayVoidFlag":"string","ChqDesc":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

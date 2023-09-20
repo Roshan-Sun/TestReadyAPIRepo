@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/hrpositions" path="/hcm-rest-api/rest/1/hrpositions" id="d741a68b-1a3a-4ffa-9943-9f6c056e139c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/hrpositions" path="/hcm-rest-api/rest/1/hrpositions" id="d741a68b-1a3a-4ffa-9943-9f6c056e139c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="d741a68b-1a3a-4ffa-9943-9f6c056e139cfileName">%2Fhcm-rest-api%2Frest%2F1%2Fhrpositions</con:setting>
   </con:settings>
@@ -10,27 +10,37 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByNameAndStatus or hrpositionsFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>PositionName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Name of Position (selectByNameAndStatus)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status Code (selectByNameAndStatus)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>HrpEmpNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (hrpositionsFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>HrpPositionCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Position Code (hrpositionsFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -65,7 +75,18 @@
     <con:request name="Request 1" id="bce37197-eaf3-4d8b-9acf-216a6fbd2636" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="HrpPositionCodeVar" value=""/>
+        <con:entry key="PositionName" value=""/>
+        <con:entry key="HrpEmpNoVar" value=""/>
+        <con:entry key="StatusCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="c42ad4b7-86c5-4e3d-b523-681b70619977" method="POST">
@@ -109,12 +130,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrpPositionCode":"string","HrpPositionName":"string","HrpTrdCode":"string","HrpReportTo":"string","HrpVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="f0e6f729-3a5d-4285-a93a-53cb854f56b6" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"HrpJobTitle":"Carpentry Apprentice - yessir2","HrpReportTo":"."}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

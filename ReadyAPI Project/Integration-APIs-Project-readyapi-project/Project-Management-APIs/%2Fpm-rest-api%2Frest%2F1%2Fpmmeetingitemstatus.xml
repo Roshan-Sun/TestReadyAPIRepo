@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmmeetingitemstatus" path="/pm-rest-api/rest/1/pmmeetingitemstatus" id="c084a05c-5412-4e6e-8607-7e09c0a467d8" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmmeetingitemstatus" path="/pm-rest-api/rest/1/pmmeetingitemstatus" id="c084a05c-5412-4e6e-8607-7e09c0a467d8" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c084a05c-5412-4e6e-8607-7e09c0a467d8fileName">%2Fpm-rest-api%2Frest%2F1%2Fpmmeetingitemstatus</con:setting>
   </con:settings>
@@ -35,6 +35,11 @@
     <con:request name="Request 1" id="21d8b18a-3959-4fa8-b8cb-567d7daffd57" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -75,12 +80,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmmisClassCode":"string","PmmisDesc":"string","PmmisItemStatus":"string","PmmisVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="65bf2e70-7614-40bd-ae2d-da6dc77f9140" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmmisDesc":"New - test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/unpostedvouchers/{VouNum}" path="/ap-rest-api/rest/1/unpostedvouchers/{VouNum}" id="da132025-74c5-4a83-98ff-c94c2ac675aa" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/unpostedvouchers/{VouNum}" path="/ap-rest-api/rest/1/unpostedvouchers/{VouNum}" id="da132025-74c5-4a83-98ff-c94c2ac675aa" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="da132025-74c5-4a83-98ff-c94c2ac675aafileName">%2Fap-rest-api%2Frest%2F1%2Funpostedvouchers%2F%7BVouNum%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>VouNum</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Specific voucher number</con:description>
       </con:parameter>
     </con:parameters>
@@ -179,7 +181,14 @@
     <con:request name="Request 1" id="2077932d-fe76-4986-92a2-aa73ffe158c3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="VouNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="0e57f6c7-68dc-453f-b21a-b2551ec3acef" method="PATCH">
@@ -188,7 +197,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>VouNum</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Specific voucher number</con:description>
       </con:parameter>
     </con:parameters>
@@ -363,7 +374,13 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"VouDesc2":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="VouNum" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

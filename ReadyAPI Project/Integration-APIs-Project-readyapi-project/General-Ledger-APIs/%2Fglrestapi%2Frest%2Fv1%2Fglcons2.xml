@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/glcons2" path="/glrestapi/rest/v1/glcons2" id="2f8d315d-eefc-43dd-866c-6db527f52bf9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/glcons2" path="/glrestapi/rest/v1/glcons2" id="2f8d315d-eefc-43dd-866c-6db527f52bf9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="2f8d315d-eefc-43dd-866c-6db527f52bf9fileName">%2Fglrestapi%2Frest%2Fv1%2Fglcons2</con:setting>
   </con:settings>
@@ -33,6 +33,11 @@
     <con:request name="Request 1" id="51a1abd1-4a22-40a8-92f4-d357a19f8402" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciitemloclog" path="/ci-rest-api/rest/1/ciitemloclog" id="a0c8ec7a-6a79-4ade-a87f-b41816b2139c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciitemloclog" path="/ci-rest-api/rest/1/ciitemloclog" id="a0c8ec7a-6a79-4ade-a87f-b41816b2139c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a0c8ec7a-6a79-4ade-a87f-b41816b2139cfileName">%2Fci-rest-api%2Frest%2F1%2Fciitemloclog</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>LocCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Location Code(selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ItemCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Item Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ItemTypeCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Item TypeCode Code(selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CostAmt</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Item Cost Amount (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>SellPriceAmt</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Item's selling price (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -78,7 +92,20 @@
     <con:request name="Request 1" id="05106201-f95a-4eec-9d52-e7aa2b02ee8f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="SellPriceAmt" value=""/>
+        <con:entry key="ItemCode" value=""/>
+        <con:entry key="ItemTypeCode" value=""/>
+        <con:entry key="LocCode" value=""/>
+        <con:entry key="CostAmt" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

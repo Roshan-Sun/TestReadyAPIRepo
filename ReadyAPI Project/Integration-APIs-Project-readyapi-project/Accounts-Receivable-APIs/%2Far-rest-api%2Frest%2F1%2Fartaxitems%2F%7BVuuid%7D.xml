@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ar-rest-api/rest/1/artaxitems/{Vuuid}" path="/ar-rest-api/rest/1/artaxitems/{Vuuid}" id="20058108-c033-49c8-847a-f7a01f58b8f7" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ar-rest-api/rest/1/artaxitems/{Vuuid}" path="/ar-rest-api/rest/1/artaxitems/{Vuuid}" id="20058108-c033-49c8-847a-f7a01f58b8f7" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="20058108-c033-49c8-847a-f7a01f58b8f7fileName">%2Far-rest-api%2Frest%2F1%2Fartaxitems%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique raw ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -70,7 +72,14 @@
     <con:request name="Request 1" id="19dfa52e-a7df-400f-afcc-5f49f28db387" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="DELETE" id="1b3ad900-d4df-4222-b464-e80aa957c774" method="DELETE">
@@ -79,7 +88,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique Row ID</con:description>
       </con:parameter>
     </con:parameters>
@@ -98,7 +109,14 @@
     <con:request name="Request 1" id="57f3bf40-26ca-49c9-a700-64ad4fdf7ac8" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="PATCH" id="21bb39ad-3899-48a0-a3f4-74fa01bbb92a" method="PATCH">
@@ -107,7 +125,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>Unique ID for raw</con:description>
       </con:parameter>
     </con:parameters>
@@ -173,7 +193,13 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ArtaxCode":"string","ArtaxCompCode":"string","ArtaxActiveFlag":"string","ArtaxDeptCode":"string","ArtaxAccCode":"string","ArtaxHldbkAccCode":"string","ArtaxHldbkDeptCode":"string","ArtaxPercent":"integer","ArtaxFrtCode":"string","ArtaxInsCode":"string","ArtaxMiscCode":"string","ArtaxTaxCode":"string","ArtaxLneCode":"string","ArtaxFobCode":"string","ArtaxApIncFlag":"string","ArtaxApCreditFlag":"string","ArtaxApAccCode":"string","ArtaxApDeptCode":"string","ArtaxApHldbkAccCode":"string","ArtaxApHldbkDeptCode":"string","ArtaxApDirectPayFlag":"string","ArtaxCompoundTaxFlag":"string","ArtaxNonTaxableFlag":"string","ArtaxVUuid":"string"}</con:request>
-      <con:parameters/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

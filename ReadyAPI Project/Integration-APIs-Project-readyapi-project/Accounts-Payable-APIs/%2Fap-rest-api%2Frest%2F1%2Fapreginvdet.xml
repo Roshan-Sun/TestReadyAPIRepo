@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/apreginvdet" path="/ap-rest-api/rest/1/apreginvdet" id="80e7e240-c87f-4d89-b68c-cfcf04b8c439" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/apreginvdet" path="/ap-rest-api/rest/1/apreginvdet" id="80e7e240-c87f-4d89-b68c-cfcf04b8c439" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="80e7e240-c87f-4d89-b68c-cfcf04b8c439fileName">%2Fap-rest-api%2Frest%2F1%2Fapreginvdet</con:setting>
   </con:settings>
@@ -88,6 +88,11 @@
     <con:request name="Request 1" id="0ae65dcd-c1fc-405d-9162-6f863f4184b7" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -186,12 +191,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="Multi-Insert Invoice Example" id="219f0fd5-cd4e-4f8f-a2f8-50807dc5fb74" mediaType="application/vnd.oracle.adf.batch+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"parts":[{"id":"part1","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}},{"id":"part2","path":"/1/apreginv","operation":"create","payload":{"ApriPayByManualChqFlag":"string","ApriCompCode":"string","ApriVenCode":"string","ApriCurrName":"string","ApriInvCode":"string","ApriInvDate":"string","ApriDueDate":"string","ApriAmt":"float","ApriGroupCode":"string","ApriInvSerCode":"string","ApRegInvDetViewObj":[{"ApridLineNum":"integer","ApridUserTypeCode":"string","ApridUserField1":"string","ApridUserField2":"string","ApridUserField3":"string","ApridAmt":"float","ApridQty":"float","ApridExptdPriceAmt":"float","ApridItemCode":"string","ApridTax1TaxableFlag":"string","ApridTax2TaxableFlag":"string","ApridTax3TaxableFlag":"string"}]}}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

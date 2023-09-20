@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyunipayrate" path="/hcm-rest-api/rest/1/pyunipayrate" id="a7305206-fc78-4274-b672-a8d35fc9ff9d" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyunipayrate" path="/hcm-rest-api/rest/1/pyunipayrate" id="a7305206-fc78-4274-b672-a8d35fc9ff9d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="a7305206-fc78-4274-b672-a8d35fc9ff9dfileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyunipayrate</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>UniCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Union Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>TrdCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Trade Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EffDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Pay Rate Effective Date (selectByCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -73,7 +81,17 @@
     <con:request name="Request 1" id="ae482462-3f96-4714-8eea-1710325bbda3" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="UniCode" value=""/>
+        <con:entry key="TrdCode" value=""/>
+        <con:entry key="EffDate" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

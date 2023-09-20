@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/glrestapi/rest/v1/rtigenericgldepts" path="/glrestapi/rest/v1/rtigenericgldepts" id="801aac1b-6728-412e-bf08-46f44f54714a" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/glrestapi/rest/v1/rtigenericgldepts" path="/glrestapi/rest/v1/rtigenericgldepts" id="801aac1b-6728-412e-bf08-46f44f54714a" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="801aac1b-6728-412e-bf08-46f44f54714afileName">%2Fglrestapi%2Frest%2Fv1%2Frtigenericgldepts</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectDeptCompany</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>deptCompanyCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectDeptCompany)</con:description>
       </con:parameter>
     </con:parameters>
@@ -92,7 +96,15 @@
     <con:request name="Request 1" id="38b658ef-0604-48d2-a496-fe6bffe15d70" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="deptCompanyCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

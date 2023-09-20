@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-rest-api/rest/1/pmpunchliststatus" path="/pm-rest-api/rest/1/pmpunchliststatus" id="14215887-2fe3-41e7-abeb-d0fd525ace8c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-rest-api/rest/1/pmpunchliststatus" path="/pm-rest-api/rest/1/pmpunchliststatus" id="14215887-2fe3-41e7-abeb-d0fd525ace8c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="14215887-2fe3-41e7-abeb-d0fd525ace8cfileName">%2Fpm-rest-api%2Frest%2F1%2Fpmpunchliststatus</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByStatusCode</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>StatusCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Status Code (selectByStatusCode)</con:description>
       </con:parameter>
     </con:parameters>
@@ -46,7 +50,15 @@
     <con:request name="Request 1" id="25f73159-28d4-451a-b138-adaa42895aec" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="StatusCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="4fd8cee2-2a72-43dd-8713-39abaf78cbaa" method="POST">
@@ -86,12 +98,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmplsStatusClassCode":"string","PmplsStatusCode":"string","PmplsStatusName":"string","PmplsVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="3aa50747-63d2-4115-a4cb-f4605a5ecac1" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"PmplsStatusName":"Voided -test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

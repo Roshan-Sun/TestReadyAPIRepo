@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/hcm-rest-api/rest/1/pyemployeemin" path="/hcm-rest-api/rest/1/pyemployeemin" id="aa567555-d986-4837-95cf-26f448dd7014" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/hcm-rest-api/rest/1/pyemployeemin" path="/hcm-rest-api/rest/1/pyemployeemin" id="aa567555-d986-4837-95cf-26f448dd7014" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="aa567555-d986-4837-95cf-26f448dd7014fileName">%2Fhcm-rest-api%2Frest%2F1%2Fpyemployeemin</con:setting>
   </con:settings>
@@ -10,32 +10,44 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>PyEmployeeFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpNoVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Number (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpPrnVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Pay Run Code (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpStatusVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Status Code (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpTermDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Term Date (PyEmployeeFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>EmpTypeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Employee Type Code (PyEmployeeFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -302,7 +314,19 @@
     <con:request name="Request 1" id="ccc154f7-328a-4e6d-94ed-08d9bdcb5b5c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="EmpTypeVar" value=""/>
+        <con:entry key="EmpNoVar" value=""/>
+        <con:entry key="EmpTermDate" value=""/>
+        <con:entry key="EmpPrnVar" value=""/>
+        <con:entry key="EmpStatusVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

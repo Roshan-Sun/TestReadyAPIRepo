@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ap-rest-api/rest/1/openperiods" path="/ap-rest-api/rest/1/openperiods" id="45e33e53-54eb-434c-acbf-b3429fbba44e" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ap-rest-api/rest/1/openperiods" path="/ap-rest-api/rest/1/openperiods" id="45e33e53-54eb-434c-acbf-b3429fbba44e" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="45e33e53-54eb-434c-acbf-b3429fbba44efileName">%2Fap-rest-api%2Frest%2F1%2Fopenperiods</con:setting>
   </con:settings>
@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>OpenPeriodFinder</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>CompCodeVar</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (OpenPeriodFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -44,7 +48,15 @@
     <con:request name="Request 1" id="b2bbb5da-fb1f-4191-a594-89f44708c878" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCodeVar" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

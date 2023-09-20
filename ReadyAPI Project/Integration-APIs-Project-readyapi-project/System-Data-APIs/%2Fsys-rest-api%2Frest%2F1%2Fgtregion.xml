@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/gtregion" path="/sys-rest-api/rest/1/gtregion" id="53ca2785-886b-40c8-8edb-d9ae714ca925" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/gtregion" path="/sys-rest-api/rest/1/gtregion" id="53ca2785-886b-40c8-8edb-d9ae714ca925" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="53ca2785-886b-40c8-8edb-d9ae714ca925fileName">%2Fsys-rest-api%2Frest%2F1%2Fgtregion</con:setting>
   </con:settings>
@@ -10,17 +10,23 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByRegCode or selectByRegName</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>regionCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Region Code (selectByRegCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>regionName</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Region Name (selectByRegName)</con:description>
       </con:parameter>
     </con:parameters>
@@ -48,7 +54,16 @@
     <con:request name="Request 1" id="72810a2d-23aa-4b62-8e74-cf3dfd3208ca" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="regionCode" value=""/>
+        <con:entry key="regionName" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="2c56a6be-4b1a-451f-ac53-92b4f482f67a" method="POST">
@@ -85,12 +100,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"RegCode":"string","RegName":"string","RegVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="5b89fc41-2319-4679-84f8-36725b5bd561" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"RegName":"test123"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

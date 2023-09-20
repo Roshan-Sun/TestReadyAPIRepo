@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/jc-rest-api/rest/1/jctran" path="/jc-rest-api/rest/1/jctran" id="e517f6d1-9027-4e33-824e-70fcbeb2ffa9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/jc-rest-api/rest/1/jctran" path="/jc-rest-api/rest/1/jctran" id="e517f6d1-9027-4e33-824e-70fcbeb2ffa9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="e517f6d1-9027-4e33-824e-70fcbeb2ffa9fileName">%2Fjc-rest-api%2Frest%2F1%2Fjctran</con:setting>
   </con:settings>
@@ -23,6 +23,11 @@
     <con:request name="Request 1" id="8aa442af-fa24-4789-bfbe-c2215399272f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
@@ -51,18 +56,30 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthCompCode":"string","JcthJourCode":"string","JcthDate":"string","JcthPost":"string","JcthVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="POST with Details Example" id="d5e03d00-9c2d-43fb-a901-879b7727b1d3" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthCompCode":"ZZ","JcthBchName":"OGUZTEST59","JcthDate":"2020-10-16","JcthJourCode":"JC","JcthCurrCode":"US","JcthDesc":"OGUZTEST59","JcthDefRefDesc":"OGUZTEST59","JcthDsrcCode":"test","JcthTransactionAmt":100,"JcthVuuid":"","JcthPost":"Y","JctrandViewObj":[{"JctdCompCode":"ZZ","JctdUserTypeCode":"J","JctdJobCode":"00-DUPLIC1","JctdPhsCode":"00","JctdCatCode":"1000","JctdAccCode":"4000.700","JctdAmt":20,"JctdWmCode":"HR","JctdRefCode":"Inv SALE1020-07","JctdRefDesc":"OGUZTEST59","JctdDate":"2020-10-05","JctdDebitAmt":0,"JctdCreditAmt":20,"JctdUnionCode":"test","JctdVuuid":""},{"JctdCompCode":"ZZ","JctdUserTypeCode":"G","JctdDeptCode":"00","JctdAccCode":"4000.800","JctdContCode":null,"JctdAmt":20,"JctdRefCode":"Inv SALE1020-07","JctdRefDesc":"OGUZTEST59","JctdDate":"2020-10-05","JctdDebitAmt":20,"JctdCreditAmt":0,"JctdUnionCode":"test","JctdVuuid":""}]}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="87963014-4477-45d5-850c-a3d9440180cf" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"JcthDesc":"real transaction"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

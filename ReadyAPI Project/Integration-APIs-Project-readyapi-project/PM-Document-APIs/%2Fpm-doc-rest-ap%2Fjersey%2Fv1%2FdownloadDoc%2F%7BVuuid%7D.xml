@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pm-doc-rest-ap/jersey/v1/downloadDoc/{Vuuid}" path="/pm-doc-rest-ap/jersey/v1/downloadDoc/{Vuuid}" id="4b064075-be5d-4ac3-8502-9ec3432487aa" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pm-doc-rest-ap/jersey/v1/downloadDoc/{Vuuid}" path="/pm-doc-rest-ap/jersey/v1/downloadDoc/{Vuuid}" id="4b064075-be5d-4ac3-8502-9ec3432487aa" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="4b064075-be5d-4ac3-8502-9ec3432487aafileName">%2Fpm-doc-rest-ap%2Fjersey%2Fv1%2FdownloadDoc%2F%7BVuuid%7D</con:setting>
   </con:settings>
@@ -10,7 +10,9 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>Vuuid</con:name>
+        <con:value/>
         <con:style>TEMPLATE</con:style>
+        <con:default/>
         <con:description>UUID of the document to be downloaded</con:description>
       </con:parameter>
     </con:parameters>
@@ -23,7 +25,14 @@
     <con:request name="Request 1" id="d768976e-1269-4225-85c6-c82ce2973d1f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="Vuuid" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
 </con:resource>

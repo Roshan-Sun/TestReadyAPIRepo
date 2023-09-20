@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/sys-rest-api/rest/1/userdefinedclassifier" path="/sys-rest-api/rest/1/userdefinedclassifier" id="85d7cd8e-adad-4968-b110-88263da74b70" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/sys-rest-api/rest/1/userdefinedclassifier" path="/sys-rest-api/rest/1/userdefinedclassifier" id="85d7cd8e-adad-4968-b110-88263da74b70" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="85d7cd8e-adad-4968-b110-88263da74b70fileName">%2Fsys-rest-api%2Frest%2F1%2Fuserdefinedclassifier</con:setting>
   </con:settings>
@@ -10,37 +10,51 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>UserDefinedClassifierFinder</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ObjectType</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Object Type being queried for (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>UdfCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>UDF Code (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ObjectKey1</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Object Key 1 - typically Company Code (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ObjectKey2</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Object Key 2 - typically Project Code (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ObjectKey3</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Object Key 3 (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ObjectKey4</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Object Key 4 (UserDefinedClassifierFinder)</con:description>
       </con:parameter>
     </con:parameters>
@@ -70,7 +84,20 @@
     <con:request name="Request 1" id="d6e038aa-7efa-46cc-9e2e-41ec57fda03a" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="ObjectKey4" value=""/>
+        <con:entry key="ObjectType" value=""/>
+        <con:entry key="ObjectKey1" value=""/>
+        <con:entry key="ObjectKey2" value=""/>
+        <con:entry key="UdfCode" value=""/>
+        <con:entry key="ObjectKey3" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="546b17d9-ad8c-4667-9c10-f85afa53b308" method="POST">
@@ -109,6 +136,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"OmcvUdfCode":"string","OmcvObjectType":"string","OmcvObjectKey1":"string","OmcvObjectKey2":"string","OmcvObjectKey3":"integer","OmcvActualValue":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

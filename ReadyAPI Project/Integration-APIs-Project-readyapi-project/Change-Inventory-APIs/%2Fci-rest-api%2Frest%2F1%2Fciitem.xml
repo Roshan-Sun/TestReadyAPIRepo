@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/ci-rest-api/rest/1/ciitem" path="/ci-rest-api/rest/1/ciitem" id="c3a230f0-4c1e-4af2-98b9-b3c4de049514" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/ci-rest-api/rest/1/ciitem" path="/ci-rest-api/rest/1/ciitem" id="c3a230f0-4c1e-4af2-98b9-b3c4de049514" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
     <con:setting id="c3a230f0-4c1e-4af2-98b9-b3c4de049514fileName">%2Fci-rest-api%2Frest%2F1%2Fciitem</con:setting>
   </con:settings>
@@ -10,22 +10,30 @@
     <con:parameters>
       <con:parameter>
         <con:name>finder</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>selectByCode and selectByDate</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>CompCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Company Code (selectByCode)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>ItemCode</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Item Code (selectByCode and selectByDate)</con:description>
       </con:parameter>
       <con:parameter>
         <con:name>AuditDate</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>Audit Date to check against create/update dates (selectByCode and selectByDate)</con:description>
       </con:parameter>
     </con:parameters>
@@ -144,7 +152,17 @@
     <con:request name="Request 1" id="12230a0a-a79c-49ed-825c-d3c986eb80ce" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
-      <con:parameters/>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="CompCode" value=""/>
+        <con:entry key="AuditDate" value=""/>
+        <con:entry key="ItemCode" value=""/>
+        <con:entry key="finder" value=""/>
+      </con:parameters>
     </con:request>
   </con:method>
   <con:method name="POST" id="2912ac2a-68e2-481b-b3fc-4753e4581ad7" method="POST">
@@ -272,12 +290,20 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiitemCompCode":"string","CiitemItemCode":"string","CiitemBbPriceOrPctCode":"string","CiitemWriAccCode":"string","CiitemRevAccCode":"string","CiitemInvAccCode":"string","CiitemSuspAccCode":"string","CiitemVarAccCode":"string","CiitemItemClassCode":"string","CiitemCostUpdateLevelCode":"string","CiitemCostMethCode":"string","CiitemSellPriceOrPctCode":"string","CiitemAdjAccCode":"string","CiitemWmCode":"string","CiitemSerialFlag":"string","CiitemMsAvailableFlag":"string","CiitemAutoBuildCmpFlag":"string","CiitemUsageCode":"string","CiitemAltWmAllowFlag":"string","CiitemLotCtrlFlag":"string","CiitemVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
     <con:request name="PATCH Example" id="4305a095-f2b0-4403-b24c-45e2bce5e4a0" mediaType="application/vnd.oracle.adf.resourceitem+json">
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>{"CiitemDefaultItemTypeCode":"Z"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

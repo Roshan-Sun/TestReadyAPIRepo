@@ -22,6 +22,7 @@ Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fapvouchernosc.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fapvouchernosc%2F%7BVouNum%7D.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fapvouchq.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fapvouchq%2F%7BChqNum%7D.xml
+Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fdescribe.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fmanualcheck.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fmanualcheck%2F%7BChqSeqNum%7D.xml
 Accounts-Payable-APIs\%2Fap-rest-api%2Frest%2F1%2Fopenperiods.xml
@@ -43,6 +44,7 @@ Accounts-Receivable-APIs\%2Far-rest-api%2Frest%2F1%2Farinvpay%2F%7BVuuid%7D.xml
 Accounts-Receivable-APIs\%2Far-rest-api%2Frest%2F1%2Farpayment.xml
 Accounts-Receivable-APIs\%2Far-rest-api%2Frest%2F1%2Fartaxitems%2F.xml
 Accounts-Receivable-APIs\%2Far-rest-api%2Frest%2F1%2Fartaxitems%2F%7BVuuid%7D.xml
+Accounts-Receivable-APIs\%2Far-rest-api%2Frest%2F1%2Fdescribe.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fciclass.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fciclass%2F%7BVuuid%7D.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fciinventoryissue.xml
@@ -57,6 +59,7 @@ Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fciitemloclog.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fcilocation.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fcilocation%2F%7BVuuid%7D.xml
 Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fcitranposted.xml
+Change-Inventory-APIs\%2Fci-rest-api%2Frest%2F1%2Fdescribe.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmdetail.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmdetail%2F%7BVuuid%7D.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmdetailunposted.xml
@@ -72,7 +75,9 @@ Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmtype.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmtype%2F%7BVuuid%7D.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmvendordetail.xml
 Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fcmvendordetail%2F%7BVuuid%7D.xml
+Change-Management-APIs\%2Fcm-rest-api%2Frest%2F1%2Fdescribe.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-api%2Fjersey%2Fv1%2FuploadDoc%2Fupload.xml
+Enterprise-Content-Management-APIs\%2Fecm-rest-api%2Frest%2F1%2Fdescribe.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-api%2Frest%2Fv1%2FImgSourceDocTypeV.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-api%2Frest%2Fv1%2FImgSources.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploadData%2FcreateDoc.xml
@@ -80,6 +85,7 @@ Enterprise-Content-Management-APIs\%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploa
 Enterprise-Content-Management-APIs\%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploadData%2FuploadApRegInvoice.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploadData%2FuploadPoInvoice.xml
 Enterprise-Content-Management-APIs\%2Fecm-rest-generic-api%2Fjersey%2Fv1%2FUploadData%2FuploadRegPayRequest.xml
+Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Fdescribe.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femactloc.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femeqpclass.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femeqprates.xml
@@ -89,7 +95,9 @@ Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femhomeloc.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femtranactloc.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femtranactloc%2F%7BVuuid%7D.xml
 Equipment-Management-APIs\%2Fem-rest-api%2Frest%2F1%2Femtruckdet.xml
+Fixed-Asset-APIs\%2Ffa-rest-api%2Frest%2F1%2Fdescribe.xml
 Fixed-Asset-APIs\%2Ffa-rest-api%2Frest%2F1%2Ffaasset.xml
+General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Fdescribe.xml
 General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Fglaccounts.xml
 General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Fglbudget.xml
 General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Fglbudget%2F%7BBudPk%7D.xml
@@ -112,6 +120,7 @@ General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Fgltrialbalancebyacct.xml
 General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Frtigenericgldepts.xml
 General-Ledger-APIs\%2Fglrestapi%2Frest%2Fv1%2Frtigledgerwithyearperiod.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fbabank.xml
+Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fdescribe.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fhrapphistory.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fhrapphistory%2F%7BVuuid%7D.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fhrapplicants.xml
@@ -209,10 +218,12 @@ Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fukgpayearnings.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fukgpayheader.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fukgpaytaxes.xml
 Human-Capital-Management-APIs\%2Fhcm-rest-api%2Frest%2F1%2Fvertexloccity.xml
+Job-Billing-APIs\%2Fjb-rest-api%2Frest%2F1%2Fdescribe.xml
 Job-Billing-APIs\%2Fjb-rest-api%2Frest%2F1%2Fjbcont.xml
 Job-Billing-APIs\%2Fjb-rest-api%2Frest%2F1%2Fjbcont%2F%7BVuuid%7D.xml
 Job-Billing-APIs\%2Fjb-rest-api%2Frest%2F1%2Fjbgroup.xml
 Job-Billing-APIs\%2Fjb-rest-api%2Frest%2F1%2Fjbgroup%2F%7BVuuid%7D.xml
+Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fdescribe.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjcbatch.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjcbatch%2F%7BVuuid%7D.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjccontforecastarch.xml
@@ -241,12 +252,14 @@ Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjcutran%2F%7BVuuid%7D.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjcwipadjustmentsposted.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fjcwiprep.xml
 Job-Costing-APIs\%2Fjc-rest-api%2Frest%2F1%2Fupdateprojcostamt.xml
+Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fdescribe.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmsarpricelistperioddet.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmssalesorder.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmssalesorderdet.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmsticketwithsoclass.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmsticketwithsoclass%2F%7BVuuid%7D.xml
 Material-Sales-APIs\%2Fms-rest-api%2Frest%2F1%2Fmstruckratedetail.xml
+Opportunity-Management-APIs\%2Fom-rest-api%2Frest%2F1%2Fdescribe.xml
 Opportunity-Management-APIs\%2Fom-rest-api%2Frest%2F1%2Fomclassifierval.xml
 Opportunity-Management-APIs\%2Fom-rest-api%2Frest%2F1%2Fomcompetitor.xml
 Opportunity-Management-APIs\%2Fom-rest-api%2Frest%2F1%2Fomcompetitor%2F%7BVuuid%7D.xml
@@ -256,6 +269,8 @@ Opportunity-Management-APIs\%2Fom-rest-api%2Frest%2F1%2Fomopportunity%2F%7BVuuid
 PM-Document-APIs\%2Fpm-doc-rest-ap%2Fjersey%2Fv1%2FdownloadDoc%2F%7BVuuid%7D.xml
 PM-Document-APIs\%2Fpm-doc-rest-api%2Fjersey%2Fv1%2FuploadDoc.xml
 PM-Document-APIs\%2Fpm-doc-rest-api%2Fjersey%2Fv1%2FuploadDoc%2F%7BVuuid%7D.xml
+PM-Document-APIs\%2Fpm-doc-rest-api%2Frest%2F1%2Fdescribe.xml
+Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fdescribe.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fforeignbiditemimport.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fpmcomm.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fpmcomm%2F%7BVuuid%7D.xml
@@ -355,6 +370,7 @@ Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fscmast%2F%7BVuuid%7D.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fscsched.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fscsched%2F%7BVuuid%7D.xml
 Project-Management-APIs\%2Fpm-rest-api%2Frest%2F1%2Fscschedphssegsum.xml
+Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fdescribe.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fpodetail.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fpodetail%2F%7BVuuid%7D.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fpomaster.xml
@@ -365,6 +381,7 @@ Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fporequisition.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fporequisition%2F%7BVuuid%7D.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fporequisitiondet.xml
 Purchase-Order-APIs\%2Fpo-rest-api%2Frest%2F1%2Fporequisitiondet%2F%7BVuuid%7D.xml
+Preventative-Maintenance-APIs\%2Fprm-rest-api%2Frest%2F1%2Fdescribe.xml
 Preventative-Maintenance-APIs\%2Fprm-rest-api%2Frest%2F1%2Fissuepriority.xml
 Preventative-Maintenance-APIs\%2Fprm-rest-api%2Frest%2F1%2Fissuepriority%2F%7BVuuid%7D.xml
 Preventative-Maintenance-APIs\%2Fprm-rest-api%2Frest%2F1%2Fissuestatus.xml
@@ -398,6 +415,7 @@ System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fbpaddresses.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fbpaddresses%2F%7BVuuid%7D.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fbusinesspartner.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fbusinesspartner%2F%7BVuuid%7D.xml
+System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fdescribe.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fexchangerate.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fexchangerate%2F%7BVuuid%7D.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fgtregion.xml
