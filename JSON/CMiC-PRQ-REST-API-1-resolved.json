@@ -1,0 +1,521 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PRQ-REST-API",
+    "version": "1"
+  },
+  "servers": [
+    {
+      "url": "https://yourserver.com/yourenvironment"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "pmprqbpartners",
+      "description": " All pmprqbpartners related enpoints"
+    }
+  ],
+  "paths": {
+    "/prq-rest-api/rest/1/pmprqbpartners": {
+      "get": {
+        "summary": "Retrieve a PM Prequalification Business Partner",
+        "description": "",
+        "operationId": "retrieve-a-pm-prequalification-business-partner",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "application/vnd.oracle.adf.resourceitem+json",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Basic",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "summary": "Create a PM Prequalification Business Partner",
+        "description": "",
+        "operationId": "create-a-pm-prequalification-business-partner",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/1_pmprqbpartners_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "text",
+              "code": "{\n      \"PmprqBpCode\": \"value\",\n      \"PmprqBpName\": \"value\",\n      \"PmprqBpId\": \"value\",\n      \"PmprqBpRegionCode\": \"value\",\n      \"PmprqBpFlag\": \"value\",\n      \"PmprqVuuid\": \"\"\n}"
+            }
+          ],
+          "samples-languages": [
+            "text"
+          ]
+        }
+      }
+    },
+    "/prq-rest-api/rest/1/pmprqbpartners/{Vuuid}": {
+      "get": {
+        "summary": "Retrieve a Specific PM Prequalification Business Partner",
+        "description": "",
+        "operationId": "retrieve-a-specific-pm-prequalification-business-partner",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID of Row",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "application/vnd.oracle.adf.resourceitem+json",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Basic",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "summary": "Update a PM Prequalification Business Partner",
+        "description": "",
+        "operationId": "update-a-pm-prequalification-business-partner",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique Row ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "application/vnd.oracle.adf.resourceitem+json",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Basic",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "text",
+              "code": "{\n\t  \"PmprqBpAdd1\": \"value\"\n}"
+            }
+          ],
+          "samples-languages": [
+            "text"
+          ]
+        }
+      }
+    },
+    "/prq-rest-api/rest/1/pmprqbpartners?{finder}=PmPrqBpartnersfinder;TaxIdVar=TaxId": {
+      "get": {
+        "summary": "Retrieve a Specific PM Prequalification Business Partner by Tax ID",
+        "description": "",
+        "operationId": "retrieve-a-specific-pm-prequalification-business-partner-by-tax-id",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "path",
+            "description": "PmPrqBpartners{finder}",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "TaxId",
+            "in": "query",
+            "description": "Tax ID Value",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "application/vnd.oracle.adf.resourceitem+json",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Basic",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/prq-rest-api/rest/1/pmprqbpartners?{finder}=PmPrqBpartnersfinder;PartnerCodeVar=PartnerCode": {
+      "get": {
+        "summary": "Retrieve a Specific PM Prequalification Business Partner by Partner Code",
+        "description": "",
+        "operationId": "retrieve-a-specific-pm-prequalification-business-partner-by-partner-code",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "path",
+            "description": "PmPrqBpartners{finder}",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PartnerCode",
+            "in": "query",
+            "description": "Partner Code value",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "application/vnd.oracle.adf.resourceitem+json",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Basic",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "1_pmprqbpartners_body": {
+        "type": "object",
+        "properties": {
+          "PmprqBpCode": {
+            "type": "string"
+          },
+          "PmprqBpName": {
+            "type": "string"
+          },
+          "PmprqBpId": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "sec0": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "x-readme": {
+    "headers": [],
+    "explorer-enabled": true,
+    "proxy-enabled": true,
+    "samples-enabled": true
+  },
+  "x-readme-fauxas": true
+}

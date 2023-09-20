@@ -1,0 +1,640 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Enterprise Content Management APIs",
+    "description": "# ECM-REST-API | ECM-REST-GENERIC-API\nAPI documentation for **Enterprise Content Management** related screens provided by CMiC\n\n_Note: These APIs can only be accessed if already a customer of CMiC._\n",
+    "contact": {
+      "email": "roshan.suntharan@cmic.ca"
+    },
+    "version": "1"
+  },
+  "servers": [
+    {
+      "url": "https://mobtest.cmiccloudr12.com/cmictestrti"
+    }
+  ],
+  "security": [
+    {
+      "BasicAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "ImgSources",
+      "description": "Imaging Sources"
+    },
+    {
+      "name": "ImgSourceDocTypeV",
+      "description": "Imaging Document Types based on Sources"
+    },
+    {
+      "name": "upload",
+      "description": "Upload Image to associate with existing voucher"
+    },
+    {
+      "name": "uploadPoInvoice",
+      "description": "Creating PO Invoice Imaging Documents with flysheet data"
+    },
+    {
+      "name": "uploadRegPayRequest",
+      "description": "Creating Registered Pay Requests (RFPs) Imaging Documents with flysheet data"
+    },
+    {
+      "name": "uploadApRegInvoice",
+      "description": "Creating Registered Invoice Imaging Documents with flysheet data"
+    },
+    {
+      "name": "createDoc",
+      "description": "Creating User Defined Imaging Documents with flysheet data"
+    },
+    {
+      "name": "updateDoc",
+      "description": "Updating User Defined Imaging Documents"
+    }
+  ],
+  "paths": {
+    "/ecm-rest-api/rest/v1/ImgSources": {
+      "get": {
+        "tags": [
+          "ImgSources"
+        ],
+        "summary": "Retrieve all Imaging Sources",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-api/rest/v1/ImgSourceDocTypeV": {
+      "get": {
+        "tags": [
+          "ImgSourceDocTypeV"
+        ],
+        "summary": "Retrieve all Imaging Document types based on Sources",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-api/jersey/v1/uploadDoc/upload": {
+      "post": {
+        "tags": [
+          "upload"
+        ],
+        "summary": "Upload new Image associated with voucher",
+        "description": "There are required fields set in validation for the header and detail flysheets - all other available fields will be classed as optional.",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/uploadDoc_upload_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": {
+                      "message": "Successfully Uploaded {fileName} with UUID - {documentUuid}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-generic-api/jersey/v1/UploadData/uploadPoInvoice": {
+      "post": {
+        "tags": [
+          "uploadPoInvoice"
+        ],
+        "summary": "Create a New PO Invoice Imaging Document",
+        "description": "There are required fields set in validation for the header and detail flysheets - all other available fields will be classed as optional.",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadData_uploadPoInvoice_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": {
+                      "message": "Successfully Uploaded {fileName} with UUID - {documentUuid}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-generic-api/jersey/v1/UploadData/uploadRegPayRequest": {
+      "post": {
+        "tags": [
+          "uploadRegPayRequest"
+        ],
+        "summary": "Create a New Registered Pay Request Imaging Document",
+        "description": "There are required fields set in validation for the header and detail flysheets - all other available fields will be classed as optional.",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadData_uploadRegPayRequest_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": {
+                      "message": "Successfully Uploaded {fileName} with UUID - {documentUuid}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-generic-api/jersey/v1/UploadData/uploadApRegInvoice": {
+      "post": {
+        "tags": [
+          "uploadApRegInvoice"
+        ],
+        "summary": "Create a New Registered Invoice Imaging Document",
+        "description": "There are required fields set in validation for the header and detail flysheets - all other available fields will be classed as optional.",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadData_uploadApRegInvoice_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": {
+                      "message": "Successfully Uploaded {fileName} with UUID - {documentUuid}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-generic-api/jersey/v1/UploadData/createDoc": {
+      "post": {
+        "tags": [
+          "createDoc"
+        ],
+        "summary": "Create a New Imaging Document",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadData_createDoc_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ecm-rest-generic-api/jersey/v1/UploadData/updateDoc": {
+      "post": {
+        "tags": [
+          "updateDoc"
+        ],
+        "summary": "Update an Existing Imaging Document",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadData_updateDoc_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "uploadDoc_upload_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n  \"srcUuid\": \"source UUID\",\n  \"docTypeUuid\": \"document type UUID\",\n  \"compCode\": \"company code\",\n  \"invoiceCode\": \"voucher/invoice code\",\n  \"vendorCode\": \"vendor code\"\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      },
+      "UploadData_createDoc_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n  \"srcUuid\": UUID of Imaging Source,\n  \"docTypeUuid\": UUID of Document Type,\n  \"payload\": {\n    \"flysheets\": [\n      {\n        \"FlysheetName\": Name of Flysheet,\n        \"data\": [\n          {\n            \"fieldName\": 'fieldName' replaced by name of field on flysheet, with data provided\n          }\n        ]\n      },\n      {\n        \"FlysheetName\": \"Name of next Flysheet\",\n        \"data\": [\n          {\n            \"fieldName\": data for flysheet, etc.\n          }\n        ]\n      }\n    ]\n  }\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "type": "object",
+        "properties": {
+          "ImgsdtDocumentTypeDesc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "ImgsdtSubdirectoryName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "ImgsdtSourceDesc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "ImgsdtSourcePathOverride": {
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "ImgsdtProcessedPathOverride": {
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "ImgsdtVirtualPathOverride": {
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "ImgsdtSsradFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "ImgsdtSourceUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "ImgsdtDocTypeUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "ImgsSourceDesc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "ImgsSourceDirectory": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "ImgsProcessedDirectory": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "ImgsOwfVirtualDirectory": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "ImgsDocumentTypeDesc": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "ImgsActiveFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "ImgsVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "UploadData_updateDoc_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n  srcUuid: UUID of Imaging Source\n  docTypeName: Document Type Name\n  flysheetName: Flysheet Name\n  image_uuid: UUID of Imaging document to update\n  payload: sub-payload (JSON) to be passed in - uses fields available on flysheet\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      },
+      "UploadData_uploadRegPayRequest_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n    \"srcUuid\": \"source UUID\",\n    \"docTypeUuid\": \"document type UUID\",\n    \"headerFlysheet\": \"Header Flysheet Name\",\n    \"headerData\": {\n        \"Apri_Comp_Code\": \"ZZ\",\n        \"Apri_Ven_Code\": \"G00001\",\n        \"Apri_Job_Code\": \"JOB-01-CTR\",\n        \"Apri_Cont_Code\": \"000000009\",\n        \"Apri_Group_Code\": \"CMIC\",\n        \"Apri_Inv_Code\": \"RSTEST319319357\",\n        \"Apri_Inv_Date\": \"2022-12-05\",\n        \"Apri_Inv_Amt\": \"1\",\n        \"Registered_RFP_Header_Field_Name\": data for flysheet,\n        ...\n    },\n    \"detailFlysheet\": \"Detail Flysheet Name\",\n    \"detailData\": [\n        {\n            \"Aprdist_Task_Code\": \"TASK1\",\n            \"Aprdist_Debit_Amt\": \"6\",\n            \"Registered_RFP_Detail_Field_Name\": data for flysheet,\n            ...\n        },\n        ...\n    ]\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      },
+      "UploadData_uploadPoInvoice_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n    \"srcUuid\": \"source UUID\",\n    \"docTypeUuid\": \"document type UUID\",\n    \"headerFlysheet\": \"Header Flysheet Name\",\n    \"headerData\": {\n        \"Company\": \"ZZ\",\n        \"Apri_Ven_Code\": \"ZZ-ACME\",\n        \"Apri_Group_Code\": \"CMIC\",\n        \"Apri_Inv_Code\": \"RSTEST219219398\",\n        \"Apri_Inv_Date\": \"2022-12-08\",\n        \"Apri_Amt\": \"1\",\n        \"Po_Number\": \"00-DUPL011\",\n        \"Release\": \"1\",\n        \"Po_Header_Field_Name\": data for flysheet,\n        ...\n    },\n    \"detailFlysheet\": \"Detail Flysheet Name\",\n    \"detailData\": [\n        {\n            \"Poda_Line_Num\": \"1\",\n            \"Poda_Line_Sub_Num\": \"7\",\n            \"Poda_Inv_Qty\": \"0\",\n            \"Poda_Inv_Amt\": \"1\",\n            \"Po_Detail_Field_Name\": data for flysheet,\n            ...\n        },\n        ...\n    ]\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      },
+      "UploadData_uploadApRegInvoice_body": {
+        "type": "object",
+        "properties": {
+          "fileDetails": {
+            "type": "string",
+            "description": "```\n{\n    \"srcUuid\": \"source UUID\",\n    \"docTypeUuid\": \"document type UUID\",\n    \"headerFlysheet\": \"Header Flysheet Name\",\n    \"headerData\": {\n        \"Apri_Comp_Code\": \"ZZ\",\n        \"Apri_Ven_Code\": \"ZZ-WMT\",\n        \"Apri_Group_Code\": \"CMIC\",\n        \"Apri_Inv_Code\": \"RSTEST419419468\",\n        \"Apri_Inv_Date\": \"2022-12-06\",\n        \"Apri_Desc\": \"RS TEST WEBSERVICE\",\n        \"Apri_Orig_Amt\": \"1\",\n        \"Registered_Invoice_Header_Field_Name\": data for flysheet,\n        ...\n    },\n    \"detailFlysheet\": \"Detail Flysheet Name\",\n    \"detailData\": [\n        {\n            \"Aprdist_Line_Num\": \"1\",\n            \"Aprdist_Type_Code\": \"G\",\n            \"Aprdist_Comp_Code\": \"ZZ\",\n            \"Aprdist_User_Field2\": \"00\",\n            \"Aprdist_User_Field3\": \"1000.100\",\n            \"Aprdist_Wm_Code\": \"NA\",\n            \"Aprdist_Debit_Amt\": \"1\",\n            \"Registered_Invoice_Detail_Field_Name\": data for flysheet,\n            ...\n        },\n        ...\n    ]\n}\n```\n",
+            "format": "json"
+          },
+          "document-content-file": {
+            "type": "string",
+            "description": "File to be uploaded",
+            "format": "binary"
+          }
+        }
+      }
+    },
+    "responses": {
+      "GenericError": {
+        "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "description": "Basic --> User + Password",
+        "scheme": "basic"
+      }
+    }
+  }
+}

@@ -1,0 +1,1649 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Opportunity Management APIs",
+    "description": "# OM-REST-API\nAPI documentation for **Opportunity Management** related screens provided by CMiC\n\n_Note: These APIs can only be accessed if already a customer of CMiC._\n",
+    "contact": {
+      "email": "roshan.suntharan@cmic.ca"
+    },
+    "version": "1"
+  },
+  "servers": [
+    {
+      "url": "https://mobtest.cmiccloudr12.com/cmictestrti"
+    }
+  ],
+  "security": [
+    {
+      "BasicAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "omclassifierval",
+      "description": "OM Classifier Values (deprecated)"
+    },
+    {
+      "name": "omcompetitor",
+      "description": "OM Competitors"
+    },
+    {
+      "name": "omopphist",
+      "description": "OM Opportunity Histories"
+    },
+    {
+      "name": "omopportunity",
+      "description": "OM Opportunities"
+    }
+  ],
+  "paths": {
+    "/om-rest-api/rest/1/omclassifierval": {
+      "get": {
+        "tags": [
+          "omclassifierval"
+        ],
+        "summary": "Get OM Classifier Values",
+        "description": "This is a deprecated endpoint. Please refer to **userdefinedclassifer** from **[System Data APIs](https://app.swaggerhub.com/apis-docs/CMiC/SYS-REST-API/1#/)** for this endpoint.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmClassifierVal"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/om-rest-api/rest/1/omcompetitor": {
+      "get": {
+        "tags": [
+          "omcompetitor"
+        ],
+        "summary": "Retrieve OM Competitors",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectCompetitor",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "competitorCode",
+            "in": "query",
+            "description": "Competitor Code (selectCompetitor)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmCompetitor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "omcompetitor"
+        ],
+        "summary": "Create an OM Competitor",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/OmCompetitorRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmCompetitor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/om-rest-api/rest/1/omcompetitor/{Vuuid}": {
+      "get": {
+        "tags": [
+          "omcompetitor"
+        ],
+        "summary": "Retrieve a Specific OM Competitor",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique Row ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmCompetitor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "omcompetitor"
+        ],
+        "summary": "Delete a Specific OM Competitor",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique Row ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Object has been successfully deleted.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "omcompetitor"
+        ],
+        "summary": "Update a Specific OM Competitor",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique Row ID",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/OmCompetitorRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmCompetitor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/om-rest-api/rest/1/omopphist": {
+      "get": {
+        "tags": [
+          "omopphist"
+        ],
+        "summary": "Retrieve OM Opportunity Histories",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectByCompany or selectByAuditDate",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CompCode",
+            "in": "query",
+            "description": "Company Code (selectByCompany)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AuditDate",
+            "in": "query",
+            "description": "Audit Date (selectByAuditDate)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmOppHist"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/om-rest-api/rest/1/omopportunity": {
+      "get": {
+        "tags": [
+          "omopportunity"
+        ],
+        "summary": "Retrieve OM Opportunities",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectByCompany or selectByCompProj",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyCode",
+            "in": "query",
+            "description": "Company Code (selectByCompany and selectByCompProj)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "projectCode",
+            "in": "query",
+            "description": "Project Code (selectByCompany and selectByCompProj)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmOpportunity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "omopportunity"
+        ],
+        "summary": "Create an OM Opportunity",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/OmOpportunityRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmOpportunity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/om-rest-api/rest/1/omopportunity/{Vuuid}": {
+      "get": {
+        "tags": [
+          "omopportunity"
+        ],
+        "summary": "Retrieve a Specific OM Opportunity",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID of Row",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmOpportunity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "omopportunity"
+        ],
+        "summary": "Update a Specific OM Opportunity",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID of Row",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/OmOpportunityRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OmOpportunity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OmClassifierVal": {
+        "type": "object",
+        "properties": {
+          "OmcvUdfCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmcvObjectType": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmcvActualValue": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "OmcvIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmcvIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmcvObjectKey1": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "OmcvObjectKey2": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "OmcvObjectKey3": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "OmcvObjectKey4": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "OmCompetitor": {
+        "type": "object",
+        "properties": {
+          "OmcCompetitorCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmcName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmcProductName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmcStrengths": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmcWeaknesses": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmcRating": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmcPartnCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmcPartnTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmcContactCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmcOpportunities": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmcThreats": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmcIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmcIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmcIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmcIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "OmcVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "OmOppHist": {
+        "type": "object",
+        "properties": {
+          "OmophPartnCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmophPartnName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmophPartnTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmophCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmophCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophOppoCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmophOppoName": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmophProjectName": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmophMarketSector": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophContractType": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophGnrlLiab": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophWrkrsComp": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophStageCode": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "OmophPotentialRevAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophClosingPc": {
+            "maxLength": 5,
+            "type": "integer"
+          },
+          "OmophClosingDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmophLastUpdDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmophUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophProposalCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmophSalesRepPartnCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmophSalesRepPartnTCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmophSalesRepCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmophCampcmpntCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmophGenLiabilRate": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmophWorkersCompRate": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmophFeePc": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmophNonreimbursableAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophDurationMonths": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "OmophSubcontractedVolumeAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophCompanyPayrollAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophSubcontractPayrollAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophRuleCode": {
+            "maxLength": 20,
+            "type": "string"
+          },
+          "OmophIncAsTarget": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmophActualClosingDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmophCcipVolumeAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophSdiSubcontractVolAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmophIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmophIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmophIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmophWinningBidPc": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "OmophProjProceedsPc": {
+            "maxLength": 3,
+            "type": "integer"
+          }
+        }
+      },
+      "OmOpportunity": {
+        "type": "object",
+        "properties": {
+          "OmopvCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvOppoCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvOppoName": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmopvStageForFilter": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "OmopvStageCode": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "OmopvStageDesc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvPotentialRevAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvPotentialRevAmtFmt": {
+            "maxLength": 18,
+            "type": "string"
+          },
+          "OmopvClosingPc": {
+            "maxLength": 5,
+            "type": "integer"
+          },
+          "OmopvClosingDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvActualClosingDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvProposalCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvSalesrepForFiler": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvSalesRepCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvSalesRepName": {
+            "maxLength": 121,
+            "type": "string"
+          },
+          "OmopvSalesRepPartnCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvSalesRepPartnName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvPartnCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvPartnTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvPartnTypeDesc": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "OmopvPartnName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvPartnParentCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvPartnParentName": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "OmopvSalesRepPartnTypCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvProjCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvProjCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvProjName": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmopvProjCtrlCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvProjCtrlName": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmopvProjCustAddCode": {
+            "maxLength": 5,
+            "type": "string"
+          },
+          "OmopvProjCustAddress": {
+            "maxLength": 171,
+            "type": "string"
+          },
+          "OmopvProjStartDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvProjEndDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvProjBidJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "CBidJobExistsFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvProjBidDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvProjBidWonLostDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvGenLiabilCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvGenLiabilDesc": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvGenLiabilRate": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmopvWorkersCompCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvWorkersCompDesc": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvWorkersCompRate": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmopvFeePc": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "OmopvNonreimbursableAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvNonreimbursableAmtFmt": {
+            "maxLength": 18,
+            "type": "string"
+          },
+          "OmopvDurationMonths": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "OmopvFeeAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvFeeAmt2": {
+            "maxLength": 22,
+            "type": "integer"
+          },
+          "OmopvEarningsAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvEarningsAmtFmt": {
+            "maxLength": 18,
+            "type": "string"
+          },
+          "OmopvGrossProfitPc": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvContractTypeCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvContractTypeDesc": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvBuildingTypeCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvBuildingTypeDesc": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvCtrlBtCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvCtrlBtDesc": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvSubcontractedVolumeAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvCompanyPayrollAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvSubcontractPayrollAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvTotalPayrollAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvIncludeInForecastFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvFeePcDisplay": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvRuleCode": {
+            "maxLength": 20,
+            "type": "string"
+          },
+          "OmopvRuleDesc": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "OmopvIncAsTarget": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvCcipVolumeAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvSdiSubcontractVolAmt": {
+            "maxLength": 21,
+            "type": "integer"
+          },
+          "OmopvPmdDesc": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "OmopvPmpWorkLocCode": {
+            "maxLength": 15,
+            "type": "string"
+          },
+          "OmopvPmpWorkLocName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvProjBidJobDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "OmopvProjBidJobDeptName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvBidJobBillRtTblCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvBidJobBillRtTblName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvBidJobConstructValue": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvBidJobConPct": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvProjJobDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "OmopvProjJobDeptName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvJobBillingRtTblCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvJobBillingRtTblName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvJobConstructionValue": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvConPctCode": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvJobBillMethCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "OmopvJobBillMethDesc": {
+            "maxLength": 18,
+            "type": "string"
+          },
+          "OmopvJobBillingTypeCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "OmopvJobBillingTypeName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvJobInvoiceFormatCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "OmopvJobInvoiceFormatName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvJobJbMapCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvJobJbMapName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvAddContactName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvAddLine1": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "OmopvAddLine2": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "OmopvAddLine3": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "OmopvRegionCode": {
+            "maxLength": 3,
+            "type": "string"
+          },
+          "OmopvRegionName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvPostalCode": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "OmopvCountry": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvPhoneNum": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "OmopvFaxNum": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "OmopvInsuranceApprovedFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvWinningBidPc": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "OmopvProjProceedsPc": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "OmopvProjJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "CJobExistsFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvProjJobName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "OmopvSourceCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvSourceCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmpovSourceName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvConVal": {
+            "maxLength": 32,
+            "type": "integer"
+          },
+          "OmopvRTeamReview": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvRTeamDt": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvConStartDt": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvConEndDt": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvSpecialPrjt": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "OmopvPreconStartDt": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvPreconEndDt": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvConType": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvConTypeDesc": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvBond": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "OmopvCdiVol": {
+            "maxLength": 22,
+            "type": "integer"
+          },
+          "OmopvCdiFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "OmopvRmComments": {
+            "maxLength": 2000,
+            "type": "string"
+          },
+          "OmopvCompetitorComments": {
+            "maxLength": 2000,
+            "type": "string"
+          },
+          "OmopvAptCondo": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "OmopvBldRisk": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvBldRiskbyCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvBldRiskbyDesc": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvPrime": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "OmopvPrimeCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvPrimeDesc": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvCcipVol": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvInsValAppr": {
+            "maxLength": 5,
+            "type": "string"
+          },
+          "OmopvTotLabor": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvSuptLabor": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvRol": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvPrtnrType": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvUdfPtypeCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvUdfPtypeDesc": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvMarketSectorCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "OmopvMarketSectorDesc": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "OmopvBuildingClassCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "OmopvBuildingClassDesc": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "OmopvTop100Flag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "OmopvIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmopvIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "OmopvIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "OmSecRw": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmSecLevel": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvCurrentMonths": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvNextMonths": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvFutureMonths": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopvBuildingAreaSqFt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "OmopVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "responses": {
+      "OmClassifierValResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmClassifierVal"
+            }
+          }
+        }
+      },
+      "GenericError": {
+        "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{}"
+              }
+            }
+          }
+        }
+      },
+      "OmCompetitorResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmCompetitor"
+            }
+          }
+        }
+      },
+      "DeletionSuccess": {
+        "description": "Object has been successfully deleted.",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{}"
+              }
+            }
+          }
+        }
+      },
+      "OmOppHistResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmOppHist"
+            }
+          }
+        }
+      },
+      "OmOpportunityResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmOpportunity"
+            }
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "OmCompetitorRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmCompetitor"
+            },
+            "examples": {
+              "POST Example": {
+                "value": {
+                  "OmcCompetitorCode": "string",
+                  "OmcName": "string",
+                  "OmcVUuid": ""
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "OmcWeaknesses": "Mostly Medical - test123"
+                }
+              }
+            }
+          }
+        }
+      },
+      "OmOpportunityRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/OmOpportunity"
+            },
+            "examples": {
+              "POST Example": {
+                "value": {
+                  "OmopvCompCode": "string",
+                  "OmopvProjCompCode": "string",
+                  "OmopvOppoCode": "string",
+                  "OmopvOppoName": "string",
+                  "OmopvPartnCode": "string",
+                  "OmopVUuid": ""
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "OmopvOppoName": "bobicus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "description": "Basic --> User + Password",
+        "scheme": "basic"
+      }
+    }
+  }
+}

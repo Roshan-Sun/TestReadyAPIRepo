@@ -1,0 +1,4171 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Purchase Order APIs",
+    "description": "# PO-REST-API\nAPI documentation for **Purchase Order** related screens provided by CMiC\n\n_Note: These APIs can only be accessed if already a customer of CMiC._\n",
+    "contact": {
+      "email": "roshan.suntharan@cmic.ca"
+    },
+    "version": "1"
+  },
+  "servers": [
+    {
+      "url": "https://mobtest.cmiccloudr12.com/cmictestrti"
+    }
+  ],
+  "security": [
+    {
+      "BasicAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "podetail",
+      "description": "Purchase Order Details"
+    },
+    {
+      "name": "pomaster",
+      "description": "Purchase Order Headers"
+    },
+    {
+      "name": "popurchaseorder",
+      "description": "PO Purchase Orders"
+    },
+    {
+      "name": "porequisition",
+      "description": "PO Requisitions"
+    },
+    {
+      "name": "porequisitiondet",
+      "description": "PO Requisition Details"
+    }
+  ],
+  "paths": {
+    "/po-rest-api/rest/1/podetail": {
+      "get": {
+        "tags": [
+          "podetail"
+        ],
+        "summary": "Retrieve PO Details",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectByCompCode or selectByDate",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compCode",
+            "in": "query",
+            "description": "Company code (selectByCompCode)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "auditDate",
+            "in": "query",
+            "description": "Audit date to search for in create/update dates (selectByDate)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "podetail"
+        ],
+        "summary": "Create PO Detail line",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoDetailRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/podetail/{Vuuid}": {
+      "get": {
+        "tags": [
+          "podetail"
+        ],
+        "summary": "Retrieve a specific PO Detail",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "podetail"
+        ],
+        "summary": "Update a specific PO Detail line",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoDetailRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/pomaster": {
+      "get": {
+        "tags": [
+          "pomaster"
+        ],
+        "summary": "Retrieve PO Masters (Headers)",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectByCode, selectByCompanyStatus or selectByDate",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compCode",
+            "in": "query",
+            "description": "Company code (selectByCode and selectByCompanyStatus)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "masterNum",
+            "in": "query",
+            "description": "PO Header Number (selectByCode)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "releaseNum",
+            "in": "query",
+            "description": "PO Release Number (selectByCode)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "statusCode",
+            "in": "query",
+            "description": "PO Status code (selectByCompanyStatus)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AuditDate",
+            "in": "query",
+            "description": "Audit date to search for in create/update dates (selectByCompanyStatus and selectByDate)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoMaster"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "pomaster"
+        ],
+        "summary": "Create PO Header",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoMasterRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoMaster"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/pomaster/{Vuuid}": {
+      "get": {
+        "tags": [
+          "pomaster"
+        ],
+        "summary": "Retrieve a specific PO Master (Header)",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoMaster"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "pomaster"
+        ],
+        "summary": "Update specific PO Header",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoMasterRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoMaster"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/popurchaseorder/": {
+      "post": {
+        "tags": [
+          "popurchaseorder"
+        ],
+        "summary": "Create PO (with details)",
+        "description": "",
+        "parameters": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoPurchaseOrderRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoPurchaseOrder"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/popurchaseorder/{PomstVuuid}/child/PoDetViewObj": {
+      "post": {
+        "tags": [
+          "popurchaseorder"
+        ],
+        "summary": "Create PO Detail",
+        "description": "",
+        "parameters": [
+          {
+            "name": "PomstVuuid",
+            "in": "path",
+            "description": "Vuuid of the header to add the detail registry to",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoPurchaseOrderRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoDet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/porequisition": {
+      "get": {
+        "tags": [
+          "porequisition"
+        ],
+        "summary": "Retrieve PO Requisitions",
+        "description": "",
+        "parameters": [
+          {
+            "name": "finder",
+            "in": "query",
+            "description": "selectByCode",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compCode",
+            "in": "query",
+            "description": "Company code",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reqNum",
+            "in": "query",
+            "description": "Requisition Number",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Requisition Status",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "porequisition"
+        ],
+        "summary": "Create PO Requisition",
+        "description": "",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoRequisitionRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/porequisition/{Vuuid}": {
+      "get": {
+        "tags": [
+          "porequisition"
+        ],
+        "summary": "Retrieve a specific PO Requisition",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "porequisition"
+        ],
+        "summary": "Update specific PO Requisition",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoRequisitionRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/porequisitiondet": {
+      "get": {
+        "tags": [
+          "porequisitiondet"
+        ],
+        "summary": "Retrieve PO Requisition Details",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisitionDet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "porequisitiondet"
+        ],
+        "summary": "Create PO Requisition Detail",
+        "description": "",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoRequisitionDetRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisitionDet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/po-rest-api/rest/1/porequisitiondet/{Vuuid}": {
+      "get": {
+        "tags": [
+          "porequisitiondet"
+        ],
+        "summary": "Retrieve a specific PO Requisition Detail",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisitionDet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "porequisitiondet"
+        ],
+        "summary": "Update specific PO Requisition Detail",
+        "description": "",
+        "parameters": [
+          {
+            "name": "Vuuid",
+            "in": "path",
+            "description": "Unique ID for record",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/PoRequisitionDetRequest"
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PoRequisitionDet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PoDetail": {
+        "type": "object",
+        "properties": {
+          "PosCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PosPoNum": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PosReleaseNum": {
+            "maxLength": 11,
+            "type": "integer"
+          },
+          "PosLineNum": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PosPoItemType": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosClassCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PosItmCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PosItmName": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosWmCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PosOrdQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PosExptdPriceAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosUserTypeCode": {
+            "maxLength": 3,
+            "type": "string"
+          },
+          "PosUserField1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField4": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosUserField8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosCiitemtypCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PosItemLocCode": {
+            "maxLength": 7,
+            "type": "string"
+          },
+          "PosTax1Code": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PosTax2Code": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PosTax3Code": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PosTax1TaxableFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosTax2TaxableFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosTax3TaxableFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosExtdAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosTaxAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosTotAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosTax1Perc": {
+            "maxLength": 8,
+            "type": "integer"
+          },
+          "PosTax2Perc": {
+            "maxLength": 8,
+            "type": "integer"
+          },
+          "PosTax3Perc": {
+            "maxLength": 8,
+            "type": "integer"
+          },
+          "PosTax1OnTaxFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosTax2OnTaxFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosTax3OnTaxFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosMinOnhandQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosMinOrderQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosMaxOnhandQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosMaxOrderQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosStdOrderQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosOnOrderQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PosOnHandQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PosRecIntoInvFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosDesc": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosCalledFromAppCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PosUserFieldEdtFlag5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldEdtFlag6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldEdtFlag7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldEdtFlag8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldName5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldName6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldName7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosUserFieldName8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosWbsSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosTacSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PosWbsvCode1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode4": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode9": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode10": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode11": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosWbsvCode12": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosExptdDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PosJobName": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PosPhsName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "PosCatName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PosVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "PosLumpSumPoFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PosIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PosIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PosIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PosIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          }
+        }
+      },
+      "PoMaster": {
+        "type": "object",
+        "properties": {
+          "PomstCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Company Code., This must be a valid CMiC company Code"
+          },
+          "PomstCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstNum": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "Purchase Order Number., This must be a unique number"
+          },
+          "PomstBchNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Start with –1 and decrement by 1 for each group of purchase orders that are interfaced at one time.  A batch number indicates that the PO has been posted. If the PO has not been posted then leave this field blank"
+          },
+          "PomstVenCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Vendor code., Must be a valid CMiC vendor code for the company."
+          },
+          "PomstVenName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "PomstDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not currently utilized"
+          },
+          "PomstExptdDate": {
+            "type": "string",
+            "description": "Purchase Order Expected Delivery Date",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstOrdDate": {
+            "type": "string",
+            "description": "Purchase Order Date",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstRecDate": {
+            "type": "string",
+            "description": "Not currently utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘B’ - Blanket, ‘S’ - Standard, For Data Conversion, this should be 'S'."
+          },
+          "PomstAdjCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave NULL"
+          },
+          "PomstStatCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘N’ - Not Released , ‘R’ - Released/Approved , ‘O’ - Ordered, ‘V’ - Voided, ‘A’ - Accepted/Received , ‘C’ - Closed, For Data Conversion, the status must be 'C' or 'O'."
+          },
+          "PomstChgCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘O’ - Original, ‘C’ - Changed, For Data Conversion, set to ‘O’."
+          },
+          "PomstTermCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "A valid term code, or null/blank."
+          },
+          "PomstTermName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstTermDueDay": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PomstTermDiscDay": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PomstTermDiscPc": {
+            "maxLength": 5,
+            "type": "integer"
+          },
+          "PomstInvCode": {
+            "maxLength": 20,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstInvDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDueDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDiscDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDiscAmt": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCurrCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "A valid currency code indicating the currency of the purchase order amounts."
+          },
+          "PomstFobCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "A valid FOB code, or NULL"
+          },
+          "PomstFobName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstBuyCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "The user id of a valid buyer. This user must be set up in local tables."
+          },
+          "PomstBuyName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstAddCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid address code, or NULL – for ship-to address."
+          },
+          "PomstAddName": {
+            "maxLength": 195,
+            "type": "string"
+          },
+          "PomstShplneCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "A valid shipping code, or NULL"
+          },
+          "PomstShplneName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstShpmetCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "A valid shipping method code, or NULL"
+          },
+          "PomstShpmetName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstTxt1Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code, or NULL"
+          },
+          "PomstTxt2Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code, or NULL"
+          },
+          "PomstShpinstDesc": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Shipping instructions or NULL"
+          },
+          "PomstDesc1": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Description 1, or NULL (Requisition Reason)"
+          },
+          "PomstDesc2": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Description 2, or NULL (Comment)"
+          },
+          "PomstAdjPrice": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstUnadjPrice": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCurrConvNum": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCostedCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstRefNum": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstRefDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstReqCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "User id of the requestor.  The approvers are based on this.  This user must be set up in local tables."
+          },
+          "PomstReqName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstRecCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "User id of the receiver, or NULL.  If specified this user must be set up in local tables."
+          },
+          "PomstReprintDate": {
+            "type": "string",
+            "description": "Leave NULL",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstWipAccCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstWipDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstShipinstTxt1Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 1, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt2Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 2, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt3Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 3, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt4Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 4, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt5Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 5, or NULL. Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstReleaseNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "For blanket po’s, this is the number of times a po has been released against the blanket (each po increments the release count by 1, starting with 1 for the first release).  For standard po’s, this is always set to 1.  For Data Conversion, set this to 1"
+          },
+          "PomstBilltoAddCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Billing address code or leave null/blank."
+          },
+          "PomstBilltoAddName": {
+            "maxLength": 195,
+            "type": "string"
+          },
+          "PomstReqReason": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Reason for the requisition or leave null/blank."
+          },
+          "PomstInvTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstImageFilename": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstInvSerCode": {
+            "maxLength": 4,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstVendOrderAddCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstComplianceFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Is this PO Compliant? ‘Y’ or ‘N’"
+          },
+          "PomstActionCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": ""
+          },
+          "PomstPrintStatus": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Set to 'Y' for printed, leave null/blank if not printed."
+          },
+          "PomstJobCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "If the PO is for a specific job only, then this is the job company code"
+          },
+          "PomstJobCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "If the PO is for a specific job only, then this is the job code."
+          },
+          "PomstContactCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PomstContactName": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "PomstOrigBidpAmt": {
+            "maxLength": 18,
+            "type": "integer"
+          },
+          "PomstHoldPaymentFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstHoldPaymentDays": {
+            "maxLength": 4,
+            "type": "integer"
+          },
+          "PomstAddCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstAddCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstSuspDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PomstSuspDeptName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstPorgrCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstWkfPriorityCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstDefaultRecCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstRoutCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstRoutJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PomstDistTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Distribution Type for header., ‘G’ – GL Type, ‘J’ – Job Type, ‘E’ – Equipment Type, ‘W’ – Work Order Type, ‘M’ – Multi Distribution, Set to ‘M’ if not certain."
+          },
+          "PomstUserField1": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstUserField2": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstUserField3": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstSelectFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstReqNum": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PomstManPoRecFlag": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PomstAcctDescription": {
+            "maxLength": 500,
+            "type": "string"
+          },
+          "PomstPoAmount": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PomstStateDesc": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "PomstVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "PoPurchaseOrder": {
+        "type": "object",
+        "properties": {
+          "PomstCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Company Code., This must be a valid CMiC company Code"
+          },
+          "PomstCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstNum": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "Purchase Order Number., This must be a unique number"
+          },
+          "PomstBchNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Start with –1 and decrement by 1 for each group of purchase orders that are interfaced at one time.  A batch number indicates that the PO has been posted. If the PO has not been posted then leave this field blank"
+          },
+          "PomstVenCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Vendor code., Must be a valid CMiC vendor code for the company."
+          },
+          "PomstVenName": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "PomstDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not currently utilized"
+          },
+          "PomstExptdDate": {
+            "type": "string",
+            "description": "Purchase Order Expected Delivery Date",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstOrdDate": {
+            "type": "string",
+            "description": "Purchase Order Date",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstRecDate": {
+            "type": "string",
+            "description": "Not currently utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘B’ - Blanket, ‘S’ - Standard, For Data Conversion, this should be 'S'."
+          },
+          "PomstAdjCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave NULL"
+          },
+          "PomstStatCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘N’ - Not Released , ‘R’ - Released/Approved , ‘O’ - Ordered, ‘V’ - Voided, ‘A’ - Accepted/Received , ‘C’ - Closed, For Data Conversion, the status must be 'C' or 'O'."
+          },
+          "PomstChgCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "‘O’ - Original, ‘C’ - Changed, For Data Conversion, set to ‘O’."
+          },
+          "PomstTermCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "A valid term code, or null/blank."
+          },
+          "PomstTermName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstTermDueDay": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PomstTermDiscDay": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PomstTermDiscPc": {
+            "maxLength": 5,
+            "type": "integer"
+          },
+          "PomstInvCode": {
+            "maxLength": 20,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstInvDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDueDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDiscDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstInvDiscAmt": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCurrCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "A valid currency code indicating the currency of the purchase order amounts."
+          },
+          "PomstFobCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "A valid FOB code, or NULL"
+          },
+          "PomstFobName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstBuyCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "The user id of a valid buyer. This user must be set up in local tables."
+          },
+          "PomstBuyName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstAddCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid address code, or NULL – for ship-to address."
+          },
+          "PomstAddName": {
+            "maxLength": 195,
+            "type": "string"
+          },
+          "PomstShplneCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "A valid shipping code, or NULL"
+          },
+          "PomstShplneName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstShpmetCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "A valid shipping method code, or NULL"
+          },
+          "PomstShpmetName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstTxt1Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code, or NULL"
+          },
+          "PomstTxt2Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code, or NULL"
+          },
+          "PomstShpinstDesc": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Shipping instructions or NULL"
+          },
+          "PomstDesc1": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Description 1, or NULL (Requisition Reason)"
+          },
+          "PomstDesc2": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Description 2, or NULL (Comment)"
+          },
+          "PomstAdjPrice": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstUnadjPrice": {
+            "maxLength": 18,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCurrConvNum": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PomstCostedCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstRefNum": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstRefDate": {
+            "type": "string",
+            "description": "Not Currently Utilized",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstReqCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "User id of the requestor.  The approvers are based on this.  This user must be set up in local tables."
+          },
+          "PomstReqName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstRecCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "User id of the receiver, or NULL.  If specified this user must be set up in local tables."
+          },
+          "PomstReprintDate": {
+            "type": "string",
+            "description": "Leave NULL",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstWipAccCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstWipDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstShipinstTxt1Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 1, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt2Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 2, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt3Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 3, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt4Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 4, or NULL.  Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstShipinstTxt5Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Shipping instructions text code 5, or NULL. Must be a shipping type text code.  The type code for shipping type text codes is defined on the control file for each company."
+          },
+          "PomstReleaseNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "For blanket po’s, this is the number of times a po has been released against the blanket (each po increments the release count by 1, starting with 1 for the first release).  For standard po’s, this is always set to 1.  For Data Conversion, set this to 1"
+          },
+          "PomstBilltoAddCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Billing address code or leave null/blank."
+          },
+          "PomstBilltoAddName": {
+            "maxLength": 195,
+            "type": "string"
+          },
+          "PomstReqReason": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Reason for the requisition or leave null/blank."
+          },
+          "PomstInvTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstImageFilename": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstInvSerCode": {
+            "maxLength": 4,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstVendOrderAddCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PomstComplianceFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Is this PO Compliant? ‘Y’ or ‘N’"
+          },
+          "PomstActionCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": ""
+          },
+          "PomstPrintStatus": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Set to 'Y' for printed, leave null/blank if not printed."
+          },
+          "PomstJobCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "If the PO is for a specific job only, then this is the job company code"
+          },
+          "PomstJobCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "If the PO is for a specific job only, then this is the job code."
+          },
+          "PomstContactCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PomstContactName": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "PomstOrigBidpAmt": {
+            "maxLength": 18,
+            "type": "integer"
+          },
+          "PomstHoldPaymentFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstHoldPaymentDays": {
+            "maxLength": 4,
+            "type": "integer"
+          },
+          "PomstAddCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstAddCompName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstSuspDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PomstSuspDeptName": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PomstIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PomstPorgrCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstWkfPriorityCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstDefaultRecCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstRoutCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PomstRoutJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PomstDistTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Distribution Type for header., ‘G’ – GL Type, ‘J’ – Job Type, ‘E’ – Equipment Type, ‘W’ – Work Order Type, ‘M’ – Multi Distribution, Set to ‘M’ if not certain."
+          },
+          "PomstUserField1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PomstUserField2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PomstUserField3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PomstSelectFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstReqNum": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PomstManPoRecFlag": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PomstAcctDescription": {
+            "maxLength": 500,
+            "type": "string"
+          },
+          "PomstPoAmount": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PomstStateDesc": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "PomstVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "PomstLumpSumPoFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PomstLumpSumPoAmt": {
+            "maxLength": 18,
+            "type": "integer"
+          }
+        }
+      },
+      "PoDet": {
+        "type": "object",
+        "properties": {
+          "PodetCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "Company Code"
+          },
+          "PodetNum": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "Purchase Order Number"
+          },
+          "PodetLineNum": {
+            "maxLength": 3,
+            "type": "integer",
+            "description": "Line number – for each purchase order start with 1 and increment by 1 for each successive line."
+          },
+          "PodetBchNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Same value as POMST_BCH_NUM."
+          },
+          "PodetDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetItmCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "Item code must be a valid Inventory Item Code if PODET_CIITEMTYP_CODE is not null/blank. For non-stock items it can be anything.  It must not be null/blank if you expect to receive against it."
+          },
+          "PodetItmName": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetItmtypCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "Inventory Item Type code"
+          },
+          "PodetIvDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Inventory Item Dept Code"
+          },
+          "PodetIvAccCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "Inventory Item Account Code"
+          },
+          "PodetVarDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetVarAccCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetExptdDate": {
+            "type": "string",
+            "description": "Expected date for this line item, or null/blank",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PodetRecDate": {
+            "type": "string",
+            "description": "Receipt date for this line item if PO Closed or null if PO is Open",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PodetExptdPriceAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Expected price for this line item, or null/blank"
+          },
+          "PodetActPriceAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Actual price for this line item when received, or null/blank. For import set equal to PODET_EXPTD_PRICE_AMT"
+          },
+          "PodetAdjPriceAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Leave null/blank – change orders only"
+          },
+          "PodetCostAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetStdCostAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetAvgCostAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetLstCostAmt": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetCurrCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "Currency code for this line item"
+          },
+          "PodetOrdQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Ordered quantity"
+          },
+          "PodetLstOrdQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity previously ordered, or null/blank."
+          },
+          "PodetRecQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity Received – If the PO is closed then this should match the Ordered Qty."
+          },
+          "PodetRectodateQty": {
+            "maxLength": 0,
+            "type": "integer",
+            "description": "Quantity received to date on this line item. For Closed PO's set this to PODET_REC_QTY. For open PO's leave null/blank."
+          },
+          "PodetRejQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetRejtodateQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity rejected to date on this line item, or null/blank"
+          },
+          "PodetClaimQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetClaimtodateQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity claimed to date on this line item, or null/blank"
+          },
+          "PodetPayQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetPaytodateQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity paid to date on this line item, or null/blank"
+          },
+          "PodetInvQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetInvtodateQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity invoiced to date on this line item, or null/blank"
+          },
+          "PodetWmCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "Leave NULL"
+          },
+          "PodetOrdWmCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "Unit of measure on this line item for ordered quantity."
+          },
+          "PodetInvWmCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetStatCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "N = Not Released; R = Released/Approved; O = Ordered; V = Voided; A = Accepted/Received; C = Closed. For Data conversion this must match the POMAST setting.  Either O or C"
+          },
+          "PodetLocCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "A valid purchase order location code, or null/blank.  This indicates the shipping location for this line item."
+          },
+          "PodetJobCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "A valid job code, or null/blank.  Required if the item is purchased for a job."
+          },
+          "PodetJobCtrlCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "If PODET_JOB_CODE is not NULL, this field contains the controlling job for PODET_JOB_CODE, or ‘ALL’ if PODET_JOB_CODE is not controlled by any other job. If PODET_JOB_CODE is null/blank, leave this field null/blank."
+          },
+          "PodetPhsCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "If PODET_JOB_CODE is not null/blank, this field must contain a valid phase that is defined on that job. If PODET_JOB_CODE is null/blank, leave this field null/blank."
+          },
+          "PodetPhsCtrlCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "If PODET_PHS_CODE is not NULL, this field contains the controlling phase for PODET_PHS_CODE, or ‘ALL’ if PODET_PHS_CODE is not controlled by any other phase on this job. If PODET_PHS_CODE is null/blank, leave this field null/blank."
+          },
+          "PodetCatCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "If PODET_JOB_CODE is not null/blank, this field must contain a valid category that is defined on that job for phase PODET_PHS_CODE. If PODET_JOB_CODE is null/blank, leave this field null/blank."
+          },
+          "PodetCatCtrlCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "If PODET_CATG_CODE is not NULL, this field contains the controlling category for PODET_CAT_CODE or ‘ALL’ if PODET_CAT_CODE is not controlled by any other category on this job for phase PODET_PHS_CODE.If PODET_PHS_CODE is null/blank, leave this field null/blank."
+          },
+          "PodetTxt1Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code (any type), or null/blank."
+          },
+          "PodetTxt2Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code (any type), or null/blank."
+          },
+          "PodetTxt3Code": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid text code (any type), or null/blank."
+          },
+          "PodetDesc": {
+            "maxLength": 4000,
+            "type": "string",
+            "description": "Comment regarding line"
+          },
+          "PodetOrdTrnNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetRecTrnNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetIvCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetCloseCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Y = Closed (i.e. this line item has been fully received), If the line is not fully received set this to NULL."
+          },
+          "PodetSubLineNum": {
+            "maxLength": 3,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetEcEqpCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetEcCstCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetQuoteNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Not Currently Utilized"
+          },
+          "PodetTax1Code": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "A valid tax code, or null/blank."
+          },
+          "PodetTax2Code": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "A valid tax code, or null/blank."
+          },
+          "PodetTax3Code": {
+            "maxLength": 11,
+            "type": "string",
+            "description": "A valid tax code, or null/blank."
+          },
+          "PodetLineChgFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetShplCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Shipping list number.  Leave null/blank for data conversion."
+          },
+          "PodetWipAccCode": {
+            "maxLength": 16,
+            "type": "string",
+            "description": "If a ‘J’ line, this is the Job Cost Account.Populate for all ‘G’ type lines"
+          },
+          "PodetWipDeptCode": {
+            "maxLength": 6,
+            "type": "string",
+            "description": "If a ‘J’ Line, this is the Job Dept Code.Populate for all ‘G’ type lines"
+          },
+          "PodetPostToApState": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetWbsvCode1": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Only if you are utilizing WBS codes in JC and have data to migrate. Otherwise leave blank"
+          },
+          "PodetWbsvCode2": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Only if you are utilizing WBS codes in JC and have data to migrate. Otherwise leave blank"
+          },
+          "PodetWbsvCode3": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Only if you are utilizing WBS codes in JC and have data to migrate. Otherwise leave blank"
+          },
+          "PodetWbsvCode4": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Only if you are utilizing WBS codes in JC and have data to migrate. Otherwise leave blank"
+          },
+          "PodetWbsvCode5": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode6": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode7": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode8": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode9": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode10": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode11": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetWbsvCode12": {
+            "maxLength": 60,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetPmCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "Not Currently Utilized"
+          },
+          "PodetReleaseNum": {
+            "maxLength": 11,
+            "type": "integer",
+            "description": "Set it to the same value as POMST_RELEASE_NUM for this purchase order."
+          },
+          "PodetEqpCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "A valid Equipment Code if this line item is purchased for a piece of equipment, or null/blank."
+          },
+          "PodetComponCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "A valid Equipment Category Code.  Required if PODET_EQP_CODE is not null/blank, otherwise leave it null/blank."
+          },
+          "PodetTrancodeCode": {
+            "maxLength": 4,
+            "type": "string",
+            "description": "A valid Equipment Transaction Code. Required if PODET_EQP_CODE is not null/blank, otherwise leave it null/blank."
+          },
+          "PodetTendpackCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Leave NULL"
+          },
+          "PodetTendpackLineNum": {
+            "maxLength": 3,
+            "type": "integer",
+            "description": "Leave NULL"
+          },
+          "PodetSiNum": {
+            "maxLength": 5,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetSiLineNum": {
+            "maxLength": 3,
+            "type": "integer",
+            "description": "Leave null/blank"
+          },
+          "PodetSrcCompCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "For data conversion purposes, set it to the same value as PODET_COMP_CODE."
+          },
+          "PodetClassCode": {
+            "maxLength": 4,
+            "type": "string",
+            "description": "If this line item is for an inventory item, the inventory class code goes here, otherwise leave it NULL."
+          },
+          "PodetCiitemtypCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "If this line item is for an inventory item, the inventory item type code goes here, otherwise leave it null/blank."
+          },
+          "PodetInvTypeCode": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Leave null/blank."
+          },
+          "PodetItemLocCode": {
+            "maxLength": 7,
+            "type": "string",
+            "description": "If this line item is for an inventory item, the inventory location code goes here, otherwise leave it null/blank."
+          },
+          "PodetTypeCode": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "‘E’ - Equipment, ‘J’ - Job Costing, ‘G’ - General Ledger, ‘I’ - Inventory"
+          },
+          "PodetSiMastJobCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Leave null/blank"
+          },
+          "PodetCloseReasonCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "If the line is closed, put one of these three codes in this field to indicate why it was closed.  NAVAIL = Not Available, SHORT = Short Shipment, SUBST = Substitution.  Otherwise leave it NULL."
+          },
+          "PodetAllocatedQty": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Quantity ordered and allocated against an inventory item.  Leave null/blank for data conversion."
+          },
+          "PodetRecIntoInvFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Y = this item will be received into Inventory; N = this item will not be received into Inventory."
+          },
+          "PodetUserTypeCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "This is the user Defined distribution type code"
+          },
+          "PodetUserField1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField4": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetUserField8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PodetTavCode1": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Only applicable if TAC codes are being utilized during conversion. If applicable it must be a valid TAC value for the TAC number"
+          },
+          "PodetTavCode2": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Only applicable if TAC codes are being utilized during conversion. If applicable it must be a valid TAC value for the TAC number"
+          },
+          "PodetTavCode3": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Only applicable if TAC codes are being utilized during conversion. If applicable it must be a valid TAC value for the TAC number"
+          },
+          "PodetTavCode4": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Only applicable if TAC codes are being utilized during conversion. If applicable it must be a valid TAC value for the TAC number"
+          },
+          "PodetWoCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Work Order Number"
+          },
+          "PodetWitmLineNumber": {
+            "maxLength": 16,
+            "type": "integer",
+            "description": "Work Order Line Number"
+          },
+          "PodetExpCode": {
+            "maxLength": 4,
+            "type": "string",
+            "description": "Work Order Expense Code"
+          },
+          "PodetWDetailCode": {
+            "maxLength": 30,
+            "type": "string",
+            "description": "Work Order Detail Code"
+          },
+          "PodetTax1TaxableFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Flag to indicate that the tax1 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null."
+          },
+          "PodetTax2TaxableFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Flag to indicate that the tax2 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null."
+          },
+          "PodetTax3TaxableFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Flag to indicate that the tax3 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null."
+          },
+          "PoderExtendedAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PodetPoTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PodetPoItemType": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PodetItemWmCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PodetItemAllowAltWmFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PodetUserFieldEdtFlag5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldEdtFlag6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldEdtFlag7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldEdtFlag8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldName5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldName6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldName7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetUserFieldName8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetWbsSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetTacSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PodetVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "PodetLumpSumPoFlag": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Indicator for a Lump Sum PO Detail Line. ‘Y’ or ‘N’"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "PoRequisition": {
+        "type": "object",
+        "properties": {
+          "PoreqCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqNum": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqPostDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqReqdDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqUpdQuoteDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqReqCode": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqStatCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqPhsCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqCatCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqEcEqpCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqEcCstCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PoreqReason1Desc": {
+            "maxLength": 250,
+            "type": "string"
+          },
+          "PoreqReason2Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqReason3Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqReason4Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqRefuseReason1Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqRefuseReason2Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqRefuseReason3Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqRefuseReason4Desc": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqInvDocTypeCode": {
+            "maxLength": 3,
+            "type": "string"
+          },
+          "PoreqWipDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PoreqWipAccCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqVenCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqCrepoCode": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqJobCtrlCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqPhsCtrlCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqCatCtrlCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqBuyCode": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqQteFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqWbsvCode1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode4": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode9": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode10": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode11": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqWbsvCode12": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqPmCode": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqPoCode": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqBlanketFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqCrepoReleaseNum": {
+            "maxLength": 11,
+            "type": "integer"
+          },
+          "PoreqPoReleaseNum": {
+            "maxLength": 11,
+            "type": "integer"
+          },
+          "PoreqEqpCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqComponCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqTrancodeCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PoreqInvTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqInvLocCode": {
+            "maxLength": 7,
+            "type": "string"
+          },
+          "PoreqInvTransFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqCreatePoSessionid": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PoreqSelectFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqSeqCode": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PoreqStatDesc": {
+            "maxLength": 12,
+            "type": "string"
+          },
+          "PoreqIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        }
+      },
+      "PoRequisitionDet": {
+        "type": "object",
+        "properties": {
+          "PoreqdCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdNum": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqdReqdDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdUpdateIvDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdPickDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdPostDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdLineNum": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PoreqdDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PoreqdItmCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdItmName": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdItmtypCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PoreqdWmCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PoreqdReqQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdOrdQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdPickQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdPicktodateQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdLstPriceAmt": {
+            "maxLength": 18,
+            "type": "integer"
+          },
+          "PoreqdJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdPhsCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdCatCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdEcEqpCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdEcCstCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PoreqdLocCode": {
+            "maxLength": 5,
+            "type": "string"
+          },
+          "PoreqdIvFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdActionCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdSelectionCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdStatCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdQtetodateQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdWipDeptCode": {
+            "maxLength": 6,
+            "type": "string"
+          },
+          "PoreqdWipAccCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdTxt1Code": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdTxt2Code": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdTxt3Code": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdSugPrice": {
+            "maxLength": 18,
+            "type": "integer"
+          },
+          "PoreqdJobCtrlCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdPhsCtrlCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdCatCtrlCode": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdWbsvCode1": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode2": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode3": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode4": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode9": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode10": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode11": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdWbsvCode12": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdPmCode": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqdEqpCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdComponCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdTrancodeCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PoreqdClassCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PoreqdSrcCompCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdTypeCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PoreqdHeading1": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdHeading2": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdHeading3": {
+            "maxLength": 16,
+            "type": "string"
+          },
+          "PoreqdTendpackCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdTendpackLineNum": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PoreqdSiNum": {
+            "maxLength": 5,
+            "type": "integer"
+          },
+          "PoreqdSiLineNum": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PoreqdOutstandingQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdInvTypeCode": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdItemLocCode": {
+            "maxLength": 7,
+            "type": "string"
+          },
+          "PoreqdCiitemtypeCode": {
+            "maxLength": 2,
+            "type": "string"
+          },
+          "PoreqdSiMastJobCode": {
+            "maxLength": 10,
+            "type": "string"
+          },
+          "PoreqdBlanketFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdPoCode": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqdCrepoCode": {
+            "maxLength": 11,
+            "type": "string"
+          },
+          "PoreqdCrepoReleaseNum": {
+            "maxLength": 11,
+            "type": "integer"
+          },
+          "PoreqdPoLineNum": {
+            "maxLength": 3,
+            "type": "integer"
+          },
+          "PoreqdInvTransFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdLineItmType": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdRecIntoInvFlag": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "PoreqdVenCode": {
+            "maxLength": 8,
+            "type": "string"
+          },
+          "PoreqdBuyCode": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqdOutstandinqQty": {
+            "maxLength": 16,
+            "type": "integer"
+          },
+          "PoreqdPoAmt": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PoreqdBypassValidation": {
+            "maxLength": 1,
+            "type": "string"
+          },
+          "DiscriminatorCode": {
+            "maxLength": 0,
+            "type": "string"
+          },
+          "PoreqdUserField5": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdUserField6": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdUserField7": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdUserField8": {
+            "maxLength": 60,
+            "type": "string"
+          },
+          "PoreqdCalledFromAppCode": {
+            "maxLength": 4,
+            "type": "string"
+          },
+          "PoreqdUserFieldEdtFlag5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldEdtFlag6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldEdtFlag7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldEdtFlag8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldName5": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldName6": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldName7": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdUserFieldName8": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdWbsSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdTacSetupFlag": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdItmDesc": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "PoreqdIuCreateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdIuCreateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqdIuUpdateDate": {
+            "type": "string",
+            "format": "full-date",
+            "example": "YYYY-MM-dd"
+          },
+          "PoreqdIuUpdateUser": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "PoreqdReqVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "PoreqdVUuid": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "PoreqdOnHandQty": {
+            "maxLength": 0,
+            "type": "integer"
+          },
+          "PoreqdOnReserveQty": {
+            "maxLength": 0,
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "responses": {
+      "PoDetailResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoDetail"
+            }
+          }
+        }
+      },
+      "GenericError": {
+        "description": "An error occurred while attempting to retrieve, create, or delete record(s)",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{}"
+              }
+            }
+          }
+        }
+      },
+      "PoMasterResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoMaster"
+            }
+          }
+        }
+      },
+      "PoPurchaseOrderResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoPurchaseOrder"
+            }
+          }
+        }
+      },
+      "PoDetResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoDet"
+            }
+          }
+        }
+      },
+      "PoRequisitionResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoRequisition"
+            }
+          }
+        }
+      },
+      "PoRequisitionDetResponse": {
+        "description": "Successful Operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoRequisitionDet"
+            }
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "PoDetailRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoDetail"
+            },
+            "examples": {
+              "Single POST Example": {
+                "value": {
+                  "PosCalledFromAppCode": "string",
+                  "PosPoItemType": "string",
+                  "PosCompCode": "string",
+                  "PosReleaseNum": "integer",
+                  "PosPoNum": "string",
+                  "PosUserTypeCode": "string",
+                  "PosUserField1": "string",
+                  "PosUserField2": "string",
+                  "PosUserField3": "string",
+                  "PosItmCode": "string",
+                  "PosItemLocCode": "string",
+                  "PosCiitemtypCode": "string",
+                  "PosWmCode": "string",
+                  "PosDesc": "string",
+                  "PosExptdPriceAmt": "float",
+                  "PosExtdAmt": "float",
+                  "PosOrdQty": "integer",
+                  "PosRecIntoInvFlag": "string",
+                  "PosTacSetupFlag": "string",
+                  "PosWbsSetupFlag": "string"
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "PosDesc": "test123"
+                }
+              }
+            }
+          }
+        }
+      },
+      "PoMasterRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoMaster"
+            },
+            "examples": {
+              "Single POST Example": {
+                "value": {
+                  "PomstBuyCode": "string",
+                  "PomstReqCode": "string",
+                  "PomstVenCode": "string",
+                  "PomstCompCode": "string",
+                  "PomstCurrCode": "string",
+                  "PomstDistTypeCode": "string",
+                  "PomstJobCompCode": "string",
+                  "PomstUserField1": "string",
+                  "PomstUserField2": "string",
+                  "PomstNum": "string",
+                  "PomstReqNum": "string",
+                  "PomstOrdDate": "string",
+                  "PomstExptdDate": "string",
+                  "PomstPoAmount": "float",
+                  "PomstStatCode": "string",
+                  "PomstTermCode": "string",
+                  "PomstTermDiscDay": "integer",
+                  "PomstTermDiscPc": "float",
+                  "PomstTermDueDay": "integer",
+                  "PomstTypeCode": "string"
+                }
+              },
+              "Header with Details Example": {
+                "value": {
+                  "PomstBuyCode": "DA",
+                  "PomstReqCode": "DA",
+                  "PomstVenCode": "ZZ-ACME",
+                  "PomstCompCode": "ZZ",
+                  "PomstCurrCode": "CA",
+                  "PomstDistTypeCode": "G",
+                  "PomstJobCompCode": "ZZ",
+                  "PomstUserField1": "00",
+                  "PomstUserField2": "1000.100",
+                  "PomstNum": "RS9109350",
+                  "PomstReqNum": "RS9109350",
+                  "PomstOrdDate": "2022-11-08",
+                  "PomstExptdDate": "2022-11-09",
+                  "PomstPoAmount": 100,
+                  "PomstStatCode": "O",
+                  "PomstTermCode": "NET30",
+                  "PomstTermDiscDay": 0,
+                  "PomstTermDiscPc": 0,
+                  "PomstTermDueDay": 30,
+                  "PomstTypeCode": "S",
+                  "PomstSelectFlag": "Y",
+                  "PomstPostDate": "2022-11-09",
+                  "PoDetailViewObj": [
+                    {
+                      "PosCalledFromAppCode": "PO",
+                      "PosPoItemType": "I",
+                      "PosCompCode": "ZZ",
+                      "PosReleaseNum": 1,
+                      "PosUserTypeCode": "G",
+                      "PosUserField1": "ZZ",
+                      "PosUserField2": "00",
+                      "PosUserField3": "1000.100",
+                      "PosItmCode": "1104",
+                      "PosItemLocCode": "TORONTO",
+                      "PosCiitemtypCode": "1",
+                      "PosWmCode": "$",
+                      "PosDesc": "swag master 420",
+                      "PosExptdPriceAmt": 5,
+                      "PosExtdAmt": 3,
+                      "PosOrdQty": 1,
+                      "PosRecIntoInvFlag": "N",
+                      "PosTacSetupFlag": "N",
+                      "PosWbsSetupFlag": "N"
+                    }
+                  ]
+                }
+              },
+              "Header with Multiple Details Example": {
+                "value": {
+                  "PomstBuyCode": "DA",
+                  "PomstReqCode": "DA",
+                  "PomstVenCode": "ZZ-ACME",
+                  "PomstCompCode": "ZZ",
+                  "PomstCurrCode": "CA",
+                  "PomstDistTypeCode": "G",
+                  "PomstJobCompCode": "ZZ",
+                  "PomstUserField1": "00",
+                  "PomstUserField2": "1000.100",
+                  "PomstNum": "RS910927",
+                  "PomstReqNum": "RS910927",
+                  "PomstOrdDate": "2022-11-09",
+                  "PomstExptdDate": "2022-11-10",
+                  "PomstPoAmount": 100,
+                  "PomstStatCode": "O",
+                  "PomstTermCode": "NET30",
+                  "PomstTermDiscDay": 0,
+                  "PomstTermDiscPc": 0,
+                  "PomstTermDueDay": 30,
+                  "PomstTypeCode": "S",
+                  "PomstSelectFlag": "Y",
+                  "PomstPostDate": "2022-11-09",
+                  "PoDetailViewObj": [
+                    {
+                      "PosLineNum": 1,
+                      "PosCalledFromAppCode": "PO",
+                      "PosPoItemType": "I",
+                      "PosCompCode": "ZZ",
+                      "PosReleaseNum": 1,
+                      "PosUserTypeCode": "G",
+                      "PosUserField1": "ZZ",
+                      "PosUserField2": "00",
+                      "PosUserField3": "1000.100",
+                      "PosItmCode": "1104",
+                      "PosItemLocCode": "TORONTO",
+                      "PosCiitemtypCode": "1",
+                      "PosWmCode": "$",
+                      "PosDesc": "swag master 410",
+                      "PosExptdPriceAmt": 5,
+                      "PosExtdAmt": 3,
+                      "PosOrdQty": 1,
+                      "PosRecIntoInvFlag": "N",
+                      "PosTacSetupFlag": "N",
+                      "PosWbsSetupFlag": "N"
+                    },
+                    {
+                      "PosLineNum": 2,
+                      "PosCalledFromAppCode": "PO",
+                      "PosPoItemType": "I",
+                      "PosCompCode": "ZZ",
+                      "PosReleaseNum": 1,
+                      "PosUserTypeCode": "G",
+                      "PosUserField1": "ZZ",
+                      "PosUserField2": "00",
+                      "PosUserField3": "1000.100",
+                      "PosItmCode": "1104",
+                      "PosItemLocCode": "TORONTO",
+                      "PosCiitemtypCode": "1",
+                      "PosWmCode": "$",
+                      "PosDesc": "swag master 431",
+                      "PosExptdPriceAmt": 5,
+                      "PosExtdAmt": 3,
+                      "PosOrdQty": 5,
+                      "PosRecIntoInvFlag": "N",
+                      "PosTacSetupFlag": "N",
+                      "PosWbsSetupFlag": "N"
+                    }
+                  ]
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "PomstDesc1": "test123"
+                }
+              }
+            }
+          },
+          "application/vnd.oracle.adf.batch+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoMaster"
+            },
+            "examples": {
+              "Multiple Headers with Details Example": {
+                "value": {
+                  "parts": [
+                    {
+                      "id": "part1",
+                      "path": "/1/pomaster",
+                      "operation": "create",
+                      "payload": {
+                        "PomstBuyCode": "DA",
+                        "PomstReqCode": "DA",
+                        "PomstVenCode": "ZZ-ACME",
+                        "PomstCompCode": "ZZ",
+                        "PomstCurrCode": "CA",
+                        "PomstDistTypeCode": "G",
+                        "PomstJobCompCode": "ZZ",
+                        "PomstUserField1": "00",
+                        "PomstUserField2": "1000.100",
+                        "PomstNum": "RS9109351",
+                        "PomstReqNum": "RS9109351",
+                        "PomstOrdDate": "2022-11-09",
+                        "PomstExptdDate": "2022-11-10",
+                        "PomstPoAmount": 100,
+                        "PomstStatCode": "O",
+                        "PomstTermCode": "NET30",
+                        "PomstTermDiscDay": 0,
+                        "PomstTermDiscPc": 0,
+                        "PomstTermDueDay": 30,
+                        "PomstTypeCode": "S",
+                        "PomstSelectFlag": "Y",
+                        "PomstPostDate": "2022-11-09",
+                        "PoDetailViewObj": [
+                          {
+                            "PosLineNum": 1,
+                            "PosCalledFromAppCode": "PO",
+                            "PosPoItemType": "I",
+                            "PosCompCode": "ZZ",
+                            "PosReleaseNum": 1,
+                            "PosUserTypeCode": "G",
+                            "PosUserField1": "ZZ",
+                            "PosUserField2": "00",
+                            "PosUserField3": "1000.100",
+                            "PosItmCode": "1104",
+                            "PosItemLocCode": "TORONTO",
+                            "PosCiitemtypCode": "1",
+                            "PosWmCode": "$",
+                            "PosDesc": "swag master 410",
+                            "PosExptdPriceAmt": 5,
+                            "PosExtdAmt": 3,
+                            "PosOrdQty": 1,
+                            "PosRecIntoInvFlag": "N",
+                            "PosTacSetupFlag": "N",
+                            "PosWbsSetupFlag": "N"
+                          },
+                          {
+                            "PosLineNum": 2,
+                            "PosCalledFromAppCode": "PO",
+                            "PosPoItemType": "I",
+                            "PosCompCode": "ZZ",
+                            "PosReleaseNum": 1,
+                            "PosUserTypeCode": "G",
+                            "PosUserField1": "ZZ",
+                            "PosUserField2": "00",
+                            "PosUserField3": "1000.100",
+                            "PosItmCode": "1104",
+                            "PosItemLocCode": "TORONTO",
+                            "PosCiitemtypCode": "1",
+                            "PosWmCode": "$",
+                            "PosDesc": "swag master 431",
+                            "PosExptdPriceAmt": 5,
+                            "PosExtdAmt": 3,
+                            "PosOrdQty": 5,
+                            "PosRecIntoInvFlag": "N",
+                            "PosTacSetupFlag": "N",
+                            "PosWbsSetupFlag": "N"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "part2",
+                      "path": "/1/pomaster",
+                      "operation": "create",
+                      "payload": {
+                        "PomstBuyCode": "DA",
+                        "PomstReqCode": "DA",
+                        "PomstVenCode": "ZZ-ACME",
+                        "PomstCompCode": "ZZ",
+                        "PomstCurrCode": "CA",
+                        "PomstDistTypeCode": "G",
+                        "PomstJobCompCode": "ZZ",
+                        "PomstUserField1": "00",
+                        "PomstUserField2": "1000.100",
+                        "PomstNum": "RS9109352",
+                        "PomstReqNum": "RS9109352",
+                        "PomstOrdDate": "2022-11-09",
+                        "PomstExptdDate": "2022-11-10",
+                        "PomstPoAmount": 100,
+                        "PomstStatCode": "O",
+                        "PomstTermCode": "NET30",
+                        "PomstTermDiscDay": 0,
+                        "PomstTermDiscPc": 0,
+                        "PomstTermDueDay": 30,
+                        "PomstTypeCode": "S",
+                        "PomstSelectFlag": "Y",
+                        "PomstPostDate": "2022-11-09",
+                        "PoDetailViewObj": [
+                          {
+                            "PosLineNum": 1,
+                            "PosCalledFromAppCode": "PO",
+                            "PosPoItemType": "I",
+                            "PosCompCode": "ZZ",
+                            "PosReleaseNum": 1,
+                            "PosUserTypeCode": "G",
+                            "PosUserField1": "ZZ",
+                            "PosUserField2": "00",
+                            "PosUserField3": "1000.100",
+                            "PosItmCode": "1104",
+                            "PosItemLocCode": "TORONTO",
+                            "PosCiitemtypCode": "1",
+                            "PosWmCode": "$",
+                            "PosDesc": "swag master 410",
+                            "PosExptdPriceAmt": 5,
+                            "PosExtdAmt": 3,
+                            "PosOrdQty": 1,
+                            "PosRecIntoInvFlag": "N",
+                            "PosTacSetupFlag": "N",
+                            "PosWbsSetupFlag": "N"
+                          },
+                          {
+                            "PosLineNum": 2,
+                            "PosCalledFromAppCode": "PO",
+                            "PosPoItemType": "I",
+                            "PosCompCode": "ZZ",
+                            "PosReleaseNum": 1,
+                            "PosUserTypeCode": "G",
+                            "PosUserField1": "ZZ",
+                            "PosUserField2": "00",
+                            "PosUserField3": "1000.100",
+                            "PosItmCode": "1104",
+                            "PosItemLocCode": "TORONTO",
+                            "PosCiitemtypCode": "1",
+                            "PosWmCode": "$",
+                            "PosDesc": "swag master 431",
+                            "PosExptdPriceAmt": 5,
+                            "PosExtdAmt": 3,
+                            "PosOrdQty": 5,
+                            "PosRecIntoInvFlag": "N",
+                            "PosTacSetupFlag": "N",
+                            "PosWbsSetupFlag": "N"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "PoPurchaseOrderRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoPurchaseOrder"
+            },
+            "examples": {
+              "POST Example (PO Header and Details)": {
+                "value": {
+                  "PomstCompCode": "string",
+                  "PomstCompName": "string",
+                  "PomstNum": "integer",
+                  "PomstReleaseNum": "integer",
+                  "PomstVenCode": "string",
+                  "PomstTypeCode": "string",
+                  "PomstJobCompCode": "string",
+                  "PomstVuuid": "",
+                  "PoDetViewObj": [
+                    {
+                      "PodetLineNum": "integer",
+                      "PodetItmCode": "string",
+                      "PodetItmName": "string",
+                      "PodetExptdDate": "string",
+                      "PodetExptdPriceAmt": "float",
+                      "PodetCurrCode": "string",
+                      "PodetOrdQty": "integer",
+                      "PodetOrdWmCode": "string",
+                      "PodetStatCode": "string",
+                      "PodetJobCode": "string",
+                      "PodetJobCtrlCode": "string",
+                      "PodetPhsCode": "string",
+                      "PodetPhsCtrlCode": "string",
+                      "PodetCatCode": "string",
+                      "PodetCatCtrlCode": "string",
+                      "PodetTax1Code": "string",
+                      "PodetTax2Code": "string",
+                      "PodetTax3Code": "string",
+                      "PodetWipAccCode": "string",
+                      "PodetWipDeptCode": "string",
+                      "PodetSrcCompCode": "string",
+                      "PodetRecIntoInvFlag": "string",
+                      "PodetUserTypeCode": "string",
+                      "PodetUserField1": "string",
+                      "PodetUserField2": "string",
+                      "PodetUserField3": "string",
+                      "PodetUserField4": "string",
+                      "PodetTax1TaxableFlag": "string",
+                      "PodetTax2TaxableFlag": "string",
+                      "PodetTax3TaxableFlag": "string",
+                      "PoderExtendedAmt": "float",
+                      "PodetPoTypeCode": "string",
+                      "PodetPoItemType": "string",
+                      "PodetItemAllowAltWmFlag": "string",
+                      "PodetWbsSetupFlag": "string",
+                      "PodetTacSetupFlag": "string",
+                      "PodetVuuid": ""
+                    }
+                  ]
+                }
+              },
+              "POST Example 2 (PO Details on existing Header)": {
+                "value": {
+                  "PodetLineNum": 3,
+                  "PodetItmCode": "TOOLS",
+                  "PodetItmName": "test",
+                  "PodetExptdDate": "2021-04-01",
+                  "PodetExptdPriceAmt": 1,
+                  "PodetCurrCode": "US",
+                  "PodetOrdQty": 12,
+                  "PodetOrdWmCode": "NA",
+                  "PodetStatCode": "N",
+                  "PodetJobCode": "100001",
+                  "PodetJobCtrlCode": "ALL",
+                  "PodetPhsCode": "01-103",
+                  "PodetPhsCtrlCode": "01",
+                  "PodetCatCode": "1000",
+                  "PodetCatCtrlCode": "ALL",
+                  "PodetTax1Code": "T4",
+                  "PodetTax2Code": "T5",
+                  "PodetTax3Code": "T6",
+                  "PodetWipAccCode": "5200.100",
+                  "PodetWipDeptCode": "00",
+                  "PodetSrcCompCode": "RVHQ1001",
+                  "PodetRecIntoInvFlag": "N",
+                  "PodetUserTypeCode": "J",
+                  "PodetUserField1": "RVHQ1001",
+                  "PodetUserField2": "100001",
+                  "PodetUserField3": "01-103",
+                  "PodetUserField4": "1000",
+                  "PodetTax1TaxableFlag": "Y",
+                  "PodetTax2TaxableFlag": "Y",
+                  "PodetTax3TaxableFlag": "Y",
+                  "PodetObjectOraseq": 67424752,
+                  "PoderExtendedAmt": 12,
+                  "PodetPoTypeCode": "S",
+                  "PodetPoItemType": "F",
+                  "PodetItemAllowAltWmFlag": "Y",
+                  "PodetPosOraseq": 67424762,
+                  "PodetWbsSetupFlag": "N",
+                  "PodetTacSetupFlag": "N",
+                  "PodetVuuid": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "PoRequisitionRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoRequisition"
+            },
+            "examples": {
+              "POST Example": {
+                "value": {
+                  "PoreqCompCode": "RVHQ1001",
+                  "PoreqVenCode": "4CASTER",
+                  "PoreqNum": "RSTEST123",
+                  "PoreqReqdDate": "2022-11-01",
+                  "PoreqReqCode": "RAVI",
+                  "PoreqVUuid": ""
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "PoreqBlanketFlag": "Y"
+                }
+              }
+            }
+          }
+        }
+      },
+      "PoRequisitionDetRequest": {
+        "content": {
+          "application/vnd.oracle.adf.resourceitem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PoRequisitionDet"
+            },
+            "examples": {
+              "POST Example": {
+                "value": {
+                  "PoreqdCompCode": "ZZ",
+                  "PoreqdNum": "000001",
+                  "PoreqdItmCode": "5033015",
+                  "PoreqdWmCode": "GL",
+                  "PoreqdReqQty": 3,
+                  "PoreqdTypeCode": "I",
+                  "PoreqdLineItmType": "I",
+                  "PoreqdCiitemtypeCode": "2",
+                  "PoreqdVUuid": ""
+                }
+              },
+              "PATCH Example": {
+                "value": {
+                  "PoreqdIvFlag": "N"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "description": "Basic --> User + Password",
+        "scheme": "basic"
+      }
+    }
+  }
+}
