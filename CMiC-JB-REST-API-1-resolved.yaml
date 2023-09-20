@@ -1,0 +1,768 @@
+---
+openapi: 3.0.0
+info:
+  title: Job Billing APIs
+  description: |
+    # JB-REST-API
+    API documentation for **Job Billing** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: jbcont
+  description: JB Contracts
+- name: jbgroup
+  description: JB Groups
+paths:
+  /jb-rest-api/rest/1/jbcont:
+    get:
+      tags:
+      - jbcont
+      summary: Retrieve all JB Contracts
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ContCode
+        in: query
+        description: Contract code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to check against create/update dates (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbCont'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /jb-rest-api/rest/1/jbcont/{Vuuid}:
+    get:
+      tags:
+      - jbcont
+      summary: Retrieve a specific JB Contract
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbCont'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /jb-rest-api/rest/1/jbgroup:
+    get:
+      tags:
+      - jbgroup
+      summary: Retrieve JB Groups
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ContCode
+        in: query
+        description: Contract code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: GroupCode
+        in: query
+        description: Group code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: GroupNum
+        in: query
+        description: Group number (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbGroup'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - jbgroup
+      summary: Create a Job Billing Group
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/JbGroupRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbGroup'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /jb-rest-api/rest/1/jbgroup/{Vuuid}:
+    get:
+      tags:
+      - jbgroup
+      summary: Retrieve a Specific JB Group
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbGroup'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - jbgroup
+      summary: Update a Specific JB Group
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/JbGroupRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JbGroup'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    JbCont:
+      type: object
+      properties:
+        JbcCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        JbcCompName:
+          maxLength: 30
+          type: string
+        JbcContCode:
+          maxLength: 10
+          type: string
+          description: Contract Code
+        JbcJobCode:
+          maxLength: 10
+          type: string
+          description: Job Code
+        JbcJobName:
+          maxLength: 60
+          type: string
+        JbcJobCtrlCode:
+          maxLength: 10
+          type: string
+          description: Control Job Code
+        JbcJobCtrlName:
+          maxLength: 60
+          type: string
+        JbcJobBillingRateCode:
+          maxLength: 10
+          type: string
+        JbcNegMaxBillAmtFlag:
+          maxLength: 1
+          type: string
+        JbcCustCode:
+          maxLength: 8
+          type: string
+          description: Customer Code
+        JbcCustName:
+          maxLength: 50
+          type: string
+        JbcDefaultBillingType:
+          maxLength: 2
+          type: string
+          description: Default Billing Type
+        JbcName:
+          maxLength: 60
+          type: string
+          description: Contract Name
+        JbcCurrCode:
+          maxLength: 3
+          type: string
+          description: Currency Code
+        JbcCurrName:
+          maxLength: 30
+          type: string
+        JbcTermCode:
+          maxLength: 6
+          type: string
+          description: Term Code
+        JbcTermName:
+          maxLength: 30
+          type: string
+        JbcHldbkPc:
+          maxLength: 5
+          type: integer
+          description: Hold Back Percentage
+        JbcTax1Code:
+          maxLength: 11
+          type: string
+          description: Tax code 1
+        JbcTax1Name:
+          maxLength: 30
+          type: string
+        JbcTax2Code:
+          maxLength: 11
+          type: string
+          description: Tax code 2
+        JbcTax2Name:
+          maxLength: 30
+          type: string
+        JbcTax3Code:
+          maxLength: 11
+          type: string
+          description: Tax code 3
+        JbcTax3Name:
+          maxLength: 30
+          type: string
+        JbcBidDate:
+          type: string
+          description: Bid Date
+          format: full-date
+          example: YYYY-MM-dd
+        JbcContDate:
+          type: string
+          description: Contract Date
+          format: full-date
+          example: YYYY-MM-dd
+        JbcLstrevDate:
+          type: string
+          description: Not utilized
+          format: full-date
+          example: YYYY-MM-dd
+        JbcClosedDate:
+          type: string
+          description: Closed Date
+          format: full-date
+          example: YYYY-MM-dd
+        JbcAddTypeCode:
+          maxLength: 8
+          type: string
+          description: BP Address Code (Optional)
+        JbcAddTypeName:
+          maxLength: 30
+          type: string
+        JbcContactName:
+          maxLength: 200
+          type: string
+          description: Contact Name
+        JbcAdd1:
+          maxLength: 40
+          type: string
+          description: Address 1
+        JbcAdd2:
+          maxLength: 40
+          type: string
+          description: Address 2
+        JbcAdd3:
+          maxLength: 40
+          type: string
+          description: Address 3
+        JbcRegionCode:
+          maxLength: 3
+          type: string
+          description: Region Code
+        JbcRegionName:
+          maxLength: 30
+          type: string
+        JbcCountry:
+          maxLength: 30
+          type: string
+          description: Country
+        JbcPostalCode:
+          maxLength: 12
+          type: string
+          description: Postal Code
+        JbcPhoneNum:
+          maxLength: 20
+          type: string
+          description: Phone Number
+        JbcFaxNum:
+          maxLength: 20
+          type: string
+          description: Fax Number
+        JbcDesc:
+          maxLength: 2000
+          type: string
+          description: Description
+        JbcEngName:
+          maxLength: 40
+          type: string
+          description: Engineer Name
+        JbcArcName:
+          maxLength: 40
+          type: string
+          description: Architect Name
+        JbcLawName:
+          maxLength: 40
+          type: string
+          description: Lawyer Name
+        JbcSupName:
+          maxLength: 30
+          type: string
+          description: Supervisor Name
+        JbcApprovedDate:
+          type: string
+          description: "Approved Date. , Must be populated if flag is checked in JBCTRL."
+          format: full-date
+          example: YYYY-MM-dd
+        JbcApprovedUser:
+          maxLength: 30
+          type: string
+          description: "Approved User , Must be populated if flag is checked in JBCTRL."
+        JbcMaxBillingAmt:
+          maxLength: 18
+          type: integer
+          description: Maximum Billing Amount
+        JbcBudgBillingAmt:
+          maxLength: 18
+          type: integer
+          description: Budget Billing Amount
+        JbcDefaultInvFormatCode:
+          maxLength: 4
+          type: string
+          description: Default Invoice Format Code (overrides JBCTRL_DEFAULT_INV_FORMAT_CODE)
+        JbcDefaultInvFormatName:
+          maxLength: 60
+          type: string
+        JbcProjectManager:
+          maxLength: 60
+          type: string
+          description: Contract Project Manager
+        JbcDefaultTax1TaxablePct:
+          maxLength: 18
+          type: integer
+          description: Default Portion of each billed line amount that is taxable by Tax Code 1 (Null means 100%)
+        JbcDefaultTax2TaxablePct:
+          maxLength: 18
+          type: integer
+          description: Default Portion of each billed line amount that is taxable by Tax Code 2 (Null means 100%)
+        JbcDefaultTax3TaxablePct:
+          maxLength: 18
+          type: integer
+          description: Default Portion of each billed line amount that is taxable by Tax Code 3 (Null means 100%)
+        JbcArchitectBpCode:
+          maxLength: 8
+          type: string
+          description: Architect Business Partner Code (optional)
+        JbcArchitectBpName:
+          maxLength: 50
+          type: string
+        JbcStartingDrawNum:
+          maxLength: 6
+          type: integer
+          description: Starting Draw Number for the Contract
+        JbcMinCode:
+          maxLength: 10
+          type: string
+          description: Optional Minimum Time Code
+        JbcMinName:
+          maxLength: 60
+          type: string
+        JbcInvoiceCurrCode:
+          maxLength: 3
+          type: string
+          description: Optional Alternate Currency Code to Post Invoice.  If null then use Company Currency
+        JbcInvoiceCurrName:
+          maxLength: 30
+          type: string
+        JbcFixedCurrFactorNum:
+          maxLength: 16
+          type: integer
+          description: Optional Fixed Currency Conversion Rate for new Bills
+        JbcPmContactPartnTypeCode:
+          maxLength: 1
+          type: string
+          description: Optional Project Manager Contact Partner Type Code
+        JbcPmContactPartnCode:
+          maxLength: 8
+          type: string
+          description: Optional Project Manager Contact Partner Code
+        JbcPmContactCode:
+          maxLength: 10
+          type: string
+          description: Optional Project Manager Contact Code
+        JbcPmContactName:
+          maxLength: 60
+          type: string
+        JbcRetCode:
+          maxLength: 10
+          type: string
+          description: Retainage Code
+        JbcRetDescription:
+          maxLength: 60
+          type: string
+        JbcStartDate:
+          type: string
+          description: Start Date of contract to specify date range for automatically generating Time Phased Revenue Budget
+          format: full-date
+          example: YYYY-MM-dd
+        JbcEndDate:
+          type: string
+          description: End Date of contract to specify date range for automatically generating Time Phased Revenue Budget
+          format: full-date
+          example: YYYY-MM-dd
+        JbcRuleCode:
+          maxLength: 20
+          type: string
+          description: Spread Rule Code for Contract
+        JbcTimePhasedFlag:
+          maxLength: 1
+          type: string
+          description: "Time Phased Flag, Y - Is Time Phased, N - Is NOT Time Phased"
+        JbcAlternateCustName:
+          maxLength: 60
+          type: string
+          description: A contract specific Alternate Customer Name to be used (if specified) instead of the BP Partner's Name
+        JbcDeptCode:
+          maxLength: 6
+          type: string
+          description: A department associated with the contract which defaults from the Contract's Master Job when the contract is created.
+        JbcDeptName:
+          maxLength: 30
+          type: string
+        JbcJbpytradeXrefCode:
+          maxLength: 30
+          type: string
+          description: An optional Cross-Reference Lookup Code for mapping PY Trade Codes to JB Trade Codes for printing on JB Free Form Invoices
+        JbcJbpytradeXrefName:
+          maxLength: 60
+          type: string
+        JbcAltCustAddCode:
+          maxLength: 5
+          type: string
+          description: BP Alternate Address Code
+        JbcExclNoninvReceipts:
+          maxLength: 1
+          type: string
+          description: Y/N Checked - Exclude Non-invoiced Receipts In Billing
+        JbcHldbkMethod:
+          maxLength: 1
+          type: string
+        JbcScRfpCostFlag:
+          maxLength: 1
+          type: string
+          description: Allow Sub-Contract Request For Payment From Billing Invoice Y=Allow N=Not Allowed
+        JbcWCatNoBillCodeFlag:
+          maxLength: 1
+          type: string
+          description: Y/N Checked - Warning Message Will Appear In Prepare Bill Screen When There Are Categories Without Bill Codes Assigned
+        JbcInvoiceLevelRetFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ or ‘N’., ‘Y’ - Retainage and release calculation will be at invoice level., ‘N’ - Retainage and release calculation will be at detail level."
+        JbcBpAddTypeCode:
+          maxLength: 5
+          type: string
+          description: Leave Null
+        JbcBpAddTypeName:
+          maxLength: 30
+          type: string
+        JbcMatStoredInternal:
+          maxLength: 1
+          type: string
+          description: "‘Y’ or ‘N’., ‘Y’ - Completed Amount includes Material stored., ‘N’ - Material Stored is on top of Completed."
+        JbcMatStoredPrintFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’
+        JbcGrpMaxSeqGrp1:
+          maxLength: 0
+          type: integer
+        JbcGrpMaxSeqGrp2:
+          maxLength: 0
+          type: integer
+        JbcGrpMaxSeqGrp3:
+          maxLength: 0
+          type: integer
+        JbcGrpMaxSeqGrp4:
+          maxLength: 0
+          type: integer
+        JbcGrpMaxSeqGrp5:
+          maxLength: 0
+          type: integer
+        JbcUseScrfpHldbkRelFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ or ‘N’., ‘Y’ - Use the same Retainage Release Percent as in the latest SC Request For Payment. Defaults to ‘N’ if left null/blank."
+        JbcWipRollInFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ or ‘N’., ‘Y’ - WIP data will be rolled in against the job associated with the contract header., Defaults to ‘N’ if left null/blank."
+        JbcDtlPciBilling:
+          maxLength: 1
+          type: string
+        JbcCPciDisableFlag:
+          maxLength: 4000
+          type: string
+        JbcIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        JbcIuCreateUser:
+          maxLength: 30
+          type: string
+        JbcIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        JbcIuUpdateUser:
+          maxLength: 30
+          type: string
+        JbcCompCurrCode:
+          maxLength: 3
+          type: string
+        JbcEtcUseUnbilledRev:
+          maxLength: 1
+          type: string
+        JbcRoundBillAmtTo:
+          maxLength: 0
+          type: integer
+          description: "Round Billing Amount To..., Valid values - 2, 0, -1, -2, -3, -4, -5, -6, If left null/blank, field will default to the value in JBCTRL."
+        JbcRoundBillMethod:
+          maxLength: 1
+          type: string
+          description: "Rounding Method for Billing Amount., ‘U’ – Up, ‘D’ – Down, ‘R’ – Default (Round), If left null/blank, field will default to the value in JBCTRL."
+        JbcRoundHldbkAmtTo:
+          maxLength: 0
+          type: integer
+          description: "Round Retainage Amount To…, Valid values - 2, 0, -1, -2, -3, -4, -5, -6, If left null/blank, field will default to the value in JBCTRL."
+        JbcRoundHldbkMethod:
+          maxLength: 1
+          type: string
+          description: "Rounding Method for Retainage Amount, ‘U’ – Up, ‘D’ – Down, ‘R’ – Default (Round), If left null/blank, field will default to the value in JBCTRL."
+        JbcTaxOnGrossAmt:
+          maxLength: 1
+          type: string
+        JbcAcctDescription:
+          maxLength: 500
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        JbcContractName:
+          maxLength: 60
+          type: string
+        JbcNoRecalCurComplFlag:
+          maxLength: 1
+          type: string
+        JbcRemitDetails:
+          maxLength: 4000
+          type: string
+        JbcVUuid:
+          maxLength: 64
+          type: string
+    JbGroup:
+      type: object
+      properties:
+        JbgCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        JbgContCode:
+          maxLength: 10
+          type: string
+          description: Contract Code
+        JbgGroupNum:
+          maxLength: 1
+          type: integer
+          description: Multi-Grouping of the Bill Codes is uniquely identified by having this number as part of the primary key. Default is 1
+        JbgGroupCode:
+          maxLength: 50
+          type: string
+          description: Group Code
+        JbgName:
+          maxLength: 60
+          type: string
+          description: Group Name
+        JbgGroupMaxBillingAmt:
+          maxLength: 18
+          type: integer
+          description: "Maximum allowed to be billed., Leave null/blank for UNLIMITED BILLING"
+        JbgGroupPremiumSplitFlag:
+          maxLength: 1
+          type: string
+          description: "Group Premium Split, ‘Y’ or ‘N’. Default is ‘N’"
+        JbgIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        JbgIuCreateUser:
+          maxLength: 30
+          type: string
+        JbgIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        JbgIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        JbgVUuid:
+          maxLength: 64
+          type: string
+  responses:
+    JbContResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/JbCont'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    JbGroupResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/JbGroup'
+  requestBodies:
+    JbGroupRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/JbGroup'
+          examples:
+            POST Example:
+              value:
+                JbgCompCode: string
+                JbgContCode: string
+                JbgGroupNum: integer
+                JbgGroupCode: string
+                JbgName: string
+                JbgGroupPremiumSplitFlag: string
+                JbgVUuid: ""
+            PATCH Example:
+              value:
+                JbgName: bobicus
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic

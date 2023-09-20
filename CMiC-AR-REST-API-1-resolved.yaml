@@ -1,0 +1,2823 @@
+---
+openapi: 3.0.0
+info:
+  title: Accounts Receivable APIs
+  description: |
+    # AR-REST-API
+    API documentation for **Accounts Receivable** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: aragedreport
+  description: AR Aged Reports
+- name: arcustomer
+  description: AR Customers
+- name: arinvmemolog
+  description: AR Invoice Memo Logs
+- name: arinvoice
+  description: AR Invoices
+- name: arinvoutstanding
+  description: AR Outstanding Invoices
+- name: arinvpay
+  description: AR Invoice Payments
+- name: arpayment
+  description: AR Payments
+- name: artaxitems
+  description: AR Tax Items
+paths:
+  /ar-rest-api/rest/1/aragedreport:
+    get:
+      tags:
+      - aragedreport
+      summary: Retrieve AR Aged Report
+      description: Please note - finder MUST be used - data won't be retrieved otherwise.
+      parameters:
+      - name: finder
+        in: query
+        description: ar1000d
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: FromCompCode
+        in: query
+        description: Company Code Starting Range (ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ToCompCode
+        in: query
+        description: Company Code Ending Range (ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: JobCustGroup
+        in: query
+        description: Job Customer Group Name (ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CustZeroAccTotalFlag
+        in: query
+        description: Flag to include Zero Accounts (Y or N - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: IncludeDeposit
+        in: query
+        description: Flag to include Deposits (Y or N - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AgeDeposit
+        in: query
+        description: Flag to Age the Deposits (Y or N - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ShowDeposit
+        in: query
+        description: Flag to Show Deposits (Y or N - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AgingDate
+        in: query
+        description: Report Starting Date (YYYY-MM-dd - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CutOffDate
+        in: query
+        description: Report Cut Off Date (YYYY-MM-dd - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ClosedInvoice
+        in: query
+        description: Flag to include closed invoices (Y or N - ar1000d)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArAgedReport'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arcustomer:
+    get:
+      tags:
+      - arcustomer
+      summary: Retrieve AR Customers
+      description: |
+        Available finders listed below (required parameters are in bold):
+
+        - selectCustomerCompany;**CompCodeVar**={companyCode}
+      operationId: Retrieve all customers
+      parameters:
+      - name: finder
+        in: query
+        description: selectCustomerCompany
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCodeVar
+        in: query
+        description: Company Code (selectCustomerCompany)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArCustomer'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - arcustomer
+      summary: Create an AR Customer
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ArCustomerRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArCustomer'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arcustomer/{Vuuid}:
+    get:
+      tags:
+      - arcustomer
+      summary: Retrieve a Specific AR Customer
+      description: Retrieval of a specific customer by Vuuid
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArCustomer'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - arcustomer
+      summary: Delete a Specific AR Customer
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - arcustomer
+      summary: Update a specific AR Customer
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/ArCustomerRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArCustomer'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvmemolog:
+    get:
+      tags:
+      - arinvmemolog
+      summary: Retrieve AR Invoice Memo Logs
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectMemoLog
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: compCode
+        in: query
+        description: Company Code (selectMemoLog)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: invNum
+        in: query
+        description: Invoice Code/Number (selectMemoLog)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: bchNum
+        in: query
+        description: Batch Number (selectMemoLog)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvMemoLog'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvoice:
+    get:
+      tags:
+      - arinvoice
+      summary: Retrieve AR Invoice
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: ArInvoiceFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCodeVar
+        in: query
+        description: Company Code (ArInvoiceFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: InvNumVar
+        in: query
+        description: Invoice Code/Number (ArInvoiceFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CustCodeVar
+        in: query
+        description: Customer Code (ArInvoiceFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvoice'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - arinvoice
+      summary: Create an AR Invoice
+      description: "InvBchPstFlag needs to be 'Y' in all parts if doing a batch insert - otherwise, this field can be ommitted"
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ArInvoiceRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvoice'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvoice/{Vuuid}:
+    get:
+      tags:
+      - arinvoice
+      summary: Retrieve a Specific AR Invoice
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvoice'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - arinvoice
+      summary: Delete a Specific AR Invoice
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - arinvoice
+      summary: Update AR Invoice
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/ArInvoiceRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvoice'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvoutstanding:
+    get:
+      tags:
+      - arinvoutstanding
+      summary: Retrieve AR Outstanding Invoices
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectInvoices
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCodeVar
+        in: query
+        description: Company Code (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: InvCodeVar
+        in: query
+        description: Invoice Number/Code (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CustomerCodeVar
+        in: query
+        description: Customer Code (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: FromInvoiceDateVar
+        in: query
+        description: From Invoice Date (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ToInvoiceDateVar
+        in: query
+        description: To Invoice Date (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: FromDueDateVar
+        in: query
+        description: From Invoice Due Date (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ToDueDateVar
+        in: query
+        description: To Invoice Due Date (selectInvoices)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvOutstanding'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvpay:
+    get:
+      tags:
+      - arinvpay
+      summary: Retrieve AR Invoice
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCompInvNum or selectByCompDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByCompInvNum and selectByCompDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: InvNum
+        in: query
+        description: Invoice Code/Number (selectByCompInvNum)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: StartDate
+        in: query
+        description: Starting Date of interval to search within (selectByCompDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: EndDate
+        in: query
+        description: Ending Date of interval to search within (selectByCompDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvPay'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - arinvpay
+      summary: Create an AR Invoice Payment
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ArInvPayRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvPay'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arinvpay/{Vuuid}:
+    get:
+      tags:
+      - arinvpay
+      summary: Retrieve a Specific AR Invoice Payment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvPay'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - arinvpay
+      summary: Delete a Specific AR Invoice Payment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - arinvpay
+      summary: Update AR Invoice Payment
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/ArInvPayRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArInvPay'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/arpayment:
+    get:
+      tags:
+      - arpayment
+      summary: Retrieve AR Payments
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: ArPaymentFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (ArPaymentFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CustCode
+        in: query
+        description: Customer Code (ArPaymentFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PayFromDate
+        in: query
+        description: Start Date for search interval (ArPaymentFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PayToDate
+        in: query
+        description: End Date for search interval (ArPaymentFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArPayment'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/artaxitems/:
+    get:
+      tags:
+      - artaxitems
+      summary: Retrieve AR Tax Items
+      description: ""
+      operationId: retrieve-ar-tax-items
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCompCode or selectByCompTaxCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: companyCode
+        in: query
+        description: Company Code (selectByCompCode and selectByCompTaxCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: taxCode
+        in: query
+        description: Tax Code (selectByCompTaxCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArTaxItems'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - artaxitems
+      summary: Create an AR Tax Item
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ArTaxItemsRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArTaxItems'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ar-rest-api/rest/1/artaxitems/{Vuuid}:
+    get:
+      tags:
+      - artaxitems
+      summary: Retrieve a specific AR Tax Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique raw ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArTaxItems'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - artaxitems
+      summary: Delete a Specific AR Tax Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - artaxitems
+      summary: Update a specific AR Tax Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique ID for raw
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/ArTaxItemsRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArTaxItems'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    ArAgedReport:
+      type: object
+      properties:
+        GlarCompCode:
+          maxLength: 8
+          type: string
+        GlarCustCode:
+          maxLength: 8
+          type: string
+        GlarCurrCode:
+          maxLength: 3
+          type: string
+        GlarCurrName:
+          maxLength: 30
+          type: string
+        GlarGroup1Title:
+          maxLength: 8
+          type: string
+        GlarGroup1Code:
+          maxLength: 10
+          type: string
+        GlarGroup1Name:
+          maxLength: 60
+          type: string
+        GlarGroup2Title:
+          maxLength: 8
+          type: string
+        GlarGroup2Code:
+          maxLength: 10
+          type: string
+        GlarGroup2Name:
+          maxLength: 60
+          type: string
+        GlarCustClassCode:
+          maxLength: 256
+          type: string
+        GlarClassTypeCode:
+          maxLength: 1
+          type: string
+        GlarSumDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        GlarSumNum:
+          maxLength: 30
+          type: string
+        GlarTypeCode:
+          maxLength: 1
+          type: string
+        GlarPrintTypeCode:
+          maxLength: 1
+          type: string
+        GlarDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        GlarCustomerContract:
+          maxLength: 30
+          type: string
+        GlarDetNum:
+          maxLength: 30
+          type: string
+        GlarAgeNum:
+          maxLength: 0
+          type: integer
+        GlarOrigAmt:
+          maxLength: 0
+          type: integer
+        GlarHldbkAmt:
+          maxLength: 0
+          type: integer
+        GlarOutstHldbkAmt:
+          maxLength: 0
+          type: integer
+        GlarDiscAmt:
+          maxLength: 0
+          type: integer
+        GlarNetOutstandAmt:
+          maxLength: 0
+          type: integer
+        GlarTitle1:
+          maxLength: 256
+          type: string
+        GlarTitle2:
+          maxLength: 256
+          type: string
+        GlarTitle3:
+          maxLength: 256
+          type: string
+        GlarTitle4:
+          maxLength: 256
+          type: string
+        GlarDayNum1:
+          maxLength: 0
+          type: integer
+        GlarDayNum2:
+          maxLength: 0
+          type: integer
+        GlarDayNum3:
+          maxLength: 0
+          type: integer
+        GlarDayNum4:
+          maxLength: 0
+          type: integer
+        GlarDeptCode:
+          maxLength: 6
+          type: string
+        GlarCheckPrintFlag:
+          maxLength: 1
+          type: string
+    ArCustomer:
+      type: object
+      properties:
+        BpcustCompCode:
+          maxLength: 8
+          type: string
+          description: This field represents the company code that this customer is being entered for.  This must be a VALID CMiC company code.
+        BpcustCompName:
+          maxLength: 30
+          type: string
+        BpcustBpCode:
+          maxLength: 8
+          type: string
+          description: This is the business partner code. This must be a VALID CMiC Business Partner.
+        BpcustBpName:
+          maxLength: 50
+          type: string
+        BpcustBpCodeBf:
+          maxLength: 8
+          type: string
+        BpcustBpNameBf:
+          maxLength: 50
+          type: string
+        BpcustBillAdd1:
+          maxLength: 40
+          type: string
+          description: This is the first of 3 address lines
+        BpcustBillAdd2:
+          maxLength: 40
+          type: string
+          description: This is the second of 3 address lines provided
+        BpcustBillAdd3:
+          maxLength: 40
+          type: string
+          description: This is the Last Line of address.  This line should contain the CITY name if it has not been included in lines 1 or 2.
+        BpcustBillRegionCode:
+          maxLength: 3
+          type: string
+          description: This is the State/Province Code of the address.  This must be a VALID CMiC region code
+        BpcustBillRegionName:
+          maxLength: 30
+          type: string
+        BpcustBillCountry:
+          maxLength: 30
+          type: string
+          description: This is the Country of the address.
+        BpcustBillPostalCode:
+          maxLength: 12
+          type: string
+          description: "This is the zip/postal code for the address.  This is an unformatted field, so it is best to ensure that all required dashes/capitalization are included in the format of this field."
+        BpcustBillContactName:
+          maxLength: 30
+          type: string
+          description: This is the name of the primary contact for the customer
+        BpcustBillPhone:
+          maxLength: 20
+          type: string
+          description: This is an unformatted field representing the phone number for the customer.  It is recommended that you take this opportunity to standardize phone format during conversion.
+        BpcustBillFax:
+          maxLength: 20
+          type: string
+          description: This is an unformatted field representing the fax number for the customer. It is recommended that you take this opportunity to standardize phone format during conversion.
+        BpcustBillEmail:
+          maxLength: 80
+          type: string
+          description: This is an unformatted field for the Email address of this customer
+        BpcustCollCode:
+          maxLength: 4
+          type: string
+          description: This is the code representing the person or company responsible for collections from this customer. This must be a VALID CMiC collector code.
+        BpcustCollName:
+          maxLength: 30
+          type: string
+        BpcustClassCode:
+          maxLength: 4
+          type: string
+          description: This is the type/class of customer.  This must be a VALID CMiC class code for the company entered in field 1.
+        BpcustClassName:
+          maxLength: 30
+          type: string
+        BpcustTermCode:
+          maxLength: 6
+          type: string
+          description: This is the payment terms that the customer has negotiated with you.  This must be a VALID CMiC Terms Code.
+        BpcustTermName:
+          maxLength: 30
+          type: string
+        BpcustActiveFlag:
+          maxLength: 1
+          type: string
+          description: If the Customer is active set to 1 otherwise 0
+        BpcustShipAdd1:
+          maxLength: 40
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipAdd2:
+          maxLength: 40
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipAdd3:
+          maxLength: 40
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipRegionCode:
+          maxLength: 3
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipRegionName:
+          maxLength: 30
+          type: string
+        BpcustShipCountry:
+          maxLength: 30
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipPostalCode:
+          maxLength: 12
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipContactName:
+          maxLength: 30
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipPhone:
+          maxLength: 20
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipFax:
+          maxLength: 20
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustShipEmail:
+          maxLength: 80
+          type: string
+          description: Make the same as the Billing Address unless there is a unique shipping address
+        BpcustCurrCode:
+          maxLength: 3
+          type: string
+          description: This is the currency code most frequently used for transactions with this customer.  This must be a VALID CMiC currency code.
+        BpcustCurrName:
+          maxLength: 30
+          type: string
+        BpcustCrLimitAmt:
+          maxLength: 18
+          type: integer
+          description: This is the credit limit allowed to the customer.  If credit limits are not used set this field to ‘999999999999.00’
+        BpcustChargeCode:
+          maxLength: 3
+          type: string
+          description: This is the interest charge code that will be applied to late payments by this customer.  This must be a VALID CMiC charge code in ARCHARGE.
+        BpcustChargeName:
+          maxLength: 30
+          type: string
+        BpcustBankCode:
+          maxLength: 9
+          type: string
+          description: Customer Bank Code – Must already be defined on the Business Partner
+        BpcustBankName:
+          maxLength: 30
+          type: string
+        BpcustBankAccNum1:
+          maxLength: 9
+          type: string
+          description: Bank Transit Number – Must already be defined on the Business Partner
+        BpcustBankAccNum2:
+          maxLength: 17
+          type: string
+          description: Bank Account Number – Must already be defined on the Business Partner
+        BpcustBankAccNum3:
+          maxLength: 12
+          type: string
+          description: Bank Suffix Code  - Must already be defined on the Business Partner
+        BpcustDiscPc:
+          maxLength: 7
+          type: integer
+          description: Only enter a value if the discount % for the customer cannot be retrieved from the Terms Code
+        BpcustHldbkPc:
+          maxLength: 7
+          type: integer
+          description: Only enter a value if the retainage % for the customer cannot be retrieved from the Terms Code
+        BpcustTax1Code:
+          maxLength: 11
+          type: string
+          description: This is the first of 3 default tax fields that can be applied to each customer.  If field 12 is set to ‘Y’ then a VALID CMiC Tax Code should be entered here.  In Canada this should be the GST tax code.
+        BpcustTax1Name:
+          maxLength: 30
+          type: string
+        BpcustTax2Code:
+          maxLength: 11
+          type: string
+          description: This is the 2nd default tax for the customer.  If not blank this must be a VALID CMiC tax code. In Canada this should be the applicable PST tax code.
+        BpcustTax2Name:
+          maxLength: 30
+          type: string
+        BpcustTax3Code:
+          maxLength: 11
+          type: string
+          description: This is the 3rd default tax for the customer.  If not blank then this must be a VALID CMiC Tax Code.
+        BpcustTax3Name:
+          maxLength: 30
+          type: string
+        BpcustStatementFlag:
+          maxLength: 1
+          type: string
+          description: "If this customer requires statements to be printed then set this field to ‘1’ otherwise set to ‘0’,"
+        BpcustDunnFlag:
+          maxLength: 1
+          type: string
+          description: If this customer can have dunning letters sent to them then set this field to ‘1’ otherwise set to ‘0’
+        BpcustTranAllowFlag:
+          maxLength: 1
+          type: string
+          description: "Is this customer allowed to have invoices entered against them, If so set to ‘1’ otherwise ‘0’.  In almost all cases this field can be defaulted to ‘1’."
+        BpcustArDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the department code associated with the AR Control account that this customer will use as a default for all invoices entered in the system This must be a VALID CMiC Department code for the company in field 1.
+        BpcustArDeptName:
+          maxLength: 30
+          type: string
+        BpcustCashDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the default department code for the GL Bank Account most often used to deposit check received from this customer. Must be a VALID CMiC Department Code.
+        BpcustCashDeptName:
+          maxLength: 30
+          type: string
+        BpcustSalesDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the default department for revenues billed to this customer.  This must be a VALID CMiC department code
+        BpcustSalesDeptName:
+          maxLength: 30
+          type: string
+        BpcustDiscDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the department code that any discounts taken by this customer will be captured.  This must be a VALID CMiC department code
+        BpcustDiscDeptName:
+          maxLength: 30
+          type: string
+        BpcustHldbkDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the default department that will be used to record retainage held for the customer.  This must be a VALID CMiC department code
+        BpcustHldbkDeptName:
+          maxLength: 30
+          type: string
+        BpcustArAccCode:
+          maxLength: 16
+          type: string
+          description: This is the AR Control account that this customer will use for each invoice entered in the system.  This must be a VALID CMiC account code
+        BpcustArAccName:
+          maxLength: 30
+          type: string
+        BpcustCashAccCode:
+          maxLength: 16
+          type: string
+          description: This is the default GL Bank Account code most often used to deposit checks received from this customer.  This must be a valid CMiC Account Code.
+        BpcustCashAccName:
+          maxLength: 30
+          type: string
+        BpcustSalesAccCode:
+          maxLength: 16
+          type: string
+          description: This is the default revenue account for this customer that will be used by the system if the invoice being entered is a Miscellaneous billing entered in AR.  This must be a VALID CMiC account.
+        BpcustSalesAccName:
+          maxLength: 30
+          type: string
+        BpcustDiscAccCode:
+          maxLength: 16
+          type: string
+          description: This is the account where discounts taken by this customer will be recorded.  This must be a VALID CMiC account
+        BpcustDiscAccName:
+          maxLength: 30
+          type: string
+        BpcustHldbkAccCode:
+          maxLength: 16
+          type: string
+          description: This is the account that will be used to record retainage held for the customer.  This must be a VALID CMiC Account.
+        BpcustHldbkAccName:
+          maxLength: 30
+          type: string
+        BpcustCreateUser:
+          maxLength: 30
+          type: string
+          description: User Name of original creator – Not Required for Import
+        BpcustLastUpdateDate:
+          type: string
+          description: Date record was last updated – Not Required for Import
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustLastUpdateUser:
+          maxLength: 30
+          type: string
+          description: User Name of who last updated the record – Not Required for Import
+        BpcustTaxedCode:
+          maxLength: 1
+          type: string
+          description: "Does this customer have taxes included in billing invoices? Set to ‘Y' if taxes are charged, otherwise set to ‘N'"
+        BpcustMiscDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the department used for misc. charges on an invoice to this customer.  This must be a VALID CMiC department code.
+        BpcustMiscDeptName:
+          maxLength: 30
+          type: string
+        BpcustMiscAccCode:
+          maxLength: 16
+          type: string
+          description: This is the account code used for miscellaneous charges on an invoice to this customer.  This must be a VALID CMiC account code.
+        BpcustMiscAccName:
+          maxLength: 30
+          type: string
+        BpcustFrtDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the department used to record freight charges on invoices to the customer.  This must be a VALID CMiC Department Code.
+        BpcustFrtDeptName:
+          maxLength: 30
+          type: string
+        BpcustFrtAccCode:
+          maxLength: 16
+          type: string
+          description: This is the account code used for recording freight charges billed to customers.  This must be a VALID CMiC account code
+        BpcustFrtAccName:
+          maxLength: 30
+          type: string
+        BpcustInsDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the department where insurance charges on invoices are recorded.  This must be a VALID CMiC Department Code.
+        BpcustInsDeptName:
+          maxLength: 30
+          type: string
+        BpcustInsAccCode:
+          maxLength: 16
+          type: string
+          description: This is the account code used to record insurance charged on invoices to the customer. This must be a VALID CMiC account code.
+        BpcustInsAccName:
+          maxLength: 30
+          type: string
+        BpcustActiveFromDate:
+          type: string
+          description: Date the customer was first active within the company in field 1.
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustActiveToDate:
+          type: string
+          description: Date the customer was in-activated within the company in field 1
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustLastInvDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustDaysOutstInvPaidTtl:
+          maxLength: 10
+          type: integer
+          description: Total number of days for outstanding invoices
+        BpcustFullyPaidInvs:
+          maxLength: 10
+          type: integer
+          description: Not currently utilized – leave this field blank
+        BpcustInvDeliq:
+          maxLength: 10
+          type: integer
+          description: Not currently utilized – leave this field blank
+        BpcustAvgDaysToPayInv:
+          maxLength: 6
+          type: integer
+          description: Average Days customer takes to pay invoices weighted by paid amount and ARCTRL file Cut off days –
+        BpcustWebSite:
+          maxLength: 200
+          type: string
+          description: Web Site Address
+        BpcustJbInvFormatCode:
+          maxLength: 4
+          type: string
+        BpcustJbInvFormatName:
+          maxLength: 60
+          type: string
+        BpcustJbInvGroupCode:
+          maxLength: 10
+          type: string
+        BpcustJbBillTypeCode:
+          maxLength: 4
+          type: string
+        BpcustJbBillTypeName:
+          maxLength: 60
+          type: string
+        BpcustJbBillRateTableCode:
+          maxLength: 10
+          type: string
+        BpcustJbBillRateTableName:
+          maxLength: 60
+          type: string
+        BpcustJbMapCode:
+          maxLength: 10
+          type: string
+        BpcustJbMapName:
+          maxLength: 60
+          type: string
+        BpcustJbretrCode:
+          maxLength: 10
+          type: string
+        BpcustJbretrName:
+          maxLength: 60
+          type: string
+        BpcustSalesmanCode:
+          maxLength: 16
+          type: string
+        BpcustBpccCode:
+          maxLength: 10
+          type: string
+        BpcustDeliveryDiscPc:
+          maxLength: 7
+          type: integer
+        BpcustTruckerPayDiscPc:
+          maxLength: 7
+          type: integer
+        BpcustMsPropagateCompFlag:
+          maxLength: 1
+          type: string
+        BpcustAllocApdiscJobFlag:
+          maxLength: 1
+          type: string
+        BpcustArStatementEmailFlag:
+          maxLength: 1
+          type: string
+        BpcustArStatementEmailAdd:
+          maxLength: 4000
+          type: string
+        BpcustIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustIuCreateDatetime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        BpcustIuCreateUser:
+          maxLength: 30
+          type: string
+        BpcustIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        BpcustIuUpdateDatetime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        BpcustIuUpdateUser:
+          maxLength: 30
+          type: string
+        BpIuCreateDatetime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        BpIuUpdateDatetime:
+          type: string
+          format: full-date or date-time
+          example: YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        BpcustVUuid:
+          maxLength: 64
+          type: string
+    ArInvMemoLog:
+      type: object
+      properties:
+        ArinvmemoCompCode:
+          maxLength: 8
+          type: string
+        ArinvmemoInvNum:
+          maxLength: 11
+          type: string
+        ArinvmemoOrigInvNum:
+          maxLength: 11
+          type: string
+        ArinvmemoSalesAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoHldbkAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoDiscAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoMemoAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoArAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoOsAmt:
+          maxLength: 0
+          type: integer
+        ArinvmemoDesc:
+          maxLength: 60
+          type: string
+        ArinvmemoOrdNum:
+          maxLength: 16
+          type: string
+        ArinvmemoApplyNum:
+          maxLength: 11
+          type: string
+        ArinvmemoBchNum:
+          maxLength: 11
+          type: integer
+        ArinvmemoCustCode:
+          maxLength: 8
+          type: string
+        ArinvmemoOrigSalesAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoSdiscAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoOrigMemoAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoNodiscAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoOrigDiscAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoOrigHldbkAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoFrtAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoMiscAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoInsAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoOrigArAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoOrigOsAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoSman1CommAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoSman2CommAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoSman3CommAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoTax1Amt:
+          maxLength: 18
+          type: integer
+        ArinvmemoTax1HldbkAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoTax2Amt:
+          maxLength: 18
+          type: integer
+        ArinvmemoTax3Amt:
+          maxLength: 18
+          type: integer
+        ArinvmemoDetTaxAmt:
+          maxLength: 18
+          type: integer
+        ArinvmemoTax1Code:
+          maxLength: 11
+          type: string
+        ArinvmemoTax2Code:
+          maxLength: 11
+          type: string
+        ArinvmemoTax3Code:
+          maxLength: 11
+          type: string
+        ArinvmemoCurrCode:
+          maxLength: 3
+          type: string
+        ArinvmemoDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArinvmemoPostDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArinvmemoOePrtCode:
+          maxLength: 1
+          type: string
+        ArinvmemoTax1TaxableFlag:
+          maxLength: 1
+          type: string
+        ArinvmemoTax2TaxableFlag:
+          maxLength: 1
+          type: string
+        ArinvmemoTax3TaxableFlag:
+          maxLength: 1
+          type: string
+        ArinvmemoIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArinvmemoIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+    ArInvoice:
+      type: object
+      properties:
+        InvCompCode:
+          maxLength: 8
+          type: string
+          description: "This is the company code the invoice belongs to.  This must be a VALID CMiC company code., Multiple companies cannot be placed in the same batch."
+        InvNum:
+          maxLength: 11
+          type: string
+          description: This is the invoice number.
+        InvOrdNum:
+          maxLength: 16
+          type: string
+          description: Only applicable to CMiC Sales Invoice – Customer PO Number
+        InvBchNum:
+          maxLength: 11
+          type: integer
+          description: "This is the batch number of the transaction.  Start numbering with -50000 and increase by one for each batch (I.e. –50000, -49999,-49998..)"
+        InvRlsBchNum:
+          maxLength: 11
+          type: integer
+          description: Not Currently Utilized - Not Used during conversion
+        InvStatusCode:
+          maxLength: 1
+          type: string
+          description: "Invoice status., ‘O’ – Open. Invoice has not been paid., ‘C’ – Closed. Invoice has been fully paid., ‘P' – Partially Paid. Invoice has been partially paid., ‘V’ – Voided. Invoice that has been voided."
+        InvPostDate:
+          type: string
+          description: This date is the date the invoice was posted to the General Ledger
+          format: full-date
+          example: YYYY-MM-dd
+        InvDate:
+          type: string
+          description: This is the date of the invoice.
+          format: full-date
+          example: YYYY-MM-dd
+        InvDueDate:
+          type: string
+          description: This is the date the invoice is due.
+          format: full-date
+          example: YYYY-MM-dd
+        InvDueDateUpd:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvDueDays:
+          maxLength: 0
+          type: integer
+        InvDiscDate:
+          type: string
+          description: This is the date any discount offered on this invoice expires.  If discount is not applicable set this field to the same date as the Invoice Date
+          format: full-date
+          example: YYYY-MM-dd
+        InvDiscDateUpd:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvDiscDays:
+          maxLength: 0
+          type: integer
+        InvStmtDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvRevDate:
+          type: string
+          description: Invoice Void date.  – Only applicable if bring in 'Voided Invoices'
+          format: full-date
+          example: YYYY-MM-dd
+        InvApprovedDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvTranCode:
+          maxLength: 1
+          type: string
+          description: Set this field to 'I' for invoice.
+        InvCustCode:
+          maxLength: 8
+          type: string
+          description: This is the customer code the invoice is for.  This must be a VALID CMiC customer code.
+        InvJobCode:
+          maxLength: 10
+          type: string
+          description: This is the Job Code the invoice was for.  If not left blank this must be a VALID CMiC job code.  If the invoice was for more than one job code leave this field blank
+        InvPlantCode:
+          maxLength: 5
+          type: string
+        InvDisputedFlag:
+          maxLength: 1
+          type: string
+        InvDelinqCode:
+          maxLength: 1
+          type: string
+        InvOePrtCode:
+          maxLength: 1
+          type: string
+          description: Set to 'P' – Only applicable for OE application
+        InvDeptCode:
+          maxLength: 6
+          type: string
+          description: The department of the bank account you expect to deposit the payment into – Not required can be left blank
+        InvCashAccCode:
+          maxLength: 16
+          type: string
+          description: The Account of the bank account you expect to deposit the payment into  - Not required can be left blank
+        InvCurrCode:
+          maxLength: 3
+          type: string
+          description: This is the currency code of the invoice. This must be a VALID CMiC Currency code. For Conversion this is the company currency
+        InvCurFactorNum:
+          maxLength: 16
+          type: integer
+          description: "If the currency code of the invoice is the same as the company currency code set this field to 1, otherwise enter the conversion rate used for this invoice. – for Data conversion set this to 1"
+        InvTermCode:
+          maxLength: 6
+          type: string
+          description: This is the payment terms code for the invoice.  This is a required field.  Set this to the default Terms for the customer.
+        InvChargeCode:
+          maxLength: 3
+          type: string
+          description: "This is the Financial Charge Code (called Interest Code on the menu) that is to be applied against this invoice.  This must be a VALID CMiC charge code in ARCHARGE.  , Set this to your system default charge code if not applicable."
+        InvDesc1:
+          maxLength: 60
+          type: string
+          description: This is a short description of the invoice.
+        InvDesc2:
+          maxLength: 60
+          type: string
+        InvCollCode:
+          maxLength: 4
+          type: string
+          description: "The collector code represents the person, organization or department that is responsible for collections on this invoice.  This must be a VALID CMiC collector code."
+        InvSman1Code:
+          maxLength: 4
+          type: string
+        InvSman2Code:
+          maxLength: 4
+          type: string
+        InvSman3Code:
+          maxLength: 4
+          type: string
+        InvSman1CommPc:
+          maxLength: 6
+          type: integer
+        InvSman2CommPc:
+          maxLength: 6
+          type: integer
+        InvSman3CommPc:
+          maxLength: 6
+          type: integer
+        InvSman1CommAmt:
+          maxLength: 18
+          type: integer
+        InvSman2CommAmt:
+          maxLength: 18
+          type: integer
+        InvSman3CommAmt:
+          maxLength: 18
+          type: integer
+        InvTax1Code:
+          maxLength: 11
+          type: string
+          description: This is the tax code for TAX1.  If taxes were not used leave this field blank otherwise this must be a VALID CMiC tax code.
+        InvTax1Name:
+          maxLength: 4000
+          type: string
+        InvTax2Code:
+          maxLength: 11
+          type: string
+          description: This is the tax code for TAX2.  If taxes were not used leave this field blank otherwise this must be a VALID CMiC tax code.
+        InvTax2Name:
+          maxLength: 4000
+          type: string
+        InvTax3Code:
+          maxLength: 11
+          type: string
+          description: This is the tax code for TAX3.  If taxes were not used leave this field blank otherwise this must be a VALID CMiC tax code.
+        InvTax3Name:
+          maxLength: 4000
+          type: string
+        InvTermPc:
+          maxLength: 5
+          type: integer
+          description: This is the discount % given on the invoice.  If not applicable set to '0.00'
+        InvHldbkPc:
+          maxLength: 18
+          type: integer
+          description: This is the retainage % applicable to this invoice.  If not applicable set to '0.0000'
+        InvTermPcUpd:
+          maxLength: 5
+          type: integer
+        InvHldbkPcUpd:
+          maxLength: 18
+          type: integer
+        InvTaxDiscCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if discount is applicable on the Tax amounts.  In most cases this will be set to 'N'.
+        InvFrtDiscCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if discount is applicable on the Freight amounts.  In most cases this will be set to 'N'.
+        InvInsDiscCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if discount is applicable on the Insurance amount.  In most cases this will be 'N'.
+        InvMiscDiscCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if discount is applicable on any misc. charges amounts.  In most cases this should be set to 'N'
+        InvSalesAmt:
+          maxLength: 18
+          type: integer
+          description: "This amount is the amount of the invoice regardless of taxes, retainage or other amounts such as freight.  If this is a retainage release invoice, set this to ‘0’."
+        InvSdiscPercent:
+          maxLength: 7
+          type: integer
+          description: Sales Discount %.  If entered this should match the  amount in INV_SDISC_AMT otherwise leave blank
+        InvSdiscAmt:
+          maxLength: 18
+          type: integer
+          description: This is the total amount of discount given to the invoice.  If not applicable Set to ‘0.00'
+        InvAmt:
+          maxLength: 18
+          type: number
+          description: "This invoice amount should be set to the same amount as the Invoice Sales amount. If this is a retainage release invoice, set this to ‘0’."
+          format: float - 2 decimals
+        InvNodiscAmt:
+          maxLength: 18
+          type: integer
+          description: The amount of the invoice on which discount will not be calculated – leave blank if not applicable.  For retainage release invoices this is the retainage amount * -1
+        InvDiscAmt:
+          maxLength: 18
+          type: integer
+          description: "If discount is applicable on this invoice, this is the discount amount. If there is no discount set this field to ‘.00’"
+        InvHldbkAmt:
+          maxLength: 18
+          type: integer
+          description: "This is the Total amount of retainage on the invoice. If there is none, set this to '.00'.  If this is a retainage release invoice, this is the retainage released amount * -1"
+        InvDiscAmtUpd:
+          maxLength: 18
+          type: integer
+        InvHldbkAmtUpd:
+          maxLength: 18
+          type: integer
+        InvFrtAmt:
+          maxLength: 18
+          type: integer
+          description: This is the amount of freight to be charged over and above the invoice amount
+        InvMiscAmt:
+          maxLength: 18
+          type: integer
+          description: This is the misc. charges amount to be charged over and above the invoice amount
+        InvInsAmt:
+          maxLength: 18
+          type: integer
+          description: This field is the insurance amount on the invoice to be charged above the invoice amount
+        InvArAmt:
+          maxLength: 18
+          type: integer
+          description: "This invoice amount should be set to the same amount as the Invoice Sales amount. If this is a retainage release invoice, set this to ‘0’."
+        InvTax1Amt:
+          maxLength: 18
+          type: integer
+          description: The amount of tax charged for TAX1.  In Canada this is the GST amount
+        InvTax1HldbkAmt:
+          maxLength: 18
+          type: integer
+          description: This is the amount of TAX1 that is applicable to the retainage amount.  This field is only applicable in Canada.
+        InvTax1HldbkAmtUpd:
+          maxLength: 18
+          type: integer
+        InvTax2Amt:
+          maxLength: 18
+          type: integer
+          description: This is the amount of the 2nd tax charged on the invoice.  In Canada this is the PST amount.
+        InvTax3Amt:
+          maxLength: 18
+          type: integer
+          description: This is the 3rd Tax amount available.
+        InvDetTaxAmt:
+          maxLength: 18
+          type: integer
+          description: Any tax amount not included in Tax 1 thru 3 – Leave blank if not applicable.
+        InvOutstandAmt:
+          maxLength: 18
+          type: integer
+          description: "This is the amount of the invoice that is still is receivable.  This amount does not include retainage or retainage tax, but does include all other taxes, freight, insurance and misc. charges."
+        InvOrigHldbkAmt:
+          maxLength: 18
+          type: integer
+          description: "This is the original retainage amount for the invoice.  If not applicable enter zero. If this is a retainage release invoice, set this to ‘0’."
+        InvOrigTax1HldbkAmt:
+          maxLength: 18
+          type: integer
+          description: This is the original amount of Tax 1 Retainage. This field is only applicable to GST in Canada
+        InvRlsWAmt:
+          maxLength: 18
+          type: integer
+          description: Not Currently Utilized
+        InvRlsInvNum:
+          maxLength: 11
+          type: string
+          description: Not Currently Utilized
+        InvRlsAmt:
+          maxLength: 0
+          type: integer
+          description: "On a retainage release invoice this is the retainage amount released * -1.  e.g. If $75 was released then this is –75. , If this is the invoice from which the retainage was released then this is the amount being released, in this case +75., If this is not a retainage release invoice, this should be 0."
+        InvRlsAmtUpd:
+          maxLength: 0
+          type: integer
+        InvRlsTaxAmt:
+          maxLength: 0
+          type: integer
+        InvRlsTax1Amt:
+          maxLength: 18
+          type: integer
+          description: Only applicable if there is retainage tax.  This is the amount of tax being released from this invoice. Or if the retainage release invoice the amount of tax that was released.
+        InvRlsTax1AmtUpd:
+          maxLength: 18
+          type: integer
+        InvDiscTakenAmt:
+          maxLength: 18
+          type: integer
+          description: Only applicable if invoice has been paid and discount was taken.
+        InvWoAmt:
+          maxLength: 18
+          type: integer
+          description: Invoice Write Off amount to date – leave blank if not applicable
+        InvAllowAmt:
+          maxLength: 18
+          type: integer
+          description: Invoice Allowance write off amount – leave blank if not applicable.
+        InvPaidAmt:
+          maxLength: 18
+          type: integer
+          description: The full amount that has been paid against this invoice to date. – This can be left blank if unknown during conversion
+        InvLastPayAmt:
+          maxLength: 18
+          type: integer
+          description: The amount of the last payment made against this invoice or Blank – This can be left blank during conversion.
+        InvFinAmt:
+          maxLength: 18
+          type: integer
+        InvHldbkPaidAmt:
+          maxLength: 18
+          type: integer
+          description: Not Currently Utilized
+        InvCreditAmt:
+          maxLength: 18
+          type: integer
+          description: Sum of Total Memo Amounts related to this invoice
+        InvCreditHldbkAmt:
+          maxLength: 18
+          type: integer
+          description: Sum to total Retainage Memo Amounts related to this invoice
+        InvCreditTax1HldbkAmt:
+          maxLength: 18
+          type: integer
+          description: Sum of total Tax1Retainage Memo Amounts related to this invoice
+        InvContCode:
+          maxLength: 10
+          type: string
+          description: Job Billing Contract Code that created this invoice.
+        InvDrawNum:
+          maxLength: 6
+          type: integer
+          description: Job Billing Draw Number – Not Used during conversion. Leave NULL.
+        InvRlsDate:
+          type: string
+          description: Not Currently Utilized
+          format: full-date
+          example: YYYY-MM-dd
+        InvSerCode:
+          maxLength: 4
+          type: string
+          description: Invoice Series Code – If entered a valid CMiC AR invoice series code must be entered.
+        InvImageFilename:
+          maxLength: 255
+          type: string
+        InvSourceCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if the originating invoice was a CMiC Sales invoice or a standard AR invoice.  For Conversion set this to ‘R’
+        InvAverageDaysToPay:
+          maxLength: 10
+          type: integer
+        InvAddTypeCode:
+          maxLength: 5
+          type: string
+          description: This is the Alternate Address Code representing the address this invoice was sent to.  If entered this must be a valid BP Address Code
+        InvTotalRlsTaxAmt:
+          maxLength: 18
+          type: integer
+          description: "This field is the total amount of retainage tax that has been released.  Set this field to '.00' if there has been no retainage released, or there was no retainage tax released."
+        InvTax1TaxableFlag:
+          maxLength: 1
+          type: string
+          description: Flag to indicate that the tax1 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null
+        InvTax2TaxableFlag:
+          maxLength: 1
+          type: string
+          description: Flag to indicate that the tax2 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null
+        InvTax3TaxableFlag:
+          maxLength: 1
+          type: string
+          description: Flag to indicate that the tax3 code exists but the tax amount will be calculated as zero. Valid values are (Y)es -meaning taxable and (N)o -meaning non taxable. If the tax code is not null this field cannot be null
+        InvRevBchNum:
+          maxLength: 11
+          type: integer
+        InvOriginalDueDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvOriginalDesc1:
+          maxLength: 60
+          type: string
+        InvOriginalDueDateUpdDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvOriginalDueDateUpdUser:
+          maxLength: 30
+          type: string
+        InvOriginalDesc1UpdDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvOriginalDesc1UpdUser:
+          maxLength: 30
+          type: string
+        InvReasonDueDateChange:
+          maxLength: 200
+          type: string
+        InvSeparateBillingRefCode:
+          maxLength: 10
+          type: string
+        InvNetAmt:
+          maxLength: 0
+          type: integer
+        InvNetAmtUpd:
+          maxLength: 0
+          type: integer
+        InvTaxes:
+          maxLength: 0
+          type: integer
+        InvOtherTaxes:
+          maxLength: 0
+          type: integer
+        InvCRlsAmt:
+          maxLength: 0
+          type: integer
+        InvCRlsTaxAmt:
+          maxLength: 0
+          type: integer
+        InvTax1TaxableAmt:
+          maxLength: 18
+          type: integer
+        InvTax2TaxableAmt:
+          maxLength: 18
+          type: integer
+        InvTax3TaxableAmt:
+          maxLength: 18
+          type: integer
+        InvDetailsExistFlag:
+          maxLength: 1
+          type: string
+        InvDistributionExistFlag:
+          maxLength: 1
+          type: string
+        InvInvoiceNewFlag:
+          maxLength: 1
+          type: string
+        InvAcctDescription:
+          maxLength: 500
+          type: string
+        InvArLessHldbkAmt:
+          maxLength: 0
+          type: integer
+        InvIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvIuCreateUser:
+          maxLength: 30
+          type: string
+        InvIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvIuUpdateUser:
+          maxLength: 30
+          type: string
+        InvVUuid:
+          maxLength: 64
+          type: string
+        InvCostCode:
+          maxLength: 80
+          type: string
+        InvCatCode:
+          maxLength: 80
+          type: string
+        InvBchPstFlag:
+          maxLength: 80
+          type: string
+    ArInvOutstanding:
+      type: object
+      properties:
+        CompanyCode:
+          maxLength: 8
+          type: string
+        CustomerCode:
+          maxLength: 8
+          type: string
+        InvoiceCode:
+          maxLength: 11
+          type: string
+        InvoiceDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        OutstandingAmount:
+          maxLength: 18
+          type: integer
+        OutstandingBucketName:
+          maxLength: 14
+          type: string
+        OutstandingBucketName4:
+          maxLength: 13
+          type: string
+        OutstandingBucketLabel:
+          maxLength: 8
+          type: string
+        OutstandingBucketLabel4:
+          maxLength: 8
+          type: string
+        OutstandingAmountCurrent:
+          maxLength: 0
+          type: integer
+        OutstandingAmount31To60:
+          maxLength: 0
+          type: integer
+        OutstandingAmount61To90:
+          maxLength: 0
+          type: integer
+        OutstandingAmountOver90:
+          maxLength: 0
+          type: integer
+        OutstandingAmount91To120:
+          maxLength: 0
+          type: integer
+        OutstandingAmountOver120:
+          maxLength: 0
+          type: integer
+        InvDueDate:
+          type: string
+          description: This is the date the invoice is due.
+          format: full-date
+          example: YYYY-MM-dd
+        InvIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        InvIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+    ArInvPay:
+      type: object
+      properties:
+        IpayCompCode:
+          maxLength: 8
+          type: string
+          description: Invoice Company Code
+        IpaySeqNum:
+          maxLength: 11
+          type: integer
+          description: Link to PAY_SEQ_NUM
+        IpayInvCompCode:
+          maxLength: 8
+          type: string
+          description: "The company Code of the invoice being paid. In most cases this will be the same as the IPAY_COMP_CODE.,"
+        IpayInvNum:
+          maxLength: 11
+          type: string
+          description: Invoice Number
+        IpaySourceCode:
+          maxLength: 1
+          type: string
+          description: Set this to 'I' for conversion
+        IpayInvToNum:
+          maxLength: 11
+          type: string
+          description: Not Currently Utilized
+        IpayInvDate:
+          type: string
+          description: Invoice Date
+          format: full-date
+          example: YYYY-MM-dd
+        IpayCurrPayAmt:
+          maxLength: 18
+          type: integer
+          description: Pay amount in foreign Currency – Make the same as IPAY_PAY_AMT for conversion
+        IpayCurrDiscAmt:
+          maxLength: 18
+          type: integer
+          description: Discount amount in invoice currency
+        IpayCurrWoAmt:
+          maxLength: 18
+          type: integer
+          description: Invoice Write Off amount in invoice currency
+        IpayCurrAllowAmt:
+          maxLength: 18
+          type: integer
+          description: Invoice allowance for bad debt write off amount in invoice currency.
+        IpayCurrTaxAmt:
+          maxLength: 18
+          type: integer
+          description: Currency Conversion of Tax Amount – leave blank or set to Tax Amount
+        IpayCurrWoTaxAmt:
+          maxLength: 18
+          type: integer
+          description: Write off amount in invoice currency
+        IpayOldCurrPayAmt:
+          maxLength: 18
+          type: integer
+        IpayInvDiscDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        IpayInvOutstandAmt:
+          maxLength: 0
+          type: integer
+        IpayInvDiscAmt:
+          maxLength: 0
+          type: integer
+        IpayInvHldbkAmt:
+          maxLength: 0
+          type: integer
+        IpayInvTotalTaxAmt:
+          maxLength: 0
+          type: integer
+        IpayInvStatusCode:
+          maxLength: 1
+          type: string
+        IpayRemainingAmt:
+          maxLength: 0
+          type: integer
+        IpayWoModifiedFlag:
+          maxLength: 1
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        IpayIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        IpayIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        IpayVUuid:
+          maxLength: 64
+          type: string
+    ArPayment:
+      type: object
+      properties:
+        PayCompCode:
+          maxLength: 8
+          type: string
+          description: This is the company code that received the check.  This must be a VALID CMiC Company Code and MUST be the same company code as the invoice being paid.
+        PaySeqNum:
+          maxLength: 0
+          type: integer
+          description: "This is a sequential unique number to identify the check.  Start numbering checks as –1 and continue to add one for each check.  (i.e. –1,-2,-3…)"
+        PayBchNum:
+          maxLength: 11
+          type: integer
+          description: "This is the batch number that the check was posted in.  Use the same batch numbering method as for the INVOICE table. , The same PAY_BCH_NUM cannot be used for multiple companies."
+        PayChqNum:
+          maxLength: 30
+          type: string
+          description: This is the Actual Check number as received from the customer.
+        PayCustCode:
+          maxLength: 8
+          type: string
+          description: This is the code of the customer who sent the check.  This must be a VALID CMiC customer code for the company in field 1.
+        PayDate:
+          type: string
+          description: This is the Date on the Check
+          format: full-date
+          example: YYYY-MM-dd
+        PayActualDate:
+          type: string
+          description: This is the date of Deposit
+          format: full-date
+          example: YYYY-MM-dd
+        PayChqReceivedDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        PayBankCompCode:
+          maxLength: 8
+          type: string
+          description: The company code that the payment was deposited to.  Must match with DEPT_CODE and ACC_CODE
+        PayDeptCode:
+          maxLength: 6
+          type: string
+          description: This is the Department Code in the GL for the Bank Account the check was deposited into.  This must be a VALID CMiC Department code for the company in field 1.
+        PayAccCode:
+          maxLength: 16
+          type: string
+          description: This is the GL Account code representing the bank where the check was deposited.  This must be a VALID CMiC Account code.
+        PayCurrAmt:
+          maxLength: 18
+          type: integer
+          description: This is the Amount of the Check after currency conversion to the local currency.  This field should be the same as PAY_AMT for conversion purposes
+        PayCurrCode:
+          maxLength: 3
+          type: string
+          description: This is the currency code of the check.  Set this to your company’s currency for conversion.
+        PayDispAmt:
+          maxLength: 18
+          type: integer
+          description: "This is the amount of the check that has been disbursed.  If the check was a deposit check, or the check was for more than the customers outstanding balance and the difference is to be applied against their next invoice this is the un-disbursed amount.  In most cases this will be the same amount as fields 11 and 12."
+        PayCurcFactorNum:
+          maxLength: 16
+          type: integer
+          description: This is the currency exchange factor used on this check.  Set this to ‘1’ if the check has the same currency as the company or for conversion.
+        PayTypeCode:
+          maxLength: 2
+          type: string
+          description: Set this field to ‘CH’ for check.
+        PayJobCode:
+          maxLength: 10
+          type: string
+          description: Only applicable if the invoices paid by this payment were all for the same job.  If not leave blank
+        PayCashCode:
+          maxLength: 1
+          type: string
+          description: ""
+        PayNxtSeqNum:
+          maxLength: 11
+          type: integer
+          description: Not Currently Utilized
+        PayDpstCode:
+          maxLength: 1
+          type: string
+          description: This field indicates if the check still has a portion of the amount ‘On Deposit’  otherwise leave this field blank
+        PayDesc:
+          maxLength: 60
+          type: string
+          description: This is a short description of the check.
+        PayRecDate:
+          type: string
+          description: This is the date the check was reconciled.
+          format: full-date
+          example: YYYY-MM-dd
+        PayTenderedAmt:
+          maxLength: 18
+          type: integer
+          description: Only for special cash receipt pgm
+        PayCashRctFlag:
+          maxLength: 1
+          type: string
+          description: Only for special cash receipt pgm
+        PayRemainingAmt:
+          maxLength: 0
+          type: integer
+        PaySumInvpayAmt:
+          maxLength: 0
+          type: integer
+        PayInvRelFlag:
+          maxLength: 1
+          type: string
+        PayCallFormName:
+          maxLength: 7
+          type: string
+        PayAmtOwed:
+          maxLength: 0
+          type: integer
+        PayChangeAmt:
+          maxLength: 0
+          type: integer
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        PayIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        PayIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+    ArTaxItems:
+      type: object
+      properties:
+        ArtaxCompCode:
+          maxLength: 8
+          type: string
+          description: Company Code
+        ArtaxCode:
+          maxLength: 11
+          type: string
+          description: Tax Code
+        ArtaxName:
+          maxLength: 30
+          type: string
+          description: Tax Name
+        ArtaxShortName:
+          maxLength: 6
+          type: string
+          description: Short Name. May be used in some reports.
+        ArtaxDeptCode:
+          maxLength: 6
+          type: string
+          description: AR Tax Liability Department Code
+        ArtaxAccCode:
+          maxLength: 16
+          type: string
+          description: AR Tax Liability Account Code
+        ArtaxHldbkDeptCode:
+          maxLength: 6
+          type: string
+          description: AR Tax Liability Retainage Department Code.
+        ArtaxHldbkAccCode:
+          maxLength: 16
+          type: string
+          description: AR Tax Liability Retainage Account Code.
+        ArtaxApDeptCode:
+          maxLength: 6
+          type: string
+          description: AP Tax Credit Department Code.
+        ArtaxApAccCode:
+          maxLength: 16
+          type: string
+          description: AP Tax Credit Account Code.
+        ArtaxApHldbkDeptCode:
+          maxLength: 6
+          type: string
+          description: AP Tax Credit Retainage Department Code.
+        ArtaxApHldbkAccCode:
+          maxLength: 16
+          type: string
+          description: AP Tax Credit Retainage Account Code.
+        ArtaxPercent:
+          maxLength: 8
+          type: integer
+          description: Tax Percentage.
+        ArtaxFrtCode:
+          maxLength: 1
+          type: string
+          description: "Is this tax to be calculated on any Freight charges?, Set to ‘Y’ or ‘N’."
+        ArtaxInsCode:
+          maxLength: 1
+          type: string
+          description: Is this tax to be calculated on any Insurance charges? Set to ‘Y’ or ‘N’.
+        ArtaxMiscCode:
+          maxLength: 1
+          type: string
+          description: Is this tax to be calculated on any Miscellaneous charges? Set to ‘Y’ or ‘N’.
+        ArtaxTaxCode:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        ArtaxLneCode:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        ArtaxFobCode:
+          maxLength: 1
+          type: string
+          description: Leave Null
+        ArtaxApIncFlag:
+          maxLength: 1
+          type: string
+          description: Indicates if this tax is included in the vendor’s invoice amount. Set to ‘Y’ or ‘N’.
+        ArtaxApCreditFlag:
+          maxLength: 1
+          type: string
+          description: Indicates if this tax is a tax credit type tax (ie. GST/VAT). Set to ‘Y’ or ‘N’.
+        ArtaxApDirectPayFlag:
+          maxLength: 1
+          type: string
+          description: Indicates if this tax is directly payable to the government. Set to ‘Y’ or ‘N’.
+        ArtaxApLiabDeptCode:
+          maxLength: 6
+          type: string
+          description: AP Tax Liability Department Code
+        ArtaxApLiabAccCode:
+          maxLength: 16
+          type: string
+          description: AP Tax Liability Account Code
+        ArtaxPayJourCode:
+          maxLength: 2
+          type: string
+          description: Tax Journal Code
+        ArtaxDirectPayVenCode:
+          maxLength: 8
+          type: string
+          description: Vendor Code for the direct pay tax types.
+        ArtaxCompoundTaxFlag:
+          maxLength: 1
+          type: string
+          description: Compound Tax Flag. Set to ‘Y’ or ‘N’.
+        ArtaxNonTaxableFlag:
+          maxLength: 1
+          type: string
+          description: Flag indicates that the tax code is a non-taxable version (0%) of the regular tax code. A non-taxable tax code will always be of the form ARTAX_CODE appended with an asterisk (*). Set to ‘Y’ or ‘N’.
+        ArtaxJbInvTaxRegistration:
+          maxLength: 30
+          type: string
+          description: Tax Registration Description to show on tax line if your invoice format supports it.
+        ArtaxJbCostPhsCode:
+          maxLength: 16
+          type: string
+          description: JB Tax Costing Phase Code
+        ArtaxJbCostCatCode:
+          maxLength: 16
+          type: string
+          description: JB Tax Costing Category Code
+        ArtaxActiveFlag:
+          maxLength: 1
+          type: string
+          description: Active Flag
+        ArtaxPayPercent:
+          maxLength: 6
+          type: integer
+        ArtaxTdsTax:
+          maxLength: 1
+          type: string
+        ArtaxVUuid:
+          maxLength: 64
+          type: string
+        ArtaxIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArtaxIuCreateUser:
+          maxLength: 30
+          type: string
+        ArtaxIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        ArtaxIuUpdateUser:
+          maxLength: 30
+          type: string
+  responses:
+    ArAgedReportResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArAgedReport'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    ArCustomerResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArCustomer'
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    ArInvMemoLogResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArInvMemoLog'
+    ArInvoiceResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArInvoice'
+    ArInvOutstandingResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArInvOutstanding'
+    ArInvPayResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArInvPay'
+    ArPaymentResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArPayment'
+    ArTaxItemsResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArTaxItems'
+  requestBodies:
+    ArCustomerRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/ArCustomer'
+          examples:
+            Request Example:
+              value:
+                BpcustBpCode: string
+                BpcustCompCode: string
+                BpcustBpCodeBf: string
+                BpcustCollCode: string
+                BpcustTermCode: string
+                BpcustCurrCode: string
+                BpcustChargeCode: string
+                BpcustArDeptCode: string
+                BpcustArAccCode: string
+                BpcustCashDeptCode: string
+                BpcustCashAccCode: string
+                BpcustSalesDeptCode: string
+                BpcustSalesAccCode: string
+                BpcustDiscDeptCode: string
+                BpcustDiscAccCode: string
+                BpcustHldbkDeptCode: string
+                BpcustHldbkAccCode: string
+                BpcustFrtDeptCode: string
+                BpcustFrtAccCode: string
+                BpcustInsDeptCode: string
+                BpcustInsAccCode: string
+                BpcustMiscDeptCode: string
+                BpcustMiscAccCode: string
+                BpcustVUuid: string
+    ArInvoiceRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/ArInvoice'
+          examples:
+            Request Example:
+              value:
+                InvCompCode: string
+                InvCustCode: string
+                InvNum: string
+                InvSalesAmt: float
+                InvDate: string
+                InvDueDate: string
+                InvDiscDate: string
+                InvCurrCode: string
+                InvCollCode: string
+                InvChargeCode: string
+                InvVUuid: string
+    ArInvPayRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/ArInvPay'
+          examples:
+            Request Example:
+              value:
+                IpayCompCode: string
+                IpaySeqNum: string
+                IpayInvNum: string
+                IpayInvCompCode: string
+                IpayCurrPayAmt: float
+                IpayVUuid: string
+    ArTaxItemsRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/ArTaxItems'
+          examples:
+            Request Example:
+              value:
+                ArtaxCode: string
+                ArtaxCompCode: string
+                ArtaxActiveFlag: string
+                ArtaxDeptCode: string
+                ArtaxAccCode: string
+                ArtaxHldbkAccCode: string
+                ArtaxHldbkDeptCode: string
+                ArtaxPercent: integer
+                ArtaxFrtCode: string
+                ArtaxInsCode: string
+                ArtaxMiscCode: string
+                ArtaxTaxCode: string
+                ArtaxLneCode: string
+                ArtaxFobCode: string
+                ArtaxApIncFlag: string
+                ArtaxApCreditFlag: string
+                ArtaxApAccCode: string
+                ArtaxApDeptCode: string
+                ArtaxApHldbkAccCode: string
+                ArtaxApHldbkDeptCode: string
+                ArtaxApDirectPayFlag: string
+                ArtaxCompoundTaxFlag: string
+                ArtaxNonTaxableFlag: string
+                ArtaxVUuid: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic

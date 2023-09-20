@@ -1,0 +1,3358 @@
+---
+openapi: 3.0.0
+info:
+  title: Change Inventory APIs
+  description: |
+    # CI-REST-API
+    API documentation for **Change Inventory** related screens provided by CMiC
+
+    _Note: These APIs can only be accessed if already a customer of CMiC._
+  contact:
+    email: roshan.suntharan@cmic.ca
+  version: "1"
+servers:
+- url: https://mobtest.cmiccloudr12.com/cmictestrti
+security:
+- BasicAuth: []
+tags:
+- name: ciclass
+  description: CI Classes
+- name: ciinventoryissue
+  description: CI Inventory Issues
+- name: ciitem
+  description: CI Items
+- name: ciitemdetail
+  description: CI Item Details
+- name: ciitemhdr
+  description: CI Item Headers
+- name: ciitemloclog
+  description: CI Item Location Logs
+- name: cilocation
+  description: CI Locations
+- name: citranposted
+  description: CI Posted Transactions
+paths:
+  /ci-rest-api/rest/1/ciclass:
+    get:
+      tags:
+      - ciclass
+      summary: Retrieve CI Classes
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - ciclass
+      summary: Create a CI Class
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiClassRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciclass/{Vuuid}:
+    get:
+      tags:
+      - ciclass
+      summary: Retrieve a Specific CI Class
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - ciclass
+      summary: Delete a Specific CI Class
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - ciclass
+      summary: Update a Specific CI Class
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CiClassRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiClass'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciinventoryissue:
+    get:
+      tags:
+      - ciinventoryissue
+      summary: Retrieve Inventory Issues
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: CiInventoryIssueFinder
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (CiInventoryIssueFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: BchNum
+        in: query
+        description: Batch Number (CiInventoryIssueFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ReqNum
+        in: query
+        description: Requisition Number (CiInventoryIssueFinder)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiInventoryIssue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - ciinventoryissue
+      summary: Create an Inventory Issue
+      description: POST and PATCH requests must include CitrnPostBchFlag (Y or N)
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiInventoryIssueRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiInventoryIssue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciinventoryissue/{Vuuid}:
+    get:
+      tags:
+      - ciinventoryissue
+      summary: Retrieve a Specific Inventory Issue
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiInventoryIssue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - ciinventoryissue
+      summary: Update a Specific Inventory Issue
+      description: POST and PATCH requests must include CitrnPostBchFlag (Y or N)
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiInventoryIssue'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitem:
+    get:
+      tags:
+      - ciitem
+      summary: Retrieve CI Items
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode and selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ItemCode
+        in: query
+        description: Item Code (selectByCode and selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to check against create/update dates (selectByCode and selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - ciitem
+      summary: Create a CI Item
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitem/{Vuuid}:
+    get:
+      tags:
+      - ciitem
+      summary: Retrieve a Specific CI Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - ciitem
+      summary: Delete a Specific CI Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - ciitem
+      summary: Update a Specific CI Item
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItem'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitemdetail:
+    get:
+      tags:
+      - ciitemdetail
+      summary: Retrieve CI Item Details
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode and selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to check against create/update dates (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - ciitemdetail
+      summary: Create a CI Item Detail
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemDetailRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitemdetail/{Vuuid}:
+    get:
+      tags:
+      - ciitemdetail
+      summary: Retrieve a Specific CI Item Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - ciitemdetail
+      summary: Delete a Specific CI Item Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - ciitemdetail
+      summary: Update a Specific CI Item Detail
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemDetailRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemDetail'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitemhdr:
+    get:
+      tags:
+      - ciitemhdr
+      summary: Retrieve CI Item Headers
+      description: ""
+      parameters: []
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemHdr'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - ciitemhdr
+      summary: Create a CI Item Header
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemHdrRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemHdr'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitemhdr/{Vuuid}:
+    get:
+      tags:
+      - ciitemhdr
+      summary: Retrieve a Specific CI Item Header
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemHdr'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - ciitemhdr
+      summary: Delete a Specific CI Item Header
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - ciitemhdr
+      summary: Update a Specific CI Item Header
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CiItemHdrRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemHdr'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/ciitemloclog:
+    get:
+      tags:
+      - ciitemloclog
+      summary: Retrieve CI Item Location Logs
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: LocCode
+        in: query
+        description: Location Code(selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ItemCode
+        in: query
+        description: Item Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ItemTypeCode
+        in: query
+        description: Item TypeCode Code(selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CostAmt
+        in: query
+        description: Item Cost Amount (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: SellPriceAmt
+        in: query
+        description: Item's selling price (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiItemLocLog'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/cilocation:
+    get:
+      tags:
+      - cilocation
+      summary: Retrieve CI Locations
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByCode and selectByDate
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: LocCode
+        in: query
+        description: Location Code (selectByCode)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: AuditDate
+        in: query
+        description: Audit Date to check against create/update dates (selectByDate)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiLocation'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    post:
+      tags:
+      - cilocation
+      summary: Create a CI Location
+      description: ""
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CiLocationRequest'
+      responses:
+        "201":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiLocation'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/cilocation/{Vuuid}:
+    get:
+      tags:
+      - cilocation
+      summary: Retrieve a Specific CI Location
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiLocation'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    delete:
+      tags:
+      - cilocation
+      summary: Delete a Specific CI Location
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Object has been successfully deleted.
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+    patch:
+      tags:
+      - cilocation
+      summary: Update a Specific CI Location
+      description: ""
+      parameters:
+      - name: Vuuid
+        in: path
+        description: Unique Row ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/CiLocationRequest'
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiLocation'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+  /ci-rest-api/rest/1/citranposted:
+    get:
+      tags:
+      - citranposted
+      summary: Retrieve CI Posted Transactions
+      description: ""
+      parameters:
+      - name: finder
+        in: query
+        description: selectByBchNum
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: CompCode
+        in: query
+        description: Company Code (selectByBchNum)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: BchNum
+        in: query
+        description: Batch Number (selectByBchNum)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: ReqNum
+        in: query
+        description: Requisition Number (selectByBchNum)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: PostDate
+        in: query
+        description: Posted Date (selectByBchNum)
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CiTranPosted'
+        "400":
+          description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+components:
+  schemas:
+    CiClass:
+      type: object
+      properties:
+        CiclasCompCode:
+          maxLength: 8
+          type: string
+        CiclasCompName:
+          maxLength: 30
+          type: string
+        CiclasClassCode:
+          maxLength: 4
+          type: string
+        CiclasClassName:
+          maxLength: 30
+          type: string
+        CiclasInvAccCode:
+          maxLength: 16
+          type: string
+        CiclasInvAccName:
+          maxLength: 4000
+          type: string
+        CiclasRevAccCode:
+          maxLength: 16
+          type: string
+        CiclasRevAccName:
+          maxLength: 4000
+          type: string
+        CiclasWriAccCode:
+          maxLength: 16
+          type: string
+        CiclasWriAccName:
+          maxLength: 4000
+          type: string
+        CiclasVarAccCode:
+          maxLength: 16
+          type: string
+        CiclasVarAccName:
+          maxLength: 4000
+          type: string
+        CiclasAdjAccCode:
+          maxLength: 16
+          type: string
+        CiclasAdjAccName:
+          maxLength: 4000
+          type: string
+        CiclasSuspAccCode:
+          maxLength: 16
+          type: string
+        CiclasSuspAccName:
+          maxLength: 4000
+          type: string
+        CiclasCtrlClassCode:
+          maxLength: 4
+          type: string
+        CiclasCtrlClassName:
+          maxLength: 30
+          type: string
+        CiclasHier:
+          maxLength: 127
+          type: string
+        CiclasCostMethCode:
+          maxLength: 3
+          type: string
+        CiclasSerialFlag:
+          maxLength: 1
+          type: string
+        CiclasLotCtrlFlag:
+          maxLength: 1
+          type: string
+        CiclasVelocityCode:
+          maxLength: 1
+          type: string
+        CiclasCostUpdateLevelCode:
+          maxLength: 1
+          type: string
+        CiclasUsageCode:
+          maxLength: 1
+          type: string
+        CiclasDeprExpAccCode:
+          maxLength: 16
+          type: string
+        CiclasDeprExpAccName:
+          maxLength: 4000
+          type: string
+        CiclasAccumDeprAccCode:
+          maxLength: 16
+          type: string
+        CiclasAccumDeprAccName:
+          maxLength: 4000
+          type: string
+        CiclasTax1Code:
+          maxLength: 11
+          type: string
+        CiclasTax1Name:
+          maxLength: 4000
+          type: string
+        CiclasTax2Code:
+          maxLength: 11
+          type: string
+        CiclasTax2Name:
+          maxLength: 4000
+          type: string
+        CiclasTax3Code:
+          maxLength: 11
+          type: string
+        CiclasTax3Name:
+          maxLength: 4000
+          type: string
+        CiclasSellPriceOrPctCode:
+          maxLength: 1
+          type: string
+        CiclasBbPriceOrPctCode:
+          maxLength: 1
+          type: string
+        CiclasSoldAtCostAccCode:
+          maxLength: 16
+          type: string
+        CiclasSoldAtCostAccName:
+          maxLength: 4000
+          type: string
+        CiclasSalesTax1Code:
+          maxLength: 11
+          type: string
+        CiclasSalesTax1Name:
+          maxLength: 4000
+          type: string
+        CiclasSalesTax2Code:
+          maxLength: 11
+          type: string
+        CiclasSalesTax2Name:
+          maxLength: 4000
+          type: string
+        CiclasSalesTax3Code:
+          maxLength: 11
+          type: string
+        CiclasSalesTax3Name:
+          maxLength: 4000
+          type: string
+        CiclasCmpFlag:
+          maxLength: 1
+          type: string
+        CiclasRtrnFlag:
+          maxLength: 1
+          type: string
+        CiclasPartialDasmblFlag:
+          maxLength: 1
+          type: string
+        CiclasAffilRevAccCode:
+          maxLength: 16
+          type: string
+        CiclasAffilRevAccName:
+          maxLength: 4000
+          type: string
+        CiclasCustRevAccCode:
+          maxLength: 16
+          type: string
+        CiclasCustRevAccName:
+          maxLength: 4000
+          type: string
+        CiclasAllowNegQtyFlag:
+          maxLength: 1
+          type: string
+        CiclasProdFlag:
+          maxLength: 1
+          type: string
+        CiclasEmCostComponCode:
+          maxLength: 8
+          type: string
+        CiclasEmCostComponName:
+          maxLength: 4000
+          type: string
+        CiclasCreditJcCatCode:
+          maxLength: 16
+          type: string
+        CiclasCreditJcCatName:
+          maxLength: 4000
+          type: string
+        CiclasSalesProductFlag:
+          maxLength: 1
+          type: string
+        CiclasMsAvailableFlag:
+          maxLength: 1
+          type: string
+        CiclasSellPrice:
+          maxLength: 16
+          type: integer
+        CiclasMszpcCode:
+          maxLength: 10
+          type: string
+        CiclasTruckClassCode:
+          maxLength: 10
+          type: string
+        CiclasDefaultLocCode:
+          maxLength: 7
+          type: string
+        CiclasDefaultLocName:
+          maxLength: 60
+          type: string
+        CiclasAutoBuildCmpFlag:
+          maxLength: 1
+          type: string
+        CiclasIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CiclasIuCreateUser:
+          maxLength: 30
+          type: string
+        CiclasIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CiclasIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CiclasVUuid:
+          maxLength: 64
+          type: string
+    CiInventoryIssue:
+      type: object
+      properties:
+        CitrnCompCode:
+          maxLength: 8
+          type: string
+        CitrnCompName:
+          maxLength: 30
+          type: string
+        CitrnTranType:
+          maxLength: 2
+          type: string
+        CitrnTranTypeName:
+          maxLength: 14
+          type: string
+        CitrnBchNum:
+          maxLength: 11
+          type: integer
+        CitrnBchName:
+          maxLength: 60
+          type: string
+        CitrnJobDeptWorderEqup:
+          maxLength: 10
+          type: string
+        CitrnPhsAccWitemComponcat:
+          maxLength: 16
+          type: string
+        CitrnCatExpTrancode:
+          maxLength: 16
+          type: string
+        CitrnTranNum:
+          maxLength: 11
+          type: integer
+        CitrnSubstItemFlag:
+          maxLength: 1
+          type: string
+        CitrnActionCode:
+          maxLength: 1
+          type: string
+        CitrnItemClassCode:
+          maxLength: 4
+          type: string
+        CitrnItemClassName:
+          maxLength: 60
+          type: string
+        CitrnItemCode:
+          maxLength: 16
+          type: string
+        CitrnItemName:
+          maxLength: 80
+          type: string
+        CitrnItemTypeCode:
+          maxLength: 2
+          type: string
+        CitrnItemTypeName:
+          maxLength: 60
+          type: string
+        CitrnItemWmCode:
+          maxLength: 2
+          type: string
+        CitrnItemWmName:
+          maxLength: 20
+          type: string
+        CitrnLocCode:
+          maxLength: 7
+          type: string
+        CitrnLocName:
+          maxLength: 80
+          type: string
+        CitrnReqQty:
+          maxLength: 16
+          type: integer
+        CitrnQty:
+          maxLength: 16
+          type: integer
+        CitrnToFromLocCode:
+          maxLength: 7
+          type: string
+        CitrnToFromLocName:
+          maxLength: 80
+          type: string
+        CitrnToFromItemClassCode:
+          maxLength: 4
+          type: string
+        CitrnToFromItemClassName:
+          maxLength: 60
+          type: string
+        CitrnToFromItemCode:
+          maxLength: 16
+          type: string
+        CitrnToFromItemName:
+          maxLength: 80
+          type: string
+        CitrnToFromItemTypeCode:
+          maxLength: 2
+          type: string
+        CitrnToFromItemTypeName:
+          maxLength: 60
+          type: string
+        CitrnToFromWmCode:
+          maxLength: 2
+          type: string
+        CitrnToFromWmName:
+          maxLength: 20
+          type: string
+        CitrnToFromQty:
+          maxLength: 16
+          type: integer
+        CitrnToFromCompCode:
+          maxLength: 8
+          type: string
+        CitrnToFromCompName:
+          maxLength: 30
+          type: string
+        CitrnToFromDeptCode:
+          maxLength: 6
+          type: string
+        CitrnToFromDeptName:
+          maxLength: 60
+          type: string
+        CitrnToFromAccCode:
+          maxLength: 16
+          type: string
+        CitrnToFromAccName:
+          maxLength: 120
+          type: string
+        CitrnToFromJobCode:
+          maxLength: 10
+          type: string
+        CitrnToFromJobName:
+          maxLength: 120
+          type: string
+        CitrnToFromPhaseCode:
+          maxLength: 16
+          type: string
+        CitrnToFromPhaseName:
+          maxLength: 120
+          type: string
+        CitrnToFromCatCode:
+          maxLength: 16
+          type: string
+        CitrnToFromCatName:
+          maxLength: 120
+          type: string
+        CitrnToFromEqpCode:
+          maxLength: 10
+          type: string
+        CitrnToFromEqpName:
+          maxLength: 60
+          type: string
+        CitrnToFromComponCode:
+          maxLength: 8
+          type: string
+        CitrnToFromComponName:
+          maxLength: 40
+          type: string
+        CitrnToFromTrancodeCode:
+          maxLength: 4
+          type: string
+        CitrnToFromTrancodeName:
+          maxLength: 30
+          type: string
+        CitrnRefDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnRefCode:
+          maxLength: 16
+          type: string
+        CitrnRefDesc:
+          maxLength: 60
+          type: string
+        CitrnSrcCode:
+          maxLength: 16
+          type: string
+        CitrnSrcDesc:
+          maxLength: 60
+          type: string
+        CitrnReqNum:
+          maxLength: 11
+          type: string
+        CitrnReqReleaseNum:
+          maxLength: 22
+          type: integer
+        CitrnReqLineNum:
+          maxLength: 22
+          type: integer
+        CitrnWbsvCode1:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode2:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode3:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode4:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode5:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode6:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode7:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode8:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode9:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode10:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode11:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode12:
+          maxLength: 60
+          type: string
+        CitrnPmCode:
+          maxLength: 30
+          type: string
+        CitrnMovedToInvFlag:
+          maxLength: 1
+          type: string
+        CitrnFromAllocQty:
+          maxLength: 16
+          type: integer
+        CitrnRecPriceAmt:
+          maxLength: 18
+          type: integer
+        CitrnRecCurrCode:
+          maxLength: 3
+          type: string
+        CitrnSalesTax1Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax1Name:
+          maxLength: 120
+          type: string
+        CitrnSalesTax2Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax2Name:
+          maxLength: 120
+          type: string
+        CitrnSalesTax3Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax3Name:
+          maxLength: 120
+          type: string
+        CitrnTicketNumber:
+          maxLength: 15
+          type: integer
+        CitrnTicketPrintFlag:
+          maxLength: 1
+          type: string
+        CitrnTranSnNum:
+          maxLength: 40
+          type: string
+        CitrnSalesTax1TaxableFlag:
+          maxLength: 1
+          type: string
+        CitrnSalesTax2TaxableFlag:
+          maxLength: 1
+          type: string
+        CitrnSalesTax3TaxableFlag:
+          maxLength: 1
+          type: string
+        CitrnOverrideAmt:
+          maxLength: 18
+          type: integer
+        CitrnWoCode:
+          maxLength: 10
+          type: string
+        CitrnWoName:
+          maxLength: 80
+          type: string
+        CitrnWitmLineNumber:
+          maxLength: 16
+          type: string
+        CitrnWitmLineName:
+          maxLength: 60
+          type: string
+        CitrnWoExpCode:
+          maxLength: 4
+          type: string
+        CitrnWoExpName:
+          maxLength: 60
+          type: string
+        CitrnWoTranType:
+          maxLength: 1
+          type: string
+        CitrnWDetailCode:
+          maxLength: 30
+          type: string
+        CitrnSalesTax1Amt:
+          maxLength: 18
+          type: integer
+        CitrnSalesTax2Amt:
+          maxLength: 18
+          type: integer
+        CitrnSalesTax3Amt:
+          maxLength: 18
+          type: integer
+        CitrnOverrideCostAmt:
+          maxLength: 0
+          type: integer
+        CitrnStockQty:
+          maxLength: 16
+          type: integer
+        CitrnStockWmCode:
+          maxLength: 2
+          type: string
+        CitrnWmConvNum:
+          maxLength: 16
+          type: integer
+        CitrnIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnIuCreateUser:
+          maxLength: 30
+          type: string
+        CitrnIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnIuUpdateUser:
+          maxLength: 30
+          type: string
+        CitrnJobDeptWoEqpName:
+          maxLength: 80
+          type: string
+        CitrnPhsaccWitemcompcatName:
+          maxLength: 80
+          type: string
+        CitrnCatExpTranName:
+          maxLength: 80
+          type: string
+        CitrnSuggestedPrice:
+          maxLength: 0
+          type: integer
+        CitrnTotalPrice:
+          maxLength: 0
+          type: integer
+        CitrnOnhandQty:
+          maxLength: 0
+          type: integer
+        CitrnConvQty:
+          maxLength: 0
+          type: integer
+        CitrnUserField5:
+          maxLength: 60
+          type: string
+        CitrnUserField6:
+          maxLength: 60
+          type: string
+        CitrnUserField7:
+          maxLength: 60
+          type: string
+        CitrnUserField8:
+          maxLength: 60
+          type: string
+        CitrnCalledFromAppCode:
+          maxLength: 4
+          type: string
+        CitrnUserFieldEdtFlag5:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag6:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag7:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag8:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName5:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName6:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName7:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName8:
+          maxLength: 4000
+          type: string
+        CitrnWbsSetupFlag:
+          maxLength: 4000
+          type: string
+        CitrnTacSetupFlag:
+          maxLength: 4000
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CitrnVUuid:
+          maxLength: 64
+          type: string
+        CitrnPostBchFlag:
+          maxLength: 80
+          type: string
+    CiItem:
+      type: object
+      properties:
+        CiitemCompCode:
+          maxLength: 8
+          type: string
+          description: Company code
+        CiitemCompName:
+          maxLength: 30
+          type: string
+        CiitemItemCode:
+          maxLength: 16
+          type: string
+          description: "Inventory item code or number.  If the fixed length flag is set in the control file, this code must be of the length specified in the control file."
+        CiitemItemClassCode:
+          maxLength: 4
+          type: string
+          description: Reference (with CIITEM_COMP_CODE) to a class defined in the CICLASS table.
+        CiitemClassName:
+          maxLength: 30
+          type: string
+        CiitemLotCtrlFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Set this to ‘N’ unless CIITEM_SERIAL_FLAG = ‘Y’ and CIITEM_COST_METH_CODE = ’F’
+        CiitemSerialFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if the item is serialized, ‘N’ if not."
+        CiitemUsageCode:
+          maxLength: 1
+          type: string
+          description: Not used.  Set this to ‘N’
+        CiitemUsageName:
+          maxLength: 9
+          type: string
+        CiitemCostUpdateLevelCode:
+          maxLength: 1
+          type: string
+          description: "If using the Average Cost method of inventory valuation, specify whether to update the average cost of this inventory item by the total inventory (‘I’), or by the inventory within a specified location (‘L’)."
+        CiitemCostUpdateLevelName:
+          maxLength: 200
+          type: string
+        CiitemInvAccCode:
+          maxLength: 16
+          type: string
+          description: "Inventory account. , Reference to the ACCOUNT table."
+        CiitemInvAccName:
+          maxLength: 120
+          type: string
+        CiitemRevAccCode:
+          maxLength: 16
+          type: string
+          description: "Revenue account. , Reference to the ACCOUNT table."
+        CiitemRevAccName:
+          maxLength: 120
+          type: string
+        CiitemWriAccCode:
+          maxLength: 16
+          type: string
+          description: "Write-off account. , Reference to the ACCOUNT table."
+        CiitemWriAccName:
+          maxLength: 120
+          type: string
+        CiitemAdjAccCode:
+          maxLength: 16
+          type: string
+          description: "Adjustment account. , Reference to the ACCOUNT table."
+        CiitemAdjAccName:
+          maxLength: 120
+          type: string
+        CiitemVarAccCode:
+          maxLength: 16
+          type: string
+          description: "Variance account. , Reference to the ACCOUNT table."
+        CiitemVarAccName:
+          maxLength: 120
+          type: string
+        CiitemSuspAccCode:
+          maxLength: 16
+          type: string
+          description: "Suspense account. , Reference to the ACCOUNT table."
+        CiitemSuspAccName:
+          maxLength: 120
+          type: string
+        CiitemAltWmAllowFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ if alternate unit conversions are enabled.  ‘N’ if not.
+        CiitemCostMethCode:
+          maxLength: 3
+          type: string
+          description: "One of AVG (average cost), SF (standard FIFO), F (modified FIFO) and STD (standard cost).  The validation program does not check but this should be the same value as in the item’s class."
+        CiitemCostMethName:
+          maxLength: 200
+          type: string
+        CiitemAutoBuildCmpFlag:
+          maxLength: 1
+          type: string
+        CiitemMsAvailableFlag:
+          maxLength: 1
+          type: string
+        CiitemSellPriceOrPctCode:
+          maxLength: 1
+          type: string
+          description: "‘P’ if the selling price is entered explicitly, ‘C’ if it calculated as a percentage of the cost price."
+        CiitemSellPriceOrPctName:
+          maxLength: 200
+          type: string
+        CiitemBbPriceOrPctCode:
+          maxLength: 1
+          type: string
+          description: "‘P’ if the buyback price is entered explicitly., ‘C’ if it calculated as a percentage of the cost price."
+        CiitemBbPriceOrPctName:
+          maxLength: 200
+          type: string
+        CiitemItemName:
+          maxLength: 60
+          type: string
+          description: Item name used in most screens and reports
+        CiitemItemDesc:
+          maxLength: 2000
+          type: string
+          description: Detailed description of the item
+        CiitemWmCode:
+          maxLength: 2
+          type: string
+          description: Reference to a weight/measure code defined in WGTMES_TABLE
+        CiitemWmName:
+          maxLength: 120
+          type: string
+        CiitemVelocityCode:
+          maxLength: 1
+          type: string
+          description: Not used.
+        CiitemMinOrderQty:
+          maxLength: 16
+          type: integer
+          description: Minimum order quantity
+        CiitemStdOrderQty:
+          maxLength: 16
+          type: integer
+          description: Standard order quantity
+        CiitemMaxOrderQty:
+          maxLength: 16
+          type: integer
+          description: Maximum order quantity
+        CiitemMinOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Minimum on-hand quantity
+        CiitemMaxOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Maximum on-hand quantity
+        CiitemStdOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Standard on-hand quantity
+        CiitemMarketPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Market price
+        CiitemSellPriceAmt:
+          maxLength: 18
+          type: integer
+          description: "Selling/issue price or percentage.  , If percentage remember to make it 100+markup."
+        CiitemBuybackPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Buy back price or percentage.  If percentage remember to make it 100+markup.
+        CiitemRestockPriceAmt:
+          maxLength: 18
+          type: integer
+          description: "Dollar amount that will be added to each unit of this inventory item, when all or a portion of the item is returned."
+        CiitemCrtDate:
+          type: string
+          description: Date this record was added
+          format: full-date
+          example: YYYY-MM-dd
+        CiitemCrtUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who added the record
+        CiitemLastModifyDate:
+          type: string
+          description: Date this record was last modified
+          format: full-date
+          example: YYYY-MM-dd
+        CiitemLastModifyUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who last modified the record
+        CiitemDeprExpAccCode:
+          maxLength: 16
+          type: string
+          description: "Depreciation expense account. , Reference to the ACCOUNT table."
+        CiitemDeprExpAccName:
+          maxLength: 120
+          type: string
+        CiitemAccumDeprAccCode:
+          maxLength: 16
+          type: string
+          description: "Accumulated depreciation account., Reference to the ACCOUNT table."
+        CiitemAccumDeprAccName:
+          maxLength: 120
+          type: string
+        CiitemImageFilename:
+          maxLength: 255
+          type: string
+          description: File path to a picture of the item.
+        CiitemItemFixedLengthFlag:
+          maxLength: 1
+          type: string
+          description: Not used?
+        CiitemItemLengthValue:
+          maxLength: 0
+          type: integer
+          description: Note used?
+        CiitemTax1Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemTax1Name:
+          maxLength: 120
+          type: string
+        CiitemTax2Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemTax2Name:
+          maxLength: 120
+          type: string
+        CiitemTax3Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemTax3Name:
+          maxLength: 120
+          type: string
+        CiitemSalesTax1Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemSalesTax1Name:
+          maxLength: 120
+          type: string
+        CiitemSalesTax2Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemSalesTax2Name:
+          maxLength: 120
+          type: string
+        CiitemSalesTax3Code:
+          maxLength: 11
+          type: string
+          description: With CIITEM_COMP_CODE a reference to ARTAX table
+        CiitemSalesTax3Name:
+          maxLength: 120
+          type: string
+        CiitemSoldAtCostAccCode:
+          maxLength: 16
+          type: string
+          description: "Cost of goods sold account.  , Reference to the ACCOUNT table."
+        CiitemSoldAtCostAccName:
+          maxLength: 120
+          type: string
+        CiitemCmpFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if this is a composite item, ‘N’ otherwise"
+        CiitemRtrnFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if this item can be returned, ‘N’ otherwise"
+        CiitemPartialDasmblFlag:
+          maxLength: 1
+          type: string
+          description: "If CIITEM_CMP_FLAG=’Y’ this flag indicates whether the item can be issued only partially assembled. ‘Y’ means it can, ‘N’ means it cannot."
+        CiitemAffilRevAccCode:
+          maxLength: 16
+          type: string
+          description: "Affiliate sales revenue account. , Reference to the ACCOUNT table."
+        CiitemAffilRevAccName:
+          maxLength: 120
+          type: string
+        CiitemCustRevAccCode:
+          maxLength: 16
+          type: string
+          description: "Customer sales revenue account. , Reference to the ACCOUNT table."
+        CiitemCustRevAccName:
+          maxLength: 120
+          type: string
+        CiitemAllowNegQtyFlag:
+          maxLength: 1
+          type: string
+          description: Allow Negative Balances. ‘Y’/’N’
+        CiitemProdFlag:
+          maxLength: 1
+          type: string
+        CiitemEmCostComponCode:
+          maxLength: 8
+          type: string
+        CiitemEmCostComponName:
+          maxLength: 120
+          type: string
+        CiitemCreditJcCatCode:
+          maxLength: 16
+          type: string
+        CiitemCreditJcCatName:
+          maxLength: 120
+          type: string
+        CiitemInventoryItemCode:
+          maxLength: 16
+          type: string
+        CiitemInventoryItemName:
+          maxLength: 60
+          type: string
+        CiitemSalesProductFlag:
+          maxLength: 1
+          type: string
+        CiitemMszpcCode:
+          maxLength: 10
+          type: string
+        CiitemMsptCode:
+          maxLength: 10
+          type: string
+        CiitemDefaultItemTypeCode:
+          maxLength: 2
+          type: string
+        CiitemDefaultLocCode:
+          maxLength: 7
+          type: string
+        CiitemIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CiitemIuCreateUser:
+          maxLength: 30
+          type: string
+        CiitemIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CiitemIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CiitemVUuid:
+          maxLength: 64
+          type: string
+    CiItemDetail:
+      type: object
+      properties:
+        CitemdCompCode:
+          maxLength: 8
+          type: string
+          description: Company code
+        CitemdCompName:
+          maxLength: 30
+          type: string
+        CitemdItemCode:
+          maxLength: 16
+          type: string
+          description: "Inventory item code or number.  If the fixed length flag is set in the control file, this code must be of the length specified in the control file."
+        CitemdItemName:
+          maxLength: 60
+          type: string
+        CitemdItemTypeCode:
+          maxLength: 2
+          type: string
+          description: Reference (with CITEMD_COMP_CODE) to the CIITEMTYPE table.
+        CitemdItemTypeName:
+          maxLength: 30
+          type: string
+        CitemdLocCode:
+          maxLength: 7
+          type: string
+          description: Location code where this item is stored.  Reference (with CITEMD_COMP_CODE) to the CILOCATION table.
+        CitemdLocName:
+          maxLength: 60
+          type: string
+        CitemdLotCtrlFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Set this to ‘N’ unless CITEMD_SERIAL_FLAG = ‘Y’ and CITEMD_COST_METH_CODE = ’F’
+        CitemdBinCtrlFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Not used?
+        CitemdSerialFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if the item is serialized, ‘N’ if not."
+        CitemdUsageCode:
+          maxLength: 1
+          type: string
+          description: Not used.  Set this to ‘N’
+        CitemdCostUpdateLevelCode:
+          maxLength: 1
+          type: string
+          description: "If using the Average Cost method of inventory valuation, specify whether to update the average cost of this inventory item by the total inventory (‘I’), or by the inventory within a specified location (‘L’)."
+        CitemdInvAccCode:
+          maxLength: 16
+          type: string
+          description: Inventory account. Reference to the ACCOUNT table.
+        CitemdRevAccCode:
+          maxLength: 16
+          type: string
+          description: Revenue account. Reference to the ACCOUNT table.
+        CitemdWriAccCode:
+          maxLength: 16
+          type: string
+          description: Write-off account. Reference to the ACCOUNT table.
+        CitemdAdjAccCode:
+          maxLength: 16
+          type: string
+          description: Adjustment account. Reference to the ACCOUNT table.
+        CitemdVarAccCode:
+          maxLength: 16
+          type: string
+          description: Variance account. Reference to the ACCOUNT table.
+        CitemdSuspAccCode:
+          maxLength: 16
+          type: string
+          description: Suspense account. Reference to the ACCOUNT table.
+        CitemdBookOnHandQty:
+          maxLength: 16
+          type: integer
+          description: Amount on hand posted to the GL
+        CitemdOnHandQty:
+          maxLength: 16
+          type: integer
+          description: "Actual amount on hand, possibly not yet posted"
+        CitemdOnOrderQty:
+          maxLength: 16
+          type: integer
+          description: Amount on order
+        CitemdReserveQty:
+          maxLength: 16
+          type: integer
+          description: Amount on reserve
+        CitemdMinOrderQty:
+          maxLength: 16
+          type: integer
+          description: Minimum order quantity
+        CitemdStdOrderQty:
+          maxLength: 16
+          type: integer
+          description: Standard order quantity
+        CitemdMaxOrderQty:
+          maxLength: 16
+          type: integer
+          description: Maximum order quantity
+        CitemdMinOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Minimum on-hand quantity
+        CitemdMaxOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Maximum on-hand quantity
+        CitemdStdOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Standard on-hand quantity
+        CitemdMarketPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Market price
+        CitemdSellPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Selling/issue price or percentage.  If percentage remember to make it 100+markup.
+        CitemdBuybackPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Buy back price or percentage.  If percentage remember to make it 100+markup.
+        CitemdRestockPriceAmt:
+          maxLength: 18
+          type: integer
+          description: "Dollar amount that will be added to each unit of this inventory item, when all or a portion of the item is returned."
+        CitemdStdCostAmt:
+          maxLength: 0
+          type: integer
+          description: Standard cost for items in this location
+        CitemdAvgCostAmt:
+          maxLength: 0
+          type: integer
+          description: Average cost if the cost level code is ‘L’ (location)
+        CitemdLastCostAmt:
+          maxLength: 0
+          type: integer
+          description: TBD
+        CitemdCostUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitemdCrtDate:
+          type: string
+          description: Date this record was added
+          format: full-date
+          example: YYYY-MM-dd
+        CitemdCrtUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who added the record
+        CitemdLastModifyDate:
+          type: string
+          description: Date this record was last modified
+          format: full-date
+          example: YYYY-MM-dd
+        CitemdLastModifyUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who last modified the record
+        CitemdTempInsertFlag:
+          maxLength: 1
+          type: string
+          description: Not currently used or validated.
+        CitemdBookReserveQty:
+          maxLength: 16
+          type: integer
+          description: Quantity on reserve posted to the GL
+        CitemdDeprExpAccCode:
+          maxLength: 16
+          type: string
+          description: Depreciation expense account. Reference to the ACCOUNT table.
+        CitemdAccumDeprAccCode:
+          maxLength: 16
+          type: string
+          description: Accumulated depreciation account. Reference to the ACCOUNT table.
+        CitemdTax1Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdTax2Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdTax3Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdSoldAtCostAccCode:
+          maxLength: 16
+          type: string
+          description: Cost of goods sold account.  Reference to the ACCOUNT table.
+        CitemdSalesTax1Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdSalesTax2Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdSalesTax3Code:
+          maxLength: 11
+          type: string
+          description: With CITEMD_COMP_CODE a reference to ARTAX table
+        CitemdCmpQty:
+          maxLength: 16
+          type: integer
+          description: Only relevant if you are using composite items.  Please consult with CMiC if that is the case.
+        CitemdBookCmpQty:
+          maxLength: 16
+          type: integer
+          description: Only relevant if you are using composite items.  Please consult with CMiC if that is the case.
+        CitemdAffilRevAccCode:
+          maxLength: 16
+          type: string
+          description: Affiliate sales revenue account. Reference to the ACCOUNT table.
+        CitemdCustRevAccCode:
+          maxLength: 16
+          type: string
+          description: Customer sales revenue account. Reference to the ACCOUNT table.
+        CitemdAllowNegQtyFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Set to ‘Y’ if the quantities of this item at this location are allowed to go.
+        CitemdLocActiveFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Set to ‘N’ if you want to disable this item at this location.
+        CitemdAdditionalInvAmt:
+          maxLength: 0
+          type: integer
+        CitemdInventoryItemCode:
+          maxLength: 16
+          type: string
+        CitemdInventoryTypeCode:
+          maxLength: 2
+          type: string
+        CitemdInventoryLocCode:
+          maxLength: 7
+          type: string
+        CitemdSalesProductFlag:
+          maxLength: 1
+          type: string
+        CitemdMsAvailableFlag:
+          maxLength: 1
+          type: string
+        CitemdIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitemdIuCreateUser:
+          maxLength: 30
+          type: string
+        CitemdIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitemdIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CitemdVUuid:
+          maxLength: 64
+          type: string
+    CiItemHdr:
+      type: object
+      properties:
+        CithCompCode:
+          maxLength: 8
+          type: string
+          description: Company code
+        CithCompName:
+          maxLength: 30
+          type: string
+        CithItemCode:
+          maxLength: 16
+          type: string
+          description: "Inventory item code or number.  If the fixed length flag is set in the control file, this code must be of the length specified in the control file."
+        CithItemName:
+          maxLength: 60
+          type: string
+        CithItemTypeCode:
+          maxLength: 2
+          type: string
+          description: Reference (with CITH_COMP_CODE) to the CIITEMTYPE table.
+        CithItemTypeName:
+          maxLength: 30
+          type: string
+        CithDefaultLocCode:
+          maxLength: 7
+          type: string
+          description: Reference (with CITH_COMP_CODE) to the CILOCATION table.
+        CithDefaultLocName:
+          maxLength: 60
+          type: string
+        CithCostMethCode:
+          maxLength: 3
+          type: string
+          description: "One of AVG (average cost), SF (standard FIFO), F (modified FIFO) and STD (standard cost).  The validation program does not check but this should be the same value as in the item’s class."
+        CithLotCtrlFlag:
+          maxLength: 1
+          type: string
+          description: ‘Y’ or ‘N’.  Set this to ‘N’ unless CITH_SERIAL_FLAG = ‘Y’ and CITH_COST_METH_CODE = ’F’
+        CithSerialFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if the item is serialized, ‘N’ if not."
+        CithUsageCode:
+          maxLength: 1
+          type: string
+          description: Not used.  Set this to ‘N’
+        CithCostUpdateLevelCode:
+          maxLength: 1
+          type: string
+          description: "If using the Average Cost method of inventory valuation, specify whether to update the average cost of this inventory item by the total inventory (‘I’), or by the inventory within a specified location (‘L’)."
+        CithInvAccCode:
+          maxLength: 16
+          type: string
+          description: Inventory account. Reference to the ACCOUNT table.
+        CithRevAccCode:
+          maxLength: 16
+          type: string
+          description: Revenue account. Reference to the ACCOUNT table.
+        CithWriAccCode:
+          maxLength: 16
+          type: string
+          description: Write-off account. Reference to the ACCOUNT table.
+        CithAdjAccCode:
+          maxLength: 16
+          type: string
+          description: Adjustment account. Reference to the ACCOUNT table.
+        CithVarAccCode:
+          maxLength: 16
+          type: string
+          description: Variance account. Reference to the ACCOUNT table.
+        CithSuspAccCode:
+          maxLength: 16
+          type: string
+          description: Suspense account. Reference to the ACCOUNT table.
+        CithMinOrderQty:
+          maxLength: 16
+          type: integer
+          description: Minimum order quantity
+        CithStdOrderQty:
+          maxLength: 16
+          type: integer
+          description: Standard order quantity
+        CithMaxOrderQty:
+          maxLength: 16
+          type: integer
+          description: Maximum order quantity
+        CithMinOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Minimum on-hand quantity
+        CithMaxOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Maximum on-hand quantity
+        CithStdOnhandQty:
+          maxLength: 16
+          type: integer
+          description: Standard on-hand quantity
+        CithMarketPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Market price
+        CithSellPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Selling/issue price or percentage.  If percentage remember to make it 100+markup.
+        CithBuybackPriceAmt:
+          maxLength: 18
+          type: integer
+          description: Buy back price or percentage.  If percentage remember to make it 100+markup.
+        CithRestockPriceAmt:
+          maxLength: 18
+          type: integer
+          description: "Dollar amount that will be added to each unit of this inventory item, when all or a portion of the item is returned."
+        CithCrtDate:
+          type: string
+          description: Date this record was added
+          format: full-date
+          example: YYYY-MM-dd
+        CithCrtUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who added the record
+        CithLastModifyDate:
+          type: string
+          description: Date this record was last modified
+          format: full-date
+          example: YYYY-MM-dd
+        CithLastModifyUserCode:
+          maxLength: 30
+          type: string
+          description: Userid of the person who last modified the record
+        CithDeprExpAccCode:
+          maxLength: 16
+          type: string
+          description: Depreciation expense account. Reference to the ACCOUNT table.
+        CithAccumDeprAccCode:
+          maxLength: 16
+          type: string
+          description: Accumulated depreciation account. Reference to the ACCOUNT table.
+        CithTax1Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithTax2Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithTax3Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithSellPriceOrPctCode:
+          maxLength: 1
+          type: string
+          description: "‘P’ if the selling price is entered explicitly, ‘C’ if it calculated as a percentage of the cost price."
+        CithBbPriceOrPctCode:
+          maxLength: 1
+          type: string
+          description: "‘P’ if the buyback price is entered explicitly, ‘C’ if it calculated as a percentage of the cost price."
+        CithSoldAtCostAccCode:
+          maxLength: 16
+          type: string
+          description: Cost of goods sold account.  Reference to the ACCOUNT table.
+        CithSalesTax1Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithSalesTax2Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithSalesTax3Code:
+          maxLength: 11
+          type: string
+          description: With CITH_COMP_CODE a reference to ARTAX table
+        CithCmpFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if this is a composite item, ‘N’ otherwise"
+        CithRtrnFlag:
+          maxLength: 1
+          type: string
+          description: "‘Y’ if this item can be returned, ‘N’ otherwise"
+        CithPartialDasmblFlag:
+          maxLength: 1
+          type: string
+          description: "If CITH_CMP_FLAG=’Y’ this flag indicates whether the item can be issued only partially assembled. ‘Y’ means it can, ‘N’ means it cannot."
+        CithAffilRevAccCode:
+          maxLength: 16
+          type: string
+          description: Affiliate sales revenue account. Reference to the ACCOUNT table.
+        CithCustRevAccCode:
+          maxLength: 16
+          type: string
+          description: Customer sales revenue account. Reference to the ACCOUNT table.
+        CithAllowNegQtyFlag:
+          maxLength: 1
+          type: string
+          description: Allow Negative Balances. ‘Y’/’N’
+        CithProdFlag:
+          maxLength: 1
+          type: string
+        CithEmCostComponCode:
+          maxLength: 8
+          type: string
+        CithCreditJcCatCode:
+          maxLength: 16
+          type: string
+        CithCreditJcCatName:
+          maxLength: 30
+          type: string
+        CithInventoryItemCode:
+          maxLength: 16
+          type: string
+        CithInventoryTypeCode:
+          maxLength: 2
+          type: string
+        CithSalesProductFlag:
+          maxLength: 1
+          type: string
+        CithMsAvailableFlag:
+          maxLength: 1
+          type: string
+        CithTotalAcPct:
+          maxLength: 18
+          type: integer
+        CithAutoBuildCmpFlag:
+          maxLength: 1
+          type: string
+        CithIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CithIuCreateUser:
+          maxLength: 30
+          type: string
+        CithIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CithIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CithVUuid:
+          maxLength: 64
+          type: string
+    CiItemLocLog:
+      type: object
+      properties:
+        CitlCompCode:
+          maxLength: 8
+          type: string
+        CitlItemCode:
+          maxLength: 16
+          type: string
+        CitlItemTypeCode:
+          maxLength: 2
+          type: string
+        CitlLocCode:
+          maxLength: 7
+          type: string
+        CitlLocName:
+          maxLength: 60
+          type: string
+        CitlLowLevelFlag:
+          maxLength: 1
+          type: string
+        CitlBookOnHandQty:
+          maxLength: 0
+          type: integer
+        CitlOnHandQty:
+          maxLength: 0
+          type: integer
+        CitlBookCmpQty:
+          maxLength: 0
+          type: integer
+        CitlCmpQty:
+          maxLength: 0
+          type: integer
+        CitlOnOrderQty:
+          maxLength: 0
+          type: integer
+        CitlWmCode:
+          maxLength: 2
+          type: string
+        CitlCostAmt:
+          maxLength: 0
+          type: integer
+        CitlCostMethDesc:
+          maxLength: 4000
+          type: string
+        CitlSellPriceAmt:
+          maxLength: 0
+          type: integer
+        CitlReserveQty:
+          maxLength: 0
+          type: integer
+        CitlBookReserveQty:
+          maxLength: 0
+          type: integer
+    CiLocation:
+      type: object
+      properties:
+        CilocCompCode:
+          maxLength: 8
+          type: string
+        CilocCode:
+          maxLength: 7
+          type: string
+        CilocName:
+          maxLength: 60
+          type: string
+        CilocDeptCode:
+          maxLength: 6
+          type: string
+        CilocTypeCode:
+          maxLength: 1
+          type: string
+        CilocCtrlCode:
+          maxLength: 7
+          type: string
+        CilocBinCtrlFlag:
+          maxLength: 1
+          type: string
+        CilocPctUsed:
+          maxLength: 6
+          type: integer
+        CilocDeptDistFlag:
+          maxLength: 1
+          type: string
+        CilocHier:
+          maxLength: 255
+          type: string
+        CilocInvSerCode:
+          maxLength: 4
+          type: string
+        CilocMszoneCode:
+          maxLength: 10
+          type: string
+        CilocIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CilocIuCreateUser:
+          maxLength: 30
+          type: string
+        CilocIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CilocIuUpdateUser:
+          maxLength: 30
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CilocVUuid:
+          maxLength: 64
+          type: string
+    CiTranPosted:
+      type: object
+      properties:
+        CitrnCompCode:
+          maxLength: 8
+          type: string
+        CitrnCompName:
+          maxLength: 30
+          type: string
+        CitrnTranType:
+          maxLength: 2
+          type: string
+        CitrnTranTypeName:
+          maxLength: 14
+          type: string
+        CitrnBchNum:
+          maxLength: 11
+          type: integer
+        CitrnBchName:
+          maxLength: 60
+          type: string
+        CitrnJobDeptWorderEqup:
+          maxLength: 10
+          type: string
+        CitrnPhsAccWitemComponcat:
+          maxLength: 16
+          type: string
+        CitrnCatExpTrancode:
+          maxLength: 16
+          type: string
+        CitrnTranNum:
+          maxLength: 11
+          type: integer
+        CitrnSubstItemFlag:
+          maxLength: 1
+          type: string
+        CitrnActionCode:
+          maxLength: 1
+          type: string
+        CitrnItemClassCode:
+          maxLength: 4
+          type: string
+        CitrnItemClassName:
+          maxLength: 60
+          type: string
+        CitrnItemCode:
+          maxLength: 16
+          type: string
+        CitrnItemName:
+          maxLength: 80
+          type: string
+        CitrnItemTypeCode:
+          maxLength: 2
+          type: string
+        CitrnItemTypeName:
+          maxLength: 60
+          type: string
+        CitrnItemWmCode:
+          maxLength: 2
+          type: string
+        CitrnItemWmName:
+          maxLength: 20
+          type: string
+        CitrnLocCode:
+          maxLength: 7
+          type: string
+        CitrnLocName:
+          maxLength: 80
+          type: string
+        CitrnReqQty:
+          maxLength: 0
+          type: integer
+        CitrnQty:
+          maxLength: 16
+          type: integer
+        CitrnToFromLocCode:
+          maxLength: 7
+          type: string
+        CitrnToFromLocName:
+          maxLength: 80
+          type: string
+        CitrnToFromItemClassCode:
+          maxLength: 4
+          type: string
+        CitrnToFromItemClassName:
+          maxLength: 60
+          type: string
+        CitrnToFromItemCode:
+          maxLength: 16
+          type: string
+        CitrnToFromItemName:
+          maxLength: 80
+          type: string
+        CitrnToFromItemTypeCode:
+          maxLength: 2
+          type: string
+        CitrnToFromItemTypeName:
+          maxLength: 60
+          type: string
+        CitrnToFromWmCode:
+          maxLength: 2
+          type: string
+        CitrnToFromWmName:
+          maxLength: 20
+          type: string
+        CitrnToFromQty:
+          maxLength: 16
+          type: integer
+        CitrnToFromCompCode:
+          maxLength: 8
+          type: string
+        CitrnToFromCompName:
+          maxLength: 30
+          type: string
+        CitrnToFromDeptCode:
+          maxLength: 6
+          type: string
+        CitrnToFromDeptName:
+          maxLength: 60
+          type: string
+        CitrnToFromAccCode:
+          maxLength: 16
+          type: string
+        CitrnToFromAccName:
+          maxLength: 120
+          type: string
+        CitrnToFromJobCode:
+          maxLength: 10
+          type: string
+        CitrnToFromJobName:
+          maxLength: 120
+          type: string
+        CitrnToFromPhaseCode:
+          maxLength: 16
+          type: string
+        CitrnToFromPhaseName:
+          maxLength: 120
+          type: string
+        CitrnToFromCatCode:
+          maxLength: 16
+          type: string
+        CitrnToFromCatName:
+          maxLength: 120
+          type: string
+        CitrnToFromEqpCode:
+          maxLength: 10
+          type: string
+        CitrnToFromEqpName:
+          maxLength: 60
+          type: string
+        CitrnToFromComponCode:
+          maxLength: 8
+          type: string
+        CitrnToFromComponName:
+          maxLength: 40
+          type: string
+        CitrnToFromTrancodeCode:
+          maxLength: 4
+          type: string
+        CitrnToFromTrancodeName:
+          maxLength: 30
+          type: string
+        CitrnRefDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnRefCode:
+          maxLength: 16
+          type: string
+        CitrnRefDesc:
+          maxLength: 60
+          type: string
+        CitrnSrcCode:
+          maxLength: 16
+          type: string
+        CitrnSrcDesc:
+          maxLength: 60
+          type: string
+        CitrnReqNum:
+          maxLength: 11
+          type: string
+        CitrnReqReleaseNum:
+          maxLength: 22
+          type: integer
+        CitrnReqLineNum:
+          maxLength: 22
+          type: integer
+        CitrnWbsvCode1:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode2:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode3:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode4:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode5:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode6:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode7:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode8:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode9:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode10:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode11:
+          maxLength: 60
+          type: string
+        CitrnWbsvCode12:
+          maxLength: 60
+          type: string
+        CitrnPmCode:
+          maxLength: 30
+          type: string
+        CitrnMovedToInvFlag:
+          maxLength: 1
+          type: string
+        CitrnFromAllocQty:
+          maxLength: 16
+          type: integer
+        CitrnRecPriceAmt:
+          maxLength: 18
+          type: integer
+        CitrnRecCurrCode:
+          maxLength: 3
+          type: string
+        CitrnSalesTax1Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax1Name:
+          maxLength: 120
+          type: string
+        CitrnSalesTax2Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax2Name:
+          maxLength: 120
+          type: string
+        CitrnSalesTax3Code:
+          maxLength: 11
+          type: string
+        CitrnSalesTax3Name:
+          maxLength: 120
+          type: string
+        CitrnAmt:
+          maxLength: 18
+          type: integer
+        CitrnPostDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnTranSnNum:
+          maxLength: 40
+          type: string
+        CitrnOverrideAmt:
+          maxLength: 18
+          type: integer
+        CitrnWoCode:
+          maxLength: 10
+          type: string
+        CitrnWoName:
+          maxLength: 80
+          type: string
+        CitrnWitmLineNumber:
+          maxLength: 16
+          type: string
+        CitrnWitmLineName:
+          maxLength: 60
+          type: string
+        CitrnWoExpCode:
+          maxLength: 4
+          type: string
+        CitrnWoExpName:
+          maxLength: 60
+          type: string
+        CitrnWoTranType:
+          maxLength: 1
+          type: string
+        CitrnWDetailCode:
+          maxLength: 30
+          type: string
+        CitrnSalesTax1Amt:
+          maxLength: 18
+          type: integer
+        CitrnSalesTax2Amt:
+          maxLength: 18
+          type: integer
+        CitrnSalesTax3Amt:
+          maxLength: 18
+          type: integer
+        CitrnOverrideCostAmt:
+          maxLength: 0
+          type: integer
+        CitrnIuCreateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnIuCreateUser:
+          maxLength: 30
+          type: string
+        CitrnIuUpdateDate:
+          type: string
+          format: full-date
+          example: YYYY-MM-dd
+        CitrnIuUpdateUser:
+          maxLength: 30
+          type: string
+        CitrnJobDeptWoEqpName:
+          maxLength: 80
+          type: string
+        CitrnPhsaccWitemcompcatName:
+          maxLength: 80
+          type: string
+        CitrnCatExpTranName:
+          maxLength: 80
+          type: string
+        CitrnSuggestedPrice:
+          maxLength: 0
+          type: integer
+        CitrnTotalPrice:
+          maxLength: 0
+          type: integer
+        CitrnOnhandQty:
+          maxLength: 0
+          type: integer
+        CitrnCalledFromAppCode:
+          maxLength: 4
+          type: string
+        CitrnUserFieldEdtFlag5:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag6:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag7:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldEdtFlag8:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName5:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName6:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName7:
+          maxLength: 4000
+          type: string
+        CitrnUserFieldName8:
+          maxLength: 4000
+          type: string
+        CitrnWbsSetupFlag:
+          maxLength: 4000
+          type: string
+        CitrnTacSetupFlag:
+          maxLength: 4000
+          type: string
+        DiscriminatorCode:
+          maxLength: 0
+          type: string
+        CitrnVUuid:
+          maxLength: 64
+          type: string
+  responses:
+    CiClassResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiClass'
+    GenericError:
+      description: "An error occurred while attempting to retrieve, create, or delete record(s)"
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    DeletionSuccess:
+      description: Object has been successfully deleted.
+      content:
+        application/json:
+          examples:
+            Result:
+              value: "{}"
+    CiInventoryIssueResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiInventoryIssue'
+    CiItemResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiItem'
+    CiItemDetailResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiItemDetail'
+    CiItemHdrResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiItemHdr'
+    CiItemLocLogResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiItemLocLog'
+    CiLocationResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiLocation'
+    CiTranPostedResponse:
+      description: Successful Operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CiTranPosted'
+  requestBodies:
+    CiClassRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiClass'
+          examples:
+            Minimal POST Example:
+              value:
+                CiclasVarAccCode: string
+                CiclasBbPriceOrPctCode: string
+                CiclasLotCtrlFlag: string
+                CiclasRevAccCode: string
+                CiclasAdjAccCode: string
+                CiclasCompCode: string
+                CiclasHier: string
+                CiclasMsAvailableFlag: string
+                CiclasWriAccCode: string
+                CiclasSerialFlag: string
+                CiclasCostUpdateLevelCode: string
+                CiclasAutoBuildCmpFlag: string
+                CiclasSellPriceOrPctCode: string
+                CiclasSuspAccCode: string
+                CiclasClassCode: string
+                CiclasInvAccCode: string
+                CiclasUsageCode: string
+                CiclasCostMethCode: string
+                CiclasVUuid: ""
+            PATCH Example:
+              value:
+                CiclasAllowNegQtyFlag: "Y"
+    CiInventoryIssueRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiInventoryIssue'
+          examples:
+            Minimal POST Example (G-Type):
+              value:
+                CitrnCompCode: string
+                CitrnTranType: G
+                CitrnRefDate: string
+                CitrnToFromCompCode: string
+                CitrnItemCode: string
+                CitrnItemTypeCode: string
+                CitrnLocCode: string
+                CitrnJobDeptWorderEqup: string
+                CitrnPhsAccWitemComponcat: string
+                CitrnCatExpTrancode: string
+                CitrnPostBchFlag: string
+                CitrnVUuid: ""
+            PATCH Example:
+              value:
+                CitrnRefDesc: test123
+        application/vnd.oracle.adf.batch+json:
+          schema:
+            $ref: '#/components/schemas/CiInventoryIssue'
+          examples:
+            Multi-Insert Unposted Example (G-Type):
+              value:
+                parts:
+                - id: part1
+                  path: /1/ciinventoryissue
+                  operation: create
+                  payload:
+                    CitrnCompCode: ZZ
+                    CitrnItemClassCode: TOOL
+                    CitrnItemCode: AXE
+                    CitrnItemTypeCode: "1"
+                    CitrnLocCode: CANADA
+                    CitrnTranType: G
+                    CitrnToFromCompCode: ZZ
+                    CitrnJobDeptWorderEqup: "00"
+                    CitrnPhsAccWitemComponcat: "1000.100"
+                    CitrnItemWmCode: EA
+                    CitrnRefDate: 2022-11-03
+                    CitrnRefDesc: test123
+                    CitrnStockWmCode: EA
+                - id: part2
+                  path: /1/ciinventoryissue
+                  operation: create
+                  payload:
+                    CitrnCompCode: ZZ
+                    CitrnItemClassCode: TOOL
+                    CitrnItemCode: AXE
+                    CitrnItemTypeCode: "1"
+                    CitrnLocCode: CANADA
+                    CitrnTranType: G
+                    CitrnToFromCompCode: ZZ
+                    CitrnJobDeptWorderEqup: "00"
+                    CitrnPhsAccWitemComponcat: "1000.600"
+                    CitrnItemWmCode: EA
+                    CitrnRefDate: 2022-11-03
+                    CitrnRefDesc: test124
+                    CitrnStockWmCode: EA
+            Multi-Insert Batch Posting Example (G-Type):
+              value:
+                parts:
+                - id: part1
+                  path: /1/ciinventoryissue
+                  operation: create
+                  payload:
+                    CitrnCompCode: ZZ
+                    CitrnItemClassCode: TOOL
+                    CitrnItemCode: AXE
+                    CitrnItemTypeCode: "1"
+                    CitrnLocCode: CANADA
+                    CitrnTranType: G
+                    CitrnToFromCompCode: ZZ
+                    CitrnJobDeptWorderEqup: "00"
+                    CitrnPhsAccWitemComponcat: "1000.100"
+                    CitrnItemWmCode: EA
+                    CitrnRefDate: 2022-11-03
+                    CitrnRefDesc: test123
+                    CitrnStockWmCode: EA
+                    CitrnPostBchFlag: "Y"
+                    CitrnPostDate: 2022-11-07
+                - id: part2
+                  path: /1/ciinventoryissue
+                  operation: create
+                  payload:
+                    CitrnCompCode: ZZ
+                    CitrnItemClassCode: TOOL
+                    CitrnItemCode: AXE
+                    CitrnItemTypeCode: "1"
+                    CitrnLocCode: CANADA
+                    CitrnTranType: G
+                    CitrnToFromCompCode: ZZ
+                    CitrnJobDeptWorderEqup: "00"
+                    CitrnPhsAccWitemComponcat: "1000.600"
+                    CitrnItemWmCode: EA
+                    CitrnRefDate: 2022-11-03
+                    CitrnRefDesc: test124
+                    CitrnStockWmCode: EA
+    CiItemRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiItem'
+          examples:
+            Minimal POST Example:
+              value:
+                CiitemCompCode: string
+                CiitemItemCode: string
+                CiitemBbPriceOrPctCode: string
+                CiitemWriAccCode: string
+                CiitemRevAccCode: string
+                CiitemInvAccCode: string
+                CiitemSuspAccCode: string
+                CiitemVarAccCode: string
+                CiitemItemClassCode: string
+                CiitemCostUpdateLevelCode: string
+                CiitemCostMethCode: string
+                CiitemSellPriceOrPctCode: string
+                CiitemAdjAccCode: string
+                CiitemWmCode: string
+                CiitemSerialFlag: string
+                CiitemMsAvailableFlag: string
+                CiitemAutoBuildCmpFlag: string
+                CiitemUsageCode: string
+                CiitemAltWmAllowFlag: string
+                CiitemLotCtrlFlag: string
+                CiitemVUuid: ""
+            PATCH Example:
+              value:
+                CiitemDefaultItemTypeCode: Z
+    CiItemDetailRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiItemDetail'
+          examples:
+            Minimal POST Example:
+              value:
+                CitemdCompCode: string
+                CitemdItemCode: string
+                CitemdItemTypeCode: string
+                CitemdLocCode: string
+                CitemdCostUpdateLevelCode: string
+                CitemdRevAccCode: string
+                CitemdVarAccCode: string
+                CitemdSuspAccCode: string
+                CitemdWriAccCode: string
+                CitemdInvAccCode: string
+                CitemdAdjAccCode: string
+                CitemdSoldAtCostAccCode: string
+                CitemdAffilRevAccCode: string
+                CitemdCustRevAccCode: string
+                CitemdSerialFlag: string
+                CitemdLotCtrlFlag: string
+                CitemdMsAvailableFlag: string
+                CitemdUsageCode: string
+                CitemdVUuid: ""
+            PATCH Example:
+              value:
+                CitemdLocActiveFlag: "N"
+    CiItemHdrRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiItemHdr'
+          examples:
+            Minimal POST Example:
+              value:
+                CithCompCode: string
+                CithItemCode: string
+                CithItemTypeCode: string
+                CithVUuid: ""
+            PATCH Example:
+              value:
+                CithMarketPriceAmt: 1
+    CiLocationRequest:
+      content:
+        application/vnd.oracle.adf.resourceitem+json:
+          schema:
+            $ref: '#/components/schemas/CiLocation'
+          examples:
+            Minimal POST Example:
+              value:
+                CilocDeptCode: string
+                CilocCompCode: string
+                CilocCode: string
+                CilocName: string
+                CilocDeptDistFlag: string
+                CilocVUuid: ""
+            PATCH Example:
+              value:
+                CilocName: testerino123
+  securitySchemes:
+    BasicAuth:
+      type: http
+      description: Basic --> User + Password
+      scheme: basic
