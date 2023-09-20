@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcjobcombinedjobrel" path="/jc-rest-api/rest/1/jcjobcombinedjobrel" id="38200893-08bb-40d7-a79f-874ce4060cd5" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="38200893-08bb-40d7-a79f-874ce4060cd5fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcjobcombinedjobrel</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="b5fc544f-b2a9-45cf-a9c0-346384fd8ee7" method="GET">
+    <con:description>Retrieve all combined job relations</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcrCompCodeMain" : "string",
+  "JcrJobCodeMain" : "string",
+  "JcrJobNameMain" : "string",
+  "JcrCompCodeRel" : "string",
+  "JcrJobCodeRel" : "string",
+  "JcrJobNameRel" : "string",
+  "JcrExcRevenueFlag" : "string",
+  "JcrExcBillingFlag" : "string",
+  "JcrExcContractFlag" : "string",
+  "JcrActiveFlag" : "string",
+  "JcrVUuid" : "string",
+  "DiscriminatorCode" : "string",
+  "JcrIuCreateDate" : "YYYY-MM-dd",
+  "JcrIuCreateUser" : "string",
+  "JcrIuUpdateDate" : "YYYY-MM-dd",
+  "JcrIuUpdateUser" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="0742ac3b-5533-4c41-9dc1-83a4a020c465" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

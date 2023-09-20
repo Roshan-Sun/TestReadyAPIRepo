@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emeqpclass" path="/em-rest-api/rest/1/emeqpclass" id="f52f65a4-66b1-40bb-8a3f-13e780579fff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f52f65a4-66b1-40bb-8a3f-13e780579ffffileName">%2Fem-rest-api%2Frest%2F1%2Femeqpclass</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="6d6c8b88-17c7-441a-8d50-e4fa26a44c2c" method="GET">
+    <con:description>Retrieve Equipment Classes</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>findByCode or findByDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>eqpClassCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Equipment Class Code (findByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit Date to compare against create/update dates (findByDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmecEqpclassCode" : "string",
+  "EmecName" : "string",
+  "EmecCtrlEqpclassCode" : "string",
+  "EmecCtrlEqpclassName" : "string",
+  "EmecInhTaskAccFlag" : "string",
+  "EmecPhsCode" : "string",
+  "EmecPhsName" : "string",
+  "EmecTradeCode" : "string",
+  "EmecTradeName" : "string",
+  "EmecPyNhRateCode" : "string",
+  "EmecPyOtRateCode" : "string",
+  "EmecPyDotRateCode" : "string",
+  "EmecPyOthRateCode" : "string",
+  "EmecTruckerClass" : "string",
+  "EmecEqpclassHier" : "string",
+  "EmecRpAvailblFlag" : "string",
+  "EmecExclDiscountsFlag" : "string",
+  "EmecExclReplValueFlag" : "string",
+  "EmecInclInValueCapFlag" : "string",
+  "EmecIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmecIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="03074a4e-ab87-4102-98dc-50320552b234" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

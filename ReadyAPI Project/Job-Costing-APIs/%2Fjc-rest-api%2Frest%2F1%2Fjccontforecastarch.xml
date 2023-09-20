@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jccontforecastarch" path="/jc-rest-api/rest/1/jccontforecastarch" id="4f890ffe-4261-4475-bf53-6745367b6d4c" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="4f890ffe-4261-4475-bf53-6745367b6d4cfileName">%2Fjc-rest-api%2Frest%2F1%2Fjccontforecastarch</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="0adad822-5743-49fd-b540-c82a3e77ea9e" method="GET">
+    <con:description>Retrieve specific JC Forecast Archives</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectCompany, selectJob, or selectPeriod</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectCompany, selectJob and selectPeriod)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>billingJobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (selectJob)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>year</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Forecasting year (selectPeriod)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>period</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Forecasting period (selectPeriod)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JccfCompCode" : "string",
+  "JccfContCode" : "string",
+  "JccfYr" : 0,
+  "JccfPer" : 0,
+  "JccfBillCode" : "string",
+  "JccfArchiveFullDate" : "YYYY-MM-dd",
+  "JccfArchiveDate" : "string",
+  "JccfBillJobCode" : "string",
+  "JccfBillPhsCode" : "string",
+  "JccfBillPhsName" : "string",
+  "JccfBillPhsType" : "string",
+  "JccfBillCatCode" : "string",
+  "JccfBillCatName" : "string",
+  "JccfBillTypeCode" : "string",
+  "JccfMaxBillingAmt" : 0,
+  "JccfMaxBillingQty" : 0,
+  "JccfBillingRate" : 0,
+  "JccfCostCodeCount" : 0,
+  "JccfCostBudmethCode" : "string",
+  "JccfOrigCostBudgAmt" : 0,
+  "JccfCurrCostBudgAmt" : 0,
+  "JccfStoredCurrCostBudgAmt" : 0,
+  "JccfPendChgOrdCostAmt" : 0,
+  "JccfProjCostBudgAmt" : 0,
+  "JccfPendIntChgOrdCostAmt" : 0,
+  "JccfCurrSpentAmt" : 0,
+  "JccfCurrSpentAmtBaseCont" : 0,
+  "JccfCostAmt" : 0,
+  "JccfComplPc" : 0,
+  "JccfComplPc2" : 0,
+  "JccfSpentPc" : 0,
+  "JccfToCompleteCostAmt" : 0,
+  "JccfForecastCostAmt" : 0,
+  "JccfProjForecastCostAmt" : 0,
+  "JccfCostVarianceAmt" : 0,
+  "JccfInvCommAmt" : 0,
+  "JccfNinvCommAmt" : 0,
+  "JccfCommAmt" : 0,
+  "JccfUnbilledRevAmt" : 0,
+  "JccfBilledToDateAmt" : 0,
+  "JccfOrigBillBudgAmt" : 0,
+  "JccfCurrBillBudgAmt" : 0,
+  "JccfCurrBillBudgQty" : 0,
+  "JccfProjBillQty" : 0,
+  "JccfCurrBillWmCode" : "string",
+  "JccfPendingChgOrdBillAmt" : 0,
+  "JccfProjBillBudgAmt" : 0,
+  "JccfForecastRevenueAmt" : 0,
+  "JccfForecastRevenueQty" : 0,
+  "JccfForecastRevenueRate" : "string",
+  "JccfForecastRevenueWmCode" : "string",
+  "JccfRevenueVarianceAmt" : 0,
+  "JccfAdjForecastRevenueAmt" : 0,
+  "JccfAdjustment" : 0,
+  "JccfOrigCostBudgQty" : 0,
+  "JccfCurrCostBudgQty" : 0,
+  "JccfPendChgOrdCostQty" : 0,
+  "JccfProjCostBudgQty" : 0,
+  "JccfPendIntChgOrdCostQty" : 0,
+  "JccfCurrCostSpentQty" : 0,
+  "JccfOrigProjCostQty" : 0,
+  "JccfProjCostQty" : 0,
+  "JccfCommCostQty" : 0,
+  "JccfInvCommCostQty" : 0,
+  "JccfNinvCommCostQty" : 0,
+  "JccfCurrCostWmCode" : "string",
+  "JccfCurrCostBudgPhsQty" : 0,
+  "JccfPendChgOrdCostPhsQty" : 0,
+  "JccfProjCostBudgPhsQty" : 0,
+  "JccfIntChgOrdCostPhsQty" : 0,
+  "JccfCurrCostSpentPhsQty" : 0,
+  "JccfOrigCostProjPhsQty" : 0,
+  "JccfCostProjPhsQty" : 0,
+  "JccfCurrCostWmPhsCode" : "string",
+  "JccfFreezeProjAmtFlag" : "string",
+  "JccfCalculateColumnName" : "string",
+  "JccfRateOverrideAmt" : 0,
+  "JccfProductivityOverride" : 0,
+  "JccfCostJobCode" : "string",
+  "JccfCostPhsCode" : "string",
+  "JccfCostCatCode" : "string",
+  "JccfRuleCode" : "string",
+  "JccfTimePhasedFlag" : "string",
+  "JccfHasTimePhasedFlag" : "string",
+  "JccfInvQty" : 0,
+  "JccfPendingCoAmt" : 0,
+  "JccfPciRiskRevAmt" : 0,
+  "JccfPciRiskCostAmt" : 0,
+  "JccfProjBudgRiskAmt" : 0,
+  "JccfIntPendingCoAmt" : 0,
+  "JccfWbsPciAmt" : 0,
+  "JccfPciToCompleteCostAmt" : 0,
+  "JccfCostFcstInclPciAmt" : 0,
+  "JccfCostVarInclPciAmt" : 0,
+  "JccfProjFcastCostAmtCalc" : 0,
+  "JccfIntPendCoSpentAmt" : 0,
+  "JccfIntPendCoToComplAmt" : 0,
+  "JccfToComplCostOvrrdeFlag" : "string",
+  "JccfProjForecastDfltAmt" : 0,
+  "JccfProjectedProfit" : 0,
+  "JccfAllSpentCommittedAmt" : 0,
+  "JccfLabourForecastFlag" : "string",
+  "JccfForecastRevOvrdFlag" : "string",
+  "JccfIntPciToComplAmt" : 0,
+  "JccfCostToComplOvrdFlag" : "string",
+  "JccfIuCreateDate" : "YYYY-MM-dd",
+  "JccfIuCreateUser" : "string",
+  "JccfIuUpdateDate" : "YYYY-MM-dd",
+  "JccfIuUpdateUser" : "string",
+  "JccfLastSessioninfo" : "string",
+  "JccfOrigSessioninfo" : "string",
+  "JccfSharedSavingFlag" : "string",
+  "JccfSharedSavingPct" : 0,
+  "JccfSharedSavingAmt" : 0,
+  "JccfProfitInclShardSaving" : 0,
+  "JccfNonSharedSavingAmt" : 0,
+  "JccfAdjRevenueVarianceAmt" : 0,
+  "JccfAdjWipFcastRevAmt" : 0,
+  "JccfBillingTypeName" : "string",
+  "JccfBillCtrlPhsCode" : "string",
+  "JccfCalcCostAtCompl" : 0,
+  "JccfCmmName" : "string",
+  "JccfCostToCompl" : 0,
+  "JccfCostToComplTotal" : 0,
+  "JccfCtcPopupMatchClacFlg" : "string",
+  "JccfCurrBillQty" : 0,
+  "JccfCurrPerChgAmt" : 0,
+  "JccfCurrPerCommAmt" : 0,
+  "JccfCurrPerCostAmt" : 0,
+  "JccfEligBillToDateAmt" : 0,
+  "JccfExtPciToCompleteAmt" : 0,
+  "JccfExtTrnPciRiskAmt" : 0,
+  "JccfHistoricalDataFlag" : "string",
+  "JccfOpenCommitment" : 0,
+  "JccfOvrdAutoClearFlag" : "string",
+  "JccfPciRiskWipCostAmt" : 0,
+  "JccfPciRiskWipRevAmt" : 0,
+  "JccfPciWipToCompleteAmt" : 0,
+  "JccfPopupBillVar" : 0,
+  "JccfPopupCostActualPerc" : 0,
+  "JccfPopupCostActualRate" : 0,
+  "JccfPopupCostPrevPerRate" : 0,
+  "JccfPopupCostProjRate" : 0,
+  "JccfPopupCostRate" : 0,
+  "JccfPopupCostToCompleRate" : 0,
+  "JccfPopupCostVar" : 0,
+  "JccfPopupPrevPerBillVar" : 0,
+  "JccfPopupPrevPerCostVar" : 0,
+  "JccfPopupPrevPerUnitVar" : 0,
+  "JccfPopupQtyActualPerc" : 0,
+  "JccfPopupQtyToComplePerc" : 0,
+  "JccfPopupRevActualPerc" : 0,
+  "JccfPopupRevActualRate" : 0,
+  "JccfPopupRevPrevPerRate" : 0,
+  "JccfPopupRevProjRate" : 0,
+  "JccfPopupRevRate" : 0,
+  "JccfPopupRevToCompleRate" : 0,
+  "JccfPopupToComplQty" : 0,
+  "JccfPopupUnitVar" : 0,
+  "JccfPrevPerChgAmt" : 0,
+  "JccfPrevPerCommAmt" : 0,
+  "JccfPrevPerCostAmt" : 0,
+  "JccfPrevPerFcastAmt" : 0,
+  "JccfPrevPerOvrdFlg" : "string",
+  "JccfPrevPerProjBillAmt" : 0,
+  "JccfPrevPerProjCostQty" : 0,
+  "JccfPrevPerProjPhsQty" : 0,
+  "JccfRemainToBillAmt" : 0,
+  "JccfRemLabProj" : 0,
+  "JccfSysDfltCostToCmplAmt" : 0,
+  "JccfTrendadjNotes" : "string",
+  "JccfTrendAdj" : 0,
+  "JccfWipFcastRevAmt" : 0,
+  "JccfWipFcastRevQty" : 0,
+  "JccfWipPendIntChgOrdAmt" : 0,
+  "JccfWipPendIntTrnChgAmt" : 0,
+  "JccfWipProjForecastAmt" : 0,
+  "JccfWipToComplCostAmt" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4596c271-c38a-41b5-9ad3-3269284da708" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

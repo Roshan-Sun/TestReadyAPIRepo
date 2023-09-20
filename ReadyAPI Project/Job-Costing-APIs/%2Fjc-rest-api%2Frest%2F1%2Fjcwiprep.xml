@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcwiprep" path="/jc-rest-api/rest/1/jcwiprep" id="7ae3703d-421d-4f7d-8594-b7f7df5780b0" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="7ae3703d-421d-4f7d-8594-b7f7df5780b0fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcwiprep</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="c7b412e5-450a-4d52-9181-deb0c2928472" method="GET">
+    <con:description>Retrieve JC WIP Report Export</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectJcWipRep</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>companyCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fromJob</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code to start interval (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>toJob</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code to end interval (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobStat</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job status (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>depCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Department Code (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>currYr</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Year to run report on (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>currPer</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Period to run report on (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>includeActiveJob</con:name>
+        <con:value>Y</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Y</con:default>
+        <con:description>Include Active Jobs Flag (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>includeAdjustedJob</con:name>
+        <con:value>Y</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Y</con:default>
+        <con:description>Include Adjusted Jobs Flag (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>includeNoWipJob</con:name>
+        <con:value>N</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>N</con:default>
+        <con:description>Include No Wip Jobs Flag (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>roundDollars</con:name>
+        <con:value>N</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>N</con:default>
+        <con:description>Round to Dollars Flag (selectJcWipRep)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>showCostBillAmnt</con:name>
+        <con:value>N</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>N</con:default>
+        <con:description>Show Cost Billing Amount Flag</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobPickList</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job Picklist</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "CompCode" : "string",
+  "CompName" : "string",
+  "JobCode" : "string",
+  "JobName" : "string",
+  "DeptCode" : "string",
+  "DeptName" : "string",
+  "ContractAmt" : 0,
+  "ProjAmt" : 0,
+  "GrossMargin" : 0,
+  "GrossMarginPc" : 0,
+  "CostAmt" : 0,
+  "ComplPc" : 0,
+  "CostToComplAmt" : 0,
+  "MarginEarned" : 0,
+  "EarnedRevAmt" : 0,
+  "CurrBillAmt" : 0,
+  "OverUnderBillAmt" : 0,
+  "MarginCurrPeriod" : 0,
+  "MarginYearToDate" : 0,
+  "EarnedRevCurrPeriod" : 0,
+  "EarnedRevYearToDate" : 0,
+  "ProjFullYrRev" : 0,
+  "ProjFullYrProfit" : 0,
+  "WipFileAttributes" : "string",
+  "CUser" : "string",
+  "SysWipMethod" : "string",
+  "CompanyLogo" : "string",
+  "CurrentCostAmt" : 0,
+  "CurrentBillingAmt" : 0,
+  "IfrsRevAmt" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="b15494ff-f007-40d4-be22-f85105db4b3f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

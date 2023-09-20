@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcutran" path="/jc-rest-api/rest/1/jcutran" id="93822e77-a4d1-4126-af07-f43ac3a218cd" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="93822e77-a4d1-4126-af07-f43ac3a218cdfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcutran</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="eaae716c-2b50-4ff8-b181-9a7fb491a6db" method="GET">
+    <con:description>Retrieve JC Units Complete Transaction</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>JcUtranFinder</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>CompCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (JcUtranFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>JobCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (JcUtranFinder)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>BchNum</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Batch Number (JcUtranFinder)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcuCompCode" : "string",
+  "JcuCompName" : "string",
+  "JcuBchNum" : 0,
+  "JcuTranDate" : "YYYY-MM-dd",
+  "JcuJobCode" : "string",
+  "JcuJobName" : "string",
+  "JcuPhsCode" : "string",
+  "JcuPhsName" : "string",
+  "JcuTranQty" : 0,
+  "JcuPhsWmTranQty" : 0,
+  "JcuTranWmCode" : "string",
+  "JcuTranWmName" : "string",
+  "JcuPhsWmCode" : "string",
+  "JcuNotes" : "string",
+  "JcuPhsBudgUnitTot" : 0,
+  "JcuPhsBudgWmCode" : "string",
+  "JcuPhsPrevQtyTot" : 0,
+  "JcuPhsPrevWmCode" : "string",
+  "JcuPhsTdQty" : 0,
+  "JcuPhsTdWmCode" : "string",
+  "JcuPhsActiveFlag" : "string",
+  "JcuPostDate" : "YYYY-MM-dd",
+  "JcuCreationDate" : "YYYY-MM-dd",
+  "JcuDrawNum" : 0,
+  "JcuRevisionNum" : 0,
+  "JcuJbDeferBillingFlag" : "string",
+  "JcuJbDeferralDrawNum" : 0,
+  "JcuJbDeferralRevisionNum" : 0,
+  "JcuVoidAllowedFlag" : "string",
+  "JcuProjQty" : 0,
+  "JcuCrewName" : "string",
+  "JcuSrcObjectType" : "string",
+  "JcuCmmastCmmCode" : "string",
+  "JcuPhsQtyUnposted" : 0,
+  "JcuPhsQtyPosted" : 0,
+  "JcuProjPhsQty" : 0,
+  "JcuWbsvCode1" : "string",
+  "JcuWbsvCode2" : "string",
+  "JcuWbsvCode3" : "string",
+  "JcuWbsvCode4" : "string",
+  "JcuUserField1" : "string",
+  "JcuUserField2" : "string",
+  "JcuUserField3" : "string",
+  "JcuUserField4" : "string",
+  "JcuUserFieldName1" : "string",
+  "JcuUserFieldName2" : "string",
+  "JcuUserFieldName3" : "string",
+  "JcuUserFieldName4" : "string",
+  "JcuUserFieldEdtFlag1" : "string",
+  "JcuUserFieldEdtFlag2" : "string",
+  "JcuUserFieldEdtFlag3" : "string",
+  "JcuUserFieldEdtFlag4" : "string",
+  "JcuWbsSetupFlag" : "string",
+  "JcuIuCreateDate" : "YYYY-MM-dd",
+  "JcuIuCreateUser" : "string",
+  "JcuIuUpdateDate" : "YYYY-MM-dd",
+  "JcuIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcuVUuid" : "string",
+  "JcuPost" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="4a4a4ea0-ed4e-44fd-813d-d6935a7b9022" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="9ed55245-595f-4469-b797-da8b6fac4c1c" method="POST">
+    <con:description>Create a JC Units Complete Transaction</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcuCompCode" : "string",
+  "JcuCompName" : "string",
+  "JcuBchNum" : 0,
+  "JcuTranDate" : "YYYY-MM-dd",
+  "JcuJobCode" : "string",
+  "JcuJobName" : "string",
+  "JcuPhsCode" : "string",
+  "JcuPhsName" : "string",
+  "JcuTranQty" : 0,
+  "JcuPhsWmTranQty" : 0,
+  "JcuTranWmCode" : "string",
+  "JcuTranWmName" : "string",
+  "JcuPhsWmCode" : "string",
+  "JcuNotes" : "string",
+  "JcuPhsBudgUnitTot" : 0,
+  "JcuPhsBudgWmCode" : "string",
+  "JcuPhsPrevQtyTot" : 0,
+  "JcuPhsPrevWmCode" : "string",
+  "JcuPhsTdQty" : 0,
+  "JcuPhsTdWmCode" : "string",
+  "JcuPhsActiveFlag" : "string",
+  "JcuPostDate" : "YYYY-MM-dd",
+  "JcuCreationDate" : "YYYY-MM-dd",
+  "JcuDrawNum" : 0,
+  "JcuRevisionNum" : 0,
+  "JcuJbDeferBillingFlag" : "string",
+  "JcuJbDeferralDrawNum" : 0,
+  "JcuJbDeferralRevisionNum" : 0,
+  "JcuVoidAllowedFlag" : "string",
+  "JcuProjQty" : 0,
+  "JcuCrewName" : "string",
+  "JcuSrcObjectType" : "string",
+  "JcuCmmastCmmCode" : "string",
+  "JcuPhsQtyUnposted" : 0,
+  "JcuPhsQtyPosted" : 0,
+  "JcuProjPhsQty" : 0,
+  "JcuWbsvCode1" : "string",
+  "JcuWbsvCode2" : "string",
+  "JcuWbsvCode3" : "string",
+  "JcuWbsvCode4" : "string",
+  "JcuUserField1" : "string",
+  "JcuUserField2" : "string",
+  "JcuUserField3" : "string",
+  "JcuUserField4" : "string",
+  "JcuUserFieldName1" : "string",
+  "JcuUserFieldName2" : "string",
+  "JcuUserFieldName3" : "string",
+  "JcuUserFieldName4" : "string",
+  "JcuUserFieldEdtFlag1" : "string",
+  "JcuUserFieldEdtFlag2" : "string",
+  "JcuUserFieldEdtFlag3" : "string",
+  "JcuUserFieldEdtFlag4" : "string",
+  "JcuWbsSetupFlag" : "string",
+  "JcuIuCreateDate" : "YYYY-MM-dd",
+  "JcuIuCreateUser" : "string",
+  "JcuIuUpdateDate" : "YYYY-MM-dd",
+  "JcuIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string",
+  "JcuVUuid" : "string",
+  "JcuPost" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JcuCompCode":"string","JcuJobCode":"string","JcuPhsCode":"string","JcuTranWmCode":"string","JcuTranDate":"string","JcuPost":"string","JcuVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="7544ec14-8f2b-467b-bd10-cb61ce93b15f" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcuCompCode":"string","JcuJobCode":"string","JcuPhsCode":"string","JcuTranWmCode":"string","JcuTranDate":"string","JcuPost":"string","JcuVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="b45ed49d-f6e7-4962-9ef8-291e410e476d" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcuTranQty":11}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

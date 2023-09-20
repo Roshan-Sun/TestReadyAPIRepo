@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/em-rest-api/rest/1/emtruckdet" path="/em-rest-api/rest/1/emtruckdet" id="c6c98264-b5f6-4592-9225-fcfddb501041" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c6c98264-b5f6-4592-9225-fcfddb501041fileName">%2Fem-rest-api%2Frest%2F1%2Femtruckdet</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="8ed4419b-31e1-48d0-b600-bfee0e0256b9" method="GET">
+    <con:description>Retrieve Equipment Truck Details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectByCode</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>VenCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Vendor Code (selectByCode)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>TruckNo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Truck Number (selectByCode)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "EmetAmountType" : "string",
+  "EmetCompCode" : "string",
+  "EmetEqpCode" : "string",
+  "EmetEqpName" : "string",
+  "EmetTrancodeCode" : "string",
+  "EmetTrancodeName" : "string",
+  "EmetWmCode" : "string",
+  "EmetWmName" : "string",
+  "EmetParentType" : "string",
+  "EmetStartDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetEndDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetActiveRateFlag" : "string",
+  "EmetIuCreateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetIuCreateUser" : "string",
+  "EmetIuUpdateDate" : "YYYY-MM-dd or YYYY-MM-ddTHH:mm:ss-ZZ:ZZ",
+  "EmetIuUpdateUser" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="bb54c4ba-56aa-4e49-8363-28d1bbf32e41" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

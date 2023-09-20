@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcjobcategory" path="/jc-rest-api/rest/1/jcjobcategory" id="2bc7bfee-bfa5-41c8-afb7-c2fbc6df300d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="2bc7bfee-bfa5-41c8-afb7-c2fbc6df300dfileName">%2Fjc-rest-api%2Frest%2F1%2Fjcjobcategory</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d1937c03-defc-4d62-895a-06008b56dbb9" method="GET">
+    <con:description>Retrieve JC Job Categories</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>finder</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>selectBycatDate, selectJobCategory or selectByAuditDate</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>catDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Category date (selectBycatDate)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>compCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Company code (selectJobCategory)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>jobCodeVar</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Job code (selectJobCategory)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>categoryCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Category code (selectJobCategory)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>costCode</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Cost code (selectJobCategory)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>auditDate</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Audit date to check create/update dates against (selectByAuditDate)</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcatActLbAmt" : 0,
+  "JcatAddedFromApp" : "string",
+  "JcatAddonAmt" : 0,
+  "JcatAnticipatedCostAmt" : 0,
+  "JcatBidItemRemainingAmt" : 0,
+  "JcatBillingTypeCode" : "string",
+  "JcatBillAmt" : 0,
+  "JcatBillCode" : "string",
+  "JcatBillName" : "string",
+  "JcatBudgAdjustmentAmt" : 0,
+  "JcatBudgAmt" : 0,
+  "JcatBudgRevenueAmt" : 0,
+  "JcatBudgRevAmt" : 0,
+  "JcatBudgRevQty" : 0,
+  "JcatBudgRevRevAmt" : 0,
+  "JcatBudgUnit" : 0,
+  "JcatBudgUnitRate" : 0,
+  "JcatBudmethCode" : "string",
+  "JcatCalculateColumnName" : "string",
+  "JcatCatActiveFlag" : "string",
+  "JcatCatHier" : "string",
+  "JcatChgOrdAmt" : 0,
+  "JcatChgOrdQty" : 0,
+  "JcatChgOrdRevAmt" : 0,
+  "JcatCode" : "string",
+  "JcatCommUnit" : 0,
+  "JcatComplPc" : 0,
+  "JcatComplPcDate" : "YYYY-MM-dd",
+  "JcatComplUnit" : 0,
+  "JcatCompCode" : "string",
+  "JcatCostAmt" : 0,
+  "JcatCostRateOverrideAmt" : 0,
+  "JcatCostToComplOvrdFlg" : "string",
+  "JcatCstEntry" : "string",
+  "JcatCtrlCode" : "string",
+  "JcatDisbAmt" : 0,
+  "JcatDlbAmt" : 0,
+  "JcatExclCostBudgWip" : "string",
+  "JcatExclCostWip" : "string",
+  "JcatFreezeProjAmtFlag" : "string",
+  "JcatFwdLossOvrhPct" : 0,
+  "JcatHbPayAmt" : 0,
+  "JcatIdealRevenueAmt" : 0,
+  "JcatInvoiceFormatCode" : "string",
+  "JcatInvCommAmt" : 0,
+  "JcatInvCommUnit" : 0,
+  "JcatInvUnit" : 0,
+  "JcatJobCode" : "string",
+  "JcatJobCtrlCode" : "string",
+  "JcatLabourForecastFlag" : "string",
+  "JcatLastSessioninfo" : "string",
+  "JcatMaxBillingAmt" : 0,
+  "JcatMaxBillingBudgetAmt" : 0,
+  "JcatNcommCostAmt" : 0,
+  "JcatNinvCommAmt" : 0,
+  "JcatObudgAmt" : 0,
+  "JcatObudgChgOrdAmt" : 0,
+  "JcatObudgChgOrdRevAmt" : 0,
+  "JcatObudgChgOrdUnit" : 0,
+  "JcatObudgRevenueAmt" : 0,
+  "JcatObudgUnit" : 0,
+  "JcatOrigSessioninfo" : "string",
+  "JcatPbBillCode" : "string",
+  "JcatPhaseActiveFlag" : "string",
+  "JcatPhsCode" : "string",
+  "JcatPhsCtrlCode" : "string",
+  "JcatPhsHier" : "string",
+  "JcatPriorCostAmt" : 0,
+  "JcatPriorCostQty" : 0,
+  "JcatProductivityOverride" : 0,
+  "JcatProjAmt" : 0,
+  "JcatProjUnit" : 0,
+  "JcatRevAdjustmentAmt" : 0,
+  "JcatRuleCode" : "string",
+  "JcatTimePhasedFlag" : "string",
+  "JcatUserEnteredProjAmt" : 0,
+  "JcatUserEnteredProjUnit" : 0,
+  "JcatVarCode" : "string",
+  "JcatWbsvCode1" : "string",
+  "JcatWbsvCode10" : "string",
+  "JcatWbsvCode11" : "string",
+  "JcatWbsvCode12" : "string",
+  "JcatWbsvCode2" : "string",
+  "JcatWbsvCode3" : "string",
+  "JcatWbsvCode4" : "string",
+  "JcatWbsvCode5" : "string",
+  "JcatWbsvCode6" : "string",
+  "JcatWbsvCode7" : "string",
+  "JcatWbsvCode8" : "string",
+  "JcatWbsvCode9" : "string",
+  "JcatWbsvEditableFlag1" : "string",
+  "JcatWbsvEditableFlag10" : "string",
+  "JcatWbsvEditableFlag11" : "string",
+  "JcatWbsvEditableFlag12" : "string",
+  "JcatWbsvEditableFlag2" : "string",
+  "JcatWbsvEditableFlag3" : "string",
+  "JcatWbsvEditableFlag4" : "string",
+  "JcatWbsvEditableFlag5" : "string",
+  "JcatWbsvEditableFlag6" : "string",
+  "JcatWbsvEditableFlag7" : "string",
+  "JcatWbsvEditableFlag8" : "string",
+  "JcatWbsvEditableFlag9" : "string",
+  "JcatWbsvRequiredFlag1" : "string",
+  "JcatWbsvRequiredFlag10" : "string",
+  "JcatWbsvRequiredFlag11" : "string",
+  "JcatWbsvRequiredFlag12" : "string",
+  "JcatWbsvRequiredFlag2" : "string",
+  "JcatWbsvRequiredFlag3" : "string",
+  "JcatWbsvRequiredFlag4" : "string",
+  "JcatWbsvRequiredFlag5" : "string",
+  "JcatWbsvRequiredFlag6" : "string",
+  "JcatWbsvRequiredFlag7" : "string",
+  "JcatWbsvRequiredFlag8" : "string",
+  "JcatWbsvRequiredFlag9" : "string",
+  "JcatWbsBudgetFlag" : "string",
+  "JcatWcbCode" : "string",
+  "JcatWmCode" : "string",
+  "JcatVUuid" : "string",
+  "JcatIuCreateDate" : "YYYY-MM-dd",
+  "JcatIuCreateUser" : "string",
+  "JcatIuUpdateDate" : "YYYY-MM-dd",
+  "JcatIuUpdateUser" : "string",
+  "JcatCatCtrlName" : "string",
+  "JcatJobCtrlName" : "string",
+  "JcatJobName" : "string",
+  "JcatName" : "string",
+  "JcatPhaseCtrlName" : "string",
+  "JcatPhaseName" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="60f32376-2261-4738-be93-f8c32b8962f2" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="ea2be275-b268-4d10-a689-f48523a8dd88" method="POST">
+    <con:description>Create a JC Job Category</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "JcatActLbAmt" : 0,
+  "JcatAddedFromApp" : "string",
+  "JcatAddonAmt" : 0,
+  "JcatAnticipatedCostAmt" : 0,
+  "JcatBidItemRemainingAmt" : 0,
+  "JcatBillingTypeCode" : "string",
+  "JcatBillAmt" : 0,
+  "JcatBillCode" : "string",
+  "JcatBillName" : "string",
+  "JcatBudgAdjustmentAmt" : 0,
+  "JcatBudgAmt" : 0,
+  "JcatBudgRevenueAmt" : 0,
+  "JcatBudgRevAmt" : 0,
+  "JcatBudgRevQty" : 0,
+  "JcatBudgRevRevAmt" : 0,
+  "JcatBudgUnit" : 0,
+  "JcatBudgUnitRate" : 0,
+  "JcatBudmethCode" : "string",
+  "JcatCalculateColumnName" : "string",
+  "JcatCatActiveFlag" : "string",
+  "JcatCatHier" : "string",
+  "JcatChgOrdAmt" : 0,
+  "JcatChgOrdQty" : 0,
+  "JcatChgOrdRevAmt" : 0,
+  "JcatCode" : "string",
+  "JcatCommUnit" : 0,
+  "JcatComplPc" : 0,
+  "JcatComplPcDate" : "YYYY-MM-dd",
+  "JcatComplUnit" : 0,
+  "JcatCompCode" : "string",
+  "JcatCostAmt" : 0,
+  "JcatCostRateOverrideAmt" : 0,
+  "JcatCostToComplOvrdFlg" : "string",
+  "JcatCstEntry" : "string",
+  "JcatCtrlCode" : "string",
+  "JcatDisbAmt" : 0,
+  "JcatDlbAmt" : 0,
+  "JcatExclCostBudgWip" : "string",
+  "JcatExclCostWip" : "string",
+  "JcatFreezeProjAmtFlag" : "string",
+  "JcatFwdLossOvrhPct" : 0,
+  "JcatHbPayAmt" : 0,
+  "JcatIdealRevenueAmt" : 0,
+  "JcatInvoiceFormatCode" : "string",
+  "JcatInvCommAmt" : 0,
+  "JcatInvCommUnit" : 0,
+  "JcatInvUnit" : 0,
+  "JcatJobCode" : "string",
+  "JcatJobCtrlCode" : "string",
+  "JcatLabourForecastFlag" : "string",
+  "JcatLastSessioninfo" : "string",
+  "JcatMaxBillingAmt" : 0,
+  "JcatMaxBillingBudgetAmt" : 0,
+  "JcatNcommCostAmt" : 0,
+  "JcatNinvCommAmt" : 0,
+  "JcatObudgAmt" : 0,
+  "JcatObudgChgOrdAmt" : 0,
+  "JcatObudgChgOrdRevAmt" : 0,
+  "JcatObudgChgOrdUnit" : 0,
+  "JcatObudgRevenueAmt" : 0,
+  "JcatObudgUnit" : 0,
+  "JcatOrigSessioninfo" : "string",
+  "JcatPbBillCode" : "string",
+  "JcatPhaseActiveFlag" : "string",
+  "JcatPhsCode" : "string",
+  "JcatPhsCtrlCode" : "string",
+  "JcatPhsHier" : "string",
+  "JcatPriorCostAmt" : 0,
+  "JcatPriorCostQty" : 0,
+  "JcatProductivityOverride" : 0,
+  "JcatProjAmt" : 0,
+  "JcatProjUnit" : 0,
+  "JcatRevAdjustmentAmt" : 0,
+  "JcatRuleCode" : "string",
+  "JcatTimePhasedFlag" : "string",
+  "JcatUserEnteredProjAmt" : 0,
+  "JcatUserEnteredProjUnit" : 0,
+  "JcatVarCode" : "string",
+  "JcatWbsvCode1" : "string",
+  "JcatWbsvCode10" : "string",
+  "JcatWbsvCode11" : "string",
+  "JcatWbsvCode12" : "string",
+  "JcatWbsvCode2" : "string",
+  "JcatWbsvCode3" : "string",
+  "JcatWbsvCode4" : "string",
+  "JcatWbsvCode5" : "string",
+  "JcatWbsvCode6" : "string",
+  "JcatWbsvCode7" : "string",
+  "JcatWbsvCode8" : "string",
+  "JcatWbsvCode9" : "string",
+  "JcatWbsvEditableFlag1" : "string",
+  "JcatWbsvEditableFlag10" : "string",
+  "JcatWbsvEditableFlag11" : "string",
+  "JcatWbsvEditableFlag12" : "string",
+  "JcatWbsvEditableFlag2" : "string",
+  "JcatWbsvEditableFlag3" : "string",
+  "JcatWbsvEditableFlag4" : "string",
+  "JcatWbsvEditableFlag5" : "string",
+  "JcatWbsvEditableFlag6" : "string",
+  "JcatWbsvEditableFlag7" : "string",
+  "JcatWbsvEditableFlag8" : "string",
+  "JcatWbsvEditableFlag9" : "string",
+  "JcatWbsvRequiredFlag1" : "string",
+  "JcatWbsvRequiredFlag10" : "string",
+  "JcatWbsvRequiredFlag11" : "string",
+  "JcatWbsvRequiredFlag12" : "string",
+  "JcatWbsvRequiredFlag2" : "string",
+  "JcatWbsvRequiredFlag3" : "string",
+  "JcatWbsvRequiredFlag4" : "string",
+  "JcatWbsvRequiredFlag5" : "string",
+  "JcatWbsvRequiredFlag6" : "string",
+  "JcatWbsvRequiredFlag7" : "string",
+  "JcatWbsvRequiredFlag8" : "string",
+  "JcatWbsvRequiredFlag9" : "string",
+  "JcatWbsBudgetFlag" : "string",
+  "JcatWcbCode" : "string",
+  "JcatWmCode" : "string",
+  "JcatVUuid" : "string",
+  "JcatIuCreateDate" : "YYYY-MM-dd",
+  "JcatIuCreateUser" : "string",
+  "JcatIuUpdateDate" : "YYYY-MM-dd",
+  "JcatIuUpdateUser" : "string",
+  "JcatCatCtrlName" : "string",
+  "JcatJobCtrlName" : "string",
+  "JcatJobName" : "string",
+  "JcatName" : "string",
+  "JcatPhaseCtrlName" : "string",
+  "JcatPhaseName" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"JcatCompCode":"string","JcatJobCode":"string","JcatJobCtrlCode":"string","JcatPhsCode":"string","JcatPhsCtrlCode":"string","JcatPhaseActiveFlag":"string","JcatCode":"string","JcatCtrlCode":"string","JcatCatActiveFlag":"string","JcatExclCostWip":"string","JcatLabourForecastFlag":"string","JcatCostToComplOvrdFlg":"string","JcatExclCostBudgWip":"string","JcatVUuid":""}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="05d73e4e-e776-4031-97e0-bc4ee1f2db07" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcatCompCode":"string","JcatJobCode":"string","JcatJobCtrlCode":"string","JcatPhsCode":"string","JcatPhsCtrlCode":"string","JcatPhaseActiveFlag":"string","JcatCode":"string","JcatCtrlCode":"string","JcatCatActiveFlag":"string","JcatExclCostWip":"string","JcatLabourForecastFlag":"string","JcatCostToComplOvrdFlg":"string","JcatExclCostBudgWip":"string","JcatVUuid":""}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+    <con:request name="PATCH Example" id="5d471652-c371-4450-99aa-08b8ba429734" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"JcatWmCode":"NA"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

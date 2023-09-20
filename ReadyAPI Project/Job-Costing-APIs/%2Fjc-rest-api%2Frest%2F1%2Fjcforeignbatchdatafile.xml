@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/jc-rest-api/rest/1/jcforeignbatchdatafile" path="/jc-rest-api/rest/1/jcforeignbatchdatafile" id="b5ebd70a-3a1a-4986-bb77-15542e3c2fd9" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="b5ebd70a-3a1a-4986-bb77-15542e3c2fd9fileName">%2Fjc-rest-api%2Frest%2F1%2Fjcforeignbatchdatafile</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="b3245189-bcf5-4746-866f-25f1c1c2eec2" method="POST">
+    <con:description>Create JC Foreign Batch Data File</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>Successful Operation</con:description>
+      <con:sampleContent>{
+  "FbhJcCompCode" : "string",
+  "FbhJcDistTypeCode" : "string",
+  "FbhJcSrcCode" : "string",
+  "FbhJcSrcDesc" : "string",
+  "FbhJcRefDate" : "YYYY-MM-dd",
+  "FbhJcRefCode" : "string",
+  "FbhJcRefDesc" : "string",
+  "FbhJcJobCode" : "string",
+  "FbhJcPhsCode" : "string",
+  "FbhJcCatCode" : "string",
+  "FbhJcDeptCode" : "string",
+  "FbhJcAccCode" : "string",
+  "FbhJcEqpCode" : "string",
+  "FbhJcTrancodeCode" : "string",
+  "FbhJcComponCode" : "string",
+  "FbhJcAmt" : 0,
+  "FbhJcUnit" : 0,
+  "FbhJcWmCode" : "string",
+  "FbhJcWbsvCode1" : "string",
+  "FbhJcWbsvCode2" : "string",
+  "FbhJcWbsvCode3" : "string",
+  "FbhJcWbsvCode4" : "string",
+  "FbhJcTavCode1" : "string",
+  "FbhJcTavCode2" : "string",
+  "FbhJcTavCode3" : "string",
+  "FbhJcTavCode4" : "string",
+  "FbhJcJobCtrlCode" : "string",
+  "FbhJcPhsCtrlCode" : "string",
+  "FbhJcCatCtrlCode" : "string",
+  "FbhJcValidFlag" : "string",
+  "FbhJcLineNum" : 0,
+  "FbhJcDsrcCompCode" : "string",
+  "FbhJcJobLongCode" : "string",
+  "FbhOverrideBillAmt" : 0,
+  "FbhOverrideBillRate" : 0,
+  "FbhOverrideTradeCode" : "string",
+  "FbhPostDate" : "YYYY-MM-dd",
+  "FbhJcPhsName" : "string",
+  "FbhJcErText" : "string",
+  "FbhLastSessioninfo" : "string",
+  "FbhOrigSessioninfo" : "string",
+  "FbhIuCreateDate" : "YYYY-MM-dd",
+  "FbhIuCreateUser" : "string",
+  "FbhIuUpdateDate" : "YYYY-MM-dd",
+  "FbhIuUpdateUser" : "string",
+  "FbhVUuid" : "string",
+  "DiscriminatorCode" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>An error occurred while attempting to retrieve, create, or delete record(s)</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/vnd.oracle.adf.resourceitem+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{"FbhJcCompCode":"string","FbhJcDistTypeCode":"string","FbhJcSrcCode":"string","FbhJcRefDate":"string","FbhJcJobCode":"string","FbhJcPhsCode":"string","FbhJcCatCode":"string","FbhJcDeptCode":"string","FbhJcAccCode":"string","FbhJcAmt":"float","FbhJcWmCode":"string","FbhJcValidFlag":"string","FbhJcLineNum":"integer","FbhJcDsrcCompCode":"string","FbhPostDate":"string"}</con:sampleContent>
+    </con:representation>
+    <con:request name="POST Example" id="bc5daa7d-8816-4d6a-8fb3-d33198a57012" mediaType="application/vnd.oracle.adf.resourceitem+json">
+      <con:settings/>
+      <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
+      <con:request>{"FbhJcCompCode":"string","FbhJcDistTypeCode":"string","FbhJcSrcCode":"string","FbhJcRefDate":"string","FbhJcJobCode":"string","FbhJcPhsCode":"string","FbhJcCatCode":"string","FbhJcDeptCode":"string","FbhJcAccCode":"string","FbhJcAmt":"float","FbhJcWmCode":"string","FbhJcValidFlag":"string","FbhJcLineNum":"integer","FbhJcDsrcCompCode":"string","FbhPostDate":"string"}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
