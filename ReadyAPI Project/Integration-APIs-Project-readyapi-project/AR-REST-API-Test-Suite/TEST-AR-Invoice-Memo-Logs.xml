@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f19c35cd-4883-410e-aa9b-aee6c4243bcd" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TEST AR Invoice Memo Logs" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f5a57f1b-0a64-4bd4-8757-164fccdfa70cfileName">TEST-AR-Invoice-Memo-Logs</con:setting>
+    <con:setting id="b4367aa8-32d7-4a57-911a-740fc04533cafileName">TEST-AR-Invoice-Memo-Logs</con:setting>
+    <con:setting id="f19c35cd-4883-410e-aa9b-aee6c4243bcdfileName">TEST-AR-Invoice-Memo-Logs</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Run Describe" id="7fb99b68-5442-4840-99cd-fe9e25e001b8">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/describe" methodName="Describe Application" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Run Describe" id="32032006-516c-4a0b-9217-19aacd0c6287" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://dev6v12.cmic.ca/cmicdevv12/ap-rest-api/rest/1/describe</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="614947ee-234c-4eab-850b-6539c5f25774" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Check Webservice Existence" id="aae8fde5-dbb6-4983-8f57-010f32920f9b">
+    <con:settings/>
+    <con:config>
+      <script>def result = context.expand( '${Run Describe#Response#$[\'Resources\'][\'arinvmemolog\']}' )
+if(result == "") {
+	testRunner.cancel("Webservice not available in current version")
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET All Logs" id="44d63c14-edcc-476b-ac97-e08dac542260">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvmemolog" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET All Logs" id="c677c965-6c9d-440b-8ec4-ac21ac5e0df8" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvmemolog</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="543e0125-f923-49b6-82f3-e299bf49e36b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>finder</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET Logs by selectMemoLog" id="0efa9b8c-7d95-4080-92f8-393607ccc9b3">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvmemolog" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Logs by selectMemoLog" id="c677c965-6c9d-440b-8ec4-ac21ac5e0df8" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvmemolog</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b7e0e005-f6aa-4434-a5e2-afb43217c45a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectMemoLog;compCode=CMICINC,bchNum=3775161,invNum=CLEARRET2"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>finder</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

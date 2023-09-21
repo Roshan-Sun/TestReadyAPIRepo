@@ -436,3 +436,11 @@ System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fuserdefinedclassifier.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fuserdefinedclassifierquery.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fweightmeasure.xml
 System-Data-APIs\%2Fsys-rest-api%2Frest%2F1%2Fweightmeasure%2F%7BWmCode%7D.xml
+AR-REST-API-Test-Suite\TEST-AR-Aged-Report.xml
+AR-REST-API-Test-Suite\TEST-AR-Customers.xml
+AR-REST-API-Test-Suite\TEST-AR-Invoice-Memo-Logs.xml
+AR-REST-API-Test-Suite\TEST-AR-Invoices.xml
+AR-REST-API-Test-Suite\TEST-AR-Outstanding-Invoices.xml
+AR-REST-API-Test-Suite\TEST-AR-Invoice-Payments.xml
+AR-REST-API-Test-Suite\TEST-AR-Payments.xml
+AR-REST-API-Test-Suite\TEST-AR-Tax-Items.xml

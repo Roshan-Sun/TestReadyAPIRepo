@@ -21,6 +21,10 @@
       <con:settings/>
       <con:endpoint>https://mobtest.cmiccloudr12.com/cmictestrti</con:endpoint>
       <con:request>nullnull</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

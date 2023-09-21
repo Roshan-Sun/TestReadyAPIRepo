@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b10e631c-be54-4784-8a0c-2a48490f6c4d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TEST AR Invoice Payments" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3c3662e7-6792-49dd-ac4e-a3ed17ea509dfileName">TEST-AR-Invoice-Payments</con:setting>
+    <con:setting id="0b053eac-b7f1-40ae-bc19-6165454f157efileName">TEST-AR-Invoice-Payments</con:setting>
+    <con:setting id="b10e631c-be54-4784-8a0c-2a48490f6c4dfileName">TEST-AR-Invoice-Payments</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Run Describe" id="6d023229-7c1f-4055-8cfc-67600318eff7">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/describe" methodName="Describe Application" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Run Describe" id="32032006-516c-4a0b-9217-19aacd0c6287" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://dev6v12.cmic.ca/cmicdevv12/ap-rest-api/rest/1/describe</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="614947ee-234c-4eab-850b-6539c5f25774" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Check Webservice Existence" id="694b7879-08ed-49c7-afdc-7d23c49a1242">
+    <con:settings/>
+    <con:config>
+      <script>def result = context.expand( '${Run Describe#Response#$[\'Resources\'][\'arinvpay\']}' )
+if(result == "") {
+	testRunner.cancel("Webservice not available in current version")
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET All Payments" id="41fade9d-86d8-47af-b6d9-383b3ce8868b">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET All Payments" id="47aaa066-c93b-4dbb-bcf8-4f97f62146b5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvpay</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5c5396c3-5e48-4d0d-b4e4-1a771882574f" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>finder</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET Payments by selectByCompDate" id="a3a2d959-1261-4208-99a5-95f5009e47cb">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Payments by selectByCompDate" id="47aaa066-c93b-4dbb-bcf8-4f97f62146b5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvpay</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9dc11472-6dbf-4b6a-8261-35fd29f0143d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectByCompDate;CompCode=${GET All Payments#Response#$['items'][0]['IpayCompCode']},StartDate=${GET All Payments#Response#$['items'][0]['IpayInvDate']},EndDate=${GET All Payments#Response#$['items'][0]['IpayInvDate']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>finder</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET Payments by selectByCompInvNum" id="24cf0b98-feff-4fe1-9cb9-92204b693708">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Payments by selectByCompInvNum" id="47aaa066-c93b-4dbb-bcf8-4f97f62146b5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvpay</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="01dc76db-28d3-4289-8724-d88051c5dca3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="finder" value="selectByCompInvNum;CompCode=${GET All Payments#Response#$['items'][0]['IpayCompCode']},InvNum=${GET All Payments#Response#$['items'][0]['IpayInvNum']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>finder</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="POST New Invoice Payment" id="357bca40-f39e-492a-87df-78b4b00d27dc">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="POST New Invoice Payment" id="e375a900-0f51-4494-b17d-b4983891223f" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{
+	"IpayCompCode" : "${#Project#Company}",
+	"IpaySeqNum" : ${#Project#PaymentSeqNum},
+	"IpayInvNum": "${#Project#ArInvPayInvCode}",
+	"IpayInvCompCode": "${#Project#Company}",
+	"IpayCurrPayAmt": 1,
+	"IpayVUuid": ""
+}</con:request>
+        <con:originalUri>https://mobtest.cmiccloudr12.com/cmictestrti/ar-rest-api/rest/1/arinvpay</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="051198ed-ebf3-40e6-babf-40ccfdd77b8f" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8212ef4e-a6b6-45f2-9c42-cd4a038b3f71">
+            <con:authProfile>UPG RTI</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PATCH Invoice Payment" id="3d11dafc-dcbb-44bf-bd31-5506eca031cf">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay/{Vuuid}" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PATCH Invoice Payment" id="37ccda0d-a589-41cd-8b50-ba5370001d07" mediaType="application/vnd.oracle.adf.resourceitem+json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request>{
+	"IpayCurrPayAmt": 2
+}</con:request>
+        <con:originalUri>https://mobile.cmiccloudr12.com/cmicprod/ar-rest-api/rest/1/arinvpay/Uuid</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1caa1428-a73a-4333-9f8e-1eb24c68d950" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET Invoice Payment via Uuid" id="a5015ad0-f3db-47a5-b8e2-b1678b06636c">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay/{Vuuid}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Invoice Payment via Uuid" id="fc0c0dc0-f493-445a-94fb-d173c10cb481" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobile.cmiccloudr12.com/cmicprod/ar-rest-api/rest/1/arinvpay/Uuid</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="141ac21a-94ee-4df2-8135-7ca101ab060a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="DELETE Invoice Payment" id="a56a2fe5-02d4-4ffc-b14e-3b660ac13f8a">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay/{Vuuid}" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="DELETE Invoice Payment" id="74ce4d4f-8440-43cb-b2a8-dfdb787a5dcf" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobile.cmiccloudr12.com/cmicprod/ar-rest-api/rest/1/arinvpay/Uuid</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c1abd1e4-5cb8-46b2-b9f5-904cdfcc75e4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET Invoice Payment via Uuid - Ensure Deletion" id="048471e5-5b94-4511-adae-77353fe9f390">
+    <con:settings/>
+    <con:config service="Accounts Receivable APIs" resourcePath="/ar-rest-api/rest/1/arinvpay/{Vuuid}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Invoice Payment via Uuid - Ensure Deletion" id="fc0c0dc0-f493-445a-94fb-d173c10cb481" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://mobile.cmiccloudr12.com/cmicprod/ar-rest-api/rest/1/arinvpay/Uuid</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="141ac21a-94ee-4df2-8135-7ca101ab060a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+            <con:authProfile>UPG PROD</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1dd2a03d-6d25-430a-89db-a9ce77f9626b">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+            <con:authProfile>UPG TEST</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+            <con:authProfile>DEVV12C</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+            <con:authProfile>Docusign</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+            <con:authProfile>Navjot TestRail</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b7c79163-2fb5-4fa0-876b-864d3dceacc1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="a96c0cbb-7368-4fbb-91cd-1e585b2cb0d4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d3771eee-0e21-4af1-8002-7042f658988f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="94944b19-d3a9-4a03-aa6e-a6974b62f8ec">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ff030b5a-f2fe-4444-b1d7-d7f8d358d0f4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="f45da016-e89f-4ef5-a164-f6dac2122c4b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="279d2e39-5a32-454b-95f0-b9aa8c9cde42">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2d1ef8d3-13f7-41bc-b36d-a0472a3c0009">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="be05f277-f412-40b8-9fac-98c834ba0807">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>
